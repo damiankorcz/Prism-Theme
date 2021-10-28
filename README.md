@@ -1,5 +1,6 @@
 <div align="center">
-	<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/GitHub Main Screenshot.png">
+	<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/main/assets/screenshots/Community%20Themes%20Screenshot.png">
+	<br />
 	<br />
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/releases"><img src="https://flat.badgen.net/github/release/damiankorcz/Obsidian-Prism" /></a>
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/stargazers"><img src="https://flat.badgen.net/github/stars/damiankorcz/Obsidian-Prism" /></a>
@@ -45,11 +46,11 @@
 
 
  ## 📸 Screenshots
-<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/Light Theme - Background Image.png">
+<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/main/assets/screenshots/Light%20Theme%20-%20Background%20Image.png">
 
-<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/Dark Theme - Background Image.png">
+<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/main/assets/screenshots/Dark%20Theme%20-%20Background%20Image.png">
 
-<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/Customisation Showcase.png">
+<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/main/assets/screenshots/Customisation%20Showcase.png">
 
 
 ## 🚀 Getting Started
