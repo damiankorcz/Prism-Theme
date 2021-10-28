@@ -2,9 +2,9 @@
 	<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/main/assets/screenshots/Community%20Themes%20Screenshot.png">
 	<br />
 	<br />
-	<a href="https://github.com/damiankorcz/Obsidian-Prism/releases"><img src="https://flat.badgen.net/github/release/damiankorcz/Obsidian-Prism" /></a>
-	<a href="https://github.com/damiankorcz/Obsidian-Prism/stargazers"><img src="https://flat.badgen.net/github/stars/damiankorcz/Obsidian-Prism" /></a>
-	<a href="https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE"><img src="https://flat.badgen.net/github/license/damiankorcz/Obsidian-Prism" /></a>
+	<a href="https://github.com/damiankorcz/Obsidian-Prism/releases"><img src="https://flat.badgen.net/github/release/damiankorcz/Prism-Theme" /></a>
+	<a href="https://github.com/damiankorcz/Obsidian-Prism/stargazers"><img src="https://flat.badgen.net/github/stars/damiankorcz/Prism-Theme" /></a>
+	<a href="https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE"><img src="https://flat.badgen.net/github/license/damiankorcz/Prism-Theme" /></a>
 	<br />
 	<br />
 	<a href="https://www.buymeacoffee.com/DamianKorcz"><img src="https://img.buymeacoffee.com/button-api/?text=Support This Project&emoji=&slug=DamianKorcz&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
