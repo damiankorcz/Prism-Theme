@@ -1,10 +1,5 @@
 <div align="center">
-	<img src="">
-	<br />
-	<br />
-	<blockquote>
-		<i>A Highly-Customisable and Elegant Light/Dark Theme for <a href="https://obsidian.md/"><b>Obsidian.md</b></a>.</i>
-	</blockquote>
+	<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/GitHub Main Screenshot.png">
 	<br />
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/releases"><img src="https://flat.badgen.net/github/release/damiankorcz/Obsidian-Prism" /></a>
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/stargazers"><img src="https://flat.badgen.net/github/stars/damiankorcz/Obsidian-Prism" /></a>
@@ -30,6 +25,7 @@
 </div>
 <hr />
 
+
  ## ✨ Key Features 
 #### Independent Light and Dark theme Options
 - Accent Style and Accent Colour Customisation. Choose between 5 Accent Styles and 10 preset Accent Colours ( You can also select a custom colour!).
@@ -47,8 +43,13 @@
  
  *... and many more handy options for you to explore!*
 
- ## 📸 Screenshots
 
+ ## 📸 Screenshots
+<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/Light Theme - Background Image.png">
+
+<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/Dark Theme - Background Image.png">
+
+<img src="https://raw.githubusercontent.com/damiankorcz/Obsidian-Prism/assets/screenshots/Customisation Showcase.png">
 
 
 ## 🚀 Getting Started
@@ -114,6 +115,7 @@ Since the background behind the Settings window is blurred by default I recommen
 
 </details>
 
+
 ## 🔌 Plugin Support
 Required for the Theme to work correctly and to enable customisation:
 
@@ -134,7 +136,7 @@ If you have any issues with the plugins mentioned above or would like another pl
 ##  🗺 Roadmap
 
 Planned task in a rough order of priority:
-- [ ] General cleanup and polish of the core Obsidian UI.
+- [ ] General code cleanup and polish of the core Obsidian UI theme.
 - [ ] Full commenting of the source code for easier development.
 - [ ] Documentation/Frequently Asked Questions section to help guide new theme users.
 - [ ] More explicitly supported plugins.
