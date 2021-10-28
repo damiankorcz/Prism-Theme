@@ -165,8 +165,8 @@ Feel free to reach out to me via the Official Obsidian Discord Channel: <a href=
 
 
 ## 📣 Acknowledgments
-- Thanks to the developers of [**Obsidian.md**](https://obsidian.md/) (@ericaxu and @Lishid) for providing an amazing tool free of charge!
-- Special shoutout to @mgmeyers for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
+- Thanks to the developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
+- Special shoutout to [**@mgmeyers**](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
 - Huge thanks to the Obsidian Community over at Discord for endless inspiration to improve the theme!
 
 
