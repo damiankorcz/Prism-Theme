@@ -1599,6 +1599,12 @@ settings:
                 label: Windows 10/11
                 value: pt-windows-titlebar
     -
+        id: pt-titlebar-hide-nav-buttons
+        title: Hide Titlebar Navigation Buttons
+        description: Hides the Titlebar Navigation Buttons.
+        type: class-toggle
+        default: false
+    -
         id: pt-titlebar-hide-text
         title: Hide Titlebar Title Text
         description: Hides the Titlebar Title Text (Useful when the Statusbar is at the top).
@@ -2602,6 +2608,11 @@ community:
             position: absolute;
         }
 
+        .pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-back,
+        .pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-forward {
+            display: none;
+        }
+
         .pt-default-titlebar .titlebar-text {
             position: relative;
             height: 18px;
@@ -3046,8 +3057,16 @@ community:
         left: 134px;
     }
 
+    .pt-titlebar-hide-nav-buttons.mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+        left: 48px
+    }
+
     .mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
         left: 154px;
+    }
+
+    .pt-titlebar-hide-nav-buttons.mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+        left: 68px;
     }
 
     .pt-status-bar-position-top.pt-status-bar-align-center.pt-default-titlebar .status-bar {
@@ -3084,8 +3103,15 @@ community:
         margin-top: -26px;
         order: 0;
         margin-bottom: 0px;
-        left: 132px;
         right: 0;
+    }
+
+    .pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
+        left: 132px;
+    }
+
+    .pt-titlebar-hide-nav-buttons.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
+        left: 48px;
     }
 
     .pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
