@@ -1780,6 +1780,9 @@ settings:
             - 
                 label: Solid Color
                 value: pt-kanban-background-default-lt
+            -
+                label: Transparent
+                value: pt-kanban-background-transparent-lt 
             - 
                 label: Dots Plain Color
                 value: pt-kanban-background-dots-plain-lt 
@@ -1803,6 +1806,9 @@ settings:
             - 
                 label: Solid Color
                 value: pt-kanban-background-default-dt
+            -
+                label: Transparent
+                value: pt-kanban-background-transparent-dt 
             - 
                 label: Dots Plain Color
                 value: pt-kanban-background-dots-plain-dt 
@@ -6718,6 +6724,25 @@ community:
 
     /*  Kanban Background Styles
         ========================================================================== */   
+
+        .theme-light.pt-kanban-background-transparent-lt .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"],
+        .theme-dark.pt-kanban-background-transparent-dt .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
+            background-color: transparent; 
+        }
+
+        .theme-light.pt-kanban-background-transparent-lt .workspace-leaf-content[data-type=kanban] .kanban-plugin,
+        .theme-light.pt-kanban-background-transparent-lt .workspace-leaf-content[data-type=kanban] .view-content,
+        .theme-dark.pt-kanban-background-transparent-dt .workspace-leaf-content[data-type=kanban] .kanban-plugin,
+        .theme-dark.pt-kanban-background-transparent-dt .workspace-leaf-content[data-type=kanban] .view-content {
+            background-color: unset;
+        }
+
+        .theme-light.pt-kanban-background-dots-plain-lt .kanban-plugin__board,
+        .theme-dark.pt-kanban-background-dots-plain-dt .kanban-plugin__board {
+            background-size: 8px 8px;
+            background-attachment: local;
+            background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px); 
+        }
 
         .theme-light.pt-kanban-background-dots-plain-lt .kanban-plugin__board,
         .theme-dark.pt-kanban-background-dots-plain-dt .kanban-plugin__board {
