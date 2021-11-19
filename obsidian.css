@@ -2008,10 +2008,12 @@ community:
         /*  Base Colors
             ========================================================================== */ 
         
-            --color-darken-lt:     15%;
+            --color-darken-lt:      15%;
+            --color-darken-text-lt: 45%;
         
-            --color-desaturate-dt: 48%;
-            --color-darken-dt:     20%;
+            --color-desaturate-dt:  48%;
+            --color-darken-dt:      20%;
+            --color-darken-text-dt: 20%;
         
             --color-accent-lt-h: var(--color-accent-lt-h);
             --color-accent-lt-s: var(--color-accent-lt-s);
@@ -2210,6 +2212,22 @@ community:
         --color-dark-pink:   hsla(var(--color-pink-h),   var(--color-pink-s),   calc(var(--color-pink-l)   - var(--color-darken-lt)), 1);
         --color-dark-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),   calc(var(--color-grey-l)   - var(--color-darken-lt)), 1);
         
+    /*  Text Colors
+        ========================================================================== */
+
+        --color-text-accent: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), calc(var(--color-accent-lt-l) - var(--color-darken-text-lt)),  1);
+        
+        --color-text-red:    hsla(var(--color-red-h),    var(--color-red-s),    calc(var(--color-red-l)    - var(--color-darken-text-lt)), 1);
+        --color-text-orange: hsla(var(--color-orange-h), var(--color-orange-s), calc(var(--color-orange-l) - var(--color-darken-text-lt)), 1);
+        --color-text-yellow: hsla(var(--color-yellow-h), var(--color-yellow-s), calc(var(--color-yellow-l) - var(--color-darken-text-lt)), 1);
+        --color-text-green:  hsla(var(--color-green-h),  var(--color-green-s),  calc(var(--color-green-l)  - var(--color-darken-text-lt)), 1);
+        --color-text-mint:   hsla(var(--color-mint-h),   var(--color-mint-s),   calc(var(--color-mint-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-aqua:   hsla(var(--color-aqua-h),   var(--color-aqua-s),   calc(var(--color-aqua-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),   calc(var(--color-blue-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-purple: hsla(var(--color-purple-h), var(--color-purple-s), calc(var(--color-purple-l) - var(--color-darken-text-lt)), 1);
+        --color-text-pink:   hsla(var(--color-pink-h),   var(--color-pink-s),   calc(var(--color-pink-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),   calc(var(--color-grey-l)   - var(--color-darken-text-lt)), 1);
+        
 
     /*  Main Obsidian Colors 
         ========================================================================== */   
@@ -2290,6 +2308,23 @@ community:
         --color-dark-pink:   hsla(var(--color-pink-h),   calc(var(--color-pink-s)   - var(--color-desaturate-dt)), calc(var(--color-pink-l)   - var(--color-darken-dt) * 2),  1);
         --color-dark-grey:   hsla(var(--color-grey-h),   calc(var(--color-grey-s)   - var(--color-desaturate-dt)), calc(var(--color-grey-l)   - var(--color-darken-dt) * 2),  1);
            
+
+    /*  Text Colors
+        ========================================================================== */ 
+
+        --color-text-accent: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), calc(var(--color-accent-dt-l) - var(--color-darken-text-dt)),  1);
+
+        --color-text-red:    hsla(var(--color-red-h),    calc(var(--color-red-s)    - var(--color-desaturate-dt)), calc(var(--color-red-l)    - var(--color-darken-text-dt)),  1);
+        --color-text-orange: hsla(var(--color-orange-h), calc(var(--color-orange-s) - var(--color-desaturate-dt)), calc(var(--color-orange-l) - var(--color-darken-text-dt)),  1);
+        --color-text-yellow: hsla(var(--color-yellow-h), calc(var(--color-yellow-s) - var(--color-desaturate-dt)), calc(var(--color-yellow-l) - var(--color-darken-text-dt)),  1);
+        --color-text-green:  hsla(var(--color-green-h),  calc(var(--color-green-s)  - var(--color-desaturate-dt)), calc(var(--color-green-l)  - var(--color-darken-text-dt)),  1);
+        --color-text-mint:   hsla(var(--color-mint-h),   calc(var(--color-mint-s)   - var(--color-desaturate-dt)), calc(var(--color-mint-l)   - var(--color-darken-text-dt)),  1);
+        --color-text-aqua:   hsla(var(--color-aqua-h),   calc(var(--color-aqua-s)   - var(--color-desaturate-dt)), calc(var(--color-aqua-l)   - var(--color-darken-text-dt)),  1);
+        --color-text-blue:   hsla(var(--color-blue-h),   calc(var(--color-blue-s)   - var(--color-desaturate-dt)), calc(var(--color-blue-l)   - var(--color-darken-text-dt)),  1);
+        --color-text-purple: hsla(var(--color-purple-h), calc(var(--color-purple-s) - var(--color-desaturate-dt)), calc(var(--color-purple-l) - var(--color-darken-text-dt)),  1);
+        --color-text-pink:   hsla(var(--color-pink-h),   calc(var(--color-pink-s)   - var(--color-desaturate-dt)), calc(var(--color-pink-l)   - var(--color-darken-text-dt)),  1);
+        --color-text-grey:   hsla(var(--color-grey-h),   calc(var(--color-grey-s)   - var(--color-desaturate-dt)), calc(var(--color-grey-l)   - var(--color-darken-text-dt)),  1);
+                   
 
     /*  Main Obsidian Colors
         ========================================================================== */   
@@ -3822,7 +3857,7 @@ community:
     }
     
     /* .graph-view.color-fill {
-        color: var(--color-pink);
+        color: var(--color-text-pink);
         opacity: 1;
     } */
 
@@ -4914,7 +4949,7 @@ community:
     }
 
     .mod-warning {
-        color: var(--color-dark-red);
+        color: var(--color-text-red);
     }
 
 
@@ -5025,17 +5060,16 @@ community:
     /*  Mark Highlight Color Presets
         ========================================================================== */  
 
-        mark.red,    mark.Red    { --highlight-default: var(--color-red);    --dark-highlight-default: var(--color-dark-red);    }
-        mark.red,    mark.Red    { --highlight-default: var(--color-red);    --dark-highlight-default: var(--color-dark-red);    }
-        mark.orange, mark.Orange { --highlight-default: var(--color-orange); --dark-highlight-default: var(--color-dark-orange); }
-        mark.yellow, mark.Yellow { --highlight-default: var(--color-yellow); --dark-highlight-default: var(--color-dark-yellow); }
-        mark.green,  mark.Green  { --highlight-default: var(--color-green);  --dark-highlight-default: var(--color-dark-green);  }
-        mark.mint,   mark.Mint   { --highlight-default: var(--color-mint);   --dark-highlight-default: var(--color-dark-mint);   }
-        mark.aqua,   mark.Aqua   { --highlight-default: var(--color-aqua);   --dark-highlight-default: var(--color-dark-aqua);   }
-        mark.blue,   mark.Blue   { --highlight-default: var(--color-blue);   --dark-highlight-default: var(--color-dark-blue);   }
-        mark.purple, mark.Purple { --highlight-default: var(--color-purple); --dark-highlight-default: var(--color-dark-purple); }
-        mark.pink,   mark.Pink   { --highlight-default: var(--color-pink);   --dark-highlight-default: var(--color-dark-pink);   }
-        mark.grey,   mark.Grey   { --highlight-default: var(--color-grey);   --dark-highlight-default: var(--color-dark-grey);   }
+        mark.red,    mark.Red    { --highlight-default: var(--color-red);    --dark-highlight-default: var(--color-text-red);    }
+        mark.orange, mark.Orange { --highlight-default: var(--color-orange); --dark-highlight-default: var(--color-text-orange); }
+        mark.yellow, mark.Yellow { --highlight-default: var(--color-yellow); --dark-highlight-default: var(--color-text-yellow); }
+        mark.green,  mark.Green  { --highlight-default: var(--color-green);  --dark-highlight-default: var(--color-text-green);  }
+        mark.mint,   mark.Mint   { --highlight-default: var(--color-mint);   --dark-highlight-default: var(--color-text-mint);   }
+        mark.aqua,   mark.Aqua   { --highlight-default: var(--color-aqua);   --dark-highlight-default: var(--color-text-aqua);   }
+        mark.blue,   mark.Blue   { --highlight-default: var(--color-blue);   --dark-highlight-default: var(--color-text-blue);   }
+        mark.purple, mark.Purple { --highlight-default: var(--color-purple); --dark-highlight-default: var(--color-text-purple); }
+        mark.pink,   mark.Pink   { --highlight-default: var(--color-pink);   --dark-highlight-default: var(--color-text-pink);   }
+        mark.grey,   mark.Grey   { --highlight-default: var(--color-grey);   --dark-highlight-default: var(--color-text-grey);   }
 
 
     /*  Mark Highlight Styles
@@ -5116,7 +5150,7 @@ community:
             --text-accent-hover:        var(--color-dark-accent);
             --interactive-accent:       var(--color-accent);
             --interactive-accent-dark:  var(--color-dark-accent);
-            --interactive-accent-text:  var(--color-dark-accent);
+            --interactive-accent-text:  var(--color-text-accent);
             --interactive-accent-hover: var(--color-dark-accent);
             --text-highlight-accent:    var(--color-accent);
         }
@@ -5126,7 +5160,7 @@ community:
             --text-accent-hover:        var(--color-dark-red);
             --interactive-accent:       var(--color-red);
             --interactive-accent-dark:  var(--color-dark-red);
-            --interactive-accent-text:  var(--color-dark-red);
+            --interactive-accent-text:  var(--color-text-red);
             --interactive-accent-hover: var(--color-dark-red);
             --text-highlight-accent:    var(--color-red);
         }
@@ -5136,7 +5170,7 @@ community:
             --text-accent-hover:        var(--color-dark-orange);
             --interactive-accent:       var(--color-orange);
             --interactive-accent-dark:  var(--color-dark-orange);
-            --interactive-accent-text:  var(--color-dark-orange);
+            --interactive-accent-text:  var(--color-text-orange);
             --interactive-accent-hover: var(--color-dark-orange);
             --text-highlight-accent:    var(--color-orange);
         }
@@ -5146,7 +5180,7 @@ community:
             --text-accent-hover:        var(--color-dark-yellow);
             --interactive-accent:       var(--color-yellow);
             --interactive-accent-dark:  var(--color-dark-yellow);
-            --interactive-accent-text:  var(--color-dark-yellow);
+            --interactive-accent-text:  var(--color-text-yellow);
             --interactive-accent-hover: var(--color-dark-yellow);
             --text-highlight-accent:    var(--color-yellow);
         }
@@ -5156,7 +5190,7 @@ community:
             --text-accent-hover:        var(--color-dark-green);
             --interactive-accent:       var(--color-green);
             --interactive-accent-dark:  var(--color-dark-green);
-            --interactive-accent-text:  var(--color-dark-green);
+            --interactive-accent-text:  var(--color-text-green);
             --interactive-accent-hover: var(--color-dark-green);
             --text-highlight-accent:    var(--color-green);
         }
@@ -5166,7 +5200,7 @@ community:
             --text-accent-hover:        var(--color-dark-mint);
             --interactive-accent:       var(--color-mint);
             --interactive-accent-dark:  var(--color-dark-mint);
-            --interactive-accent-text:  var(--color-dark-mint);
+            --interactive-accent-text:  var(--color-text-mint);
             --interactive-accent-hover: var(--color-dark-mint);
             --text-highlight-accent:    var(--color-mint);
         }
@@ -5176,7 +5210,7 @@ community:
             --text-accent-hover:        var(--color-dark-aqua);
             --interactive-accent:       var(--color-aqua);
             --interactive-accent-dark:  var(--color-dark-aqua);
-            --interactive-accent-text:  var(--color-dark-aqua);
+            --interactive-accent-text:  var(--color-text-aqua);
             --interactive-accent-hover: var(--color-dark-aqua);
             --text-highlight-accent:    var(--color-aqua);
         }
@@ -5186,7 +5220,7 @@ community:
             --text-accent-hover:        var(--color-dark-blue);
             --interactive-accent:       var(--color-blue);
             --interactive-accent-dark:  var(--color-dark-blue);
-            --interactive-accent-text:  var(--color-dark-blue);
+            --interactive-accent-text:  var(--color-text-blue);
             --interactive-accent-hover: var(--color-dark-blue);
             --text-highlight-accent:    var(--color-blue);
         }
@@ -5196,7 +5230,7 @@ community:
             --text-accent-hover:        var(--color-dark-purple);
             --interactive-accent:       var(--color-purple);
             --interactive-accent-dark:  var(--color-dark-purple);
-            --interactive-accent-text:  var(--color-dark-purple);
+            --interactive-accent-text:  var(--color-text-purple);
             --interactive-accent-hover: var(--color-dark-purple);
             --text-highlight-accent:    var(--color-purple);
         }
@@ -5206,7 +5240,7 @@ community:
             --text-accent-hover:        var(--color-dark-pink);
             --interactive-accent:       var(--color-pink);
             --interactive-accent-dark:  var(--color-dark-pink);
-            --interactive-accent-text:  var(--color-dark-pink);
+            --interactive-accent-text:  var(--color-text-pink);
             --interactive-accent-hover: var(--color-dark-pink);
             --text-highlight-accent:    var(--color-pink);
         }
@@ -5216,7 +5250,7 @@ community:
             --text-accent-hover:        var(--color-dark-grey);
             --interactive-accent:       var(--color-grey);
             --interactive-accent-dark:  var(--color-dark-grey);
-            --interactive-accent-text:  var(--color-dark-grey);
+            --interactive-accent-text:  var(--color-text-grey);
             --interactive-accent-hover: var(--color-dark-grey);
             --text-highlight-accent:    var(--color-grey);
         }
@@ -5230,7 +5264,7 @@ community:
             --text-accent-hover:        var(--color-dark-accent);
             --interactive-accent:       var(--color-accent);
             --interactive-accent-dark:  var(--color-dark-accent);
-            --interactive-accent-text:  var(--color-accent);
+            --interactive-accent-text:  var(--color-text-accent);
             --interactive-accent-hover: var(--color-dark-accent);
             --text-highlight-accent:    var(--color-dark-accent);
         } 
@@ -5240,7 +5274,7 @@ community:
             --text-accent-hover:        var(--color-dark-red);
             --interactive-accent:       var(--color-red);
             --interactive-accent-dark:  var(--color-dark-red);
-            --interactive-accent-text:  var(--color-red);
+            --interactive-accent-text:  var(--color-text-red);
             --interactive-accent-hover: var(--color-dark-red);
             --text-highlight-accent:    var(--color-dark-red);
         }
@@ -5250,7 +5284,7 @@ community:
             --text-accent-hover:        var(--color-dark-orange);
             --interactive-accent:       var(--color-orange);
             --interactive-accent-dark:  var(--color-dark-orange);
-            --interactive-accent-text:  var(--color-orange);
+            --interactive-accent-text:  var(--color-text-orange);
             --interactive-accent-hover: var(--color-dark-orange);
             --text-highlight-accent:    var(--color-dark-orange);
         }
@@ -5260,7 +5294,7 @@ community:
             --text-accent-hover:        var(--color-dark-yellow);
             --interactive-accent:       var(--color-yellow);
             --interactive-accent-dark:  var(--color-dark-yellow);
-            --interactive-accent-text:  var(--color-yellow);
+            --interactive-accent-text:  var(--color-text-yellow);
             --interactive-accent-hover: var(--color-dark-yellow);
             --text-highlight-accent:    var(--color-dark-yellow);
         }
@@ -5270,7 +5304,7 @@ community:
             --text-accent-hover:        var(--color-dark-green);
             --interactive-accent:       var(--color-green);
             --interactive-accent-dark:  var(--color-dark-green);
-            --interactive-accent-text:  var(--color-green);
+            --interactive-accent-text:  var(--color-text-green);
             --interactive-accent-hover: var(--color-dark-green);
             --text-highlight-accent:    var(--color-dark-green);
         }
@@ -5280,7 +5314,7 @@ community:
             --text-accent-hover:        var(--color-dark-mint);
             --interactive-accent:       var(--color-mint);
             --interactive-accent-dark:  var(--color-dark-mint);
-            --interactive-accent-text:  var(--color-mint);
+            --interactive-accent-text:  var(--color-text-mint);
             --interactive-accent-hover: var(--color-dark-mint);
             --text-highlight-accent:    var(--color-dark-mint);
         }
@@ -5290,7 +5324,7 @@ community:
             --text-accent-hover:        var(--color-dark-aqua);
             --interactive-accent:       var(--color-aqua);
             --interactive-accent-dark:  var(--color-dark-aqua);
-            --interactive-accent-text:  var(--color-aqua);
+            --interactive-accent-text:  var(--color-text-aqua);
             --interactive-accent-hover: var(--color-dark-aqua);
             --text-highlight-accent:    var(--color-dark-aqua);
         }
@@ -5300,7 +5334,7 @@ community:
             --text-accent-hover:        var(--color-dark-blue);
             --interactive-accent:       var(--color-blue);
             --interactive-accent-dark:  var(--color-dark-blue);
-            --interactive-accent-text:  var(--color-blue);
+            --interactive-accent-text:  var(--color-text-blue);
             --interactive-accent-hover: var(--color-dark-blue);
             --text-highlight-accent:    var(--color-dark-blue);
         }
@@ -5310,7 +5344,7 @@ community:
             --text-accent-hover:        var(--color-dark-purple);
             --interactive-accent:       var(--color-purple);
             --interactive-accent-dark:  var(--color-dark-purple);
-            --interactive-accent-text:  var(--color-purple);
+            --interactive-accent-text:  var(--color-text-purple);
             --interactive-accent-hover: var(--color-dark-purple);
             --text-highlight-accent:    var(--color-dark-purple);
         }
@@ -5320,7 +5354,7 @@ community:
             --text-accent-hover:        var(--color-dark-pink);
             --interactive-accent:       var(--color-pink);
             --interactive-accent-dark:  var(--color-dark-pink);
-            --interactive-accent-text:  var(--color-pink);
+            --interactive-accent-text:  var(--color-text-pink);
             --interactive-accent-hover: var(--color-dark-pink);
             --text-highlight-accent:    var(--color-dark-pink);
         }
@@ -5330,7 +5364,7 @@ community:
             --text-accent-hover:        var(--color-dark-grey);
             --interactive-accent:       var(--color-grey);
             --interactive-accent-dark:  var(--color-dark-grey);
-            --interactive-accent-text:  var(--color-grey);
+            --interactive-accent-text:  var(--color-text-grey);
             --interactive-accent-hover: var(--color-dark-grey);
             --text-highlight-accent:    var(--color-dark-grey);
         }
@@ -5497,7 +5531,7 @@ community:
         .theme-dark.pt-accent-style-text-dt .community-theme:hover .community-theme-remove-button,
         .theme-light.pt-accent-style-text-lt .community-theme:hover .community-theme-remove-button {
             font-weight: 600;
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             background-color: var(--background-primary);
             border: var(--border-size) solid transparent;
             border-radius: var(--border-radius-small);
@@ -5509,7 +5543,7 @@ community:
 
         .theme-dark.pt-accent-style-text-dt .community-theme.is-selected, 
         .theme-light.pt-accent-style-text-lt .community-theme.is-selected {
-            color: var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--background-primary);       
             box-shadow: var(--drop-shadow);
@@ -5528,7 +5562,7 @@ community:
         .theme-light.pt-accent-style-text-lt button.mod-warning {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             border: var(--border-size) solid transparent;
             background-color: var(--background-primary);
         }
@@ -5537,7 +5571,7 @@ community:
         .theme-light.pt-accent-style-text-lt .modal button:not(.mod-cta):not(.mod-warning) {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
             border: var(--border-size) solid transparent;
             background-color: var(--background-primary);
         }
@@ -5546,7 +5580,7 @@ community:
         .theme-light.pt-accent-style-text-lt .setting-hotkey {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-blue);
+            color: var(--color-text-blue);
             border: var(--border-size) solid transparent;
             background-color: var(--background-primary);
         }
@@ -5564,7 +5598,7 @@ community:
         .theme-light.pt-accent-style-text-lt .setting-hotkey.has-conflict {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             border: var(--border-size) solid transparent;
             background-color: var(--background-primary);
         }
@@ -5573,7 +5607,7 @@ community:
         .theme-light.pt-accent-style-text-lt .flair.mod-pop {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-green);
+            color: var(--color-text-green);
             background-color: var(--background-secondary);
         }
 
@@ -5907,12 +5941,12 @@ community:
         .theme-dark.pt-accent-style-borderandtext-dt .search-result-hover-button.mod-bottom:hover svg path,
         .theme-light.pt-accent-style-borderandtext-lt .search-result-hover-button.mod-top:hover svg path,
         .theme-light.pt-accent-style-borderandtext-lt .search-result-hover-button.mod-bottom:hover svg path {
-            fill: var(--interactive-accent-dark);
+            fill: var(--interactive-accent-text);
         }
 
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file,
         .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file {
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--color-dark-grey);       
             border-radius: var(--border-radius-small);
@@ -5922,7 +5956,7 @@ community:
         
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file:hover, 
         .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file:hover {
-            color: var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--interactive-accent-dark);       
             border-radius: var(--border-radius-small);
@@ -5932,7 +5966,7 @@ community:
         
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button,
         .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button {
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--color-dark-grey);       
             border-radius: var(--border-radius-small);
@@ -5942,7 +5976,7 @@ community:
     
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button:hover,
         .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button:hover {
-            color: var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--interactive-accent-dark);       
             border-radius: var(--border-radius-small);
@@ -5953,7 +5987,7 @@ community:
         .theme-dark.pt-accent-style-borderandtext-dt .community-theme:hover .community-theme-remove-button,
         .theme-light.pt-accent-style-borderandtext-lt .community-theme:hover .community-theme-remove-button {
             font-weight: 600;
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--color-dark-red);
             border-radius: var(--border-radius-small);
@@ -5965,7 +5999,7 @@ community:
 
         .theme-dark.pt-accent-style-borderandtext-dt .community-theme.is-selected, 
         .theme-light.pt-accent-style-borderandtext-lt .community-theme.is-selected {
-            color: var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
             background-color: var(--background-primary);
             border: var(--border-size) solid var(--interactive-accent-dark);       
             box-shadow: var(--drop-shadow);
@@ -5984,7 +6018,7 @@ community:
         .theme-light.pt-accent-style-borderandtext-lt button.mod-warning {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             border: var(--border-size) solid var(--color-dark-red);
             background-color: var(--background-secondary);
         }
@@ -5993,7 +6027,7 @@ community:
         .theme-light.pt-accent-style-borderandtext-lt .modal button:not(.mod-cta):not(.mod-warning) {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
             border: var(--border-size) solid var(--color-dark-grey);
             background-color: var(--background-secondary);
         }
@@ -6002,7 +6036,7 @@ community:
         .theme-light.pt-accent-style-borderandtext-lt .setting-hotkey {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-blue);
+            color: var(--color-text-blue);
             border: var(--border-size) solid var(--color-dark-blue);
             background-color: var(--background-secondary);
         }
@@ -6011,7 +6045,7 @@ community:
         .theme-light.pt-accent-style-borderandtext-lt .setting-hotkey.mod-empty {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
             border: var(--border-size) solid var(--color-dark-grey);
             background-color: var(--background-secondary);
         }
@@ -6020,7 +6054,7 @@ community:
         .theme-light.pt-accent-style-borderandtext-lt .setting-hotkey.has-conflict {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             border: var(--border-size) solid var(--color-dark-red);
             background-color: var(--background-secondary);
         }
@@ -6029,7 +6063,7 @@ community:
         .theme-light.pt-accent-style-borderandtext-lt .flair.mod-pop {
             font-weight: 600;
             border-radius: var(--border-radius-small);
-            color: var(--color-dark-green);
+            color: var(--color-text-green);
             border: var(--border-size) solid var(--color-green);
             background-color: var(--background-secondary);
         }
@@ -6792,7 +6826,7 @@ community:
     }
 
     a:hover {
-        color: var(--interactive-accent-dark);
+        color: var(--interactive-accent-hover);
     }
 
 
@@ -6827,16 +6861,16 @@ community:
         ========================================================================== */ 
 
         .theme-light .cm-s-obsidian span.cm-hmd-escape-backslash {
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
         }
         
         .theme-light .cm-s-obsidian .cm-inline-code,
         .theme-light .cm-s-obsidian .cm-math {
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
         }
         
         .theme-light .cm-s-obsidian .HyperMD-codeblock {
-            color: var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
         }
 
         .theme-light .cm-s-obsidian div.HyperMD-codeblock-bg {
@@ -6845,19 +6879,19 @@ community:
         
         .theme-light .cm-s-obsidian span.cm-inline-code,
         .theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             background-color: var(--background-secondary);
         }
 
         .theme-light .cm-s-obsidian span.cm-footref,
         .theme-light .cm-s-obsidian span.cm-blockid,
         .theme-light .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
         }
 
         .theme-light .cm-s-obsidian .CodeMirror-linenumber,
         .theme-light .CodeMirror-guttermarker-subtle {
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
         }
 
         .theme-light .cm-s-obsidian span.cm-formatting-highlight,
@@ -6885,16 +6919,16 @@ community:
         ========================================================================== */ 
         
         .theme-dark .cm-s-obsidian span.cm-hmd-escape-backslash {
-            color: var(--color-red);
+            color: var(--color-text-red);
         }
         
         .theme-dark .cm-s-obsidian .cm-inline-code,
         .theme-dark .cm-s-obsidian .cm-math {
-            color: var(--color-red);
+            color: var(--color-text-red);
         }
     
         .theme-dark .cm-s-obsidian .HyperMD-codeblock {
-            color: var(--interactive-accent);
+            color: var(--interactive-accent-text);
         }
 
         .theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg {
@@ -6903,14 +6937,14 @@ community:
 
         .theme-dark .cm-s-obsidian span.cm-inline-code,
         .theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-            color: var(--color-red);
+            color: var(--color-text-red);
             background-color: var(--background-secondary);
         }
 
         .theme-dark .cm-s-obsidian span.cm-footref,
         .theme-dark .cm-s-obsidian span.cm-blockid,
         .theme-dark .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
-            color: var(--color-grey);
+            color: var(--color-text-grey);
         }
 
         .theme-dark .cm-s-obsidian .CodeMirror-linenumber,
@@ -6921,7 +6955,7 @@ community:
         .theme-dark .cm-s-obsidian span.cm-formatting-highlight,
         .theme-dark .cm-s-obsidian span.cm-highlight {
             font-weight: 600;
-            background-color: var(--color-yellow);
+            background-color: var(--color-text-yellow);
             color: var(--highlight-text-normal);
         }
 
@@ -7101,7 +7135,7 @@ community:
         }
 
         .theme-light .markdown-preview-view code {
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
             background-color: var(--background-primary-alt);
             border-radius: var(--border-radius-small);
         }
@@ -7110,7 +7144,7 @@ community:
         .theme-light :not(pre) > code[class*="language-"],
         .theme-light pre[class*="language-"],
         .theme-light .markdown-preview-view .file-embed {
-            color:var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
             background: var(--background-primary-alt);
             border-radius: var(--border-radius-small);
             border: 1px solid var(--table-border-color);
@@ -7126,14 +7160,14 @@ community:
         .theme-light .token.url,
         .theme-light .language-css .token.string,
         .theme-light .style .token.string {
-            color: var(--color-dark-orange);
+            color: var(--color-text-orange);
             background-color: var(--background-primary-alt);
         }
 
         .theme-light .token.atrule,
         .theme-light .token.attr-value,
         .theme-light .token.keyword {
-            color: var(--color-dark-blue);
+            color: var(--color-text-blue);
         }
 
         .theme-light .token.selector,
@@ -7142,11 +7176,11 @@ community:
         .theme-light .token.char,
         .theme-light .token.builtin,
         .theme-light .token.inserted {
-            color: var(--color-dark-green);
+            color: var(--color-text-green);
         }
 
         .theme-light .token.punctuation {
-            color: var(--color-dark-grey);
+            color: var(--color-text-grey);
         }
 
         .theme-light .token.property,
@@ -7156,17 +7190,17 @@ community:
         .theme-light .token.constant,
         .theme-light .token.symbol,
         .theme-light .token.deleted {
-            color: var(--color-dark-pink);
+            color: var(--color-text-pink);
         }
         
         .theme-light .token.regex,
         .theme-light .token.important {
-            color: var(--color-dark-orange);
+            color: var(--color-text-orange);
         }
         
         .theme-light .token.function,
         .theme-light .token.class-name {
-            color: var(--color-dark-red);
+            color: var(--color-text-red);
         }
         
 
@@ -7183,7 +7217,7 @@ community:
         }
 
         .theme-dark .markdown-preview-view code {
-            color: var(--color-red);
+            color: var(--color-text-red);
             background-color: var(--background-secondary);
             border-radius: var(--border-radius-small);
         }
@@ -7208,14 +7242,14 @@ community:
         .theme-dark .token.url,
         .theme-dark .language-css .token.string,
         .theme-dark .style .token.string {
-            color: var(--color-dark-orange);
+            color: var(--color-text-orange);
             background-color: var(--background-secondary);
         }
 
         .theme-dark .token.atrule,
         .theme-dark .token.attr-value,
         .theme-dark .token.keyword {
-            color: var(--color-blue);
+            color: var(--color-text-blue);
         }
 
         .theme-dark .token.selector,
@@ -7224,11 +7258,11 @@ community:
         .theme-dark .token.char,
         .theme-dark .token.builtin,
         .theme-dark .token.inserted {
-            color: var(--color-green);
+            color: var(--color-text-green);
         }
 
         .theme-dark .token.punctuation {
-            color: var(--color-grey);
+            color: var(--color-text-grey);
         }
 
         .theme-dark .token.property,
@@ -7238,17 +7272,17 @@ community:
         .theme-dark .token.constant,
         .theme-dark .token.symbol,
         .theme-dark .token.deleted {
-            color: var(--color-pink);
+            color: var(--color-text-pink);
         }
 
         .theme-dark .token.regex,
         .theme-dark .token.important {
-            color: var(--color-orange);
+            color: var(--color-text-orange);
         }
 
         .theme-dark .token.function,
         .theme-dark .token.class-name {
-            color: var(--color-yellow);
+            color: var(--color-text-yellow);
         }
 
 /*  ==========================================================================
@@ -7257,7 +7291,7 @@ community:
 
     .theme-light .side-dock-ribbon-action.is-active svg.microphone-filled,
     .theme-dark .side-dock-ribbon-action.is-active svg.microphone-filled {
-        color: var(--color-dark-red);
+        color: var(--color-text-red);
     }
 
 
