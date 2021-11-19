@@ -2627,7 +2627,6 @@ community:
         }
 
         .pt-default-titlebar .titlebar-button-container.mod-left {
-            left: 48px !important;
             height: 18px;
             margin-top: 4px;
             background-color: var(--tab-label-background-color);
@@ -2635,7 +2634,15 @@ community:
             box-shadow: var(--drop-shadow);
         }
 
-        .pt-default-titlebar .titlebar-button-container.mod-left svg{
+        .mod-windows.pt-default-titlebar .titlebar-button-container.mod-left {
+            left: 48px !important;
+        }
+
+        .mod-mac.pt-default-titlebar .titlebar-button-container.mod-left {
+            left: 68px !important;
+        }
+
+        .pt-default-titlebar .titlebar-button-container.mod-left svg {
             height: 18px;
             width: 18px;
             display: flex;
@@ -2775,8 +2782,8 @@ community:
             }
 
             .pt-windows-titlebar .titlebar-text {
-                left:0;
-                right:0;
+                left: 0px;
+                right: 0px;
                 height: 22px;
                 font-size: 14px;
                 font-weight: normal;
@@ -3027,19 +3034,26 @@ community:
     .pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
         position: absolute;
         order: 0;
-        margin-top: -20px;
+        margin-top: -22px;
         margin-bottom: 0px;
         font-size: 13px;
         line-height: 13px;
         height: 18px;
-        left: 134px;
         right: 0;
+    }
+
+    .mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+        left: 134px;
+    }
+
+    .mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+        left: 154px;
     }
 
     .pt-status-bar-position-top.pt-status-bar-align-center.pt-default-titlebar .status-bar {
         position: absolute;
         order: 0;
-        margin-top: -20px;
+        margin-top: -22px;
         margin-bottom: 0px;
         font-size: 13px;
         line-height: 13px;
@@ -3051,7 +3065,7 @@ community:
     .pt-status-bar-position-top.pt-status-bar-align-right.pt-default-titlebar .status-bar {
         position: absolute;
         order: 0;
-        margin-top: -20px;
+        margin-top: -22px;
         margin-bottom: 0px;
         font-size: 13px;
         line-height: 13px;
@@ -3070,7 +3084,7 @@ community:
         margin-top: -26px;
         order: 0;
         margin-bottom: 0px;
-        left: 140px;
+        left: 132px;
         right: 0;
     }
 
