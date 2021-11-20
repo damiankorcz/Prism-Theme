@@ -2083,11 +2083,11 @@ community:
             ========================================================================== */ 
         
             --color-darken-lt:      15%;
-            --color-darken-text-lt: 45%;
+            --color-darken-text-lt: 48%;
         
             --color-desaturate-dt:  48%;
             --color-darken-dt:      20%;
-            --color-darken-text-dt: 20%;
+            --color-darken-text-dt: 18%;
         
             --color-accent-lt-h: var(--color-accent-lt-h);
             --color-accent-lt-s: var(--color-accent-lt-s);
@@ -2122,12 +2122,12 @@ community:
             --color-mint-s: 89%;
             --color-mint-l: 86%;
         
-            /* Base aqua: #A8F8FF */
+            /* Base aqua: #ADF8FF */
             --color-aqua-h: 185;
             --color-aqua-s: 100%;
             --color-aqua-l: 83%;
         
-            /* Base blue: #A8F8FF */
+            /* Base blue: #ADCDFF */
             --color-blue-h: 217;
             --color-blue-s: 100%;
             --color-blue-l: 84%;
@@ -2756,7 +2756,6 @@ community:
             
             .pt-windows-titlebar .titlebar {
                 height: 28px !important;
-                /* background-color: var(--background-secondary-alt); */
             }
             
             .pt-windows-titlebar .titlebar-button-container {
@@ -5265,16 +5264,16 @@ community:
     /*  Mark Highlight Color Presets
         ========================================================================== */  
 
-        mark.red,    mark.Red    { --highlight-default: var(--color-red);    --dark-highlight-default: var(--color-text-red);    }
-        mark.orange, mark.Orange { --highlight-default: var(--color-orange); --dark-highlight-default: var(--color-text-orange); }
-        mark.yellow, mark.Yellow { --highlight-default: var(--color-yellow); --dark-highlight-default: var(--color-text-yellow); }
-        mark.green,  mark.Green  { --highlight-default: var(--color-green);  --dark-highlight-default: var(--color-text-green);  }
-        mark.mint,   mark.Mint   { --highlight-default: var(--color-mint);   --dark-highlight-default: var(--color-text-mint);   }
-        mark.aqua,   mark.Aqua   { --highlight-default: var(--color-aqua);   --dark-highlight-default: var(--color-text-aqua);   }
-        mark.blue,   mark.Blue   { --highlight-default: var(--color-blue);   --dark-highlight-default: var(--color-text-blue);   }
-        mark.purple, mark.Purple { --highlight-default: var(--color-purple); --dark-highlight-default: var(--color-text-purple); }
-        mark.pink,   mark.Pink   { --highlight-default: var(--color-pink);   --dark-highlight-default: var(--color-text-pink);   }
-        mark.grey,   mark.Grey   { --highlight-default: var(--color-grey);   --dark-highlight-default: var(--color-text-grey);   }
+        mark.red,    mark.Red    { --highlight-default: var(--color-red);    --dark-highlight-default: var(--color-dark-red);    --text-highlight-default: var(--color-text-red);    }
+        mark.orange, mark.Orange { --highlight-default: var(--color-orange); --dark-highlight-default: var(--color-dark-orange); --text-highlight-default: var(--color-text-orange); }
+        mark.yellow, mark.Yellow { --highlight-default: var(--color-yellow); --dark-highlight-default: var(--color-dark-yellow); --text-highlight-default: var(--color-text-yellow); }
+        mark.green,  mark.Green  { --highlight-default: var(--color-green);  --dark-highlight-default: var(--color-dark-green);  --text-highlight-default: var(--color-text-green);  }
+        mark.mint,   mark.Mint   { --highlight-default: var(--color-mint);   --dark-highlight-default: var(--color-dark-mint);   --text-highlight-default: var(--color-text-mint);   }
+        mark.aqua,   mark.Aqua   { --highlight-default: var(--color-aqua);   --dark-highlight-default: var(--color-dark-aqua);   --text-highlight-default: var(--color-text-aqua);   }
+        mark.blue,   mark.Blue   { --highlight-default: var(--color-blue);   --dark-highlight-default: var(--color-dark-blue);   --text-highlight-default: var(--color-text-blue);   }
+        mark.purple, mark.Purple { --highlight-default: var(--color-purple); --dark-highlight-default: var(--color-dark-purple); --text-highlight-default: var(--color-text-purple); }
+        mark.pink,   mark.Pink   { --highlight-default: var(--color-pink);   --dark-highlight-default: var(--color-dark-pink);   --text-highlight-default: var(--color-text-pink);   }
+        mark.grey,   mark.Grey   { --highlight-default: var(--color-grey);   --dark-highlight-default: var(--color-dark-grey);   --text-highlight-default: var(--color-text-grey);   }
 
 
     /*  Mark Highlight Styles
@@ -5284,7 +5283,7 @@ community:
         .theme-light.pt-highlight-style-text-lt .markdown-preview-view mark {
             font-weight: 600;
             font-size: 0.875em;
-            color: var(--dark-highlight-default);
+            color: var(--text-highlight-default);
             opacity: 1;
             background-color: transparent;
             padding: 2px 8px;
@@ -5308,9 +5307,9 @@ community:
         .theme-light.pt-highlight-style-borderandtext-lt .markdown-preview-view mark {
             font-weight: 600;
             font-size: 0.875em;
-            color: var(--dark-highlight-default);
+            color: var(--text-highlight-default);
             background-color: transparent;
-            border: var(--border-size) solid var(--highlight-default);
+            border: var(--border-size) solid var(--dark-highlight-default);
             padding: 0px 5px;
             border-radius: var(--border-radius-small);
             -webkit-box-decoration-break: clone;
