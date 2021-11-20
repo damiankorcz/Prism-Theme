@@ -1724,6 +1724,68 @@ settings:
             - 
                 label: Right to Left
                 value: pt-status-bar-rtl
+    -
+        id: solid-status-bar-background
+        title: Solid Status Bar Background
+        description: Settings for a Solid Status Bar Background.
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: pt-solid-status-bar-lt
+        title: Light Theme Solid Status Bar Background
+        description: Change the entire Light Theme Status Bar background to be a solid color.
+        type: class-toggle
+        default: false
+    -
+        id: solid-status-bar-preset-lt
+        title: Light Theme Solid Status Bar Preset
+        description: Choose between Default and Custom colors for the Light Theme Solid Status Bar.
+        default: pt-solid-status-bar-default-lt
+        type: class-select
+        options:
+            -
+                label: Default
+                value: pt-solid-status-bar-default-lt
+            - 
+                label: Custom
+                value: pt-solid-status-bar-custom-lt
+    -
+        id: solid-status-bar-background-color-lt
+        title: Light Theme Solid Status Bar Background Color
+        description: Make sure you selected 'Custom' in Light Theme Solid Status Bar Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#EBECEF'
+    -
+        id: pt-solid-status-bar-dt
+        title: Dark Theme Solid Status Bar Background
+        description: Change the entire Dark Theme Status Bar background to be a solid color.
+        type: class-toggle
+        default: false
+    -
+        id: solid-status-bar-preset-dt
+        title: Dark Theme Solid Status Bar Preset
+        description: Choose between Default and Custom colors for the Dark Theme Solid Status Bar.
+        default: pt-solid-status-bar-default-dt
+        level: 2
+        type: class-select
+        options:
+            -
+                label: Default
+                value: pt-solid-status-bar-default-dt
+            - 
+                label: Custom
+                value: pt-solid-status-bar-custom-dt
+    -
+        id: solid-status-bar-background-color-dt
+        title: Dark Theme Solid Status Bar Background Color
+        description: Make sure you selected 'Custom' in Dark Theme Solid Status Bar Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
     - 
         id: scrollbar
         title: Scrollbar
@@ -2167,6 +2229,10 @@ community:
             /* Solid Titlebar Custom Colors */
             --solid-titlebar-background-color-lt: #EBECEF;
             --solid-titlebar-background-color-dt: #2B2B2B;
+
+            /* Solid Status Bar Custom Colors */
+            --solid-status-bar-background-color-lt: #EBECEF;
+            --solid-status-bar-background-color-dt: #2B2B2B;
 
 
             /* Custom Vault Banner */
@@ -2692,12 +2758,16 @@ community:
                 height: 28px !important;
                 /* background-color: var(--background-secondary-alt); */
             }
+            
+            .pt-windows-titlebar .titlebar-button-container {
+                top: 0px;
+            }
                 
             .pt-windows-titlebar div.titlebar-button-container.mod-left {
                 top: 0px;
                 left: 48px !important;
                 height: 22px;
-                margin-top: 4px;
+                margin-top: 3px;
                 background-color: var(--tab-label-background-color);
                 border-radius: var(--border-radius-small);
                 box-shadow: var(--drop-shadow);
@@ -2741,7 +2811,7 @@ community:
             .pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize,
             .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close {
                 padding: 1px 17px 0px 17px;    
-                height: 29px;
+                height: 30px;
                 transition: 150ms;
             }
 
@@ -2802,7 +2872,7 @@ community:
                 justify-content: center;
                 align-content: center;
                 flex-direction: column;
-                margin: 4px auto 0px auto;
+                margin: 3px auto 0px auto;
                 width: fit-content;
                 padding: 0px 10px;
                 color: var(--text-muted);
@@ -2814,7 +2884,7 @@ community:
             }
 
 
-        /*  Solid Titlebar/Statusbar
+        /*  Solid Titlebar
             ========================================================================== */ 
             
             .theme-light.pt-solid-titlebar-lt.pt-solid-titlebar-default-lt div.titlebar,
@@ -2851,8 +2921,6 @@ community:
             .theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
                 border-radius: unset;
             }
-
-
 
 /*  ==========================================================================
     Titlebar sidebar
@@ -3042,6 +3110,15 @@ community:
         overflow: hidden;
     }
 
+    .theme-light.pt-solid-titlebar-lt.pt-status-bar-position-top .status-bar,
+    .theme-dark.pt-solid-titlebar-dt.pt-status-bar-position-top .status-bar {
+        background: unset;
+    }
+
+    .pt-status-bar-position-top.pt-status-bar-align-center .titlebar-text {
+        display: none;
+    }
+
     .pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
         position: absolute;
         order: 0;
@@ -3100,7 +3177,7 @@ community:
 
     .pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
         position: absolute;
-        margin-top: -26px;
+        margin-top: -27px;
         order: 0;
         margin-bottom: 0px;
         right: 0;
@@ -3116,7 +3193,7 @@ community:
 
     .pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
         position: absolute;
-        margin-top: -26px;
+        margin-top: -27px;
         order: 0;
         left: 0;
         right: 0;
@@ -3125,14 +3202,13 @@ community:
     
     .pt-status-bar-position-top.pt-status-bar-align-right.pt-windows-titlebar .status-bar {
         position: absolute;
-        margin-top: -26px;
+        margin-top: -27px;
         order: 0;
         margin-bottom: 0px;
         right: 148px;
-        left: 0;
-    }
+     }
 
-    .pt-status-bar-position-top .app-container {
+    .pt-status-bar-position-top .horizontal-main-container {
         padding: 0px 5px 5px 5px;
     }
 
@@ -3151,13 +3227,13 @@ community:
         font-size: unset;
     }
 
-    .pt-status-bar-position-bottom .app-container {
-        padding: 0px 5px 0px 5px;
+    .pt-status-bar-position-bottom .horizontal-main-container {
+        padding: 0px 5px;
     }
 
     .pt-status-bar-align-left .status-bar {
         margin-right: auto;
-        margin-left: 0px;
+        margin-left: 5px;
     }
 
     .pt-status-bar-align-center .status-bar {
@@ -3167,7 +3243,7 @@ community:
 
     .pt-status-bar-align-right .status-bar {
         margin-left: auto;
-        margin-right: 0px;
+        margin-right: 5px;
     }
 
     .pt-status-bar-rtl .status-bar {
@@ -3182,7 +3258,6 @@ community:
         padding: 0px 10px;
     }
 
-
     .theme-light .sync-status-icon.mod-working {
         color: var(--interactive-accent-dark);
     }
@@ -3191,6 +3266,90 @@ community:
         color: var(--interactive-accent);
     }
 
+    /*  Solid Statusbar
+        ========================================================================== */ 
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
+        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
+            box-shadow: unset;
+            width: 100%;
+            margin-bottom: unset;
+            border-radius: unset;
+        }  
+        
+        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt.pt-solid-status-bar-default-lt div.status-bar,
+        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt.pt-solid-status-bar-default-dt div.status-bar {
+            background: var(--tab-label-background-color);
+        }
+
+        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt.pt-solid-status-bar-custom-lt div.status-bar {
+            background: var(--solid-status-bar-background-color-lt);
+        }
+        
+        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt.pt-solid-status-bar-custom-dt div.status-bar {
+            background: var(--solid-status-bar-background-color-dt);
+        }
+
+
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
+            margin-left: 0px;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
+            margin-right: auto;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
+            margin-left: auto;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
+            margin-right: auto;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
+            margin-left: auto;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
+            margin-right: 0px;
+        }
+
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
+            margin-right: auto;
+        }
+        
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
+            margin-left: 0px;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
+            margin-right: auto;
+        }
+        
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
+            margin-left: auto;
+        }
+    
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
+            margin-right: 0px;
+        }
+        
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
+            margin-left: auto;
+        }
     
 /*  ==========================================================================
     Scrollbar
@@ -7353,6 +7512,7 @@ community:
             color: var(--color-text-yellow);
         }
 
+        
 /*  ==========================================================================
     Audio Recorder
     ========================================================================== */
