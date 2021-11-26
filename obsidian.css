@@ -4198,12 +4198,19 @@ community:
 /*  Graph
     ========================================================================== */   
     
-    .workspace-leaf-content[data-type='graph'] .view-content,
-    .workspace-leaf-content[data-type='localgraph'] .view-content {
+    .theme-light .workspace-leaf-content[data-type='graph'] .view-content,
+    .theme-light .workspace-leaf-content[data-type='localgraph'] .view-content {
         background-color: var(--page-background-color);
         border-radius: var(--border-radius);
         box-shadow: var(--drop-shadow);
     }
+
+    .theme-dark .workspace-leaf-content[data-type='graph'] .view-content,
+    .theme-dark .workspace-leaf-content[data-type='localgraph'] .view-content {
+        background-color: var(--background-secondary-alt);
+        border-radius: var(--border-radius);
+        box-shadow: var(--drop-shadow);
+    }    
 
     .graph-controls,
     .graph-controls.is-close {
@@ -4228,11 +4235,11 @@ community:
     }
 
     .theme-light .graph-view.color-line {
-        color: var(--background-secondary);
+        color: var(--background-secondary-alt);
     }
 
     .theme-dark .graph-view.color-line {
-        color: var(--background-primary);
+        color: var(--background-primary-alt);
     }
 
 
