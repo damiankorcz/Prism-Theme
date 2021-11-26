@@ -3254,7 +3254,7 @@ community:
         line-height: 18px;
         border-radius: var(--border-radius-small);
         width: fit-content;
-        background-color: var(--background-secondary);
+        background-color: var(--tab-label-background-color);
         box-shadow: var(--drop-shadow);
         overflow: hidden;
     }
@@ -3951,7 +3951,7 @@ community:
     }
     
     .theme-dark input[type='range'] {
-        background-color: var(--background-primary);
+        background-color: var(--background-secondary-alt);
         box-shadow: var(--drop-shadow);
     }
 
@@ -3985,7 +3985,8 @@ community:
     }
 
     .tree-item-self .tree-item-flair {
-        border: var(--border-size) solid var(--background-secondary-alt);
+        border: var(--border-size) solid var(--background-secondary);
+        background-color: var(--background-secondary);
         border-radius: var(--border-radius-small);
     }
 
@@ -5281,7 +5282,14 @@ community:
         border-radius: var(--border-radius);
         margin: 8px;
         height: 68.75vh;
-        background-color: var(--background-secondary-alt);
+    }
+
+    .theme-light .modal.mod-settings .vertical-tab-header {
+        background-color: var(--background-color-lt);
+    }
+
+    .theme-dark .modal.mod-settings .vertical-tab-header {
+        background-color: var(--background-color-dt);
     }
 
     .modal.mod-settings .vertical-tab-header-group {
@@ -5355,6 +5363,16 @@ community:
         padding: 3px 10px 3px 16px;
     }
 
+    .theme-light .horizontal-tab-nav-item,
+    .theme-light .vertical-tab-nav-item {
+        background-color: var(--background-color-lt);
+    }
+
+    .theme-dark .horizontal-tab-nav-item,
+    .theme-dark .vertical-tab-nav-item {
+        background-color: var(--background-color-dt);
+    }
+
     .horizontal-tab-nav-item:hover,
     .vertical-tab-nav-item:hover {
         background-color: var(--background-primary);
@@ -5403,6 +5421,14 @@ community:
         box-shadow: rgba(0, 0, 0, 0.3) 0px 0.5px 2px 0px;
         border-radius: var(--border-radius-small);
         transform: translate3d(0, 0, 0);
+    }
+
+    .theme-light .checkbox-container:after {
+        background-color: var(--background-primary);
+    }
+
+    .theme-dark .checkbox-container:after {
+        background-color: var(--background-primary-alt);
     }
 
     .checkbox-container.is-enabled:after {
@@ -5886,7 +5912,7 @@ community:
 
         .theme-dark.pt-accent-style-text-dt .vertical-tab-nav-item.is-active,
         .theme-light.pt-accent-style-text-lt .vertical-tab-nav-item.is-active {
-            background-color: var(--background-secondary);
+            background-color: var(--background-primary);
             color: var(--interactive-accent-text);
         }
 
@@ -7028,7 +7054,7 @@ community:
         align-items: center;
         height: fit-content;
         width: fit-content;
-        background: var(--tab-label-background-color);
+        background: var(--background-primary);
         border-radius: var(--border-radius);
         box-shadow: var(--drop-shadow);
         padding: 0px 10px;
