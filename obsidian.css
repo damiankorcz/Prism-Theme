@@ -1611,9 +1611,9 @@ settings:
         type: class-toggle
         default: false
     -
-        id: solid-titlebar-background
-        title: Solid Titlebar Background
-        description: Settings for a Solid Titlebar Background.
+        id: titlebar-customisation-lt
+        title: Light Theme Customisation
+        description: 
         type: heading
         level: 3
         collapsed: true
@@ -1624,26 +1624,48 @@ settings:
         type: class-toggle
         default: false
     -
-        id: solid-titlebar-preset-lt
-        title: Light Theme Solid Titlebar Preset
-        description: Choose between Default and Custom colors for the Light Theme Solid Titlebar.
-        default: pt-solid-titlebar-default-lt
+        id: titlebar-preset-lt
+        title: Light Theme Titlebar Preset
+        description: Choose between Default and Custom colors for the Light Theme Titlebar.
+        default: pt-titlebar-default-lt
         type: class-select
         options:
             -
                 label: Default
-                value: pt-solid-titlebar-default-lt
+                value: pt-titlebar-default-lt
             - 
                 label: Custom
-                value: pt-solid-titlebar-custom-lt
+                value: pt-titlebar-custom-lt
     -
-        id: solid-titlebar-background-color-lt
-        title: Light Theme Solid Titlebar Background Color
-        description: Make sure you selected 'Custom' in Light Theme Solid Titlebar Preset for this to work.
+        id: titlebar-background-color-lt
+        title: Light Theme Titlebar Background Color
+        description: Make sure you selected 'Custom' in Light Theme Titlebar Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#EBECEF'
+    -   
+        id: titlebar-text-color-lt
+        title: Light Theme Titlebar Text/Icons Color
+        description: Choose the color used for the Light Theme Titlebar Text/Icons.
+        default: pt-titlebar-text-dark-lt
+        type: class-select
+        options:
+            - 
+                label: Light
+                value: pt-titlebar-text-light-lt
+            -
+                label: Dark
+                value: pt-titlebar-text-dark-lt
+            - 
+                label: Accent
+                value: pt-titlebar-text-accent-lt
+    -
+        id: titlebar-customisation-dt
+        title: Dark Theme Customisation
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: pt-solid-titlebar-dt
         title: Dark Theme Solid Titlebar Background
@@ -1651,27 +1673,43 @@ settings:
         type: class-toggle
         default: false
     -
-        id: solid-titlebar-preset-dt
-        title: Dark Theme Solid Titlebar Preset
-        description: Choose between Default and Custom colors for the Dark Theme Solid Titlebar.
-        default: pt-solid-titlebar-default-dt
+        id: titlebar-preset-dt
+        title: Dark Theme Titlebar Preset
+        description: Choose between Default and Custom colors for the Dark Theme Titlebar.
+        default: pt-titlebar-default-dt
         level: 2
         type: class-select
         options:
             -
                 label: Default
-                value: pt-solid-titlebar-default-dt
+                value: pt-titlebar-default-dt
             - 
                 label: Custom
-                value: pt-solid-titlebar-custom-dt
+                value: pt-titlebar-custom-dt
     -
-        id: solid-titlebar-background-color-dt
-        title: Dark Theme Solid Titlebar Background Color
-        description: Make sure you selected 'Custom' in Dark Theme Solid Titlebar Preset for this to work.
+        id: titlebar-background-color-dt
+        title: Dark Theme Titlebar Background Color
+        description: Make sure you selected 'Custom' in Dark Theme Titlebar Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#2B2B2B'
+    -
+        id: titlebar-text-color-dt
+        title: Dark Theme Titlebar Text/Icons Color
+        description: Choose the color used for the Dark Theme Titlebar Text/Icons.
+        default: pt-titlebar-text-light-dt
+        type: class-select
+        options:
+            - 
+                label: Light
+                value: pt-titlebar-text-light-dt
+            -
+                label: Dark
+                value: pt-titlebar-text-dark-dt
+            - 
+                label: Accent
+                value: pt-titlebar-text-accent-dt
     -
         id: status-bar
         title: Status Bar
@@ -2905,20 +2943,93 @@ community:
         /*  Solid Titlebar
             ========================================================================== */ 
             
-            .theme-light.pt-solid-titlebar-lt.pt-solid-titlebar-default-lt div.titlebar,
-            .theme-dark.pt-solid-titlebar-dt.pt-solid-titlebar-default-dt div.titlebar {
+            .theme-light.pt-solid-titlebar-lt.pt-titlebar-default-lt div.titlebar,
+            .theme-dark.pt-solid-titlebar-dt.pt-titlebar-default-dt div.titlebar {
                 background-color: var(--tab-label-background-color);
                 box-shadow: var(--drop-shadow);
             }
 
-            .theme-light.pt-solid-titlebar-lt.pt-solid-titlebar-custom-lt div.titlebar {
-                background-color: var(--solid-titlebar-background-color-lt);
+            .theme-light.pt-solid-titlebar-lt.pt-titlebar-custom-lt div.titlebar {
+                background-color: var(--titlebar-background-color-lt);
                 box-shadow: var(--drop-shadow);
             }
 
-            .theme-dark.pt-solid-titlebar-dt.pt-solid-titlebar-custom-dt div.titlebar {
-                background-color: var(--solid-titlebar-background-color-dt);
+            .theme-dark.pt-solid-titlebar-dt.pt-titlebar-custom-dt div.titlebar {
+                background-color: var(--titlebar-background-color-dt);
                 box-shadow: var(--drop-shadow);
+            }
+
+            .theme-light.pt-titlebar-default-lt div.titlebar-text,
+            .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
+            .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right,
+            .theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
+                background-color: var(--tab-label-background-color);
+                box-shadow: var(--drop-shadow);
+            }
+
+            .theme-light.pt-titlebar-custom-lt div.titlebar-text,
+            .theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
+            .theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right,
+            .theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar  {
+                background-color: var(--titlebar-background-color-lt);
+                box-shadow: var(--drop-shadow);
+            }
+
+            .theme-dark.pt-titlebar-custom-dt div.titlebar-text,
+            .theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-left,
+            .theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-right,
+            .theme-dark.pt-titlebar-custom-dt.pt-status-bar-position-top .status-bar {
+                background-color: var(--titlebar-background-color-dt);
+                box-shadow: var(--drop-shadow);
+            }
+
+            
+            .theme-light.pt-titlebar-text-light-lt div.titlebar-text,
+            .theme-light.pt-titlebar-text-light-lt div.titlebar-button svg,
+            .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
+            .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right svg,
+            .theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar{
+                color: var(--background-primary);
+            }
+
+            .theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
+            .theme-light.pt-titlebar-text-dark-lt div.titlebar-button svg,
+            .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
+            .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right svg,
+            .theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar{
+                color: var(--text-normal);
+            }
+
+            .theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
+            .theme-light.pt-titlebar-text-accent-lt div.titlebar-button svg,
+            .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
+            .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right svg,
+            .theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar{
+                color: var(--interactive-accent-text);
+            }
+
+            .theme-dark.pt-titlebar-text-light-dt div.titlebar-text,
+            .theme-dark.pt-titlebar-text-light-dt div.titlebar-button svg,
+            .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left,
+            .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right svg,
+            .theme-dark.pt-titlebar-text-light-dt.pt-status-bar-position-top .status-bar{
+                color: var(--text-normal);
+            }
+
+            .theme-dark.pt-titlebar-text-dark-dt div.titlebar-text,
+            .theme-dark.pt-titlebar-text-dark-dt div.titlebar-button svg,
+            .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left,
+            .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right svg,
+            .theme-dark.pt-titlebar-text-dark-dt.pt-status-bar-position-top .status-bar{
+                color: var(--background-primary);
+            }
+
+            .theme-dark.pt-titlebar-text-accent-dt div.titlebar-text,
+            .theme-dark.pt-titlebar-text-accent-dt div.titlebar-button svg,
+            .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left,
+            .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right svg,
+            .theme-dark.pt-titlebar-text-accent-dt.pt-status-bar-position-top .status-bar{
+                color: var(--interactive-accent-text);
             }
 
             .theme-light.pt-solid-titlebar-lt div.titlebar-text,
