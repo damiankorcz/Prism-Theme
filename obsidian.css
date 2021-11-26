@@ -7519,7 +7519,9 @@ community:
         ========================================================================== */ 
 
         .theme-light .markdown-preview-view blockquote {
-            border-color: var(--table-border-color)
+            border: 2px solid var(--table-border-color);
+            background-color: var(--background-primary);
+            border-left-width: 5px;
         }
 
         .theme-light .markdown-preview-view hr {
@@ -7528,7 +7530,7 @@ community:
 
         .theme-light .markdown-preview-view code {
             color: var(--color-text-red);
-            background-color: var(--background-primary-alt);
+            background-color: var(--background-primary);
             border-radius: var(--border-radius-small);
         }
 
@@ -7537,9 +7539,9 @@ community:
         .theme-light pre[class*="language-"],
         .theme-light .markdown-preview-view .file-embed {
             color: var(--interactive-accent-text);
-            background: var(--background-primary-alt);
+            background: var(--background-primary);
             border-radius: var(--border-radius-small);
-            border: 1px solid var(--table-border-color);
+            border: 2px solid var(--table-border-color);
         }
 
         .theme-light code[class*="language-"],
@@ -7553,7 +7555,7 @@ community:
         .theme-light .language-css .token.string,
         .theme-light .style .token.string {
             color: var(--color-text-orange);
-            background-color: var(--background-primary-alt);
+            background-color: var(--background-primary);
         }
 
         .theme-light .token.atrule,
@@ -7601,7 +7603,9 @@ community:
         ========================================================================== */ 
 
         .theme-dark .markdown-preview-view blockquote {
-            border-color: var(--table-border-color);
+            border: 2px solid var(--table-border-color);
+            background-color: var(--background-secondary-alt);
+            border-left-width: 5px;
         }
 
         .theme-dark .markdown-preview-view hr {
@@ -7610,7 +7614,7 @@ community:
 
         .theme-dark .markdown-preview-view code {
             color: var(--color-text-red);
-            background-color: var(--background-secondary);
+            background-color: var(--background-secondary-alt);
             border-radius: var(--border-radius-small);
         }
         
@@ -7619,9 +7623,9 @@ community:
         .theme-dark pre[class*="language-"],
         .theme-dark .markdown-preview-view .file-embed {
             color:var(--interactive-accent);
-            background: var(--background-secondary);
+            background: var(--background-secondary-alt);
             border-radius: var(--border-radius-small);
-            border: 1px solid var(--table-border-color);
+            border: 2px solid var(--table-border-color);
         }
 
         .theme-dark code[class*="language-"],
@@ -7635,7 +7639,7 @@ community:
         .theme-dark .language-css .token.string,
         .theme-dark .style .token.string {
             color: var(--color-text-orange);
-            background-color: var(--background-secondary);
+            background-color: var(--background-secondary-alt);
         }
 
         .theme-dark .token.atrule,
