@@ -5278,25 +5278,61 @@ community:
 
     .modal.mod-settings {
         padding: 0px;
-        width: 70vw;
+        width: 55vw;
         height: 70vh;    
         box-shadow: var(--drop-shadow);
         border-radius: var(--border-radius);
     }
 
-    .modal.mod-settings .vertical-tab-header {
-        padding: 0px;
-        border-radius: var(--border-radius);
-        margin: 8px;
-        height: 68.75vh;
+    .theme-dark .modal.mod-settings {
+        background-color: var(--background-color-dt);
     }
 
-    .theme-light .modal.mod-settings .vertical-tab-header {
+    .theme-light .modal.mod-settings {
         background-color: var(--background-color-lt);
     }
 
-    .theme-dark .modal.mod-settings .vertical-tab-header {
-        background-color: var(--background-color-dt);
+    .modal.mod-settings .horizontal-tab-content, .vertical-tab-content {
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--drop-shadow);
+    }
+
+    .modal.mod-settings .vertical-tab-header {
+        padding: 0px;
+        border-radius: var(--border-radius);
+        margin: 0px 15px 15px 15px;
+        height: unset;
+    }
+
+    .modal.mod-settings .vertical-tabs-container {
+        height: 100%;
+    }
+
+    .modal.mod-settings .modal-title::before {
+        content: '';
+        font-size: 20px;
+        position: relative;
+        display: inline-block;
+        padding-left: 60px;
+    }
+
+    .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
+        content: "Prism Theme";
+        font-family: var(--default-font);
+        font-size: 16px;
+        font-weight: 600;
+        background: var(--background-primary);
+        border-radius: var(--border-radius);
+        box-shadow: var(--drop-shadow);
+        padding: 8px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal.mod-settings .vertical-tab-header {
+        background-color: var(--background-secondary);
+        box-shadow: var(--drop-shadow);
     }
 
     .modal.mod-settings .vertical-tab-header-group {
@@ -5306,12 +5342,13 @@ community:
     }
 
     .modal.mod-settings .vertical-tab-header-group:not(:last-of-type) {
-        margin: 10px 0px;
+        margin-bottom: 10px;
     }
 
     /* Padding around the setting's content container */
     .modal.mod-settings .vertical-tab-content-container {
-        padding: 40px 15px 20px 15px;
+        padding: 0px 15px 15px 0px;
+        height: unset;
     }
 
     .setting-item-name {
@@ -5540,6 +5577,10 @@ community:
         border-bottom: 1px solid var(--style-settings-vertical-lines-color);
     }
     
+    .setting-item.setting-item-heading.style-settings-heading:not(.is-collapsed) .style-settings-collapse-indicator {
+        color: var(--interactive-accent-text);
+    }
+
 
 /*  ==========================================================================
     Mark Highlight System
