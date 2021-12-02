@@ -1927,22 +1927,7 @@ settings:
             - 
                 label: Grid Accent Color
                 value: pt-kanban-background-grid-accent-dt
-    -
-        id: extras-and-tweaks
-        title: Extras and Tweaks
-        description: Other Settings and Debug options.
-        type: heading
-        level: 1
-        collapsed: true
-        hub: ignore
-    - 
-        id: pt-settings-background-blur 
-        title: Settings Background Blur 
-        description: Toggles the background blur around the Settings window. (Mostly toggled off for debugging).
-        default: true
-        type: class-toggle
-        hub: ignore
-        
+
 */
 
 /* 
@@ -5272,12 +5257,6 @@ community:
 
     .modal-bg {
         background: transparent ;
-    }
-
-    .pt-settings-background-blur .modal-bg {
-        /* background: var(--background-secondary-blur); */
-        backdrop-filter: blur(var(--blur-intensity));
-        -webkit-backdrop-filter: blur(var(--blur-intensity));
     }
 
     .modal.mod-settings {
