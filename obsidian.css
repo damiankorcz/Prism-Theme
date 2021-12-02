@@ -2615,10 +2615,19 @@ community:
             padding: 2px;
         }
 
+        .suggestion-container .suggestion-prefix {
+            font-weight: 600;
+        }
+
         .suggestion-item.is-selected {
+            color: var(--interactive-accent-text);
             background-color: var(--background-primary);
             border-radius: var(--border-radius-small);
             font-weight: 600;
+        }
+
+        .suggestion-item.is-selected .suggestion-hotkey{
+            background-color: var(--background-secondary);
         }
 
         .search-input-clear-button {
@@ -2667,6 +2676,11 @@ community:
         .menu-item.selected:not(.is-disabled):not(.is-label) {
             background-color: var(--background-primary);
             font-weight: 600;
+        }
+
+        .menu-item:hover:not(.is-disabled):not(.is-label),
+        .menu-item:hover:not(.is-disabled):not(.is-label) .menu-item-icon {
+            color: var(--interactive-accent-text);
         }
 
 
@@ -5219,25 +5233,6 @@ community:
 
 
 /*  ==========================================================================
-    Command Prompt
-    ========================================================================== */
-    
-    .prompt {
-        background-color: var(--background-secondary);
-    }
-
-    input.prompt-input {
-        margin-bottom: 10px;
-    }
-
-    .suggestion-hotkey {
-        background-color: var(--background-primary);
-        border-radius: var(--border-radius-small);
-        font-weight: 600;
-    }
-
-
-/*  ==========================================================================
     Popovers (File Previews)
     ========================================================================== */
 
@@ -6885,6 +6880,7 @@ community:
         .theme-dark.pt-accent-style-filled-dt .suggestion-hotkey,
         .theme-light.pt-accent-style-filled-lt .suggestion-hotkey {
             background-color: var(--interactive-accent);
+            border: var(--border-size) solid transparent;
             box-shadow: var(--drop-shadow);
         }
 
@@ -7567,8 +7563,9 @@ community:
     ========================================================================== */
     
     .suggestion-container {
-        width: 600px;
+        max-width: 700px;
         padding: 8px;
+        border: 1px solid var(--table-border-color);
     }
 
     .suggestion {
@@ -7588,10 +7585,79 @@ community:
         line-height: 28px;
     }
 
-    .modal-container .prompt-results .suggestion-item {
+    .suggestion-item {
+        padding: 5px 10px;
         margin-right: 8px;
     }
 
+    .suggestion-item .suggestion-flair {
+        display: inline-flex;
+        padding-left: 10px;
+        left: unset;
+        top: unset;
+    }
+
+    .suggestion-item .suggestion-flair svg {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .suggestion-item .suggestion-prefix {
+        border-radius: var(--border-radius-small);
+        background-color: var(--background-primary);
+        margin-right: 5px;
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+
+    .suggestion-item:hover .suggestion-prefix {
+        background-color: var(--background-secondary);
+    }
+
+    .suggestion-item .suggestion-prefix::after {
+        display: none;
+    }
+
+    /* .modal-container .prompt-results .suggestion-item span.suggestion-flair {
+        padding-left: 34px;
+    } */
+    
+
+/*  ==========================================================================
+    Command Pallete
+    ========================================================================== */
+    
+    .prompt {
+        background-color: var(--background-secondary);
+    }
+
+    input.prompt-input {
+        margin-bottom: 10px;
+    }
+
+    .suggestion-hotkey {
+        background-color: var(--background-primary);
+        border-radius: var(--border-radius-small);
+        font-weight: 600;
+    }
+
+    .modal-container .prompt {
+        border: 1px solid var(--table-border-color);
+        box-shadow: var(--drop-shadow);
+        background-color: var(--background-secondary-blur);
+        backdrop-filter: blur(var(--blur-intensity));
+        -webkit-backdrop-filter: blur(var(--blur-intensity));        
+    }
+
+    .theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+        background-color: var(--background-color-lt);
+        border-radius: var(--border-radius-small);
+    }
+
+    .theme-dark .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+        background-color: var(--background-color-dt);
+        border-radius: var(--border-radius-small);
+    }
 
 /*  ==========================================================================
     Text Selection
