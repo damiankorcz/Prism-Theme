@@ -2728,16 +2728,6 @@ community:
             opacity: 1;
         }
 
-        .titlebar-button-container.mod-left .mod-back svg,
-        .titlebar-button-container.mod-left .mod-forward svg {
-            fill: var(--text-muted);
-        }
-
-        .titlebar-button-container.mod-left div.titlebar-button.mod-back:hover,
-        .titlebar-button-container.mod-left div.titlebar-button.mod-forward:hover {
-            color: var(--interactive-accent-text);
-        }
-
         .pt-default-titlebar .titlebar-text {
             position: relative;
             height: 18px;
@@ -3035,6 +3025,36 @@ community:
                 color: var(--interactive-accent-text);
             }
 
+            .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+            .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+            .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+            .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+            .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+            .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+            .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+            .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+            .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+            .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+            .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+            .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
+                color: var(--interactive-accent-text);
+            }
+            
+            .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+            .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+            .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+            .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+            .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+            .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
+                color: var(--interactive-accent-hover);
+            }
+
+            .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover svg {
+                color: white;
+            }
+
+
+
             .theme-light.pt-solid-titlebar-lt div.titlebar-text,
             .theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-left,
             .theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-right,
@@ -3064,7 +3084,7 @@ community:
         /* Tab label container */   
         .workspace-tabs .workspace-tab-header-container {
             height: fit-content;
-            padding-bottom: 10px;
+            padding-bottom: calc(var(--window-gap) / 2);
             padding-top: unset;
         }
 
@@ -3105,6 +3125,10 @@ community:
             box-shadow: var(--drop-shadow);
         }
 
+        .workspace-tab-header.is-active:hover svg {
+            color: var(--interactive-accent-hover);
+        }
+
         /* Tab label inactive background */
         .workspace-tab-header.is-after-active,
         .workspace-tab-header.is-after-active .workspace-tab-header-inner,
@@ -3112,6 +3136,7 @@ community:
         .workspace-tab-header.is-before-active .workspace-tab-header-inner {
             background-color: transparent;
             box-shadow: none;
+            border-radius: var(--border-radius);
         }
 
         .workspace-tab-header:not(.is-active):hover {
@@ -3192,8 +3217,8 @@ community:
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 5px;
-        padding: 10px 10px;
+        margin-top: calc(var(--window-gap) / 2);
+        padding: 10px;
         color: var(--text-muted);
         background-color: var(--tab-label-background-color);
         border-radius: var(--border-radius);
@@ -3211,7 +3236,7 @@ community:
     }
 
     .workspace-ribbon .side-dock-actions {
-        margin-top: 10px;
+        margin-top: calc(var(--window-gap) / 2);
         margin-bottom: auto;
         background-color: var(--tab-label-background-color);
         border-radius: var(--border-radius);
@@ -3685,7 +3710,7 @@ community:
     .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type="search"] .nav-buttons-container,
     .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type="starred"] .nav-buttons-container,
     .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type="backlink"] .nav-buttons-container {
-        border: 1px solid var(--background-secondary);
+        border: 1px solid var(--tab-label-background-color);
         background: var(--background-secondary-blur);
         backdrop-filter: blur(var(--blur-intensity));
         -webkit-backdrop-filter: blur(var(--blur-intensity));
@@ -4109,11 +4134,17 @@ community:
     }
 
     .workspace-leaf-content[data-type="outgoing-link"] .outgoing-link-pane.node-insert-event .tree-item-self:hover,
+    .workspace-leaf-content[data-type="outgoing-link"] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair
     .workspace-leaf-content[data-type="outgoing-link"] .outgoing-link-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
+        color: var(--text-normal);
     }
-
+    
+    
+    .workspace-leaf-content[data-type="outgoing-link"] .outgoing-link-pane.node-insert-event .tree-item-self,
+    .workspace-leaf-content[data-type="outgoing-link"] .tree-item-self.is-clickable.is-collapsed .collapse-icon {
+        color: var(--text-normal);
+    }
+    
     .workspace-leaf-content[data-type="outgoing-link"] .tree-item-self.is-clickable:not(.is-collapsed) .collapse-icon,
     .workspace-leaf-content[data-type="outgoing-link"] .tree-item-self.is-clickable.is-collapsed:hover .collapse-icon {
         color: var(--interactive-accent-text);
@@ -4129,6 +4160,10 @@ community:
         position: relative;
         z-index: 500;
         margin-bottom:8px;
+    }
+
+    .workspace-leaf-content[data-type="outgoing-link"] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
+        background-color: var(--background-primary);
     }
 
     .workspace-leaf-content[data-type="outgoing-link"] .search-result:last-child .search-result-file-matches {
@@ -4175,7 +4210,6 @@ community:
         background: var(--background-primary);
         box-shadow: var(--drop-shadow);
         border-radius: var(--border-radius-small);
-        border: 1px solid var(--background-modifier-border);
     }
 
     .workspace-leaf-content[data-type="outgoing-link"] .search-result-file-match:after {
@@ -4276,6 +4310,10 @@ community:
 
     .theme-dark .graph-control-section:not(:last-child) .tree-item-children {
         border-bottom: 2px solid var(--background-primary)
+    }
+
+    .tree-item.graph-control-section:not(.is-collapsed) .tree-item-icon.collapse-icon {
+        color: var(--interactive-accent-text);
     }
     
     /* .graph-view.color-fill {
@@ -4684,9 +4722,13 @@ community:
         padding: unset;
     }
 
+    .workspace-leaf-content[data-type="backlink"] .backlink-pane.node-insert-event .tree-item-self {
+        color: var(--text-normal);
+    }
+
     .workspace-leaf-content[data-type="backlink"] .backlink-pane.node-insert-event .tree-item-self:hover,
     .workspace-leaf-content[data-type="backlink"] .backlink-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
-        color: var(--interactive-accent-text);
+        color: var(--text-normal);
         background-color: var(--background-primary);
     }
 
@@ -4756,6 +4798,14 @@ community:
 
     .workspace-leaf-content[data-type="outline"] .tree-item-self.is-clickable:hover {
         background-color: var(--background-primary);
+    }
+
+    .workspace-leaf-content[data-type="outline"] .tree-item-self.is-clickable:hover .tree-item-inner {
+        color: var(--interactive-accent-text);
+    }
+
+    .workspace-leaf-content[data-type="outline"] .outline .tree-item:not(.is-collapsed) > .tree-item-self > .collapse-icon {
+        color: var(--interactive-accent-text);
     }
 
     /* WIP Verical lines of the Outline */
@@ -4834,7 +4884,16 @@ community:
     .nav-folder.mod-root > .nav-folder-title {
         padding-left: 4px;
     }
+
+
+    .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) .nav-folder-collapse-indicator {
+        color: var(--interactive-accent-text);
+    }
     
+    .nav-folder > div.nav-folder-title:hover .nav-folder-title-content {
+        color: var(--interactive-accent-text);
+    }
+
     .nav-file-title {
         font-weight: normal;
         border: 0px; 
@@ -4857,7 +4916,7 @@ community:
     body:not(.is-grabbing) .nav-file-title:hover,
     body:not(.is-grabbing) .nav-folder-title:hover {
         border-radius: var(--border-radius-small);
-        color: var(--text-normal);
+        color: var(--interactive-accent-text);
         background-color: var(--background-primary);
         border: var(--border-size) solid var(--background-primary);
         font-weight: 600;
@@ -4878,6 +4937,7 @@ community:
     }
     
     /* Tweaks the line height to keep it in the same height as the normal text */
+    .nav-folder-title:hover,
     .nav-file-title:hover {
         line-height: 12px;
     }
@@ -4933,7 +4993,7 @@ community:
         height:fit-content;
         border: 0px;
         border-radius: var(--border-radius);
-        /* background-color: var(--background-secondary); */
+        background-color: var(--background-secondary);
         box-shadow: var(--drop-shadow);
         padding: 8px;
     }
@@ -5124,6 +5184,18 @@ community:
 
         .workspace-tabs .workspace-leaf {
             background-color: transparent;
+        }
+
+
+        .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
+        .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn  {
+            color: var(--interactive-accent-text);
+            background-color: var(--background-primary);
+        }
+
+        .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
+        .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover  {
+            color: var(--interactive-accent-hover);
         }
 
 
@@ -6133,12 +6205,28 @@ community:
             border: var(--border-size) solid transparent;
         }   
 
-        .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-icon,
-        .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
         .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-title,
-        .theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-        .theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
         .theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-title {
+            color: var(--interactive-accent-text);
+        }
+
+        .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
+        .theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
+            color: var(--interactive-accent-hover);
+        }
+        
+        .theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-header-icon,
+        .theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-actions .view-action,
+        .theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-header-icon,
+        .theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-actions .view-action {
+            color: var(--text-muted);
+            stroke-width: 3px;
+        }
+
+        .theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-header-icon:hover,
+        .theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-actions .view-action:hover,
+        .theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-header-icon:hover,
+        .theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-actions .view-action:hover {
             color: var(--interactive-accent-text);
             stroke-width: 3px;
         }
@@ -6157,10 +6245,21 @@ community:
             stroke-width: 3px;
         }
 
+        .theme-dark.pt-accent-style-text-dt .nav-action-button.is-active:hover svg,
+        .theme-light.pt-accent-style-text-lt .nav-action-button.is-active:hover svg {
+            color: var(--interactive-accent-hover);
+        }
+
         .theme-dark.pt-accent-style-text-dt .vertical-tab-nav-item.is-active,
         .theme-light.pt-accent-style-text-lt .vertical-tab-nav-item.is-active {
             background-color: var(--background-primary);
             color: var(--interactive-accent-text);
+        }
+
+        
+        .theme-dark.pt-accent-style-text-dt .vertical-tab-nav-item.is-active:hover,
+        .theme-light.pt-accent-style-text-lt .vertical-tab-nav-item.is-active:hover {
+            color: var(--interactive-accent-hover);
         }
 
         .theme-dark.pt-accent-style-text-dt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
@@ -6170,6 +6269,12 @@ community:
             background-color: var(--background-primary);
             border: var(--border-size) solid transparent;
             border-left: 2px solid var(--interactive-accent-text);
+        }
+        
+        .theme-dark.pt-accent-style-text-dt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active:hover,
+        .theme-light.pt-accent-style-text-lt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active:hover {
+            color: var(--interactive-accent-hover);
+            border-left: 2px solid var(--interactive-accent-hover);
         }
 
         .theme-dark.pt-accent-style-text-dt .nav-file-title.is-active:hover,
@@ -6181,6 +6286,7 @@ community:
         .theme-dark.pt-accent-style-text-dt .suggestion-hotkey,
         .theme-light.pt-accent-style-text-lt .suggestion-hotkey {
             color: var(--interactive-accent-text);
+            border: var(--border-size) solid transparent;
         }
 
         /* Matches the gradient next to the right hand buttons in the View Header with the background */
@@ -6317,6 +6423,11 @@ community:
             background-color: var(--background-primary);
         }
 
+        .theme-dark.pt-accent-style-text-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
+        .theme-light.pt-accent-style-text-lt .modal button:not(.mod-cta):not(.mod-warning):hover {
+            color: var(--interactive-accent-hover);
+        }
+
         .theme-dark.pt-accent-style-text-dt .setting-hotkey,
         .theme-light.pt-accent-style-text-lt .setting-hotkey {
             font-weight: 600;
@@ -6372,11 +6483,17 @@ community:
 
         .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-icon,
         .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-        .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-title,
         .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-        .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-        .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-title {
-            color: var(--text-normal);
+        .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action {
+            color: var(--text-muted);
+            stroke-width: 3px;
+        }
+
+        .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+        .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
+        .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+        .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover {
+            color: var(--interactive-accent-text);
             stroke-width: 3px;
         }
 
@@ -6599,12 +6716,28 @@ community:
             border: var(--border-size) solid var(--interactive-accent-dark);
         }
 
+        .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-header-title,
+        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-header-title {
+            color: var(--interactive-accent-text);
+        }
+
+        .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
+        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
+            color: var(--interactive-accent-hover);
+        }
+
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-header-icon,
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-        .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-header-title,
         .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-header-title {
+        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-actions .view-action {
+            color: var(--text-muted);
+            stroke-width: 3px;
+        }
+
+        .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+        .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
+        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover {
             color: var(--interactive-accent-text);
             stroke-width: 3px;
         }
@@ -6626,11 +6759,21 @@ community:
             stroke-width: 3px;
         }
 
+        .theme-dark.pt-accent-style-borderandtext-dt .nav-action-button.is-active:hover svg,
+        .theme-light.pt-accent-style-borderandtext-lt .nav-action-button.is-active:hover svg {
+            color: var(--interactive-accent-hover);
+        }
+
         .theme-dark.pt-accent-style-borderandtext-dt .vertical-tab-nav-item.is-active,
         .theme-light.pt-accent-style-borderandtext-lt .vertical-tab-nav-item.is-active {
-            background-color: var(--background-secondary);
+            background-color: var(--background-primary);
             color: var(--interactive-accent-text);
             border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandtext-dt .vertical-tab-nav-item.is-active:hover,
+        .theme-light.pt-accent-style-borderandtext-lt .vertical-tab-nav-item.is-active:hover {
+            color: var(--interactive-accent-hover);
         }
 
         .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
@@ -6640,6 +6783,12 @@ community:
             border-radius: var(--border-radius-small);
             border: var(--border-size) solid var(--interactive-accent-dark);
             box-shadow: var(--drop-shadow);
+        }
+
+        .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active:hover,
+        .theme-light.pt-accent-style-borderandtext-lt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active:hover {
+            color: var(--interactive-accent-hover);
+            border-left: 2px solid var(--interactive-accent-hover);
         }
 
         .theme-dark.pt-accent-style-borderandtext-dt .suggestion-hotkey,
@@ -7393,18 +7542,40 @@ community:
         margin-right: 16px;
     }
 
+    div.kanban-plugin__lane-title {
+        cursor: text;
+    }
+
     div.kanban-plugin__lane-header-wrapper {
+        background: var(--background-primary);
         border-radius: var(--border-radius);
     }
 
-    .kanban-plugin__lane-header-wrapper,
-    .kanban-plugin__item-button-wrapper{
+    div.kanban-plugin__item-button-wrapper{
         background: var(--tab-label-background-color);
         border-radius: var(--border-radius);
     }
 
-    button.kanban-plugin__new-item-button:hover {
+    div.kanban-plugin__lane-grip {
+        color: var(--text-muted);
+    }
+
+    div.kanban-plugin__lane-grip:hover {
+        color: var(--interactive-accent-hover);
+    }
+
+    div.kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+    div.kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
+    div.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+        color: var(--interactive-accent-hover);
+    }
+
+    .kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
         color: var(--text-normal);
+    }
+
+    button.kanban-plugin__new-item-button:hover {
+        color: var(--interactive-accent-text);
         font-weight: 600;
         background-color: var(--background-primary);
     }
