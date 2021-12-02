@@ -3934,6 +3934,15 @@ community:
         background-color: var(--background-primary);
     }
 
+    input[type='text']::placeholder,
+    input[type='search']::placeholder,
+    input[type='email']::placeholder,
+    input[type='password']::placeholder,
+    input[type='number']::placeholder,
+    textarea::placeholder {
+        color: var(--text-muted);
+    }
+
     .theme-light input[type='range'] {
         background-color: var(--background-secondary-alt);
         box-shadow: var(--drop-shadow);
