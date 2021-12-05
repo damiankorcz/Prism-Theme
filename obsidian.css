@@ -3266,7 +3266,8 @@ community:
         align-items: center;
         justify-content: center;
         margin-top: calc(var(--window-gap) / 2);
-        padding: 10px;
+        padding: 8px;
+        border: var(--border-size) solid transparent;
         color: var(--text-muted);
         background-color: var(--tab-label-background-color);
         border-radius: var(--border-radius);
@@ -5081,6 +5082,10 @@ community:
         padding-left: 4px;
     }
 
+    .nav-file-title,
+    .nav-folder-title {
+        border-radius: var(--border-radius-small);
+    }
 
     .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) .nav-folder-collapse-indicator {
         color: var(--interactive-accent-text);
@@ -5123,12 +5128,13 @@ community:
     }
 
     /* Adjusting padding to dynamically center the drop-down icon withe the vertical lines */
-    .nav-file-title,
-    .nav-folder-title {
-        padding: 1px 10px 1px 1px;
+    .nav-file-title:not([data-path="/"]),
+    .nav-folder-title:not([data-path="/"]) {
+        padding: 1px 10px 2px 1px;
         line-height: 14px;
-        min-height: 25px;
+        min-height: 26px;
         max-width: -webkit-fill-available;
+        border: var(--border-size) solid transparent;
     }
 
     .pt-file-explorer-vertical-lines .nav-file-title,
@@ -5137,9 +5143,11 @@ community:
     }
     
     /* Tweaks the line height to keep it in the same height as the normal text */
-    .nav-folder-title:hover,
-    .nav-file-title:hover {
-        line-height: 12px;
+    .nav-folder-title.is-active:not([data-path="/"]),
+    .nav-file-title.is-active:not([data-path="/"]),
+    .nav-folder-title:not([data-path="/"]):hover,
+    .nav-file-title:not([data-path="/"]):hover {
+        line-height: 14px;
     }
 
     .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title:not(.is-active) {
@@ -5153,6 +5161,7 @@ community:
 
     .nav-file-title-content {
         padding: 2px 11px;
+        font-weight: 600;
     }
       
     .nav-folder-collapse-indicator {
@@ -5556,13 +5565,24 @@ community:
         height: 100%;
     }
 
+    .modal.mod-settings .modal-title {
+        height: 40px;
+        font-size: unset;
+    }
+
     .modal.mod-settings .modal-title::before {
         content: "Settings";
-        font-size: 18px;
-        position: relative;
-        display: inline-block;
-        padding-left: 60px;
+        font-size: 16px;
+        padding: 2px 10px;
+        height: 25px;
+        margin: 5px auto;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
     }
+
     .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
         content: "Prism Theme";
         font-family: var(--default-font);
@@ -5592,7 +5612,7 @@ community:
         padding-bottom: 10px;
     }
 
-    .modal.mod-settings .vertical-tab-header-group:not(:last-of-type) {
+    .modal.mod-settings .vertical-tab-header-group {
         margin-bottom: 10px;
     }
 
@@ -5718,7 +5738,7 @@ community:
         width: 22px;
         height: 22px;
         background-color: var(--background-primary);
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 0.5px 2px 0px;
+        box-shadow: var(--drop-shadow);
         border-radius: var(--border-radius-small);
         transform: translate3d(0, 0, 0);
     }
@@ -5811,11 +5831,15 @@ community:
     .mod-community-theme > .modal-title::before {
         content: "Community Themes";
         color: var(--text-normal);
+        font-size: 16px;
+        padding: 2px 10px;
+        height: 25px;
+        margin: 5px auto;
+        width: fit-content;
         display: flex;
         justify-content: center;
-        width: 100%;
-        font-size: 18px;
-        height: 40px;
+        align-content: center;
+        flex-direction: column;
     }
 
     .mod-community-theme .modal-content .modal-title {
@@ -5889,11 +5913,15 @@ community:
     .mod-community-plugin .modal-title::before {
         content: "Community Plugins";
         color: var(--text-normal);
+        font-size: 16px;
+        padding: 2px 10px;
+        height: 25px;
+        margin: 5px auto;
+        width: fit-content;
         display: flex;
         justify-content: center;
-        width: 100%;
-        font-size: 18px;
-        height: 40px;
+        align-content: center;
+        flex-direction: column;
     }
         
     .community-theme-filters-container .setting-item {
@@ -7935,17 +7963,21 @@ community:
         align-items: center;
         height: fit-content;
         width: fit-content;
+        line-height: 16px;
         background: var(--background-primary);
         border-radius: var(--border-radius);
         box-shadow: var(--drop-shadow);
         padding: 0px 10px;
         margin: 0px 0px 10px 0px;    
         min-width: -webkit-fill-available;
+        border: unset;
     }
 
     .pt-custom-vault-banner .nav-folder-title[data-path="/"]:hover {
         background-color: var(--background-primary);
         border-radius: var(--border-radius);
+        line-height: 16px;
+        border: unset;
     }
 
     .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
@@ -7957,7 +7989,7 @@ community:
     }
 
     .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-right .nav-folder-title[data-path="/"] {
-        justify-content:flex-end;
+        justify-content: flex-end;
     }
 
     .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-title-content {
@@ -8713,10 +8745,12 @@ community:
             border-color: var(--table-border-color);
         }
 
-        .theme-light .markdown-preview-view code {
+        .theme-light .markdown-preview-view code,
+        .theme-light .markdown-preview-view kbd {
             color: var(--color-text-red);
             background-color: var(--background-primary);
             border-radius: var(--border-radius-small);
+            padding: 2px 4px;
         }
 
         .theme-light .markdown-preview-view pre,
@@ -8732,6 +8766,11 @@ community:
         .theme-light code[class*="language-"],
         .theme-light pre[class*="language-"] {
             color: var(--text-normal);
+        }
+
+        .theme-light .markdown-embed,
+        .theme-light .file-embed {
+            background-color: var(--background-primary);
         }
 
         .theme-light .token.operator,
@@ -8797,10 +8836,12 @@ community:
             border-color: var(--table-border-color);
         }
 
-        .theme-dark .markdown-preview-view code {
+        .theme-dark .markdown-preview-view code,
+        .theme-dark .markdown-preview-view kbd {
             color: var(--color-text-red);
             background-color: var(--background-secondary-alt);
             border-radius: var(--border-radius-small);
+            padding: 2px 4px;
         }
         
         .theme-dark .markdown-preview-view pre,
@@ -8816,6 +8857,11 @@ community:
         .theme-dark code[class*="language-"],
         .theme-dark pre[class*="language-"] {
             color: var(--text-normal);
+        }
+
+        .theme-dark .markdown-embed,
+        .theme-dark .file-embed {
+            background-color: var(--background-secondary-alt);
         }
 
         .theme-dark .token.operator,
