@@ -5727,6 +5727,34 @@ community:
         background-position: right 0.7em top 60%, 0 0;
         background-size: 0.65em auto, 100%;
     }
+    
+    .theme-dark .dropdown:hover {
+        background-color: var(--background-secondary-alt);
+    }
+
+    /* option background */
+    .theme-light .dropdown option {
+        background-color: var(--background-primary-alt);
+        color: var(--text-normal);
+    }
+
+    /* Currently active option background */
+    .theme-light .dropdown option:checked {
+        background-color: var(--background-primary);
+        color: var(--interactive-accent-text);
+    }
+
+    /* option background */
+    .theme-dark .dropdown option {
+        background-color: var(--background-secondary);
+        color: var(--text-normal);
+    }
+
+    /* Currently active option background */
+    .theme-dark .dropdown option:checked {
+        background-color: var(--background-primary);
+        color: var(--interactive-accent-text);
+    }
 
     .checkbox-container {
         border-radius: var(--border-radius-small);
