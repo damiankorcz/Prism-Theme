@@ -1917,6 +1917,31 @@ settings:
             - 
                 label: Grid Accent Color
                 value: pt-kanban-background-grid-accent-dt
+    -
+        id: advanced-tables-settings
+        title: Advanced Tables
+        description: Tgrosinger's Advanced Tables Plugin (https://github.com/tgrosinger/advanced-tables-obsidian).
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pt-advanced-tables-align
+        title: Advanced Tables Buttons Container Alignment
+        description: Change the horizontal alignment of the Advanced Tables buttons container.
+        type: class-select
+        allowEmpty: false
+        default: pt-advanced-tables-align-center
+        options:
+            - 
+                label: Left
+                value: pt-advanced-tables-align-left
+            -
+                label: Center
+                value: pt-advanced-tables-align-center
+            - 
+                label: Right
+                value: pt-advanced-tables-align-right
+
 
 */
 
@@ -3931,13 +3956,24 @@ community:
 
         /* Positions the Advanced Tables Toolbar at the top of the View Content */
         .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
-            
             height: 100%;
             overflow: auto;
             display: flex;
-            justify-content: center;
             padding: 0px;
         }
+
+        .pt-advanced-tables-align-left .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            justify-content: flex-start;
+        }
+
+        .pt-advanced-tables-align-center .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            justify-content: center;
+        }
+
+        .pt-advanced-tables-align-right .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            justify-content: flex-end;
+        }
+
                    
 
 /*  ==========================================================================
