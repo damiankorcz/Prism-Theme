@@ -1453,31 +1453,11 @@ settings:
         type: class-toggle
         default: true
     -
-        id: pt-custom-vault-banner-icon-type
-        title: Vault Banner Icon Type
-        description: Select which format you want to use to display the Vault Banner Icon.
-        type: class-select
-        allowEmpty: false
-        default: pt-custom-vault-banner-icon-url
-        options:
-            - 
-                label: URL
-                value: pt-custom-vault-banner-icon-url
-            - 
-                label: Base64 (WIP)
-                value: pt-custom-vault-banner-icon-base64     
-    -
         id: custom-vault-banner-icon-url
         title: Vault Banner Icon (URL)
-        description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets in the URL.
+        description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
         type: variable-text
         default: url(https://img.icons8.com/dusk/50/000000/safe.png)
-    -
-        id: custom-vault-banner-icon-base64
-        title: Vault Banner Icon (Base64)
-        description: (WIP - Currently not working) Customise the Vault Banner Icon. Insert a Base64 Encoded image in between the brackets in the URL.
-        type: variable-text
-        default: url(data:image/png;base64,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)
     -
         id: tab-label
         title: Tab Label
@@ -2270,8 +2250,7 @@ community:
 
             /* Custom Vault Banner */
             --custom-vault-banner-icon-url: url(https://img.icons8.com/dusk/50/000000/safe.png);
-            --custom-vault-banner-icon-base64: url(data:image/png;base64,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);
-            
+
 
             /* File Explorer */
             --file-explorer-vertical-lines-width: 2px;
@@ -7506,12 +7485,8 @@ community:
         background-position: center;
     }
 
-    .pt-custom-vault-banner.pt-custom-vault-banner-icon-url .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
+    .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
         background-image: var(--custom-vault-banner-icon-url);
-    }
-
-    .pt-custom-vault-banner.pt-custom-vault-banner-icon-base64 .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
-        background-image: var(--custom-vault-banner-icon-base64);
     }
 
     .pt-custom-vault-banner.pt-custom-vault-banner-sticky .nav-folder-title[data-path="/"] {
@@ -8466,19 +8441,6 @@ community:
     /* .setting-item.setting-item-heading.style-settings-heading[data-id="obsidian-prism-theme"] {
         background:red;
     } */
-
-    /* Base64 code format for the Custom Banner Icon */
-    /*     -
-                - 
-                label: Base64
-                value: pt-custom-vault-banner-icon-base64     
-        id: custom-vault-banner-icon-base64
-        title: Vault Banner Icon (Base64)
-        description: Customise the Vault Banner Icon. Insert a Base64 Encoded image in between the brackets in the URL.
-        type: variable-text
-        default: url()
-        
-    */
 
     /*  WIP Window Gaps only on the Inner sides of workspace windows 
     ========================================================================== */  
