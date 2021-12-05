@@ -5005,33 +5005,37 @@ community:
         color: var(--interactive-accent-text);
     }
 
-    /* WIP Verical lines of the Outline */
-    /*
-    .workspace-leaf-content[data-type="outline"] .tree-item-children {
-        margin-left: 7px;
-        border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
-    }
+    /*  Outline Vertical Lines (Relationship Lines)
+        ========================================================================== */
+        
+        .workspace-leaf-content[data-type="outline"] .tree-item-children {
+            margin-left: 10px;
+            border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
+        }
 
-    .workspace-leaf-content[data-type="outline"] .tree-item-self {
-        padding-left: unset;
-    }
+        .workspace-leaf-content[data-type="outline"] .tree-item-self {
+            padding: 1px 10px 1px calc(var(--file-explorer-vertical-lines-width) / 2);
+            border: var(--border-size) solid transparent;
+        }
 
-    .workspace-leaf-content[data-type="outline"] .tree-item-children > .tree-item:only-child {
-        padding-left: 20px;
-    }
+        .workspace-leaf-content[data-type="outline"] .tree-item-inner {
+            padding: 0px 4px 0px 8px;
+        }
+        
+        .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon {
+            padding-left: 20px;
+            margin-right: -4px;
+            margin-left: unset;
+            padding: unset;
+            height: 22px;
+            width: 16px;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon {
-        margin-left: unset;
-        padding: unset;
-        height: 22px;
-        width: 16px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon:after {
-        display: none;
-    } */
+        .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon:after {
+            display: none;
+        }
 
     
 /*  Empty States
