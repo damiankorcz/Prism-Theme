@@ -1710,7 +1710,7 @@ settings:
     -
         id: pt-status-bar-position
         title: Status Bar Position
-        description: Change the Position of the Status Bar.
+        description: Change the Position of the Status Bar. When in the Top position, the Status Bar inherits theme specific customisation options from the Titlebar.
         type: class-select
         allowEmpty: false
         default: pt-status-bar-position-bottom
@@ -1753,15 +1753,14 @@ settings:
                 label: Right to Left
                 value: pt-status-bar-rtl
     -
-        id: solid-status-bar-background
-        title: Solid Status Bar Background
-        description: Settings for a Solid Status Bar Background.
+        id: status-bar-customisation-lt
+        title: Light Theme Customisation
         type: heading
         level: 3
         collapsed: true
     -
         id: pt-solid-status-bar-lt
-        title: Light Theme Solid Status Bar Background
+        title: Light Theme Status Bar Background
         description: Change the entire Light Theme Status Bar background to be a solid color.
         type: class-toggle
         default: false
@@ -1779,13 +1778,35 @@ settings:
                 label: Custom
                 value: pt-solid-status-bar-custom-lt
     -
-        id: solid-status-bar-background-color-lt
+        id: status-bar-background-color-lt
         title: Light Theme Solid Status Bar Background Color
         description: Make sure you selected 'Custom' in Light Theme Solid Status Bar Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#EBECEF'
+    -
+        id: status-bar-text-color-lt
+        title: Light Theme Status Bar Text/Icons Color
+        description: Choose the color used for the Light Theme Status Bar Text/Icons.
+        default: pt-status-bar-text-dark-lt
+        type: class-select
+        options:
+            - 
+                label: Light
+                value: pt-status-bar-text-light-lt
+            -
+                label: Dark
+                value: pt-status-bar-text-dark-lt
+            - 
+                label: Accent
+                value: pt-status-bar-text-accent-lt
+    -
+        id: status-bar-customisation-dt
+        title: Dark Theme Customisation
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: pt-solid-status-bar-dt
         title: Dark Theme Solid Status Bar Background
@@ -1807,13 +1828,29 @@ settings:
                 label: Custom
                 value: pt-solid-status-bar-custom-dt
     -
-        id: solid-status-bar-background-color-dt
-        title: Dark Theme Solid Status Bar Background Color
-        description: Make sure you selected 'Custom' in Dark Theme Solid Status Bar Preset for this to work.
+        id: status-bar-background-color-dt
+        title: Dark Theme Status Bar Background Color
+        description: Make sure you selected 'Custom' in Dark Theme Status Bar Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#2B2B2B'
+    - 
+        id: status-bar-text-color-dt
+        title: Dark Theme Status Bar Text/Icons Color
+        description: Choose the color used for the Dark Theme Status Bar Text/Icons.
+        default: pt-status-bar-text-light-dt
+        type: class-select
+        options:
+            - 
+                label: Light
+                value: pt-status-bar-text-light-dt
+            -
+                label: Dark
+                value: pt-status-bar-text-dark-dt
+            - 
+                label: Accent
+                value: pt-status-bar-text-accent-dt
     - 
         id: scrollbar
         title: Scrollbar
@@ -2269,8 +2306,8 @@ community:
             --titlebar-background-color-dt: #2B2B2B;
 
             /* Solid Status Bar Custom Colors */
-            --solid-status-bar-background-color-lt: #EBECEF;
-            --solid-status-bar-background-color-dt: #2B2B2B;
+            --status-bar-background-color-lt: #EBECEF;
+            --status-bar-background-color-dt: #2B2B2B;
 
 
             /* Custom Vault Banner */
@@ -3371,7 +3408,7 @@ community:
 
     .pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
         position: absolute;
-        margin-top: -27px;
+        margin-top: -26px;
         order: 0;
         margin-bottom: 0px;
         right: 0;
@@ -3387,7 +3424,7 @@ community:
 
     .pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
         position: absolute;
-        margin-top: -27px;
+        margin-top: -26px;
         order: 0;
         left: 0;
         right: 0;
@@ -3396,7 +3433,7 @@ community:
     
     .pt-status-bar-position-top.pt-status-bar-align-right.pt-windows-titlebar .status-bar {
         position: absolute;
-        margin-top: -27px;
+        margin-top: -26px;
         order: 0;
         margin-bottom: 0px;
         right: 148px;
@@ -3471,18 +3508,45 @@ community:
             border-radius: unset;
         }  
         
-        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt.pt-solid-status-bar-default-lt div.status-bar,
-        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt.pt-solid-status-bar-default-dt div.status-bar {
+        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-default-lt div.status-bar,
+        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-default-dt div.status-bar {
             background: var(--tab-label-background-color);
         }
 
-        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt.pt-solid-status-bar-custom-lt div.status-bar {
-            background: var(--solid-status-bar-background-color-lt);
+        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-custom-lt div.status-bar {
+            background: var(--status-bar-background-color-lt);
         }
         
-        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt.pt-solid-status-bar-custom-dt div.status-bar {
-            background: var(--solid-status-bar-background-color-dt);
+        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-custom-dt div.status-bar {
+            background: var(--status-bar-background-color-dt);
         }
+
+        /*  Solid Statusbar
+            ========================================================================== */ 
+
+            :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-light-lt .status-bar {
+                color: var(--background-primary);
+            }
+
+            :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-dark-lt .status-bar {
+                color: var(--text-normal);
+            }
+
+            :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-accent-lt .status-bar {
+                color: var(--interactive-accent-text);
+            }
+
+            :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-light-dt .status-bar {
+                color: var(--text-normal);
+            }
+
+            :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-dark-dt .status-bar {
+                color: var(--background-primary);
+            }
+            
+            :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-accent-dt .status-bar {
+                color: var(--interactive-accent-text);
+            }
 
 
         :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
