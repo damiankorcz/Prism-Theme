@@ -1375,90 +1375,6 @@ settings:
         level: 2
         collapsed: true
     -
-        id: file-explorer
-        title: File Explorer
-        description: Customisation options for the File Explorer module.
-        type: heading
-        level: 3
-        collapsed: true 
-    - 
-        id: pt-file-explorer-text-wrap
-        title: File Explorer Text Wrap
-        description: Toggles Text Wrapping on the file/folder names in the File Explorer to help fit the whole name when the name is longer than the visible area.
-        default: false
-        type: class-toggle
-    - 
-        id: pt-file-explorer-vertical-lines
-        title: File Explorer Vertical Lines (Relationship Lines)
-        description: Toggles Vertical Lines (Relationship Lines) in the File Explorer to help visualise the folder and file depth.
-        default: true
-        type: class-toggle
-    - 
-        id: file-explorer-vertical-lines-width
-        title: File Explorer Vertical Lines Width (px)
-        type: variable-number-slider
-        format: 'px'
-        default: 2
-        min: 1
-        max: 5
-        step: 1 
-    -
-        id: custom-vault-banner
-        title: Custom Vault Banner
-        description: Custom Vault Banner in the File Explorer with a custom icon option.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: pt-custom-vault-banner
-        title: Enable Custom Vault Banner
-        description: Enable the Custom Vault Banner in the File Explorer.
-        type: class-toggle
-        default: true
-    -
-        id: custom-vault-banner-horizontal-align
-        title: Custom Vault Banner Alignment
-        description: Horizontally align the Custom Vault Banner content.
-        type: class-select
-        allowEmpty: false
-        default: pt-custom-vault-banner-justify-content-center
-        options:
-            - 
-                label: Left
-                value: pt-custom-vault-banner-justify-content-left
-            - 
-                label: Center
-                value: pt-custom-vault-banner-justify-content-center
-            - 
-                label: Right
-                value: pt-custom-vault-banner-justify-content-right
-    -
-        id: custom-vault-banner-order
-        title: Custom Vault Banner Order
-        description: Select the order in which the content appears in the Custom Vault Banner.
-        type: class-select
-        allowEmpty: false
-        default: pt-custom-vault-banner-order-ltr
-        options:
-            - 
-                label: Left to Right
-                value: pt-custom-vault-banner-order-ltr
-            - 
-                label: Right to Left
-                value: pt-custom-vault-banner-order-rtl
-    -  
-        id: pt-custom-vault-banner-sticky
-        title: Custom Vault Banner Sticky
-        description: Make the Custom Vault Banner stick to the top of the File Explorer.
-        type: class-toggle
-        default: true
-    -
-        id: custom-vault-banner-icon-url
-        title: Vault Banner Icon (URL)
-        description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
-        type: variable-text
-        default: url(https://img.icons8.com/dusk/50/000000/safe.png)
-    -
         id: tab-label
         title: Tab Label
         description: Settings for positioning, alignment, etc. of the Tab Labels.
@@ -1568,6 +1484,118 @@ settings:
             - 
                 label: Right
                 value: pt-nav-header-right-sidebar-align-right     
+    -
+        id: file-explorer
+        title: File Explorer
+        description: Customisation options for the File Explorer module.
+        type: heading
+        level: 3
+        collapsed: true 
+    - 
+        id: pt-file-explorer-text-wrap
+        title: File Explorer Text Wrap
+        description: Toggles Text Wrapping on the file/folder names in the File Explorer to help fit the whole name when the name is longer than the visible area.
+        default: false
+        type: class-toggle
+    - 
+        id: pt-file-explorer-vertical-lines
+        title: File Explorer Vertical Lines (Relationship Lines)
+        description: Toggles Vertical Lines (Relationship Lines) in the File Explorer to help visualise the folder and file depth.
+        default: true
+        type: class-toggle
+    - 
+        id: file-explorer-vertical-lines-width
+        title: File Explorer Vertical Lines Width (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 2
+        min: 1
+        max: 5
+        step: 1 
+    -
+        id: custom-vault-banner
+        title: Custom Vault Banner
+        description: Custom Vault Banner in the File Explorer with a custom icon option.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: pt-custom-vault-banner
+        title: Enable Custom Vault Banner
+        description: Enable the Custom Vault Banner in the File Explorer.
+        type: class-toggle
+        default: true
+    -
+        id: custom-vault-banner-horizontal-align
+        title: Custom Vault Banner Alignment
+        description: Horizontally align the Custom Vault Banner content.
+        type: class-select
+        allowEmpty: false
+        default: pt-custom-vault-banner-justify-content-center
+        options:
+            - 
+                label: Left
+                value: pt-custom-vault-banner-justify-content-left
+            - 
+                label: Center
+                value: pt-custom-vault-banner-justify-content-center
+            - 
+                label: Right
+                value: pt-custom-vault-banner-justify-content-right
+    -
+        id: custom-vault-banner-order
+        title: Custom Vault Banner Order
+        description: Select the order in which the content appears in the Custom Vault Banner.
+        type: class-select
+        allowEmpty: false
+        default: pt-custom-vault-banner-order-ltr
+        options:
+            - 
+                label: Left to Right
+                value: pt-custom-vault-banner-order-ltr
+            - 
+                label: Right to Left
+                value: pt-custom-vault-banner-order-rtl
+    -  
+        id: pt-custom-vault-banner-sticky
+        title: Custom Vault Banner Sticky
+        description: Make the Custom Vault Banner stick to the top of the File Explorer.
+        type: class-toggle
+        default: true
+    -
+        id: custom-vault-banner-icon-url
+        title: Vault Banner Icon (URL)
+        description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
+        type: variable-text
+        default: url(https://img.icons8.com/dusk/50/000000/safe.png)
+    -
+        id: outline
+        title: Outline
+        description: Customisation options for the Outline module.
+        type: heading
+        level: 3
+        collapsed: true 
+    - 
+        id: pt-outline-text-wrap
+        title: Outline Text Wrap
+        description: Toggles Text Wrapping on the Headers in the Outline to help fit the whole name when the name is longer than the visible area.
+        default: false
+        type: class-toggle
+    - 
+        id: pt-outline-vertical-lines
+        title: Outline Vertical Lines (Relationship Lines)
+        description: Toggles Vertical Lines (Relationship Lines) in the Outline to help visualise the Header depth.
+        default: true
+        type: class-toggle
+    - 
+        id: outline-vertical-lines-width
+        title: Outline Vertical Lines Width (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 2
+        min: 1
+        max: 5
+        step: 1 
     - 
         id: titlebar
         title: Titlebar
