@@ -2007,7 +2007,6 @@ settings:
                 label: Right
                 value: pt-advanced-tables-align-right
 
-
 */
 
 /* 
@@ -5200,7 +5199,6 @@ community:
     body:not(.is-grabbing) .nav-file-title:hover,
     body:not(.is-grabbing) .nav-folder-title:hover {
         border-radius: var(--border-radius-small);
-        color: var(--interactive-accent-text);
         background-color: var(--background-primary);
         border: var(--border-size) solid var(--background-primary);
         font-weight: 600;
@@ -5345,7 +5343,6 @@ community:
         color: var(--text-normal);
         width: 100%;
         padding: 0px 5px 0px 10px;
-        /* font-size: .875rem; */
         background: var(--background-primary);
         box-shadow: var(--drop-shadow);
     }
@@ -5662,6 +5659,10 @@ community:
         flex-direction: column;
     }
 
+    .modal.mod-settings .modal-content {
+        height: -webkit-fill-available;
+    }
+
     .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
         content: "Prism Theme";
         font-family: var(--default-font);
@@ -5806,7 +5807,11 @@ community:
         background-position: right 0.7em top 60%, 0 0;
         background-size: 0.65em auto, 100%;
     }
-    
+
+    .theme-light .dropdown:hover {
+        background-color: var(--background-secondary);
+    }
+
     .theme-dark .dropdown:hover {
         background-color: var(--background-secondary-alt);
     }
