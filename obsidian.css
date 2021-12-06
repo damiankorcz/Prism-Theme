@@ -4447,6 +4447,11 @@ community:
         padding-bottom: 0px;
     }
 
+    .workspace-leaf-content[data-type="markdown"] .view-content {
+        background-color: var(--page-background-color);
+        box-shadow: var(--drop-shadow);
+        border-radius: var(--border-radius);
+    }
 
 /*  Graph
     ========================================================================== */   
@@ -5216,7 +5221,7 @@ community:
 
     .pt-file-explorer-vertical-lines .nav-file-title,
     .pt-file-explorer-vertical-lines .nav-folder-title {
-        padding: 1px 10px 1px calc(var(--file-explorer-vertical-lines-width) / 2 + 1px);
+        padding: 1px 5px 1px calc(var(--file-explorer-vertical-lines-width) / 2 + 1px);
     }
     
     /* Tweaks the line height to keep it in the same height as the normal text */
@@ -5306,12 +5311,8 @@ community:
         ========================================================================== */   
 
         .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content {
-            padding: 2px calc(11px - var(--file-explorer-vertical-lines-width));
+            padding: 2px 2px 2px calc(11px - var(--file-explorer-vertical-lines-width));
         }
-
-        /* .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active .nav-file-title-content {
-            padding: 2px calc(11px - var(--file-explorer-vertical-lines-width) + 3px);
-        } */
         
         .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children .nav-folder .nav-folder {
             border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
@@ -5326,8 +5327,8 @@ community:
         ========================================================================== */   
 
         /* Wrap long nav text */  
-        .pt-file-explorer-text-wrap .nav-file-title,
-        .pt-file-explorer-text-wrap .nav-folder-title {
+        .pt-file-explorer-text-wrap .workspace-leaf-content[data-type="file-explorer"] .nav-file-title,
+        .pt-file-explorer-text-wrap .workspace-leaf-content[data-type="file-explorer"] .nav-folder-title {
             white-space: normal;
             width: auto;
         }
