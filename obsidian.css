@@ -2344,6 +2344,7 @@ community:
 
             /* File Explorer */
             --file-explorer-vertical-lines-width: 2px;
+            --outline-vertical-lines-width: 2px;
 
 
             /* Scrollbar */
@@ -2436,6 +2437,7 @@ community:
 
         --file-explorer-vertical-lines-color:  hsla(0, 0%, 60%, 0.3);
         --style-settings-vertical-lines-color: hsla(0, 0%, 60%, 0.3);     
+        --outline-vertical-lines-color:        hsla(0, 0%, 60%, 0.3);
 
         --drop-shadow:       hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
 
@@ -2534,6 +2536,7 @@ community:
 
         --file-explorer-vertical-lines-color:  hsla(0, 0%, 22%, 1);
         --style-settings-vertical-lines-color: hsla(0, 0%, 22%, 1);
+        --outline-vertical-lines-color:        hsla(0, 0%, 22%, 1);
       
         --drop-shadow:      hsla(0, 0%,   0%, 0.1)  0px  1px 2px 0px;
 
@@ -5033,37 +5036,59 @@ community:
         color: var(--interactive-accent-text);
     }
 
+    .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-inner {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* Wrap long nav text */  
+    .pt-outline-text-wrap .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-inner {
+        white-space: normal;
+        width: auto;
+    }
+
+    .workspace-leaf-content[data-type="outline"] .tree-item-inner {
+        padding: 0px 4px 0px 8px;
+    }
+    
+    .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon {
+        padding-left: 20px;
+        margin-right: -4px;
+        margin-left: unset;
+        padding: unset;
+        height: 22px;
+        width: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon:after {
+        display: none;
+    }
+
+    .workspace-leaf-content[data-type="outline"] .tree-item-children {
+        margin-left: 10px;
+        border-left: 2px solid transparent;
+    }
+
+    .workspace-leaf-content[data-type="outline"] .tree-item-self {
+        padding: 0px 5px 0px 0px;
+        border: var(--border-size) solid transparent;
+    }
+
     /*  Outline Vertical Lines (Relationship Lines)
         ========================================================================== */
         
-        .workspace-leaf-content[data-type="outline"] .tree-item-children {
+        .pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-children {
             margin-left: 10px;
-            border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
+            border-left: var(--outline-vertical-lines-width) solid var(--outline-vertical-lines-color);
         }
 
-        .workspace-leaf-content[data-type="outline"] .tree-item-self {
-            padding: 1px 10px 1px calc(var(--file-explorer-vertical-lines-width) / 2);
+        .pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-self {
+            padding: 0px 5px 0px calc(var(--outline-vertical-lines-width) / 2);
             border: var(--border-size) solid transparent;
         }
 
-        .workspace-leaf-content[data-type="outline"] .tree-item-inner {
-            padding: 0px 4px 0px 8px;
-        }
-        
-        .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon {
-            padding-left: 20px;
-            margin-right: -4px;
-            margin-left: unset;
-            padding: unset;
-            height: 22px;
-            width: 16px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon:after {
-            display: none;
-        }
 
     
 /*  Empty States
