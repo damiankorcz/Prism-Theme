@@ -5113,18 +5113,19 @@ community:
     }
 
     .workspace-leaf-content[data-type="outline"] .tree-item-inner {
-        padding: 0px 4px 0px 8px;
+        padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
+        line-height: 14px;
     }
     
     .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon {
         padding-left: 20px;
-        margin-right: -4px;
+        margin-right: -2px;
         margin-left: unset;
         padding: unset;
-        height: 22px;
         width: 16px;
         justify-content: center;
         align-items: center;
+        z-index: 5000;
     }
 
     .workspace-leaf-content[data-type="outline"] .tree-item-self .tree-item-icon:after {
@@ -5132,25 +5133,37 @@ community:
     }
 
     .workspace-leaf-content[data-type="outline"] .tree-item-children {
-        margin-left: 10px;
+        margin: 0px 0px 0px calc(12px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
         border-left: 2px solid transparent;
     }
 
     .workspace-leaf-content[data-type="outline"] .tree-item-self {
-        padding: 0px 5px 0px 0px;
+        padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
         border: var(--border-size) solid transparent;
+        border-radius: var(--border-radius-small);
+        white-space: nowrap;
+        min-width: 100%;
     }
+
+    .workspace-leaf-content[data-type="outline"] .tree-item-children > .tree-item > .tree-item-self {
+        margin-left: 2px;
+    }
+
+    .workspace-leaf-content[data-type="outline"] .outline > .tree-item > .tree-item-children {
+        margin-left: 10px;
+    }
+
 
     /*  Outline Vertical Lines (Relationship Lines)
         ========================================================================== */
         
         .pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-children {
-            margin-left: 10px;
+            margin: 2px 0px 2px calc(12px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
             border-left: var(--outline-vertical-lines-width) solid var(--outline-vertical-lines-color);
         }
 
         .pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-self {
-            padding: 0px 5px 0px calc(var(--outline-vertical-lines-width) / 2);
+            padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
             border: var(--border-size) solid transparent;
         }
 
