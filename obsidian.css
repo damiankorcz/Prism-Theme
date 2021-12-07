@@ -2411,10 +2411,9 @@ community:
         --text-normal:  hsla(0, 0%,  20%, 1);
         --text-muted:   hsla(0, 0%,  40%, 1);
         --text-faint:   hsla(0, 0%,  60%, 1);
-        --text-selection: var(--background-primary);
+        --text-selection: var(--interactive-accent-hover);
         --text-error:     var(--color-dark-red);
 
-        --text-selection: var(--background-secondary-alt);
         --text-highlight-bg: var(--interactive-accent-dark);
 
         --highlight-text-normal:  hsla(0, 0%, 20%, 1);
@@ -2510,10 +2509,9 @@ community:
         --text-normal:  hsla(0, 0%, 85%, 1);
         --text-muted:   hsla(0, 0%, 65%, 1);
         --text-faint:   hsla(0, 0%, 45%, 1);
-        --text-selection: var(--background-secondary-alt);
+        --text-selection: var(--interactive-accent-hover);
         --text-error:     var(--color-dark-red);
 
-        --text-selection: var(--background-primary-alt);
         --text-highlight-bg: var(--interactive-accent-dark);
 
         --highlight-text-normal:hsla(270,  2%, 8%, 1);
@@ -8771,6 +8769,7 @@ community:
     .theme-dark body ::selection,
     .theme-dark div.view-header-title::selection {
         background-color: var(--text-selection);
+        color: var(--highlight-text-normal);
     }
 
     a {
