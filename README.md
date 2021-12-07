@@ -129,7 +129,7 @@ Explicitly supported by the theme:
 
 * [**Collapse All**](https://github.com/OfficerHalf/obsidian-collapse-all) - _Adds a button to close or open all folders in the File Explorer._ 
 
-*[**Quick Explorer**](https://github.com/pjeby/quick-explorer) -_Menu-based and keyboard-friendly Explorer in the Titlebar._
+* [**Quick Explorer**](https://github.com/pjeby/quick-explorer) - _Menu-based and keyboard-friendly Explorer in the Titlebar._
 
 (These plugins have been checked to work correctly and might have additional settings in Style Settings)
 
