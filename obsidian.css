@@ -5680,17 +5680,17 @@ community:
 
     .popover.hover-popover {
         transform:  scale(0.90);
-        max-height: 500px;
-        min-height: 300px;
+        min-height: 500px;
         width:      500px;
         overflow:   auto;
-        padding:    0px 15px 15px 15px;
+        padding-left: 10px;
         box-shadow: var(--drop-shadow);
         clear: both;
     }
     
     .popover.hover-popover .markdown-embed {
-        height: 100%;
+        min-height: 499px;
+        height:  499px;
     }
     
     /* Hides the second limited scrollbar in popovers */
@@ -9050,8 +9050,8 @@ community:
     .markdown-embed-link,
     .file-embed-link {
         color: var(--text-muted);
-        top: 0px;
-        right: 0px;
+        top: 8px;
+        right: 8px;
         margin: 3px;
         padding: 4px;
     }
@@ -9234,10 +9234,10 @@ community:
             color: var(--text-normal);
         }
 
-        .theme-light .markdown-embed,
+        /* .theme-light .markdown-embed,
         .theme-light .file-embed {
             background-color: var(--background-primary);
-        }
+        } */
 
         .theme-light .token.operator,
         .theme-light .token.entity,
@@ -9325,10 +9325,10 @@ community:
             color: var(--text-normal);
         }
 
-        .theme-dark .markdown-embed,
+        /* .theme-dark .markdown-embed,
         .theme-dark .file-embed {
             background-color: var(--background-secondary-alt);
-        }
+        } */
 
         .theme-dark .token.operator,
         .theme-dark .token.entity,
