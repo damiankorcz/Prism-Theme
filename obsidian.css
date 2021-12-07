@@ -2411,7 +2411,7 @@ community:
         --text-normal:  hsla(0, 0%,  20%, 1);
         --text-muted:   hsla(0, 0%,  40%, 1);
         --text-faint:   hsla(0, 0%,  60%, 1);
-        --text-selection: var(--interactive-accent-hover);
+        --text-selection: var(--background-secondary-alt);
         --text-error:     var(--color-dark-red);
 
         --text-highlight-bg: var(--interactive-accent-dark);
@@ -2509,7 +2509,7 @@ community:
         --text-normal:  hsla(0, 0%, 85%, 1);
         --text-muted:   hsla(0, 0%, 65%, 1);
         --text-faint:   hsla(0, 0%, 45%, 1);
-        --text-selection: var(--interactive-accent-hover);
+        --text-selection: var(--background-primary-alt);
         --text-error:     var(--color-dark-red);
 
         --text-highlight-bg: var(--interactive-accent-dark);
@@ -8765,11 +8765,15 @@ community:
     ========================================================================== */
 
     .theme-light body ::selection,
-    .theme-light div.view-header-title::selection,
+    .theme-light div.view-header-title::selection {
+        background-color: var(--text-selection);
+        color: var(--highlight-text-normal);
+    }
+
     .theme-dark body ::selection,
     .theme-dark div.view-header-title::selection {
         background-color: var(--text-selection);
-        color: var(--highlight-text-normal);
+        color: var(--text-normal);
     }
 
     a {
