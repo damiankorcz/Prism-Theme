@@ -5192,7 +5192,7 @@ community:
         
     .nav-folder.mod-root > .nav-folder-children > .nav-folder {
         border: 0px;
-        padding-bottom: 2px;
+        margin-left: unset;
     }
 
     .nav-folder.mod-root {
@@ -5202,14 +5202,6 @@ community:
         background-color: var(--background-secondary) ;
         border-radius: var(--border-radius);
         box-shadow: var(--drop-shadow);
-    }
-
-    .nav-folder.mod-root > .nav-folder-children {
-        padding: 0px 8px 8px 8px;
-    }
-
-    .nav-folder-children {
-        padding-left: 10px;
     }
 
     .nav-folder.mod-root > .nav-file-title,
@@ -5240,7 +5232,8 @@ community:
         border-radius: 0px;
     }
 
-    .nav-file-title-content {
+    .nav-file-title-content,
+    .nav-folder-title-content {
         overflow: hidden;
         text-overflow: ellipsis;
     }
@@ -5255,6 +5248,7 @@ community:
     .nav-folder-title.is-active,
     body:not(.is-grabbing) .nav-file-title:hover,
     body:not(.is-grabbing) .nav-folder-title:hover {
+        color: var(--interactive-accent-text);
         border-radius: var(--border-radius-small);
         background-color: var(--background-primary);
         border: var(--border-size) solid var(--background-primary);
@@ -5264,16 +5258,11 @@ community:
     /* Adjusting padding to dynamically center the drop-down icon withe the vertical lines */
     .nav-file-title:not([data-path="/"]),
     .nav-folder-title:not([data-path="/"]) {
-        padding: 1px 10px 2px 1px;
+        padding: 2px 5px 2px 1px;
         line-height: 14px;
-        min-height: 26px;
+        /* min-height: 26px; */
         max-width: -webkit-fill-available;
         border: var(--border-size) solid transparent;
-    }
-
-    .pt-file-explorer-vertical-lines .nav-file-title,
-    .pt-file-explorer-vertical-lines .nav-folder-title {
-        padding: 1px 5px 1px calc(var(--file-explorer-vertical-lines-width) / 2 + 1px);
     }
     
     /* Tweaks the line height to keep it in the same height as the normal text */
@@ -5287,6 +5276,15 @@ community:
     .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title:not(.is-active) {
         border-left: transparent;
     }
+    
+    .nav-file-title,
+    .nav-folder-title {
+        padding: 1px 5px 1px calc(var(--file-explorer-vertical-lines-width) / 2 + 1px);
+    }
+
+    .nav-folder-title-content {
+        padding: 1px 4px;
+    }
 
     /* Tweaks the line height to keep it in the same height as the normal text */
     .nav-file-title.is-active:hover {
@@ -5294,16 +5292,13 @@ community:
     }
 
     .nav-file-title-content {
-        padding: 2px 11px;
+        padding: 2px 5px 2px 0px;
         font-weight: 600;
     }
       
     .nav-folder-collapse-indicator {
         width: 16px;
-    }
-        
-    .nav-folder-collapse-indicator {
-        margin-left: 0;
+        margin-left: unset;
     }
     
     /* Adjusting the spacing for the files that include the file tag */
@@ -5313,7 +5308,7 @@ community:
     
     .nav-file-tag {
         padding: 0px 5px;
-        margin: 0px 5px 0px 11px;
+        margin: 0px 5px 0px 7px;
         background-color: var(--background-secondary-alt);
         border: var(--border-size) solid var(--background-secondary-alt);
     }
@@ -5361,22 +5356,48 @@ community:
         line-height: 14px;
     }
 
+    .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root > div.nav-folder-children {
+        margin-left: unset;
+        border-left: unset;
+        padding: 0px 8px 8px 8px;
+    }
+
+    .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) .nav-folder-children {
+        margin: 0px 0px 0px calc(12px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
+        padding-left: unset;
+    }
+    
+    .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content {
+        padding: 1px 2px 1px calc(8px - var(--file-explorer-vertical-lines-width));
+    }
+
+    .nav-file:not(.mod-root),
+    .nav-folder:not(.mod-root) {
+        margin-left: 2px;
+    }
+
+    .nav-folder.mod-root > .nav-folder-children > .nav-file {
+        margin-left: unset;
+    }
 
     /*  File Tree Vertical Lines
         ========================================================================== */   
 
-        .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-file-title-content {
-            padding: 2px 2px 2px calc(11px - var(--file-explorer-vertical-lines-width));
+        .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-folder:not(.mod-root) .nav-folder-children {
+            margin: 2px 0px 2px calc(10px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
+            padding-left: unset;
         }
-        
-        .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children .nav-folder .nav-folder {
-            border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
+
+        .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root > div.nav-folder-children {
+            margin-left: unset;
+            border-left: unset;
+            padding: 0px 8px 8px 8px;
         }
-        
-        .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:not(:hover) {
-            border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
+
+        .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type="file-explorer"] .nav-folder.mod-root .nav-folder-children {
+            border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color)
         }
-                    
+
     
     /*  File Tree Text Wrap
         ========================================================================== */   
