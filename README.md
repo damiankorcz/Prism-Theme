@@ -104,18 +104,6 @@
 	
 I highly recommend for you to go through the options available in the Style Settings to make the theme fit you just right!
 
-**P.S.** 
-Since the background behind the Settings window is blurred by default I recommend you temporarily turn it off to help you see the changes you make without needing to keep going in and out of the Settings window.
-<details>
-	<summary><b>Disable Settings Background Blur</b></summary>
-
-1. Just go to the Style Settings tab in Obsidian Settings.
-2. Expand the Prism Theme section.
-3. Expand the Extras and Tweaks section.
-4. Toggle the Settings Background Blur option to Off. 
-
-</details>
-
 
 ## 🔌 Plugin Support
 Required for the Theme to work correctly and to enable customisation:
