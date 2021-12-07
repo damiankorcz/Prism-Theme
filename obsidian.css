@@ -2184,8 +2184,9 @@ community:
         /*  Base Colors
             ========================================================================== */ 
         
+            --color-desaturate-lt:  20%;
             --color-darken-lt:      15%;
-            --color-darken-text-lt: 48%;
+            --color-darken-text-lt: 45%;
         
             --color-desaturate-dt:  45%;
             --color-darken-dt:      15%;
@@ -2364,16 +2365,16 @@ community:
 
         --color-accent: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), 1);  
         
-        --color-red:    hsla(var(--color-red-h),    var(--color-red-s),    var(--color-red-l),    1);
-        --color-orange: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), 1);
-        --color-yellow: hsla(var(--color-yellow-h), var(--color-yellow-s), var(--color-yellow-l), 1);
-        --color-green:  hsla(var(--color-green-h),  var(--color-green-s),  var(--color-green-l),  1);
-        --color-mint:   hsla(var(--color-mint-h),   var(--color-mint-s),   var(--color-mint-l),   1);
-        --color-aqua:   hsla(var(--color-aqua-h),   var(--color-aqua-s),   var(--color-aqua-l),   1);
-        --color-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),   var(--color-blue-l),   1);
-        --color-purple: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), 1);
-        --color-pink:   hsla(var(--color-pink-h),   var(--color-pink-s),   var(--color-pink-l),   1);
-        --color-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),   var(--color-grey-l),   1);
+        --color-red:    hsla(var(--color-red-h),    var(--color-red-s),                                       var(--color-red-l),    1);
+        --color-orange: hsla(var(--color-orange-h), var(--color-orange-s),                                    var(--color-orange-l), 1);
+        --color-yellow: hsla(var(--color-yellow-h), calc(var(--color-yellow-s) - var(--color-desaturate-lt)), var(--color-yellow-l), 1);
+        --color-green:  hsla(var(--color-green-h),  calc(var(--color-green-s) - var(--color-desaturate-lt)),  var(--color-green-l),  1);
+        --color-mint:   hsla(var(--color-mint-h),   calc(var(--color-mint-s) - var(--color-desaturate-lt)),   var(--color-mint-l),   1);
+        --color-aqua:   hsla(var(--color-aqua-h),   calc(var(--color-aqua-s) - var(--color-desaturate-lt)),   var(--color-aqua-l),   1);
+        --color-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),                                      var(--color-blue-l),   1);
+        --color-purple: hsla(var(--color-purple-h), var(--color-purple-s),                                    var(--color-purple-l), 1);
+        --color-pink:   hsla(var(--color-pink-h),   calc(var(--color-pink-s) - var(--color-desaturate-lt)),   var(--color-pink-l),   1);
+        --color-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),                                      var(--color-grey-l),   1);
  
 
     /*  Dark Colors
@@ -2381,32 +2382,32 @@ community:
 
         --color-dark-accent: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), calc(var(--color-accent-lt-l) - var(--color-darken-lt)),  1);
         
-        --color-dark-red:    hsla(var(--color-red-h),    var(--color-red-s),    calc(var(--color-red-l)    - var(--color-darken-lt)), 1);
-        --color-dark-orange: hsla(var(--color-orange-h), var(--color-orange-s), calc(var(--color-orange-l) - var(--color-darken-lt)), 1);
-        --color-dark-yellow: hsla(var(--color-yellow-h), var(--color-yellow-s), calc(var(--color-yellow-l) - var(--color-darken-lt)), 1);
-        --color-dark-green:  hsla(var(--color-green-h),  var(--color-green-s),  calc(var(--color-green-l)  - var(--color-darken-lt)), 1);
-        --color-dark-mint:   hsla(var(--color-mint-h),   var(--color-mint-s),   calc(var(--color-mint-l)   - var(--color-darken-lt)), 1);
-        --color-dark-aqua:   hsla(var(--color-aqua-h),   var(--color-aqua-s),   calc(var(--color-aqua-l)   - var(--color-darken-lt)), 1);
-        --color-dark-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),   calc(var(--color-blue-l)   - var(--color-darken-lt)), 1);
-        --color-dark-purple: hsla(var(--color-purple-h), var(--color-purple-s), calc(var(--color-purple-l) - var(--color-darken-lt)), 1);
-        --color-dark-pink:   hsla(var(--color-pink-h),   var(--color-pink-s),   calc(var(--color-pink-l)   - var(--color-darken-lt)), 1);
-        --color-dark-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),   calc(var(--color-grey-l)   - var(--color-darken-lt)), 1);
+        --color-dark-red:    hsla(var(--color-red-h),    var(--color-red-s),                                       calc(var(--color-red-l)    - var(--color-darken-lt)), 1);
+        --color-dark-orange: hsla(var(--color-orange-h), var(--color-orange-s),                                    calc(var(--color-orange-l) - var(--color-darken-lt)), 1);
+        --color-dark-yellow: hsla(var(--color-yellow-h), calc(var(--color-yellow-s) - var(--color-desaturate-lt)), calc(var(--color-yellow-l) - var(--color-darken-lt)), 1);
+        --color-dark-green:  hsla(var(--color-green-h),  calc(var(--color-green-s) - var(--color-desaturate-lt)),  calc(var(--color-green-l)  - var(--color-darken-lt)), 1);
+        --color-dark-mint:   hsla(var(--color-mint-h),   calc(var(--color-mint-s) - var(--color-desaturate-lt)),   calc(var(--color-mint-l)   - var(--color-darken-lt)), 1);
+        --color-dark-aqua:   hsla(var(--color-aqua-h),   calc(var(--color-aqua-s) - var(--color-desaturate-lt)),   calc(var(--color-aqua-l)   - var(--color-darken-lt)), 1);
+        --color-dark-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),                                      calc(var(--color-blue-l)   - var(--color-darken-lt)), 1);
+        --color-dark-purple: hsla(var(--color-purple-h), var(--color-purple-s),                                    calc(var(--color-purple-l) - var(--color-darken-lt)), 1);
+        --color-dark-pink:   hsla(var(--color-pink-h),   calc(var(--color-pink-s) - var(--color-desaturate-lt)),   calc(var(--color-pink-l)   - var(--color-darken-lt)), 1);
+        --color-dark-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),                                      calc(var(--color-grey-l)   - var(--color-darken-lt)), 1);
         
     /*  Text Colors
         ========================================================================== */
 
         --color-text-accent: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), calc(var(--color-accent-lt-l) - var(--color-darken-text-lt)),  1);
         
-        --color-text-red:    hsla(var(--color-red-h),    var(--color-red-s),    calc(var(--color-red-l)    - var(--color-darken-text-lt)), 1);
-        --color-text-orange: hsla(var(--color-orange-h), var(--color-orange-s), calc(var(--color-orange-l) - var(--color-darken-text-lt)), 1);
-        --color-text-yellow: hsla(var(--color-yellow-h), var(--color-yellow-s), calc(var(--color-yellow-l) - var(--color-darken-text-lt)), 1);
-        --color-text-green:  hsla(var(--color-green-h),  var(--color-green-s),  calc(var(--color-green-l)  - var(--color-darken-text-lt)), 1);
-        --color-text-mint:   hsla(var(--color-mint-h),   var(--color-mint-s),   calc(var(--color-mint-l)   - var(--color-darken-text-lt)), 1);
-        --color-text-aqua:   hsla(var(--color-aqua-h),   var(--color-aqua-s),   calc(var(--color-aqua-l)   - var(--color-darken-text-lt)), 1);
-        --color-text-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),   calc(var(--color-blue-l)   - var(--color-darken-text-lt)), 1);
-        --color-text-purple: hsla(var(--color-purple-h), var(--color-purple-s), calc(var(--color-purple-l) - var(--color-darken-text-lt)), 1);
-        --color-text-pink:   hsla(var(--color-pink-h),   var(--color-pink-s),   calc(var(--color-pink-l)   - var(--color-darken-text-lt)), 1);
-        --color-text-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),   calc(var(--color-grey-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-red:    hsla(var(--color-red-h),    var(--color-red-s),                                       calc(var(--color-red-l)    - var(--color-darken-text-lt)), 1);
+        --color-text-orange: hsla(var(--color-orange-h), var(--color-orange-s),                                    calc(var(--color-orange-l) - var(--color-darken-text-lt)), 1);
+        --color-text-yellow: hsla(var(--color-yellow-h), calc(var(--color-yellow-s) - var(--color-desaturate-lt)), calc(var(--color-yellow-l) - var(--color-darken-text-lt)), 1);
+        --color-text-green:  hsla(var(--color-green-h),  calc(var(--color-green-s) - var(--color-desaturate-lt)),  calc(var(--color-green-l)  - var(--color-darken-text-lt)), 1);
+        --color-text-mint:   hsla(var(--color-mint-h),   calc(var(--color-mint-s) - var(--color-desaturate-lt)),   calc(var(--color-mint-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-aqua:   hsla(var(--color-aqua-h),   calc(var(--color-aqua-s) - var(--color-desaturate-lt)),   calc(var(--color-aqua-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-blue:   hsla(var(--color-blue-h),   var(--color-blue-s),                                      calc(var(--color-blue-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-purple: hsla(var(--color-purple-h), var(--color-purple-s),                                    calc(var(--color-purple-l) - var(--color-darken-text-lt)), 1);
+        --color-text-pink:   hsla(var(--color-pink-h),   calc(var(--color-pink-s) - var(--color-desaturate-lt)),   calc(var(--color-pink-l)   - var(--color-darken-text-lt)), 1);
+        --color-text-grey:   hsla(var(--color-grey-h),   var(--color-grey-s),                                      calc(var(--color-grey-l)   - var(--color-darken-text-lt)), 1);
         
 
     /*  Main Obsidian Colors 
