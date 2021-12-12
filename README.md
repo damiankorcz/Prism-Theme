@@ -121,7 +121,7 @@ Explicitly supported by the theme:
 
 (These plugins have been checked to work correctly and might have additional settings in Style Settings)
 
-If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**]([https://github.com/mgmeyers/obsidian-kanban](https://github.com/damiankorcz/Obsidian-Prism/issues)) regarding it.
+If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
 
 
 ##  🗺 Roadmap
