@@ -308,6 +308,7 @@
             /* Scrollbar */
             --scroll-bar-size: 8px; /* The width of the scrollbar */
             --scroll-bar-size-hover: 15px; /* The width of the scrollbar when hovering over the window content */
+
             /* Header Text Opacity */
             --h1-text-opacity-lt: 100%;
             --h2-text-opacity-lt: 100%;
@@ -3142,16 +3143,20 @@
 
     .workspace-leaf-content[data-type="backlink"] .backlink-pane > .search-result-container {
         border-bottom-color: transparent;
-        border: none;
+        border: unset;
         border-radius: var(--border-radius);
-        padding: 30px 0px 8px 10px;
+        padding: 30px 0px 0px 10px;
         margin-top: -30px;
+    }
+    
+    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .search-result-container:not(:last-of-type) {
         margin-bottom: 8px;
+        padding-bottom: 8px;
     }
 
     .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type) {
         border-bottom-color: transparent;
-        border: none;
+        border: unset;
         background-color: var(--tab-label-background-color);
         border-radius: var(--border-radius);
         box-shadow: var(--drop-shadow);
@@ -3263,6 +3268,7 @@
     .workspace-leaf-content[data-type="outline"] .tree-item-children {
         margin: 0px 0px 0px calc(12px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
         border-left: 2px solid transparent;
+
     }
 
     .workspace-leaf-content[data-type="outline"] .tree-item-self {
@@ -3508,6 +3514,11 @@
         margin-left: unset;
     }
 
+    /* Fixes the bounce caused by a random div in the nav-folder-children */
+    .workspace-leaf-content[data-type="file-explorer"] .nav-folder-children > div:not(.nav-folder):not(.nav-file) {
+        display: none;
+    }
+
     /*  File Tree Vertical Lines
         ========================================================================== */   
 
@@ -3695,6 +3706,11 @@
 
         .workspace-tabs .workspace-leaf {
             background-color: transparent;
+        }
+
+        .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+            border-top-left-radius: unset;
+            border-radius: var(--border-radius);
         }
 
         .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed.is-hidden {
@@ -4533,7 +4549,7 @@
         .theme-light.pt-highlight-style-border-lt .markdown-preview-view mark {
             font-weight: 600;
             font-size: 0.875em;
-            background-color: transparent;
+            background-color: var(--background-primary);
             border: var(--border-size) solid var(--dark-highlight-default);
             padding: 0px 5px;
             border-radius: var(--border-radius-small);
@@ -4546,7 +4562,7 @@
             font-weight: 600;
             font-size: 0.875em;
             color: var(--text-highlight-default);
-            background-color: transparent;
+            background-color: var(--background-primary);
             border: var(--border-size) solid var(--dark-highlight-default);
             padding: 0px 5px;
             border-radius: var(--border-radius-small);
@@ -10267,6 +10283,15 @@
         background-color: var(--background-secondary);
         border: 2px solid transparent;
     }
+
+
+    div#quick-explorer .explorable.selected,
+    div#quick-explorer .explorable:hover {
+        color: var(--interactive-accent-text);
+        background-color: var(--background-primary);
+    }
+
+    
 /* @settings
 name: Prism Theme
 id: obsidian-prism-theme
@@ -15352,11 +15377,6 @@ settings:
 */
 
 
-    div#quick-explorer .explorable.selected,
-    div#quick-explorer .explorable:hover {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
 /* @plugins
 core:
 - audio-recorder
