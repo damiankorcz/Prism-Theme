@@ -6981,13 +6981,2710 @@
         }
 
 
+
+
+/*  ==========================================================================
+    Headers (Preview)
+    ========================================================================== */
+
+    .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+        position: relative;
+        padding: 0px 4px;
+        font-weight: 600;
+        border-radius: var(--border-radius);
+        z-index: 1;
+    }
+
+    .markdown-preview-view .heading-collapse-indicator {
+        margin-left: -34px;
+    }
+
+
+    /*  Headers - Padding and Collapse Icon when no background and/or no border
+        ========================================================================== */ 
+
+        .theme-light.pt-h1-border-none-lt.pt-h1-background-none-lt .markdown-preview-view h1,
+        .theme-light.pt-h2-border-none-lt.pt-h2-background-none-lt .markdown-preview-view h2,
+        .theme-light.pt-h3-border-none-lt.pt-h3-background-none-lt .markdown-preview-view h3,
+        .theme-light.pt-h4-border-none-lt.pt-h4-background-none-lt .markdown-preview-view h4,
+        .theme-light.pt-h5-border-none-lt.pt-h5-background-none-lt .markdown-preview-view h5,
+        .theme-light.pt-h6-border-none-lt.pt-h6-background-none-lt .markdown-preview-view h6,
+        .theme-dark.pt-h1-border-none-dt.pt-h1-background-none-dt .markdown-preview-view h1,
+        .theme-dark.pt-h2-border-none-dt.pt-h2-background-none-dt .markdown-preview-view h2,
+        .theme-dark.pt-h3-border-none-dt.pt-h3-background-none-dt .markdown-preview-view h3,
+        .theme-dark.pt-h4-border-none-dt.pt-h4-background-none-dt .markdown-preview-view h4,
+        .theme-dark.pt-h5-border-none-dt.pt-h5-background-none-dt .markdown-preview-view h5,
+        .theme-dark.pt-h6-border-none-dt.pt-h6-background-none-dt .markdown-preview-view h6 {
+            padding: unset;
+        }
+
+        .theme-light.pt-h1-border-none-lt.pt-h1-background-none-lt .markdown-preview-view h1 .heading-collapse-indicator,
+        .theme-light.pt-h2-border-none-lt.pt-h2-background-none-lt .markdown-preview-view h2 .heading-collapse-indicator,
+        .theme-light.pt-h3-border-none-lt.pt-h3-background-none-lt .markdown-preview-view h3 .heading-collapse-indicator,
+        .theme-light.pt-h4-border-none-lt.pt-h4-background-none-lt .markdown-preview-view h4 .heading-collapse-indicator,
+        .theme-light.pt-h5-border-none-lt.pt-h5-background-none-lt .markdown-preview-view h5 .heading-collapse-indicator,
+        .theme-light.pt-h6-border-none-lt.pt-h6-background-none-lt .markdown-preview-view h6 .heading-collapse-indicator,
+        .theme-dark.pt-h1-border-none-dt.pt-h1-background-none-dt .markdown-preview-view h1 .heading-collapse-indicator,
+        .theme-dark.pt-h2-border-none-dt.pt-h2-background-none-dt .markdown-preview-view h2 .heading-collapse-indicator,
+        .theme-dark.pt-h3-border-none-dt.pt-h3-background-none-dt .markdown-preview-view h3 .heading-collapse-indicator,
+        .theme-dark.pt-h4-border-none-dt.pt-h4-background-none-dt .markdown-preview-view h4 .heading-collapse-indicator,
+        .theme-dark.pt-h5-border-none-dt.pt-h5-background-none-dt .markdown-preview-view h5 .heading-collapse-indicator,
+        .theme-dark.pt-h6-border-none-dt.pt-h6-background-none-dt .markdown-preview-view h6 .heading-collapse-indicator {
+            margin-left: -30px;
+        }
+
+
+    /*  Headers - Text
+        ========================================================================== */ 
+
+        /*  Headers - Text Horizontal Alignment
+            ========================================================================== */ 
+        
+            .theme-light.pt-header-text-align-left-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-text-align-left-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                text-align: left;
+            }
+
+            .theme-light.pt-header-text-align-center-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-text-align-center-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                text-align: center;
+            }
+
+            .theme-light.pt-header-text-align-right-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-text-align-right-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                text-align: right;
+            }
+
+
+        /*  Headers - Text Color Default (Light Theme)
+            ========================================================================== */ 
+    
+            .theme-light.pt-h1-text-default-lt .markdown-preview-view h1 {
+                color: hsla(0, 0%, 20%, var(--h1-text-opacity-lt));
+            }
+
+            .theme-light.pt-h1-text-default-lt .markdown-preview-view h2 {
+                color: hsla(0, 0%, 20%, var(--h2-text-opacity-lt));
+            }
+
+            .theme-light.pt-h1-text-default-lt .markdown-preview-view h3 {
+                color: hsla(0, 0%, 20%, var(--h3-text-opacity-lt));
+            }
+
+            .theme-light.pt-h1-text-default-lt .markdown-preview-view h4 {
+                color: hsla(0, 0%, 20%, var(--h4-text-opacity-lt));
+            }
+
+            .theme-light.pt-h1-text-default-lt .markdown-preview-view h5 {
+                color: hsla(0, 0%, 20%, var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h1-text-default-lt .markdown-preview-view h6 {
+                color: hsla(0, 0%, 20%, var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Default (Light Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-default-dt .markdown-preview-view h1 {
+                color: hsla(0, 0%, 85%, var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h1-text-default-dt .markdown-preview-view h2 {
+                color: hsla(0, 0%, 85%, var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h1-text-default-dt .markdown-preview-view h3 {
+                color: hsla(0, 0%, 85%, var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h1-text-default-dt .markdown-preview-view h4 {
+                color: hsla(0, 0%, 85%, var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h1-text-default-dt .markdown-preview-view h5 {
+                color: hsla(0, 0%, 85%, var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h1-text-default-dt .markdown-preview-view h6 {
+                color: hsla(0, 0%, 85%, var(--h6-text-opacity-dt));
+            }
+            
+
+        /*  Headers - Text Color Custom (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-custom-lt .markdown-preview-view h1 {
+                color: hsla(var(--h1-text-color-custom-lt), var(--h1-text-opacity-lt));
+            }
+
+            .theme-light.pt-h2-text-custom-lt .markdown-preview-view h2 {
+                color: hsla(var(--h2-text-color-custom-lt), var(--h2-text-opacity-lt));
+            }
+
+            .theme-light.pt-h3-text-custom-lt .markdown-preview-view h3 {
+                color: hsla(var(--h3-text-color-custom-lt), var(--h3-text-opacity-lt));
+            }
+
+            .theme-light.pt-h4-text-custom-lt .markdown-preview-view h4 {
+                color: hsla(var(--h4-text-color-custom-lt), var(--h4-text-opacity-lt));
+            }
+
+            .theme-light.pt-h5-text-custom-lt .markdown-preview-view h5 {
+                color: hsla(var(--h5-text-color-custom-lt), var(--h5-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-text-custom-lt .markdown-preview-view h6 {
+                color: hsla(var(--h6-text-color-custom-lt), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Custom (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-custom-dt .markdown-preview-view h1 {
+                color: hsla(var(--h1-text-color-custom-dt), var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-custom-dt .markdown-preview-view h2 {
+                color: hsla(var(--h2-text-color-custom-dt), var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-text-custom-dt .markdown-preview-view h3 {
+                color: hsla(var(--h3-text-color-custom-dt), var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-text-custom-dt .markdown-preview-view h4 {
+                color: hsla(var(--h4-text-color-custom-dt), var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-text-custom-dt .markdown-preview-view h5 {
+                color: hsla(var(--h5-text-color-custom-dt), var(--h5-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-text-custom-dt .markdown-preview-view h6 {
+                color: hsla(var(--h6-text-color-custom-dt), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Accent (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-custom.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+
+            .theme-light.pt-h2-text-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-custom.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+
+            .theme-light.pt-h3-text-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-custom.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+
+            .theme-light.pt-h4-text-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-custom.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+
+            .theme-light.pt-h5-text-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-custom.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-custom.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Red (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-red-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-red.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+
+            .theme-light.pt-h2-text-red-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-red.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+
+            .theme-light.pt-h3-text-red-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-red.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+
+            .theme-light.pt-h4-text-red-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-red.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+
+            .theme-light.pt-h5-text-red-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-red.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-red-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-red.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Orange (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-orange-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-orange.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-orange-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-orange.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-orange-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-orange.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-orange-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-orange.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-orange-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-orange.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-orange-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-orange.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Yellow (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-yellow-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-yellow.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-yellow-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-yellow.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-yellow-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-yellow.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-yellow-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-yellow.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-yellow-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-yellow.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-text-yellow-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-yellow.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Green (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-green-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-green.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-green-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-green.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-green-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-green.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-green-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-green.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-green-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-green.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-green-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-green.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Mint (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-mint-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-mint.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+
+            .theme-light.pt-h2-text-mint-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-mint.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-mint-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-mint.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-mint-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-mint.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-mint-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-mint.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-text-mint-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-mint.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Aqua (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-aqua-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-aqua.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-aqua-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-aqua.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-aqua-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-aqua.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-aqua-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-aqua.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-aqua-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-aqua.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-aqua-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-aqua.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Blue (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-blue-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-blue.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-blue-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-blue.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-blue-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-blue.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-blue-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-blue.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+
+            .theme-light.pt-h5-text-blue-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-blue.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-blue-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-blue.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Purple (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-purple-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-purple.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-purple-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-purple.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-purple-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-purple.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-purple-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-purple.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-purple-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-purple.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-purple-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-purple.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Pink (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-pink-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-pink.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+
+            .theme-light.pt-h2-text-pink-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-pink.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-pink-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-pink.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-pink-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-pink.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-pink-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-pink.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-text-pink-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-pink.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Grey (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-text-grey-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-grey.pt-h1-text-accent-lt .markdown-preview-view h1 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h1-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-text-grey-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-grey.pt-h2-text-accent-lt .markdown-preview-view h2 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h2-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-text-grey-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-grey.pt-h3-text-accent-lt .markdown-preview-view h3 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h3-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-text-grey-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-grey.pt-h4-text-accent-lt .markdown-preview-view h4 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h4-text-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-text-grey-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-grey.pt-h5-text-accent-lt .markdown-preview-view h5 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h5-text-opacity-lt));
+            }
+
+            .theme-light.pt-h6-text-grey-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-grey.pt-h6-text-accent-lt .markdown-preview-view h6 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h6-text-opacity-lt));
+            }
+
+
+        /*  Headers - Text Color Accent (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-custom.pt-h1-text-accent-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-custom.pt-h2-text-accent-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-custom.pt-h3-text-accent-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-custom.pt-h4-text-accent-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-custom.pt-h5-text-accent-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-text-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-custom.pt-h6-text-accent-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Red (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-red-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-red.pt-h1-text-red-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-text-red-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-red.pt-h2-text-red-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-red-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-red.pt-h3-text-red-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-red-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-red.pt-h4-text-red-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-red-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-red.pt-h5-text-red-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-red-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-red.pt-h6-text-red-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Orange (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-orange-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-orange.pt-h1-text-orange-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-text-orange-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-orange.pt-h2-text-orange-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-orange-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-orange.pt-h3-text-orange-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-orange-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-orange.pt-h4-text-orange-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-orange-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-orange.pt-h5-text-orange-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-orange-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-orange.pt-h6-text-orange-dt .markdown-preview-view h6  {
+                color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Yellow (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-yellow-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h1-text-yellow-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-text-yellow-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h2-text-yellow-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-yellow-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h3-text-yellow-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-yellow-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h4-text-yellow-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-yellow-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h5-text-yellow-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-yellow-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h6-text-yellow-dt .markdown-preview-view h6  {
+                color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Green (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-green-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-green.pt-h1-text-green-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-text-green-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-green.pt-h2-text-green-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-green-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-green.pt-h3-text-green-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-green-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-green.pt-h4-text-green-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-green-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-green.pt-h5-text-green-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-green-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-green.pt-h6-text-green-dt .markdown-preview-view h6  {
+                color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Mint (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-mint-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-mint.pt-h1-text-mint-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-text-mint-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-mint.pt-h2-text-mint-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-mint-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-mint.pt-h3-text-mint-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-mint-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-mint.pt-h4-text-mint-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-mint-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-mint.pt-h5-text-mint-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-mint-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-mint.pt-h6-text-mint-dt .markdown-preview-view h6  {
+                color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Aqua (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-aqua-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h1-text-aqua-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-aqua-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h2-text-aqua-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-text-aqua-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h3-text-aqua-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-text-aqua-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h4-text-aqua-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-text-aqua-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h5-text-aqua-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-aqua-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h6-text-aqua-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Blue (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-blue-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-blue.pt-h1-text-blue-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-text-blue-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-blue.pt-h2-text-blue-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-text-blue-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-blue.pt-h3-text-blue-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-text-blue-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-blue.pt-h4-text-blue-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-text-blue-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-blue.pt-h5-text-blue-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-text-blue-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-blue.pt-h6-text-blue-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+            
+        /*  Headers - Text Color Purple (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-purple-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-purple.pt-h1-text-purple-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-purple-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-purple.pt-h2-text-purple-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-text-purple-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-purple.pt-h3-text-purple-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-text-purple-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-purple.pt-h4-text-purple-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-text-purple-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-purple.pt-h5-text-purple-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-purple-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-purple.pt-h6-text-purple-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Pink (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-pink-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-pink.pt-h1-text-pink-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-pink-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-pink.pt-h2-text-pink-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-text-pink-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-pink.pt-h3-text-pink-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-text-pink-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-pink.pt-h4-text-pink-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-text-pink-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-pink.pt-h5-text-pink-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-pink-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-pink.pt-h6-text-pink-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+        /*  Headers - Text Color Grey (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-text-grey-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-grey.pt-h1-text-grey-dt .markdown-preview-view h1 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text), var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-grey-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-grey.pt-h2-text-grey-dt .markdown-preview-view h2 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text), var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-text-grey-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-grey.pt-h3-text-grey-dt .markdown-preview-view h3 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text), var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-text-grey-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-grey.pt-h4-text-grey-dt .markdown-preview-view h4 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text), var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-text-grey-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-grey.pt-h5-text-grey-dt .markdown-preview-view h5 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text), var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-grey-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-grey.pt-h6-text-grey-dt .markdown-preview-view h6 {
+                color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text), var(--h6-text-opacity-dt));
+            }
+
+
+    /*  Headers - Background
+        ========================================================================== */ 
+
+        /*  Headers - Background Horizontal Width
+            ========================================================================== */ 
+
+            .theme-light.pt-header-background-width-fit-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-background-width-fit-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                width: fit-content;
+            }
+            
+            .theme-light.pt-header-background-width-full-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-background-width-full-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                width: 100%;
+            }   
+
+
+        /*  Headers - Background Horizontal Alignment
+            ========================================================================== */ 
+
+            .theme-light.pt-header-background-align-left-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-background-align-left-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6)  {
+                margin-left: 0;
+                margin-right: auto;
+            }
+
+            .theme-light.pt-header-background-align-center-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-background-align-center-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .theme-light.pt-header-background-align-right-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
+            .theme-dark.pt-header-background-align-right-dt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+
+        /*  Headers - Background Color None
+            ========================================================================== */ 
+        
+            .theme-light.pt-h1-background-none-lt div.markdown-preview-view h1,
+            .theme-light.pt-h2-background-none-lt div.markdown-preview-view h2,
+            .theme-light.pt-h3-background-none-lt div.markdown-preview-view h3,
+            .theme-light.pt-h4-background-none-lt div.markdown-preview-view h4,
+            .theme-light.pt-h5-background-none-lt div.markdown-preview-view h5,
+            .theme-light.pt-h6-background-none-lt div.markdown-preview-view h6,
+            .theme-dark.pt-h1-background-none-dt div.markdown-preview-view h1,
+            .theme-dark.pt-h2-background-none-dt div.markdown-preview-view h2,
+            .theme-dark.pt-h3-background-none-dt div.markdown-preview-view h3,
+            .theme-dark.pt-h4-background-none-dt div.markdown-preview-view h4,
+            .theme-dark.pt-h5-background-none-dt div.markdown-preview-view h5,
+            .theme-dark.pt-h6-background-none-dt div.markdown-preview-view h6 {
+                background-color: unset !important;
+                background: unset !important;
+            }
+
+
+        /*  Headers - Background Color Custom (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-custom-lt .markdown-preview-view h1 {
+                background-color: hsla(var(--h1-background-color-custom-lt), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-custom-lt .markdown-preview-view h2 {
+                background-color: hsla(var(--h2-background-color-custom-lt), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-custom-lt .markdown-preview-view h3 {
+                background-color: hsla(var(--h3-background-color-custom-lt), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-custom-lt .markdown-preview-view h4 {
+                background-color: hsla(var(--h4-background-color-custom-lt), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-custom-lt .markdown-preview-view h5 {
+                background-color: hsla(var(--h5-background-color-custom-lt), var(--h5-background-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-background-custom-lt .markdown-preview-view h6 {
+                background-color: hsla(var(--h6-background-color-custom-lt), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Custom (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-background-custom-dt .markdown-preview-view h1 {
+                background-color: hsla(var(--h1-background-color-custom-dt), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-custom-dt .markdown-preview-view h2 {
+                background-color: hsla(var(--h2-background-color-custom-dt), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-custom-dt .markdown-preview-view h3 {
+                background-color: hsla(var(--h3-background-color-custom-dt), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-custom-dt .markdown-preview-view h4 {
+                background-color: hsla(var(--h4-background-color-custom-dt), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-custom-dt .markdown-preview-view h5 {
+                background-color: hsla(var(--h5-background-color-custom-dt), var(--h5-background-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-background-custom-dt .markdown-preview-view h6 {
+                background-color: hsla(var(--h6-background-color-custom-dt), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Accent (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-custom .markdown-preview-view h1{
+                background-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-custom .markdown-preview-view h2 {
+                background-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-custom .markdown-preview-view h3 {
+                background-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-custom .markdown-preview-view h4 {
+                background-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-custom .markdown-preview-view h5 {
+                background-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-custom .markdown-preview-view h6 {
+                background-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Red (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-red-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-red .markdown-preview-view h1 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-red-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-red .markdown-preview-view h2 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-red-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-red .markdown-preview-view h3 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-red-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-red .markdown-preview-view h4 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-red-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-red .markdown-preview-view h5 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-red-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-red .markdown-preview-view h6 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Orange (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-orange-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-orange .markdown-preview-view h1 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-orange-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-orange .markdown-preview-view h2 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-orange-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-orange .markdown-preview-view h3 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-orange-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-orange .markdown-preview-view h4 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-orange-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-orange .markdown-preview-view h5 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-orange-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-orange .markdown-preview-view h6 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Yellow (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-yellow-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h1 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-yellow-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h2 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-yellow-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h3 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-yellow-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h4 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-yellow-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h5 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-yellow-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h6 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Green (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-green-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-green .markdown-preview-view h1 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-green-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-green .markdown-preview-view h2 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-green-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-green .markdown-preview-view h3 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-green-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-green .markdown-preview-view h4 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-green-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-green .markdown-preview-view h5 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-green-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-green .markdown-preview-view h6 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l), var(--header-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Mint (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-mint-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-mint .markdown-preview-view h1 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-mint-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-mint .markdown-preview-view h2 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-mint-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-mint .markdown-preview-view h3 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-mint-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-mint .markdown-preview-view h4 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-mint-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-mint .markdown-preview-view h5 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-mint-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-mint .markdown-preview-view h6 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Aqua (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-aqua-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h1 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-aqua-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h2 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-aqua-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h3 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-aqua-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h4 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-aqua-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h5 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-aqua-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h6 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Blue (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-blue-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-blue .markdown-preview-view h1 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-blue-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-blue .markdown-preview-view h2 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-blue-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-blue .markdown-preview-view h3 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-blue-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-blue .markdown-preview-view h4 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-blue-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-blue .markdown-preview-view h5 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-blue-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-blue .markdown-preview-view h6 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Purple (Light Theme)
+            ========================================================================== */     
+        
+            .theme-light.pt-h1-background-purple-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-purple .markdown-preview-view h1 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-purple-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-purple .markdown-preview-view h2 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-purple-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-purple .markdown-preview-view h3 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-purple-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-purple .markdown-preview-view h4 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-purple-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-purple .markdown-preview-view h5 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-purple-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-purple .markdown-preview-view h6 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), var(--h6-background-opacity-lt));
+            }
+
+
+        /*  Headers - Background Color Pink (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-background-pink-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-pink .markdown-preview-view h1 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-pink-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-pink .markdown-preview-view h2 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-pink-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-pink .markdown-preview-view h3 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-pink-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-pink .markdown-preview-view h4 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-pink-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-pink .markdown-preview-view h5 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-pink-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-pink .markdown-preview-view h6 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l), var(--h6-background-opacity-lt));
+            }
+        
+
+        /*  Headers - Background Color Grey (Light Theme)
+            ========================================================================== */     
+
+            .theme-light.pt-h1-background-grey-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-background-accent-lt.pt-light-accent-color-grey .markdown-preview-view h1 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), var(--h1-background-opacity-lt));
+            }
+
+            .theme-light.pt-h2-background-grey-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-background-accent-lt.pt-light-accent-color-grey .markdown-preview-view h2 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), var(--h2-background-opacity-lt));
+            }
+
+            .theme-light.pt-h3-background-grey-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-background-accent-lt.pt-light-accent-color-grey .markdown-preview-view h3 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), var(--h3-background-opacity-lt));
+            }
+
+            .theme-light.pt-h4-background-grey-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-background-accent-lt.pt-light-accent-color-grey .markdown-preview-view h4 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), var(--h4-background-opacity-lt));
+            }
+
+            .theme-light.pt-h5-background-grey-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-background-accent-lt.pt-light-accent-color-grey .markdown-preview-view h5 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), var(--h5-background-opacity-lt));
+            }
+
+            .theme-light.pt-h6-background-grey-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-background-accent-lt.pt-light-accent-color-grey .markdown-preview-view h6 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), var(--h6-background-opacity-lt));
+            }
+        
+
+        /*  Headers - Background Color Accent (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h1 {
+                background-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h2 {
+                background-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h3 {
+                background-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h4 {
+                background-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h5 {
+                background-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h6 {
+                background-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l), var(--h6-background-opacity-dt));
+            }
+        
+        
+        /*  Headers - Background Color Red (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-red-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-red .markdown-preview-view h1 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-red-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-red .markdown-preview-view h2 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-red-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-red .markdown-preview-view h3 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-red-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-red .markdown-preview-view h4 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-red-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-red .markdown-preview-view h5 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-red-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-red .markdown-preview-view h6 {
+                background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Orange (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-orange-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h1 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated),  var(--color-orange-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-orange-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h2 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated),  var(--color-orange-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-orange-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h3 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated),  var(--color-orange-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-orange-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h4 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated),  var(--color-orange-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-orange-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h5 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated),  var(--color-orange-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-orange-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h6 {
+                background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated),  var(--color-orange-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Yellow (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-yellow-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h1 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-yellow-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h2 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-yellow-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h3 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-yellow-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h4 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-yellow-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h5 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-yellow-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h6 {
+                background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Green (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-green-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-green .markdown-preview-view h1 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-green-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-green .markdown-preview-view h2 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-green-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-green .markdown-preview-view h3 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h3-background-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-background-green-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-green .markdown-preview-view h4 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-green-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-green .markdown-preview-view h5 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-green-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-green .markdown-preview-view h6 {
+                background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Mint (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-mint-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h1 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-mint-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h2 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-mint-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h3 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-mint-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h4 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-mint-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h5 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-mint-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h6 {
+                background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Aqua (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-aqua-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h1 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-aqua-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h2 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-aqua-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h3 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-aqua-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h4 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h4-background-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-background-aqua-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h5 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-aqua-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h6 {
+                background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Blue (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-blue-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h1 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-blue-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h2 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-blue-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h3 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-blue-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h4 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-blue-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h5 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-blue-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h6 {
+                background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Purple (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-purple-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h1 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-purple-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h2 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-purple-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h3 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-purple-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h4 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-purple-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h5 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-purple-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h6 {
+                background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Pink (Dark Theme)
+            ========================================================================== */
+        
+            .theme-dark.pt-h1-background-pink-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h1 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-pink-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h2 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-pink-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h3 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-pink-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h4 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-pink-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h5 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-pink-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h6 {
+                background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+        /*  Headers - Background Color Grey (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-background-grey-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-background-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h1 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), var(--h1-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-background-grey-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-background-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h2 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), var(--h2-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-background-grey-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-background-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h3 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), var(--h3-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-background-grey-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-background-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h4 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), var(--h4-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-background-grey-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-background-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h5 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), var(--h5-background-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-background-grey-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-background-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h6 {
+                background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), var(--h6-background-opacity-dt));
+            }
+
+
+    /*  Headers - Border
+        ========================================================================== */ 
+        
+        /*  Headers - Border Width (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-light .markdown-preview-view h1 {
+                border-width: var(--h1-border-width-lt);
+            }
+
+            .theme-light .markdown-preview-view h2 {
+                border-width: var(--h2-border-width-lt);
+            }
+
+            .theme-light .markdown-preview-view h3 {
+                border-width: var(--h3-border-width-lt);
+            }
+
+            .theme-light .markdown-preview-view h4 {
+                border-width: var(--h4-border-width-lt);
+            }
+
+            .theme-light .markdown-preview-view h5 {
+                border-width: var(--h5-border-width-lt);
+            }
+
+            .theme-light .markdown-preview-view h6 {
+                border-width: var(--h6-border-width-lt);
+            }
+
+
+        /*  Headers - Border Width (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark .markdown-preview-view h1 {
+                border-width: var(--h1-border-width-dt);
+            }
+
+            .theme-dark .markdown-preview-view h2 {
+                border-width: var(--h2-border-width-dt);
+            }
+
+            .theme-dark .markdown-preview-view h3 {
+                border-width: var(--h3-border-width-dt);
+            }
+
+            .theme-dark .markdown-preview-view h4 {
+                border-width: var(--h4-border-width-dt);
+            }
+
+            .theme-dark .markdown-preview-view h5 {
+                border-width: var(--h5-border-width-dt);
+            }
+
+            .theme-dark .markdown-preview-view h6 {
+                border-width: var(--h6-border-width-dt);
+            }
+
+
+        /*  Headers - Border Styles
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-none-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-border-none-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-border-none-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-border-none-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-border-none-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-border-none-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-border-none-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-border-none-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-border-none-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-border-none-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-border-none-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-border-none-dt .markdown-preview-view h6 {
+                border: unset;
+            }
+
+            .theme-light.pt-h1-border-solid-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-border-solid-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-border-solid-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-border-solid-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-border-solid-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-border-solid-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-border-solid-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-border-solid-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-border-solid-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-border-solid-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-border-solid-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-border-solid-dt .markdown-preview-view h6 {
+                border-style: solid;
+            }
+
+            .theme-light.pt-h1-border-dotted-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-border-dotted-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-border-dotted-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-border-dotted-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-border-dotted-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-border-dotted-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-border-dotted-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-border-dotted-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-border-dotted-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-border-dotted-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-border-dotted-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-border-dotted-dt .markdown-preview-view h6 {
+                border-style: dotted;
+            }
+
+            .theme-light.pt-h1-border-dashed-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-border-dashed-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-border-dashed-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-border-dashed-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-border-dashed-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-border-dashed-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-border-dashed-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-border-dashed-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-border-dashed-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-border-dashed-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-border-dashed-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-border-dashed-dt .markdown-preview-view h6 {
+                border-style: dashed;
+            }
+
+
+        /*  Headers - Border Color Custom (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-custom-lt .markdown-preview-view h1 {
+                border-color: hsla(var(--h1-border-color-custom-lt), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-custom-lt .markdown-preview-view h2 {
+                border-color: hsla(var(--h2-border-color-custom-lt), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-custom-lt .markdown-preview-view h3 {
+                border-color: hsla(var(--h3-border-color-custom-lt), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-custom-lt .markdown-preview-view h4 {
+                border-color: hsla(var(--h4-border-color-custom-lt), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-custom-lt .markdown-preview-view h5 {
+                border-color: hsla(var(--h5-border-color-custom-lt), var(--h5-border-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-border-custom-lt .markdown-preview-view h6 {
+                border-color: hsla(var(--h6-border-color-custom-lt), var(--h6-border-opacity-lt));
+            }
+
+        
+        /*  Headers - Border Color Custom (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-custom-dt .markdown-preview-view h1 {
+                border-color: hsla(var(--h1-border-color-custom-dt), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-custom-dt .markdown-preview-view h2 {
+                border-color: hsla(var(--h2-border-color-custom-dt), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-custom-dt .markdown-preview-view h3 {
+                border-color: hsla(var(--h3-border-color-custom-dt), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-custom-dt .markdown-preview-view h4 {
+                border-color: hsla(var(--h4-border-color-custom-dt), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-custom-dt .markdown-preview-view h5 {
+                border-color: hsla(var(--h5-border-color-custom-dt), var(--h5-border-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-border-custom-dt .markdown-preview-view h6 {
+                border-color: hsla(var(--h6-border-color-custom-dt), var(--h6-border-opacity-dt));
+            }
+        
+
+        /*  Headers - Border Color Accent (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h1 {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h2 {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h3 {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h4 {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h5 {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h6 {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Red (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-red-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-red .markdown-preview-view h1 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-red-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-red .markdown-preview-view h2 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-red-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-red .markdown-preview-view h3 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-red-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-red .markdown-preview-view h4 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-red-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-red .markdown-preview-view h5 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-red-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-red .markdown-preview-view h6 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Orange (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-orange-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-orange .markdown-preview-view h1 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-orange-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-orange .markdown-preview-view h2 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-orange-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-orange .markdown-preview-view h3 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-orange-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-orange .markdown-preview-view h4 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-orange-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-orange .markdown-preview-view h5 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-orange-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-orange .markdown-preview-view h6 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Yellow (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-yellow-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h1 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-yellow-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h2 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-yellow-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h3 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-yellow-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h4 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-yellow-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h5 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-yellow-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-yellow .markdown-preview-view h6 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Green (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-green-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-green .markdown-preview-view h1 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-green-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-green .markdown-preview-view h2 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-green-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-green .markdown-preview-view h3 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-green-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-green .markdown-preview-view h4 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h4-border-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-border-green-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-green .markdown-preview-view h5 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-green-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-green .markdown-preview-view h6 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Mint (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-mint-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-mint .markdown-preview-view h1 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-mint-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-mint .markdown-preview-view h2 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-mint-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-mint .markdown-preview-view h3 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-mint-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-mint .markdown-preview-view h4 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-mint-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-mint .markdown-preview-view h5 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-mint-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-mint .markdown-preview-view h6 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Aqua (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-aqua-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h1 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-aqua-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h2 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-aqua-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h3 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-aqua-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h4 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-aqua-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h5 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-aqua-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-aqua .markdown-preview-view h6 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Blue (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-blue-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-blue .markdown-preview-view h1 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-blue-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-blue .markdown-preview-view h2 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-blue-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-blue .markdown-preview-view h3 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-blue-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-blue .markdown-preview-view h4 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-blue-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-blue .markdown-preview-view h5 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-blue-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-blue .markdown-preview-view h6 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Purple (Light Theme)
+            ========================================================================== */
+    
+            .theme-light.pt-h1-border-purple-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-purple .markdown-preview-view h1 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-purple-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-purple .markdown-preview-view h2 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-purple-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-purple .markdown-preview-view h3 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-purple-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-purple .markdown-preview-view h4 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-purple-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-purple .markdown-preview-view h5 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-purple-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-purple .markdown-preview-view h6 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Pink (Light Theme)
+            ========================================================================== */
+    
+            .theme-light.pt-h1-border-pink-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-pink .markdown-preview-view h1 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-pink-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-pink .markdown-preview-view h2 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-pink-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-pink .markdown-preview-view h3 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-pink-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-pink .markdown-preview-view h4 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-pink-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-pink .markdown-preview-view h5 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-pink-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-pink .markdown-preview-view h6 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h6-border-opacity-lt));
+            }
+    
+
+        /*  Headers - Border Color Grey (Light Theme)
+            ========================================================================== */
+
+            .theme-light.pt-h1-border-grey-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-grey .markdown-preview-view h1 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h1-border-opacity-lt));
+            }
+
+            .theme-light.pt-h2-border-grey-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-grey .markdown-preview-view h2 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h2-border-opacity-lt));
+            }
+
+            .theme-light.pt-h3-border-grey-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-grey .markdown-preview-view h3 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h3-border-opacity-lt));
+            }
+
+            .theme-light.pt-h4-border-grey-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-grey .markdown-preview-view h4 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h4-border-opacity-lt));
+            }
+
+            .theme-light.pt-h5-border-grey-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-grey .markdown-preview-view h5 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h5-border-opacity-lt));
+            }
+
+            .theme-light.pt-h6-border-grey-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-grey .markdown-preview-view h6 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h6-border-opacity-lt));
+            }
+
+
+        /*  Headers - Border Color Accent (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h1 {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h2 {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h3 {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h4 {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h5 {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h6 {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Red (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-red-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-red .markdown-preview-view h1 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-red-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-red .markdown-preview-view h2 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-red-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-red .markdown-preview-view h3 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-red-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-red .markdown-preview-view h4 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-red-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-red .markdown-preview-view h5 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-red-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-red .markdown-preview-view h6 {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Orange (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-orange-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h1 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-orange-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h2 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-orange-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h3 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-orange-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h4 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-orange-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h5 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-orange-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-orange .markdown-preview-view h6 {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Yellow (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-yellow-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h1 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-yellow-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h2 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-yellow-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h3 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-yellow-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h4 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-yellow-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h5 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-yellow-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-yellow .markdown-preview-view h6 {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Green (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-green-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-green .markdown-preview-view h1 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-green-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-green .markdown-preview-view h2 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-green-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-green .markdown-preview-view h3 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-green-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-green .markdown-preview-view h4 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-green-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-green .markdown-preview-view h5 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-green-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-green .markdown-preview-view h6 {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Mint (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-mint-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h1 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-mint-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h2 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-mint-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h3 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-mint-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h4 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-mint-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h5 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-mint-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-mint .markdown-preview-view h6 {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Aqua (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-aqua-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h1 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-aqua-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h2 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-aqua-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h3 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-aqua-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h4 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-aqua-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h5 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-aqua-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-aqua .markdown-preview-view h6 {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Blue (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-blue-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h1 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-blue-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h2 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-blue-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h3 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-blue-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h4 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-blue-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h5 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-blue-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-blue .markdown-preview-view h6 {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Purple (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-purple-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h1 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-purple-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h2 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-purple-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h3 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-purple-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h4 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-purple-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h5 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-purple-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-purple .markdown-preview-view h6 {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Pink (Dark Theme)
+            ========================================================================== */
+    
+            .theme-dark.pt-h1-border-pink-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h1 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-pink-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h2 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-pink-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h3 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-pink-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h4 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-pink-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h5 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-pink-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-pink .markdown-preview-view h6 {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
+        /*  Headers - Border Color Grey (Dark Theme)
+            ========================================================================== */
+
+            .theme-dark.pt-h1-border-grey-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h1 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h1-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-border-grey-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h2 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h2-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-border-grey-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h3 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h3-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-border-grey-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h4 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h4-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-border-grey-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h5 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h5-border-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-border-grey-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-grey .markdown-preview-view h6 {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h6-border-opacity-dt));
+            }
+
+
 /*  ==========================================================================
     Preview View
     ========================================================================== */
-
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
-    }
 
     .workspace-split.mod-root .view-content,
     .workspace-split.mod-root .workspace-leaf .workspace-leaf-content,
