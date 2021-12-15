@@ -4594,10 +4594,6 @@
             box-decoration-break: clone;
         }
 
-        mark::selection {
-            color: var(--text-normal);
-        }
-
 /*  ==========================================================================
     Accents
     ========================================================================== */
@@ -6927,6 +6923,18 @@
         background-color: var(--text-selection);
         color: var(--text-normal);
     }
+
+    mark::selection,
+    h1::selection,
+    h2::selection,
+    h3::selection,
+    h4::selection,
+    h5::selection,
+    h6::selection {
+        color: var(--text-normal);
+    }
+
+
 
     a {
         color: var(--interactive-accent-text);
