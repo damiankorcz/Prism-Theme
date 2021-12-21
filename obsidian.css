@@ -8772,6 +8772,8 @@
             .theme-dark.pt-header-background-align-left-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-header-background-align-left-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-header-background-align-left-dt .HyperMD-header-6.cm-line  {
+                margin-left: 0 !important;
+                margin-right: auto !important;
             }
 
             .theme-light.pt-header-background-align-center-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
@@ -8800,6 +8802,8 @@
             .theme-dark.pt-header-background-align-center-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-header-background-align-center-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-header-background-align-center-dt .HyperMD-header-6.cm-line {
+                margin-left: auto !important;
+                margin-right: auto !important;
             }
 
             .theme-light.pt-header-background-align-right-lt .markdown-preview-view :is(h1, h2, h3, h4, h5, h6),
@@ -8828,6 +8832,8 @@
             .theme-dark.pt-header-background-align-right-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-header-background-align-right-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-header-background-align-right-dt .HyperMD-header-6.cm-line {
+                margin-left: auto !important;
+                margin-right: 0 !important;
             }
 
 
@@ -10204,31 +10210,37 @@
             .theme-light .markdown-preview-view h1,
             .theme-light .HyperMD-header-1 > span[role="presentation"],
             .theme-light .HyperMD-header-1.cm-line {
+                border-width: var(--h1-border-width-lt) !important;
             }
 
             .theme-light .markdown-preview-view h2,
             .theme-light .HyperMD-header-2 > span[role="presentation"],
             .theme-light .HyperMD-header-2.cm-line {
+                border-width: var(--h2-border-width-lt) !important;
             }
 
             .theme-light .markdown-preview-view h3,
             .theme-light .HyperMD-header-3 > span[role="presentation"],
             .theme-light .HyperMD-header-3.cm-line {
+                border-width: var(--h3-border-width-lt) !important;
             }
 
             .theme-light .markdown-preview-view h4,
             .theme-light .HyperMD-header-4 > span[role="presentation"],
             .theme-light .HyperMD-header-4.cm-line {
+                border-width: var(--h4-border-width-lt) !important;
             }
 
             .theme-light .markdown-preview-view h5,
             .theme-light .HyperMD-header-5 > span[role="presentation"],
             .theme-light .HyperMD-header-5.cm-line {
+                border-width: var(--h5-border-width-lt) !important;
             }
 
             .theme-light .markdown-preview-view h6,
             .theme-light .HyperMD-header-6 > span[role="presentation"],
             .theme-light .HyperMD-header-6.cm-line {
+                border-width: var(--h6-border-width-lt) !important;
             }
 
 
@@ -10238,31 +10250,37 @@
             .theme-dark .markdown-preview-view h1,
             .theme-dark .HyperMD-header-1 > span[role="presentation"],
             .theme-dark .HyperMD-header-1.cm-line {
+                border-width: var(--h1-border-width-dt) !important;
             }
 
             .theme-dark .markdown-preview-view h2,
             .theme-dark .HyperMD-header-2 > span[role="presentation"],
             .theme-dark .HyperMD-header-2.cm-line {
+                border-width: var(--h2-border-width-dt) !important;
             }
 
             .theme-dark .markdown-preview-view h3,
             .theme-dark .HyperMD-header-3 > span[role="presentation"],
             .theme-dark .HyperMD-header-3.cm-line {
+                border-width: var(--h3-border-width-dt) !important;
             }
 
             .theme-dark .markdown-preview-view h4,
             .theme-dark .HyperMD-header-4 > span[role="presentation"],
             .theme-dark .HyperMD-header-4.cm-line {
+                border-width: var(--h4-border-width-dt) !important;
             }
 
             .theme-dark .markdown-preview-view h5,
             .theme-dark .HyperMD-header-5 > span[role="presentation"],
             .theme-dark .HyperMD-header-5.cm-line {
+                border-width: var(--h5-border-width-dt) !important;
             }
 
             .theme-dark .markdown-preview-view h6,
             .theme-dark .HyperMD-header-6 > span[role="presentation"],
             .theme-dark .HyperMD-header-6.cm-line {
+                border-width: var(--h6-border-width-dt) !important;
             }
 
 
@@ -10305,6 +10323,7 @@
             .theme-dark.pt-h4-border-none-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-none-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-none-dt .HyperMD-header-6.cm-line {
+                border: unset !important;
             }
 
             .theme-light.pt-h1-border-solid-lt .markdown-preview-view h1,
@@ -10343,6 +10362,7 @@
             .theme-dark.pt-h4-border-solid-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-solid-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-solid-dt .HyperMD-header-6.cm-line {
+                border-style: solid !important;
             }
 
             .theme-light.pt-h1-border-dotted-lt .markdown-preview-view h1,
@@ -10381,6 +10401,7 @@
             .theme-dark.pt-h4-border-dotted-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-dotted-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-dotted-dt .HyperMD-header-6.cm-line {
+                border-style: dotted !important;
             }
 
             .theme-light.pt-h1-border-dashed-lt .markdown-preview-view h1,
@@ -10419,6 +10440,7 @@
             .theme-dark.pt-h4-border-dashed-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-dashed-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-dashed-dt .HyperMD-header-6.cm-line {
+                border-style: dashed !important;
             }
 
             .theme-light.pt-h1-border-solid-underline-lt .markdown-preview-view h1,
@@ -10457,6 +10479,10 @@
             .theme-dark.pt-h4-border-solid-underline-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-solid-underline-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-solid-underline-dt .HyperMD-header-6.cm-line {
+                border-style: solid !important;
+                border-top: unset !important;
+                border-left: unset !important;
+                border-right: unset !important;
             }
 
             .theme-light.pt-h1-border-dotted-underline-lt .markdown-preview-view h1,
@@ -10495,6 +10521,10 @@
             .theme-dark.pt-h4-border-dotted-underline-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-dotted-underline-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-dotted-underline-dt .HyperMD-header-6.cm-line {
+                border-style: dotted !important;
+                border-top: unset !important;
+                border-left: unset !important;
+                border-right: unset !important;
             }
 
             .theme-light.pt-h1-border-dashed-underline-lt .markdown-preview-view h1,
@@ -10533,6 +10563,10 @@
             .theme-dark.pt-h4-border-dashed-underline-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h5-border-dashed-underline-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h6-border-dashed-underline-dt .HyperMD-header-6.cm-line {
+                border-style: dashed !important;
+                border-top: unset !important;
+                border-left: unset !important;
+                border-right: unset !important;
             }
 
 
@@ -10542,31 +10576,37 @@
             .theme-light.pt-h1-border-custom-lt .markdown-preview-view h1,
             .theme-light.pt-h1-border-custom-lt .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-custom-lt .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--h1-border-color-custom-lt), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-custom-lt .markdown-preview-view h2,
             .theme-light.pt-h2-border-custom-lt .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-custom-lt .HyperMD-header-2.cm-line  {
+                border-color: hsla(var(--h2-border-color-custom-lt), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-custom-lt .markdown-preview-view h3,
             .theme-light.pt-h3-border-custom-lt .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-custom-lt .HyperMD-header-3.cm-line  {
+                border-color: hsla(var(--h3-border-color-custom-lt), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-custom-lt .markdown-preview-view h4,
             .theme-light.pt-h4-border-custom-lt .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-custom-lt .HyperMD-header-4.cm-line  {
+                border-color: hsla(var(--h4-border-color-custom-lt), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-custom-lt .markdown-preview-view h5,
             .theme-light.pt-h5-border-custom-lt .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-custom-lt .HyperMD-header-5.cm-line  {
+                border-color: hsla(var(--h5-border-color-custom-lt), var(--h5-border-opacity-lt)) !important;
             }
             
             .theme-light.pt-h6-border-custom-lt .markdown-preview-view h6,
             .theme-light.pt-h6-border-custom-lt .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-custom-lt .HyperMD-header-6.cm-line  {
+                border-color: hsla(var(--h6-border-color-custom-lt), var(--h6-border-opacity-lt)) !important;
             }
 
         
@@ -10576,31 +10616,37 @@
             .theme-dark.pt-h1-border-custom-dt .markdown-preview-view h1,
             .theme-dark.pt-h1-border-custom-dt .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-custom-dt .HyperMD-header-1.cm-line  {
+                border-color: hsla(var(--h1-border-color-custom-dt), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-custom-dt .markdown-preview-view h2,
             .theme-dark.pt-h2-border-custom-dt .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-custom-dt .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--h2-border-color-custom-dt), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-custom-dt .markdown-preview-view h3,
             .theme-dark.pt-h3-border-custom-dt .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-custom-dt .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--h3-border-color-custom-dt), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-custom-dt .markdown-preview-view h4,
             .theme-dark.pt-h4-border-custom-dt .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-custom-dt .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--h4-border-color-custom-dt), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-custom-dt .markdown-preview-view h5,
             .theme-dark.pt-h5-border-custom-dt .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-custom-dt .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--h5-border-color-custom-dt), var(--h5-border-opacity-dt)) !important;
             }
             
             .theme-dark.pt-h6-border-custom-dt .markdown-preview-view h6,
             .theme-dark.pt-h6-border-custom-dt .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-custom-dt .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--h6-border-color-custom-dt), var(--h6-border-opacity-dt)) !important;
             }
         
 
@@ -10610,31 +10656,37 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h1,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h2,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h3,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h4,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h5,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-custom .markdown-preview-view h6,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-custom .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10647,6 +10699,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-red .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-red-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-red .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-red-lt .markdown-preview-view h2,
@@ -10655,6 +10708,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-red .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-red-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-red .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-red-lt .markdown-preview-view h3,
@@ -10663,6 +10717,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-red .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-red-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-red .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-red-lt .markdown-preview-view h4,
@@ -10671,6 +10726,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-red .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-red-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-red .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-red-lt .markdown-preview-view h5,
@@ -10679,6 +10735,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-red .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-red-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-red .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-red-lt .markdown-preview-view h6,
@@ -10687,6 +10744,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-red .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-red-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-red .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10699,6 +10757,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-orange-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-orange-lt .markdown-preview-view h2,
@@ -10707,6 +10766,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-orange-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-orange-lt .markdown-preview-view h3,
@@ -10715,6 +10775,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-orange-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-orange-lt .markdown-preview-view h4,
@@ -10723,6 +10784,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-orange-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-orange-lt .markdown-preview-view h5,
@@ -10731,6 +10793,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-orange-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-orange-lt .markdown-preview-view h6,
@@ -10739,6 +10802,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-orange-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-orange .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10751,6 +10815,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-yellow-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-yellow-lt .markdown-preview-view h2,
@@ -10759,6 +10824,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-yellow-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-yellow-lt .markdown-preview-view h3,
@@ -10767,6 +10833,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-yellow-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-yellow-lt .markdown-preview-view h4,
@@ -10775,6 +10842,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-yellow-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-yellow-lt .markdown-preview-view h5,
@@ -10783,6 +10851,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-yellow-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-yellow-lt .markdown-preview-view h6,
@@ -10791,6 +10860,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-yellow-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-yellow .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10803,6 +10873,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-green .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-green-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-green .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-green-lt .markdown-preview-view h2,
@@ -10811,6 +10882,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-green .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-green-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-green .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-green-lt .markdown-preview-view h3,
@@ -10819,6 +10891,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-green .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-green-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-green .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-green-lt .markdown-preview-view h4,
@@ -10827,6 +10900,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-green .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-green-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-green .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
             
             .theme-light.pt-h5-border-green-lt .markdown-preview-view h5,
@@ -10835,6 +10909,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-green .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-green-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-green .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-green-lt .markdown-preview-view h6,
@@ -10843,6 +10918,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-green .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-green-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-green .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10855,6 +10931,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-mint-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-mint-lt .markdown-preview-view h2,
@@ -10863,6 +10940,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-mint-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-mint-lt .markdown-preview-view h3,
@@ -10871,6 +10949,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-mint-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-mint-lt .markdown-preview-view h4,
@@ -10879,6 +10958,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-mint-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-mint-lt .markdown-preview-view h5,
@@ -10887,6 +10967,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-mint-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-mint-lt .markdown-preview-view h6,
@@ -10895,6 +10976,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-mint-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-mint .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10907,6 +10989,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-aqua-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-aqua-lt .markdown-preview-view h2,
@@ -10915,6 +10998,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-aqua-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-aqua-lt .markdown-preview-view h3,
@@ -10923,6 +11007,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-aqua-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-aqua-lt .markdown-preview-view h4,
@@ -10931,6 +11016,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-aqua-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-aqua-lt .markdown-preview-view h5,
@@ -10939,6 +11025,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-aqua-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-aqua-lt .markdown-preview-view h6,
@@ -10947,6 +11034,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-aqua-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-aqua .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -10959,6 +11047,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-blue-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-blue-lt .markdown-preview-view h2,
@@ -10967,6 +11056,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-blue-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-blue-lt .markdown-preview-view h3,
@@ -10975,6 +11065,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-blue-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-blue-lt .markdown-preview-view h4,
@@ -10983,6 +11074,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-blue-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-blue-lt .markdown-preview-view h5,
@@ -10991,6 +11083,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-blue-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-blue-lt .markdown-preview-view h6,
@@ -10999,6 +11092,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-blue-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-blue .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -11011,6 +11105,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-purple-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-purple-lt .markdown-preview-view h2,
@@ -11019,6 +11114,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-purple-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-purple-lt .markdown-preview-view h3,
@@ -11027,6 +11123,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-purple-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-purple-lt .markdown-preview-view h4,
@@ -11035,6 +11132,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-purple-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-purple-lt .markdown-preview-view h5,
@@ -11043,6 +11141,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-purple-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-purple-lt .markdown-preview-view h6,
@@ -11051,6 +11150,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-purple-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-purple .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -11063,6 +11163,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-pink-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-pink-lt .markdown-preview-view h2,
@@ -11071,6 +11172,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-pink-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-pink-lt .markdown-preview-view h3,
@@ -11079,6 +11181,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-pink-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-pink-lt .markdown-preview-view h4,
@@ -11087,6 +11190,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-pink-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-pink-lt .markdown-preview-view h5,
@@ -11095,6 +11199,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-pink-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-pink-lt .markdown-preview-view h6,
@@ -11103,6 +11208,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-pink-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-pink .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
     
 
@@ -11115,6 +11221,7 @@
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-1 > span[role="presentation"],
             .theme-light.pt-h1-border-grey-lt .HyperMD-header-1.cm-line,
             .theme-light.pt-h1-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h1-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h2-border-grey-lt .markdown-preview-view h2,
@@ -11123,6 +11230,7 @@
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-2 > span[role="presentation"],
             .theme-light.pt-h2-border-grey-lt .HyperMD-header-2.cm-line,
             .theme-light.pt-h2-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h2-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h3-border-grey-lt .markdown-preview-view h3,
@@ -11131,6 +11239,7 @@
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-3 > span[role="presentation"],
             .theme-light.pt-h3-border-grey-lt .HyperMD-header-3.cm-line,
             .theme-light.pt-h3-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h3-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h4-border-grey-lt .markdown-preview-view h4,
@@ -11139,6 +11248,7 @@
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-4 > span[role="presentation"],
             .theme-light.pt-h4-border-grey-lt .HyperMD-header-4.cm-line,
             .theme-light.pt-h4-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h4-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h5-border-grey-lt .markdown-preview-view h5,
@@ -11147,6 +11257,7 @@
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-5 > span[role="presentation"],
             .theme-light.pt-h5-border-grey-lt .HyperMD-header-5.cm-line,
             .theme-light.pt-h5-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h5-border-opacity-lt)) !important;
             }
 
             .theme-light.pt-h6-border-grey-lt .markdown-preview-view h6,
@@ -11155,6 +11266,7 @@
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-6 > span[role="presentation"],
             .theme-light.pt-h6-border-grey-lt .HyperMD-header-6.cm-line,
             .theme-light.pt-h6-border-accent-lt.pt-light-accent-color-grey .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened), var(--h6-border-opacity-lt)) !important;
             }
 
 
@@ -11164,31 +11276,37 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h1,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h2,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h3,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h4,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
             
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h5,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-custom .markdown-preview-view h6,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-custom .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11201,6 +11319,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-red-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-red-dt .markdown-preview-view h2,
@@ -11209,6 +11328,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-red-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-2.cm-line{
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-red-dt .markdown-preview-view h3,
@@ -11217,6 +11337,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-red-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-red-dt .markdown-preview-view h4,
@@ -11225,6 +11346,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-red-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-red-dt .markdown-preview-view h5,
@@ -11233,6 +11355,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-red-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-red-dt .markdown-preview-view h6,
@@ -11241,6 +11364,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-red-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-red .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11253,6 +11377,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-orange-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-orange-dt .markdown-preview-view h2,
@@ -11261,6 +11386,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-orange-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-orange-dt .markdown-preview-view h3,
@@ -11269,6 +11395,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-orange-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-orange-dt .markdown-preview-view h4,
@@ -11277,6 +11404,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-orange-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-orange-dt .markdown-preview-view h5,
@@ -11285,6 +11413,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-orange-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-orange-dt .markdown-preview-view h6,
@@ -11293,6 +11422,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-orange-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-orange .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11305,6 +11435,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-yellow-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-yellow-dt .markdown-preview-view h2,
@@ -11313,6 +11444,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-yellow-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-yellow-dt .markdown-preview-view h3,
@@ -11321,6 +11453,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-yellow-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-yellow-dt .markdown-preview-view h4,
@@ -11329,6 +11462,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-yellow-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-yellow-dt .markdown-preview-view h5,
@@ -11337,6 +11471,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-yellow-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-yellow-dt .markdown-preview-view h6,
@@ -11345,6 +11480,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-yellow-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-yellow .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11357,6 +11493,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-green-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-green-dt .markdown-preview-view h2,
@@ -11365,6 +11502,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-green-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-green-dt .markdown-preview-view h3,
@@ -11373,6 +11511,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-green-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-green-dt .markdown-preview-view h4,
@@ -11381,6 +11520,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-green-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-green-dt .markdown-preview-view h5,
@@ -11389,6 +11529,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-green-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-green-dt .markdown-preview-view h6,
@@ -11397,6 +11538,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-green-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-green .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11409,6 +11551,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-mint-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-mint-dt .markdown-preview-view h2,
@@ -11417,6 +11560,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-mint-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-mint-dt .markdown-preview-view h3,
@@ -11425,6 +11569,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-mint-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-mint-dt .markdown-preview-view h4,
@@ -11433,6 +11578,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-mint-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-mint-dt .markdown-preview-view h5,
@@ -11441,6 +11587,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-mint-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-mint-dt .markdown-preview-view h6,
@@ -11449,6 +11596,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-mint-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-mint .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11461,6 +11609,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-aqua-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-aqua-dt .markdown-preview-view h2,
@@ -11469,6 +11618,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-aqua-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-aqua-dt .markdown-preview-view h3,
@@ -11477,6 +11627,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-aqua-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-aqua-dt .markdown-preview-view h4,
@@ -11485,6 +11636,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-aqua-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-aqua-dt .markdown-preview-view h5,
@@ -11493,6 +11645,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-aqua-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-aqua-dt .markdown-preview-view h6,
@@ -11501,6 +11654,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-aqua-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-aqua .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11513,6 +11667,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-blue-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-blue-dt .markdown-preview-view h2,
@@ -11521,6 +11676,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-blue-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-blue-dt .markdown-preview-view h3,
@@ -11529,6 +11685,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-blue-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-blue-dt .markdown-preview-view h4,
@@ -11537,6 +11694,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-blue-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-blue-dt .markdown-preview-view h5,
@@ -11545,6 +11703,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-blue-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-blue-dt .markdown-preview-view h6,
@@ -11553,6 +11712,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-blue-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-blue .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11565,6 +11725,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-purple-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-purple-dt .markdown-preview-view h2,
@@ -11573,6 +11734,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-purple-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-purple-dt .markdown-preview-view h3,
@@ -11581,6 +11743,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-purple-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-purple-dt .markdown-preview-view h4,
@@ -11589,6 +11752,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-purple-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-purple-dt .markdown-preview-view h5,
@@ -11597,6 +11761,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-purple-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-purple-dt .markdown-preview-view h6,
@@ -11605,6 +11770,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-purple-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-purple .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11617,6 +11783,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-pink-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-pink-dt .markdown-preview-view h2,
@@ -11625,6 +11792,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-pink-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-pink-dt .markdown-preview-view h3,
@@ -11633,6 +11801,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-pink-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-pink-dt .markdown-preview-view h4,
@@ -11641,6 +11810,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-pink-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-pink-dt .markdown-preview-view h5,
@@ -11649,6 +11819,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-pink-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-pink-dt .markdown-preview-view h6,
@@ -11657,6 +11828,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-pink-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-pink .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
@@ -11669,6 +11841,7 @@
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-1 > span[role="presentation"],
             .theme-dark.pt-h1-border-grey-dt .HyperMD-header-1.cm-line,
             .theme-dark.pt-h1-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-1.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h1-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h2-border-grey-dt .markdown-preview-view h2,
@@ -11677,6 +11850,7 @@
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-2 > span[role="presentation"],
             .theme-dark.pt-h2-border-grey-dt .HyperMD-header-2.cm-line,
             .theme-dark.pt-h2-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-2.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h2-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h3-border-grey-dt .markdown-preview-view h3,
@@ -11685,6 +11859,7 @@
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-3 > span[role="presentation"],
             .theme-dark.pt-h3-border-grey-dt .HyperMD-header-3.cm-line,
             .theme-dark.pt-h3-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-3.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h3-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h4-border-grey-dt .markdown-preview-view h4,
@@ -11693,6 +11868,7 @@
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-4 > span[role="presentation"],
             .theme-dark.pt-h4-border-grey-dt .HyperMD-header-4.cm-line,
             .theme-dark.pt-h4-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-4.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h4-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h5-border-grey-dt .markdown-preview-view h5,
@@ -11701,6 +11877,7 @@
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-5 > span[role="presentation"],
             .theme-dark.pt-h5-border-grey-dt .HyperMD-header-5.cm-line,
             .theme-dark.pt-h5-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-5.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h5-border-opacity-dt)) !important;
             }
 
             .theme-dark.pt-h6-border-grey-dt .markdown-preview-view h6,
@@ -11709,6 +11886,7 @@
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-6 > span[role="presentation"],
             .theme-dark.pt-h6-border-grey-dt .HyperMD-header-6.cm-line,
             .theme-dark.pt-h6-border-accent-dt.pt-dark-accent-color-grey .HyperMD-header-6.cm-line {
+                border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h6-border-opacity-dt)) !important;
             }
 
 
