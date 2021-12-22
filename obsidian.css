@@ -212,9 +212,10 @@
             ========================================================================== */ 
             
             /* Fonts */
-            --font-family-editor:  'Source Sans Pro', sans-serif;
+            --font-family-ui:      'Source Sans Pro', sans-serif;
+            --font-family-edit:    'Source Sans Pro', sans-serif;
             --font-family-preview: 'Source Sans Pro', sans-serif;
-            --font-family-mono:    'Fira Code', monospace;
+            --font-family-code:    'Fira Code', monospace;
             
             
             /* Graph View */
@@ -702,28 +703,41 @@
 
     html,
     body,
-    input,
+    input[type='text'],
+    input[type='search'],
+    input[type='email'],
+    input[type='password'],
+    input[type='number'],
     textarea,
     button,
-    kbd,
-    .cm-s-obsidian .cm-formatting-hashtag,
-    .cm-s-obsidian {
-        font-family: var(--font-family-editor) !important;
+    .setting-hotkey,
+    .view-header-title {
+        font-family: var(--font-family-ui);
     }
 
+    .workspace-leaf-content[data-mode="source"],
+    .markdown-source-view.mod-cm6 .cm-scroller,
+    .CodeMirror {
+        font-family: var(--font-family-edit);
+    }
+
+    .workspace-leaf-content[data-mode="preview"] {
+        font-family: var(--font-family-preview);
+    }
 
     .kanban-plugin p {
-        font-family: var(--font-family-editor) !important;
+        font-family: var(--font-family-preview) !important;
     }
 
     /* Font for code blocks */
-    .markdown-source-view,
+    .cm-s-obsidian .HyperMD-table-row,
     .cm-s-obsidian .HyperMD-codeblock,
     .cm-s-obsidian span.cm-inline-code,
     .markdown-preview-view code,
+    .markdown-source-view code,
     .HyperMD-codeblock,
     code {
-        font-family: var(--font-family-mono) !important;
+        font-family: var(--font-family-code) !important;
     }
 
 
@@ -3924,7 +3938,6 @@
 
     .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
         content: "Prism Theme v1.2.0";
-        font-family: var(--default-font);
         font-size: 16px;
         font-weight: 600;
         background: var(--background-primary);
@@ -4050,6 +4063,7 @@
     }
 
     .dropdown {
+        font-family: var(--font-family-ui);
         border: 0px;
         border-radius: var(--border-radius);
         box-shadow: var(--drop-shadow);
@@ -12353,20 +12367,26 @@ settings:
         level: 2
         collapsed: true
     - 
-        id: font-family-editor
-        title: Font Family (Editor)
-        description: Font used in the Editor view.
+        id: font-family-ui
+        title: Font Family (UI)
+        description: Font used in the UI.
+        type: variable-text
+        default: Source Sans Pro, sans-serif
+    - 
+        id: font-family-edit
+        title: Font Family (Edit Modes)
+        description: Font used in the Edit/Source pane view mode.
         type: variable-text
         default: Source Sans Pro, sans-serif
     -
         id: font-family-preview
-        title: Font Family (Preview)
-        description: Font used in the Preview view.
+        title: Font Family (Preview Modes)
+        description: Font used in the Preview/Reading pane view mode.
         type: variable-text
         default: Source Sans Pro, sans-serif
     -
-        id: font-family-mono
-        title: Font Family (Mono)
+        id: font-family-code
+        title: Font Family (Code)
         description: Font used in Code elements.
         type: variable-text
         default: IBM Plex Mono, monospace
