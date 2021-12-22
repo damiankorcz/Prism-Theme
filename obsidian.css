@@ -217,7 +217,6 @@
             --font-family-preview: 'Source Sans Pro', sans-serif;
             --font-family-code:    'Fira Code', monospace;
             
-            
             /* Graph View */
 
                 /* Light Theme */
@@ -309,6 +308,14 @@
             --scroll-bar-size: 8px; /* The width of the scrollbar */
             --scroll-bar-size-hover: 15px; /* The width of the scrollbar when hovering over the window content */
 
+            /* Header Font Size */
+            --h1-font-size:   2em;
+            --h2-font-size: 1.8em;
+            --h3-font-size: 1.6em;
+            --h4-font-size: 1.4em;
+            --h5-font-size: 1.2em;
+            --h6-font-size:   1em;
+            
             /* Header Text Opacity */
             --h1-text-opacity-lt: 100%;
             --h2-text-opacity-lt: 100%;
@@ -739,7 +746,6 @@
     code {
         font-family: var(--font-family-code) !important;
     }
-
 
 /*  ==========================================================================
     Main UI ELements
@@ -7345,6 +7351,40 @@
             border-bottom-right-radius: var(--border-radius-small);
         }
 
+/*  ==========================================================================
+    Headers Font Size
+    ========================================================================== */
+
+    .markdown-preview-view h1,
+    .cm-header-1 {
+        font-size: var(--h1-font-size);
+    }
+    
+    .markdown-preview-view h2,
+    .cm-header-2 {
+        font-size: var(--h2-font-size);
+    }
+    
+    .markdown-preview-view h3,
+    .cm-header-3 {
+        font-size: var(--h3-font-size);
+    }
+    
+    .markdown-preview-view h4,
+    .cm-header-4 {
+        font-size: var(--h4-font-size);
+    }
+    
+    .markdown-preview-view h5,
+    .cm-header-5 {
+        font-size: var(--h5-font-size);
+    }
+    
+    .markdown-preview-view h6,
+    .cm-header-6 {
+        font-size: var(--h6-font-size);
+    }
+
 
 /*  ==========================================================================
     Headers (Legacy Edit Mode)
@@ -12559,6 +12599,67 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: header-font-size
+        title: Header Font Size
+        description: The sizes are scalled based on the Font Size selected in the Appearance tab of the Settings.
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: h1-font-size
+        title: Header 1 (H1) Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 2
+        format: em
+    -
+        id: h2-font-size
+        title: Header 2 (H2) Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 1.8
+        format: em
+    -
+        id: h3-font-size
+        title: Header 3 (H3) Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 1.6
+        format: em
+    -
+        id: h4-font-size
+        title: Header 4 (H4) Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 1.4
+        format: em
+    -
+        id: h5-font-size
+        title: Header 5 (H5) Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 1.2
+        format: em
+    -
+        id: h6-font-size
+        title: Header 6 (H6) Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 1
+        format: em
     -
         id: header-styles-lt
         title: Light Theme
