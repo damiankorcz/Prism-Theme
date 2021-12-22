@@ -7060,7 +7060,8 @@
         border-top: 2px solid var(--table-border-color);
     }
 
-    .cm-s-obsidian .HyperMD-codeblock {
+    .cm-s-obsidian .HyperMD-codeblock,
+    .cm-s-obsidian div.HyperMD-codeblock {
         border-left: 2px solid var(--table-border-color);
         border-right: 2px solid var(--table-border-color);
     }
@@ -7143,7 +7144,7 @@
         .theme-light .cm-s-obsidian span.cm-inline-code,
         .theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
             color: var(--color-text-red);
-            background-color: var(--background-secondary);
+            background-color: var(--background-primary);
         }
 
         .theme-light .cm-s-obsidian span.cm-footref,
@@ -11937,7 +11938,9 @@
     }
 
     .markdown-embed,
-    .file-embed {
+    .file-embed,
+    .markdown-source-view .markdown-embed,
+    .markdown-source-view .file-embed {
         border-radius: var(--border-radius-small);
         border: var(--border-size) solid var(--table-border-color);
     }
@@ -11947,8 +11950,29 @@
         color: var(--text-muted);
         top: 8px;
         right: 8px;
-        margin: 3px;
         padding: 4px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-light .markdown-embed-content > div.markdown-preview-view,
+    .theme-light .markdown-source-view .markdown-embed,
+    .theme-light .markdown-source-view .file-embed {
+        background-color: var(--background-primary);
+    }
+
+    .theme-dark .markdown-embed-content > div.markdown-preview-view,
+    .theme-dark .markdown-source-view .markdown-embed,
+    .theme-dark .markdown-source-view .file-embed {
+        background-color: var(--background-secondary-alt);
+    }
+
+    .markdown-embed .markdown-preview-sizer.markdown-preview-section {
+        min-height: unset !important;
+        padding: unset !important;
+        height: fit-content;
     }
 
     .markdown-embed-link:hover,
@@ -11956,12 +11980,36 @@
         color: var(--interactive-accent-hover);
     }
 
-    div:not(.is-collapsed) > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon {
+    .markdown-embed .markdown-preview-section h3[data-heading] {
+        border: unset !important;
+        background: unset !important;
+        color: var(--text-normal);
+        margin: unset;
+    }
+
+    .markdown-embed,
+    .file-embed {
+        padding: unset;
+        margin: 10px 0px;
+    }
+
+    .markdown-embed .markdown-preview-view {
+        padding: 10px;
+    }
+
+    div:not(.is-collapsed) > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon,
+    .cm-gutterElement > div:not(.is-collapsed) .collapse-icon {
         color: var(--interactive-accent-text);
     }
+
+    div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover,
+    .cm-gutterElement > div .collapse-icon:hover {
+        color: var(--interactive-accent-hover);
+    }
+    
     
     .hr.cm-line hr {
-        border-color: var(--table-border-color);
+        border-top: 2px solid var(--table-border-color);
     }
 
 
@@ -11978,7 +12026,8 @@
         }
 
         input[type="checkbox"]:hover,
-        .markdown-preview-view input.task-list-item-checkbox:hover {
+        .markdown-preview-view input.task-list-item-checkbox:hover,
+        .markdown-source-view.mod-cm6 .task-list-item-checkbox:hover {
             border-color: var(--interactive-accent-dark);
         }
 
@@ -12104,6 +12153,14 @@
             border: 2px solid var(--table-border-color);
             background-color: var(--background-primary);
             border-left-width: 5px;
+        }
+
+        .theme-light .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+            border: 2px solid var(--table-border-color);
+            background-color: var(--background-primary);
+            border-left-width: 5px;
+            padding: 10px 20px !important;
+            margin: 16px 30px !important;
         }
 
         .theme-light .markdown-preview-view hr {
