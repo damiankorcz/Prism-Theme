@@ -17777,6 +17777,7 @@ settings:
     -
         id: background-color-lt
         title: Light Theme Background Solid Color
+        description: Make sure you selected 'Solid Color' in Light Theme Background Type for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -17784,7 +17785,7 @@ settings:
     -
         id: background-image-lt
         title: Light Theme Background Image
-        description: Customise the Background Image for the Light Theme. Insert the link to an image between the brackets in the url().
+        description: Customise the Background Image for the Light Theme. Insert the link to an image between the brackets in the url(). Make sure you selected 'Image' in Light Theme Background Type for this to work.
         type: variable-text
         default: url()
     -
@@ -17844,6 +17845,7 @@ settings:
     -
         id: background-color-dt
         title: Dark Theme Background Solid Color
+        description: Make sure you selected 'Solid Color' in Dark Theme Background Type for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -17851,7 +17853,7 @@ settings:
     -
         id: background-image-dt
         title: Dark Theme Background Image
-        description: Customise the Background Image for the Dark Theme. Insert the link to an image between the brackets in the url().
+        description: Customise the Background Image for the Dark Theme. Insert the link to an image between the brackets in the url().Make sure you selected 'Image' in Dark Theme Background Type for this to work.
         type: variable-text
         default: url()
     -   
@@ -18083,13 +18085,13 @@ settings:
     -
         id: pt-custom-vault-banner
         title: Enable Custom Vault Banner
-        description: Enable the Custom Vault Banner in the File Explorer.
+        description: Enables the Custom Vault Banner in the File Explorer.
         type: class-toggle
         default: true
     -
         id: custom-vault-banner-horizontal-align
         title: Custom Vault Banner Alignment
-        description: Horizontally align the Custom Vault Banner content.
+        description: Horizontally aligns the Custom Vault Banner content.
         type: class-select
         allowEmpty: false
         default: pt-custom-vault-banner-justify-content-center
@@ -18199,7 +18201,7 @@ settings:
     -
         id: pt-solid-titlebar-lt
         title: Light Theme Solid Titlebar Background
-        description: Change the entire Light Theme Titlebar background to be a solid color.
+        description: Changes the Light Theme Titlebar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
@@ -18248,7 +18250,7 @@ settings:
     -
         id: pt-solid-titlebar-dt
         title: Dark Theme Solid Titlebar Background
-        description: Change the entire Dark Theme Titlebar background to be a solid color.
+        description: Changes the Dark Theme Titlebar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
@@ -18349,27 +18351,27 @@ settings:
         collapsed: true
     -
         id: pt-solid-status-bar-lt
-        title: Light Theme Status Bar Background
-        description: Change the entire Light Theme Status Bar background to be a solid color.
+        title: Light Theme Solid Status Bar Background
+        description: Changes the Light Theme Status Bar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
-        id: solid-status-bar-preset-lt
-        title: Light Theme Solid Status Bar Preset
-        description: Choose between Default and Custom colors for the Light Theme Solid Status Bar.
-        default: pt-solid-status-bar-default-lt
+        id: status-bar-preset-lt
+        title: Light Theme Status Bar Preset
+        description: Choose between Default and Custom colors for the Light Theme Status Bar.
+        default: pt-status-bar-default-lt
         type: class-select
         options:
             -
                 label: Default
-                value: pt-solid-status-bar-default-lt
+                value: pt-status-bar-default-lt
             - 
                 label: Custom
-                value: pt-solid-status-bar-custom-lt
+                value: pt-status-bar-custom-lt
     -
         id: status-bar-background-color-lt
-        title: Light Theme Solid Status Bar Background Color
-        description: Make sure you selected 'Custom' in Light Theme Solid Status Bar Preset for this to work.
+        title: Light Theme Status Bar Background Color
+        description: Make sure you selected 'Custom' in Light Theme Status Bar Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -18464,7 +18466,7 @@ settings:
         default: false
     -            
         id: pt-scroll-hover
-        title: Scrollbar Width on Hover
+        title: Scrollbar Enlarge Width on Hover
         description: Enlarges the Scrollbar when you Hover over scrollable content.
         type: class-toggle
         default: false
