@@ -4639,6 +4639,28 @@
     .vertical-tab-content > .setting-item.setting-item-heading.style-settings-heading {
         border-bottom: 1px solid var(--style-settings-vertical-lines-color);
     }
+
+    .setting-item.setting-item-heading.style-settings-heading[data-id="obsidian-prism-theme"] {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: unset;
+    }
+
+    .setting-item.setting-item-heading.style-settings-heading[data-id="obsidian-prism-theme"]::before {
+        content: "For additional detailed description with images/GIFs of all Style Settings Options for Prism, visit the Wiki section of the GitHub Repository \A https://github.com/damiankorcz/Prism-Theme/wiki";
+        user-select: text;
+        text-align: center;
+        font-weight: 600;
+        white-space: pre-wrap;
+        pointer-events: none;
+        height: fit-content;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: var(--border-radius);
+        border: var(--border-size) solid var(--color-dark-yellow);
+        background-color: var(--color-yellow);
+    }
     
     .setting-item.setting-item-heading.style-settings-heading:not(.is-collapsed) .style-settings-collapse-indicator {
         color: var(--interactive-accent-text);
