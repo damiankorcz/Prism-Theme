@@ -1696,16 +1696,16 @@
             border-radius: unset;
         }  
         
-        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-default-lt div.status-bar,
-        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-default-dt div.status-bar {
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
             background: var(--tab-label-background-color);
         }
 
-        :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-custom-lt div.status-bar {
+        :not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
             background: var(--status-bar-background-color-lt);
         }
         
-        :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-custom-dt div.status-bar {
+        :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-custom-dt div.status-bar {
             background: var(--status-bar-background-color-dt);
         }
 
@@ -1734,6 +1734,11 @@
             
             :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-accent-dt .status-bar {
                 color: var(--interactive-accent-text);
+            }
+
+            :not(.pt-status-bar-position-top).pt-solid-status-bar-lt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child,
+            :not(.pt-status-bar-position-top).pt-solid-status-bar-dt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
+                margin-right: 10px !important;
             }
 
 
@@ -18401,23 +18406,23 @@ settings:
     -
         id: pt-solid-status-bar-dt
         title: Dark Theme Solid Status Bar Background
-        description: Change the entire Dark Theme Status Bar background to be a solid color.
+        description: Changes the Dark Theme Status Bar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
-        id: solid-status-bar-preset-dt
-        title: Dark Theme Solid Status Bar Preset
-        description: Choose between Default and Custom colors for the Dark Theme Solid Status Bar.
-        default: pt-solid-status-bar-default-dt
+        id: status-bar-preset-dt
+        title: Dark Theme Status Bar Preset
+        description: Choose between Default and Custom colors for the Dark Theme Status Bar.
+        default: pt-status-bar-default-dt
         level: 2
         type: class-select
         options:
             -
                 label: Default
-                value: pt-solid-status-bar-default-dt
+                value: pt-status-bar-default-dt
             - 
                 label: Custom
-                value: pt-solid-status-bar-custom-dt
+                value: pt-status-bar-custom-dt
     -
         id: status-bar-background-color-dt
         title: Dark Theme Status Bar Background Color
