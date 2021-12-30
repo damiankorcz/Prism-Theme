@@ -6989,10 +6989,24 @@
     }
 
     .suggestion-item .suggestion-flair {
+        color: var(--interactive-accent-text);
         display: inline-flex;
-        padding-left: 10px;
+        position: relative;
         left: unset;
         top: unset;
+    }
+
+    .suggestion-item .suggestion-flair:first-child {
+        padding: 0px 5px;
+        margin-right: 8px;
+        font-weight: 600;
+        font-size: .75rem;
+        background-color: var(--background-primary);
+        border-radius: var(--border-radius-small);
+    }
+
+    .suggestion-item:hover .suggestion-flair:first-child {
+        background-color: var(--background-secondary);
     }
 
     .suggestion-item .suggestion-flair svg {
