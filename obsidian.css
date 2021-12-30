@@ -4406,6 +4406,23 @@
         padding: 0px;
     }
 
+    .community-theme.is-selected img[alt="Prism"] {
+        display: none;
+    }
+
+    .community-theme.is-selected > div:nth-child(3)::after {
+        height: fit-content;
+        width: 100%;
+        display: block;
+        content: "'Style Settings' Plugin is required for Prism to function correctly!";
+        padding: 10px;
+        border-radius: var(--border-radius);
+        border: var(--border-size) solid var(--color-dark-red);
+        background-color: var(--color-red);
+        font-weight: 600;
+        text-align: center;
+    }
+
     .community-plugin-search .search-input-clear-button {
         top: 4px;
     }
