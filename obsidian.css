@@ -2076,15 +2076,12 @@
         .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .nav-files-container,
         .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type="tag"] .tag-container,
         .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type="starred"] .item-list,
+        .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .backlink-pane,
         .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .nav-files-container,
         .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type="tag"] .tag-container,
-        .pt-nav-header-right-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type="starred"] .item-list {
-            margin-top: 10px;
-        }
-        
-        .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .backlink-pane,
+        .pt-nav-header-right-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type="starred"] .item-list,
         .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .backlink-pane {
-            margin-top: 10px;
+            margin-top:  calc(var(--window-gap) / 2);
         }
 
         .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content .search-input-container,
@@ -2158,7 +2155,7 @@
 
         .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type="search"] .search-input-container,
         .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type="search"] .search-input-container {
-            padding: 0px 0px 10px 0px;
+            padding-bottom: calc(var(--window-gap) / 2);
         }
         
         .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button
