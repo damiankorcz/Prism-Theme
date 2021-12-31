@@ -367,6 +367,35 @@
             --h4-border-width-dt: 2px;
             --h5-border-width-dt: 2px;
             --h6-border-width-dt: 2px;
+
+            /* Header Underline */
+            --h1-underline-thickness-lt: 4px;
+            --h2-underline-thickness-lt: 4px;
+            --h3-underline-thickness-lt: 4px;
+            --h4-underline-thickness-lt: 4px;
+            --h5-underline-thickness-lt: 4px;
+            --h6-underline-thickness-lt: 4px;
+    
+            --h1-underline-thickness-dt: 4px;
+            --h2-underline-thickness-dt: 4px;
+            --h3-underline-thickness-dt: 4px;
+            --h4-underline-thickness-dt: 4px;
+            --h5-underline-thickness-dt: 4px;
+            --h6-underline-thickness-dt: 4px;  
+
+            --h1-underline-opacity-lt: 100%;
+            --h2-underline-opacity-lt: 100%;
+            --h3-underline-opacity-lt: 100%;
+            --h4-underline-opacity-lt: 100%;
+            --h5-underline-opacity-lt: 100%;
+            --h6-underline-opacity-lt: 100%;
+
+            --h1-underline-opacity-dt: 100%;
+            --h2-underline-opacity-dt: 100%;
+            --h3-underline-opacity-dt: 100%;
+            --h4-underline-opacity-dt: 100%;
+            --h5-underline-opacity-dt: 100%;
+            --h6-underline-opacity-dt: 100%;
     }
 
     
@@ -8967,6 +8996,1408 @@
             }
 
 
+     /*  Headers - Underline
+        ========================================================================== */ 
+            
+        /*  Headers - Underline Style
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-none-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-underline-none-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-underline-none-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-underline-none-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-underline-none-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-underline-none-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-underline-none-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-underline-none-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-underline-none-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-underline-none-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-underline-none-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-underline-none-dt .markdown-preview-view h6,
+            .theme-light.pt-h1-underline-none-lt .cm-header-1,
+            .theme-light.pt-h2-underline-none-lt .cm-header-2,
+            .theme-light.pt-h3-underline-none-lt .cm-header-3,
+            .theme-light.pt-h4-underline-none-lt .cm-header-4,
+            .theme-light.pt-h5-underline-none-lt .cm-header-5,
+            .theme-light.pt-h6-underline-none-lt .cm-header-6,
+            .theme-dark.pt-h1-underline-none-dt .cm-header-1,
+            .theme-dark.pt-h2-underline-none-dt .cm-header-2,
+            .theme-dark.pt-h3-underline-none-dt .cm-header-3,
+            .theme-dark.pt-h4-underline-none-dt .cm-header-4,
+            .theme-dark.pt-h5-underline-none-dt .cm-header-5,
+            .theme-dark.pt-h6-underline-none-dt .cm-header-6 {
+                text-decoration: none;
+            }
+
+            .theme-light.pt-h1-underline-solid-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-underline-solid-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-underline-solid-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-underline-solid-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-underline-solid-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-underline-solid-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-underline-solid-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-underline-solid-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-underline-solid-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-underline-solid-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-underline-solid-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-underline-solid-dt .markdown-preview-view h6,
+            .theme-light.pt-h1-underline-solid-lt .cm-header-1,
+            .theme-light.pt-h2-underline-solid-lt .cm-header-2,
+            .theme-light.pt-h3-underline-solid-lt .cm-header-3,
+            .theme-light.pt-h4-underline-solid-lt .cm-header-4,
+            .theme-light.pt-h5-underline-solid-lt .cm-header-5,
+            .theme-light.pt-h6-underline-solid-lt .cm-header-6,
+            .theme-dark.pt-h1-underline-solid-dt .cm-header-1,
+            .theme-dark.pt-h2-underline-solid-dt .cm-header-2,
+            .theme-dark.pt-h3-underline-solid-dt .cm-header-3,
+            .theme-dark.pt-h4-underline-solid-dt .cm-header-4,
+            .theme-dark.pt-h5-underline-solid-dt .cm-header-5,
+            .theme-dark.pt-h6-underline-solid-dt .cm-header-6 {
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+            }
+
+
+            .theme-light.pt-h1-underline-dotted-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-underline-dotted-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-underline-dotted-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-underline-dotted-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-underline-dotted-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-underline-dotted-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-underline-dotted-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-underline-dotted-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-underline-dotted-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-underline-dotted-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-underline-dotted-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-underline-dotted-dt .markdown-preview-view h6,
+            .theme-light.pt-h1-underline-dotted-lt .cm-header-1,
+            .theme-light.pt-h2-underline-dotted-lt .cm-header-2,
+            .theme-light.pt-h3-underline-dotted-lt .cm-header-3,
+            .theme-light.pt-h4-underline-dotted-lt .cm-header-4,
+            .theme-light.pt-h5-underline-dotted-lt .cm-header-5,
+            .theme-light.pt-h6-underline-dotted-lt .cm-header-6,
+            .theme-dark.pt-h1-underline-dotted-dt .cm-header-1,
+            .theme-dark.pt-h2-underline-dotted-dt .cm-header-2,
+            .theme-dark.pt-h3-underline-dotted-dt .cm-header-3,
+            .theme-dark.pt-h4-underline-dotted-dt .cm-header-4,
+            .theme-dark.pt-h5-underline-dotted-dt .cm-header-5,
+            .theme-dark.pt-h6-underline-dotted-dt .cm-header-6 {
+                text-decoration-line: underline;
+                text-decoration-style: dotted;
+            }
+
+
+            .theme-light.pt-h1-underline-dashed-lt .markdown-preview-view h1,
+            .theme-light.pt-h2-underline-dashed-lt .markdown-preview-view h2,
+            .theme-light.pt-h3-underline-dashed-lt .markdown-preview-view h3,
+            .theme-light.pt-h4-underline-dashed-lt .markdown-preview-view h4,
+            .theme-light.pt-h5-underline-dashed-lt .markdown-preview-view h5,
+            .theme-light.pt-h6-underline-dashed-lt .markdown-preview-view h6,
+            .theme-dark.pt-h1-underline-dashed-dt .markdown-preview-view h1,
+            .theme-dark.pt-h2-underline-dashed-dt .markdown-preview-view h2,
+            .theme-dark.pt-h3-underline-dashed-dt .markdown-preview-view h3,
+            .theme-dark.pt-h4-underline-dashed-dt .markdown-preview-view h4,
+            .theme-dark.pt-h5-underline-dashed-dt .markdown-preview-view h5,
+            .theme-dark.pt-h6-underline-dashed-dt .markdown-preview-view h6,
+            .theme-light.pt-h1-underline-dashed-lt .cm-header-1,
+            .theme-light.pt-h2-underline-dashed-lt .cm-header-2,
+            .theme-light.pt-h3-underline-dashed-lt .cm-header-3,
+            .theme-light.pt-h4-underline-dashed-lt .cm-header-4,
+            .theme-light.pt-h5-underline-dashed-lt .cm-header-5,
+            .theme-light.pt-h6-underline-dashed-lt .cm-header-6,
+            .theme-dark.pt-h1-underline-dashed-dt .cm-header-1,
+            .theme-dark.pt-h2-underline-dashed-dt .cm-header-2,
+            .theme-dark.pt-h3-underline-dashed-dt .cm-header-3,
+            .theme-dark.pt-h4-underline-dashed-dt .cm-header-4,
+            .theme-dark.pt-h5-underline-dashed-dt .cm-header-5,
+            .theme-dark.pt-h6-underline-dashed-dt .cm-header-6 {
+                text-decoration-line: underline;
+                text-decoration-style: dashed;
+            }
+
+
+
+        /*  Headers - Underline Thickness (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light .markdown-preview-view h1,
+            .theme-light .cm-header-1 {
+                text-decoration-thickness: var(--h1-underline-thickness-lt);
+            }
+
+            .theme-light .markdown-preview-view h2,
+            .theme-light .cm-header-2 {
+                text-decoration-thickness: var(--h2-underline-thickness-lt);
+            }
+
+            .theme-light .markdown-preview-view h3,
+            .theme-light .cm-header-3 {
+                text-decoration-thickness: var(--h3-underline-thickness-lt);
+            }
+
+            .theme-light .markdown-preview-view h4,
+            .theme-light .cm-header-4 {
+                text-decoration-thickness: var(--h4-underline-thickness-lt);
+            }
+
+            .theme-light .markdown-preview-view h5,
+            .theme-light .cm-header-5 {
+                text-decoration-thickness: var(--h5-underline-thickness-lt);
+            }
+
+            .theme-light .markdown-preview-view h6,
+            .theme-light .cm-header-6 {
+                text-decoration-thickness: var(--h6-underline-thickness-lt);
+            }
+
+
+        /*  Headers - Underline Thickness (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark .markdown-preview-view h1,
+            .theme-dark .cm-header-1 {
+                text-decoration-thickness: var(--h1-underline-thickness-dt);
+            }
+
+            .theme-dark .markdown-preview-view h2,
+            .theme-dark .cm-header-2 {
+                text-decoration-thickness: var(--h2-underline-thickness-dt);
+            }
+
+            .theme-dark .markdown-preview-view h3,
+            .theme-dark .cm-header-3 {
+                text-decoration-thickness: var(--h3-underline-thickness-dt);
+            }
+
+            .theme-dark .markdown-preview-view h4,
+            .theme-dark .cm-header-4 {
+                text-decoration-thickness: var(--h4-underline-thickness-dt);
+            }
+
+            .theme-dark .markdown-preview-view h5,
+            .theme-dark .cm-header-5 {
+                text-decoration-thickness: var(--h5-underline-thickness-dt);
+            }
+
+            .theme-dark .markdown-preview-view h6,
+            .theme-dark .cm-header-6 {
+                text-decoration-thickness: var(--h6-underline-thickness-dt);
+            }
+
+        /*  Headers - Underline Color Dark (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-dark-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-dark-lt .cm-header-1 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-dark-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-dark-lt .cm-header-2 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h2-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h3-underline-dark-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-dark-lt .cm-header-3 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h3-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h4-underline-dark-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-dark-lt .cm-header-4 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h4-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h5-underline-dark-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-dark-lt .cm-header-5 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-dark-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-dark-lt .cm-header-6 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h6-underline-opacity-lt));
+            }
+
+            
+        /*  Headers - Underline Color Dark (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-dark-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-dark-dt .cm-header-1 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-dark-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-dark-dt .cm-header-2 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h2-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-underline-dark-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-dark-dt .cm-header-3 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h3-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-underline-dark-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-dark-dt .cm-header-4 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h4-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-underline-dark-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-dark-dt .cm-header-5 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-dark-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-dark-dt .cm-header-6 {
+                text-decoration-color: hsla(0, 0%, 20%, var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Light (Light Theme)
+            ========================================================================== */ 
+            
+            .theme-light.pt-h1-underline-light-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-light-lt .cm-header-1 {
+                text-decoration-color: hsla(0, 0%, 100%, var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-light-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-light-lt .cm-header-2 {
+                text-decoration-color: hsla(0, 0%, 100%, var(--h2-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h3-underline-light-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-light-lt .cm-header-3 {
+                text-decoration-color: hsla(0, 0%, 100%, var(--h3-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h4-underline-light-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-light-lt .cm-header-4 {
+                text-decoration-color: hsla(0, 0%, 100%, var(--h4-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h5-underline-light-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-light-lt .cm-header-5 {
+                text-decoration-color: hsla(0, 0%, 100%, var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-light-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-light-lt .cm-header-6 {
+                text-decoration-color: hsla(0, 0%, 100%, var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Light (Dark Theme)    
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-light-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-light-dt .cm-header-1 {
+                text-decoration-color: hsla(0, 0%, 85%, var(--h1-underline-opacity-dt));
+            }    
+
+            .theme-dark.pt-h2-underline-light-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-light-dt .cm-header-2 {
+                text-decoration-color: hsla(0, 0%, 85%, var(--h2-underline-opacity-dt));
+            }    
+
+            .theme-dark.pt-h3-underline-light-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-light-dt .cm-header-3 {
+                text-decoration-color: hsla(0, 0%, 85%, var(--h3-underline-opacity-dt));
+            }    
+
+            .theme-dark.pt-h4-underline-light-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-light-dt .cm-header-4 {
+                text-decoration-color: hsla(0, 0%, 85%, var(--h4-underline-opacity-dt));
+            }    
+
+            .theme-dark.pt-h5-underline-light-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-light-dt .cm-header-5 {
+                text-decoration-color: hsla(0, 0%, 85%, var(--h5-underline-opacity-dt));
+            }    
+
+            .theme-dark.pt-h6-underline-light-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-light-dt .cm-header-6 {
+                text-decoration-color: hsla(0, 0%, 85%, var(--h6-underline-opacity-dt));
+            }    
+
+    
+        /*  Headers - Underline Color Custom (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-custom-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-custom-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--h1-underline-color-custom-lt), var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-custom-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-custom-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--h2-underline-color-custom-lt), var(--h2-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h3-underline-custom-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-custom-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--h3-underline-color-custom-lt), var(--h3-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h4-underline-custom-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-custom-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--h4-underline-color-custom-lt), var(--h4-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h5-underline-custom-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-custom-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--h5-underline-color-custom-lt), var(--h5-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-underline-custom-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-custom-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--h6-underline-color-custom-lt), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Custom (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-custom-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-custom-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--h1-underline-color-custom-dt), var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-custom-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-custom-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--h2-underline-color-custom-dt), var(--h2-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-underline-custom-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-custom-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--h3-underline-color-custom-dt), var(--h3-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-underline-custom-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-custom-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--h4-underline-color-custom-dt), var(--h4-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-underline-custom-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-custom-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--h5-underline-color-custom-dt), var(--h5-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-underline-custom-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-custom-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--h6-underline-color-custom-dt), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Accent (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-custom.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-accent-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-custom.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-custom.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-accent-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-custom.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-custom.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-accent-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-custom.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-custom.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-accent-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-custom.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-custom.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-accent-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-custom.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-custom.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-accent-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-custom.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Red (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-red-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-red.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-red-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-red.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-red-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-red.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-red-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-red.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h3-underline-red-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-red.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-red-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-red.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h4-underline-red-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-red.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-red-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-red.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h5-underline-red-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-red.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-red-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-red.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-red-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-red.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-red-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-red.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Orange (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-orange-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-orange.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-orange-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-orange.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-orange-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-orange.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-orange-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-orange.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-orange-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-orange.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-orange-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-orange.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-orange-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-orange.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-orange-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-orange.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-orange-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-orange.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-orange-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-orange.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-orange-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-orange.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-orange-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-orange.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Yellow (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-yellow-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-yellow.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-yellow-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-yellow.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-yellow-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-yellow.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-yellow-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-yellow.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-yellow-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-yellow.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-yellow-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-yellow.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-yellow-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-yellow.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-yellow-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-yellow.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-yellow-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-yellow.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-yellow-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-yellow.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-underline-yellow-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-yellow.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-yellow-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-yellow.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Green (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-green-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-green.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-green-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-green.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-green-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-green.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-green-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-green.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-green-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-green.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-green-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-green.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-green-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-green.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-green-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-green.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-green-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-green.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-green-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-green.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-green-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-green.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-green-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-green.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Mint (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-mint-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-mint.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-mint-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-mint.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-mint-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-mint.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-mint-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-mint.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-mint-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-mint.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-mint-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-mint.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-mint-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-mint.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-mint-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-mint.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-mint-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-mint.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-mint-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-mint.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-underline-mint-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-mint.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-mint-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-mint.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Aqua (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-aqua-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-aqua.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-aqua-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-aqua.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-aqua-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-aqua.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-aqua-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-aqua.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-aqua-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-aqua.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-aqua-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-aqua.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-aqua-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-aqua.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-aqua-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-aqua.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-aqua-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-aqua.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-aqua-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-aqua.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-aqua-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-aqua.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-aqua-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-aqua.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Blue (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-blue-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-blue.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-blue-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-blue.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-blue-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-blue.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-blue-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-blue.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-blue-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-blue.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-blue-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-blue.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-blue-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-blue.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-blue-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-blue.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h5-underline-blue-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-blue.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-blue-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-blue.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-blue-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-blue.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-blue-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-blue.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Purple (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-purple-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-purple.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-purple-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-purple.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-purple-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-purple.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-purple-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-purple.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-purple-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-purple.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-purple-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-purple.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-purple-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-purple.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-purple-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-purple.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-purple-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-purple.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-purple-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-purple.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-purple-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-purple.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-purple-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-purple.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Pink (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-pink-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-pink.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-pink-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-pink.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h2-underline-pink-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-pink.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-pink-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-pink.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-pink-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-pink.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-pink-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-pink.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-pink-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-pink.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-pink-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-pink.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-pink-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-pink.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-pink-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-pink.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h6-underline-pink-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-pink.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-pink-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-pink.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+
+        /*  Headers - Underline Color Grey (Light Theme)
+            ========================================================================== */ 
+
+            .theme-light.pt-h1-underline-grey-lt .markdown-preview-view h1,
+            .theme-light.pt-light-accent-color-grey.pt-h1-underline-accent-lt .markdown-preview-view h1,
+            .theme-light.pt-h1-underline-grey-lt .cm-header-1,
+            .theme-light.pt-light-accent-color-grey.pt-h1-underline-accent-lt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h1-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h2-underline-grey-lt .markdown-preview-view h2,
+            .theme-light.pt-light-accent-color-grey.pt-h2-underline-accent-lt .markdown-preview-view h2,
+            .theme-light.pt-h2-underline-grey-lt .cm-header-2,
+            .theme-light.pt-light-accent-color-grey.pt-h2-underline-accent-lt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h2-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h3-underline-grey-lt .markdown-preview-view h3,
+            .theme-light.pt-light-accent-color-grey.pt-h3-underline-accent-lt .markdown-preview-view h3,
+            .theme-light.pt-h3-underline-grey-lt .cm-header-3,
+            .theme-light.pt-light-accent-color-grey.pt-h3-underline-accent-lt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h3-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h4-underline-grey-lt .markdown-preview-view h4,
+            .theme-light.pt-light-accent-color-grey.pt-h4-underline-accent-lt .markdown-preview-view h4,
+            .theme-light.pt-h4-underline-grey-lt .cm-header-4,
+            .theme-light.pt-light-accent-color-grey.pt-h4-underline-accent-lt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h4-underline-opacity-lt));
+            }
+            
+            .theme-light.pt-h5-underline-grey-lt .markdown-preview-view h5,
+            .theme-light.pt-light-accent-color-grey.pt-h5-underline-accent-lt .markdown-preview-view h5,
+            .theme-light.pt-h5-underline-grey-lt .cm-header-5,
+            .theme-light.pt-light-accent-color-grey.pt-h5-underline-accent-lt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h5-underline-opacity-lt));
+            }
+
+            .theme-light.pt-h6-underline-grey-lt .markdown-preview-view h6,
+            .theme-light.pt-light-accent-color-grey.pt-h6-underline-accent-lt .markdown-preview-view h6,
+            .theme-light.pt-h6-underline-grey-lt .cm-header-6,
+            .theme-light.pt-light-accent-color-grey.pt-h6-underline-accent-lt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text), var(--h6-underline-opacity-lt));
+            }
+
+        /*  Headers - Underline Color Accent (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-custom.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-accent-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-custom.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-custom.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-accent-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-custom.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-custom.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-accent-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-custom.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-custom.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-accent-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-custom.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-custom.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-accent-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-custom.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h5-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-custom.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-accent-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-custom.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Red (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-red-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-red.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-red-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-red.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), calc(var(--color-red-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-underline-red-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-red.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-red-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-red.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), calc(var(--color-red-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-red-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-red.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-red-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-red.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), calc(var(--color-red-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-red-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-red.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-red-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-red.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), calc(var(--color-red-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-red-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-red.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-red-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-red.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), calc(var(--color-red-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-red-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-red.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-red-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-red.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), calc(var(--color-red-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Orange (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-orange-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-orange.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-orange-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-orange.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), calc(var(--color-orange-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-underline-orange-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-orange.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-orange-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-orange.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), calc(var(--color-orange-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-orange-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-orange.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-orange-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-orange.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), calc(var(--color-orange-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-orange-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-orange.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-orange-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-orange.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), calc(var(--color-orange-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-orange-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-orange.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-orange-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-orange.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), calc(var(--color-orange-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-orange-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-orange.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-orange-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-orange.pt-h6-underline-accent-dt .cm-header-6  {
+                text-decoration-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), calc(var(--color-orange-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Yellow (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-yellow-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-yellow-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), calc(var(--color-yellow-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-underline-yellow-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-yellow-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), calc(var(--color-yellow-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-yellow-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-yellow-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), calc(var(--color-yellow-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-yellow-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-yellow-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), calc(var(--color-yellow-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-yellow-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-yellow-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), calc(var(--color-yellow-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-yellow-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-yellow-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-yellow.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), calc(var(--color-yellow-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Green (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-green-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-green.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-green-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-green.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), calc(var(--color-green-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-underline-green-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-green.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-green-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-green.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), calc(var(--color-green-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-green-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-green.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-green-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-green.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), calc(var(--color-green-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-green-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-green.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-green-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-green.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), calc(var(--color-green-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-green-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-green.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-green-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-green.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), calc(var(--color-green-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-green-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-green.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-green-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-green.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), calc(var(--color-green-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Mint (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-mint-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-mint.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-mint-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-mint.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), calc(var(--color-mint-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-underline-mint-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-mint.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-mint-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-mint.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), calc(var(--color-mint-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-mint-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-mint.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-mint-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-mint.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), calc(var(--color-mint-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-mint-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-mint.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-mint-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-mint.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), calc(var(--color-mint-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-mint-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-mint.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-mint-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-mint.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), calc(var(--color-mint-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-mint-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-mint.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-mint-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-mint.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), calc(var(--color-mint-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Aqua (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-aqua-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-aqua-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), calc(var(--color-aqua-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-aqua-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-aqua-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), calc(var(--color-aqua-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-underline-aqua-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-aqua-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), calc(var(--color-aqua-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-underline-aqua-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-aqua-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), calc(var(--color-aqua-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-underline-aqua-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-aqua-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), calc(var(--color-aqua-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-aqua-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-aqua-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-aqua.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), calc(var(--color-aqua-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Blue (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-blue-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-blue.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-blue-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-blue.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), calc(var(--color-blue-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h2-underline-blue-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-blue.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-blue-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-blue.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), calc(var(--color-blue-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h3-underline-blue-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-blue.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-blue-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-blue.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), calc(var(--color-blue-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h4-underline-blue-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-blue.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-blue-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-blue.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), calc(var(--color-blue-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h5-underline-blue-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-blue.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-blue-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-blue.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), calc(var(--color-blue-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+            
+            .theme-dark.pt-h6-underline-blue-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-blue.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-blue-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-blue.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), calc(var(--color-blue-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+            
+        /*  Headers - Underline Color Purple (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-purple-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-purple.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-purple-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-purple.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), calc(var(--color-purple-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-purple-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-purple.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-purple-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-purple.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), calc(var(--color-purple-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-underline-purple-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-purple.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-purple-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-purple.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), calc(var(--color-purple-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-underline-purple-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-purple.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-purple-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-purple.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), calc(var(--color-purple-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-underline-purple-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-purple.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-purple-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-purple.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), calc(var(--color-purple-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-purple-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-purple.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-purple-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-purple.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), calc(var(--color-purple-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Pink (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-pink-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-pink.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-pink-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-pink.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), calc(var(--color-pink-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-pink-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-pink.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-pink-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-pink.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), calc(var(--color-pink-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-underline-pink-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-pink.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-pink-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-pink.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), calc(var(--color-pink-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-underline-pink-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-pink.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-pink-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-pink.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), calc(var(--color-pink-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-underline-pink-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-pink.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-pink-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-pink.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), calc(var(--color-pink-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-pink-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-pink.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-pink-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-pink.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), calc(var(--color-pink-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
+
+        /*  Headers - Underline Color Grey (Dark Theme)
+            ========================================================================== */ 
+
+            .theme-dark.pt-h1-underline-grey-dt .markdown-preview-view h1,
+            .theme-dark.pt-dark-accent-color-grey.pt-h1-underline-accent-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-underline-grey-dt .cm-header-1,
+            .theme-dark.pt-dark-accent-color-grey.pt-h1-underline-accent-dt .cm-header-1 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), calc(var(--color-grey-l-darkened-text) / 1.5), var(--h1-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-underline-grey-dt .markdown-preview-view h2,
+            .theme-dark.pt-dark-accent-color-grey.pt-h2-underline-accent-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-underline-grey-dt .cm-header-2,
+            .theme-dark.pt-dark-accent-color-grey.pt-h2-underline-accent-dt .cm-header-2 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), calc(var(--color-grey-l-darkened-text) / 1.5), var(--h2-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-underline-grey-dt .markdown-preview-view h3,
+            .theme-dark.pt-dark-accent-color-grey.pt-h3-underline-accent-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-underline-grey-dt .cm-header-3,
+            .theme-dark.pt-dark-accent-color-grey.pt-h3-underline-accent-dt .cm-header-3 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), calc(var(--color-grey-l-darkened-text) / 1.5), var(--h3-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-underline-grey-dt .markdown-preview-view h4,
+            .theme-dark.pt-dark-accent-color-grey.pt-h4-underline-accent-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-underline-grey-dt .cm-header-4,
+            .theme-dark.pt-dark-accent-color-grey.pt-h4-underline-accent-dt .cm-header-4 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), calc(var(--color-grey-l-darkened-text) / 1.5), var(--h4-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-underline-grey-dt .markdown-preview-view h5,
+            .theme-dark.pt-dark-accent-color-grey.pt-h5-underline-accent-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-underline-grey-dt .cm-header-5,
+            .theme-dark.pt-dark-accent-color-grey.pt-h5-underline-accent-dt .cm-header-5 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), calc(var(--color-grey-l-darkened-text) / 1.5), var(--h5-underline-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-underline-grey-dt .markdown-preview-view h6,
+            .theme-dark.pt-dark-accent-color-grey.pt-h6-underline-accent-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-underline-grey-dt .cm-header-6,
+            .theme-dark.pt-dark-accent-color-grey.pt-h6-underline-accent-dt .cm-header-6 {
+                text-decoration-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), calc(var(--color-grey-l-darkened-text) / 1.5), var(--h6-underline-opacity-dt));
+            }
+
     /*  Headers - Background
         ========================================================================== */ 
 
@@ -12922,6 +14353,106 @@ settings:
                 label: Right
                 value: pt-h1-text-align-right-lt
     -
+        id: header-h1-underline-lt
+        title: Light Theme Header 1 (H1) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h1-underline-style-lt
+        title: Light Theme Header 1 (H1) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h1-underline-none-lt
+        options:
+            -
+                label: None
+                value: pt-h1-underline-none-lt
+            -
+                label: Solid
+                value: pt-h1-underline-solid-lt
+            -
+                label: Dotted
+                value: pt-h1-underline-dotted-lt
+            -
+                label: Dashed
+                value: pt-h1-underline-dashed-lt
+    -
+        id: header-h1-underline-color-preset-lt
+        title: Light Theme Header 1 (H1) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h1-underline-dark-lt
+        options:
+            -
+                label: Light
+                value: pt-h1-underline-light-lt
+            -
+                label: Dark
+                value: pt-h1-underline-dark-lt
+            -
+                label: Custom
+                value: pt-h1-underline-custom-lt
+            -
+                label: UI Accent Color
+                value: pt-h1-underline-accent-lt
+            -
+                label: Red
+                value: pt-h1-underline-red-lt
+            -
+                label: Orange
+                value: pt-h1-underline-orange-lt
+            -
+                label: Yellow
+                value: pt-h1-underline-yellow-lt
+            -
+                label: Green
+                value: pt-h1-underline-green-lt
+            -
+                label: Mint
+                value: pt-h1-underline-mint-lt
+            -
+                label: Aqua
+                value: pt-h1-underline-aqua-lt
+            -
+                label: Blue
+                value: pt-h1-underline-blue-lt
+            -
+                label: Purple
+                value: pt-h1-underline-purple-lt
+            -
+                label: Pink
+                value: pt-h1-underline-pink-lt
+            -
+                label: Grey
+                value: pt-h1-underline-grey-lt
+    -
+        id: h1-underline-color-custom-lt
+        title: Light Theme Header 1 (H1) Underline Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Header 1 (H1) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h1-underline-opacity-lt
+        title: Light Theme Header 1 (H1) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h1-underline-thickness-lt
+        title: Light Theme Header 1 (H1) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
+    -
         id: header-h1-background-lt
         title: Light Theme Header 1 (H1) Background
         type: heading
@@ -13239,6 +14770,106 @@ settings:
             -
                 label: Right
                 value: pt-h2-text-align-right-lt
+    -
+        id: header-h2-underline-lt
+        title: Light Theme Header 2 (H2) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h2-underline-style-lt
+        title: Light Theme Header 2 (H2) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h2-underline-none-lt
+        options:
+            -
+                label: None
+                value: pt-h2-underline-none-lt
+            -
+                label: Solid
+                value: pt-h2-underline-solid-lt
+            -
+                label: Dotted
+                value: pt-h2-underline-dotted-lt
+            -
+                label: Dashed
+                value: pt-h2-underline-dashed-lt
+    -
+        id: header-h2-underline-color-preset-lt
+        title: Light Theme Header 2 (H2) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h2-underline-dark-lt
+        options:
+            -
+                label: Light
+                value: pt-h2-underline-light-lt
+            -
+                label: Dark
+                value: pt-h2-underline-dark-lt
+            -
+                label: Custom
+                value: pt-h2-underline-custom-lt
+            -
+                label: UI Accent Color
+                value: pt-h2-underline-accent-lt
+            -
+                label: Red
+                value: pt-h2-underline-red-lt
+            -
+                label: Orange
+                value: pt-h2-underline-orange-lt
+            -
+                label: Yellow
+                value: pt-h2-underline-yellow-lt
+            -
+                label: Green
+                value: pt-h2-underline-green-lt
+            -
+                label: Mint
+                value: pt-h2-underline-mint-lt
+            -
+                label: Aqua
+                value: pt-h2-underline-aqua-lt
+            -
+                label: Blue
+                value: pt-h2-underline-blue-lt
+            -
+                label: Purple
+                value: pt-h2-underline-purple-lt
+            -
+                label: Pink
+                value: pt-h2-underline-pink-lt
+            -
+                label: Grey
+                value: pt-h2-underline-grey-lt
+    -
+        id: h2-underline-color-custom-lt
+        title: Light Theme Header 2 (H2) Underline Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Header 2 (H2) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h2-underline-opacity-lt
+        title: Light Theme Header 2 (H2) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h2-underline-thickness-lt
+        title: Light Theme Header 2 (H2) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
     -
         id: header-h2-background-lt
         title: Light Theme Header 2 (H2) Background
@@ -13558,6 +15189,106 @@ settings:
                 label: Right
                 value: pt-h3-text-align-right-lt
     -
+        id: header-h3-underline-lt
+        title: Light Theme Header 3 (H3) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h3-underline-style-lt
+        title: Light Theme Header 3 (H3) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h3-underline-none-lt
+        options:
+            -
+                label: None
+                value: pt-h3-underline-none-lt
+            -
+                label: Solid
+                value: pt-h3-underline-solid-lt
+            -
+                label: Dotted
+                value: pt-h3-underline-dotted-lt
+            -
+                label: Dashed
+                value: pt-h3-underline-dashed-lt
+    -
+        id: header-h3-underline-color-preset-lt
+        title: Light Theme Header 3 (H3) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h3-underline-dark-lt
+        options:
+            -
+                label: Light
+                value: pt-h3-underline-light-lt
+            -
+                label: Dark
+                value: pt-h3-underline-dark-lt
+            -
+                label: Custom
+                value: pt-h3-underline-custom-lt
+            -
+                label: UI Accent Color
+                value: pt-h3-underline-accent-lt
+            -
+                label: Red
+                value: pt-h3-underline-red-lt
+            -
+                label: Orange
+                value: pt-h3-underline-orange-lt
+            -
+                label: Yellow
+                value: pt-h3-underline-yellow-lt
+            -
+                label: Green
+                value: pt-h3-underline-green-lt
+            -
+                label: Mint
+                value: pt-h3-underline-mint-lt
+            -
+                label: Aqua
+                value: pt-h3-underline-aqua-lt
+            -
+                label: Blue
+                value: pt-h3-underline-blue-lt
+            -
+                label: Purple
+                value: pt-h3-underline-purple-lt
+            -
+                label: Pink
+                value: pt-h3-underline-pink-lt
+            -
+                label: Grey
+                value: pt-h3-underline-grey-lt
+    -
+        id: h3-underline-color-custom-lt
+        title: Light Theme Header 3 (H3) Underline Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Header 3 (H3) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h3-underline-opacity-lt
+        title: Light Theme Header 3 (H3) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h3-underline-thickness-lt
+        title: Light Theme Header 3 (H3) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
+    -
         id: header-h3-background-lt
         title: Light Theme Header 3 (H3) Background
         type: heading
@@ -13875,6 +15606,106 @@ settings:
             -
                 label: Right
                 value: pt-h4-text-align-right-lt
+    -
+        id: header-h4-underline-lt
+        title: Light Theme Header 4 (H4) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h4-underline-style-lt
+        title: Light Theme Header 4 (H4) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h4-underline-none-lt
+        options:
+            -
+                label: None
+                value: pt-h4-underline-none-lt
+            -
+                label: Solid
+                value: pt-h4-underline-solid-lt
+            -
+                label: Dotted
+                value: pt-h4-underline-dotted-lt
+            -
+                label: Dashed
+                value: pt-h4-underline-dashed-lt
+    -
+        id: header-h4-underline-color-preset-lt
+        title: Light Theme Header 4 (H4) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h4-underline-dark-lt
+        options:
+            -
+                label: Light
+                value: pt-h4-underline-light-lt
+            -
+                label: Dark
+                value: pt-h4-underline-dark-lt
+            -
+                label: Custom
+                value: pt-h4-underline-custom-lt
+            -
+                label: UI Accent Color
+                value: pt-h4-underline-accent-lt
+            -
+                label: Red
+                value: pt-h4-underline-red-lt
+            -
+                label: Orange
+                value: pt-h4-underline-orange-lt
+            -
+                label: Yellow
+                value: pt-h4-underline-yellow-lt
+            -
+                label: Green
+                value: pt-h4-underline-green-lt
+            -
+                label: Mint
+                value: pt-h4-underline-mint-lt
+            -
+                label: Aqua
+                value: pt-h4-underline-aqua-lt
+            -
+                label: Blue
+                value: pt-h4-underline-blue-lt
+            -
+                label: Purple
+                value: pt-h4-underline-purple-lt
+            -
+                label: Pink
+                value: pt-h4-underline-pink-lt
+            -
+                label: Grey
+                value: pt-h4-underline-grey-lt
+    -
+        id: h4-underline-color-custom-lt
+        title: Light Theme Header 4 (H4) Underline Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Header 4 (H4) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h4-underline-opacity-lt
+        title: Light Theme Header 4 (H4) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h4-underline-thickness-lt
+        title: Light Theme Header 4 (H4) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
     -
         id: header-h4-background-lt
         title: Light Theme Header 4 (H4) Background
@@ -14194,6 +16025,106 @@ settings:
                 label: Right
                 value: pt-h5-text-align-right-lt
     -
+        id: header-h5-underline-lt
+        title: Light Theme Header 5 (H5) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h5-underline-style-lt
+        title: Light Theme Header 5 (H5) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h5-underline-none-lt
+        options:
+            -
+                label: None
+                value: pt-h5-underline-none-lt
+            -
+                label: Solid
+                value: pt-h5-underline-solid-lt
+            -
+                label: Dotted
+                value: pt-h5-underline-dotted-lt
+            -
+                label: Dashed
+                value: pt-h5-underline-dashed-lt
+    -
+        id: header-h5-underline-color-preset-lt
+        title: Light Theme Header 5 (H5) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h5-underline-dark-lt
+        options:
+            -
+                label: Light
+                value: pt-h5-underline-light-lt
+            -
+                label: Dark
+                value: pt-h5-underline-dark-lt
+            -
+                label: Custom
+                value: pt-h5-underline-custom-lt
+            -
+                label: UI Accent Color
+                value: pt-h5-underline-accent-lt
+            -
+                label: Red
+                value: pt-h5-underline-red-lt
+            -
+                label: Orange
+                value: pt-h5-underline-orange-lt
+            -
+                label: Yellow
+                value: pt-h5-underline-yellow-lt
+            -
+                label: Green
+                value: pt-h5-underline-green-lt
+            -
+                label: Mint
+                value: pt-h5-underline-mint-lt
+            -
+                label: Aqua
+                value: pt-h5-underline-aqua-lt
+            -
+                label: Blue
+                value: pt-h5-underline-blue-lt
+            -
+                label: Purple
+                value: pt-h5-underline-purple-lt
+            -
+                label: Pink
+                value: pt-h5-underline-pink-lt
+            -
+                label: Grey
+                value: pt-h5-underline-grey-lt
+    -
+        id: h5-underline-color-custom-lt
+        title: Light Theme Header 5 (H5) Underline Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Header 5 (H5) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h5-underline-opacity-lt
+        title: Light Theme Header 5 (H5) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h5-underline-thickness-lt
+        title: Light Theme Header 5 (H5) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
+    -
         id: header-h5-background-lt
         title: Light Theme Header 5 (H5) Background
         type: heading
@@ -14511,6 +16442,106 @@ settings:
             -
                 label: Right
                 value: pt-h6-text-align-right-lt
+    -
+        id: header-h6-underline-lt
+        title: Light Theme Header 6 (H6) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h6-underline-style-lt
+        title: Light Theme Header 6 (H6) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h6-underline-none-lt
+        options:
+            -
+                label: None
+                value: pt-h6-underline-none-lt
+            -
+                label: Solid
+                value: pt-h6-underline-solid-lt
+            -
+                label: Dotted
+                value: pt-h6-underline-dotted-lt
+            -
+                label: Dashed
+                value: pt-h6-underline-dashed-lt
+    -
+        id: header-h6-underline-color-preset-lt
+        title: Light Theme Header 6 (H6) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h6-underline-dark-lt
+        options:
+            -
+                label: Light
+                value: pt-h6-underline-light-lt
+            -
+                label: Dark
+                value: pt-h6-underline-dark-lt
+            -
+                label: Custom
+                value: pt-h6-underline-custom-lt
+            -
+                label: UI Accent Color
+                value: pt-h6-underline-accent-lt
+            -
+                label: Red
+                value: pt-h6-underline-red-lt
+            -
+                label: Orange
+                value: pt-h6-underline-orange-lt
+            -
+                label: Yellow
+                value: pt-h6-underline-yellow-lt
+            -
+                label: Green
+                value: pt-h6-underline-green-lt
+            -
+                label: Mint
+                value: pt-h6-underline-mint-lt
+            -
+                label: Aqua
+                value: pt-h6-underline-aqua-lt
+            -
+                label: Blue
+                value: pt-h6-underline-blue-lt
+            -
+                label: Purple
+                value: pt-h6-underline-purple-lt
+            -
+                label: Pink
+                value: pt-h6-underline-pink-lt
+            -
+                label: Grey
+                value: pt-h6-underline-grey-lt
+    -
+        id: h6-underline-color-custom-lt
+        title: Light Theme Header 6 (H6) Underline Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Header 6 (H6) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h6-underline-opacity-lt
+        title: Light Theme Header 6 (H6) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h6-underline-thickness-lt
+        title: Light Theme Header 6 (H6) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
     -
         id: header-h6-background-lt
         title: Light Theme Header 6 (H6) Background
@@ -14836,6 +16867,106 @@ settings:
                 label: Right
                 value: pt-h1-text-align-right-dt
     -
+        id: header-h1-underline-dt
+        title: Dark Theme Header 1 (H1) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h1-underline-style-dt
+        title: Dark Theme Header 1 (H1) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h1-underline-none-dt
+        options:
+            -
+                label: None
+                value: pt-h1-underline-none-dt
+            -
+                label: Solid
+                value: pt-h1-underline-solid-dt
+            -
+                label: Dotted
+                value: pt-h1-underline-dotted-dt
+            -
+                label: Dashed
+                value: pt-h1-underline-dashed-dt
+    -
+        id: header-h1-underline-color-preset-dt
+        title: Dark Theme Header 1 (H1) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h1-underline-light-dt
+        options:
+            -
+                label: Light
+                value: pt-h1-underline-light-dt
+            -
+                label: Dark
+                value: pt-h1-underline-dark-dt
+            -
+                label: Custom
+                value: pt-h1-underline-custom-dt
+            -
+                label: UI Accent Color
+                value: pt-h1-underline-accent-dt
+            -
+                label: Red
+                value: pt-h1-underline-red-dt
+            -
+                label: Orange
+                value: pt-h1-underline-orange-dt
+            -
+                label: Yellow
+                value: pt-h1-underline-yellow-dt
+            -
+                label: Green
+                value: pt-h1-underline-green-dt
+            -
+                label: Mint
+                value: pt-h1-underline-mint-dt
+            -
+                label: Aqua
+                value: pt-h1-underline-aqua-dt
+            -
+                label: Blue
+                value: pt-h1-underline-blue-dt
+            -
+                label: Purple
+                value: pt-h1-underline-purple-dt
+            -
+                label: Pink
+                value: pt-h1-underline-pink-dt
+            -
+                label: Grey
+                value: pt-h1-underline-grey-dt
+    -
+        id: h1-underline-color-custom-dt
+        title: Dark Theme Header 1 (H1) Underline Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Header 1 (H1) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h1-underline-opacity-dt
+        title: Dark Theme Header 1 (H1) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h1-underline-thickness-dt
+        title: Dark Theme Header 1 (H1) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
+    -
         id: header-h1-background-dt
         title: Dark Theme Header 1 (H1) Background
         type: heading
@@ -15153,6 +17284,106 @@ settings:
             -
                 label: Right
                 value: pt-h2-text-align-right-dt
+    -
+        id: header-h2-underline-dt
+        title: Dark Theme Header 2 (H2) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h2-underline-style-dt
+        title: Dark Theme Header 2 (H2) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h2-underline-none-dt
+        options:
+            -
+                label: None
+                value: pt-h2-underline-none-dt
+            -
+                label: Solid
+                value: pt-h2-underline-solid-dt
+            -
+                label: Dotted
+                value: pt-h2-underline-dotted-dt
+            -
+                label: Dashed
+                value: pt-h2-underline-dashed-dt
+    -
+        id: header-h2-underline-color-preset-dt
+        title: Dark Theme Header 2 (H2) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h2-underline-light-dt
+        options:
+            -
+                label: Light
+                value: pt-h2-underline-light-dt
+            -
+                label: Dark
+                value: pt-h2-underline-dark-dt
+            -
+                label: Custom
+                value: pt-h2-underline-custom-dt
+            -
+                label: UI Accent Color
+                value: pt-h2-underline-accent-dt
+            -
+                label: Red
+                value: pt-h2-underline-red-dt
+            -
+                label: Orange
+                value: pt-h2-underline-orange-dt
+            -
+                label: Yellow
+                value: pt-h2-underline-yellow-dt
+            -
+                label: Green
+                value: pt-h2-underline-green-dt
+            -
+                label: Mint
+                value: pt-h2-underline-mint-dt
+            -
+                label: Aqua
+                value: pt-h2-underline-aqua-dt
+            -
+                label: Blue
+                value: pt-h2-underline-blue-dt
+            -
+                label: Purple
+                value: pt-h2-underline-purple-dt
+            -
+                label: Pink
+                value: pt-h2-underline-pink-dt
+            -
+                label: Grey
+                value: pt-h2-underline-grey-dt
+    -
+        id: h2-underline-color-custom-dt
+        title: Dark Theme Header 2 (H2) Underline Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Header 2 (H2) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h2-underline-opacity-dt
+        title: Dark Theme Header 2 (H2) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h2-underline-thickness-dt
+        title: Dark Theme Header 2 (H2) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
     -
         id: header-h2-background-dt
         title: Dark Theme Header 2 (H2) Background
@@ -15472,6 +17703,106 @@ settings:
                 label: Right
                 value: pt-h3-text-align-right-dt
     -
+        id: header-h3-underline-dt
+        title: Dark Theme Header 3 (H3) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h3-underline-style-dt
+        title: Dark Theme Header 3 (H3) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h3-underline-none-dt
+        options:
+            -
+                label: None
+                value: pt-h3-underline-none-dt
+            -
+                label: Solid
+                value: pt-h3-underline-solid-dt
+            -
+                label: Dotted
+                value: pt-h3-underline-dotted-dt
+            -
+                label: Dashed
+                value: pt-h3-underline-dashed-dt
+    -
+        id: header-h3-underline-color-preset-dt
+        title: Dark Theme Header 3 (H3) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h3-underline-light-dt
+        options:
+            -
+                label: Light
+                value: pt-h3-underline-light-dt
+            -
+                label: Dark
+                value: pt-h3-underline-dark-dt
+            -
+                label: Custom
+                value: pt-h3-underline-custom-dt
+            -
+                label: UI Accent Color
+                value: pt-h3-underline-accent-dt
+            -
+                label: Red
+                value: pt-h3-underline-red-dt
+            -
+                label: Orange
+                value: pt-h3-underline-orange-dt
+            -
+                label: Yellow
+                value: pt-h3-underline-yellow-dt
+            -
+                label: Green
+                value: pt-h3-underline-green-dt
+            -
+                label: Mint
+                value: pt-h3-underline-mint-dt
+            -
+                label: Aqua
+                value: pt-h3-underline-aqua-dt
+            -
+                label: Blue
+                value: pt-h3-underline-blue-dt
+            -
+                label: Purple
+                value: pt-h3-underline-purple-dt
+            -
+                label: Pink
+                value: pt-h3-underline-pink-dt
+            -
+                label: Grey
+                value: pt-h3-underline-grey-dt
+    -
+        id: h3-underline-color-custom-dt
+        title: Dark Theme Header 3 (H3) Underline Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Header 3 (H3) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h3-underline-opacity-dt
+        title: Dark Theme Header 3 (H3) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h3-underline-thickness-dt
+        title: Dark Theme Header 3 (H3) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
+    -
         id: header-h3-background-dt
         title: Dark Theme Header 3 (H3) Background
         type: heading
@@ -15789,6 +18120,106 @@ settings:
             -
                 label: Right
                 value: pt-h4-text-align-right-dt
+    -
+        id: header-h4-underline-dt
+        title: Dark Theme Header 4 (H4) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h4-underline-style-dt
+        title: Dark Theme Header 4 (H4) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h4-underline-none-dt
+        options:
+            -
+                label: None
+                value: pt-h4-underline-none-dt
+            -
+                label: Solid
+                value: pt-h4-underline-solid-dt
+            -
+                label: Dotted
+                value: pt-h4-underline-dotted-dt
+            -
+                label: Dashed
+                value: pt-h4-underline-dashed-dt
+    -
+        id: header-h4-underline-color-preset-dt
+        title: Dark Theme Header 4 (H4) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h4-underline-light-dt
+        options:
+            -
+                label: Light
+                value: pt-h4-underline-light-dt
+            -
+                label: Dark
+                value: pt-h4-underline-dark-dt
+            -
+                label: Custom
+                value: pt-h4-underline-custom-dt
+            -
+                label: UI Accent Color
+                value: pt-h4-underline-accent-dt
+            -
+                label: Red
+                value: pt-h4-underline-red-dt
+            -
+                label: Orange
+                value: pt-h4-underline-orange-dt
+            -
+                label: Yellow
+                value: pt-h4-underline-yellow-dt
+            -
+                label: Green
+                value: pt-h4-underline-green-dt
+            -
+                label: Mint
+                value: pt-h4-underline-mint-dt
+            -
+                label: Aqua
+                value: pt-h4-underline-aqua-dt
+            -
+                label: Blue
+                value: pt-h4-underline-blue-dt
+            -
+                label: Purple
+                value: pt-h4-underline-purple-dt
+            -
+                label: Pink
+                value: pt-h4-underline-pink-dt
+            -
+                label: Grey
+                value: pt-h4-underline-grey-dt
+    -
+        id: h4-underline-color-custom-dt
+        title: Dark Theme Header 4 (H4) Underline Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Header 4 (H4) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h4-underline-opacity-dt
+        title: Dark Theme Header 4 (H4) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h4-underline-thickness-dt
+        title: Dark Theme Header 4 (H4) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
     -
         id: header-h4-background-dt
         title: Dark Theme Header 4 (H4) Background
@@ -16108,6 +18539,106 @@ settings:
                 label: Right
                 value: pt-h5-text-align-right-dt
     -
+        id: header-h5-underline-dt
+        title: Dark Theme Header 5 (H5) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h5-underline-style-dt
+        title: Dark Theme Header 5 (H5) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h5-underline-none-dt
+        options:
+            -
+                label: None
+                value: pt-h5-underline-none-dt
+            -
+                label: Solid
+                value: pt-h5-underline-solid-dt
+            -
+                label: Dotted
+                value: pt-h5-underline-dotted-dt
+            -
+                label: Dashed
+                value: pt-h5-underline-dashed-dt
+    -
+        id: header-h5-underline-color-preset-dt
+        title: Dark Theme Header 5 (H5) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h5-underline-light-dt
+        options:
+            -
+                label: Light
+                value: pt-h5-underline-light-dt
+            -
+                label: Dark
+                value: pt-h5-underline-dark-dt
+            -
+                label: Custom
+                value: pt-h5-underline-custom-dt
+            -
+                label: UI Accent Color
+                value: pt-h5-underline-accent-dt
+            -
+                label: Red
+                value: pt-h5-underline-red-dt
+            -
+                label: Orange
+                value: pt-h5-underline-orange-dt
+            -
+                label: Yellow
+                value: pt-h5-underline-yellow-dt
+            -
+                label: Green
+                value: pt-h5-underline-green-dt
+            -
+                label: Mint
+                value: pt-h5-underline-mint-dt
+            -
+                label: Aqua
+                value: pt-h5-underline-aqua-dt
+            -
+                label: Blue
+                value: pt-h5-underline-blue-dt
+            -
+                label: Purple
+                value: pt-h5-underline-purple-dt
+            -
+                label: Pink
+                value: pt-h5-underline-pink-dt
+            -
+                label: Grey
+                value: pt-h5-underline-grey-dt
+    -
+        id: h5-underline-color-custom-dt
+        title: Dark Theme Header 5 (H5) Underline Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Header 5 (H5) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h5-underline-opacity-dt
+        title: Dark Theme Header 5 (H5) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h5-underline-thickness-dt
+        title: Dark Theme Header 5 (H5) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
+    -
         id: header-h5-background-dt
         title: Dark Theme Header 5 (H5) Background
         type: heading
@@ -16425,6 +18956,106 @@ settings:
             -
                 label: Right
                 value: pt-h6-text-align-right-dt
+    -
+        id: header-h6-underline-dt
+        title: Dark Theme Header 6 (H6) Underline
+        type: heading
+        level: 5
+        collapsed: true
+    -
+        id: header-h6-underline-style-dt
+        title: Dark Theme Header 6 (H6) Underline Style
+        type: class-select
+        allowEmpty: false
+        default: pt-h6-underline-none-dt
+        options:
+            -
+                label: None
+                value: pt-h6-underline-none-dt
+            -
+                label: Solid
+                value: pt-h6-underline-solid-dt
+            -
+                label: Dotted
+                value: pt-h6-underline-dotted-dt
+            -
+                label: Dashed
+                value: pt-h6-underline-dashed-dt
+    -
+        id: header-h6-underline-color-preset-dt
+        title: Dark Theme Header 6 (H6) Underline Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-h6-underline-light-dt
+        options:
+            -
+                label: Light
+                value: pt-h6-underline-light-dt
+            -
+                label: Dark
+                value: pt-h6-underline-dark-dt
+            -
+                label: Custom
+                value: pt-h6-underline-custom-dt
+            -
+                label: UI Accent Color
+                value: pt-h6-underline-accent-dt
+            -
+                label: Red
+                value: pt-h6-underline-red-dt
+            -
+                label: Orange
+                value: pt-h6-underline-orange-dt
+            -
+                label: Yellow
+                value: pt-h6-underline-yellow-dt
+            -
+                label: Green
+                value: pt-h6-underline-green-dt
+            -
+                label: Mint
+                value: pt-h6-underline-mint-dt
+            -
+                label: Aqua
+                value: pt-h6-underline-aqua-dt
+            -
+                label: Blue
+                value: pt-h6-underline-blue-dt
+            -
+                label: Purple
+                value: pt-h6-underline-purple-dt
+            -
+                label: Pink
+                value: pt-h6-underline-pink-dt
+            -
+                label: Grey
+                value: pt-h6-underline-grey-dt
+    -
+        id: h6-underline-color-custom-dt
+        title: Dark Theme Header 6 (H6) Underline Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Header 6 (H6) Underline Color Preset for this to work.
+        type: variable-color
+        format: hsl-values
+        opacity: false
+        default: '#333333'
+    -
+        id: h6-underline-opacity-dt
+        title: Dark Theme Header 6 (H6) Underline Opacity (%)
+        type: variable-number-slider
+        format: '%'
+        default: 100
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: h6-underline-thickness-dt
+        title: Dark Theme Header 6 (H6) Underline Thickness (px)
+        type: variable-number-slider
+        format: 'px'
+        default: 4
+        min: 1
+        max: 10
+        step: 1
     -
         id: header-h6-background-dt
         title: Dark Theme Header 6 (H6) Background
