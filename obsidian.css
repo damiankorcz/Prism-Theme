@@ -309,7 +309,7 @@
             --h5-font-size: 1.2em;
             --h6-font-size:   1em;
             
-            /* Header Text Opacity */
+            /* Header Text */
             --h1-text-opacity-lt: 100%;
             --h2-text-opacity-lt: 100%;
             --h3-text-opacity-lt: 100%;
@@ -324,7 +324,7 @@
             --h5-text-opacity-dt: 100%;
             --h6-text-opacity-dt: 100%;
 
-            /* Header Background Opacity */
+            /* Header Background */
             --h1-background-opacity-lt: 100%;
             --h2-background-opacity-lt: 100%;
             --h3-background-opacity-lt: 100%;
@@ -339,7 +339,7 @@
             --h5-background-opacity-dt: 100%;
             --h6-background-opacity-dt: 100%;
 
-            /* Header Border Opacity */
+            /* Header Border */
             --h1-border-opacity-lt: 100%;
             --h2-border-opacity-lt: 100%;
             --h3-border-opacity-lt: 100%;
@@ -722,7 +722,7 @@
         --h3-border-color-custom-dt: hsla(0, 0%, 20%, 1);
         --h4-border-color-custom-dt: hsla(0, 0%, 20%, 1);
         --h5-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-        --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
+        --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);     
     }
 
 
@@ -7514,6 +7514,7 @@
         margin-left: -34px;
     }
 
+
 /*  ==========================================================================
     Headers Options
     ========================================================================== */
@@ -7814,7 +7815,40 @@
                 color: hsla(0, 0%, 20%, var(--h6-text-opacity-lt));
             }
 
+        /*  Headers - Text Color Dark (Dark Theme)
+            ========================================================================== */ 
 
+            .theme-dark.pt-h1-text-dark-dt .markdown-preview-view h1,
+            .theme-dark.pt-h1-text-dark-dt .HyperMD-header-1 {
+                color: hsla(0, 0%, 20%, var(--h1-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h2-text-dark-dt .markdown-preview-view h2,
+            .theme-dark.pt-h2-text-dark-dt .HyperMD-header-2 {
+                color: hsla(0, 0%, 20%, var(--h2-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h3-text-dark-dt .markdown-preview-view h3,
+            .theme-dark.pt-h3-text-dark-dt .HyperMD-header-3 {
+                color: hsla(0, 0%, 20%, var(--h3-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h4-text-dark-dt .markdown-preview-view h4,
+            .theme-dark.pt-h4-text-dark-dt .HyperMD-header-4 {
+                color: hsla(0, 0%, 20%, var(--h4-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h5-text-dark-dt .markdown-preview-view h5,
+            .theme-dark.pt-h5-text-dark-dt .HyperMD-header-5 {
+                color: hsla(0, 0%, 20%, var(--h5-text-opacity-dt));
+            }
+
+            .theme-dark.pt-h6-text-dark-dt .markdown-preview-view h6,
+            .theme-dark.pt-h6-text-dark-dt .HyperMD-header-6 {
+                color: hsla(0, 0%, 20%, var(--h6-text-opacity-dt));
+            }
+                
+            
         /*  Headers - Text Color Light (Light Theme)
             ========================================================================== */ 
     
@@ -7882,39 +7916,6 @@
                 color: hsla(0, 0%, 85%, var(--h6-text-opacity-dt));
             }
 
-        /*  Headers - Text Color Dark (Dark Theme)
-            ========================================================================== */ 
-
-            .theme-dark.pt-h1-text-dark-dt .markdown-preview-view h1,
-            .theme-dark.pt-h1-text-dark-dt .HyperMD-header-1 {
-                color: hsla(0, 0%, 20%, var(--h1-text-opacity-dt));
-            }
-
-            .theme-dark.pt-h2-text-dark-dt .markdown-preview-view h2,
-            .theme-dark.pt-h2-text-dark-dt .HyperMD-header-2 {
-                color: hsla(0, 0%, 20%, var(--h2-text-opacity-dt));
-            }
-
-            .theme-dark.pt-h3-text-dark-dt .markdown-preview-view h3,
-            .theme-dark.pt-h3-text-dark-dt .HyperMD-header-3 {
-                color: hsla(0, 0%, 20%, var(--h3-text-opacity-dt));
-            }
-
-            .theme-dark.pt-h4-text-dark-dt .markdown-preview-view h4,
-            .theme-dark.pt-h4-text-dark-dt .HyperMD-header-4 {
-                color: hsla(0, 0%, 20%, var(--h4-text-opacity-dt));
-            }
-
-            .theme-dark.pt-h5-text-dark-dt .markdown-preview-view h5,
-            .theme-dark.pt-h5-text-dark-dt .HyperMD-header-5 {
-                color: hsla(0, 0%, 20%, var(--h5-text-opacity-dt));
-            }
-
-            .theme-dark.pt-h6-text-dark-dt .markdown-preview-view h6,
-            .theme-dark.pt-h6-text-dark-dt .HyperMD-header-6 {
-                color: hsla(0, 0%, 20%, var(--h6-text-opacity-dt));
-            }
-            
 
         /*  Headers - Text Color Custom (Light Theme)
             ========================================================================== */ 
@@ -11974,7 +11975,7 @@
     /*  Headers - Border
         ========================================================================== */ 
         
-        /*  Headers - Border Width (Dark Theme)
+        /*  Headers - Border Width (Light Theme)
             ========================================================================== */ 
 
             .theme-light .markdown-preview-view h1,
