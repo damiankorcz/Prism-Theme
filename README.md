@@ -16,7 +16,8 @@
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Key-Features">Key Features</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Screenshots">Screenshots</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Getting-Started">Getting Started</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Plugin-Support">Plugin Support</a> • 
+		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Plugin-Support">Plugin Support</a> •
+		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Documentation">Documentation</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Roadmap">Roadmap</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contributing">Contributing</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contact">Contact</a> • 
@@ -123,6 +124,8 @@ Explicitly supported by the theme:
 
 If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
 
+## 📖 Documentation
+The theme has a fully encompassing Wiki, which includes additional detailed descriptions with images/GIFs of all Style Settings Options for Prism. This can be found in the [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) Section of this Repository.
 
 ##  🗺 Roadmap
 
