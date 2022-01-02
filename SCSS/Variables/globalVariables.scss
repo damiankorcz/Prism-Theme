@@ -1,0 +1,286 @@
+/*  ==========================================================================
+    Global variables
+    ========================================================================== */
+
+    :root {
+        
+        /*  General Settings
+            ========================================================================== */    
+        
+            --default-font: 'Source Sans Pro', sans-serif;
+            
+            --border-size:    2px;
+            --blur-intensity: 6px;
+            
+            --file-explorer-vertical-lines-width: 2px;
+            --style-settings-vertical-lines-width: 2px;
+        
+
+        /*  Scrollbar Settings
+            ========================================================================== */ 
+        
+            --scroll-bar-border-radius: 0px;
+            --scroll-button-background-color: var(--background-secondary);
+            --scroll-button-background-color-hover: var(--background-secondary-alt);
+            --scroll-button-border-radius: 0px;
+    
+    
+        /*  Base Colors
+            ========================================================================== */ 
+        
+            --color-desaturate-lt:  20%;
+            --color-darken-lt:      15%;
+            --color-darken-text-lt: 45%;
+        
+            --color-desaturate-dt:  50%;
+            --color-darken-dt:      15%;
+            --color-darken-text-dt: 20%;
+        
+
+            /* Base red: #FFBBBB */
+            --color-red-h: 0;
+            --color-red-s: 100%;
+            --color-red-l: 87%;
+        
+            /* Base orange: #FFDCB1 */
+            --color-orange-h: 33;
+            --color-orange-s: 100%;
+            --color-orange-l: 85%;
+        
+            /* Base yellow: #FEEDB7 */
+            --color-yellow-h: 46;
+            --color-yellow-s: 97%;
+            --color-yellow-l: 86%;
+        
+            /* Base green: #CFFFC5 */
+            --color-green-h: 110;
+            --color-green-s: 100%;
+            --color-green-l: 89%;
+        
+            /* Base mint: #BAFBE2 */
+            --color-mint-h: 157;
+            --color-mint-s: 89%;
+            --color-mint-l: 86%;
+        
+            /* Base aqua: #ADF8FF */
+            --color-aqua-h: 185;
+            --color-aqua-s: 100%;
+            --color-aqua-l: 83%;
+        
+            /* Base blue: #ADCDFF */
+            --color-blue-h: 217;
+            --color-blue-s: 100%;
+            --color-blue-l: 84%;
+        
+            /* Base purple: #C5BBFF */
+            --color-purple-h: 249;
+            --color-purple-s: 100%;
+            --color-purple-l: 87%;
+        
+            /* Base pink: #FFCFFF */
+            --color-pink-h: 300;
+            --color-pink-s: 100%;
+            --color-pink-l: 91%;
+        
+            /* Base grey: #EDEEEF */
+            --color-grey-h: 210;
+            --color-grey-s: 6%;
+            --color-grey-l: 93%;
+    
+
+        /*  Style Settings Accessible Properties (Defaults)
+            ========================================================================== */ 
+            
+            /* Fonts */
+            --font-family-ui:      'Source Sans Pro', sans-serif;
+            --font-family-edit:    'Source Sans Pro', sans-serif;
+            --font-family-preview: 'Source Sans Pro', sans-serif;
+            --font-family-code:    'Fira Code', monospace;
+            
+            /* Graph View */
+
+                /* Light Theme */
+                --graph-fill-opacity-lt:             1;
+                --graph-fill-focused-opacity-lt:     1;
+                --graph-tag-opacity-lt:              1;
+                --graph-attachment-opacity-lt:       1;
+                --graph-unresolved-opacity-lt:       1;
+                --graph-highlight-opacity-lt:        1;
+                --graph-highlight-line-opacity-lt: 0.4;
+
+                --color-custom-graph-note-lt:          #C4C7CA;
+                --color-custom-graph-note-focused-lt:  #8670FF;
+                --color-custom-graph-tag-lt:           #619EFF;
+                --color-custom-graph-attachment-lt:    #FDDB6D;
+                --color-custom-graph-unresolved-lt:    #FF7070;
+                --color-custom-graph-highlight-lt:     #8670FF;
+                --color-custom-graph-highlight-line-lt:#8670FF;
+
+                /* Dark Theme */
+                --graph-fill-opacity-dt:             1;
+                --graph-fill-focused-opacity-dt:     1;
+                --graph-tag-opacity-dt:              1;
+                --graph-attachment-opacity-dt:       1;
+                --graph-unresolved-opacity-dt:       1;
+                --graph-highlight-opacity-dt:        1;
+                --graph-highlight-line-opacity-dt: 0.4;
+
+                --color-custom-graph-note-dt:          #878787;
+                --color-custom-graph-note-focused-dt:  #4C3AB6;
+                --color-custom-graph-tag-dt:           #3663AB;
+                --color-custom-graph-attachment-dt:    #AF943C;
+                --color-custom-graph-unresolved-dt:    #B63A3A;
+                --color-custom-graph-highlight-dt:     #4C3AB6;
+                --color-custom-graph-highlight-line-dt:#4C3AB6;
+            
+            
+            /* Window Adjustments */
+            --window-gap: 10px;
+            --border-radius: 8px;
+            --border-radius-small: 4px;
+            
+
+            /* Background Options */
+            
+                /* Light Theme */
+                --background-color-lt: #E0E3E6;
+                --background-image-lt: url();
+                --background-blur-lt: 0;
+                --background-repeat-lt: no-repeat;
+                --background-attachment-lt: fixed;
+                --background-position-lt: center ;
+                --background-size-lt: cover;
+                
+                /* Dark Theme */
+                --background-color-dt: #1A1A1A;
+                --background-image-dt: url();
+                --background-blur-dt: 0;
+                --background-repeat-dt: no-repeat;
+                --background-attachment-dt: fixed;
+                --background-position-dt: center ;
+                --background-size-dt: cover;
+            
+
+            /* Accent Colors and Styles */
+            --color-accent-lt: #C7BDFF;
+            --color-accent-dt: #8C7FD7;
+            
+
+            /* Solid Titlebar Custom Colors */
+            --titlebar-background-color-lt: #EBECEF;
+            --titlebar-background-color-dt: #2B2B2B;
+
+            /* Solid Status Bar Custom Colors */
+            --status-bar-background-color-lt: #EBECEF;
+            --status-bar-background-color-dt: #2B2B2B;
+
+
+            /* Custom Vault Banner */
+            --custom-vault-banner-icon-url: url(https://img.icons8.com/dusk/50/000000/safe.png);
+
+
+            /* File Explorer */
+            --file-explorer-vertical-lines-width: 2px;
+            --outline-vertical-lines-width: 2px;
+
+
+            /* Scrollbar */
+            --scroll-bar-size: 8px; /* The width of the scrollbar */
+            --scroll-bar-size-hover: 15px; /* The width of the scrollbar when hovering over the window content */
+
+            /* Header Font Size */
+            --h1-font-size:   2em;
+            --h2-font-size: 1.8em;
+            --h3-font-size: 1.6em;
+            --h4-font-size: 1.4em;
+            --h5-font-size: 1.2em;
+            --h6-font-size:   1em;
+            
+            /* Header Text */
+            --h1-text-opacity-lt: 100%;
+            --h2-text-opacity-lt: 100%;
+            --h3-text-opacity-lt: 100%;
+            --h4-text-opacity-lt: 100%;
+            --h5-text-opacity-lt: 100%;
+            --h6-text-opacity-lt: 100%;
+
+            --h1-text-opacity-dt: 100%;
+            --h2-text-opacity-dt: 100%;
+            --h3-text-opacity-dt: 100%;
+            --h4-text-opacity-dt: 100%;
+            --h5-text-opacity-dt: 100%;
+            --h6-text-opacity-dt: 100%;
+
+            /* Header Background */
+            --h1-background-opacity-lt: 100%;
+            --h2-background-opacity-lt: 100%;
+            --h3-background-opacity-lt: 100%;
+            --h4-background-opacity-lt: 100%;
+            --h5-background-opacity-lt: 100%;
+            --h6-background-opacity-lt: 100%;
+
+            --h1-background-opacity-dt: 100%;
+            --h2-background-opacity-dt: 100%;
+            --h3-background-opacity-dt: 100%;
+            --h4-background-opacity-dt: 100%;
+            --h5-background-opacity-dt: 100%;
+            --h6-background-opacity-dt: 100%;
+
+            /* Header Border */
+            --h1-border-opacity-lt: 100%;
+            --h2-border-opacity-lt: 100%;
+            --h3-border-opacity-lt: 100%;
+            --h4-border-opacity-lt: 100%;
+            --h5-border-opacity-lt: 100%;
+            --h6-border-opacity-lt: 100%;
+            
+            --h1-border-opacity-dt: 100%;
+            --h2-border-opacity-dt: 100%;
+            --h3-border-opacity-dt: 100%;
+            --h4-border-opacity-dt: 100%;
+            --h5-border-opacity-dt: 100%;
+            --h6-border-opacity-dt: 100%;
+
+            --h1-border-width-lt: 2px;
+            --h2-border-width-lt: 2px;
+            --h3-border-width-lt: 2px;
+            --h4-border-width-lt: 2px;
+            --h5-border-width-lt: 2px;
+            --h6-border-width-lt: 2px;
+
+            --h1-border-width-dt: 2px;
+            --h2-border-width-dt: 2px;
+            --h3-border-width-dt: 2px;
+            --h4-border-width-dt: 2px;
+            --h5-border-width-dt: 2px;
+            --h6-border-width-dt: 2px;
+
+            /* Header Underline */
+            --h1-underline-thickness-lt: 4px;
+            --h2-underline-thickness-lt: 4px;
+            --h3-underline-thickness-lt: 4px;
+            --h4-underline-thickness-lt: 4px;
+            --h5-underline-thickness-lt: 4px;
+            --h6-underline-thickness-lt: 4px;
+    
+            --h1-underline-thickness-dt: 4px;
+            --h2-underline-thickness-dt: 4px;
+            --h3-underline-thickness-dt: 4px;
+            --h4-underline-thickness-dt: 4px;
+            --h5-underline-thickness-dt: 4px;
+            --h6-underline-thickness-dt: 4px;  
+
+            --h1-underline-opacity-lt: 100%;
+            --h2-underline-opacity-lt: 100%;
+            --h3-underline-opacity-lt: 100%;
+            --h4-underline-opacity-lt: 100%;
+            --h5-underline-opacity-lt: 100%;
+            --h6-underline-opacity-lt: 100%;
+
+            --h1-underline-opacity-dt: 100%;
+            --h2-underline-opacity-dt: 100%;
+            --h3-underline-opacity-dt: 100%;
+            --h4-underline-opacity-dt: 100%;
+            --h5-underline-opacity-dt: 100%;
+            --h6-underline-opacity-dt: 100%;
+    }

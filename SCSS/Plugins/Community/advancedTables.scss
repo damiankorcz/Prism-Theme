@@ -1,0 +1,39 @@
+/*  Advanced Tables Plugin
+        ========================================================================== */    
+
+        .workspace-leaf-content[data-type="advanced-tables-toolbar"] .nav-header {
+            width: unset;
+            height: unset;
+            position: unset;
+            background: var(--background-secondary);
+            border-radius: var(--border-radius);
+            box-shadow: var(--drop-shadow);
+            padding: 3px;
+            display: flex;
+            flex-direction: column;
+            stroke-width: 2px;
+        }
+
+        /* Positions the Advanced Tables Toolbar at the top of the View Content */
+        .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            height: fit-content;
+            overflow: auto;
+            display: flex;
+            padding: 0px;
+        }
+
+        .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content > div {
+            height: fit-content;
+        }
+
+        .pt-advanced-tables-align-left .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            justify-content: flex-start;
+        }
+
+        .pt-advanced-tables-align-center .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            justify-content: center;
+        }
+
+        .pt-advanced-tables-align-right .workspace-leaf-content[data-type="advanced-tables-toolbar"] .view-content {
+            justify-content: flex-end;
+        }

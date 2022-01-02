@@ -1,0 +1,82 @@
+/*  ==========================================================================
+    Custom Vault Banner
+    ========================================================================== */
+
+    .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+        line-height: 16px;
+        background: var(--background-primary);
+        border-radius: var(--border-radius);
+        box-shadow: var(--drop-shadow);
+        padding: 0px 10px;
+        margin: 0px 0px 8px 0px;    
+        min-width: -webkit-fill-available;
+        border: unset;
+    }
+
+    .pt-custom-vault-banner .nav-folder-title[data-path="/"]:hover {
+        background-color: var(--background-primary);
+        border-radius: var(--border-radius);
+        line-height: 16px;
+        border: unset;
+    }
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
+        justify-content: flex-start;
+    }
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-center .nav-folder-title[data-path="/"] {
+        justify-content: center;
+    }
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-right .nav-folder-title[data-path="/"] {
+        justify-content: flex-end;
+    }
+
+    .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-title-content {
+        height: fit-content;
+        width: fit-content;
+        color: var(--text-normal);
+        border-radius: var(--border-radius);
+        white-space: normal;
+        width: auto;
+    }
+
+    .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
+        display: block;
+        height: 32px;
+        width: 32px;
+        margin: 8px;
+        border-radius: var(--border-radius);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
+        background-image: var(--custom-vault-banner-icon-url);
+    }
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-sticky .nav-folder-title[data-path="/"] {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
+        order: 0;
+    }        
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-title-content {
+        margin-right: 8px;
+    }  
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
+        order: 1;
+    }
+
+    .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-title-content {
+        margin-left: 8px;
+    }  

@@ -1,0 +1,374 @@
+/*  Titlebar Elements
+    ========================================================================== */ 
+
+    .titlebar {
+        background-color: transparent;
+        height: 22px !important;
+    }
+
+    .titlebar-inner {
+        color: var(--text-normal);
+        font-weight: 600;
+    }
+
+    .titlebar-button-container {
+        display: flex;
+        flex-flow: row;
+        position: absolute;
+    }
+    
+
+    .pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-back,
+    .pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-forward {
+        display: none;
+    }
+
+    .titlebar-button-container.mod-left .mod-back,
+    .titlebar-button-container.mod-left .mod-forward {
+        opacity: 1;
+    }
+
+    .pt-default-titlebar .titlebar-text {
+        position: relative;
+        height: 18px;
+        font-size: 13px;
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        margin: 2px auto 0px auto;
+        width: fit-content;
+        padding: 0 10px;
+        color: var(--text-muted);
+        background-color: var(--tab-label-background-color);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--drop-shadow);
+        letter-spacing: unset;
+        opacity: 1;
+    }
+
+    body.pt-titlebar-hide-text .titlebar-text {
+        display: none;
+    }
+
+    .pt-default-titlebar .titlebar-button-container.mod-left {
+        height: 18px;
+        margin-top: 4px;
+        background-color: var(--tab-label-background-color);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--drop-shadow);
+    }
+
+    .mod-windows.pt-default-titlebar .titlebar-button-container.mod-left {
+        left: 48px !important;
+    }
+
+    .mod-mac.pt-default-titlebar .titlebar-button-container.mod-left {
+        left: 68px !important;
+    }
+
+    .pt-default-titlebar .titlebar-button-container.mod-left svg {
+        height: 18px;
+        width: 18px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .pt-default-titlebar .titlebar-button-container.mod-left .mod-back,
+    .pt-default-titlebar .titlebar-button-container.mod-left .mod-forward {
+        height: 18px;
+        stroke-width: 2px;
+    }
+
+    .pt-default-titlebar .titlebar-button-container.mod-right {
+        background-color: var(--tab-label-background-color);
+        border-radius: var(--border-radius-small);
+        box-shadow: var(--drop-shadow);
+    }
+
+    .pt-default-titlebar .mod-minimize:hover,
+    .pt-default-titlebar .mod-maximize:hover,
+    .pt-default-titlebar .mod-close:hover {
+        border-radius: var(--border-radius-small);
+    }
+
+    
+    /*  Windows 10/11 Titlebar
+        ========================================================================== */ 
+        
+        /* Offset for the Windows Style Titlebar */
+        .pt-windows-titlebar {
+            padding-top: 30px !important;
+        }
+        
+        .pt-windows-titlebar .titlebar {
+            height: 30px !important;
+        }
+        
+        .pt-windows-titlebar .titlebar-button-container {
+            top: 0px;
+        }
+            
+        .pt-windows-titlebar div.titlebar-button-container.mod-left {
+            top: 0px;
+            left: 48px !important;
+            height: 22px;
+            margin-top: 4px;
+            background-color: var(--tab-label-background-color);
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+        }
+        .pt-windows-titlebar .titlebar-button-container.mod-left svg{
+            height: 17px;
+            width: 17px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+        }
+        
+        .pt-windows-titlebar .titlebar-button-container.mod-left .mod-back,
+        .pt-windows-titlebar .titlebar-button-container.mod-left .mod-forward {
+            padding: 2px 10px;
+            margin: 0px;
+            height: 22px;
+        }
+        
+        /* Adds the Obsidian 'favicon' to the top left of the Titlebar */
+        .pt-windows-titlebar .titlebar-left {
+            position: relative;
+            width: 35px;
+            height: 100%;
+            left: 5px;
+            background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyI+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQyIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjU4NzMsMCwwLDEsLTI5LjM2NTEsMCkiPgogICAgICAgIDxyZWN0IHg9IjE4LjUiIHk9IjAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJmaWxsOm5vbmU7Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC42MywwLDAsMSwyOS41OTk4LC0wLjI1NjU0MSkiPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDQuNjEsMEwxMi45MSwxNy41MkwwLDQ1LjQ1TDE5LjU3LDkwLjQ3TDQ3LjM1LDEwMEw1Mi40NCw4OS44TDYzLDI2LjM5TDQ0LjYxLDBaIiBzdHlsZT0iZmlsbDpyZ2IoNTIsMzIsMTQwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNjMsMjYuMzlMNDMuNDQsMTQuNDFMMTYuNDMsMzUuN0w0Ny4zNSwxMDBMNTIuNDQsODkuOEw2MywyNi4zOVoiIHN0eWxlPSJmaWxsOnVybCgjX0xpbmVhcjEpO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMC44ODEyMTYsMC4yNTY1NDEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02MywyNi4zOUw0NC42MSwwTDQzLjQ0LDE0LjQxTDYzLDI2LjM5WiIgc3R5bGU9ImZpbGw6cmdiKDE3NSwxNTksMjQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDMuNDQsMTQuNDFMNDQuNjEsMEwxMi45MSwxNy41MkwxNi40MywzNS43TDQzLjQ0LDE0LjQxWiIgc3R5bGU9ImZpbGw6cmdiKDc0LDU1LDE2MCk7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLjg4MTIxNiwwLjI1NjU0MSkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjQzLDM1LjdMMTkuNTcsOTAuNDdMNDcuMzUsMTAwTDE2LjQzLDM1LjdaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNTUsMTYwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgtMzEuNTksLTc1LjQ5LDc1LjQ5LC0zMS41OSw2MC40NCw4MC41NikiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDEwOCw4NiwyMDQpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMTUxLDEzMywyMjkpO3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==');
+            background-repeat: no-repeat;
+            background-position: 50%;
+            background-size: 16px;
+        }
+        
+        .pt-windows-titlebar .titlebar-button-container.mod-right {
+            background-color: var(--tab-label-background-color);
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+        }
+
+        /* Adjustments to make the mod buttons look like Windows 10/11 */
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close {
+            padding: 1px 17px 0px 17px;    
+            height: 30px;
+            transition: 150ms;
+        }
+
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
+            border-radius: var(--border-radius-small);
+        }
+
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
+            opacity: 1;
+        }
+
+        .theme-light.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+        .theme-light.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+
+        .theme-dark.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+        .theme-dark.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
+            background-color: #E81123;
+        }
+
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover svg {
+            color: #FFFFFF;
+        }
+
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize svg,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize svg,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-close svg {
+            color: var(--text-normal);
+            shape-rendering: geometricPrecision;
+            height: 12px;
+            width: 12px;
+        }
+
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-back svg,
+        .pt-windows-titlebar .titlebar-button-container.mod-right .mod-forward svg {
+            color: var(--text-normal);
+            height: 20px;
+            width: 20px;
+        }
+
+        .pt-windows-titlebar .titlebar-text {
+            left: 0px;
+            right: 0px;
+            height: 22px;
+            font-size: 14px;
+            font-weight: normal;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            margin: 4px auto 0px auto;
+            width: fit-content;
+            padding: 0px 10px;
+            color: var(--text-muted);
+            background-color: var(--tab-label-background-color);
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+            letter-spacing: unset;
+            opacity: 1;
+        }
+
+
+    /*  Solid Titlebar
+        ========================================================================== */ 
+        
+        .theme-light.pt-solid-titlebar-lt.pt-titlebar-default-lt div.titlebar,
+        .theme-dark.pt-solid-titlebar-dt.pt-titlebar-default-dt div.titlebar {
+            background-color: var(--tab-label-background-color);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-light.pt-solid-titlebar-lt.pt-titlebar-custom-lt div.titlebar {
+            background-color: var(--titlebar-background-color-lt);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-dark.pt-solid-titlebar-dt.pt-titlebar-custom-dt div.titlebar {
+            background-color: var(--titlebar-background-color-dt);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-light.pt-titlebar-default-lt div.titlebar-text,
+        .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
+        .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right,
+        .theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
+            background-color: var(--tab-label-background-color);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-light.pt-titlebar-custom-lt div.titlebar-text,
+        .theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
+        .theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right,
+        .theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar  {
+            background-color: var(--titlebar-background-color-lt);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-dark.pt-titlebar-custom-dt div.titlebar-text,
+        .theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-left,
+        .theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-right,
+        .theme-dark.pt-titlebar-custom-dt.pt-status-bar-position-top .status-bar {
+            background-color: var(--titlebar-background-color-dt);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-light.pt-titlebar-text-light-lt div.titlebar-text,
+        .theme-light.pt-titlebar-text-light-lt div.titlebar-button svg,
+        .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
+        .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right svg,
+        .theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar {
+            color: var(--background-primary);
+        }
+
+        .theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
+        .theme-light.pt-titlebar-text-dark-lt div.titlebar-button svg,
+        .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
+        .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right svg,
+        .theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar {
+            color: var(--text-normal);
+        }
+
+        .theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
+        .theme-light.pt-titlebar-text-accent-lt div.titlebar-button svg,
+        .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
+        .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right svg,
+        .theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar {
+            color: var(--interactive-accent-text);
+        }
+
+        .theme-dark.pt-titlebar-text-light-dt div.titlebar-text,
+        .theme-dark.pt-titlebar-text-light-dt div.titlebar-button svg,
+        .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left,
+        .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right svg,
+        .theme-dark.pt-titlebar-text-light-dt.pt-status-bar-position-top .status-bar {
+            color: var(--text-normal);
+        }
+
+        .theme-dark.pt-titlebar-text-dark-dt div.titlebar-text,
+        .theme-dark.pt-titlebar-text-dark-dt div.titlebar-button svg,
+        .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left,
+        .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right svg,
+        .theme-dark.pt-titlebar-text-dark-dt.pt-status-bar-position-top .status-bar {
+            color: var(--background-primary);
+        }
+        
+        .theme-dark.pt-titlebar-text-accent-dt div.titlebar-text,
+        .theme-dark.pt-titlebar-text-accent-dt div.titlebar-button svg,
+        .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left,
+        .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right svg,
+        .theme-dark.pt-titlebar-text-accent-dt.pt-status-bar-position-top .status-bar {
+            color: var(--interactive-accent-text);
+        }
+
+        .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+        .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+        .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+        .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+        .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+        .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+        .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+        .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+        .theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+        .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+        .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+        .theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
+            color: var(--interactive-accent-hover);
+        }
+        
+        .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+        .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+        .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+        .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+        .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+        .theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
+            color: var(--interactive-accent-hover);
+        }
+
+        .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover svg {
+            color: white;
+        }
+
+
+
+        .theme-light.pt-solid-titlebar-lt div.titlebar-text,
+        .theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-left,
+        .theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-right,
+        .theme-dark.pt-solid-titlebar-dt div.titlebar-text,
+        .theme-dark.pt-solid-titlebar-dt div.titlebar-button-container.mod-left,
+        .theme-dark.pt-solid-titlebar-dt div.titlebar-button-container.mod-right {
+            background-color: transparent;
+            box-shadow: unset;
+        }
+
+        .theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
+        .theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
+        .theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover,
+        .theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
+        .theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
+        .theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
+            border-radius: unset;
+        }

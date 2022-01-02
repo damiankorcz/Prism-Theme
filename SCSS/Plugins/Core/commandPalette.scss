@@ -1,0 +1,39 @@
+/*  ==========================================================================
+    Command Palette
+    ========================================================================== */
+    
+    .prompt {
+        background-color: var(--background-secondary);
+    }
+
+    input.prompt-input {
+        margin-bottom: 10px;
+    }
+
+    .suggestion-hotkey {
+        background-color: var(--background-primary);
+        border-radius: var(--border-radius-small);
+        font-weight: 600;
+    }
+
+    .modal-container .prompt {
+        border: 1px solid var(--table-border-color);
+        box-shadow: var(--drop-shadow);
+        background-color: var(--background-secondary-blur);
+        backdrop-filter: blur(var(--blur-intensity));
+        -webkit-backdrop-filter: blur(var(--blur-intensity));        
+    }
+
+    .prompt-results {
+        padding: 0px 10px 0px 0px;
+    }
+
+    .theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+        background-color: var(--background-color-lt);
+        border-radius: var(--border-radius-small);
+    }
+
+    .theme-dark .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+        background-color: var(--background-color-dt);
+        border-radius: var(--border-radius-small);
+    }

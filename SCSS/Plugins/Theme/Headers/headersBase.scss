@@ -1,0 +1,72 @@
+/*  ==========================================================================
+    Headers Font Size
+    ========================================================================== */
+
+    .markdown-preview-view h1,
+    .cm-header-1 {
+        font-size: var(--h1-font-size);
+    }
+    
+    .markdown-preview-view h2,
+    .cm-header-2 {
+        font-size: var(--h2-font-size);
+    }
+    
+    .markdown-preview-view h3,
+    .cm-header-3 {
+        font-size: var(--h3-font-size);
+    }
+    
+    .markdown-preview-view h4,
+    .cm-header-4 {
+        font-size: var(--h4-font-size);
+    }
+    
+    .markdown-preview-view h5,
+    .cm-header-5 {
+        font-size: var(--h5-font-size);
+    }
+    
+    .markdown-preview-view h6,
+    .cm-header-6 {
+        font-size: var(--h6-font-size);
+    }
+
+
+/*  ==========================================================================
+    Headers (Legacy Edit Mode)
+    ========================================================================== */
+
+    .HyperMD-header-1 > span[role="presentation"], 
+    .HyperMD-header-2 > span[role="presentation"],
+    .HyperMD-header-3 > span[role="presentation"], 
+    .HyperMD-header-4 > span[role="presentation"], 
+    .HyperMD-header-5 > span[role="presentation"], 
+    .HyperMD-header-6 > span[role="presentation"],
+    .HyperMD-header-1.cm-line,
+    .HyperMD-header-2.cm-line,
+    .HyperMD-header-3.cm-line,
+    .HyperMD-header-4.cm-line,
+    .HyperMD-header-5.cm-line,
+    .HyperMD-header-6.cm-line {
+        display: block;
+        padding: 0px 4px;
+        font-weight: 600;
+        z-index: 1;
+    }
+
+
+/*  ==========================================================================
+    Headers (Preview)
+    ========================================================================== */
+
+    .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+        position: relative;
+        padding: 0px 4px;
+        font-weight: 600;
+        z-index: 1;
+    }
+
+    .markdown-preview-view .heading-collapse-indicator {
+        margin-left: -34px;
+    }

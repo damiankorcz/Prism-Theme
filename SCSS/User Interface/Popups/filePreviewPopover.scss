@@ -1,0 +1,23 @@
+/*  ==========================================================================
+    Popovers (File Previews)
+    ========================================================================== */
+
+    .popover.hover-popover {
+        transform:  scale(0.90);
+        min-height: 500px;
+        width:      500px;
+        overflow:   auto;
+        padding-left: 10px;
+        box-shadow: var(--drop-shadow);
+        clear: both;
+    }
+    
+    .popover.hover-popover .markdown-embed {
+        min-height: 499px;
+        height:  499px;
+    }
+    
+    /* Hides the second limited scrollbar in popovers */
+    .markdown-embed-content > div.markdown-preview-view {
+        overflow: visible;
+    }

@@ -1,0 +1,127 @@
+/*  ==========================================================================
+    Scrollbar
+    ========================================================================== */  
+
+    .kanban-plugin__scroll-container::-webkit-scrollbar,
+    ::-webkit-scrollbar {
+        height: var(--scroll-bar-size) !important;
+        width: var(--scroll-bar-size) !important;
+        border-radius: var(--border-radius-small) !important;
+        -webkit-border-radius: var(--border-radius-small) !important;
+        background-clip: border-box !important;
+        background: var(--background-secondary) !important;
+    }
+
+    .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb {
+        border-radius: var(--border-radius-small) !important;
+        -webkit-border-radius: var(--border-radius-small) !important;
+        background-clip: border-box !important;
+        background: var(--scroll-bar-thumb);
+    }
+
+    .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
+    .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
+    ::-webkit-scrollbar-thumb:active,
+    ::-webkit-scrollbar-thumb:hover  {
+        border-radius: var(--border-radius-small) !important;
+        -webkit-border-radius: var(--border-radius-small) !important;
+        background: var(--interactive-accent);
+    }
+
+
+    /*  Scrollbar Buttons
+        ========================================================================== */ 
+
+        /* Scroll Button */
+        .pt-scroll-button ::-webkit-scrollbar-button:single-button {
+            height: var(--scroll-bar-size);
+            width: var(--scroll-bar-size);
+            border-radius: var(--scroll-button-border-radius);
+            background-color: var(--scroll-button-background-color);
+            background-size:  calc(var(--scroll-bar-size) / 2);
+            background-repeat: no-repeat;
+            background-position: 50% 80%;
+        }
+
+        /* Scroll Button Up icon*/
+        .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:decrement,
+        .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:decrement {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(0, 0, 0)'><polygon points='5,0 0,5 10,5'/></svg>");
+        }
+
+        .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:decrement,
+        .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:decrement {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(255, 255, 255)'><polygon points='5,0 0,5 10,5'/></svg>");
+        }
+
+        .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:hover,
+        .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:hover {
+            background-color: var(--background-primary);
+            border-radius: var(--border-radius-small);          
+        }
+
+        /* Scroll Button Down icon */
+        .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:increment,
+        .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:increment {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
+        }
+
+        .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:increment,
+        .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:increment {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
+        }
+
+        /* Scroll Button Left icon */
+        .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:decrement,
+        .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+            background-position: 20% 50%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(90 0 0)' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
+        }
+
+        .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:decrement,
+        .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+            background-position: 20% 50%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
+        }
+
+        /* Scroll Button Right icon */
+        .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:increment,
+        .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
+            background-position: 80% 50%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
+        }
+
+        .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:increment,
+        .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
+            background-position: 80% 50%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
+        }
+            
+
+    /*  Scrollbar Hover
+        ========================================================================== */ 
+
+        /* Enlarged Scrollbar when hovering on the page content/workspace leaf */
+        .pt-scroll-hover .view-content:hover ::-webkit-scrollbar,
+        .pt-scroll-hover .suggestion-container:hover ::-webkit-scrollbar,
+        .pt-scroll-hover .workspace-leaf-content:hover ::-webkit-scrollbar,
+        .pt-scroll-hover .vertical-tab-content-container:hover ::-webkit-scrollbar,
+        .pt-scroll-hover .kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar,
+        .pt-scroll-hover .kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar {
+            height: var(--scroll-bar-size-hover) !important;
+            width: var(--scroll-bar-size-hover) !important;
+        }
+
+        /* Enlarged Scroll Button when hovering on the page content/workspace leaf */
+        .pt-scroll-button.pt-scroll-hover .view-content:hover ::-webkit-scrollbar-button:single-button,
+        .pt-scroll-button.pt-scroll-hover .suggestion-container:hover ::-webkit-scrollbar:single-button,
+        .pt-scroll-button.pt-scroll-hover .workspace-leaf-content:hover ::-webkit-scrollbar-button:single-button,
+        .pt-scroll-button.pt-scroll-hover .vertical-tab-content-container:hover ::-webkit-scrollbar-button:single-button,
+        .pt-scroll-button.pt-scroll-hover .kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button,
+        .pt-scroll-button.pt-scroll-hover .kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button {
+            height: var(--scroll-bar-size-hover) !important;
+            width: var(--scroll-bar-size-hover) !important;       
+            background-size: calc(var(--scroll-bar-size-hover) / 2) !important;
+            background-image: unset;
+        }

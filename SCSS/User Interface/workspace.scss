@@ -1,0 +1,189 @@
+/*  ==========================================================================
+    Workspace
+    ========================================================================== */
+
+    /*  Workspace Window
+        ========================================================================== */   
+
+        .view-header-icon {
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .view-header-title {
+            white-space: pre;
+            word-wrap: normal;
+            line-height: 32px;
+        }
+
+        .view-action {
+            margin: 0;
+            cursor: pointer;
+            color: var(--text-muted);
+            position: relative;
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .view-action svg {
+            width: 26px;
+        }
+
+        .view-action:not(:last-child) {
+            margin-right: 12px;
+        }
+
+
+    /*  Window Gaps
+        ========================================================================== */  
+
+        .workspace-split.mod-horizontal .workspace-tabs {
+            padding: calc(var(--window-gap) / 2);
+        }
+        
+        /* Allows the <hr> used for the resize handle to be visible outside the div it's in */
+        .workspace-split.mod-vertical {
+            overflow: visible;
+        }
+
+        .workspace-split.mod-vertical.mod-root .workspace-leaf-content,
+        .workspace-split.mod-horizontal.mod-root .workspace-leaf-content {
+            box-shadow: var(--drop-shadow);
+        }
+
+        /* Background fill behind the Normal View Header */
+        .workspace-split.mod-root .workspace-leaf .workspace-leaf-content {
+            background-color: var(--background-primary);
+            border-radius: var(--border-radius) !important;
+        }
+        
+
+        /* Background fill behind the Kanban View Header */
+        .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
+            background-color: var(--background-secondary-alt);
+        }
+
+        .workspace-split.mod-vertical.mod-root .workspace-leaf,
+        .workspace-split.mod-horizontal.mod-root .workspace-leaf {
+            padding: calc(var(--window-gap) / 2);
+            contain: revert;
+        }
+
+        .workspace-split.mod-vertical > .workspace-split {
+            padding: 0;
+        }
+
+        .workspace-tabs .workspace-leaf {
+            background-color: transparent;
+        }
+
+        .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+            border-top-left-radius: unset;
+            border-radius: var(--border-radius);
+        }
+
+        .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed.is-hidden {
+            display: flex;
+            flex: 0 0 5px;
+        }
+
+        .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed.is-hidden .workspace-ribbon-collapse-btn {
+            display: none;
+        }
+
+        .view-header {
+            background-color: var(--tab-label-background-color);
+            border: var(--border-size) solid transparent;
+            border-radius: var(--border-radius);
+            box-shadow: var(--drop-shadow);
+        }
+
+        /* Matches the gradient next to the right hand buttons in the View Header with the background */
+        .view-header-title-container:after {
+            background: linear-gradient(to right, transparent, var(--tab-label-background-color));
+        }
+
+
+        .workspace-tab-header, .workspace-tab-header-inner,
+        .workspace-tab-container-before,
+        .workspace-tab-container-after {
+            transition: none;
+        }
+    
+
+    /*  Resize Handles
+        ========================================================================== */  
+    
+        /* Allows for the resize handles to be fully visible even though they stick out of the parent */
+        .workspace-split .workspace-tabs:not(:last-child) {
+            overflow: visible;
+        }
+
+        /* Resize Handle between Sidebar Workspace Leafs */
+        .workspace-split.mod-horizontal.mod-left-split > * > .workspace-leaf-resize-handle,
+        .workspace-split.mod-horizontal.mod-right-split > * > .workspace-leaf-resize-handle  {
+            background-color: transparent;
+        }
+
+        .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
+            width: var(--window-gap);
+            height: calc(100% - var(--window-gap));
+            top: calc(var(--window-gap) / 2);
+            right: calc(-1 * var(--window-gap) / 2);
+            border-radius: var(--border-radius-small);
+            background-color: transparent;
+        }
+        
+        .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
+        .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active {
+            background-color: var(--interactive-accent);
+        }
+        
+        .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+            height: var(--window-gap);
+            width: calc(100% - var(--window-gap));
+            left: calc(var(--window-gap) / 2);
+            bottom: calc(-1 * var(--window-gap) / 2);
+            border-radius: var(--border-radius-small);
+            background-color: transparent;
+        }
+
+        .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover,
+        .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active {
+            background-color: var(--interactive-accent);
+            box-shadow: var(--drop-shadow);
+        }
+
+
+        /*  Resize Handles at the sides of the workspace
+            ========================================================================== */  
+
+            /* Right Side */
+            .workspace-split.mod-right-split > .workspace-leaf-resize-handle  {
+                border-radius: var(--border-radius-small);
+                width: var(--window-gap);
+                height: calc(100% - var(--window-gap));
+                top: calc(var(--window-gap) / 2);
+                left: calc(-1 * var(--window-gap) / 2);
+                background-color: transparent;
+            }
+
+            /* Left Side */
+            .workspace-split.mod-left-split > .workspace-leaf-resize-handle  {
+                border-radius: var(--border-radius-small);
+                width: var(--window-gap);
+                height: calc(100% - var(--window-gap));
+                top: calc(var(--window-gap) / 2);
+                right: calc(-1 * var(--window-gap) / 2);
+                background-color: transparent;
+            }
+
+            /* Resize Handles Hover and Active use Accent Color */
+            .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
+            .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
+            .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,
+            .workspace-split.mod-right-split > .workspace-leaf-resize-handle:active {
+                background-color: var(--interactive-accent);
+            }

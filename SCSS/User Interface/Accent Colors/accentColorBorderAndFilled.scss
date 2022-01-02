@@ -1,0 +1,324 @@
+/*  Accent Style - Border and Filled
+        ========================================================================== */    
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header {
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            border-radius: var(--border-radius);
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-header-icon,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-header-title,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-header-icon,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-header-title {
+            color: var(--highlight-text-normal);
+            stroke-width: 2px;
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf .view-header .view-header-icon:hover,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf .view-header .view-actions .view-action:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf .view-header .view-header-icon:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf .view-header .view-actions .view-action:hover {
+            color: var(--interactive-accent-hover);
+            stroke-width: 2px;
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-tab-header.is-active,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-tab-header.is-active {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            stroke-width: 2px;
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .nav-action-button.is-active,
+        .theme-light.pt-accent-style-borderandfilled-lt .nav-action-button.is-active {
+            background-color: var(--interactive-accent);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            box-shadow: var(--drop-shadow);
+            stroke-width: 2px;
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .vertical-tab-nav-item.is-active,
+        .theme-light.pt-accent-style-borderandfilled-lt .vertical-tab-nav-item.is-active {
+            background-color: var(--interactive-accent);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .vertical-tab-nav-item.is-active:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .vertical-tab-nav-item.is-active:hover {
+            color: var(--interactive-accent-hover);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf-content[data-type="file-explorer"]  .nav-file-title.is-active,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type="file-explorer"]  .nav-file-title.is-active {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border-radius: var(--border-radius-small);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active:hover {
+            color: var(--interactive-accent-hover);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .suggestion-hotkey,
+        .theme-light.pt-accent-style-borderandfilled-lt .suggestion-hotkey {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            box-shadow: var(--drop-shadow);
+        }
+
+        /* Matches the gradient next to the right hand buttons in the View Header with the background */
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-split.mod-root .workspace-leaf.mod-active .view-header-title-container:after,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-split.mod-root .workspace-leaf.mod-active .view-header-title-container:after,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header-title-container:after,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header-title-container:after,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
+            background: linear-gradient(to right, transparent, var(--interactive-accent));
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
+        .theme-dark.pt-accent-style-borderandfilled-dt .tag-container.node-insert-event .tree-item-self:hover .tree-item-flair,
+        .theme-dark.pt-accent-style-borderandfilled-dt .backlink-pane .tree-item-self:hover .tree-item-flair,
+        .theme-dark.pt-accent-style-borderandfilled-dt .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair,
+        .theme-light.pt-accent-style-borderandfilled-lt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
+        .theme-light.pt-accent-style-borderandfilled-lt .tag-container.node-insert-event .tree-item-self:hover .tree-item-flair,
+        .theme-light.pt-accent-style-borderandfilled-lt .backlink-pane .tree-item-self:hover .tree-item-flair, 
+        .theme-light.pt-accent-style-borderandfilled-lt .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair {
+            background-color: var(--interactive-accent);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .nav-file-title:hover .nav-file-tag,
+        .theme-light.pt-accent-style-borderandfilled-lt .nav-file-title:hover .nav-file-tag {
+            background-color: var(--interactive-accent);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .search-result-hover-button.mod-top:hover,
+        .theme-dark.pt-accent-style-borderandfilled-dt .search-result-hover-button.mod-bottom:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .search-result-hover-button.mod-top:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .search-result-hover-button.mod-bottom:hover {
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .search-result-hover-button.mod-top:hover svg path,
+        .theme-dark.pt-accent-style-borderandfilled-dt .search-result-hover-button.mod-bottom:hover svg path,
+        .theme-light.pt-accent-style-borderandfilled-lt .search-result-hover-button.mod-top:hover svg path,
+        .theme-light.pt-accent-style-borderandfilled-lt .search-result-hover-button.mod-bottom:hover svg path {
+            fill: var(--highlight-text-normal);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file {
+            color: var(--highlight-text-normal);
+            background-color: var(--color-grey);
+            border: var(--border-size) solid var(--color-dark-grey);       
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+            font-weight: 600;
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file:hover, 
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type='outgoing-link'] .search-result-file-match-destination-file:hover {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);       
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+            font-weight: 600;
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button,
+        .theme-dark.pt-accent-style-borderandfilled-dt .embedded-backlinks .search-result-file-match-replace-button,
+        .theme-light.pt-accent-style-borderandfilled-lt .embedded-backlinks .search-result-file-match-replace-button {
+            color: var(--highlight-text-normal);
+            background-color: var(--color-grey);
+            border: var(--border-size) solid var(--color-dark-grey);       
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+            font-weight: 600;
+        }
+    
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button:hover,
+        .theme-dark.pt-accent-style-borderandfilled-dt .embedded-backlinks .search-result-file-match-replace-button:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .embedded-backlinks .search-result-file-match-replace-button:hover {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);       
+            border-radius: var(--border-radius-small);
+            box-shadow: var(--drop-shadow);
+            font-weight: 600;
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected .community-theme-info,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected .community-theme-info,
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected .community-theme-downloads,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected .community-theme-downloads,
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected .clickable-icon,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected .clickable-icon {
+            color: var(--highlight-text-normal);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected .community-theme-downloads:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected .community-theme-downloads:hover,
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected .clickable-icon:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected .clickable-icon:hover {
+            color: var(--interactive-accent-hover);
+        }
+
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme:hover .community-theme-remove-button,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme:hover .community-theme-remove-button {
+            font-weight: 600;
+            color: var(--highlight-text-normal);
+            background-color: var(--color-red);
+            border: var(--border-size) solid var(--color-dark-red);
+            border-radius: var(--border-radius-small);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme:hover .community-theme-remove-button:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme:hover .community-theme-remove-button:hover {
+            color: var(--color-dark-red);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected, 
+        .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);       
+            box-shadow: var(--drop-shadow);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt button.mod-cta,
+        .theme-light.pt-accent-style-borderandfilled-lt button.mod-cta {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            background-color: var(--interactive-accent);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt button.mod-warning,
+        .theme-light.pt-accent-style-borderandfilled-lt button.mod-warning {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--color-dark-red);
+            background-color: var(--color-red);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .modal button:not(.mod-cta):not(.mod-warning),
+        .theme-light.pt-accent-style-borderandfilled-lt .modal button:not(.mod-cta):not(.mod-warning) {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            background-color: var(--color-grey);
+            border: var(--border-size) solid var(--color-dark-grey);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt button.mod-cta:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt button.mod-cta:hover {
+            color: var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt button.mod-warning:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt button.mod-warning:hover {
+            color: var(--color-dark-red);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .modal button:not(.mod-cta):not(.mod-warning):hover {
+            color: var(--color-dark-grey);
+        }
+        
+        .theme-dark.pt-accent-style-borderandfilled-dt .setting-hotkey,
+        .theme-light.pt-accent-style-borderandfilled-lt .setting-hotkey {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--color-dark-blue);
+            background-color: var(--color-blue);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .setting-hotkey.mod-empty,
+        .theme-light.pt-accent-style-borderandfilled-lt .setting-hotkey.mod-empty {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--color-dark-grey);
+            background-color: var(--color-grey);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .setting-hotkey.has-conflict,
+        .theme-light.pt-accent-style-borderandfilled-lt .setting-hotkey.has-conflict {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--color-dark-red);
+            background-color: var(--color-red);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .flair.mod-pop,
+        .theme-light.pt-accent-style-borderandfilled-lt .flair.mod-pop {
+            font-weight: 600;
+            border-radius: var(--border-radius-small);
+            color: var(--highlight-text-normal);
+            border: var(--border-size) solid var(--color-dark-green);
+            background-color: var(--color-green);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt button.copy-code-button,
+        .theme-light.pt-accent-style-borderandfilled-lt button.copy-code-button {
+            color: var(--highlight-text-normal);
+            background-color: var(--color-grey);
+            border: var(--border-size) solid var(--color-dark-grey);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt button.copy-code-button:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt button.copy-code-button:hover {
+            color: var(--color-dark-grey);
+            border: var(--border-size) solid var(--color-dark-grey);
+        }
+
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
+            color: var(--highlight-text-normal);
+            background-color: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+        }
+
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
+        .theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
+        .theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover   {
+            color: var(--interactive-accent-hover);
+        }

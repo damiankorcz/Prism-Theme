@@ -1,0 +1,31 @@
+.workspace-leaf-content[data-type="starred"] .item-list {
+    flex-grow: unset;
+    height:fit-content;
+    border: 0px;
+    border-radius: var(--border-radius);
+    background-color: var(--background-secondary);
+    box-shadow: var(--drop-shadow);
+    padding: 8px;
+}
+.workspace-leaf-content[data-type="starred"] .nav-file-icon {
+    margin: unset;
+    padding: 0px 10px;
+}
+
+.workspace-leaf-content[data-type="starred"] .nav-file-title {
+    border-radius: var(--border-radius-small);
+    border: var(--border-size) solid transparent;
+    color: var(--text-normal);
+    width: 100%;
+    padding: 0px;
+    background: var(--background-primary);
+    box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type="starred"] .nav-file:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.workspace-leaf-content[data-type="starred"] .nav-file-title:hover {
+    line-height: 14px;
+}

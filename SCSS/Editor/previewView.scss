@@ -1,0 +1,415 @@
+/*  ==========================================================================
+    Preview View
+    ========================================================================== */
+
+    .workspace-split.mod-root .view-content,
+    .workspace-split.mod-root .workspace-leaf .workspace-leaf-content,
+    .CodeMirror-gutter.CodeMirror-linenumbers, .CodeMirror-gutter.CodeMirror-foldgutter {
+        background-color: var(--page-background-color);
+    }
+
+    .markdown-preview-view th, 
+    .markdown-preview-view td {
+        border-color: var(--table-border-color); 
+    }
+
+    .markdown-preview-view table {
+        background-color: var(--background-primary);
+    }
+
+    .markdown-embed,
+    .file-embed,
+    .markdown-source-view .markdown-embed,
+    .markdown-source-view .file-embed {
+        border-radius: var(--border-radius-small);
+        border: var(--border-size) solid var(--table-border-color);
+    }
+
+    .markdown-embed-link,
+    .file-embed-link {
+        color: var(--text-muted);
+        top: 8px;
+        right: 8px;
+        padding: 4px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-light .markdown-embed-content > div.markdown-preview-view,
+    .theme-light .markdown-source-view .markdown-embed,
+    .theme-light .markdown-source-view .file-embed {
+        background-color: var(--background-primary);
+    }
+
+    .theme-dark .markdown-embed-content > div.markdown-preview-view,
+    .theme-dark .markdown-source-view .markdown-embed,
+    .theme-dark .markdown-source-view .file-embed {
+        background-color: var(--background-secondary-alt);
+    }
+
+    .markdown-embed .markdown-preview-sizer.markdown-preview-section {
+        min-height: unset !important;
+        padding: unset !important;
+        height: fit-content;
+    }
+
+    .markdown-embed-link:hover,
+    .file-embed-link:hover {
+        color: var(--interactive-accent-hover);
+    }
+
+    .markdown-embed .markdown-preview-section h3[data-heading] {
+        border: unset !important;
+        background: unset !important;
+        color: var(--text-normal);
+        margin: unset;
+    }
+
+    .markdown-embed,
+    .file-embed {
+        padding: unset;
+        margin: 10px 0px;
+    }
+
+    .markdown-embed .markdown-preview-view {
+        padding: 10px;
+    }
+
+    div:not(.is-collapsed) > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon,
+    .cm-gutterElement > div:not(.is-collapsed) .collapse-icon {
+        color: var(--interactive-accent-text);
+    }
+
+    div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover,
+    .cm-gutterElement > div .collapse-icon:hover {
+        color: var(--interactive-accent-hover);
+    }
+    
+    
+    .hr.cm-line hr {
+        border-top: 2px solid var(--table-border-color);
+    }
+
+
+    /*  Checkbox
+        ========================================================================== */ 
+
+        /* Removing default look of the Checkbox */
+        input[type="checkbox"],
+        .markdown-preview-view .task-list-item-checkbox {
+            appearance:unset;
+            filter: none;
+            border-radius: var(--border-radius-small);
+            top: 5px;
+        }
+
+        input[type="checkbox"]:hover,
+        .markdown-preview-view input.task-list-item-checkbox:hover,
+        .markdown-source-view.mod-cm6 .task-list-item-checkbox:hover {
+            border-color: var(--interactive-accent-dark);
+        }
+
+        /* Light Theme Unchecked Checkbox */
+        .theme-light input[type="checkbox"],
+        .theme-light .markdown-preview-view .task-list-item-checkbox {
+            background-color: var(--background-primary-alt);
+            border: var(--border-size) solid var(--background-secondary-alt);
+        }
+
+        /* Dark Theme Unchecked Checkbox */
+        .theme-dark input[type="checkbox"],
+        .theme-dark .markdown-preview-view .task-list-item-checkbox {
+            background-color: var(--background-primary);
+            border: var(--border-size) solid var(--background-primary-alt);
+        }
+        
+        /* Checked checkbox */
+        .theme-light input[type="checkbox"]:checked,
+        .theme-dark input[type="checkbox"]:checked {
+            background: var(--interactive-accent);
+            border: var(--border-size) solid var(--interactive-accent-dark);
+            box-shadow: none;
+        }
+
+        /* Checkbox Check icon setup */
+        input[type="checkbox"]:checked:before {
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: " ";
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMTUiIGhlaWdodD0iMTUiCnZpZXdCb3g9IjAgMCAyNCAyNCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDE5Ljk4MDQ2OSA1Ljk5MDIzNDQgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDE5LjI5Mjk2OSA2LjI5Mjk2ODggTCA5IDE2LjU4NTkzOCBMIDUuNzA3MDMxMiAxMy4yOTI5NjkgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDQuMjkyOTY4OCAxNC43MDcwMzEgTCA4LjI5Mjk2ODggMTguNzA3MDMxIEEgMS4wMDAxIDEuMDAwMSAwIDAgMCA5LjcwNzAzMTIgMTguNzA3MDMxIEwgMjAuNzA3MDMxIDcuNzA3MDMxMiBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTkuOTgwNDY5IDUuOTkwMjM0NCB6Ij48L3BhdGg+PC9zdmc+');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        /* Copy Button in the Code blocks */
+        button.copy-code-button {
+            top: 0;
+            right: 0;
+            margin: 3px;
+            padding: 4px;
+            border: var(--border-size) solid transparent;
+            color: var(--text-muted);
+            background-color: var(--background-primary);
+            font-weight: 600;
+        }
+
+
+    /*  Front Matter
+        ========================================================================== */ 
+        .frontmatter-container {
+            color: var(--text-muted);
+            border-radius: var(--border-radius-small);
+            border: 1px solid var(--table-border-color);
+            padding: 0px;
+        }
+
+        .theme-light .frontmatter-container {
+            background-color: var(--background-primary-alt);
+        }
+
+        .theme-dark .frontmatter-container {
+            background-color: var(--background-secondary);
+        }
+
+        .frontmatter-container .frontmatter-container-header {
+            border-bottom: 1px solid var(--table-border-color);
+            border-radius: var(--border-radius-small);
+            padding: 8px 8px 8px 12px;
+            margin: 0px;
+        }
+
+        .frontmatter-container.is-collapsed .frontmatter-container-header {
+            margin: 0px;
+        }
+
+        .frontmatter-container .frontmatter-section {
+            margin: 0px;
+            padding: 4px 12px;
+        }
+        
+        .frontmatter-container .frontmatter-section-label {
+            display: flex;
+            color: var(--text-normal);
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .frontmatter-container .frontmatter-alias-icon {
+            color: var(--text-faint);
+        }
+
+        .frontmatter-container .tag,
+        .frontmatter-container .frontmatter-alias {
+            border-radius: var(--border-radius-small);
+            color: var(--text-normal);
+            font-size: 0.9em;
+            padding: 2px 8px;
+            margin: 2px 4px;
+            line-height: 19px;
+            border: unset;
+        }
+
+        .theme-light .frontmatter-container .tag,
+        .theme-light .frontmatter-container .frontmatter-alias {
+            background-color: var(--background-secondary-alt);
+        }
+
+        .theme-dark .frontmatter-container .tag,
+        .theme-dark .frontmatter-container .frontmatter-alias {
+            background-color: var(--background-primary);
+        }
+
+
+    /*  Light Theme Preview
+        ========================================================================== */ 
+
+        .theme-light .markdown-preview-view blockquote {
+            border: 2px solid var(--table-border-color);
+            background-color: var(--background-primary);
+            border-left-width: 5px;
+        }
+
+        .theme-light .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+            border: 2px solid var(--table-border-color);
+            background-color: var(--background-primary);
+            border-left-width: 5px;
+            padding: 10px 20px !important;
+            margin: 16px 30px !important;
+        }
+
+        .theme-light .markdown-preview-view hr {
+            border-color: var(--table-border-color);
+        }
+
+        .theme-light .markdown-preview-view code,
+        .theme-light .markdown-preview-view kbd {
+            color: var(--color-text-red);
+            background-color: var(--background-primary);
+            border-radius: var(--border-radius-small);
+            padding: 2px 4px;
+        }
+
+        .theme-light .markdown-preview-view pre,
+        .theme-light :not(pre) > code[class*="language-"],
+        .theme-light pre[class*="language-"],
+        .theme-light .markdown-preview-view .file-embed {
+            color: var(--interactive-accent-text);
+            background: var(--background-primary);
+            border-radius: var(--border-radius-small);
+            border: 2px solid var(--table-border-color);
+        }
+
+        .theme-light code[class*="language-"],
+        .theme-light pre[class*="language-"] {
+            color: var(--text-normal);
+        }
+
+        /* .theme-light .markdown-embed,
+        .theme-light .file-embed {
+            background-color: var(--background-primary);
+        } */
+
+        .theme-light .token.operator,
+        .theme-light .token.entity,
+        .theme-light .token.url,
+        .theme-light .language-css .token.string,
+        .theme-light .style .token.string {
+            color: var(--color-text-orange);
+            background-color: var(--background-primary);
+        }
+
+        .theme-light .token.atrule,
+        .theme-light .token.attr-value,
+        .theme-light .token.keyword {
+            color: var(--color-text-blue);
+        }
+
+        .theme-light .token.selector,
+        .theme-light .token.attr-name,
+        .theme-light .token.string,
+        .theme-light .token.char,
+        .theme-light .token.builtin,
+        .theme-light .token.inserted {
+            color: var(--color-text-green);
+        }
+
+        .theme-light .token.punctuation {
+            color: var(--color-text-grey);
+        }
+
+        .theme-light .token.property,
+        .theme-light .token.tag,
+        .theme-light .token.boolean,
+        .theme-light .token.number,
+        .theme-light .token.constant,
+        .theme-light .token.symbol,
+        .theme-light .token.deleted {
+            color: var(--color-text-pink);
+        }
+        
+        .theme-light .token.regex,
+        .theme-light .token.important {
+            color: var(--color-text-orange);
+        }
+        
+        .theme-light .token.function,
+        .theme-light .token.class-name {
+            color: var(--color-text-red);
+        }
+        
+
+
+    /*  Dark Theme Preview
+        ========================================================================== */ 
+
+        .theme-dark .markdown-preview-view blockquote {
+            border: 2px solid var(--table-border-color);
+            background-color: var(--background-secondary-alt);
+            border-left-width: 5px;
+        }
+
+        .theme-dark .markdown-preview-view hr {
+            border-color: var(--table-border-color);
+        }
+
+        .theme-dark .markdown-preview-view code,
+        .theme-dark .markdown-preview-view kbd {
+            color: var(--color-text-red);
+            background-color: var(--background-secondary-alt);
+            border-radius: var(--border-radius-small);
+            padding: 2px 4px;
+        }
+        
+        .theme-dark .markdown-preview-view pre,
+        .theme-dark :not(pre) > code[class*="language-"],
+        .theme-dark pre[class*="language-"],
+        .theme-dark .markdown-preview-view .file-embed {
+            color:var(--interactive-accent);
+            background: var(--background-secondary-alt);
+            border-radius: var(--border-radius-small);
+            border: 2px solid var(--table-border-color);
+        }
+
+        .theme-dark code[class*="language-"],
+        .theme-dark pre[class*="language-"] {
+            color: var(--text-normal);
+        }
+
+        /* .theme-dark .markdown-embed,
+        .theme-dark .file-embed {
+            background-color: var(--background-secondary-alt);
+        } */
+
+        .theme-dark .token.operator,
+        .theme-dark .token.entity,
+        .theme-dark .token.url,
+        .theme-dark .language-css .token.string,
+        .theme-dark .style .token.string {
+            color: var(--color-text-orange);
+            background-color: var(--background-secondary-alt);
+        }
+
+        .theme-dark .token.atrule,
+        .theme-dark .token.attr-value,
+        .theme-dark .token.keyword {
+            color: var(--color-text-blue);
+        }
+
+        .theme-dark .token.selector,
+        .theme-dark .token.attr-name,
+        .theme-dark .token.string,
+        .theme-dark .token.char,
+        .theme-dark .token.builtin,
+        .theme-dark .token.inserted {
+            color: var(--color-text-green);
+        }
+
+        .theme-dark .token.punctuation {
+            color: var(--color-text-grey);
+        }
+
+        .theme-dark .token.property,
+        .theme-dark .token.tag,
+        .theme-dark .token.boolean,
+        .theme-dark .token.number,
+        .theme-dark .token.constant,
+        .theme-dark .token.symbol,
+        .theme-dark .token.deleted {
+            color: var(--color-text-pink);
+        }
+
+        .theme-dark .token.regex,
+        .theme-dark .token.important {
+            color: var(--color-text-orange);
+        }
+
+        .theme-dark .token.function,
+        .theme-dark .token.class-name {
+            color: var(--color-text-yellow);
+        }
