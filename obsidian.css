@@ -9703,6 +9703,659 @@ code {
   color: var(--interactive-accent-hover);
 }
 
+/*  Titlebar Elements
+    ========================================================================== */
+.titlebar {
+  background-color: transparent;
+  height: 22px !important;
+}
+
+.titlebar-inner {
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+.titlebar-button-container {
+  display: flex;
+  flex-flow: row;
+  position: absolute;
+}
+
+.pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-back,
+.pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-forward {
+  display: none;
+}
+
+.titlebar-button-container.mod-left .mod-back,
+.titlebar-button-container.mod-left .mod-forward {
+  opacity: 1;
+}
+
+.pt-default-titlebar .titlebar-text {
+  position: relative;
+  height: 18px;
+  font-size: 13px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 2px auto 0px auto;
+  width: fit-content;
+  padding: 0 10px;
+  color: var(--text-muted);
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+  letter-spacing: unset;
+  opacity: 1;
+}
+
+body.pt-titlebar-hide-text .titlebar-text {
+  display: none;
+}
+
+.pt-default-titlebar .titlebar-button-container.mod-left {
+  height: 18px;
+  margin-top: 4px;
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+}
+
+.mod-windows.pt-default-titlebar .titlebar-button-container.mod-left {
+  left: 48px !important;
+}
+
+.mod-mac.pt-default-titlebar .titlebar-button-container.mod-left {
+  left: 68px !important;
+}
+
+.pt-default-titlebar .titlebar-button-container.mod-left svg {
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.pt-default-titlebar .titlebar-button-container.mod-left .mod-back,
+.pt-default-titlebar .titlebar-button-container.mod-left .mod-forward {
+  height: 18px;
+  stroke-width: 2px;
+}
+
+.pt-default-titlebar .titlebar-button-container.mod-right {
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+}
+
+.pt-default-titlebar .mod-minimize:hover,
+.pt-default-titlebar .mod-maximize:hover,
+.pt-default-titlebar .mod-close:hover {
+  border-radius: var(--border-radius-small);
+}
+
+/*  Windows 10/11 Titlebar
+    ========================================================================== */
+/* Offset for the Windows Style Titlebar */
+.pt-windows-titlebar {
+  padding-top: 30px !important;
+}
+
+.pt-windows-titlebar .titlebar {
+  height: 30px !important;
+}
+
+.pt-windows-titlebar .titlebar-button-container {
+  top: 0px;
+}
+
+.pt-windows-titlebar div.titlebar-button-container.mod-left {
+  top: 0px;
+  left: 48px !important;
+  height: 22px;
+  margin-top: 4px;
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-left svg {
+  height: 17px;
+  width: 17px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-left .mod-back,
+.pt-windows-titlebar .titlebar-button-container.mod-left .mod-forward {
+  padding: 2px 10px;
+  margin: 0px;
+  height: 22px;
+}
+
+/* Adds the Obsidian 'favicon' to the top left of the Titlebar */
+.pt-windows-titlebar .titlebar-left {
+  position: relative;
+  width: 35px;
+  height: 100%;
+  left: 5px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyI+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQyIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjU4NzMsMCwwLDEsLTI5LjM2NTEsMCkiPgogICAgICAgIDxyZWN0IHg9IjE4LjUiIHk9IjAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJmaWxsOm5vbmU7Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC42MywwLDAsMSwyOS41OTk4LC0wLjI1NjU0MSkiPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDQuNjEsMEwxMi45MSwxNy41MkwwLDQ1LjQ1TDE5LjU3LDkwLjQ3TDQ3LjM1LDEwMEw1Mi40NCw4OS44TDYzLDI2LjM5TDQ0LjYxLDBaIiBzdHlsZT0iZmlsbDpyZ2IoNTIsMzIsMTQwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNjMsMjYuMzlMNDMuNDQsMTQuNDFMMTYuNDMsMzUuN0w0Ny4zNSwxMDBMNTIuNDQsODkuOEw2MywyNi4zOVoiIHN0eWxlPSJmaWxsOnVybCgjX0xpbmVhcjEpO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMC44ODEyMTYsMC4yNTY1NDEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02MywyNi4zOUw0NC42MSwwTDQzLjQ0LDE0LjQxTDYzLDI2LjM5WiIgc3R5bGU9ImZpbGw6cmdiKDE3NSwxNTksMjQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDMuNDQsMTQuNDFMNDQuNjEsMEwxMi45MSwxNy41MkwxNi40MywzNS43TDQzLjQ0LDE0LjQxWiIgc3R5bGU9ImZpbGw6cmdiKDc0LDU1LDE2MCk7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLjg4MTIxNiwwLjI1NjU0MSkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjQzLDM1LjdMMTkuNTcsOTAuNDdMNDcuMzUsMTAwTDE2LjQzLDM1LjdaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNTUsMTYwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgtMzEuNTksLTc1LjQ5LDc1LjQ5LC0zMS41OSw2MC40NCw4MC41NikiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDEwOCw4NiwyMDQpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMTUxLDEzMywyMjkpO3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 16px;
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right {
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+}
+
+/* Adjustments to make the mod buttons look like Windows 10/11 */
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close {
+  padding: 1px 17px 0px 17px;
+  height: 30px;
+  transition: 150ms;
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
+  border-radius: var(--border-radius-small);
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
+  opacity: 1;
+}
+
+.theme-light.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+.theme-light.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
+.theme-dark.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
+  background-color: #E81123;
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover svg {
+  color: #FFFFFF;
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize svg,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize svg,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close svg {
+  color: var(--text-normal);
+  shape-rendering: geometricPrecision;
+  height: 12px;
+  width: 12px;
+}
+
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-back svg,
+.pt-windows-titlebar .titlebar-button-container.mod-right .mod-forward svg {
+  color: var(--text-normal);
+  height: 20px;
+  width: 20px;
+}
+
+.pt-windows-titlebar .titlebar-text {
+  left: 0px;
+  right: 0px;
+  height: 22px;
+  font-size: 14px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  margin: 4px auto 0px auto;
+  width: fit-content;
+  padding: 0px 10px;
+  color: var(--text-muted);
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+  letter-spacing: unset;
+  opacity: 1;
+}
+
+/*  Solid Titlebar
+    ========================================================================== */
+.theme-light.pt-solid-titlebar-lt.pt-titlebar-default-lt div.titlebar,
+.theme-dark.pt-solid-titlebar-dt.pt-titlebar-default-dt div.titlebar {
+  background-color: var(--tab-label-background-color);
+  box-shadow: var(--drop-shadow);
+}
+
+.theme-light.pt-solid-titlebar-lt.pt-titlebar-custom-lt div.titlebar {
+  background-color: var(--titlebar-background-color-lt);
+  box-shadow: var(--drop-shadow);
+}
+
+.theme-dark.pt-solid-titlebar-dt.pt-titlebar-custom-dt div.titlebar {
+  background-color: var(--titlebar-background-color-dt);
+  box-shadow: var(--drop-shadow);
+}
+
+.theme-light.pt-titlebar-default-lt div.titlebar-text,
+.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
+  background-color: var(--tab-label-background-color);
+  box-shadow: var(--drop-shadow);
+}
+
+.theme-light.pt-titlebar-custom-lt div.titlebar-text,
+.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar {
+  background-color: var(--titlebar-background-color-lt);
+  box-shadow: var(--drop-shadow);
+}
+
+.theme-dark.pt-titlebar-custom-dt div.titlebar-text,
+.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-right,
+.theme-dark.pt-titlebar-custom-dt.pt-status-bar-position-top .status-bar {
+  background-color: var(--titlebar-background-color-dt);
+  box-shadow: var(--drop-shadow);
+}
+
+.theme-light.pt-titlebar-text-light-lt div.titlebar-text,
+.theme-light.pt-titlebar-text-light-lt div.titlebar-button svg,
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right svg,
+.theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar {
+  color: var(--background-primary);
+}
+
+.theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
+.theme-light.pt-titlebar-text-dark-lt div.titlebar-button svg,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right svg,
+.theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar {
+  color: var(--text-normal);
+}
+
+.theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
+.theme-light.pt-titlebar-text-accent-lt div.titlebar-button svg,
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right svg,
+.theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar {
+  color: var(--interactive-accent-text);
+}
+
+.theme-dark.pt-titlebar-text-light-dt div.titlebar-text,
+.theme-dark.pt-titlebar-text-light-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right svg,
+.theme-dark.pt-titlebar-text-light-dt.pt-status-bar-position-top .status-bar {
+  color: var(--text-normal);
+}
+
+.theme-dark.pt-titlebar-text-dark-dt div.titlebar-text,
+.theme-dark.pt-titlebar-text-dark-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right svg,
+.theme-dark.pt-titlebar-text-dark-dt.pt-status-bar-position-top .status-bar {
+  color: var(--background-primary);
+}
+
+.theme-dark.pt-titlebar-text-accent-dt div.titlebar-text,
+.theme-dark.pt-titlebar-text-accent-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right svg,
+.theme-dark.pt-titlebar-text-accent-dt.pt-status-bar-position-top .status-bar {
+  color: var(--interactive-accent-text);
+}
+
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
+  color: var(--interactive-accent-hover);
+}
+
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
+  color: var(--interactive-accent-hover);
+}
+
+.titlebar-button-container.mod-right div.titlebar-button.mod-close:hover svg {
+  color: white;
+}
+
+.theme-light.pt-solid-titlebar-lt div.titlebar-text,
+.theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-left,
+.theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-right,
+.theme-dark.pt-solid-titlebar-dt div.titlebar-text,
+.theme-dark.pt-solid-titlebar-dt div.titlebar-button-container.mod-left,
+.theme-dark.pt-solid-titlebar-dt div.titlebar-button-container.mod-right {
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+.theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
+.theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
+.theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover,
+.theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
+.theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
+.theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
+  border-radius: unset;
+}
+
+/*  ==========================================================================
+    Status bar
+    ========================================================================== */
+.status-bar {
+  border-top: 0px;
+  padding: 2px 0px;
+  margin-bottom: 4px;
+  line-height: 18px;
+  border-radius: var(--border-radius-small);
+  width: fit-content;
+  background-color: var(--tab-label-background-color);
+  box-shadow: var(--drop-shadow);
+  overflow: hidden;
+}
+
+.theme-light.pt-solid-titlebar-lt.pt-status-bar-position-top .status-bar,
+.theme-dark.pt-solid-titlebar-dt.pt-status-bar-position-top .status-bar {
+  background: unset;
+  box-shadow: unset;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-center .titlebar-text {
+  display: none;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+  position: absolute;
+  order: 0;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  line-height: 13px;
+  height: 18px;
+  right: 0;
+}
+
+.mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+  left: 134px;
+}
+
+.pt-titlebar-hide-nav-buttons.mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+  left: 48px;
+}
+
+.mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+  left: 154px;
+}
+
+.pt-titlebar-hide-nav-buttons.mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
+  left: 68px;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-center.pt-default-titlebar .status-bar {
+  position: absolute;
+  order: 0;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  line-height: 13px;
+  height: 18px;
+  left: 0;
+  right: 0;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-right.pt-default-titlebar .status-bar {
+  position: absolute;
+  order: 0;
+  margin-top: -20px;
+  margin-bottom: 0px;
+  font-size: 13px;
+  line-height: 13px;
+  height: 18px;
+  right: 100px;
+  left: 0;
+}
+
+.pt-status-bar-position-top.pt-default-titlebar .status-bar svg {
+  height: 14px;
+  width: 14px;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
+  position: absolute;
+  margin-top: -26px;
+  order: 0;
+  margin-bottom: 0px;
+  right: 0;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
+  left: 132px;
+}
+
+.pt-titlebar-hide-nav-buttons.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
+  left: 48px;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
+  position: absolute;
+  margin-top: -26px;
+  order: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0px;
+}
+
+.pt-status-bar-position-top.pt-status-bar-align-right.pt-windows-titlebar .status-bar {
+  position: absolute;
+  margin-top: -26px;
+  order: 0;
+  margin-bottom: 0px;
+  right: 148px;
+}
+
+.pt-status-bar-position-top .horizontal-main-container {
+  padding: 0px 5px 5px 5px;
+}
+
+.pt-status-bar-position-top .status-bar-item-segment {
+  height: 14px;
+  width: 14px;
+  line-height: unset;
+  font-size: unset;
+}
+
+.pt-status-bar-position-top .status-bar-item-icon {
+  color: var(--interactive-accent-dark);
+  height: 14px;
+  width: 14px;
+  line-height: unset;
+  font-size: unset;
+}
+
+.pt-status-bar-position-bottom .horizontal-main-container {
+  padding: 0px 5px;
+}
+
+.pt-status-bar-align-left .status-bar {
+  margin-right: auto;
+  margin-left: 5px;
+}
+
+.pt-status-bar-align-center .status-bar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pt-status-bar-align-right .status-bar {
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.pt-status-bar-rtl .status-bar {
+  flex-direction: row-reverse;
+}
+
+.pt-status-bar-ltr .status-bar {
+  flex-direction: row;
+}
+
+.status-bar-item {
+  padding: 0px 10px;
+}
+
+.theme-light .sync-status-icon.mod-working {
+  color: var(--interactive-accent-dark);
+}
+
+.theme-dark .sync-status-icon.mod-working {
+  color: var(--interactive-accent);
+}
+
+/*  Solid Statusbar
+    ========================================================================== */
+:not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
+:not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
+  box-shadow: unset;
+  width: 100%;
+  margin-bottom: unset;
+  border-radius: unset;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
+  background: var(--tab-label-background-color);
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
+  background: var(--status-bar-background-color-lt);
+}
+
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-custom-dt div.status-bar {
+  background: var(--status-bar-background-color-dt);
+}
+
+/*  Solid Statusbar
+    ========================================================================== */
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-light-lt .status-bar {
+  color: var(--background-primary);
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-dark-lt .status-bar {
+  color: var(--text-normal);
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-accent-lt .status-bar {
+  color: var(--interactive-accent-text);
+}
+
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-light-dt .status-bar {
+  color: var(--text-normal);
+}
+
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-dark-dt .status-bar {
+  color: var(--background-primary);
+}
+
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-accent-dt .status-bar {
+  color: var(--interactive-accent-text);
+}
+
+:not(.pt-status-bar-position-top).pt-solid-status-bar-lt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child,
+:not(.pt-status-bar-position-top).pt-solid-status-bar-dt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
+  margin-right: 10px !important;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
+  margin-left: 0px;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
+  margin-right: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
+  margin-left: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
+  margin-right: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
+  margin-left: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
+  margin-right: 0px;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
+  margin-right: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
+  margin-left: 0px;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
+  margin-right: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
+  margin-left: auto;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
+  margin-right: 0px;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
+  margin-left: auto;
+}
+
 /*  Tab Header
     ========================================================================== */
 /* Tab label container */
@@ -10723,659 +11376,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   color: var(--interactive-accent-hover);
 }
 
-/*  Titlebar Elements
-    ========================================================================== */
-.titlebar {
-  background-color: transparent;
-  height: 22px !important;
-}
-
-.titlebar-inner {
-  color: var(--text-normal);
-  font-weight: 600;
-}
-
-.titlebar-button-container {
-  display: flex;
-  flex-flow: row;
-  position: absolute;
-}
-
-.pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-back,
-.pt-titlebar-hide-nav-buttons .titlebar-button-container.mod-left .mod-forward {
-  display: none;
-}
-
-.titlebar-button-container.mod-left .mod-back,
-.titlebar-button-container.mod-left .mod-forward {
-  opacity: 1;
-}
-
-.pt-default-titlebar .titlebar-text {
-  position: relative;
-  height: 18px;
-  font-size: 13px;
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  margin: 2px auto 0px auto;
-  width: fit-content;
-  padding: 0 10px;
-  color: var(--text-muted);
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-  letter-spacing: unset;
-  opacity: 1;
-}
-
-body.pt-titlebar-hide-text .titlebar-text {
-  display: none;
-}
-
-.pt-default-titlebar .titlebar-button-container.mod-left {
-  height: 18px;
-  margin-top: 4px;
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-}
-
-.mod-windows.pt-default-titlebar .titlebar-button-container.mod-left {
-  left: 48px !important;
-}
-
-.mod-mac.pt-default-titlebar .titlebar-button-container.mod-left {
-  left: 68px !important;
-}
-
-.pt-default-titlebar .titlebar-button-container.mod-left svg {
-  height: 18px;
-  width: 18px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-.pt-default-titlebar .titlebar-button-container.mod-left .mod-back,
-.pt-default-titlebar .titlebar-button-container.mod-left .mod-forward {
-  height: 18px;
-  stroke-width: 2px;
-}
-
-.pt-default-titlebar .titlebar-button-container.mod-right {
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-}
-
-.pt-default-titlebar .mod-minimize:hover,
-.pt-default-titlebar .mod-maximize:hover,
-.pt-default-titlebar .mod-close:hover {
-  border-radius: var(--border-radius-small);
-}
-
-/*  Windows 10/11 Titlebar
-    ========================================================================== */
-/* Offset for the Windows Style Titlebar */
-.pt-windows-titlebar {
-  padding-top: 30px !important;
-}
-
-.pt-windows-titlebar .titlebar {
-  height: 30px !important;
-}
-
-.pt-windows-titlebar .titlebar-button-container {
-  top: 0px;
-}
-
-.pt-windows-titlebar div.titlebar-button-container.mod-left {
-  top: 0px;
-  left: 48px !important;
-  height: 22px;
-  margin-top: 4px;
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-left svg {
-  height: 17px;
-  width: 17px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-left .mod-back,
-.pt-windows-titlebar .titlebar-button-container.mod-left .mod-forward {
-  padding: 2px 10px;
-  margin: 0px;
-  height: 22px;
-}
-
-/* Adds the Obsidian 'favicon' to the top left of the Titlebar */
-.pt-windows-titlebar .titlebar-left {
-  position: relative;
-  width: 35px;
-  height: 100%;
-  left: 5px;
-  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyI+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQyIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjU4NzMsMCwwLDEsLTI5LjM2NTEsMCkiPgogICAgICAgIDxyZWN0IHg9IjE4LjUiIHk9IjAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJmaWxsOm5vbmU7Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC42MywwLDAsMSwyOS41OTk4LC0wLjI1NjU0MSkiPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDQuNjEsMEwxMi45MSwxNy41MkwwLDQ1LjQ1TDE5LjU3LDkwLjQ3TDQ3LjM1LDEwMEw1Mi40NCw4OS44TDYzLDI2LjM5TDQ0LjYxLDBaIiBzdHlsZT0iZmlsbDpyZ2IoNTIsMzIsMTQwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNjMsMjYuMzlMNDMuNDQsMTQuNDFMMTYuNDMsMzUuN0w0Ny4zNSwxMDBMNTIuNDQsODkuOEw2MywyNi4zOVoiIHN0eWxlPSJmaWxsOnVybCgjX0xpbmVhcjEpO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMC44ODEyMTYsMC4yNTY1NDEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02MywyNi4zOUw0NC42MSwwTDQzLjQ0LDE0LjQxTDYzLDI2LjM5WiIgc3R5bGU9ImZpbGw6cmdiKDE3NSwxNTksMjQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDMuNDQsMTQuNDFMNDQuNjEsMEwxMi45MSwxNy41MkwxNi40MywzNS43TDQzLjQ0LDE0LjQxWiIgc3R5bGU9ImZpbGw6cmdiKDc0LDU1LDE2MCk7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLjg4MTIxNiwwLjI1NjU0MSkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjQzLDM1LjdMMTkuNTcsOTAuNDdMNDcuMzUsMTAwTDE2LjQzLDM1LjdaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNTUsMTYwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgtMzEuNTksLTc1LjQ5LDc1LjQ5LC0zMS41OSw2MC40NCw4MC41NikiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDEwOCw4NiwyMDQpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMTUxLDEzMywyMjkpO3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 16px;
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right {
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-}
-
-/* Adjustments to make the mod buttons look like Windows 10/11 */
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close {
-  padding: 1px 17px 0px 17px;
-  height: 30px;
-  transition: 150ms;
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
-  border-radius: var(--border-radius-small);
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
-  opacity: 1;
-}
-
-.theme-light.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
-.theme-light.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.theme-dark.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize:hover,
-.theme-dark.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover {
-  background-color: #E81123;
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close:hover svg {
-  color: #FFFFFF;
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-minimize svg,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-maximize svg,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-close svg {
-  color: var(--text-normal);
-  shape-rendering: geometricPrecision;
-  height: 12px;
-  width: 12px;
-}
-
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-back svg,
-.pt-windows-titlebar .titlebar-button-container.mod-right .mod-forward svg {
-  color: var(--text-normal);
-  height: 20px;
-  width: 20px;
-}
-
-.pt-windows-titlebar .titlebar-text {
-  left: 0px;
-  right: 0px;
-  height: 22px;
-  font-size: 14px;
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  margin: 4px auto 0px auto;
-  width: fit-content;
-  padding: 0px 10px;
-  color: var(--text-muted);
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-  letter-spacing: unset;
-  opacity: 1;
-}
-
-/*  Solid Titlebar
-    ========================================================================== */
-.theme-light.pt-solid-titlebar-lt.pt-titlebar-default-lt div.titlebar,
-.theme-dark.pt-solid-titlebar-dt.pt-titlebar-default-dt div.titlebar {
-  background-color: var(--tab-label-background-color);
-  box-shadow: var(--drop-shadow);
-}
-
-.theme-light.pt-solid-titlebar-lt.pt-titlebar-custom-lt div.titlebar {
-  background-color: var(--titlebar-background-color-lt);
-  box-shadow: var(--drop-shadow);
-}
-
-.theme-dark.pt-solid-titlebar-dt.pt-titlebar-custom-dt div.titlebar {
-  background-color: var(--titlebar-background-color-dt);
-  box-shadow: var(--drop-shadow);
-}
-
-.theme-light.pt-titlebar-default-lt div.titlebar-text,
-.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
-  background-color: var(--tab-label-background-color);
-  box-shadow: var(--drop-shadow);
-}
-
-.theme-light.pt-titlebar-custom-lt div.titlebar-text,
-.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar {
-  background-color: var(--titlebar-background-color-lt);
-  box-shadow: var(--drop-shadow);
-}
-
-.theme-dark.pt-titlebar-custom-dt div.titlebar-text,
-.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-right,
-.theme-dark.pt-titlebar-custom-dt.pt-status-bar-position-top .status-bar {
-  background-color: var(--titlebar-background-color-dt);
-  box-shadow: var(--drop-shadow);
-}
-
-.theme-light.pt-titlebar-text-light-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-light-lt div.titlebar-button svg,
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right svg,
-.theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar {
-  color: var(--background-primary);
-}
-
-.theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-dark-lt div.titlebar-button svg,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right svg,
-.theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar {
-  color: var(--text-normal);
-}
-
-.theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-accent-lt div.titlebar-button svg,
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right svg,
-.theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar {
-  color: var(--interactive-accent-text);
-}
-
-.theme-dark.pt-titlebar-text-light-dt div.titlebar-text,
-.theme-dark.pt-titlebar-text-light-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right svg,
-.theme-dark.pt-titlebar-text-light-dt.pt-status-bar-position-top .status-bar {
-  color: var(--text-normal);
-}
-
-.theme-dark.pt-titlebar-text-dark-dt div.titlebar-text,
-.theme-dark.pt-titlebar-text-dark-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right svg,
-.theme-dark.pt-titlebar-text-dark-dt.pt-status-bar-position-top .status-bar {
-  color: var(--background-primary);
-}
-
-.theme-dark.pt-titlebar-text-accent-dt div.titlebar-text,
-.theme-dark.pt-titlebar-text-accent-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right svg,
-.theme-dark.pt-titlebar-text-accent-dt.pt-status-bar-position-top .status-bar {
-  color: var(--interactive-accent-text);
-}
-
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
-  color: var(--interactive-accent-hover);
-}
-
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left div.titlebar-button:hover svg,
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover svg,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover svg {
-  color: var(--interactive-accent-hover);
-}
-
-.titlebar-button-container.mod-right div.titlebar-button.mod-close:hover svg {
-  color: white;
-}
-
-.theme-light.pt-solid-titlebar-lt div.titlebar-text,
-.theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-left,
-.theme-light.pt-solid-titlebar-lt div.titlebar-button-container.mod-right,
-.theme-dark.pt-solid-titlebar-dt div.titlebar-text,
-.theme-dark.pt-solid-titlebar-dt div.titlebar-button-container.mod-left,
-.theme-dark.pt-solid-titlebar-dt div.titlebar-button-container.mod-right {
-  background-color: transparent;
-  box-shadow: unset;
-}
-
-.theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
-.theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
-.theme-light.pt-solid-titlebar-lt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover,
-.theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
-.theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
-.theme-dark.pt-solid-titlebar-dt .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
-  border-radius: unset;
-}
-
-/*  ==========================================================================
-    Status bar
-    ========================================================================== */
-.status-bar {
-  border-top: 0px;
-  padding: 2px 0px;
-  margin-bottom: 4px;
-  line-height: 18px;
-  border-radius: var(--border-radius-small);
-  width: fit-content;
-  background-color: var(--tab-label-background-color);
-  box-shadow: var(--drop-shadow);
-  overflow: hidden;
-}
-
-.theme-light.pt-solid-titlebar-lt.pt-status-bar-position-top .status-bar,
-.theme-dark.pt-solid-titlebar-dt.pt-status-bar-position-top .status-bar {
-  background: unset;
-  box-shadow: unset;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-center .titlebar-text {
-  display: none;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-  position: absolute;
-  order: 0;
-  margin-top: -20px;
-  margin-bottom: 0px;
-  font-size: 13px;
-  line-height: 13px;
-  height: 18px;
-  right: 0;
-}
-
-.mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-  left: 134px;
-}
-
-.pt-titlebar-hide-nav-buttons.mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-  left: 48px;
-}
-
-.mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-  left: 154px;
-}
-
-.pt-titlebar-hide-nav-buttons.mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-  left: 68px;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-center.pt-default-titlebar .status-bar {
-  position: absolute;
-  order: 0;
-  margin-top: -20px;
-  margin-bottom: 0px;
-  font-size: 13px;
-  line-height: 13px;
-  height: 18px;
-  left: 0;
-  right: 0;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-right.pt-default-titlebar .status-bar {
-  position: absolute;
-  order: 0;
-  margin-top: -20px;
-  margin-bottom: 0px;
-  font-size: 13px;
-  line-height: 13px;
-  height: 18px;
-  right: 100px;
-  left: 0;
-}
-
-.pt-status-bar-position-top.pt-default-titlebar .status-bar svg {
-  height: 14px;
-  width: 14px;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
-  position: absolute;
-  margin-top: -26px;
-  order: 0;
-  margin-bottom: 0px;
-  right: 0;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
-  left: 132px;
-}
-
-.pt-titlebar-hide-nav-buttons.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
-  left: 48px;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
-  position: absolute;
-  margin-top: -26px;
-  order: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 0px;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-right.pt-windows-titlebar .status-bar {
-  position: absolute;
-  margin-top: -26px;
-  order: 0;
-  margin-bottom: 0px;
-  right: 148px;
-}
-
-.pt-status-bar-position-top .horizontal-main-container {
-  padding: 0px 5px 5px 5px;
-}
-
-.pt-status-bar-position-top .status-bar-item-segment {
-  height: 14px;
-  width: 14px;
-  line-height: unset;
-  font-size: unset;
-}
-
-.pt-status-bar-position-top .status-bar-item-icon {
-  color: var(--interactive-accent-dark);
-  height: 14px;
-  width: 14px;
-  line-height: unset;
-  font-size: unset;
-}
-
-.pt-status-bar-position-bottom .horizontal-main-container {
-  padding: 0px 5px;
-}
-
-.pt-status-bar-align-left .status-bar {
-  margin-right: auto;
-  margin-left: 5px;
-}
-
-.pt-status-bar-align-center .status-bar {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pt-status-bar-align-right .status-bar {
-  margin-left: auto;
-  margin-right: 5px;
-}
-
-.pt-status-bar-rtl .status-bar {
-  flex-direction: row-reverse;
-}
-
-.pt-status-bar-ltr .status-bar {
-  flex-direction: row;
-}
-
-.status-bar-item {
-  padding: 0px 10px;
-}
-
-.theme-light .sync-status-icon.mod-working {
-  color: var(--interactive-accent-dark);
-}
-
-.theme-dark .sync-status-icon.mod-working {
-  color: var(--interactive-accent);
-}
-
-/*  Solid Statusbar
-    ========================================================================== */
-:not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
-:not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
-  box-shadow: unset;
-  width: 100%;
-  margin-bottom: unset;
-  border-radius: unset;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
-  background: var(--tab-label-background-color);
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
-  background: var(--status-bar-background-color-lt);
-}
-
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-custom-dt div.status-bar {
-  background: var(--status-bar-background-color-dt);
-}
-
-/*  Solid Statusbar
-    ========================================================================== */
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-light-lt .status-bar {
-  color: var(--background-primary);
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-dark-lt .status-bar {
-  color: var(--text-normal);
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-accent-lt .status-bar {
-  color: var(--interactive-accent-text);
-}
-
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-light-dt .status-bar {
-  color: var(--text-normal);
-}
-
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-dark-dt .status-bar {
-  color: var(--background-primary);
-}
-
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-accent-dt .status-bar {
-  color: var(--interactive-accent-text);
-}
-
-:not(.pt-status-bar-position-top).pt-solid-status-bar-lt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child,
-:not(.pt-status-bar-position-top).pt-solid-status-bar-dt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
-  margin-right: 10px !important;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
-  margin-left: 0px;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
-  margin-right: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
-  margin-left: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
-  margin-right: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
-  margin-left: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
-  margin-right: 0px;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
-  margin-right: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
-  margin-left: 0px;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
-  margin-right: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
-  margin-left: auto;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
-  margin-right: 0px;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
-  margin-left: auto;
-}
-
 /*  ==========================================================================
     Popovers (File Previews)
     ========================================================================== */
@@ -12246,330 +12246,12 @@ a:hover {
   background: none;
 }
 
-.workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > div.nav-folder-children {
-  margin-left: unset;
-  border-left: unset;
-  padding: 0px 8px 8px 8px;
-}
-
-.workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
-  margin: 0px 0px 0px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
-  padding-left: unset;
-}
-
-.workspace-leaf-content[data-type=file-explorer] .nav-file-title-content {
-  padding: 1px 2px 1px calc(8px - var(--file-explorer-vertical-lines-width));
-}
-
-.nav-file:not(.mod-root),
-.nav-folder:not(.mod-root) {
-  margin-left: 2px;
-}
-
-.nav-folder.mod-root > .nav-folder-children > .nav-file {
-  margin-left: unset;
-}
-
-/* Fixes the bounce caused by a random div in the nav-folder-children */
-.workspace-leaf-content[data-type=file-explorer] .nav-folder-children > div:not(.nav-folder):not(.nav-file) {
-  display: none;
-}
-
-/*  File Tree Vertical Lines
-    ========================================================================== */
-.pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
-  margin: 2px 0px 2px calc(10px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
-  padding-left: unset;
-}
-
-.pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > div.nav-folder-children {
-  margin-left: unset;
-  border-left: unset;
-  padding: 0px 8px 8px 8px;
-}
-
-.pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root .nav-folder-children {
-  border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
-}
-
-/*  File Tree Text Wrap
-    ========================================================================== */
-/* Wrap long nav text */
-.pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-file-title,
-.pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-folder-title {
-  white-space: normal;
-  width: auto;
-}
-
-.workspace-leaf-content[data-type=starred] .item-list {
-  flex-grow: unset;
-  height: fit-content;
-  border: 0px;
-  border-radius: var(--border-radius);
-  background-color: var(--background-secondary);
-  box-shadow: var(--drop-shadow);
-  padding: 8px;
-}
-
-.workspace-leaf-content[data-type=starred] .nav-file-icon {
-  margin: unset;
-  padding: 0px 10px;
-}
-
-.workspace-leaf-content[data-type=starred] .nav-file-title {
-  border-radius: var(--border-radius-small);
-  border: var(--border-size) solid transparent;
-  color: var(--text-normal);
-  width: 100%;
-  padding: 0px;
-  background: var(--background-primary);
-  box-shadow: var(--drop-shadow);
-}
-
-.workspace-leaf-content[data-type=starred] .nav-file:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-.workspace-leaf-content[data-type=starred] .nav-file-title:hover {
-  line-height: 14px;
-}
-
 /*  ==========================================================================
-    Search
+    Audio Recorder
     ========================================================================== */
-.search-result-hover-button.mod-top {
-  top: 0px;
-  right: 0px;
-  border-radius: var(--border-radius-small);
-  border: var(--border-size) solid transparent;
-}
-
-.search-result-hover-button.mod-top svg {
-  height: 10px;
-  width: 10px;
-  color: var(--text-muted);
-}
-
-.search-result-hover-button.mod-bottom {
-  bottom: 0px;
-  right: 0px;
-  border-radius: var(--border-radius-small);
-  border: var(--border-size) solid transparent;
-}
-
-.search-result-hover-button.mod-bottom svg {
-  height: 10px;
-  width: 10px;
-  color: var(--text-muted);
-}
-
-.search-result-hover-button.mod-top:hover,
-.search-result-hover-button.mod-bottom:hover {
-  color: var(--interactive-accent-hover);
-}
-
-.tree-item-self .tree-item-flair {
-  border: var(--border-size) solid var(--background-secondary);
-  background-color: var(--background-secondary);
-  border-radius: var(--border-radius-small);
-  font-weight: 600;
-}
-
-.tree-item-flair-outer:after {
-  display: none;
-}
-
-.workspace-leaf-content[data-type=search] .search-input-container {
-  width: 100%;
-  margin: 0px;
-  z-index: 1000;
-  background: transparent;
-}
-
-.workspace-leaf-content[data-type=search] .search-result-container {
-  padding: 0px 10px 0px 0px;
-  box-sizing: border-box;
-}
-
-.workspace-leaf-content[data-type=search] .search-result-file-match {
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-  border-radius: var(--border-radius-small);
-  left: 0px;
-  font-size: 0.875rem;
-  color: var(--text-normal);
-  background: var(--background-primary);
-  box-shadow: var(--drop-shadow);
-  border-radius: var(--border-radius-small);
-  border: 1px solid var(--background-modifier-border);
-}
-
-.search-result-file-matched-text {
-  color: var(--highlight-text-normal);
-  background-color: var(--interactive-accent);
-  border-radius: var(--border-radius-small);
-}
-
-.workspace-leaf-content[data-type=search] .search-result-file-match:hover {
-  background: var(--background-primary);
-}
-
-.workspace-leaf-content[data-type=search] .search-result-file-matches {
-  margin: 0px;
-  padding: 8px;
-}
-
-.workspace-leaf-content[data-type=search] .search-result-file-match:after {
-  display: none;
-}
-
-.workspace-leaf-content[data-type=search] .search-result {
-  border: none;
-  background-color: var(--background-secondary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-}
-
-.workspace-leaf-content[data-type=search] .search-result .tree-item-self {
-  border: unset;
-  background: var(--tab-label-background-color);
-  border-radius: var(--border-radius);
-  padding: 5px 5px 5px 25px;
-}
-
-.workspace-leaf-content[data-type=search] .search-result .tree-item-self.is-clickable:hover {
-  box-shadow: unset;
-  border: unset;
-  background: unset;
-  background: var(--tab-label-background-color);
-}
-
-.workspace-leaf-content[data-type=search] .search-info-container {
-  font-size: 14px;
-  font-weight: 600;
-  height: fit-content;
-  width: fit-content;
-  background: var(--tab-label-background-color);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
-  padding: 0px 10px;
-  margin: 0px 10px 10px 0px;
-}
-
-.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self .tree-item-inner {
-  padding-right: 5px;
-}
-
-.workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon {
-  padding: 8px 10px;
-}
-
-.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self .tree-item-icon {
-  color: var(--text-faint);
-}
-
-.workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon::after {
-  display: none;
-}
-
-.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover,
-.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self {
-  background-color: var(--background-primary);
-}
-
-.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover,
-.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self:hover {
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover .tree-item-icon,
-.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self .tree-item-icon {
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover .tree-item-icon:hover,
-.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self .tree-item-icon:hover {
-  color: var(--interactive-accent-hover);
-}
-
-.workspace-leaf-content[data-type=search] .search-result-file-matches {
-  border-bottom: unset;
-}
-
-/*  ==========================================================================
-    Tags Pane
-    ========================================================================== */
-.workspace-leaf-content[data-type=tag] .tree-item-self {
-  border-radius: var(--border-radius-small);
-  border: var(--border-size) solid transparent;
-  color: var(--text-normal);
-  width: 100%;
-  padding: 0px 5px 0px 10px;
-  background: var(--background-primary);
-  box-shadow: var(--drop-shadow);
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-inner {
-  padding-right: 5px;
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-self.is-clickable:hover {
-  color: var(--interactive-accent-text);
-  background-color: var(--background-primary);
-  border: var(--border-size) solid var(--background-primary);
-  font-weight: 600;
-  box-shadow: var(--drop-shadow);
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon {
-  margin-left: -12px;
-  padding: 8px 10px;
-  color: var(--text-muted);
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon::after {
-  display: none;
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
-.workspace-leaf-content[data-type=tag] .tree-item-self.is-clickable .tree-item-icon:hover {
-  color: var(--interactive-accent-hover);
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-children {
-  margin-left: 16px;
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-children .tree-item {
-  margin-top: 8px;
-}
-
-.workspace-leaf-content[data-type=tag] .tree-item-flair {
-  border: var(--border-size) solid transparent;
-}
-
-.workspace-leaf-content[data-type=tag] .tag-container > div:first-of-type {
-  padding: 8px;
-  border: none;
-  background-color: var(--background-secondary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-}
-
-.workspace-leaf-content[data-type=tag] .tag-container {
-  padding: 0px 10px 0px 0px;
-}
-
-.workspace-leaf-content[data-type=tag] .tag-pane-tag-text {
-  font-weight: 600;
+.theme-light .side-dock-ribbon-action.is-active svg.microphone-filled,
+.theme-dark .side-dock-ribbon-action.is-active svg.microphone-filled {
+  color: var(--color-text-red);
 }
 
 /*  Backlinks
@@ -12812,162 +12494,98 @@ a:hover {
   margin-bottom: unset;
 }
 
-/*  Outgoing Links
+/*  ==========================================================================
+    Command Palette
     ========================================================================== */
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane {
-  padding: 0px 10px 0px 0px;
+.prompt {
+  background-color: var(--background-secondary);
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self {
-  border: unset;
-  border-radius: var(--border-radius);
-  padding: 5px 5px 5px 25px;
+input.prompt-input {
+  margin-bottom: 10px;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
-  color: var(--text-normal);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover,
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair {
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-icon {
-  color: var(--interactive-accent-hover);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self {
-  color: var(--text-muted);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable.is-collapsed .collapse-icon {
-  color: var(--text-faint);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable:not(.is-collapsed) .collapse-icon {
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable:hover .collapse-icon {
-  color: var(--interactive-accent-hover);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type) {
-  border-bottom-color: transparent;
-  border: none;
-  background-color: var(--tab-label-background-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: 5px 5px 5px 25px;
-  position: relative;
-  z-index: 500;
-  margin-bottom: 8px;
-  font-size: 14px;
+.suggestion-hotkey {
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius-small);
   font-weight: 600;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type).is-collapsed:hover,
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover {
-  background-color: var(--background-primary);
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
-  background-color: var(--background-primary);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .search-result:last-child .search-result-file-matches {
-  border-bottom-color: transparent;
-  border: none;
-  background-color: var(--background-secondary);
-  border-radius: var(--border-radius);
+.modal-container .prompt {
+  border: 1px solid var(--table-border-color);
   box-shadow: var(--drop-shadow);
-  padding: 30px 8px 8px 8px;
+  background-color: var(--background-secondary-blur);
+  backdrop-filter: blur(var(--blur-intensity));
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .search-result-container {
-  margin-bottom: 8px;
-  margin-top: -30px;
-  padding: unset;
+.prompt-results {
+  padding: 0px 10px 0px 0px;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item {
-  padding: 5px 10px 5px 25px;
-  margin: 0px;
-  font-size: 0.875rem;
-  background: var(--background-primary);
-  box-shadow: var(--drop-shadow);
+.theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+  background-color: var(--background-color-lt);
   border-radius: var(--border-radius-small);
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item:hover {
-  color: var(--interactive-accent-text);
+.theme-dark .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+  background-color: var(--background-color-dt);
+  border-radius: var(--border-radius-small);
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-inner-subtext {
-  color: var(--text-muted);
+.workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > div.nav-folder-children {
+  margin-left: unset;
+  border-left: unset;
+  padding: 0px 8px 8px 8px;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-inner-subtext {
-  color: var(--text-normal);
+.workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
+  margin: 0px 0px 0px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  padding-left: unset;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item:not(:last-child) {
-  margin-bottom: 8px;
+.workspace-leaf-content[data-type=file-explorer] .nav-file-title-content {
+  padding: 1px 2px 1px calc(8px - var(--file-explorer-vertical-lines-width));
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .search-result-file-match {
-  left: unset;
-  width: 100%;
-  padding: 5px 20px 5px 10px;
-  background: var(--background-primary);
-  box-shadow: var(--drop-shadow);
-  border-radius: var(--border-radius);
+.nav-file:not(.mod-root),
+.nav-folder:not(.mod-root) {
+  margin-left: 2px;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .search-result-file-match:hover {
-  color: var(--text-normal);
+.nav-folder.mod-root > .nav-folder-children > .nav-file {
+  margin-left: unset;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .search-result-file-match:after {
+/* Fixes the bounce caused by a random div in the nav-folder-children */
+.workspace-leaf-content[data-type=file-explorer] .nav-folder-children > div:not(.nav-folder):not(.nav-file) {
   display: none;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane > .search-result-container:not(:last-of-type) {
-  border-bottom-color: transparent;
-  border: none;
-  background-color: var(--background-secondary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: 30px 8px 8px 8px;
-  min-height: unset !important;
+/*  File Tree Vertical Lines
+    ========================================================================== */
+.pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
+  margin: 2px 0px 2px calc(10px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  padding-left: unset;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane .search-result-container:not(:last-of-type) > div:first-child {
-  display: none;
+.pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > div.nav-folder-children {
+  margin-left: unset;
+  border-left: unset;
+  padding: 0px 8px 8px 8px;
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon {
-  padding: 8px 10px;
+.pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root .nav-folder-children {
+  border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
 }
 
-.workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon:after {
-  display: none;
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .search-results-children {
-  padding-bottom: 0px;
-}
-
-.workspace-leaf-content[data-type=markdown] .view-content {
-  background-color: var(--page-background-color);
-  box-shadow: var(--drop-shadow);
-}
-
-.mod-left-split .workspace-leaf-content[data-type=markdown] .view-content,
-.mod-right-split .workspace-leaf-content[data-type=markdown] .view-content {
-  border-radius: var(--border-radius);
+/*  File Tree Text Wrap
+    ========================================================================== */
+/* Wrap long nav text */
+.pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-file-title,
+.pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-folder-title {
+  white-space: normal;
+  width: auto;
 }
 
 /*  Graph
@@ -13375,6 +12993,428 @@ a:hover {
 .theme-dark.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight,
 .theme-dark.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
   color: var(--color-dark-grey);
+}
+
+.workspace-leaf-content[data-type=markdown] .view-content {
+  background-color: var(--page-background-color);
+  box-shadow: var(--drop-shadow);
+}
+
+.mod-left-split .workspace-leaf-content[data-type=markdown] .view-content,
+.mod-right-split .workspace-leaf-content[data-type=markdown] .view-content {
+  border-radius: var(--border-radius);
+}
+
+/*  Outgoing Links
+    ========================================================================== */
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane {
+  padding: 0px 10px 0px 0px;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self {
+  border: unset;
+  border-radius: var(--border-radius);
+  padding: 5px 5px 5px 25px;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
+  color: var(--text-normal);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover,
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-icon {
+  color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self {
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable.is-collapsed .collapse-icon {
+  color: var(--text-faint);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable:not(.is-collapsed) .collapse-icon {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable:hover .collapse-icon {
+  color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type) {
+  border-bottom-color: transparent;
+  border: none;
+  background-color: var(--tab-label-background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 5px 5px 5px 25px;
+  position: relative;
+  z-index: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type).is-collapsed:hover,
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover {
+  background-color: var(--background-primary);
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
+  background-color: var(--background-primary);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .search-result:last-child .search-result-file-matches {
+  border-bottom-color: transparent;
+  border: none;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 30px 8px 8px 8px;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .search-result-container {
+  margin-bottom: 8px;
+  margin-top: -30px;
+  padding: unset;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item {
+  padding: 5px 10px 5px 25px;
+  margin: 0px;
+  font-size: 0.875rem;
+  background: var(--background-primary);
+  box-shadow: var(--drop-shadow);
+  border-radius: var(--border-radius-small);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item:hover {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-inner-subtext {
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-inner-subtext {
+  color: var(--text-normal);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .search-result-file-match {
+  left: unset;
+  width: 100%;
+  padding: 5px 20px 5px 10px;
+  background: var(--background-primary);
+  box-shadow: var(--drop-shadow);
+  border-radius: var(--border-radius);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .search-result-file-match:hover {
+  color: var(--text-normal);
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .search-result-file-match:after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane > .search-result-container:not(:last-of-type) {
+  border-bottom-color: transparent;
+  border: none;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 30px 8px 8px 8px;
+  min-height: unset !important;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane .search-result-container:not(:last-of-type) > div:first-child {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon {
+  padding: 8px 10px;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon:after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=outgoing-link] .search-results-children {
+  padding-bottom: 0px;
+}
+
+/*  Outline
+    ========================================================================== */
+.workspace-leaf-content[data-type=outline] .outline {
+  border: 0px;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.workspace-leaf-content[data-type=outline] .view-content {
+  padding: 0px 10px 0px 0px;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-inner {
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-self.is-clickable:hover {
+  background-color: var(--background-primary);
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-self.is-clickable:hover .tree-item-inner {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=outline] .outline .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
+.workspace-leaf-content[data-type=outline] .outline .tree-item-self.is-clickable .tree-item-icon:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type=outline] .outline .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-inner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Wrap long nav text */
+.pt-outline-text-wrap .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-inner {
+  white-space: normal;
+  width: auto;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-inner {
+  padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
+  line-height: 14px;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon {
+  padding-left: 20px;
+  margin-right: -2px;
+  margin-left: unset;
+  padding: unset;
+  width: 16px;
+  height: 16px;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon:after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-children {
+  margin: 0px 0px 0px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  border-left: 2px solid transparent;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-self {
+  padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
+  border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius-small);
+  white-space: nowrap;
+  min-width: 100%;
+}
+
+.workspace-leaf-content[data-type=outline] .tree-item-children > .tree-item > .tree-item-self {
+  margin-left: 2px;
+}
+
+.workspace-leaf-content[data-type=outline] .outline > .tree-item > .tree-item-children {
+  margin-left: 10px;
+}
+
+/*  Outline Vertical Lines (Relationship Lines)
+    ========================================================================== */
+.pt-outline-vertical-lines .workspace-leaf-content[data-type=outline] .tree-item-children {
+  margin: 2px 0px 2px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  border-left: var(--outline-vertical-lines-width) solid var(--outline-vertical-lines-color);
+}
+
+.pt-outline-vertical-lines .workspace-leaf-content[data-type=outline] .tree-item-self {
+  padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
+  border: var(--border-size) solid transparent;
+}
+
+/*  ==========================================================================
+    Search
+    ========================================================================== */
+.search-result-hover-button.mod-top {
+  top: 0px;
+  right: 0px;
+  border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
+}
+
+.search-result-hover-button.mod-top svg {
+  height: 10px;
+  width: 10px;
+  color: var(--text-muted);
+}
+
+.search-result-hover-button.mod-bottom {
+  bottom: 0px;
+  right: 0px;
+  border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
+}
+
+.search-result-hover-button.mod-bottom svg {
+  height: 10px;
+  width: 10px;
+  color: var(--text-muted);
+}
+
+.search-result-hover-button.mod-top:hover,
+.search-result-hover-button.mod-bottom:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.tree-item-self .tree-item-flair {
+  border: var(--border-size) solid var(--background-secondary);
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-small);
+  font-weight: 600;
+}
+
+.tree-item-flair-outer:after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=search] .search-input-container {
+  width: 100%;
+  margin: 0px;
+  z-index: 1000;
+  background: transparent;
+}
+
+.workspace-leaf-content[data-type=search] .search-result-container {
+  padding: 0px 10px 0px 0px;
+  box-sizing: border-box;
+}
+
+.workspace-leaf-content[data-type=search] .search-result-file-match {
+  width: 100%;
+  padding: 5px 20px 5px 10px;
+  border-radius: var(--border-radius-small);
+  left: 0px;
+  font-size: 0.875rem;
+  color: var(--text-normal);
+  background: var(--background-primary);
+  box-shadow: var(--drop-shadow);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.search-result-file-matched-text {
+  color: var(--highlight-text-normal);
+  background-color: var(--interactive-accent);
+  border-radius: var(--border-radius-small);
+}
+
+.workspace-leaf-content[data-type=search] .search-result-file-match:hover {
+  background: var(--background-primary);
+}
+
+.workspace-leaf-content[data-type=search] .search-result-file-matches {
+  margin: 0px;
+  padding: 8px;
+}
+
+.workspace-leaf-content[data-type=search] .search-result-file-match:after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=search] .search-result {
+  border: none;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type=search] .search-result .tree-item-self {
+  border: unset;
+  background: var(--tab-label-background-color);
+  border-radius: var(--border-radius);
+  padding: 5px 5px 5px 25px;
+}
+
+.workspace-leaf-content[data-type=search] .search-result .tree-item-self.is-clickable:hover {
+  box-shadow: unset;
+  border: unset;
+  background: unset;
+  background: var(--tab-label-background-color);
+}
+
+.workspace-leaf-content[data-type=search] .search-info-container {
+  font-size: 14px;
+  font-weight: 600;
+  height: fit-content;
+  width: fit-content;
+  background: var(--tab-label-background-color);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+  padding: 0px 10px;
+  margin: 0px 10px 10px 0px;
+}
+
+.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self .tree-item-inner {
+  padding-right: 5px;
+}
+
+.workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon {
+  padding: 8px 10px;
+}
+
+.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self .tree-item-icon {
+  color: var(--text-faint);
+}
+
+.workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon::after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover,
+.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self {
+  background-color: var(--background-primary);
+}
+
+.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover,
+.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self:hover {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover .tree-item-icon,
+.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self .tree-item-icon {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover .tree-item-icon:hover,
+.workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self .tree-item-icon:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type=search] .search-result-file-matches {
+  border-bottom: unset;
 }
 
 /*  ==========================================================================
@@ -13817,11 +13857,11 @@ img.community-theme-lightbox {
   padding: 0px;
 }
 
-.community-theme.is-selected img[alt=Prism] {
+body:not(.css-settings-manager) .community-theme.is-selected img[alt=Prism] {
   display: none;
 }
 
-.community-theme.is-selected > div:nth-child(3)::after {
+body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3)::after {
   height: fit-content;
   width: 100%;
   display: block;
@@ -13988,45 +14028,6 @@ img.community-theme-lightbox {
 }
 
 /*  ==========================================================================
-    Command Palette
-    ========================================================================== */
-.prompt {
-  background-color: var(--background-secondary);
-}
-
-input.prompt-input {
-  margin-bottom: 10px;
-}
-
-.suggestion-hotkey {
-  background-color: var(--background-primary);
-  border-radius: var(--border-radius-small);
-  font-weight: 600;
-}
-
-.modal-container .prompt {
-  border: 1px solid var(--table-border-color);
-  box-shadow: var(--drop-shadow);
-  background-color: var(--background-secondary-blur);
-  backdrop-filter: blur(var(--blur-intensity));
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-}
-
-.prompt-results {
-  padding: 0px 10px 0px 0px;
-}
-
-.theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-  background-color: var(--background-color-lt);
-  border-radius: var(--border-radius-small);
-}
-
-.theme-dark .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-  background-color: var(--background-color-dt);
-  border-radius: var(--border-radius-small);
-}
-
-/*  ==========================================================================
     Slash Commands
     ========================================================================== */
 .suggestion-container {
@@ -14103,12 +14104,113 @@ input.prompt-input {
 /* .modal-container .prompt-results .suggestion-item span.suggestion-flair {
     padding-left: 34px;
 } */
+.workspace-leaf-content[data-type=starred] .item-list {
+  flex-grow: unset;
+  height: fit-content;
+  border: 0px;
+  border-radius: var(--border-radius);
+  background-color: var(--background-secondary);
+  box-shadow: var(--drop-shadow);
+  padding: 8px;
+}
+
+.workspace-leaf-content[data-type=starred] .nav-file-icon {
+  margin: unset;
+  padding: 0px 10px;
+}
+
+.workspace-leaf-content[data-type=starred] .nav-file-title {
+  border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
+  color: var(--text-normal);
+  width: 100%;
+  padding: 0px;
+  background: var(--background-primary);
+  box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type=starred] .nav-file:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.workspace-leaf-content[data-type=starred] .nav-file-title:hover {
+  line-height: 14px;
+}
+
 /*  ==========================================================================
-    Audio Recorder
+    Tags Pane
     ========================================================================== */
-.theme-light .side-dock-ribbon-action.is-active svg.microphone-filled,
-.theme-dark .side-dock-ribbon-action.is-active svg.microphone-filled {
-  color: var(--color-text-red);
+.workspace-leaf-content[data-type=tag] .tree-item-self {
+  border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
+  color: var(--text-normal);
+  width: 100%;
+  padding: 0px 5px 0px 10px;
+  background: var(--background-primary);
+  box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-inner {
+  padding-right: 5px;
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-self.is-clickable:hover {
+  color: var(--interactive-accent-text);
+  background-color: var(--background-primary);
+  border: var(--border-size) solid var(--background-primary);
+  font-weight: 600;
+  box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon {
+  margin-left: -12px;
+  padding: 8px 10px;
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon::after {
+  display: none;
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
+.workspace-leaf-content[data-type=tag] .tree-item-self.is-clickable .tree-item-icon:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
+  color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-children {
+  margin-left: 16px;
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-children .tree-item {
+  margin-top: 8px;
+}
+
+.workspace-leaf-content[data-type=tag] .tree-item-flair {
+  border: var(--border-size) solid transparent;
+}
+
+.workspace-leaf-content[data-type=tag] .tag-container > div:first-of-type {
+  padding: 8px;
+  border: none;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type=tag] .tag-container {
+  padding: 0px 10px 0px 0px;
+}
+
+.workspace-leaf-content[data-type=tag] .tag-pane-tag-text {
+  font-weight: 600;
 }
 
 /*  ==========================================================================
