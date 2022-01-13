@@ -1,0 +1,74 @@
+.workspace-leaf-content[data-type="dangling-links"] .view-content {
+    padding: 0px 10px 0px 0px;
+}
+
+// .workspace-leaf-content[data-type="dangling-links"] .view-content .container h3:first-of-type {
+//     border: 0px;
+//     background-color: var(--background-primary);
+//     border-radius: var(--border-radius);
+//     box-shadow: var(--drop-shadow);
+//     text-align: center;
+//     padding: 8px;
+//     margin-top: 0px;
+//     margin-bottom: 8px;
+// }
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container h3:first-of-type {
+    display: none;
+}
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details {
+    border: 0px;
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--drop-shadow);
+}
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details summary{
+    border-bottom-color: transparent;
+    border: none;
+    background-color: var(--background-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--drop-shadow);
+    padding: 5px 5px 5px 15px;
+    position: relative;
+    z-index: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details ul {
+    margin: 8px;
+    padding-inline-start: 0px;
+
+}
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details ul li {
+    border-radius: var(--border-radius-small);
+    border: var(--border-size) solid transparent;
+    color: var(--text-normal);
+    width: 100%;
+    padding: 0px 5px 0px 10px;
+    background: var(--background-primary);
+    box-shadow: var(--drop-shadow);
+}
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details ul li ::marker {
+    display: none;
+}
+
+.workspace-leaf-content[data-type="dangling-links"] .view-content .container details ul li:not(:last-child) {
+    margin-bottom: 8px;
+}
