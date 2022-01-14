@@ -96,6 +96,15 @@ module.exports = function(grunt) {
         /* Runs tasks when changes are detected to the specified files. */
         watch: {
             css: {
+            dev: {
+                files: ['src/**/*.scss','src/**/*.css'], // Watched files
+                tasks: ['env','sass:unminified','concat_css:unminified','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
+            },
+            stag: {
+                files: ['src/**/*.scss','src/**/*.css'], // Watched files
+                tasks: ['env','sass:dist','cssmin','concat_css:dist'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
+            },
+            prod: {
                 files: ['src/**/*.scss','src/**/*.css'], // Watched files
                 tasks: ['env','sass','cssmin','concat_css','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
                 // tasks: ['env','sass:unminified','concat_css:unminified','copy','sass:dist','cssmin','concat_css:dist']
@@ -127,5 +136,9 @@ module.exports = function(grunt) {
     });
 
     /* Creates a task called 'default' which grabs the variable from the .env file, runs the `loadconst' task to load it in and runs the 'watch' task to keep all other tasks running when there is a change detected to .scss/.css files in the project */
-    grunt.registerTask('default',['env:local','loadconst','watch']);
+    grunt.registerTask('dev',['env:local','loadconst','watch:dev']);
+
+    grunt.registerTask('stag',['env:local','loadconst','watch:stag']);
+
+    grunt.registerTask('prod',['env:local','loadconst','watch:prod']);
 }
