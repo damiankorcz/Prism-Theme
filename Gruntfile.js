@@ -16,10 +16,6 @@ https://github.com/damiankorcz/obsidian-prism#build
 */
 
 module.exports = function(grunt) {
-    require('jit-grunt')(grunt, {
-        sass: 'grunt-sass-scss'         // for custom tasks.
-      });
-
     grunt.initConfig({
         /* Project metadata is imported into the Grunt config from the project's `package.json` file */
         pkg: grunt.file.readJSON('package.json'), 
@@ -95,7 +91,6 @@ module.exports = function(grunt) {
 
         /* Runs tasks when changes are detected to the specified files. */
         watch: {
-            css: {
             dev: {
                 files: ['src/**/*.scss','src/**/*.css'], // Watched files
                 tasks: ['env','sass:unminified','concat_css:unminified','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
@@ -107,28 +102,28 @@ module.exports = function(grunt) {
             prod: {
                 files: ['src/**/*.scss','src/**/*.css'], // Watched files
                 tasks: ['env','sass','cssmin','concat_css','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
-                // tasks: ['env','sass:unminified','concat_css:unminified','copy','sass:dist','cssmin','concat_css:dist']
             }
         }
+
     });
 
-    // /* Load the plugin that provides the "env" task. */
-    // grunt.loadNpmTasks('grunt-env');
+    /* Load the plugin that provides the "env" task. */
+    grunt.loadNpmTasks('grunt-env');
 
-    // /* Load the plugin that provides the "sass" task. */
-    // grunt.loadNpmTasks('grunt-sass-scss');
+    /* Load the plugin that provides the "sass" task. */
+    grunt.loadNpmTasks('grunt-sass-scss');
 
-    // /* Load the plugin that provides the "cssmin" task. */
-    // grunt.loadNpmTasks('grunt-contrib-cssmin');
+    /* Load the plugin that provides the "cssmin" task. */
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    // /* Load the plugin that provides the "concat_css" task. */
-    // grunt.loadNpmTasks('grunt-concat-css');
+    /* Load the plugin that provides the "concat_css" task. */
+    grunt.loadNpmTasks('grunt-concat-css');
 
-    // /* Load the plugin that provides the "copy" task. */
-    // grunt.loadNpmTasks('grunt-contrib-copy');
+    /* Load the plugin that provides the "copy" task. */
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    // /* Load the plugin that provides the "watch" task. */
-    // grunt.loadNpmTasks('grunt-contrib-watch');
+    /* Load the plugin that provides the "watch" task. */
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     /* Creates a task called 'loadconst' which loads in the constant containing the path to your Vault's Theme folder. */
     grunt.registerTask('loadconst', 'Load constants', function() {
