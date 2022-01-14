@@ -20,6 +20,7 @@
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Documentation">Documentation</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Roadmap">Roadmap</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contributing">Contributing</a> • 
+		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Build-Instructions">Build Instructions</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contact">Contact</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Acknowledgments">Acknowledgments</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-License">License</a>
@@ -132,7 +133,7 @@ The theme has a fully encompassing Wiki, which includes additional detailed desc
 Planned task in a rough order of priority:
 - [ ] General code cleanup and polish of the core Obsidian UI theme.
 - [ ] Full commenting of the source code for easier development.
-- [ ] Documentation/Frequently Asked Questions section to help guide new theme users.
+- [x] Documentation/Frequently Asked Questions section to help guide new theme users.
 - [ ] More explicitly supported plugins.
 - [ ] Custom-made UI Icons.
 - [ ] Mobile support.
@@ -150,6 +151,9 @@ Although I don't prohibit pull requests, the theme is quite complex with a lot o
 
 Otherwise you are welcome to contact me through the channels mentioned below to discuss anything regarding the theme.
 
+## 🏗️ Build Instructions
+If you would like to build the theme in order to tinker around with it or contribute here are the instructions:
+
 
 ## 📬 Contact
 If you have any questions you can message me on Twitter and Discord: <a href="https://twitter.com/DamianKorcz_"><img src="https://flat.badgen.net/badge/icon/@DamianKorcz_?icon=twitter&label" /></a> <a href="https://discordapp.com/users/Damikiller37#6130/"><img src="https://flat.badgen.net/badge/icon/Damikiller37%236130/grey?icon=discord&label" /></a>
@@ -161,6 +165,7 @@ Feel free to reach out to me via the Official Obsidian Discord Channel: <a href=
 - Thanks to the developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
 - Special shoutout to [**@mgmeyers**](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
 - Huge thanks to the Obsidian Community over at Discord for endless inspiration to improve the theme!
+- Thanks to @kepano and [**Minimal Theme**](https://github.com/kepano/obsidian-minimal) for figuring out the Sass/SCSS workflow using Grunt which is utilised by this theme.
 
 
 ## 📝 License
