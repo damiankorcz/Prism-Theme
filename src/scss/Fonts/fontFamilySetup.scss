@@ -1,42 +1,51 @@
-/*  ==========================================================================
-    Main Fonts
-    ========================================================================== */
+/*
+	==========================================================================
+	Main Fonts
+	==========================================================================
+*/
 
-    html,
-    body,
-    input[type='text'],
-    input[type='search'],
-    input[type='email'],
-    input[type='password'],
-    input[type='number'],
-    textarea,
-    button,
-    .setting-hotkey,
-    .view-header-title {
-        font-family: var(--font-family-ui);
-    }
+/* #region [Font] UI */
+html,
+body,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+button,
+.setting-hotkey,
+.view-header-title {
+	font-family: var(--font-family-ui);
+}
+/* #endregion */
 
-    .workspace-leaf-content[data-mode="source"],
-    .markdown-source-view.mod-cm6 .cm-scroller,
-    .CodeMirror {
-        font-family: var(--font-family-edit);
-    }
+/* #region [Font] Edit */
+.workspace-leaf-content[data-mode="source"],
+.markdown-source-view.mod-cm6 .cm-scroller,
+.CodeMirror {
+	font-family: var(--font-family-edit);
+}
+/* #endregion */
 
-    .workspace-leaf-content[data-mode="preview"] {
-        font-family: var(--font-family-preview);
-    }
+/* #region [Font] Preview */
+.workspace-leaf-content[data-mode="preview"] {
+	font-family: var(--font-family-preview);
+}
 
-    .kanban-plugin p {
-        font-family: var(--font-family-preview) !important;
-    }
+.kanban-plugin p {
+	font-family: var(--font-family-preview) !important;
+}
+/* #endregion */
 
-    /* Font for code blocks */
-    .cm-s-obsidian .HyperMD-table-row,
-    .cm-s-obsidian .HyperMD-codeblock,
-    .cm-s-obsidian span.cm-inline-code,
-    .markdown-preview-view code,
-    .markdown-source-view code,
-    .HyperMD-codeblock,
-    code {
-        font-family: var(--font-family-code) !important;
-    }
+/* #region [Font] Code */
+.cm-s-obsidian .HyperMD-table-row,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian span.cm-inline-code,
+.markdown-preview-view code,
+.markdown-source-view code,
+.HyperMD-codeblock,
+code {
+	font-family: var(--font-family-code) !important;
+}
+/* #endregion */
