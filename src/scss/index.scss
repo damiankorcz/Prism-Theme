@@ -1,18 +1,22 @@
-// Variables
-@use 'Variables/globalVariables';
-@use 'Variables/colorVariables';
+// Copyright Licence Notice
+@use 'Info/license.scss';
 
 // Font Setup/Settings
 @use 'Fonts/fontFamilyImports';
 @use 'Fonts/fontFamilySetup';
 
+// Variables
+@use 'Variables/rootVariables';
+@use 'Variables/colorVariables';
+
 // Accent Colors
-@use 'User Interface/Accent Colors/baseAccentColors';
-@use 'User Interface/Accent Colors/accentColorTextOnly';
-@use 'User Interface/Accent Colors/accentColorBorderOnly';
-@use 'User Interface/Accent Colors/accentColorBorderAndText';
-@use 'User Interface/Accent Colors/accentColorFilled';
-@use 'User Interface/Accent Colors/accentColorBorderAndFilled';
+@use 'User Interface/Accent Color/baseAccentColors';
+@use 'User Interface/Accent Color/accentStyleBase';
+@use 'User Interface/Accent Color/accentStyleTextOnly';
+@use 'User Interface/Accent Color/accentStyleBorderOnly';
+@use 'User Interface/Accent Color/accentStyleBorderAndText';
+@use 'User Interface/Accent Color/accentStyleFilled';
+@use 'User Interface/Accent Color/accentStyleBorderAndFilled';
 
 // Title Bar/Status Bar
 @use 'User Interface/Bars/titleBar';
@@ -73,6 +77,11 @@
 @use 'Plugins/Community/styleSettings';
 @use 'Plugins/Community/danglingLinks';
 
+// Style Settings & Hub Info
+@use 'Info/style-settings.scss';
+@use 'Info/plugin-compatibility.scss';
+
 // WIP & Temporary Work
-@use 'WIP/obsidianTabs';
-@use 'WIP/tempNotes';
+// @use 'WIP/obsidianTabs';
+// @use 'WIP/tempNotes';
+//
