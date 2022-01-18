@@ -12,7 +12,7 @@ MIT License
 Copyright (c) 2020-2021 Stephan Ango (@kepano)
 
 See readme for more details:
-https://github.com/damiankorcz/obsidian-prism#build
+https://github.com/damiankorcz/obsidian-prism#-Build-Instructions
 */
 
 module.exports = function(grunt) {
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         /* Project metadata is imported into the Grunt config from the project's `package.json` file */
         pkg: grunt.file.readJSON('package.json'), 
         
-        /* */
+        /*  */
         env: {
             local : {
               src : ".env"
@@ -31,48 +31,10 @@ module.exports = function(grunt) {
         sass: {
             unminified: {
                 options: {
-                    sourcemap: 'none' //
+                    sourcemap: 'none' // Doesn't generate the Sorucemap
                 },
                 files: {
-                    'src/css/main.css' : 'src/scss/index.scss'
-                }
-            },
-            dist: {
-                options: {
-                    style: 'compressed', //
-                    sourcemap: 'none' //
-                },
-                files: {
-                    'src/css/main.min.css' : 'src/scss/index.scss'
-                }
-            }
-        },
-
-        /* */
-        cssmin: {
-            options: {
-                advanced: false, //
-                aggressiveMerging: false, //
-                mediaMerging: false, //
-                restructuring: false //
-            },
-            target: {
-                files: {
-                    'src/css/main.min.css' : 'src/css/main.min.css'
-                }
-            }
-        },
-
-        /* */
-        concat_css: {
-            dist: {
-                files: {
-                  'obsidian.css': ['src/css/license.css','src/css/main.min.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
-                }
-            },
-            unminified: {
-                files: {
-                  'Prism.css': ['src/css/license.css','src/css/main.css','src/css/plugin-compatibility.css','src/css/style-settings.css']
+                    'obsidian.css' : 'src/scss/index.scss'
                 }
             }
         },
@@ -81,27 +43,19 @@ module.exports = function(grunt) {
         copy: {
             local: { 
                 expand: true, //
-                src: 'Prism.css', // Which file will be copied.
-                dest: process.env.OBSIDIAN_PATH // The destination folder; the path specified in the `.env` file pointing to your Vault's Theme folder.
-                // rename: function(dest, src) {
-                //    return dest + 'Prism.css';
-                // } // Renames the file to, in this case, `Prism.css` from `obsidian.css'.
+                src: 'obsidian.css', // Which file will be copied.
+                dest: process.env.OBSIDIAN_PATH, // The destination folder; the path specified in the `.env` file pointing to your Vault's Theme folder.
+                rename: function(dest, src) {
+                   return dest + 'PrismDev.css';
+                } // Renames the file to, in this case, `PrismDev.css` from `obsidian.css' when it's copied to the destination path.
             }
         },
 
         /* Runs tasks when changes are detected to the specified files. */
         watch: {
-            dev: {
-                files: ['src/**/*.scss','src/**/*.css'], // Watched files
-                tasks: ['env','sass:unminified','concat_css:unminified','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
-            },
-            stag: {
-                files: ['src/**/*.scss','src/**/*.css'], // Watched files
-                tasks: ['env','sass:dist','cssmin','concat_css:dist'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
-            },
-            prod: {
-                files: ['src/**/*.scss','src/**/*.css'], // Watched files
-                tasks: ['env','sass','cssmin','concat_css','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
+            build: {
+                files: ['src/**/*.scss'], // Watched files
+                tasks: ['env','sass','copy'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
             }
         }
 
@@ -112,12 +66,6 @@ module.exports = function(grunt) {
 
     /* Load the plugin that provides the "sass" task. */
     grunt.loadNpmTasks('grunt-sass-scss');
-
-    /* Load the plugin that provides the "cssmin" task. */
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-
-    /* Load the plugin that provides the "concat_css" task. */
-    grunt.loadNpmTasks('grunt-concat-css');
 
     /* Load the plugin that provides the "copy" task. */
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -131,9 +79,5 @@ module.exports = function(grunt) {
     });
 
     /* Creates a task called 'default' which grabs the variable from the .env file, runs the `loadconst' task to load it in and runs the 'watch' task to keep all other tasks running when there is a change detected to .scss/.css files in the project */
-    grunt.registerTask('dev',['env:local','loadconst','watch:dev']);
-
-    grunt.registerTask('stag',['env:local','loadconst','watch:stag']);
-
-    grunt.registerTask('prod',['env:local','loadconst','watch:prod']);
+    grunt.registerTask('build',['env:local','loadconst','watch:build']);
 }
