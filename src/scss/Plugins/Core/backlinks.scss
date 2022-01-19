@@ -1,240 +1,239 @@
-/*  Backlinks
-    ========================================================================== */
+/* #region  [Plugin - Core] Backlinks */
+.theme-light .embedded-backlinks {
+	background-color: var(--background-color-lt);
+}
 
-    .theme-light .embedded-backlinks {
-        background-color: var(--background-color-lt);
-    }
+.theme-dark .embedded-backlinks {
+	background-color: var(--background-color-dt);
+}
 
-    .theme-dark .embedded-backlinks {
-        background-color: var(--background-color-dt);
-    }
+.embedded-backlinks:before {
+	position: relative;
+	content: "Backlinks";
+	font-size: 16px;
+	font-weight: 600;
+	background: var(--background-primary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+	z-index: 50;
+}
 
-    .embedded-backlinks:before {
-        position: relative;
-        content: "Backlinks";
-        font-size: 16px;
-        font-weight: 600;
-        background: var(--background-primary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: 8px;
-        display: flex;
-        justify-content: center;
-        margin: 0px;
-        z-index: 50;
-    }
+.embedded-backlinks {
+	border-radius: var(--border-radius);
+	margin: 0 auto;
+	padding: unset;
+	min-height: fit-content !important;
+}
 
-    .embedded-backlinks {
-        border-radius: var(--border-radius);
-        margin: 0 auto;
-        padding: unset;
-        min-height: fit-content !important;
-    }
-    
-    .embedded-backlinks .backlink-pane {
-        padding: 68px 8px 8px 8px;
-        margin-top: -68px;
-        border-radius: var(--border-radius);
-    }
+.embedded-backlinks .backlink-pane {
+	padding: 68px 8px 8px 8px;
+	margin-top: -68px;
+	border-radius: var(--border-radius);
+}
 
-    .embedded-backlinks .search-input-clear-button {
-        top: -1px;
-        height: 100%;
-    }
+.embedded-backlinks .search-input-clear-button {
+	top: -1px;
+	height: 100%;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .search-input-container {
-        padding-bottom: 8px;
-        margin: unset;
-    }
+.workspace-leaf-content[data-type="backlink"] .search-input-container {
+	padding-bottom: 8px;
+	margin: unset;
+}
 
-    .embedded-backlinks .search-input-container {
-        margin: 15px 8px;
-    }
+.embedded-backlinks .search-input-container {
+	margin: 15px 8px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane {
-        padding-left: unset;
-        padding-right: 10px;
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane {
+	padding-left: unset;
+	padding-right: 10px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item.search-result,
-    .embedded-backlinks .tree-item.search-result {
-        border-bottom-color: transparent;
-        border: none;
-        background-color: var(--background-secondary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item.search-result,
+.embedded-backlinks .tree-item.search-result {
+	border-bottom-color: transparent;
+	border: none;
+	background-color: var(--background-secondary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .search-result-file-matches,
-    .embedded-backlinks .search-result-file-matches {
-        margin: unset;
-        border-bottom: unset;
-        padding: 8px;
-    }
+.workspace-leaf-content[data-type="backlink"] .search-result-file-matches,
+.embedded-backlinks .search-result-file-matches {
+	margin: unset;
+	border-bottom: unset;
+	padding: 8px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .search-result-file-match,
-    .embedded-backlinks .search-result-file-match {
-        left: unset;
-        width: 100%;
-        padding: 5px 20px 5px 10px;
-        border-radius: var(--border-radius);
-        background: var(--background-primary);
-        box-shadow: var(--drop-shadow);
-    }
+.workspace-leaf-content[data-type="backlink"] .search-result-file-match,
+.embedded-backlinks .search-result-file-match {
+	left: unset;
+	width: 100%;
+	padding: 5px 20px 5px 10px;
+	border-radius: var(--border-radius);
+	background: var(--background-primary);
+	box-shadow: var(--drop-shadow);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .search-result-file-match:hover,
-    .embedded-backlinks .search-result-file-match:hover,
-    .workspace-split.mod-root .search-result-file-match:hover {
-        color: var(--text-normal);
-        background-color: var(--background-primary);
-    }
-    
-    .workspace-leaf-content[data-type="backlink"] .search-result-file-match:after,
-    .embedded-backlinks .search-result-file-match:after {
-        display: none;
-    }
+.workspace-leaf-content[data-type="backlink"] .search-result-file-match:hover,
+.embedded-backlinks .search-result-file-match:hover,
+.workspace-split.mod-root .search-result-file-match:hover {
+	color: var(--text-normal);
+	background-color: var(--background-primary);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self .tree-item-icon,
-    .embedded-backlinks .tree-item-self .tree-item-icon {
-        padding: 8px 10px;
-    }
+.workspace-leaf-content[data-type="backlink"] .search-result-file-match:after,
+.embedded-backlinks .search-result-file-match:after {
+	display: none;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self .tree-item-icon:after,
-    .embedded-backlinks .tree-item-self .tree-item-icon:after {
-        display: none;
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self .tree-item-icon,
+.embedded-backlinks .tree-item-self .tree-item-icon {
+	padding: 8px 10px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self,
-    .embedded-backlinks .tree-item-self {
-        border-radius: var(--border-radius);
-        color: var(--text-muted);
-        padding: 5px 5px 5px 25px;
-        box-shadow: var(--drop-shadow);
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self .tree-item-icon:after,
+.embedded-backlinks .tree-item-self .tree-item-icon:after {
+	display: none;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self:hover,
-    .embedded-backlinks .tree-item-self:hover {
-        background: unset;
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self,
+.embedded-backlinks .tree-item-self {
+	border-radius: var(--border-radius);
+	color: var(--text-muted);
+	padding: 5px 5px 5px 25px;
+	box-shadow: var(--drop-shadow);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self .tree-item-inner,
-    .embedded-backlinks .tree-item-self .tree-item-inner {
-        padding-right: 5px;
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self:hover,
+.embedded-backlinks .tree-item-self:hover {
+	background: unset;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane .search-result-container,
-    .embedded-backlinks .backlink-pane .search-result-container {
-        margin-left: unset;
-        padding: unset;
-    }
-    
-    .workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item div.tree-item-self:hover,
-    .embedded-backlinks div.backlink-pane .tree-item div.tree-item-self:hover {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self .tree-item-inner,
+.embedded-backlinks .tree-item-self .tree-item-inner {
+	padding-right: 5px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item div.tree-item-self:hover .collapse-icon,
-    .embedded-backlinks div.backlink-pane .tree-item div.tree-item-self:hover .collapse-icon {
-        color: var(--interactive-accent-hover);
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane .search-result-container,
+.embedded-backlinks .backlink-pane .search-result-container {
+	margin-left: unset;
+	padding: unset;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self:not(.is-collapsed) .collapse-icon,
-    .embedded-backlinks .tree-item-self:not(.is-collapsed) .collapse-icon {
-        color: var(--text-faint);
-    }
+.workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item div.tree-item-self:hover,
+.embedded-backlinks div.backlink-pane .tree-item div.tree-item-self:hover {
+	color: var(--interactive-accent-text);
+	background-color: var(--background-primary);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .tree-item-self:hover .collapse-icon,
-    .embedded-backlinks .tree-item-self:hover .collapse-icon {
-        color: var(--interactive-accent-hover);
-    }
+.workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item div.tree-item-self:hover .collapse-icon,
+.embedded-backlinks div.backlink-pane .tree-item div.tree-item-self:hover .collapse-icon {
+	color: var(--interactive-accent-hover);
+}
 
-    .workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item.is-collapsed .tree-item-self,
-    .embedded-backlinks div.backlink-pane .tree-item.is-collapsed .tree-item-self {
-        color: var(--text-normal);
-        background-color: var(--background-secondary);
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self:not(.is-collapsed) .collapse-icon,
+.embedded-backlinks .tree-item-self:not(.is-collapsed) .collapse-icon {
+	color: var(--text-faint);
+}
 
-    .workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item:not(.is-collapsed) .tree-item-self,
-    .embedded-backlinks div.backlink-pane .tree-item:not(.is-collapsed) .tree-item-self {
-        color: var(--text-normal);
-        background-color: var(--background-primary);
-    }
+.workspace-leaf-content[data-type="backlink"] .tree-item-self:hover .collapse-icon,
+.embedded-backlinks .tree-item-self:hover .collapse-icon {
+	color: var(--interactive-accent-hover);
+}
 
-    .workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item:not(.is-collapsed) .tree-item-self .collapse-icon,
-    .embedded-backlinks div.backlink-pane .tree-item:not(.is-collapsed) .tree-item-self .collapse-icon {
-        color: var(--interactive-accent-text);
-    }
+.workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item.is-collapsed .tree-item-self,
+.embedded-backlinks div.backlink-pane .tree-item.is-collapsed .tree-item-self {
+	color: var(--text-normal);
+	background-color: var(--background-secondary);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):hover,
-    .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):hover {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
+.workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item:not(.is-collapsed) .tree-item-self,
+.embedded-backlinks div.backlink-pane .tree-item:not(.is-collapsed) .tree-item-self {
+	color: var(--text-normal);
+	background-color: var(--background-primary);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane .search-results-children,
-    .embedded-backlinks .backlink-pane .search-results-children {
-        padding: unset;
-    }
+.workspace-leaf-content[data-type="backlink"] div.backlink-pane.node-insert-event .tree-item:not(.is-collapsed) .tree-item-self .collapse-icon,
+.embedded-backlinks div.backlink-pane .tree-item:not(.is-collapsed) .tree-item-self .collapse-icon {
+	color: var(--interactive-accent-text);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .search-result-container,
-    .embedded-backlinks .backlink-pane > .search-result-container {
-        border-bottom-color: transparent;
-        border: unset;
-        border-radius: var(--border-radius);
-        padding: 30px 0px 0px 10px;
-        margin-top: -30px;
-    }
-    
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .search-result-container:not(:last-of-type),
-    .embedded-backlinks .backlink-pane > .search-result-container:not(:last-of-type) {
-        margin-bottom: 8px;
-        padding-bottom: 8px;
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):hover,
+.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):hover {
+	color: var(--interactive-accent-text);
+	background-color: var(--background-primary);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type),
-    .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type) {
-        border-bottom-color: transparent;
-        border: unset;
-        background-color: var(--tab-label-background-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: 5px 5px 5px 25px;
-        position: relative;
-        z-index: 50;
-        margin-bottom: 8px;
-        font-size: 14px;
-        font-weight: 600;
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane .search-results-children,
+.embedded-backlinks .backlink-pane .search-results-children {
+	padding: unset;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self.is-collapsed:not(:first-of-type),
-    .embedded-backlinks .backlink-pane > div.tree-item-self.is-collapsed:not(:first-of-type) {
-        margin-bottom: 0px;
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .search-result-container,
+.embedded-backlinks .backlink-pane > .search-result-container {
+	border-bottom-color: transparent;
+	border: unset;
+	border-radius: var(--border-radius);
+	padding: 30px 0px 0px 10px;
+	margin-top: -30px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed),
-    .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
-        color: var(--text-normal);
-        background-color: var(--background-primary);
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .search-result-container:not(:last-of-type),
+.embedded-backlinks .backlink-pane > .search-result-container:not(:last-of-type) {
+	margin-bottom: 8px;
+	padding-bottom: 8px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed) .collapse-icon,
-    .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed) .collapse-icon {
-        color: var(--interactive-accent-text);
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type),
+.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type) {
+	border-bottom-color: transparent;
+	border: unset;
+	background-color: var(--tab-label-background-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	padding: 5px 5px 5px 25px;
+	position: relative;
+	z-index: 50;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: 600;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover,
-    .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover  {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self.is-collapsed:not(:first-of-type),
+.embedded-backlinks .backlink-pane > div.tree-item-self.is-collapsed:not(:first-of-type) {
+	margin-bottom: 0px;
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover .collapse-icon,
-    .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover .collapse-icon {
-        color: var(--interactive-accent-hover);
-    }
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed),
+.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
+	color: var(--text-normal);
+	background-color: var(--background-primary);
+}
 
-    .workspace-leaf-content[data-type="backlink"] .backlink-pane .search-result:last-of-type,
-    .embedded-backlinks .backlink-pane .search-result:last-of-type {
-        margin-bottom: unset;
-    }  
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed) .collapse-icon,
+.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed) .collapse-icon {
+	color: var(--interactive-accent-text);
+}
+
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover,
+.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover {
+	color: var(--interactive-accent-text);
+	background-color: var(--background-primary);
+}
+
+.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover .collapse-icon,
+.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover .collapse-icon {
+	color: var(--interactive-accent-hover);
+}
+
+.workspace-leaf-content[data-type="backlink"] .backlink-pane .search-result:last-of-type,
+.embedded-backlinks .backlink-pane .search-result:last-of-type {
+	margin-bottom: unset;
+}
+/* #endregion */

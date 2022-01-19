@@ -1,85 +1,83 @@
-/*  ==========================================================================
-    Workspace ribbon
-    ========================================================================== */  
+/* #region  [UI] Workspace Ribbon */
+/* Ribbon container */
+.workspace-ribbon {
+	display: flex;
+	flex: 0 0 38px;
+	background-color: var(--background-secondary-alt);
+	border: unset;
+}
 
-    /* Ribbon container */
-    .workspace-ribbon {
-        display: flex;
-        flex: 0 0 38px;
-        background-color: var(--background-secondary-alt);
-        border: unset;
-    }
+/* Collapsed ribbon background/border color */
+.workspace-ribbon.mod-left.is-collapsed {
+	border-right-color: var(--background-secondary-alt);
+}
 
-    /* Collapsed ribbon background/border color */
-    .workspace-ribbon.mod-left.is-collapsed {
-        border-right-color: var(--background-secondary-alt);
-    }
+.workspace-ribbon.mod-right.is-collapsed {
+	border-left-color: var(--background-secondary-alt);
+}
 
-    .workspace-ribbon.mod-right.is-collapsed {
-        border-left-color: var(--background-secondary-alt);
-    }
+.workspace-ribbon.is-collapsed {
+	background-color: unset;
+}
 
-    .workspace-ribbon.is-collapsed {
-        background-color: unset;
-    }
+/* Ribbon collapse button positioning */
+.workspace-ribbon-collapse-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: calc(var(--window-gap) / 2);
+	padding: 8px;
+	border: var(--border-size) solid transparent;
+	color: var(--text-muted);
+	background-color: var(--tab-label-background-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	stroke-width: 2px;
+}
+.workspace-ribbon-collapse-btn:hover {
+	color: var(--interactive-accent-hover);
+}
 
-    /* Ribbon collapse button positioning */
-    .workspace-ribbon-collapse-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: calc(var(--window-gap) / 2);
-        padding: 8px;
-        border: var(--border-size) solid transparent;
-        color: var(--text-muted);
-        background-color: var(--tab-label-background-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        stroke-width: 2px;
-    }
-    .workspace-ribbon-collapse-btn:hover {
-        color: var(--interactive-accent-hover);
-    }
+/* Ribbon collapse button size */
+.workspace-ribbon-collapse-btn svg {
+	height: 16px;
+	width: 16px;
+}
 
-    /* Ribbon collapse button size */
-    .workspace-ribbon-collapse-btn svg {
-        height: 16px;
-        width: 16px;
-    }
+.workspace-ribbon .side-dock-actions {
+	margin-top: calc(var(--window-gap) / 2);
+	margin-bottom: auto;
+	background-color: var(--tab-label-background-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+}
 
-    .workspace-ribbon .side-dock-actions {
-        margin-top: calc(var(--window-gap) / 2);
-        margin-bottom: auto;
-        background-color: var(--tab-label-background-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-    }
+.workspace-ribbon .side-dock-settings {
+	margin-top: 10px;
+	background-color: var(--tab-label-background-color);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+}
 
-    .workspace-ribbon .side-dock-settings {
-        margin-top: 10px;
-        background-color: var(--tab-label-background-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-    }
+/* Moves the settings section closer to the bottom of th window */
+.side-dock-settings {
+	margin-bottom: 5px;
+}
 
-    /* Moves the settings section closer to the bottom of th window */
-    .side-dock-settings {
-        margin-bottom: 5px;
-    }
+/* Padding and margin around the buttons in the side ribbon */
+.side-dock-ribbon-action {
+	display: flex;
+	padding: 10px;
+	margin-bottom: 5px;
+}
 
-    /* Padding and margin around the buttons in the side ribbon */
-    .side-dock-ribbon-action {
-        display: flex;
-        padding: 10px;
-        margin-bottom: 5px;
-    }
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
+	color: var(--text-muted);
+}
 
-    .side-dock-ribbon-tab,
-    .side-dock-ribbon-action {
-        color: var(--text-muted);
-    }
-
-    .side-dock-ribbon-tab:hover,
-    .side-dock-ribbon-action:hover {
-        color: var(--interactive-accent-hover);
-    }
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-action:hover {
+	color: var(--interactive-accent-hover);
+}
+/* #endregion */

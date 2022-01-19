@@ -1,610 +1,617 @@
-/*  ==========================================================================
-    Settings Modal
-    ========================================================================== */
-
-    .modal-bg {
-        background: transparent ;
-    }
-
-    .modal.mod-settings {
-        padding: 0px;
-        width: 80vw;
-        height: 80vh;
-        max-height: 1000px;
-        max-width: 1400px;    
-        box-shadow: var(--drop-shadow);
-        border-radius: var(--border-radius);
-    }
-
-    .theme-dark .modal.mod-settings {
-        background-color: var(--background-color-dt);
-    }
-
-    .theme-light .modal.mod-settings {
-        background-color: var(--background-color-lt);
-    }
-
-    .modal.mod-settings .horizontal-tab-content, .vertical-tab-content {
-        padding: 30px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-    }
-
-    .modal.mod-settings .vertical-tab-header {
-        padding: 0px;
-        border-radius: var(--border-radius);
-        margin: 0px 15px 15px 15px;
-        height: unset;
-    }
-
-    .modal.mod-settings .vertical-tabs-container {
-        height: 100%;
-    }
-
-    .modal.mod-settings .modal-title {
-        height: 40px;
-        font-size: unset;
-    }
-
-    .modal.mod-settings .modal-title::before {
-        content: "Settings";
-        font-size: 16px;
-        padding: 2px 10px;
-        height: 25px;
-        margin: 5px auto;
-        width: fit-content;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-    }
-
-    .modal.mod-settings .modal-content {
-        height: -webkit-fill-available;
-    }
-
-    .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
-        content: "Prism Theme v1.3.0";
-        font-size: 16px;
-        font-weight: 600;
-        background: var(--background-primary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: 8px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .modal.mod-settings .vertical-tab-header {
-        background-color: var(--background-secondary);
-        box-shadow: var(--drop-shadow);
-    }
-
-    .modal.mod-settings .vertical-tab-header-group {
-        padding: 0px;
-        border-radius: var(--border-radius);
-        background: transparent;
-    }
-
-    .modal.mod-settings .vertical-tab-header-group:first-of-type .vertical-tab-header-group-items {
-        border-bottom: 1px solid var(--table-border-color);
-        padding-bottom: 10px;
-    }
-
-    .modal.mod-settings .vertical-tab-header-group {
-        margin-bottom: 10px;
-    }
-
-    /* Padding around the setting's content container */
-    .modal.mod-settings .vertical-tab-content-container {
-        padding: 0px 15px 15px 0px;
-        height: unset;
-    }
-
-    .setting-item-name {
-        font-weight: bold;
-    }
-
-    .setting-item {
-        padding: 10px 0;
-    }
-
-    .clickable-icon {
-        stroke-width: 2px;
-    }
-
-    .community-theme-downloads:hover,
-    .community-theme.is-selected .community-theme-downloads:hover,
-    .clickable-icon:hover {
-        color: var(--interactive-accent-hover);
-    }
-
-    .community-theme.is-selected .community-theme-downloads {
-        color: var(--text-normal);
-    }
-
-    .setting-add-hotkey-button,
-    .setting-restore-hotkey-button {
-        color: var(--text-normal);
-    }
-
-    .setting-add-hotkey-button:hover,
-    .setting-restore-hotkey-button:hover {
-        color: var(--interactive-accent-text);
-        background: unset;
-    }
-
-    .vertical-tab-header-group-title {
-        color: var(--text-normal);
-        font-weight: bold;
-        text-align: center;
-        padding: 5px 15px;
-    }
-
-    .modal-content.community-plugin {
-        padding-right: 0px;
-    }
-
-    .modal-close-button {
-        top: 7px;
-        right: 12px;
-    }
-
-    .modal-close-button:hover {
-        color: var(--interactive-accent-text);
-    }
-
-    .spellchecker-dictionary-remove-button {
-        stroke-width: 2px;
-    }
-
-    .spellchecker-dictionary-remove-button:hover {
-        color: var(--interactive-accent-text);
-    }
-
-    .horizontal-tab-nav-item,
-    .vertical-tab-nav-item {
-        margin: 0px 10px;
-        border-radius: var(--border-radius);
-        border: var(--border-size) solid transparent;
-        padding: 3px 10px 3px 16px;
-    }
-
-    .horizontal-tab-nav-item,
-    .vertical-tab-nav-item {
-        background-color: var(--background-secondary);
-    }
-
-    .horizontal-tab-nav-item:hover,
-    .vertical-tab-nav-item:hover {
-        background-color: var(--background-primary);
-        color: var(--interactive-accent-text);
-    }
-
-    .horizontal-tab-nav-item.is-active,
-    .vertical-tab-nav-item.is-active {
-        font-weight: 600;
-        background-color: transparent;
-        border-radius: var(--border-radius);
-        border: var(--border-size) solid transparent;
-    }
-
-    .dropdown {
-        font-family: var(--font-family-ui);
-        border: 0px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-    }
-
-    .theme-light .dropdown {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
-        background-position: right 0.7em top 60%, 0 0;
-        background-size: 0.65em auto, 100%;
-    }
-
-    .theme-dark .dropdown {
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
-        background-position: right 0.7em top 60%, 0 0;
-        background-size: 0.65em auto, 100%;
-    }
-
-    .theme-light .dropdown:hover {
-        background-color: var(--background-primary-alt);
-    }
-
-    .theme-dark .dropdown:hover {
-        background-color: var(--background-secondary-alt);
-    }
-
-    /* option background */
-    .theme-light .dropdown option {
-        background-color: var(--background-primary-alt);
-        color: var(--text-normal);
-    }
-
-    /* Currently active option background */
-    .theme-light .dropdown option:checked {
-        background-color: var(--background-primary);
-        color: var(--interactive-accent-text);
-    }
-
-    /* option background */
-    .theme-dark .dropdown option {
-        background-color: var(--background-secondary);
-        color: var(--text-normal);
-    }
-
-    /* Currently active option background */
-    .theme-dark .dropdown option:checked {
-        background-color: var(--background-primary);
-        color: var(--interactive-accent-text);
-    }
-
-    .checkbox-container {
-        border-radius: var(--border-radius-small);
-        background-color: var(--background-secondary-alt);
-        box-shadow: var(--drop-shadow);
-    }
-
-    .checkbox-container:after {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-        box-shadow: none;
-        width: 22px;
-        height: 22px;
-        background-color: var(--background-primary);
-        box-shadow: var(--drop-shadow);
-        border-radius: var(--border-radius-small);
-        transform: translate3d(0, 0, 0);
-    }
-
-    .theme-light .checkbox-container.is-enabled:after {
-        background-color: var(--background-primary);
-        content: "ON";
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--highlight-text-normal);
-    }
-
-    .theme-light .checkbox-container:not(.is-enabled):after {
-        background-color: var(--background-primary);
-        content: "OFF";
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--highlight-text-normal);
-    }
-
-    .theme-dark .checkbox-container.is-enabled:after {
-        background-color: var(--color-grey);
-        content: "ON";
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--highlight-text-normal);
-    }
-
-    .theme-dark .checkbox-container:not(.is-enabled):after {
-        background-color: var(--color-grey);
-        content: "OFF";
-        font-size: 10px;
-        font-weight: 600;
-        color: var(--highlight-text-normal);
-    }
-
-    .checkbox-container.is-enabled:hover {
-        background-color: var(--interactive-accent-hover);
-    }
-
-    .checkbox-container:not(.is-enabled):hover {
-        background-color: var(--interactive-accent);
-    }
-
-    .checkbox-container.is-enabled:after {
-        transform: translate3d(20px, 0, 0);
-    }
-
-    .mod-warning {
-        color: var(--color-text-red);
-    }
-
-    .modal.mod-community-theme,
-    .modal.mod-image-lightbox {
-        padding: 0px 15px 15px 15px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        width: 80vw;
-        height: 80vh;
-        max-height: 1000px;
-        max-width: 1400px;     
-        min-height: unset;
-    }
-    
-    .modal.mod-community-theme .modal-content {
-        padding: 0px;
-    }
-
-    .modal.mod-image-lightbox .modal-content {
-        margin-top: 35px;
-    }
-
-    .theme-light .modal.mod-community-theme,
-    .theme-light .modal.mod-image-lightbox  {
-        background-color: var(--background-color-lt);
-    }
-
-    .theme-dark .modal.mod-community-theme,
-    .theme-dark .modal.mod-image-lightbox {
-        background-color: var(--background-color-dt);
-    }
-
-    .modal.mod-image-lightbox .modal-content {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-    }
-
-    img.community-theme-lightbox {
-        object-fit: contain;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .modal.mod-community-theme .modal-content {
-        margin-top: 0px;
-    }
-
-    .community-theme-container {
-        box-shadow: var(--drop-shadow);
-        background-color: var(--background-secondary);
-        padding: 25px 15px 15px 15px;
-        margin-right: 15px;
-        border-radius: var(--border-radius);
-        margin-top: -10px;
-    }
-
-    .community-theme-container:not(:last-child) {
-        margin-bottom: 15px;
-    }
-
-    .community-theme-container .community-theme-filters-container,
-    .community-theme-container .hotkey-search-container {
-        padding: 0px 40px 10px 40px;
-    }
-
-    .community-theme-filters-container button {
-        margin-bottom: unset;
-    }
-
-    .community-theme {
-        padding: 10px;
-        margin: 5px;
-        width: 50%;
-        max-width: 240px;
-        border: var(--border-size) solid transparent;
-        box-shadow: var(--drop-shadow);
-        background-color: var(--background-primary);
-    }
-
-    .community-theme,
-    .community-theme:hover,
-    .community-theme.is-selected {
-        border-radius: var(--border-radius);
-    }
-
-    .community-theme.is-selected,
-    .community-theme.is-selected .community-theme-info,
-    .community-theme.is-selected .community-theme-screenshot,
-    .community-theme.is-selected .community-theme-remove-button {
-        color: var(--text-normal);
-    }
-
-    .mod-community-theme > .modal-title::before {
-        content: "Community Themes";
-        color: var(--text-normal);
-        font-size: 16px;
-        padding: 2px 10px;
-        height: 25px;
-        margin: 5px auto;
-        width: fit-content;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-    }
-
-    .mod-community-theme .modal-content .modal-title {
-        font-size: 16px;
-        font-weight: 600;
-        background: var(--background-primary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: 2px 8px;
-        height: fit-content;
-        width: -webkit-fill-available;
-        margin-right: 15px;
-        z-index: 500;
-        display: inline-block;
-    }
-
-    .community-theme-info {
-        flex-grow: unset;
-    }
-
-    .community-theme > div:nth-child(3) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-grow: 1;
-        padding: 0px;
-    }
-
-    body:not(.css-settings-manager) .community-theme.is-selected img[alt="Prism"] {
-        display: none;
-    }
-
-    body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3)::after {
-        height: fit-content;
-        width: 100%;
-        display: block;
-        content: "'Style Settings' Plugin is required for Prism to function correctly!";
-        padding: 10px;
-        border-radius: var(--border-radius);
-        border: var(--border-size) solid var(--color-dark-red);
-        background-color: var(--color-red);
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .community-plugin-search .search-input-clear-button {
-        top: 4px;
-    }
-
-    .community-plugin-search .search-input-container {
-        width: -webkit-fill-available;
-    }
-
-    .installed-plugins-container {
-        border-top: unset;
-    }
-
-    .setting-item.setting-item-heading:not(.style-settings-heading) {
-        border-bottom: 1px solid var(--table-border-color);
-        padding: 10px 0px;
-    }
-
-    .community-theme .modal-button-container .mod-cta:last-of-type {
-        margin-right: unset;
-    }
-
-    .community-theme-filters-container .search-input-container {
-        margin: 0px
-    }
-
-    .modal-content hr {
-        display: none;
-    }
-
-    .modal.mod-community-plugin {
-        padding: 0px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        width: 80vw;
-        height: 80vh;
-        max-height: 1000px;
-        max-width: 1400px;    
-        min-height: unset;
-    }
-
-    .theme-light .mod-community-plugin  {
-        background-color: var(--background-color-lt);
-    }
-
-    .theme-dark .mod-community-plugin {
-        background-color: var(--background-color-dt);
-    }
-
-    .mod-community-plugin .modal-title::before {
-        content: "Community Plugins";
-        color: var(--text-normal);
-        font-size: 16px;
-        padding: 2px 10px;
-        height: 25px;
-        margin: 5px auto;
-        width: fit-content;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-    }
-        
-    .community-theme-filters-container .setting-item {
-        padding-bottom: unset;
-    }
-
-    .community-plugin-info {
-        background-color: var(--page-background-color);    
-        padding: 20px 30px;
-        margin: 0px 15px 15px 0px;
-        border-radius: var(--border-radius);
-    }
-
-    .community-plugin-search {
-        background-color: var(--background-secondary);    
-        padding: 10px;
-        margin: 0px 15px 15px 15px;
-        border-radius: var(--border-radius);
-    }
-
-    .community-plugin-search-results {
-        padding-right: 10px;
-    }
-
-    .community-plugin-item {
-        width: 100%;
-        padding: 8px 10px;
-        margin: unset;
-        background-color: var(--background-primary);
-        box-shadow: var(--drop-shadow);
-        border-radius: var(--border-radius-small);
-    }
-
-    .community-plugin-item:hover,
-    .community-plugin-item:hover .community-plugin-name,
-    .community-plugin-item:hover .community-plugin-downloads,
-    .community-plugin-item:hover .community-plugin-author {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
-    
-    .community-plugin-item:not(:last-child) {
-        margin-bottom: 8px;
-    }
-
-    .community-plugin-name {
-        width: fit-content;
-        display: inline-block;
-        max-width: 85%;
-    }
-
-    .community-plugin-downloads {
-        float: right;
-    }
-
-    .community-plugin-name,
-    .community-plugin-downloads,
-    .community-plugin-author {
-        color: var(--text-normal);
-    }
-
-    .community-plugin-desc {
-        color: var(--text-muted);
-    }
-
-    .community-plugin-search .setting-item .setting-item-info {
-        display: none;
-    }
-
-    .community-plugin-info .community-plugin-readme.markdown-preview-view {
-        padding: 0px 0px 20px 0px;
-    }
-
-    .community-plugin-search-summary {
-        padding: 2px 8px;
-        margin-bottom: 10px;
-        background-color: var(--background-primary);
-        box-shadow: var(--drop-shadow);
-        border-radius: var(--border-radius-small);
-        width: fit-content;
-        color: var(--text-normal);
-    }
-
-    .theme-light .community-plugin-search-results::-webkit-scrollbar-track {
-        background-color: var(--background-color-lt);
-        border-radius: var(--border-radius-small);
-    }
-
-    .theme-dark .community-plugin-search-results::-webkit-scrollbar-track {
-        background-color: var(--background-color-dt);
-        border-radius: var(--border-radius-small);
-    }
+/*
+  ==========================================================================
+  User Interface
+  ==========================================================================
+*/
+
+/* #region  [UI] Settings */
+.modal-bg {
+	background: transparent;
+}
+
+.modal.mod-settings {
+	padding: 0px;
+	width: 80vw;
+	height: 80vh;
+	max-height: 1000px;
+	max-width: 1400px;
+	box-shadow: var(--drop-shadow);
+	border-radius: var(--border-radius);
+}
+
+.theme-dark .modal.mod-settings {
+	background-color: var(--background-color-dt);
+}
+
+.theme-light .modal.mod-settings {
+	background-color: var(--background-color-lt);
+}
+
+.modal.mod-settings .horizontal-tab-content,
+.vertical-tab-content {
+	padding: 30px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+}
+
+.modal.mod-settings .vertical-tab-header {
+	padding: 0px;
+	border-radius: var(--border-radius);
+	margin: 0px 15px 15px 15px;
+	height: unset;
+}
+
+.modal.mod-settings .vertical-tabs-container {
+	height: 100%;
+}
+
+.modal.mod-settings .modal-title {
+	height: 40px;
+	font-size: unset;
+}
+
+.modal.mod-settings .modal-title::before {
+	content: "Settings";
+	font-size: 16px;
+	padding: 2px 10px;
+	height: 25px;
+	margin: 5px auto;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.modal.mod-settings .modal-content {
+	height: -webkit-fill-available;
+}
+
+.modal.mod-settings .vertical-tab-header-group:first-of-type::before {
+	content: "Prism Theme v1.3.0";
+	font-size: 16px;
+	font-weight: 600;
+	background: var(--background-primary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	padding: 8px;
+	display: flex;
+	justify-content: center;
+}
+
+.modal.mod-settings .vertical-tab-header {
+	background-color: var(--background-secondary);
+	box-shadow: var(--drop-shadow);
+}
+
+.modal.mod-settings .vertical-tab-header-group {
+	padding: 0px;
+	border-radius: var(--border-radius);
+	background: transparent;
+}
+
+.modal.mod-settings .vertical-tab-header-group:first-of-type .vertical-tab-header-group-items {
+	border-bottom: 1px solid var(--table-border-color);
+	padding-bottom: 10px;
+}
+
+.modal.mod-settings .vertical-tab-header-group {
+	margin-bottom: 10px;
+}
+
+/* Padding around the setting's content container */
+.modal.mod-settings .vertical-tab-content-container {
+	padding: 0px 15px 15px 0px;
+	height: unset;
+}
+
+.setting-item-name {
+	font-weight: bold;
+}
+
+.setting-item {
+	padding: 10px 0;
+}
+
+.clickable-icon {
+	stroke-width: 2px;
+}
+
+.community-theme-downloads:hover,
+.community-theme.is-selected .community-theme-downloads:hover,
+.clickable-icon:hover {
+	color: var(--interactive-accent-hover);
+}
+
+.community-theme.is-selected .community-theme-downloads {
+	color: var(--text-normal);
+}
+
+.setting-add-hotkey-button,
+.setting-restore-hotkey-button {
+	color: var(--text-normal);
+}
+
+.setting-add-hotkey-button:hover,
+.setting-restore-hotkey-button:hover {
+	color: var(--interactive-accent-text);
+	background: unset;
+}
+
+.vertical-tab-header-group-title {
+	color: var(--text-normal);
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 15px;
+}
+
+.modal-content.community-plugin {
+	padding-right: 0px;
+}
+
+.modal-close-button {
+	top: 7px;
+	right: 12px;
+}
+
+.modal-close-button:hover {
+	color: var(--interactive-accent-text);
+}
+
+.spellchecker-dictionary-remove-button {
+	stroke-width: 2px;
+}
+
+.spellchecker-dictionary-remove-button:hover {
+	color: var(--interactive-accent-text);
+}
+
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+	margin: 0px 10px;
+	border-radius: var(--border-radius);
+	border: var(--border-size) solid transparent;
+	padding: 3px 10px 3px 16px;
+}
+
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+	background-color: var(--background-secondary);
+}
+
+.horizontal-tab-nav-item:hover,
+.vertical-tab-nav-item:hover {
+	background-color: var(--background-primary);
+	color: var(--interactive-accent-text);
+}
+
+.horizontal-tab-nav-item.is-active,
+.vertical-tab-nav-item.is-active {
+	font-weight: 600;
+	background-color: transparent;
+	border-radius: var(--border-radius);
+	border: var(--border-size) solid transparent;
+}
+
+.dropdown {
+	font-family: var(--font-family-ui);
+	border: 0px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+}
+
+.theme-light .dropdown {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-position: right 0.7em top 60%, 0 0;
+	background-size: 0.65em auto, 100%;
+}
+
+.theme-dark .dropdown {
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-position: right 0.7em top 60%, 0 0;
+	background-size: 0.65em auto, 100%;
+}
+
+.theme-light .dropdown:hover {
+	background-color: var(--background-primary-alt);
+}
+
+.theme-dark .dropdown:hover {
+	background-color: var(--background-secondary-alt);
+}
+
+/* option background */
+.theme-light .dropdown option {
+	background-color: var(--background-primary-alt);
+	color: var(--text-normal);
+}
+
+/* Currently active option background */
+.theme-light .dropdown option:checked {
+	background-color: var(--background-primary);
+	color: var(--interactive-accent-text);
+}
+
+/* option background */
+.theme-dark .dropdown option {
+	background-color: var(--background-secondary);
+	color: var(--text-normal);
+}
+
+/* Currently active option background */
+.theme-dark .dropdown option:checked {
+	background-color: var(--background-primary);
+	color: var(--interactive-accent-text);
+}
+
+.checkbox-container {
+	border-radius: var(--border-radius-small);
+	background-color: var(--background-secondary-alt);
+	box-shadow: var(--drop-shadow);
+}
+
+.checkbox-container:after {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+	box-shadow: none;
+	width: 22px;
+	height: 22px;
+	background-color: var(--background-primary);
+	box-shadow: var(--drop-shadow);
+	border-radius: var(--border-radius-small);
+	transform: translate3d(0, 0, 0);
+}
+
+.theme-light .checkbox-container.is-enabled:after {
+	background-color: var(--background-primary);
+	content: "ON";
+	font-size: 10px;
+	font-weight: 600;
+	color: var(--highlight-text-normal);
+}
+
+.theme-light .checkbox-container:not(.is-enabled):after {
+	background-color: var(--background-primary);
+	content: "OFF";
+	font-size: 10px;
+	font-weight: 600;
+	color: var(--highlight-text-normal);
+}
+
+.theme-dark .checkbox-container.is-enabled:after {
+	background-color: var(--color-grey);
+	content: "ON";
+	font-size: 10px;
+	font-weight: 600;
+	color: var(--highlight-text-normal);
+}
+
+.theme-dark .checkbox-container:not(.is-enabled):after {
+	background-color: var(--color-grey);
+	content: "OFF";
+	font-size: 10px;
+	font-weight: 600;
+	color: var(--highlight-text-normal);
+}
+
+.checkbox-container.is-enabled:hover {
+	background-color: var(--interactive-accent-hover);
+}
+
+.checkbox-container:not(.is-enabled):hover {
+	background-color: var(--interactive-accent);
+}
+
+.checkbox-container.is-enabled:after {
+	transform: translate3d(20px, 0, 0);
+}
+
+.mod-warning {
+	color: var(--color-text-red);
+}
+
+.modal.mod-community-theme,
+.modal.mod-image-lightbox {
+	padding: 0px 15px 15px 15px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	width: 80vw;
+	height: 80vh;
+	max-height: 1000px;
+	max-width: 1400px;
+	min-height: unset;
+}
+
+.modal.mod-community-theme .modal-content {
+	padding: 0px;
+}
+
+.modal.mod-image-lightbox .modal-content {
+	margin-top: 35px;
+}
+
+.theme-light .modal.mod-community-theme,
+.theme-light .modal.mod-image-lightbox {
+	background-color: var(--background-color-lt);
+}
+
+.theme-dark .modal.mod-community-theme,
+.theme-dark .modal.mod-image-lightbox {
+	background-color: var(--background-color-dt);
+}
+
+.modal.mod-image-lightbox .modal-content {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+img.community-theme-lightbox {
+	object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.modal.mod-community-theme .modal-content {
+	margin-top: 0px;
+}
+
+.community-theme-container {
+	box-shadow: var(--drop-shadow);
+	background-color: var(--background-secondary);
+	padding: 25px 15px 15px 15px;
+	margin-right: 15px;
+	border-radius: var(--border-radius);
+	margin-top: -10px;
+}
+
+.community-theme-container:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.community-theme-container .community-theme-filters-container,
+.community-theme-container .hotkey-search-container {
+	padding: 0px 40px 10px 40px;
+}
+
+.community-theme-filters-container button {
+	margin-bottom: unset;
+}
+
+.community-theme {
+	padding: 10px;
+	margin: 5px;
+	width: 50%;
+	max-width: 240px;
+	border: var(--border-size) solid transparent;
+	box-shadow: var(--drop-shadow);
+	background-color: var(--background-primary);
+}
+
+.community-theme,
+.community-theme:hover,
+.community-theme.is-selected {
+	border-radius: var(--border-radius);
+}
+
+.community-theme.is-selected,
+.community-theme.is-selected .community-theme-info,
+.community-theme.is-selected .community-theme-screenshot,
+.community-theme.is-selected .community-theme-remove-button {
+	color: var(--text-normal);
+}
+
+.mod-community-theme > .modal-title::before {
+	content: "Community Themes";
+	color: var(--text-normal);
+	font-size: 16px;
+	padding: 2px 10px;
+	height: 25px;
+	margin: 5px auto;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.mod-community-theme .modal-content .modal-title {
+	font-size: 16px;
+	font-weight: 600;
+	background: var(--background-primary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	padding: 2px 8px;
+	height: fit-content;
+	width: -webkit-fill-available;
+	margin-right: 15px;
+	z-index: 500;
+	display: inline-block;
+}
+
+.community-theme-info {
+	flex-grow: unset;
+}
+
+.community-theme > div:nth-child(3) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	padding: 0px;
+}
+
+/* Hides the Theme Screenshot when Style Settings isn't installed to make space for the warning prompt */
+body:not(.css-settings-manager) .community-theme.is-selected img[alt="Prism"] {
+	display: none;
+}
+
+/* Warning prompt to install Style Settings */
+body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3)::after {
+	height: fit-content;
+	width: 100%;
+	display: block;
+	content: "'Style Settings' Plugin is required for Prism to function correctly!";
+	padding: 10px;
+	border-radius: var(--border-radius);
+	border: var(--border-size) solid var(--color-dark-red);
+	background-color: var(--color-red);
+	font-weight: 600;
+	text-align: center;
+}
+
+.community-plugin-search .search-input-clear-button {
+	top: 4px;
+}
+
+.community-plugin-search .search-input-container {
+	width: -webkit-fill-available;
+}
+
+.installed-plugins-container {
+	border-top: unset;
+}
+
+.setting-item.setting-item-heading:not(.style-settings-heading) {
+	border-bottom: 1px solid var(--table-border-color);
+	padding: 10px 0px;
+}
+
+.community-theme .modal-button-container .mod-cta:last-of-type {
+	margin-right: unset;
+}
+
+.community-theme-filters-container .search-input-container {
+	margin: 0px;
+}
+
+.modal-content hr {
+	display: none;
+}
+
+.modal.mod-community-plugin {
+	padding: 0px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	width: 80vw;
+	height: 80vh;
+	max-height: 1000px;
+	max-width: 1400px;
+	min-height: unset;
+}
+
+.theme-light .mod-community-plugin {
+	background-color: var(--background-color-lt);
+}
+
+.theme-dark .mod-community-plugin {
+	background-color: var(--background-color-dt);
+}
+
+.mod-community-plugin .modal-title::before {
+	content: "Community Plugins";
+	color: var(--text-normal);
+	font-size: 16px;
+	padding: 2px 10px;
+	height: 25px;
+	margin: 5px auto;
+	width: fit-content;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.community-theme-filters-container .setting-item {
+	padding-bottom: unset;
+}
+
+.community-plugin-info {
+	background-color: var(--page-background-color);
+	padding: 20px 30px;
+	margin: 0px 15px 15px 0px;
+	border-radius: var(--border-radius);
+}
+
+.community-plugin-search {
+	background-color: var(--background-secondary);
+	padding: 10px;
+	margin: 0px 15px 15px 15px;
+	border-radius: var(--border-radius);
+}
+
+.community-plugin-search-results {
+	padding-right: 10px;
+}
+
+.community-plugin-item {
+	width: 100%;
+	padding: 8px 10px;
+	margin: unset;
+	background-color: var(--background-primary);
+	box-shadow: var(--drop-shadow);
+	border-radius: var(--border-radius-small);
+}
+
+.community-plugin-item:hover,
+.community-plugin-item:hover .community-plugin-name,
+.community-plugin-item:hover .community-plugin-downloads,
+.community-plugin-item:hover .community-plugin-author {
+	color: var(--interactive-accent-text);
+	background-color: var(--background-primary);
+}
+
+.community-plugin-item:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.community-plugin-name {
+	width: fit-content;
+	display: inline-block;
+	max-width: 85%;
+}
+
+.community-plugin-downloads {
+	float: right;
+}
+
+.community-plugin-name,
+.community-plugin-downloads,
+.community-plugin-author {
+	color: var(--text-normal);
+}
+
+.community-plugin-desc {
+	color: var(--text-muted);
+}
+
+.community-plugin-search .setting-item .setting-item-info {
+	display: none;
+}
+
+.community-plugin-info .community-plugin-readme.markdown-preview-view {
+	padding: 0px 0px 20px 0px;
+}
+
+.community-plugin-search-summary {
+	padding: 2px 8px;
+	margin-bottom: 10px;
+	background-color: var(--background-primary);
+	box-shadow: var(--drop-shadow);
+	border-radius: var(--border-radius-small);
+	width: fit-content;
+	color: var(--text-normal);
+}
+
+.theme-light .community-plugin-search-results::-webkit-scrollbar-track {
+	background-color: var(--background-color-lt);
+	border-radius: var(--border-radius-small);
+}
+
+.theme-dark .community-plugin-search-results::-webkit-scrollbar-track {
+	background-color: var(--background-color-dt);
+	border-radius: var(--border-radius-small);
+}
+/* #endregion */

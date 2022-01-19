@@ -1,3 +1,4 @@
+/* #region  [Info] License */
 /* 
     Prism Theme for Obsidian.md
     > A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md
@@ -8,6 +9,7 @@
     Distributed under the MIT License. See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
     Copyright (c) 2022 Damian Korcz <https://github.com/damiankorcz>
 */
+/* #endregion */
 /*  
   ==========================================================================
   Font Imports
@@ -133,26 +135,34 @@ code {
 }
 
 /* #endregion */
+/* #region  [Font] Link */
+a {
+  color: var(--interactive-accent-text);
+}
+a:hover {
+  color: var(--interactive-accent-hover);
+}
+
+/* #endregion */
 /*
 	==========================================================================
 	Root Variables
 	==========================================================================
 */
+/* #region  [Variables] Root */
 :root {
-  /* #region  [Variables Root] General Settings */
+  /* General Settings */
   --default-font: "Source Sans Pro", sans-serif;
   --border-size: 2px;
   --blur-intensity: 6px;
   --file-explorer-vertical-lines-width: 2px;
   --style-settings-vertical-lines-width: 2px;
-  /* #endregion */
-  /* #region  [Variables Root] Scrollbar Settings */
+  /* Scrollbar Settings */
   --scroll-bar-border-radius: 0px;
   --scroll-button-background-color: var(--background-secondary);
   --scroll-button-background-color-hover: var(--background-secondary-alt);
   --scroll-button-border-radius: 0px;
-  /* #endregion */
-  /* #region  [Variables Root] Base Colors */
+  /* Base Colors */
   --color-desaturate-lt: 20%;
   --color-darken-lt: 15%;
   --color-darken-text-lt: 45%;
@@ -200,18 +210,14 @@ code {
   --color-grey-s: 6%;
   --color-grey-l: 93%;
   /* #endregion */
-  /*
-  	Style Settings Accessible Default Properties
-  	==========================================================================
-  */
-  /* #region  [Variables Root] Fonts */
+  /* Style Settings Accessible Default Properties */
+  /* Fonts */
   --font-family-ui: "Source Sans Pro", sans-serif;
   --font-family-edit: "Source Sans Pro", sans-serif;
   --font-family-preview: "Source Sans Pro", sans-serif;
   --font-family-code: "Fira Code", monospace;
   /* #endregion */
-  /* #region  [Variables Root] Graph View */
-  /* Light Theme */
+  /* Graph View - Light Theme */
   --graph-fill-opacity-lt: 1;
   --graph-fill-focused-opacity-lt: 1;
   --graph-tag-opacity-lt: 1;
@@ -226,7 +232,7 @@ code {
   --color-custom-graph-unresolved-lt: #ff7070;
   --color-custom-graph-highlight-lt: #8670ff;
   --color-custom-graph-highlight-line-lt: #8670ff;
-  /* Dark Theme */
+  /* Graph View - Dark Theme */
   --graph-fill-opacity-dt: 1;
   --graph-fill-focused-opacity-dt: 1;
   --graph-tag-opacity-dt: 1;
@@ -241,14 +247,11 @@ code {
   --color-custom-graph-unresolved-dt: #b63a3a;
   --color-custom-graph-highlight-dt: #4c3ab6;
   --color-custom-graph-highlight-line-dt: #4c3ab6;
-  /* #endregion */
-  /* #region  [Variables Root] Window Adjustments */
+  /* Window Adjustments */
   --window-gap: 10px;
   --border-radius: 8px;
   --border-radius-small: 4px;
-  /* #endregion */
-  /* #region  [Variables Root] Background Options */
-  /* Light Theme */
+  /* Background Options - Light Theme */
   --background-color-lt: #e0e3e6;
   --background-image-lt: url();
   --background-blur-lt: 0;
@@ -256,7 +259,7 @@ code {
   --background-attachment-lt: fixed;
   --background-position-lt: center;
   --background-size-lt: cover;
-  /* Dark Theme */
+  /* Background Options - Dark Theme */
   --background-color-dt: #1a1a1a;
   --background-image-dt: url();
   --background-blur-dt: 0;
@@ -264,41 +267,33 @@ code {
   --background-attachment-dt: fixed;
   --background-position-dt: center;
   --background-size-dt: cover;
-  /* #endregion */
-  /* #region  [Variables Root] Accent Colors and Styles */
+  /* Accent Colors */
   --color-accent-lt: #c7bdff;
   --color-accent-dt: #8c7fd7;
-  /* #endregion */
-  /* #region  [Variables Root] Solid Titlebar Custom Colors */
+  /* Solid Titlebar Custom Colors */
   --titlebar-background-color-lt: #ebecef;
   --titlebar-background-color-dt: #2b2b2b;
-  /* #endregion */
-  /* #region  [Variables Root] Solid Status Bar Custom Colors */
+  /* Solid Status Bar Custom Colors */
   --status-bar-background-color-lt: #ebecef;
   --status-bar-background-color-dt: #2b2b2b;
-  /* #endregion */
-  /* #region  [Variables Root] Custom Vault Banner */
+  /* Custom Vault Banner */
   --custom-vault-banner-icon-url: url(https://img.icons8.com/dusk/50/000000/safe.png);
-  /* #endregion */
-  /* #region  [Variables Root] File Explorer */
+  /* Vertical Line Widths */
   --file-explorer-vertical-lines-width: 2px;
   --outline-vertical-lines-width: 2px;
-  /* #endregion */
-  /* #region  [Variables Root] Scrollbar */
+  /* Scrollbar */
   --scroll-bar-size: 8px;
   /* The width of the scrollbar */
   --scroll-bar-size-hover: 15px;
   /* The width of the scrollbar when hovering over the window content */
-  /* #endregion */
-  /* #region  [Variables Root] Header Font Size */
+  /* Header Font Size */
   --h1-font-size: 2em;
   --h2-font-size: 1.8em;
   --h3-font-size: 1.6em;
   --h4-font-size: 1.4em;
   --h5-font-size: 1.2em;
   --h6-font-size: 1em;
-  /* #endregion */
-  /* #region  [Variables Root] Header Text */
+  /* Header Text */
   --h1-text-opacity-lt: 100%;
   --h2-text-opacity-lt: 100%;
   --h3-text-opacity-lt: 100%;
@@ -311,8 +306,7 @@ code {
   --h4-text-opacity-dt: 100%;
   --h5-text-opacity-dt: 100%;
   --h6-text-opacity-dt: 100%;
-  /* #endregion */
-  /* #region  [Variables Root] Header Background */
+  /* Header Background */
   --h1-background-opacity-lt: 100%;
   --h2-background-opacity-lt: 100%;
   --h3-background-opacity-lt: 100%;
@@ -325,8 +319,7 @@ code {
   --h4-background-opacity-dt: 100%;
   --h5-background-opacity-dt: 100%;
   --h6-background-opacity-dt: 100%;
-  /* #endregion */
-  /* #region  [Variables Root] Header Border */
+  /* Header Border */
   --h1-border-opacity-lt: 100%;
   --h2-border-opacity-lt: 100%;
   --h3-border-opacity-lt: 100%;
@@ -351,8 +344,7 @@ code {
   --h4-border-width-dt: 2px;
   --h5-border-width-dt: 2px;
   --h6-border-width-dt: 2px;
-  /* #endregion */
-  /* #region  [Variables Root] Header Underline */
+  /* Header Underline */
   --h1-underline-thickness-lt: 4px;
   --h2-underline-thickness-lt: 4px;
   --h3-underline-thickness-lt: 4px;
@@ -377,253 +369,82 @@ code {
   --h4-underline-opacity-dt: 100%;
   --h5-underline-opacity-dt: 100%;
   --h6-underline-opacity-dt: 100%;
-  /* #endregion */
 }
 
+/* #endregion */
 /*
 	==========================================================================
-	Colors
+	Color Variables
 	==========================================================================
 */
+/* #region  [Variables] Light Theme */
 .theme-light {
   --highlight-default: var(--color-yellow);
-  /* #region  [Variables LT] Color Adjustments */
-  --color-yellow-s-desaturated: calc(
-  	var(--color-yellow-s) - var(--color-desaturate-lt)
-  );
-  --color-green-s-desaturated: calc(
-  	var(--color-green-s) - var(--color-desaturate-lt)
-  );
-  --color-mint-s-desaturated: calc(
-  	var(--color-mint-s) - var(--color-desaturate-lt)
-  );
-  --color-aqua-s-desaturated: calc(
-  	var(--color-aqua-s) - var(--color-desaturate-lt)
-  );
-  --color-pink-s-desaturated: calc(
-  	var(--color-pink-s) - var(--color-desaturate-lt)
-  );
-  --color-accent-l-darkened: calc(
-  	var(--color-accent-lt-l) - var(--color-darken-lt)
-  );
+  /* Light Theme Color Adjustments */
+  --color-yellow-s-desaturated: calc(var(--color-yellow-s) - var(--color-desaturate-lt));
+  --color-green-s-desaturated: calc(var(--color-green-s) - var(--color-desaturate-lt));
+  --color-mint-s-desaturated: calc(var(--color-mint-s) - var(--color-desaturate-lt));
+  --color-aqua-s-desaturated: calc(var(--color-aqua-s) - var(--color-desaturate-lt));
+  --color-pink-s-desaturated: calc(var(--color-pink-s) - var(--color-desaturate-lt));
+  --color-accent-l-darkened: calc(var(--color-accent-lt-l) - var(--color-darken-lt));
   --color-red-l-darkened: calc(var(--color-red-l) - var(--color-darken-lt));
-  --color-orange-l-darkened: calc(
-  	var(--color-orange-l) - var(--color-darken-lt)
-  );
-  --color-yellow-l-darkened: calc(
-  	var(--color-yellow-l) - var(--color-darken-lt)
-  );
+  --color-orange-l-darkened: calc(var(--color-orange-l) - var(--color-darken-lt));
+  --color-yellow-l-darkened: calc(var(--color-yellow-l) - var(--color-darken-lt));
   --color-green-l-darkened: calc(var(--color-green-l) - var(--color-darken-lt));
   --color-mint-l-darkened: calc(var(--color-mint-l) - var(--color-darken-lt));
   --color-aqua-l-darkened: calc(var(--color-aqua-l) - var(--color-darken-lt));
   --color-blue-l-darkened: calc(var(--color-blue-l) - var(--color-darken-lt));
-  --color-purple-l-darkened: calc(
-  	var(--color-purple-l) - var(--color-darken-lt)
-  );
+  --color-purple-l-darkened: calc(var(--color-purple-l) - var(--color-darken-lt));
   --color-pink-l-darkened: calc(var(--color-pink-l) - var(--color-darken-lt));
   --color-grey-l-darkened: calc(var(--color-grey-l) - var(--color-darken-lt));
-  --color-accent-l-darkened-text: calc(
-  	var(--color-accent-lt-l) - var(--color-darken-text-lt)
-  );
-  --color-red-l-darkened-text: calc(
-  	var(--color-red-l) - var(--color-darken-text-lt)
-  );
-  --color-orange-l-darkened-text: calc(
-  	var(--color-orange-l) - var(--color-darken-text-lt)
-  );
-  --color-yellow-l-darkened-text: calc(
-  	var(--color-yellow-l) - var(--color-darken-text-lt)
-  );
-  --color-green-l-darkened-text: calc(
-  	var(--color-green-l) - var(--color-darken-text-lt)
-  );
-  --color-mint-l-darkened-text: calc(
-  	var(--color-mint-l) - var(--color-darken-text-lt)
-  );
-  --color-aqua-l-darkened-text: calc(
-  	var(--color-aqua-l) - var(--color-darken-text-lt)
-  );
-  --color-blue-l-darkened-text: calc(
-  	var(--color-blue-l) - var(--color-darken-text-lt)
-  );
-  --color-purple-l-darkened-text: calc(
-  	var(--color-purple-l) - var(--color-darken-text-lt)
-  );
-  --color-pink-l-darkened-text: calc(
-  	var(--color-pink-l) - var(--color-darken-text-lt)
-  );
-  --color-grey-l-darkened-text: calc(
-  	var(--color-grey-l) - var(--color-darken-text-lt)
-  );
-  /* #endregion */
-  /* #region  [Variables LT] Base Colors */
-  --color-accent: hsl(
-  	var(--color-accent-lt-h),
-  	var(--color-accent-lt-s),
-  	var(--color-accent-lt-l)
-  );
+  --color-accent-l-darkened-text: calc(var(--color-accent-lt-l) - var(--color-darken-text-lt));
+  --color-red-l-darkened-text: calc(var(--color-red-l) - var(--color-darken-text-lt));
+  --color-orange-l-darkened-text: calc(var(--color-orange-l) - var(--color-darken-text-lt));
+  --color-yellow-l-darkened-text: calc(var(--color-yellow-l) - var(--color-darken-text-lt));
+  --color-green-l-darkened-text: calc(var(--color-green-l) - var(--color-darken-text-lt));
+  --color-mint-l-darkened-text: calc(var(--color-mint-l) - var(--color-darken-text-lt));
+  --color-aqua-l-darkened-text: calc(var(--color-aqua-l) - var(--color-darken-text-lt));
+  --color-blue-l-darkened-text: calc(var(--color-blue-l) - var(--color-darken-text-lt));
+  --color-purple-l-darkened-text: calc(var(--color-purple-l) - var(--color-darken-text-lt));
+  --color-pink-l-darkened-text: calc(var(--color-pink-l) - var(--color-darken-text-lt));
+  --color-grey-l-darkened-text: calc(var(--color-grey-l) - var(--color-darken-text-lt));
+  /* Light Theme Base Colors */
+  --color-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
   --color-red: hsl(var(--color-red-h), var(--color-red-s), var(--color-red-l));
-  --color-orange: hsl(
-  	var(--color-orange-h),
-  	var(--color-orange-s),
-  	var(--color-orange-l)
-  );
-  --color-yellow: hsl(
-  	var(--color-yellow-h),
-  	var(--color-yellow-s-desaturated),
-  	var(--color-yellow-l)
-  );
-  --color-green: hsl(
-  	var(--color-green-h),
-  	var(--color-green-s-desaturated),
-  	var(--color-green-l)
-  );
-  --color-mint: hsl(
-  	var(--color-mint-h),
-  	var(--color-mint-s-desaturated),
-  	var(--color-mint-l)
-  );
-  --color-aqua: hsl(
-  	var(--color-aqua-h),
-  	var(--color-aqua-s-desaturated),
-  	var(--color-aqua-l)
-  );
-  --color-blue: hsl(
-  	var(--color-blue-h),
-  	var(--color-blue-s),
-  	var(--color-blue-l)
-  );
-  --color-purple: hsl(
-  	var(--color-purple-h),
-  	var(--color-purple-s),
-  	var(--color-purple-l)
-  );
-  --color-pink: hsl(
-  	var(--color-pink-h),
-  	var(--color-pink-s-desaturated),
-  	var(--color-pink-l)
-  );
-  --color-grey: hsl(
-  	var(--color-grey-h),
-  	var(--color-grey-s),
-  	var(--color-grey-l)
-  );
-  /* #endregion */
-  /* #region  [Variables LT] Dark Colors */
-  --color-dark-accent: hsl(
-  	var(--color-accent-lt-h),
-  	var(--color-accent-lt-s),
-  	var(--color-accent-l-darkened)
-  );
-  --color-dark-red: hsl(
-  	var(--color-red-h),
-  	var(--color-red-s),
-  	var(--color-red-l-darkened)
-  );
-  --color-dark-orange: hsl(
-  	var(--color-orange-h),
-  	var(--color-orange-s),
-  	var(--color-orange-l-darkened)
-  );
-  --color-dark-yellow: hsl(
-  	var(--color-yellow-h),
-  	var(--color-yellow-s-desaturated),
-  	var(--color-yellow-l-darkened)
-  );
-  --color-dark-green: hsl(
-  	var(--color-green-h),
-  	var(--color-green-s-desaturated),
-  	var(--color-green-l-darkened)
-  );
-  --color-dark-mint: hsl(
-  	var(--color-mint-h),
-  	var(--color-mint-s-desaturated),
-  	var(--color-mint-l-darkened)
-  );
-  --color-dark-aqua: hsl(
-  	var(--color-aqua-h),
-  	var(--color-aqua-s-desaturated),
-  	var(--color-aqua-l-darkened)
-  );
-  --color-dark-blue: hsl(
-  	var(--color-blue-h),
-  	var(--color-blue-s),
-  	var(--color-blue-l-darkened)
-  );
-  --color-dark-purple: hsl(
-  	var(--color-purple-h),
-  	var(--color-purple-s),
-  	var(--color-purple-l-darkened)
-  );
-  --color-dark-pink: hsl(
-  	var(--color-pink-h),
-  	var(--color-pink-s-desaturated),
-  	var(--color-pink-l-darkened)
-  );
-  --color-dark-grey: hsl(
-  	var(--color-grey-h),
-  	var(--color-grey-s),
-  	var(--color-grey-l-darkened)
-  );
-  /* #endregion */
-  /* #region  [Variables LT] Text Colors */
-  --color-text-accent: hsl(
-  	var(--color-accent-lt-h),
-  	var(--color-accent-lt-s),
-  	var(--color-accent-l-darkened-text)
-  );
-  --color-text-red: hsl(
-  	var(--color-red-h),
-  	var(--color-red-s),
-  	var(--color-red-l-darkened-text)
-  );
-  --color-text-orange: hsl(
-  	var(--color-orange-h),
-  	var(--color-orange-s),
-  	var(--color-orange-l-darkened-text)
-  );
-  --color-text-yellow: hsl(
-  	var(--color-yellow-h),
-  	var(--color-yellow-s-desaturated),
-  	var(--color-yellow-l-darkened-text)
-  );
-  --color-text-green: hsl(
-  	var(--color-green-h),
-  	var(--color-green-s-desaturated),
-  	var(--color-green-l-darkened-text)
-  );
-  --color-text-mint: hsl(
-  	var(--color-mint-h),
-  	var(--color-mint-s-desaturated),
-  	var(--color-mint-l-darkened-text)
-  );
-  --color-text-aqua: hsl(
-  	var(--color-aqua-h),
-  	var(--color-aqua-s-desaturated),
-  	var(--color-aqua-l-darkened-text)
-  );
-  --color-text-blue: hsl(
-  	var(--color-blue-h),
-  	var(--color-blue-s),
-  	var(--color-blue-l-darkened-text)
-  );
-  --color-text-purple: hsl(
-  	var(--color-purple-h),
-  	var(--color-purple-s),
-  	var(--color-purple-l-darkened-text)
-  );
-  --color-text-pink: hsl(
-  	var(--color-pink-h),
-  	var(--color-pink-s-desaturated),
-  	var(--color-pink-l-darkened-text)
-  );
-  --color-text-grey: hsl(
-  	var(--color-grey-h),
-  	var(--color-grey-s),
-  	var(--color-grey-l-darkened-text)
-  );
-  /* #endregion */
-  /* #region  [Variables LT] Main Obsidian Colors */
+  --color-orange: hsl(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l));
+  --color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l));
+  --color-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l));
+  --color-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l));
+  --color-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l));
+  --color-blue: hsl(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l));
+  --color-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l));
+  --color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l));
+  --color-grey: hsl(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l));
+  /* Light Theme Dark Colors */
+  --color-dark-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened));
+  --color-dark-red: hsl(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened));
+  --color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened));
+  --color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
+  --color-dark-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
+  --color-dark-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
+  --color-dark-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
+  --color-dark-blue: hsl(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened));
+  --color-dark-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened));
+  --color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
+  --color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened));
+  /* Light Theme Text Colors */
+  --color-text-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
+  --color-text-red: hsl(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text));
+  --color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text));
+  --color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text));
+  --color-text-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text));
+  --color-text-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text));
+  --color-text-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text));
+  --color-text-blue: hsl(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text));
+  --color-text-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text));
+  --color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text));
+  --color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text));
+  /* Light Theme Main Obsidian Colors */
   --text-normal: hsl(0, 0%, 20%);
   --text-muted: hsl(0, 0%, 40%);
   --text-faint: hsl(0, 0%, 60%);
@@ -644,12 +465,8 @@ code {
   --style-settings-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
   --outline-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
   --drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset,
-  	hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset,
-  	hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-  	hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
-  --drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-  	hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+  --drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset, hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+  --drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
   --scroll-bar-thumb: hsla(0, 0%, 80%, 1);
   --table-border-color: var(--background-secondary-alt);
   --h1-text-color-custom-lt: hsl(0, 0%, 20%);
@@ -670,300 +487,93 @@ code {
   --h4-border-color-custom-lt: hsl(0, 0%, 20%);
   --h5-border-color-custom-lt: hsl(0, 0%, 20%);
   --h6-border-color-custom-lt: hsl(0, 0%, 20%);
-  /* #endregion */
 }
 
+/* #endregion */
+/* #region  [Variables] Dark Theme */
 .theme-dark {
   --highlight-default: var(--color-yellow);
-  /* #region  [Variables DT] Color Adjustments */
-  --color-red-s-desaturated: calc(
-  	var(--color-red-s) - var(--color-desaturate-dt)
-  );
-  --color-orange-s-desaturated: calc(
-  	var(--color-orange-s) - var(--color-desaturate-dt)
-  );
-  --color-yellow-s-desaturated: calc(
-  	var(--color-yellow-s) - var(--color-desaturate-dt)
-  );
-  --color-green-s-desaturated: calc(
-  	var(--color-green-s) - var(--color-desaturate-dt)
-  );
-  --color-mint-s-desaturated: calc(
-  	var(--color-mint-s) - var(--color-desaturate-dt)
-  );
-  --color-aqua-s-desaturated: calc(
-  	var(--color-aqua-s) - var(--color-desaturate-dt)
-  );
-  --color-blue-s-desaturated: calc(
-  	var(--color-blue-s) - var(--color-desaturate-dt)
-  );
-  --color-purple-s-desaturated: calc(
-  	var(--color-purple-s) - var(--color-desaturate-dt)
-  );
-  --color-pink-s-desaturated: calc(
-  	var(--color-pink-s) - var(--color-desaturate-dt)
-  );
-  --color-grey-s-desaturated: calc(
-  	var(--color-grey-s) - var(--color-desaturate-dt)
-  );
-  --color-accent-l-darkened: calc(
-  	var(--color-accent-dt-l) - var(--color-darken-dt)
-  );
+  /* Dark Theme Color Adjustments */
+  --color-red-s-desaturated: calc(var(--color-red-s) - var(--color-desaturate-dt));
+  --color-orange-s-desaturated: calc(var(--color-orange-s) - var(--color-desaturate-dt));
+  --color-yellow-s-desaturated: calc(var(--color-yellow-s) - var(--color-desaturate-dt));
+  --color-green-s-desaturated: calc(var(--color-green-s) - var(--color-desaturate-dt));
+  --color-mint-s-desaturated: calc(var(--color-mint-s) - var(--color-desaturate-dt));
+  --color-aqua-s-desaturated: calc(var(--color-aqua-s) - var(--color-desaturate-dt));
+  --color-blue-s-desaturated: calc(var(--color-blue-s) - var(--color-desaturate-dt));
+  --color-purple-s-desaturated: calc(var(--color-purple-s) - var(--color-desaturate-dt));
+  --color-pink-s-desaturated: calc(var(--color-pink-s) - var(--color-desaturate-dt));
+  --color-grey-s-desaturated: calc(var(--color-grey-s) - var(--color-desaturate-dt));
+  --color-accent-l-darkened: calc(var(--color-accent-dt-l) - var(--color-darken-dt));
   --color-red-l-darkened: calc(var(--color-red-l) - var(--color-darken-dt));
-  --color-orange-l-darkened: calc(
-  	var(--color-orange-l) - var(--color-darken-dt)
-  );
-  --color-yellow-l-darkened: calc(
-  	var(--color-yellow-l) - var(--color-darken-dt)
-  );
+  --color-orange-l-darkened: calc(var(--color-orange-l) - var(--color-darken-dt));
+  --color-yellow-l-darkened: calc(var(--color-yellow-l) - var(--color-darken-dt));
   --color-green-l-darkened: calc(var(--color-green-l) - var(--color-darken-dt));
   --color-mint-l-darkened: calc(var(--color-mint-l) - var(--color-darken-dt));
   --color-aqua-l-darkened: calc(var(--color-aqua-l) - var(--color-darken-dt));
   --color-blue-l-darkened: calc(var(--color-blue-l) - var(--color-darken-dt));
-  --color-purple-l-darkened: calc(
-  	var(--color-purple-l) - var(--color-darken-dt)
-  );
+  --color-purple-l-darkened: calc(var(--color-purple-l) - var(--color-darken-dt));
   --color-pink-l-darkened: calc(var(--color-pink-l) - var(--color-darken-dt));
   --color-grey-l-darkened: calc(var(--color-grey-l) - var(--color-darken-dt));
-  --color-accent-l-darkened2x: calc(
-  	var(--color-accent-dt-l) - var(--color-darken-dt) * 2
-  );
-  --color-red-l-darkened2x: calc(
-  	var(--color-red-l) - var(--color-darken-dt) * 2
-  );
-  --color-orange-l-darkened2x: calc(
-  	var(--color-orange-l) - var(--color-darken-dt) * 2
-  );
-  --color-yellow-l-darkened2x: calc(
-  	var(--color-yellow-l) - var(--color-darken-dt) * 2
-  );
-  --color-green-l-darkened2x: calc(
-  	var(--color-green-l) - var(--color-darken-dt) * 2
-  );
-  --color-mint-l-darkened2x: calc(
-  	var(--color-mint-l) - var(--color-darken-dt) * 2
-  );
-  --color-aqua-l-darkened2x: calc(
-  	var(--color-aqua-l) - var(--color-darken-dt) * 2
-  );
-  --color-blue-l-darkened2x: calc(
-  	var(--color-blue-l) - var(--color-darken-dt) * 2
-  );
-  --color-purple-l-darkened2x: calc(
-  	var(--color-purple-l) - var(--color-darken-dt) * 2
-  );
-  --color-pink-l-darkened2x: calc(
-  	var(--color-pink-l) - var(--color-darken-dt) * 2
-  );
-  --color-grey-l-darkened2x: calc(
-  	var(--color-grey-l) - var(--color-darken-dt) * 2
-  );
-  --color-accent-l-darkened-text: calc(
-  	var(--color-accent-dt-l) - var(--color-darken-text-dt)
-  );
-  --color-red-l-darkened-text: calc(
-  	var(--color-red-l) - var(--color-darken-text-dt)
-  );
-  --color-orange-l-darkened-text: calc(
-  	var(--color-orange-l) - var(--color-darken-text-dt)
-  );
-  --color-yellow-l-darkened-text: calc(
-  	var(--color-yellow-l) - var(--color-darken-text-dt)
-  );
-  --color-green-l-darkened-text: calc(
-  	var(--color-green-l) - var(--color-darken-text-dt)
-  );
-  --color-mint-l-darkened-text: calc(
-  	var(--color-mint-l) - var(--color-darken-text-dt)
-  );
-  --color-aqua-l-darkened-text: calc(
-  	var(--color-aqua-l) - var(--color-darken-text-dt)
-  );
-  --color-blue-l-darkened-text: calc(
-  	var(--color-blue-l) - var(--color-darken-text-dt)
-  );
-  --color-purple-l-darkened-text: calc(
-  	var(--color-purple-l) - var(--color-darken-text-dt)
-  );
-  --color-pink-l-darkened-text: calc(
-  	var(--color-pink-l) - var(--color-darken-text-dt)
-  );
-  --color-grey-l-darkened-text: calc(
-  	var(--color-grey-l) - var(--color-darken-text-dt)
-  );
-  /* #endregion */
-  /* #region  [Variables DT] Base Colors */
-  --color-accent: hsl(
-  	var(--color-accent-dt-h),
-  	var(--color-accent-dt-s),
-  	var(--color-accent-dt-l)
-  );
-  --color-red: hsl(
-  	var(--color-red-h),
-  	var(--color-red-s-desaturated),
-  	var(--color-red-l-darkened)
-  );
-  --color-orange: hsl(
-  	var(--color-orange-h),
-  	var(--color-orange-s-desaturated),
-  	var(--color-orange-l-darkened)
-  );
-  --color-yellow: hsl(
-  	var(--color-yellow-h),
-  	var(--color-yellow-s-desaturated),
-  	var(--color-yellow-l-darkened)
-  );
-  --color-green: hsl(
-  	var(--color-green-h),
-  	var(--color-green-s-desaturated),
-  	var(--color-green-l-darkened)
-  );
-  --color-mint: hsl(
-  	var(--color-mint-h),
-  	var(--color-mint-s-desaturated),
-  	var(--color-mint-l-darkened)
-  );
-  --color-aqua: hsl(
-  	var(--color-aqua-h),
-  	var(--color-aqua-s-desaturated),
-  	var(--color-aqua-l-darkened)
-  );
-  --color-blue: hsl(
-  	var(--color-blue-h),
-  	var(--color-blue-s-desaturated),
-  	var(--color-blue-l-darkened)
-  );
-  --color-purple: hsl(
-  	var(--color-purple-h),
-  	var(--color-purple-s-desaturated),
-  	var(--color-purple-l-darkened)
-  );
-  --color-pink: hsl(
-  	var(--color-pink-h),
-  	var(--color-pink-s-desaturated),
-  	var(--color-pink-l-darkened)
-  );
-  --color-grey: hsl(
-  	var(--color-grey-h),
-  	var(--color-grey-s-desaturated),
-  	var(--color-grey-l-darkened)
-  );
-  /* #endregion */
-  /* #region  [Variables DT] Dark Colors */
-  --color-dark-accent: hsl(
-  	var(--color-accent-dt-h),
-  	var(--color-accent-dt-s),
-  	var(--color-accent-l-darkened2x)
-  );
-  --color-dark-red: hsl(
-  	var(--color-red-h),
-  	var(--color-red-s-desaturated),
-  	var(--color-red-l-darkened2x)
-  );
-  --color-dark-orange: hsl(
-  	var(--color-orange-h),
-  	var(--color-orange-s-desaturated),
-  	var(--color-orange-l-darkened2x)
-  );
-  --color-dark-yellow: hsl(
-  	var(--color-yellow-h),
-  	var(--color-yellow-s-desaturated),
-  	var(--color-yellow-l-darkened2x)
-  );
-  --color-dark-green: hsl(
-  	var(--color-green-h),
-  	var(--color-green-s-desaturated),
-  	var(--color-green-l-darkened2x)
-  );
-  --color-dark-mint: hsl(
-  	var(--color-mint-h),
-  	var(--color-mint-s-desaturated),
-  	var(--color-mint-l-darkened2x)
-  );
-  --color-dark-aqua: hsl(
-  	var(--color-aqua-h),
-  	var(--color-aqua-s-desaturated),
-  	var(--color-aqua-l-darkened2x)
-  );
-  --color-dark-blue: hsl(
-  	var(--color-blue-h),
-  	var(--color-blue-s-desaturated),
-  	var(--color-blue-l-darkened2x)
-  );
-  --color-dark-purple: hsl(
-  	var(--color-purple-h),
-  	var(--color-purple-s-desaturated),
-  	var(--color-purple-l-darkened2x)
-  );
-  --color-dark-pink: hsl(
-  	var(--color-pink-h),
-  	var(--color-pink-s-desaturated),
-  	var(--color-pink-l-darkened2x)
-  );
-  --color-dark-grey: hsl(
-  	var(--color-grey-h),
-  	var(--color-grey-s-desaturated),
-  	var(--color-grey-l-darkened2x)
-  );
-  /* #endregion */
-  /* #region  [Variables DT] Text Colors */
-  --color-text-accent: hsl(
-  	var(--color-accent-dt-h),
-  	var(--color-accent-dt-s),
-  	var(--color-accent-l-darkened-text)
-  );
-  --color-text-red: hsl(
-  	var(--color-red-h),
-  	var(--color-red-s-desaturated),
-  	var(--color-red-l-darkened-text)
-  );
-  --color-text-orange: hsl(
-  	var(--color-orange-h),
-  	var(--color-orange-s-desaturated),
-  	var(--color-orange-l-darkened-text)
-  );
-  --color-text-yellow: hsl(
-  	var(--color-yellow-h),
-  	var(--color-yellow-s-desaturated),
-  	var(--color-yellow-l-darkened-text)
-  );
-  --color-text-green: hsl(
-  	var(--color-green-h),
-  	var(--color-green-s-desaturated),
-  	var(--color-green-l-darkened-text)
-  );
-  --color-text-mint: hsl(
-  	var(--color-mint-h),
-  	var(--color-mint-s-desaturated),
-  	var(--color-mint-l-darkened-text)
-  );
-  --color-text-aqua: hsl(
-  	var(--color-aqua-h),
-  	var(--color-aqua-s-desaturated),
-  	var(--color-aqua-l-darkened-text)
-  );
-  --color-text-blue: hsl(
-  	var(--color-blue-h),
-  	var(--color-blue-s-desaturated),
-  	var(--color-blue-l-darkened-text)
-  );
-  --color-text-purple: hsl(
-  	var(--color-purple-h),
-  	var(--color-purple-s-desaturated),
-  	var(--color-purple-l-darkened-text)
-  );
-  --color-text-pink: hsl(
-  	var(--color-pink-h),
-  	var(--color-pink-s-desaturated),
-  	var(--color-pink-l-darkened-text)
-  );
-  --color-text-grey: hsl(
-  	var(--color-grey-h),
-  	var(--color-grey-s-desaturated),
-  	var(--color-grey-l-darkened-text)
-  );
-  /* #endregion */
-  /* #region  [Variables DT] Main Obsidian Colors */
+  --color-accent-l-darkened2x: calc(var(--color-accent-dt-l) - var(--color-darken-dt) * 2);
+  --color-red-l-darkened2x: calc(var(--color-red-l) - var(--color-darken-dt) * 2);
+  --color-orange-l-darkened2x: calc(var(--color-orange-l) - var(--color-darken-dt) * 2);
+  --color-yellow-l-darkened2x: calc(var(--color-yellow-l) - var(--color-darken-dt) * 2);
+  --color-green-l-darkened2x: calc(var(--color-green-l) - var(--color-darken-dt) * 2);
+  --color-mint-l-darkened2x: calc(var(--color-mint-l) - var(--color-darken-dt) * 2);
+  --color-aqua-l-darkened2x: calc(var(--color-aqua-l) - var(--color-darken-dt) * 2);
+  --color-blue-l-darkened2x: calc(var(--color-blue-l) - var(--color-darken-dt) * 2);
+  --color-purple-l-darkened2x: calc(var(--color-purple-l) - var(--color-darken-dt) * 2);
+  --color-pink-l-darkened2x: calc(var(--color-pink-l) - var(--color-darken-dt) * 2);
+  --color-grey-l-darkened2x: calc(var(--color-grey-l) - var(--color-darken-dt) * 2);
+  --color-accent-l-darkened-text: calc(var(--color-accent-dt-l) - var(--color-darken-text-dt));
+  --color-red-l-darkened-text: calc(var(--color-red-l) - var(--color-darken-text-dt));
+  --color-orange-l-darkened-text: calc(var(--color-orange-l) - var(--color-darken-text-dt));
+  --color-yellow-l-darkened-text: calc(var(--color-yellow-l) - var(--color-darken-text-dt));
+  --color-green-l-darkened-text: calc(var(--color-green-l) - var(--color-darken-text-dt));
+  --color-mint-l-darkened-text: calc(var(--color-mint-l) - var(--color-darken-text-dt));
+  --color-aqua-l-darkened-text: calc(var(--color-aqua-l) - var(--color-darken-text-dt));
+  --color-blue-l-darkened-text: calc(var(--color-blue-l) - var(--color-darken-text-dt));
+  --color-purple-l-darkened-text: calc(var(--color-purple-l) - var(--color-darken-text-dt));
+  --color-pink-l-darkened-text: calc(var(--color-pink-l) - var(--color-darken-text-dt));
+  --color-grey-l-darkened-text: calc(var(--color-grey-l) - var(--color-darken-text-dt));
+  /* Dark Theme Base Colors */
+  --color-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l));
+  --color-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened));
+  --color-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened));
+  --color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
+  --color-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
+  --color-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
+  --color-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
+  --color-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened));
+  --color-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened));
+  --color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
+  --color-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened));
+  /* Dark Theme Dark Colors */
+  --color-dark-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x));
+  --color-dark-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x));
+  --color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x));
+  --color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x));
+  --color-dark-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x));
+  --color-dark-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x));
+  --color-dark-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x));
+  --color-dark-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x));
+  --color-dark-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x));
+  --color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x));
+  --color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x));
+  /* Dark Theme Text Colors */
+  --color-text-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text));
+  --color-text-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text));
+  --color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text));
+  --color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text));
+  --color-text-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text));
+  --color-text-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text));
+  --color-text-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text));
+  --color-text-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text));
+  --color-text-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text));
+  --color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text));
+  --color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text));
+  /* Dark Theme Main Obsidian Colors */
   --text-normal: hsl(0, 0%, 85%);
   --text-muted: hsl(0, 0%, 65%);
   --text-faint: hsl(0, 0%, 45%);
@@ -984,12 +594,8 @@ code {
   --style-settings-vertical-lines-color: hsl(0, 0%, 22%);
   --outline-vertical-lines-color: hsl(0, 0%, 22%);
   --drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset,
-  	hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset,
-  	hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-  	hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
-  --drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-  	hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+  --drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset, hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+  --drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
   --scroll-bar-thumb: hsl(0, 0%, 32%);
   --table-border-color: var(--background-primary-alt);
   --h1-text-color-custom-dt: hsl(0, 0%, 85%);
@@ -1010,15 +616,15 @@ code {
   --h4-border-color-custom-dt: hsla(0, 0%, 20%, 1);
   --h5-border-color-custom-dt: hsla(0, 0%, 20%, 1);
   --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-  /* #endregion */
 }
 
+/* #endregion */
 /*
     ==========================================================================
-    Accents
+    Accent Colors
     ==========================================================================
 */
-/* #region  [Accent Colors LT] Presets */
+/* #region  [Accent Color Presets] Light Theme */
 .theme-light.pt-light-accent-color-custom {
   --text-accent: var(--color-dark-accent);
   --text-accent-hover: var(--color-dark-accent);
@@ -1120,7 +726,7 @@ code {
 }
 
 /* #endregion */
-/* #region  [Accent Colors DT] Presets */
+/* #region  [Accent Color Presets] Dark Theme */
 .theme-dark.pt-dark-accent-color-custom {
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-dark-accent);
@@ -1222,6 +828,11 @@ code {
 }
 
 /* #endregion */
+/*  
+  ==========================================================================
+  Accent Styles
+  ==========================================================================
+*/
 /* #region [Accent Style] Base  */
 .modal button:not(.mod-cta):not(.mod-warning) {
   display: inline-flex;
@@ -2912,6 +2523,11 @@ code {
 }
 
 /* #endregion */
+/*  
+  ==========================================================================
+  Title Bar
+  ==========================================================================
+*/
 /* #region  [Titlebar] Base */
 .titlebar {
   background-color: transparent;
@@ -3240,9 +2856,12 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 }
 
 /* #endregion */
-/*  ==========================================================================
-    Status bar
-    ========================================================================== */
+/*
+  ==========================================================================
+  Status bar
+  ==========================================================================
+*/
+/* #region  [Status Bar] Base */
 .status-bar {
   border-top: 0px;
   padding: 2px 0px;
@@ -3412,31 +3031,6 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   color: var(--interactive-accent);
 }
 
-/*  Solid Statusbar
-    ========================================================================== */
-:not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
-:not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
-  box-shadow: unset;
-  width: 100%;
-  margin-bottom: unset;
-  border-radius: unset;
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
-  background: var(--tab-label-background-color);
-}
-
-:not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
-  background: var(--status-bar-background-color-lt);
-}
-
-:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-custom-dt div.status-bar {
-  background: var(--status-bar-background-color-dt);
-}
-
-/*  Solid Statusbar
-    ========================================================================== */
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-light-lt .status-bar {
   color: var(--background-primary);
 }
@@ -3461,8 +3055,31 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   color: var(--interactive-accent-text);
 }
 
-:not(.pt-status-bar-position-top).pt-solid-status-bar-lt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child,
-:not(.pt-status-bar-position-top).pt-solid-status-bar-dt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
+/* #endregion */
+/* #region  [Status Bar] Solid */
+:not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
+:not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
+  box-shadow: unset;
+  width: 100%;
+  margin-bottom: unset;
+  border-radius: unset;
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
+  background: var(--tab-label-background-color);
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
+  background: var(--status-bar-background-color-lt);
+}
+
+:not(.pt-status-bar-position-top).theme-dark.pt-status-bar-custom-dt div.status-bar {
+  background: var(--status-bar-background-color-dt);
+}
+
+:not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child,
+:not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
   margin-right: 10px !important;
 }
 
@@ -3526,8 +3143,13 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   margin-left: auto;
 }
 
-/*  Tab Header
-    ========================================================================== */
+/* #endregion */
+/*
+  ==========================================================================
+  Sidebar Elements
+  ==========================================================================
+*/
+/* #region  [Sidebar] Tab Header */
 /* Tab label container */
 .workspace-tabs .workspace-tab-header-container {
   height: fit-content;
@@ -3597,41 +3219,45 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   display: none;
 }
 
-/*  Tab Label
-    ========================================================================== */
-/* Moves the Tab Label to the left on the left sidebar */
+/* #endregion */
+/* #region  [Sidebar] Tab Label */
+.workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the left on the left sidebar */
+  /* Moves the Tab Label to the center on the left sidebar */
+  /* Moves the Tab Label to the right on the left sidebar */
+}
 .pt-tab-label-left-sidebar-left .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
   justify-content: flex-start;
 }
-
-/* Moves the Tab Label to the center on the left sidebar */
 .pt-tab-label-left-sidebar-center .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
   justify-content: center;
 }
-
-/* Moves the Tab Label to the right on the left sidebar */
 .pt-tab-label-left-sidebar-right .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
   justify-content: flex-end;
 }
 
-/* Moves the Tab Label to the left on the right sidebar */
+.workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the left on the right sidebar */
+  /* Moves the Tab Label to the center on the right sidebar */
+  /* Moves the Tab Label to the right on the right sidebar */
+}
 .pt-tab-label-right-sidebar-left .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
   justify-content: flex-start;
 }
-
-/* Moves the Tab Label to the center on the right sidebar */
 .pt-tab-label-right-sidebar-center .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
   justify-content: center;
 }
-
-/* Moves the Tab Label to the right on the right sidebar */
 .pt-tab-label-right-sidebar-right .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
   justify-content: flex-end;
 }
 
-/*  ==========================================================================
-    Nav Header
-    ========================================================================== */
+/* #endregion */
+/*
+  ==========================================================================
+  Nav Header
+  ==========================================================================
+*/
+/* #region  [Nav Header] Base */
 .nav-header {
   display: flex;
   padding: 0px;
@@ -3680,6 +3306,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   margin: 8px 0px;
 }
 
+/* #endregion */
+/* #region  [Nav Header] Buttons */
 .embedded-backlinks .nav-buttons-container {
   background-color: var(--background-primary);
   border-radius: var(--border-radius);
@@ -3728,8 +3356,6 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   width: fit-content;
 }
 
-/*  Nav Header Buttons
-    ========================================================================== */
 .nav-action-button {
   display: flex;
   align-items: center;
@@ -3757,8 +3383,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   color: var(--text-normal);
 }
 
-/*  Nav Header - Position Top
-    ========================================================================== */
+/* #endregion */
+/* #region  [Nav Header] Position Top */
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
@@ -3799,8 +3425,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   top: 13px;
 }
 
-/*  Nav Header - Position Bottom
-    ========================================================================== */
+/* #endregion */
+/* #region  [Nav Header] Position Bottom */
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
@@ -3879,8 +3505,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   top: 3px;
 }
 
-/*  Nav Header - Align Left
-    ========================================================================== */
+/* #endregion */
+/* #region  [Nav Header] Align Left */
 .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
@@ -3899,8 +3525,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   margin-right: auto;
 }
 
-/*  Nav Header - Align Center
-    ========================================================================== */
+/* #endregion */
+/* #region  [Nav Header] Align Center */
 .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
@@ -3919,8 +3545,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   margin: 0 auto;
 }
 
-/*  Nav Header - Align Right
-    ========================================================================== */
+/* #endregion */
+/* #region  [Nav Header] Align Right */
 .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
@@ -3939,9 +3565,13 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   margin-left: auto;
 }
 
-/*  ==========================================================================
-    Settings Modal
-    ========================================================================== */
+/* #endregion */
+/*
+  ==========================================================================
+  User Interface
+  ==========================================================================
+*/
+/* #region  [UI] Settings */
 .modal-bg {
   background: transparent;
 }
@@ -3964,7 +3594,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   background-color: var(--background-color-lt);
 }
 
-.modal.mod-settings .horizontal-tab-content, .vertical-tab-content {
+.modal.mod-settings .horizontal-tab-content,
+.vertical-tab-content {
   padding: 30px;
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
@@ -4379,10 +4010,12 @@ img.community-theme-lightbox {
   padding: 0px;
 }
 
+/* Hides the Theme Screenshot when Style Settings isn't installed to make space for the warning prompt */
 body:not(.css-settings-manager) .community-theme.is-selected img[alt=Prism] {
   display: none;
 }
 
+/* Warning prompt to install Style Settings */
 body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3)::after {
   height: fit-content;
   width: 100%;
@@ -4549,10 +4182,8 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
   border-radius: var(--border-radius-small);
 }
 
-/*  ==========================================================================
-    Input Containers
-    ========================================================================== */
-/* Input box fields */
+/* #endregion */
+/* #region  [UI] Input Containers */
 input[type=text],
 input[type=search],
 input[type=email],
@@ -4602,6 +4233,10 @@ textarea:focus::placeholder {
   box-shadow: var(--drop-shadow);
 }
 
+input[type=range]:hover {
+  background-color: var(--interactive-accent);
+}
+
 .theme-light .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 5px solid var(--background-primary);
@@ -4624,13 +4259,8 @@ textarea:focus::placeholder {
   box-shadow: var(--drop-shadow);
 }
 
-input[type=range]:hover {
-  background-color: var(--interactive-accent);
-}
-
-/*  ==========================================================================
-    Scrollbar
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Scrollbar Base */
 .kanban-plugin__scroll-container::-webkit-scrollbar,
 ::-webkit-scrollbar {
   height: var(--scroll-bar-size) !important;
@@ -4658,8 +4288,8 @@ input[type=range]:hover {
   background: var(--interactive-accent);
 }
 
-/*  Scrollbar Buttons
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Scrollbar Buttons */
 /* Scroll Button */
 .pt-scroll-button ::-webkit-scrollbar-button:single-button {
   height: var(--scroll-bar-size);
@@ -4725,8 +4355,8 @@ input[type=range]:hover {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
 }
 
-/*  Scrollbar Hover
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Scrollbar Hover */
 /* Enlarged Scrollbar when hovering on the page content/workspace leaf */
 .pt-scroll-hover .view-content:hover ::-webkit-scrollbar,
 .pt-scroll-hover .suggestion-container:hover ::-webkit-scrollbar,
@@ -4751,8 +4381,8 @@ input[type=range]:hover {
   background-image: unset;
 }
 
-/*  Empty States
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Empty State */
 .search-empty-state,
 .pane-empty {
   padding: 5px 10px 5px 10px;
@@ -4762,9 +4392,8 @@ input[type=range]:hover {
   margin: unset;
 }
 
-/*  ==========================================================================
-    Startup Progress Bar Screen
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Startup */
 .progress-bar {
   background-color: var(--background-secondary-blur);
   backdrop-filter: blur(var(--blur-intensity));
@@ -4789,11 +4418,13 @@ input[type=range]:hover {
   height: 8px;
 }
 
-/*  ==========================================================================
-    Workspace
-    ========================================================================== */
-/*  Workspace Window
-    ========================================================================== */
+/* #endregion */
+/*
+  ==========================================================================
+  Workspace
+  ==========================================================================
+*/
+/* #region  [UI] Workspace Window */
 .view-header-icon {
   top: 0;
   display: flex;
@@ -4824,8 +4455,8 @@ input[type=range]:hover {
   margin-right: 12px;
 }
 
-/*  Window Gaps
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Window Gaps */
 .workspace-split.mod-horizontal .workspace-tabs {
   padding: calc(var(--window-gap) / 2);
 }
@@ -4891,14 +4522,15 @@ input[type=range]:hover {
   background: linear-gradient(to right, transparent, var(--tab-label-background-color));
 }
 
-.workspace-tab-header, .workspace-tab-header-inner,
+.workspace-tab-header,
+.workspace-tab-header-inner,
 .workspace-tab-container-before,
 .workspace-tab-container-after {
   transition: none;
 }
 
-/*  Resize Handles
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Resize Handles */
 /* Allows for the resize handles to be fully visible even though they stick out of the parent */
 .workspace-split .workspace-tabs:not(:last-child) {
   overflow: visible;
@@ -4939,9 +4571,7 @@ input[type=range]:hover {
   box-shadow: var(--drop-shadow);
 }
 
-/*  Resize Handles at the sides of the workspace
-    ========================================================================== */
-/* Right Side */
+/* Resize Handles at the Right Side of the workspace */
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   border-radius: var(--border-radius-small);
   width: var(--window-gap);
@@ -4951,7 +4581,7 @@ input[type=range]:hover {
   background-color: transparent;
 }
 
-/* Left Side */
+/* Resize Handles at the Left Side of the workspace */
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   border-radius: var(--border-radius-small);
   width: var(--window-gap);
@@ -4969,9 +4599,8 @@ input[type=range]:hover {
   background-color: var(--interactive-accent);
 }
 
-/*  ==========================================================================
-    Workspace ribbon
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Workspace Ribbon */
 /* Ribbon container */
 .workspace-ribbon {
   display: flex;
@@ -5055,9 +4684,8 @@ input[type=range]:hover {
   color: var(--interactive-accent-hover);
 }
 
-/*  ==========================================================================
-    Nav Files Container
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Nav File/Folder Container */
 .nav-folder .nav-folder-title-content {
   font-weight: 600;
   color: var(--text-normal);
@@ -5197,9 +4825,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   justify-content: center;
 }
 
-/*  ==========================================================================
-    Popovers (File Previews)
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] File Preview Popover */
 .popover.hover-popover {
   transform: scale(0.9);
   min-height: 500px;
@@ -5209,7 +4836,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   box-shadow: var(--drop-shadow);
   clear: both;
 }
-
 .popover.hover-popover .markdown-embed {
   min-height: 499px;
   height: 499px;
@@ -5220,8 +4846,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   overflow: visible;
 }
 
-/*  Menu popup
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Menu Popup */
 .menu {
   background: var(--background-secondary-blur);
   border: 1px solid var(--table-border-color);
@@ -5251,8 +4877,8 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   color: var(--interactive-accent-text);
 }
 
-/*  Top Right Notification/Notice popup
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Notification Popup */
 div.notice-container div.notice {
   background: var(--background-secondary-blur);
   border: 1px solid var(--background-secondary);
@@ -5264,8 +4890,8 @@ div.notice-container div.notice {
   font-weight: 600;
 }
 
-/*  Suggestion popup
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Suggestion Popup */
 .suggestion-container.mod-search-suggestion {
   padding: 8px;
   max-width: calc(100% - 20px);
@@ -5332,8 +4958,8 @@ div.notice-container div.notice {
   margin-top: 10px;
 }
 
-/*  Tooltip popup
-    ========================================================================== */
+/* #endregion */
+/* #region  [UI] Tooltip Popup */
 .tooltip {
   display: flex;
   background: var(--background-secondary-blur);
@@ -5377,10 +5003,15 @@ div.notice-container div.notice {
   border-left: 5px solid var(--table-border-color);
 }
 
-/*  ==========================================================================
-    Edit View
-    ========================================================================== */
-.cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
+/* #endregion */
+/*
+  ==========================================================================
+  Editor
+  ==========================================================================
+*/
+/* #region  [Editor] Edit Base */
+.cm-s-obsidian .cm-header,
+.cm-s-obsidian .cm-strong {
   font-weight: 600;
 }
 
@@ -5457,42 +5088,35 @@ div.notice-container div.notice {
   padding: 10px;
 }
 
-/*  Light Theme Edit
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Edit LT */
 .theme-light .cm-s-obsidian span.cm-hmd-escape-backslash {
   color: var(--color-text-red);
 }
-
 .theme-light .cm-s-obsidian .cm-inline-code,
 .theme-light .cm-s-obsidian .cm-math {
   color: var(--color-text-red);
 }
-
 .theme-light .cm-s-obsidian .HyperMD-codeblock {
   color: var(--interactive-accent-text);
 }
-
 .theme-light .cm-s-obsidian div.HyperMD-codeblock-bg {
   background-color: var(--background-primary);
 }
-
 .theme-light .cm-s-obsidian span.cm-inline-code,
 .theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--color-text-red);
   background-color: var(--background-primary);
 }
-
 .theme-light .cm-s-obsidian span.cm-footref,
 .theme-light .cm-s-obsidian span.cm-blockid,
 .theme-light .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
   color: var(--color-text-grey);
 }
-
 .theme-light .cm-s-obsidian .CodeMirror-linenumber,
-.theme-light .CodeMirror-guttermarker-subtle {
+.theme-light .cm-s-obsidian .theme-light .CodeMirror-guttermarker-subtle {
   color: var(--color-text-grey);
 }
-
 .theme-light .cm-s-obsidian span.cm-formatting-highlight,
 .theme-light .cm-s-obsidian span.cm-highlight {
   font-weight: 600;
@@ -5500,80 +5124,69 @@ div.notice-container div.notice {
   background-color: var(--color-yellow);
   color: var(--highlight-text-normal);
 }
-
 .theme-light .cm-s-obsidian span.cm-formatting-highlight:first-of-type,
 .theme-light .cm-s-obsidian span.cm-highlight:first-of-type {
   border-top-left-radius: var(--border-radius-small);
   border-bottom-left-radius: var(--border-radius-small);
 }
-
 .theme-light .cm-s-obsidian span.cm-formatting-highlight:last-of-type,
 .theme-light .cm-s-obsidian span.cm-highlight:last-of-type {
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
 }
 
-/*  Dark Theme Edit
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Edit DT */
 .theme-dark .cm-s-obsidian span.cm-hmd-escape-backslash {
   color: var(--color-text-red);
 }
-
 .theme-dark .cm-s-obsidian .cm-inline-code,
 .theme-dark .cm-s-obsidian .cm-math {
   color: var(--color-text-red);
 }
-
 .theme-dark .cm-s-obsidian .HyperMD-codeblock {
   color: var(--interactive-accent-text);
 }
-
 .theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg {
   background-color: var(--background-secondary-alt);
 }
-
 .theme-dark .cm-s-obsidian span.cm-inline-code,
 .theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--color-text-red);
   background-color: var(--background-secondary);
 }
-
 .theme-dark .cm-s-obsidian span.cm-footref,
 .theme-dark .cm-s-obsidian span.cm-blockid,
 .theme-dark .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
   color: var(--color-text-grey);
 }
-
 .theme-dark .cm-s-obsidian .CodeMirror-linenumber,
-.theme-dark .CodeMirror-guttermarker-subtle {
+.theme-dark .cm-s-obsidian .CodeMirror-guttermarker-subtle {
   color: var(--text-faint);
 }
-
 .theme-dark .cm-s-obsidian span.cm-formatting-highlight,
 .theme-dark .cm-s-obsidian span.cm-highlight {
   font-weight: 600;
   background-color: var(--color-text-yellow);
   color: var(--highlight-text-normal);
 }
-
 .theme-dark .cm-s-obsidian span.cm-formatting-highlight:first-of-type,
 .theme-dark .cm-s-obsidian span.cm-highlight:first-of-type {
   border-top-left-radius: var(--border-radius-small);
   border-bottom-left-radius: var(--border-radius-small);
 }
-
 .theme-dark .cm-s-obsidian span.cm-formatting-highlight:last-of-type,
 .theme-dark .cm-s-obsidian span.cm-highlight:last-of-type {
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
 }
 
-/*  ==========================================================================
-    Preview View
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Preview Base */
 .workspace-split.mod-root .view-content,
 .workspace-split.mod-root .workspace-leaf .workspace-leaf-content,
-.CodeMirror-gutter.CodeMirror-linenumbers, .CodeMirror-gutter.CodeMirror-foldgutter {
+.CodeMirror-gutter.CodeMirror-linenumbers,
+.CodeMirror-gutter.CodeMirror-foldgutter {
   background-color: var(--page-background-color);
 }
 
@@ -5660,8 +5273,8 @@ div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indi
   border-top: 2px solid var(--table-border-color);
 }
 
-/*  Checkbox
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Preview Checkbox */
 /* Removing default look of the Checkbox */
 input[type=checkbox],
 .markdown-preview-view .task-list-item-checkbox {
@@ -5723,8 +5336,8 @@ button.copy-code-button {
   font-weight: 600;
 }
 
-/*  Front Matter
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Preview Front Matter */
 .frontmatter-container {
   color: var(--text-muted);
   border-radius: var(--border-radius-small);
@@ -5790,14 +5403,19 @@ button.copy-code-button {
   background-color: var(--background-primary);
 }
 
-/*  Light Theme Preview
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Preview LT */
+.theme-light {
+  /* .markdown-embed,
+          .file-embed {
+              background-color: var(--background-primary);
+          } */
+}
 .theme-light .markdown-preview-view blockquote {
   border: 2px solid var(--table-border-color);
   background-color: var(--background-primary);
   border-left-width: 5px;
 }
-
 .theme-light .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   border: 2px solid var(--table-border-color);
   background-color: var(--background-primary);
@@ -5805,11 +5423,9 @@ button.copy-code-button {
   padding: 10px 20px !important;
   margin: 16px 30px !important;
 }
-
 .theme-light .markdown-preview-view hr {
   border-color: var(--table-border-color);
 }
-
 .theme-light .markdown-preview-view code,
 .theme-light .markdown-preview-view kbd {
   color: var(--color-text-red);
@@ -5817,7 +5433,6 @@ button.copy-code-button {
   border-radius: var(--border-radius-small);
   padding: 2px 4px;
 }
-
 .theme-light .markdown-preview-view pre,
 .theme-light :not(pre) > code[class*=language-],
 .theme-light pre[class*=language-],
@@ -5827,16 +5442,10 @@ button.copy-code-button {
   border-radius: var(--border-radius-small);
   border: 2px solid var(--table-border-color);
 }
-
 .theme-light code[class*=language-],
 .theme-light pre[class*=language-] {
   color: var(--text-normal);
 }
-
-/* .theme-light .markdown-embed,
-.theme-light .file-embed {
-    background-color: var(--background-primary);
-} */
 .theme-light .token.operator,
 .theme-light .token.entity,
 .theme-light .token.url,
@@ -5845,13 +5454,11 @@ button.copy-code-button {
   color: var(--color-text-orange);
   background-color: var(--background-primary);
 }
-
 .theme-light .token.atrule,
 .theme-light .token.attr-value,
 .theme-light .token.keyword {
   color: var(--color-text-blue);
 }
-
 .theme-light .token.selector,
 .theme-light .token.attr-name,
 .theme-light .token.string,
@@ -5860,11 +5467,9 @@ button.copy-code-button {
 .theme-light .token.inserted {
   color: var(--color-text-green);
 }
-
 .theme-light .token.punctuation {
   color: var(--color-text-grey);
 }
-
 .theme-light .token.property,
 .theme-light .token.tag,
 .theme-light .token.boolean,
@@ -5874,29 +5479,31 @@ button.copy-code-button {
 .theme-light .token.deleted {
   color: var(--color-text-pink);
 }
-
 .theme-light .token.regex,
 .theme-light .token.important {
   color: var(--color-text-orange);
 }
-
 .theme-light .token.function,
 .theme-light .token.class-name {
   color: var(--color-text-red);
 }
 
-/*  Dark Theme Preview
-    ========================================================================== */
+/* #endregion */
+/* #region  [Editor] Preview DT */
+.theme-dark {
+  /* .markdown-embed,
+          .file-embed {
+              background-color: var(--background-secondary-alt);
+          } */
+}
 .theme-dark .markdown-preview-view blockquote {
   border: 2px solid var(--table-border-color);
   background-color: var(--background-secondary-alt);
   border-left-width: 5px;
 }
-
 .theme-dark .markdown-preview-view hr {
   border-color: var(--table-border-color);
 }
-
 .theme-dark .markdown-preview-view code,
 .theme-dark .markdown-preview-view kbd {
   color: var(--color-text-red);
@@ -5904,7 +5511,6 @@ button.copy-code-button {
   border-radius: var(--border-radius-small);
   padding: 2px 4px;
 }
-
 .theme-dark .markdown-preview-view pre,
 .theme-dark :not(pre) > code[class*=language-],
 .theme-dark pre[class*=language-],
@@ -5914,16 +5520,10 @@ button.copy-code-button {
   border-radius: var(--border-radius-small);
   border: 2px solid var(--table-border-color);
 }
-
 .theme-dark code[class*=language-],
 .theme-dark pre[class*=language-] {
   color: var(--text-normal);
 }
-
-/* .theme-dark .markdown-embed,
-.theme-dark .file-embed {
-    background-color: var(--background-secondary-alt);
-} */
 .theme-dark .token.operator,
 .theme-dark .token.entity,
 .theme-dark .token.url,
@@ -5932,13 +5532,11 @@ button.copy-code-button {
   color: var(--color-text-orange);
   background-color: var(--background-secondary-alt);
 }
-
 .theme-dark .token.atrule,
 .theme-dark .token.attr-value,
 .theme-dark .token.keyword {
   color: var(--color-text-blue);
 }
-
 .theme-dark .token.selector,
 .theme-dark .token.attr-name,
 .theme-dark .token.string,
@@ -5947,11 +5545,9 @@ button.copy-code-button {
 .theme-dark .token.inserted {
   color: var(--color-text-green);
 }
-
 .theme-dark .token.punctuation {
   color: var(--color-text-grey);
 }
-
 .theme-dark .token.property,
 .theme-dark .token.tag,
 .theme-dark .token.boolean,
@@ -5961,58 +5557,17 @@ button.copy-code-button {
 .theme-dark .token.deleted {
   color: var(--color-text-pink);
 }
-
 .theme-dark .token.regex,
 .theme-dark .token.important {
   color: var(--color-text-orange);
 }
-
 .theme-dark .token.function,
 .theme-dark .token.class-name {
   color: var(--color-text-yellow);
 }
 
-/*  ==========================================================================
-    Text Selection
-    ========================================================================== */
-.theme-light body ::selection,
-.theme-light div.view-header-title::selection {
-  background-color: var(--text-selection);
-  color: var(--highlight-text-normal);
-}
-
-.theme-dark body ::selection,
-.theme-dark div.view-header-title::selection {
-  background-color: var(--text-selection);
-  color: var(--text-normal);
-}
-
-mark::selection,
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection {
-  color: var(--text-normal);
-}
-
-a {
-  color: var(--interactive-accent-text);
-}
-
-a:hover {
-  color: var(--interactive-accent-hover);
-}
-
-.is-flashing,
-.is-flashing *,
-.cm-s-obsidian span.obsidian-search-match-highlight {
-  border-radius: var(--border-radius-small);
-  background-color: var(--interactive-accent);
-  color: var(--highlight-text-normal);
-}
-
+/* #endregion */
+/* ??? */
 .theme-light .token.property,
 .theme-light .token.tag,
 .theme-light .token.constant,
@@ -6067,16 +5622,51 @@ a:hover {
   background: none;
 }
 
-/*  ==========================================================================
-    Audio Recorder
-    ========================================================================== */
+/* #region  [Editor] Text Selection */
+.theme-light body ::selection,
+.theme-light div.view-header-title::selection {
+  background-color: var(--text-selection);
+  color: var(--highlight-text-normal);
+}
+
+.theme-dark body ::selection,
+.theme-dark div.view-header-title::selection {
+  background-color: var(--text-selection);
+  color: var(--text-normal);
+}
+
+mark::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+  color: var(--text-normal);
+}
+
+.is-flashing,
+.is-flashing *,
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  border-radius: var(--border-radius-small);
+  background-color: var(--interactive-accent);
+  color: var(--highlight-text-normal);
+}
+
+/* #endregion */
+/*
+  ==========================================================================
+  Plugin - Core
+  ==========================================================================
+*/
+/* #region  [Plugin - Core] Audio Recorder */
 .theme-light .side-dock-ribbon-action.is-active svg.microphone-filled,
 .theme-dark .side-dock-ribbon-action.is-active svg.microphone-filled {
   color: var(--color-text-red);
 }
 
-/*  Backlinks
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Backlinks */
 .theme-light .embedded-backlinks {
   background-color: var(--background-color-lt);
 }
@@ -6315,9 +5905,11 @@ a:hover {
   margin-bottom: unset;
 }
 
+/* #endregion */
 /*  ==========================================================================
     Command Palette
     ========================================================================== */
+/* #region  [Plugin - Core] Command Palette */
 .prompt {
   background-color: var(--background-secondary);
 }
@@ -6354,6 +5946,8 @@ input.prompt-input {
   border-radius: var(--border-radius-small);
 }
 
+/* #endregion */
+/* #region  [Plugin - Core] File Explorer Base */
 .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > div.nav-folder-children {
   margin-left: unset;
   border-left: unset;
@@ -6383,8 +5977,8 @@ input.prompt-input {
   display: none;
 }
 
-/*  File Tree Vertical Lines
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] File Explorer Vertical Lines */
 .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
   margin: 2px 0px 2px calc(10px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
   padding-left: unset;
@@ -6400,8 +5994,8 @@ input.prompt-input {
   border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
 }
 
-/*  File Tree Text Wrap
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] File Explorer Text Wrap */
 /* Wrap long nav text */
 .pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-file-title,
 .pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-folder-title {
@@ -6409,8 +6003,8 @@ input.prompt-input {
   width: auto;
 }
 
-/*  Graph
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Graph Base */
 .theme-light .workspace-leaf-content[data-type=graph] .view-content,
 .theme-light .workspace-leaf-content[data-type=localgraph] .view-content {
   background-color: var(--page-background-color);
@@ -6481,341 +6075,173 @@ input.prompt-input {
 }
 
 /* .graph-view.color-fill {
-    color: var(--color-text-pink);
-    opacity: 1;
-} */
-/*  Light Theme Graph Tags/Attachments Color Presets
-   ========================================================================== */
+        color: var(--color-text-pink);
+        opacity: 1;
+    } */
+/* #endregion */
+/* #region  [Plugin - Core] Graph LT */
 .theme-light .graph-view.color-fill {
   opacity: var(--graph-fill-opacity-lt);
 }
-
 .theme-light .graph-view.color-fill-focused {
   opacity: var(--graph-fill-focused-opacity-lt);
 }
-
 .theme-light .graph-view.color-fill-tag {
   opacity: var(--graph-tag-opacity-lt);
 }
-
 .theme-light .graph-view.color-fill-attachment {
   opacity: var(--graph-attachment-opacity-lt);
 }
-
 .theme-light .graph-view.color-fill-unresolved {
   opacity: var(--graph-unresolved-opacity-lt);
 }
-
 .theme-light .graph-view.color-fill-highlight {
   opacity: var(--graph-highlight-opacity-lt);
 }
-
 .theme-light .graph-view.color-line-highlight {
   opacity: var(--graph-highlight-line-opacity-lt);
 }
-
 .theme-light.pt-graph-note-custom-lt .graph-view.color-fill {
   color: var(--color-custom-graph-note-lt);
 }
-
 .theme-light.pt-graph-note-focused-custom-lt .graph-view.color-fill-focused {
   color: var(--color-custom-graph-fill-focused-lt);
 }
-
 .theme-light.pt-graph-tag-custom-lt .graph-view.color-fill-tag {
   color: var(--color-custom-graph-tag-lt);
 }
-
 .theme-light.pt-graph-attachment-custom-lt .graph-view.color-fill-attachment {
   color: var(--color-custom-graph-attachment-lt);
 }
-
 .theme-light.pt-graph-unresolved-custom-lt .graph-view.color-fill-unresolved {
   color: var(--color-custom-graph-unresolved-lt);
 }
-
 .theme-light.pt-graph-highlight-accent-lt .graph-view.color-fill-highlight {
   color: var(--interactive-accent-dark);
 }
-
 .theme-light.pt-graph-highlight-custom-lt .graph-view.color-fill-highlight {
   color: var(--color-custom-graph-highlight-lt);
 }
-
 .theme-light.pt-graph-highlight-line-accent-lt .graph-view.color-line-highlight {
   color: var(--interactive-accent-dark);
 }
-
 .theme-light.pt-graph-highlight-line-custom-lt .graph-view.color-line-highlight {
   color: var(--color-custom-graph-highlight-line-lt);
 }
-
-.theme-light.pt-graph-note-red-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-red-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-red-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-red-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-red-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-red-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-red-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-red-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-red-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-red-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-red-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-red-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-red-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-red-lt .graph-view.color-line-highlight {
   color: var(--color-dark-red);
 }
-
-.theme-light.pt-graph-note-orange-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-orange-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-orange-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-orange-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-orange-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-orange-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-orange-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-orange-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-orange-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-orange-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-orange-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-orange-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-orange-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-orange-lt .graph-view.color-line-highlight {
   color: var(--color-dark-orange);
 }
-
-.theme-light.pt-graph-note-yellow-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-yellow-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-yellow-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-yellow-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-yellow-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-yellow-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-yellow-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-yellow-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-yellow-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-yellow-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-yellow-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-yellow-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-yellow-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-yellow-lt .graph-view.color-line-highlight {
   color: var(--color-dark-yellow);
 }
-
-.theme-light.pt-graph-note-green-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-green-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-green-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-green-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-green-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-green-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-green-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-green-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-green-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-green-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-green-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-green-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-green-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-green-lt .graph-view.color-line-highlight {
   color: var(--color-dark-green);
 }
-
-.theme-light.pt-graph-note-mint-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-mint-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-mint-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-mint-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-mint-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-mint-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-mint-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-mint-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-mint-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-mint-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-mint-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-mint-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-mint-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-mint-lt .graph-view.color-line-highlight {
   color: var(--color-dark-mint);
 }
-
-.theme-light.pt-graph-note-aqua-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-aqua-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-aqua-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-aqua-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-aqua-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-aqua-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-aqua-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-aqua-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-aqua-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-aqua-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-aqua-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-aqua-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-aqua-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-aqua-lt .graph-view.color-line-highlight {
   color: var(--color-dark-aqua);
 }
-
-.theme-light.pt-graph-note-blue-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-blue-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-blue-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-blue-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-blue-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-blue-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-blue-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-blue-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-blue-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-blue-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-blue-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-blue-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-blue-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-blue-lt .graph-view.color-line-highlight {
   color: var(--color-dark-blue);
 }
-
-.theme-light.pt-graph-note-purple-lt .graph-view.color-fill,
-.theme-light.pt-graph-note-focused-purple-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-purple-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-purple-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-purple-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-purple-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-purple-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-purple-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-purple-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-purple-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-purple-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-purple-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-purple-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-purple-lt .graph-view.color-line-highlight {
   color: var(--color-dark-purple);
 }
-
-.theme-light.pt-graph-note-pink-lt .graph-view.color-fill,
-.theme-light.pt-graph-focused-note-pink-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-pink-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-pink-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-pink-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-pink-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-pink-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-pink-lt .graph-view.color-fill, .theme-light.pt-graph-focused-note-pink-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-pink-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-pink-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-pink-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-pink-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-pink-lt .graph-view.color-line-highlight {
   color: var(--color-dark-pink);
 }
-
-.theme-light.pt-graph-note-grey-lt .graph-view.color-fill,
-.theme-light.pt-graph-focused-note-grey-lt .graph-view.color-fill-focused,
-.theme-light.pt-graph-tag-grey-lt .graph-view.color-fill-tag,
-.theme-light.pt-graph-attachment-grey-lt .graph-view.color-fill-attachment,
-.theme-light.pt-graph-unresolved-grey-lt .graph-view.color-fill-unresolved,
-.theme-light.pt-graph-highlight-grey-lt .graph-view.color-fill-highlight,
-.theme-light.pt-graph-highlight-line-grey-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-grey-lt .graph-view.color-fill, .theme-light.pt-graph-focused-note-grey-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-grey-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-grey-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-grey-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-grey-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-grey-lt .graph-view.color-line-highlight {
   color: var(--color-dark-grey);
 }
 
-/*  Dark Theme Graph Tags/Attachments Color Presets
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Graph DT */
 .theme-dark .graph-view.color-fill {
   opacity: var(--graph-fill-opacity-dt);
 }
-
 .theme-dark .graph-view.color-fill-focused {
   opacity: var(--graph-fill-focused-opacity-dt);
 }
-
 .theme-dark .graph-view.color-fill-tag {
   opacity: var(--graph-tag-opacity-dt);
 }
-
 .theme-dark .graph-view.color-fill-attachment {
   opacity: var(--graph-attachment-opacity-dt);
 }
-
 .theme-dark .graph-view.color-fill-unresolved {
   opacity: var(--graph-unresolved-opacity-dt);
 }
-
 .theme-dark .graph-view.color-fill-highlight {
   opacity: var(--graph-highlight-opacity-dt);
 }
-
 .theme-dark .graph-view.color-line-highlight {
   opacity: var(--graph-highlight-line-opacity-dt);
 }
-
 .theme-dark.pt-graph-note-custom-dt .graph-view.color-fill {
   color: var(--color-custom-graph-note-dt);
 }
-
 .theme-dark.pt-graph-note-focused-custom-dt .graph-view.color-fill-focused {
   color: var(--color-custom-graph-fill-focused-dt);
 }
-
 .theme-dark.pt-graph-tag-custom-dt .graph-view.color-fill-tag {
   color: var(--color-custom-graph-tag-dt);
 }
-
 .theme-dark.pt-graph-attachment-custom-dt .graph-view.color-fill-attachment {
   color: var(--color-custom-graph-attachment-dt);
 }
-
 .theme-dark.pt-graph-unresolved-custom-dt .graph-view.color-fill-unresolved {
   color: var(--color-custom-graph-unresolved-dt);
 }
-
 .theme-dark.pt-graph-highlight-accent-dt .graph-view.color-fill-highlight {
   color: var(--interactive-accent-dark);
 }
-
 .theme-dark.pt-graph-highlight-custom-dt .graph-view.color-fill-highlight {
   color: var(--color-custom-graph-highlight-dt);
 }
-
 .theme-dark.pt-graph-highlight-line-accent-dt .graph-view.color-line-highlight {
   color: var(--interactive-accent-dark);
 }
-
 .theme-dark.pt-graph-highlight-line-custom-dt .graph-view.color-line-highlight {
   color: var(--color-custom-graph-highlight-line-dt);
 }
-
-.theme-dark.pt-graph-note-red-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-red-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-red-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-red-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-red-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-red-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-red-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-red-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-red-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-red-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-red-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-red-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-red-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-red-dt .graph-view.color-line-highlight {
   color: var(--color-dark-red);
 }
-
-.theme-dark.pt-graph-note-orange-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-orange-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-orange-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-orange-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-orange-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-orange-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-orange-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-orange-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-orange-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-orange-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-orange-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-orange-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-orange-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-orange-dt .graph-view.color-line-highlight {
   color: var(--color-dark-orange);
 }
-
-.theme-dark.pt-graph-note-yellow-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-yellow-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-yellow-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-yellow-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-yellow-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-yellow-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-yellow-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-yellow-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-yellow-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-yellow-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-yellow-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-yellow-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-yellow-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-yellow-dt .graph-view.color-line-highlight {
   color: var(--color-dark-yellow);
 }
-
-.theme-dark.pt-graph-note-green-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-green-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-green-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-green-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-green-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-green-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-green-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-green-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-green-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-green-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-green-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-green-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-green-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-green-dt .graph-view.color-line-highlight {
   color: var(--color-dark-green);
 }
-
-.theme-dark.pt-graph-note-mint-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-mint-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-mint-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-mint-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-mint-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-mint-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-mint-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-mint-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-mint-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-mint-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-mint-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-mint-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-mint-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-mint-dt .graph-view.color-line-highlight {
   color: var(--color-dark-mint);
 }
-
-.theme-dark.pt-graph-note-aqua-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-aqua-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-aqua-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-aqua-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-aqua-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-aqua-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-aqua-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-aqua-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-aqua-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-aqua-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-aqua-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-aqua-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-aqua-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-aqua-dt .graph-view.color-line-highlight {
   color: var(--color-dark-aqua);
 }
-
-.theme-dark.pt-graph-note-blue-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-blue-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-blue-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-blue-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-blue-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-blue-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-blue-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-blue-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-blue-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-blue-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-blue-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-blue-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-blue-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-blue-dt .graph-view.color-line-highlight {
   color: var(--color-dark-blue);
 }
-
-.theme-dark.pt-graph-note-purple-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-purple-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-purple-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-purple-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-purple-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-purple-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-purple-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-purple-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-purple-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-purple-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-purple-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-purple-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-purple-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-purple-dt .graph-view.color-line-highlight {
   color: var(--color-dark-purple);
 }
-
-.theme-dark.pt-graph-note-pink-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-pink-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-pink-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-pink-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-pink-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-pink-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-pink-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-pink-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-pink-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-pink-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-pink-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-pink-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-pink-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-pink-dt .graph-view.color-line-highlight {
   color: var(--color-dark-pink);
 }
-
-.theme-dark.pt-graph-note-grey-dt .graph-view.color-fill,
-.theme-dark.pt-graph-focused-note-grey-dt .graph-view.color-fill-focused,
-.theme-dark.pt-graph-tag-grey-dt .graph-view.color-fill-tag,
-.theme-dark.pt-graph-attachment-grey-dt .graph-view.color-fill-attachment,
-.theme-dark.pt-graph-unresolved-grey-dt .graph-view.color-fill-unresolved,
-.theme-dark.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight,
-.theme-dark.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-grey-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-grey-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-grey-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-grey-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-grey-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
   color: var(--color-dark-grey);
 }
 
+/* #endregion */
+/* #region  [Plugin - Core] Markdown */
 .workspace-leaf-content[data-type=markdown] .view-content {
   background-color: var(--page-background-color);
   box-shadow: var(--drop-shadow);
@@ -6826,47 +6252,38 @@ input.prompt-input {
   border-radius: var(--border-radius);
 }
 
-/*  Outgoing Links
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Outgoing Links */
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane {
   padding: 0px 10px 0px 0px;
 }
-
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
+  color: var(--text-normal);
+}
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover,
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair {
+  color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-icon {
+  color: var(--interactive-accent-hover);
+}
+.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self {
+  color: var(--text-muted);
+}
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self {
   border: unset;
   border-radius: var(--border-radius);
   padding: 5px 5px 5px 25px;
 }
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
-  color: var(--text-normal);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover,
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair {
-  color: var(--interactive-accent-text);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-icon {
-  color: var(--interactive-accent-hover);
-}
-
-.workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self {
-  color: var(--text-muted);
-}
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable.is-collapsed .collapse-icon {
   color: var(--text-faint);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable:not(.is-collapsed) .collapse-icon {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self.is-clickable:hover .collapse-icon {
   color: var(--interactive-accent-hover);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type) {
   border-bottom-color: transparent;
   border: none;
@@ -6880,17 +6297,14 @@ input.prompt-input {
   font-size: 14px;
   font-weight: 600;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type).is-collapsed:hover,
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover {
   background-color: var(--background-primary);
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
   background-color: var(--background-primary);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .search-result:last-child .search-result-file-matches {
   border-bottom-color: transparent;
   border: none;
@@ -6899,13 +6313,11 @@ input.prompt-input {
   box-shadow: var(--drop-shadow);
   padding: 30px 8px 8px 8px;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .search-result-container {
   margin-bottom: 8px;
   margin-top: -30px;
   padding: unset;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item {
   padding: 5px 10px 5px 25px;
   margin: 0px;
@@ -6914,23 +6326,18 @@ input.prompt-input {
   box-shadow: var(--drop-shadow);
   border-radius: var(--border-radius-small);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item:hover {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-inner-subtext {
   color: var(--text-muted);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-inner-subtext {
   color: var(--text-normal);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self.outgoing-link-item:not(:last-child) {
   margin-bottom: 8px;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .search-result-file-match {
   left: unset;
   width: 100%;
@@ -6939,15 +6346,12 @@ input.prompt-input {
   box-shadow: var(--drop-shadow);
   border-radius: var(--border-radius);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .search-result-file-match:hover {
   color: var(--text-normal);
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .search-result-file-match:after {
   display: none;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane > .search-result-container:not(:last-of-type) {
   border-bottom-color: transparent;
   border: none;
@@ -6957,25 +6361,21 @@ input.prompt-input {
   padding: 30px 8px 8px 8px;
   min-height: unset !important;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane .search-result-container:not(:last-of-type) > div:first-child {
   display: none;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon {
   padding: 8px 10px;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon:after {
   display: none;
 }
-
 .workspace-leaf-content[data-type=outgoing-link] .search-results-children {
   padding-bottom: 0px;
 }
 
-/*  Outline
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Outline Base */
 .workspace-leaf-content[data-type=outline] .outline {
   border: 0px;
   background-color: var(--background-secondary);
@@ -6984,49 +6384,34 @@ input.prompt-input {
   padding: 8px;
   margin-bottom: 5px;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content {
   padding: 0px 10px 0px 0px;
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-inner {
   font-weight: 600;
   color: var(--text-normal);
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-self.is-clickable:hover {
   background-color: var(--background-primary);
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-self.is-clickable:hover .tree-item-inner {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=outline] .outline .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
 .workspace-leaf-content[data-type=outline] .outline .tree-item-self.is-clickable .tree-item-icon:hover {
   color: var(--interactive-accent-hover);
 }
-
 .workspace-leaf-content[data-type=outline] .outline .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-inner {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-/* Wrap long nav text */
-.pt-outline-text-wrap .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-inner {
-  white-space: normal;
-  width: auto;
-}
-
 .workspace-leaf-content[data-type=outline] .tree-item-inner {
   padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
   line-height: 14px;
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon {
   padding-left: 20px;
   margin-right: -2px;
@@ -7038,16 +6423,13 @@ input.prompt-input {
   align-items: center;
   z-index: 50;
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon:after {
   display: none;
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-children {
   margin: 0px 0px 0px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
   border-left: 2px solid transparent;
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-self {
   padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
   border: var(--border-size) solid transparent;
@@ -7055,17 +6437,23 @@ input.prompt-input {
   white-space: nowrap;
   min-width: 100%;
 }
-
 .workspace-leaf-content[data-type=outline] .tree-item-children > .tree-item > .tree-item-self {
   margin-left: 2px;
 }
-
 .workspace-leaf-content[data-type=outline] .outline > .tree-item > .tree-item-children {
   margin-left: 10px;
 }
 
-/*  Outline Vertical Lines (Relationship Lines)
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Outline Text Wrap */
+/* Wrap long nav text */
+.pt-outline-text-wrap .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-inner {
+  white-space: normal;
+  width: auto;
+}
+
+/* #endregion */
+/* #region  [Plugin - Core] Outline Vertical Lines */
 .pt-outline-vertical-lines .workspace-leaf-content[data-type=outline] .tree-item-children {
   margin: 2px 0px 2px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
   border-left: var(--outline-vertical-lines-width) solid var(--outline-vertical-lines-color);
@@ -7076,9 +6464,8 @@ input.prompt-input {
   border: var(--border-size) solid transparent;
 }
 
-/*  ==========================================================================
-    Search
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Search */
 .search-result-hover-button.mod-top {
   top: 0px;
   right: 0px;
@@ -7121,18 +6508,22 @@ input.prompt-input {
   display: none;
 }
 
+.search-result-file-matched-text {
+  color: var(--highlight-text-normal);
+  background-color: var(--interactive-accent);
+  border-radius: var(--border-radius-small);
+}
+
 .workspace-leaf-content[data-type=search] .search-input-container {
   width: 100%;
   margin: 0px;
   z-index: 1000;
   background: transparent;
 }
-
 .workspace-leaf-content[data-type=search] .search-result-container {
   padding: 0px 10px 0px 0px;
   box-sizing: border-box;
 }
-
 .workspace-leaf-content[data-type=search] .search-result-file-match {
   width: 100%;
   padding: 5px 20px 5px 10px;
@@ -7145,47 +6536,34 @@ input.prompt-input {
   border-radius: var(--border-radius-small);
   border: 1px solid var(--background-modifier-border);
 }
-
-.search-result-file-matched-text {
-  color: var(--highlight-text-normal);
-  background-color: var(--interactive-accent);
-  border-radius: var(--border-radius-small);
-}
-
 .workspace-leaf-content[data-type=search] .search-result-file-match:hover {
   background: var(--background-primary);
 }
-
 .workspace-leaf-content[data-type=search] .search-result-file-matches {
   margin: 0px;
   padding: 8px;
 }
-
 .workspace-leaf-content[data-type=search] .search-result-file-match:after {
   display: none;
 }
-
 .workspace-leaf-content[data-type=search] .search-result {
   border: none;
   background-color: var(--background-secondary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-
 .workspace-leaf-content[data-type=search] .search-result .tree-item-self {
   border: unset;
   background: var(--tab-label-background-color);
   border-radius: var(--border-radius);
   padding: 5px 5px 5px 25px;
 }
-
 .workspace-leaf-content[data-type=search] .search-result .tree-item-self.is-clickable:hover {
   box-shadow: unset;
   border: unset;
   background: unset;
   background: var(--tab-label-background-color);
 }
-
 .workspace-leaf-content[data-type=search] .search-info-container {
   font-size: 14px;
   font-weight: 600;
@@ -7197,50 +6575,40 @@ input.prompt-input {
   padding: 0px 10px;
   margin: 0px 10px 10px 0px;
 }
-
 .workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self .tree-item-inner {
   padding-right: 5px;
 }
-
 .workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon {
   padding: 8px 10px;
 }
-
 .workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self .tree-item-icon {
   color: var(--text-faint);
 }
-
 .workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon::after {
   display: none;
 }
-
 .workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover,
 .workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self {
   background-color: var(--background-primary);
 }
-
 .workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover,
 .workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self:hover {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover .tree-item-icon,
 .workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self .tree-item-icon {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=search] .tree-item.search-result.is-collapsed .tree-item-self:hover .tree-item-icon:hover,
 .workspace-leaf-content[data-type=search] .tree-item.search-result:not(.is-collapsed) .tree-item-self .tree-item-icon:hover {
   color: var(--interactive-accent-hover);
 }
-
 .workspace-leaf-content[data-type=search] .search-result-file-matches {
   border-bottom: unset;
 }
 
-/*  ==========================================================================
-    Slash Commands
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Slash Commands */
 .suggestion-container {
   max-width: 700px;
   padding: 8px;
@@ -7269,7 +6637,6 @@ input.prompt-input {
   padding: 5px 10px;
   /* margin-right: 8px; */
 }
-
 .suggestion-item .suggestion-flair {
   color: var(--interactive-accent-text);
   display: inline-flex;
@@ -7277,7 +6644,6 @@ input.prompt-input {
   left: unset;
   top: unset;
 }
-
 .suggestion-item .suggestion-flair:first-child {
   padding: 0px 5px;
   margin-right: 8px;
@@ -7286,16 +6652,13 @@ input.prompt-input {
   background-color: var(--background-primary);
   border-radius: var(--border-radius-small);
 }
-
 .suggestion-item:hover .suggestion-flair:first-child {
   background-color: var(--background-secondary);
 }
-
 .suggestion-item .suggestion-flair svg {
   margin: 0 auto;
   display: block;
 }
-
 .suggestion-item .suggestion-prefix {
   border-radius: var(--border-radius-small);
   background-color: var(--background-primary);
@@ -7303,18 +6666,18 @@ input.prompt-input {
   padding: 2px 5px;
   font-size: 12px;
 }
-
 .suggestion-item:hover .suggestion-prefix {
   background-color: var(--background-secondary);
 }
-
 .suggestion-item .suggestion-prefix::after {
   display: none;
 }
 
 /* .modal-container .prompt-results .suggestion-item span.suggestion-flair {
-    padding-left: 34px;
-} */
+        padding-left: 34px;
+    } */
+/* #endregion */
+/* #region  [Plugin - Core] Starred */
 .workspace-leaf-content[data-type=starred] .item-list {
   flex-grow: unset;
   height: fit-content;
@@ -7324,12 +6687,10 @@ input.prompt-input {
   box-shadow: var(--drop-shadow);
   padding: 8px;
 }
-
 .workspace-leaf-content[data-type=starred] .nav-file-icon {
   margin: unset;
   padding: 0px 10px;
 }
-
 .workspace-leaf-content[data-type=starred] .nav-file-title {
   border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
@@ -7339,18 +6700,15 @@ input.prompt-input {
   background: var(--background-primary);
   box-shadow: var(--drop-shadow);
 }
-
 .workspace-leaf-content[data-type=starred] .nav-file:not(:last-child) {
   margin-bottom: 8px;
 }
-
 .workspace-leaf-content[data-type=starred] .nav-file-title:hover {
   line-height: 14px;
 }
 
-/*  ==========================================================================
-    Tags Pane
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Core] Tags */
 .workspace-leaf-content[data-type=tag] .tree-item-self {
   border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
@@ -7360,15 +6718,17 @@ input.prompt-input {
   background: var(--background-primary);
   box-shadow: var(--drop-shadow);
 }
-
 .workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-inner {
   padding-right: 5px;
 }
-
-.workspace-leaf-content[data-type=tag] .tree-item:not(:last-child) {
-  margin-bottom: 8px;
+.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon {
+  margin-left: -12px;
+  padding: 8px 10px;
+  color: var(--text-muted);
 }
-
+.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon::after {
+  display: none;
+}
 .workspace-leaf-content[data-type=tag] .tree-item-self.is-clickable:hover {
   color: var(--interactive-accent-text);
   background-color: var(--background-primary);
@@ -7376,38 +6736,28 @@ input.prompt-input {
   font-weight: 600;
   box-shadow: var(--drop-shadow);
 }
-
-.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon {
-  margin-left: -12px;
-  padding: 8px 10px;
-  color: var(--text-muted);
+.workspace-leaf-content[data-type=tag] .tree-item:not(:last-child) {
+  margin-bottom: 8px;
 }
-
-.workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon::after {
-  display: none;
-}
-
 .workspace-leaf-content[data-type=tag] .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
 .workspace-leaf-content[data-type=tag] .tree-item-self.is-clickable .tree-item-icon:hover {
   color: var(--interactive-accent-hover);
 }
-
 .workspace-leaf-content[data-type=tag] .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
   color: var(--interactive-accent-text);
 }
-
 .workspace-leaf-content[data-type=tag] .tree-item-children {
   margin-left: 16px;
 }
-
 .workspace-leaf-content[data-type=tag] .tree-item-children .tree-item {
   margin-top: 8px;
 }
-
 .workspace-leaf-content[data-type=tag] .tree-item-flair {
   border: var(--border-size) solid transparent;
 }
-
+.workspace-leaf-content[data-type=tag] .tag-container {
+  padding: 0px 10px 0px 0px;
+}
 .workspace-leaf-content[data-type=tag] .tag-container > div:first-of-type {
   padding: 8px;
   border: none;
@@ -7415,72 +6765,59 @@ input.prompt-input {
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-
-.workspace-leaf-content[data-type=tag] .tag-container {
-  padding: 0px 10px 0px 0px;
-}
-
 .workspace-leaf-content[data-type=tag] .tag-pane-tag-text {
   font-weight: 600;
 }
 
-/*  ==========================================================================
-    Headers Font Size
-    ========================================================================== */
-.markdown-preview-view h1,
+/* #endregion */
+/* #region  [Plugin - Theme] Headers Font Size */
+.markdown-preview-view h1 {
+  font-size: var(--h1-font-size);
+}
+.markdown-preview-view h2 {
+  font-size: var(--h2-font-size);
+}
+.markdown-preview-view h3 {
+  font-size: var(--h3-font-size);
+}
+.markdown-preview-view h4 {
+  font-size: var(--h4-font-size);
+}
+.markdown-preview-view h5 {
+  font-size: var(--h5-font-size);
+}
+.markdown-preview-view h6 {
+  font-size: var(--h6-font-size);
+}
+
 .cm-header-1 {
   font-size: var(--h1-font-size);
 }
-
-.markdown-preview-view h2,
 .cm-header-2 {
   font-size: var(--h2-font-size);
 }
-
-.markdown-preview-view h3,
 .cm-header-3 {
   font-size: var(--h3-font-size);
 }
-
-.markdown-preview-view h4,
 .cm-header-4 {
   font-size: var(--h4-font-size);
 }
-
-.markdown-preview-view h5,
 .cm-header-5 {
   font-size: var(--h5-font-size);
 }
-
-.markdown-preview-view h6,
 .cm-header-6 {
   font-size: var(--h6-font-size);
 }
 
-/*  ==========================================================================
-    Headers (Legacy Edit Mode)
-    ========================================================================== */
-.HyperMD-header-1 > span[role=presentation],
-.HyperMD-header-2 > span[role=presentation],
-.HyperMD-header-3 > span[role=presentation],
-.HyperMD-header-4 > span[role=presentation],
-.HyperMD-header-5 > span[role=presentation],
-.HyperMD-header-6 > span[role=presentation],
-.HyperMD-header-1.cm-line,
-.HyperMD-header-2.cm-line,
-.HyperMD-header-3.cm-line,
-.HyperMD-header-4.cm-line,
-.HyperMD-header-5.cm-line,
-.HyperMD-header-6.cm-line {
+/* Headers (Legacy Edit Mode) */
+.HyperMD-header-1 > span[role=presentation], .HyperMD-header-2 > span[role=presentation], .HyperMD-header-3 > span[role=presentation], .HyperMD-header-4 > span[role=presentation], .HyperMD-header-5 > span[role=presentation], .HyperMD-header-6 > span[role=presentation], .HyperMD-header-1.cm-line, .HyperMD-header-2.cm-line, .HyperMD-header-3.cm-line, .HyperMD-header-4.cm-line, .HyperMD-header-5.cm-line, .HyperMD-header-6.cm-line {
   display: block;
   padding: 0px 4px;
   font-weight: 600;
   z-index: 1;
 }
 
-/*  ==========================================================================
-    Headers (Preview)
-    ========================================================================== */
+/* Headers (Preview) */
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
   position: relative;
   padding: 0px 4px;
@@ -7492,6 +6829,7 @@ input.prompt-input {
   margin-left: -34px;
 }
 
+/* #endregion */
 /*  ==========================================================================
     Headers Options
     ========================================================================== */
@@ -13431,13 +12769,10 @@ input.prompt-input {
   border-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x), var(--h6-border-opacity-dt)) !important;
 }
 
-/*  ==========================================================================
-    Background Options
-    ========================================================================== */
+/* #region  [Plugin - Theme] Background Base */
 body.theme-light.pt-background-color-lt {
   background: var(--background-color-lt);
 }
-
 body.theme-light.pt-background-image-lt {
   background: var(--background-image-lt);
   background-repeat: var(--background-repeat-lt);
@@ -13450,7 +12785,6 @@ body.theme-light.pt-background-image-lt {
 body.theme-dark.pt-background-color-dt {
   background: var(--background-color-dt);
 }
-
 body.theme-dark.pt-background-image-dt {
   background: var(--background-image-dt);
   background-repeat: var(--background-repeat-dt);
@@ -13460,16 +12794,15 @@ body.theme-dark.pt-background-image-dt {
   backdrop-filter: blur(var(--background-blur-dt));
 }
 
-div.workspace-tabs,
-div.workspace-tab-header-container,
-div.workspace-split.mod-root,
-div.workspace-ribbon {
+div.workspace-tabs, div.workspace-tab-header-container, div.workspace-split.mod-root, div.workspace-ribbon {
   background: transparent;
 }
 
+/* #endregion */
 /*  ==========================================================================
     Custom Vault Banner
     ========================================================================== */
+/* #region  [Plugin - Theme] Custom Vault Banner */
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
   align-items: center;
   height: fit-content;
@@ -13483,26 +12816,21 @@ div.workspace-ribbon {
   min-width: -webkit-fill-available;
   border: unset;
 }
-
 .pt-custom-vault-banner .nav-folder-title[data-path="/"]:hover {
   background-color: var(--background-primary);
   border-radius: var(--border-radius);
   line-height: 16px;
   border: unset;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
   justify-content: flex-start;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-center .nav-folder-title[data-path="/"] {
   justify-content: center;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-right .nav-folder-title[data-path="/"] {
   justify-content: flex-end;
 }
-
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-title-content {
   height: fit-content;
   width: fit-content;
@@ -13511,118 +12839,102 @@ div.workspace-ribbon {
   white-space: normal;
   width: auto;
 }
-
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
   display: block;
   height: 32px;
   width: 32px;
   margin: 8px;
   border-radius: var(--border-radius);
+  background-image: var(--custom-vault-banner-icon-url);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-
-.pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
-  background-image: var(--custom-vault-banner-icon-url);
-}
-
 .pt-custom-vault-banner.pt-custom-vault-banner-sticky .nav-folder-title[data-path="/"] {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 0;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-title-content {
   margin-right: 8px;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 1;
 }
-
 .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-title-content {
   margin-left: 8px;
 }
 
-/*  ==========================================================================
-    Mark Highlight System
-    ========================================================================== */
+/* #endregion */
+/*
+  ==========================================================================
+  Mark Highlight System
+  ==========================================================================
+*/
 /* Adjusts the line height for lines of text that include the Mark Highlight so that it's contained in the line */
 /* .markdown-preview-view mark {
-    line-height: 1.6;
-} */
-/*  Mark Highlight Color Presets
-    ========================================================================== */
+        line-height: 1.6;
+    } */
+/* #region  [Plugin - Theme] Mark Highlight Color Presets */
 mark.red, mark.Red {
   --highlight-default: var(--color-red);
   --dark-highlight-default: var(--color-dark-red);
   --text-highlight-default: var(--color-text-red);
 }
-
 mark.orange, mark.Orange {
   --highlight-default: var(--color-orange);
   --dark-highlight-default: var(--color-dark-orange);
   --text-highlight-default: var(--color-text-orange);
 }
-
 mark.yellow, mark.Yellow {
   --highlight-default: var(--color-yellow);
   --dark-highlight-default: var(--color-dark-yellow);
   --text-highlight-default: var(--color-text-yellow);
 }
-
 mark.green, mark.Green {
   --highlight-default: var(--color-green);
   --dark-highlight-default: var(--color-dark-green);
   --text-highlight-default: var(--color-text-green);
 }
-
 mark.mint, mark.Mint {
   --highlight-default: var(--color-mint);
   --dark-highlight-default: var(--color-dark-mint);
   --text-highlight-default: var(--color-text-mint);
 }
-
 mark.aqua, mark.Aqua {
   --highlight-default: var(--color-aqua);
   --dark-highlight-default: var(--color-dark-aqua);
   --text-highlight-default: var(--color-text-aqua);
 }
-
 mark.blue, mark.Blue {
   --highlight-default: var(--color-blue);
   --dark-highlight-default: var(--color-dark-blue);
   --text-highlight-default: var(--color-text-blue);
 }
-
 mark.purple, mark.Purple {
   --highlight-default: var(--color-purple);
   --dark-highlight-default: var(--color-dark-purple);
   --text-highlight-default: var(--color-text-purple);
 }
-
 mark.pink, mark.Pink {
   --highlight-default: var(--color-pink);
   --dark-highlight-default: var(--color-dark-pink);
   --text-highlight-default: var(--color-text-pink);
 }
-
 mark.grey, mark.Grey {
   --highlight-default: var(--color-grey);
   --dark-highlight-default: var(--color-dark-grey);
   --text-highlight-default: var(--color-text-grey);
 }
 
-/*  Mark Highlight Styles
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Theme} Mark Highlight Styles */
 .theme-dark.pt-highlight-style-text-dt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-text-lt .markdown-preview-view mark,
 .theme-dark.pt-highlight-style-text-dt .cm-line span.cm-html-embed mark,
+.theme-light.pt-highlight-style-text-lt .markdown-preview-view mark,
 .theme-light.pt-highlight-style-text-lt .cm-line span.cm-html-embed mark {
   font-weight: 600;
   font-size: 0.875em;
@@ -13634,8 +12946,8 @@ mark.grey, mark.Grey {
 }
 
 .theme-dark.pt-highlight-style-border-dt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-border-lt .markdown-preview-view mark,
 .theme-dark.pt-highlight-style-border-dt .cm-line span.cm-html-embed mark,
+.theme-light.pt-highlight-style-border-lt .markdown-preview-view mark,
 .theme-light.pt-highlight-style-border-lt .cm-line span.cm-html-embed mark {
   font-weight: 600;
   font-size: 0.875em;
@@ -13648,8 +12960,8 @@ mark.grey, mark.Grey {
 }
 
 .theme-dark.pt-highlight-style-borderandtext-dt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-borderandtext-lt .markdown-preview-view mark,
 .theme-dark.pt-highlight-style-borderandtext-dt .cm-line span.cm-html-embed mark,
+.theme-light.pt-highlight-style-borderandtext-lt .markdown-preview-view mark,
 .theme-light.pt-highlight-style-borderandtext-lt .cm-line span.cm-html-embed mark {
   font-weight: 600;
   font-size: 0.875em;
@@ -13663,8 +12975,8 @@ mark.grey, mark.Grey {
 }
 
 .theme-dark.pt-highlight-style-filled-dt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-filled-lt .markdown-preview-view mark,
 .theme-dark.pt-highlight-style-filled-dt .cm-line span.cm-html-embed mark,
+.theme-light.pt-highlight-style-filled-lt .markdown-preview-view mark,
 .theme-light.pt-highlight-style-filled-lt .cm-line span.cm-html-embed mark {
   font-weight: 600;
   font-size: 0.875em;
@@ -13677,8 +12989,8 @@ mark.grey, mark.Grey {
 }
 
 .theme-dark.pt-highlight-style-borderandfilled-dt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-borderandfilled-lt .markdown-preview-view mark,
 .theme-dark.pt-highlight-style-borderandfilled-dt .cm-line span.cm-html-embed mark,
+.theme-light.pt-highlight-style-borderandfilled-lt .markdown-preview-view mark,
 .theme-light.pt-highlight-style-borderandfilled-lt .cm-line span.cm-html-embed mark {
   font-weight: 600;
   font-size: 0.875em;
@@ -13691,8 +13003,8 @@ mark.grey, mark.Grey {
   box-decoration-break: clone;
 }
 
-/*  Advanced Tables Plugin
-        ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Community] Advanced Tables */
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   width: unset;
   height: unset;
@@ -13705,95 +13017,70 @@ mark.grey, mark.Grey {
   flex-direction: column;
   stroke-width: 2px;
 }
-
-/* Positions the Advanced Tables Toolbar at the top of the View Content */
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+  /* Positions the Advanced Tables Toolbar at the top of the View Content */
   height: fit-content;
   overflow: auto;
   display: flex;
   padding: 0px;
 }
-
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content > div {
   height: fit-content;
 }
-
 .pt-advanced-tables-align-left .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
   justify-content: flex-start;
 }
-
 .pt-advanced-tables-align-center .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
   justify-content: center;
 }
-
 .pt-advanced-tables-align-right .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
   justify-content: flex-end;
 }
 
-/*  ==========================================================================
-    Kanban Plugin
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Community] Kanban Base */
 div.kanban-plugin__lane {
   border: none;
   background-color: var(--background-secondary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-
+div.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
+  color: var(--interactive-accent-hover);
+}
 div.kanban-plugin__lane-wrapper {
   margin-right: 16px;
 }
-
 div.kanban-plugin__lane-title {
   cursor: text;
 }
-
 div.kanban-plugin__lane-header-wrapper {
   background: var(--background-primary);
   border-radius: var(--border-radius);
 }
-
-div.kanban-plugin__item-button-wrapper {
-  background: var(--tab-label-background-color);
-  border-radius: var(--border-radius);
-}
-
 div.kanban-plugin__lane-grip {
   color: var(--text-muted);
 }
-
 div.kanban-plugin__lane-grip:hover {
   color: var(--interactive-accent-hover);
 }
-
-div.kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
-div.kanban-plugin__item button.kanban-plugin__item-postfix-button:hover,
-div.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
-  color: var(--interactive-accent-hover);
-}
-
-.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
-  color: var(--text-normal);
-}
-
-button.kanban-plugin__new-item-button:hover {
-  color: var(--interactive-accent-text);
-  font-weight: 600;
-  background-color: var(--background-primary);
-}
-
 div.kanban-plugin__item {
   background-color: var(--background-primary);
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-
-div.modal.kanban-plugin__board-settings-modal .modal-content {
-  padding: 0px 25px;
-  margin: 40px 16px 10px 40px;
+div.kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
+div.kanban-plugin__item button.kanban-plugin__item-postfix-button:hover {
+  color: var(--interactive-accent-hover);
 }
-
+div.kanban-plugin__item-button-wrapper {
+  background: var(--tab-label-background-color);
+  border-radius: var(--border-radius);
+}
+div.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
+  color: var(--text-normal);
+}
 div.kanban-plugin__date-picker .flatpickr-calendar {
   background: var(--background-secondary-blur);
   border: 1px solid var(--background-secondary);
@@ -13802,36 +13089,34 @@ div.kanban-plugin__date-picker .flatpickr-calendar {
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-
-.kanban-plugin__date-picker .flatpickr-day.today {
+div.kanban-plugin__date-picker .flatpickr-day.today {
   border: var(--border-size) solid var(--interactive-accent-dark);
   background-color: var(--background-primary);
 }
-
 div.kanban-plugin__date-picker .flatpickr-day.selected {
   color: var(--highlight-text-normal);
 }
-
 div.kanban-plugin__markdown-preview-view > div > * {
   overflow-x: unset;
 }
-
 div.kanban-plugin__lane-form-wrapper {
   border: 2px solid var(--interactive-accent);
 }
-
-.theme-light div.kanban-plugin__action-confirm-wrapper,
-.theme-dark div.kanban-plugin__action-confirm-wrapper {
+.theme-light div.kanban-plugin__action-confirm-wrapper, .theme-dark div.kanban-plugin__action-confirm-wrapper {
   border: var(--border-size) solid var(--color-dark-red);
   background-color: var(--background-primary);
   box-shadow: var(--drop-shadow);
 }
-
-.theme-light div.kanban-plugin__action-confirm-text,
-.theme-dark div.kanban-plugin__action-confirm-text {
+.theme-light div.kanban-plugin__action-confirm-text, .theme-dark div.kanban-plugin__action-confirm-text {
   color: var(--text-normal);
 }
 
+.theme-light button.kanban-plugin__new-item-button:hover,
+.theme-dark button.kanban-plugin__new-item-button:hover {
+  color: var(--interactive-accent-text);
+  font-weight: 600;
+  background-color: var(--background-primary);
+}
 .theme-light button.kanban-plugin__confirm-action-button,
 .theme-dark button.kanban-plugin__confirm-action-button {
   border: var(--border-size) solid var(--color-dark-red);
@@ -13839,7 +13124,6 @@ div.kanban-plugin__lane-form-wrapper {
   color: var(--highlight-text-normal);
   font-weight: 600;
 }
-
 .theme-light button.kanban-plugin__cancel-action-button,
 .theme-dark button.kanban-plugin__cancel-action-button {
   border: var(--border-size) solid var(--color-dark-grey);
@@ -13848,13 +13132,17 @@ div.kanban-plugin__lane-form-wrapper {
   font-weight: 600;
 }
 
-/*  Kanban Background Styles
-    ========================================================================== */
+div.modal.kanban-plugin__board-settings-modal .modal-content {
+  padding: 0px 25px;
+  margin: 40px 16px 10px 40px;
+}
+
+/* #endregion */
+/* #region  [Plugin - Community] Kanban Background Styles */
 .theme-light.pt-kanban-background-transparent-lt .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type=kanban],
 .theme-dark.pt-kanban-background-transparent-dt .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type=kanban] {
   background-color: transparent;
 }
-
 .theme-light.pt-kanban-background-transparent-lt .workspace-leaf-content[data-type=kanban] .kanban-plugin,
 .theme-light.pt-kanban-background-transparent-lt .workspace-leaf-content[data-type=kanban] .view-content,
 .theme-dark.pt-kanban-background-transparent-dt .workspace-leaf-content[data-type=kanban] .kanban-plugin,
@@ -13869,97 +13157,77 @@ div.kanban-plugin__lane-form-wrapper {
   background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.theme-light.pt-kanban-background-dots-plain-lt .kanban-plugin__board,
-.theme-dark.pt-kanban-background-dots-plain-dt .kanban-plugin__board {
-  background-size: 8px 8px;
-  background-attachment: local;
-  background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px);
-}
-
-.theme-light.pt-kanban-background-dots-accent-lt .kanban-plugin__board,
-.theme-dark.pt-kanban-background-dots-accent-dt .kanban-plugin__board {
+.theme-light.pt-kanban-background-dots-accent-lt .theme-dark.pt-kanban-background-dots-accent-dt .kanban-plugin__board {
   background-size: 8px 8px;
   background-attachment: local;
   background-image: radial-gradient(circle, var(--interactive-accent) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.theme-light.pt-kanban-background-grid-plain-lt .kanban-plugin__board,
-.theme-dark.pt-kanban-background-grid-plain-dt .kanban-plugin__board {
+.theme-light.pt-kanban-background-grid-plain-lt .theme-dark.pt-kanban-background-grid-plain-dt .kanban-plugin__board {
   background-size: 8px 8px;
   background-attachment: local;
   background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
 }
 
-.theme-light.pt-kanban-background-grid-accent-lt .kanban-plugin__board,
-.theme-dark.pt-kanban-background-grid-accent-dt .kanban-plugin__board {
+.theme-light.pt-kanban-background-grid-accent-lt .theme-dark.pt-kanban-background-grid-accent-dt .kanban-plugin__board {
   background-size: 8px 8px;
   background-attachment: local;
   background-image: linear-gradient(to right, var(--interactive-accent) 1px, transparent 1px), linear-gradient(to bottom, var(--interactive-accent) 1px, transparent 1px);
 }
 
-/*  ==========================================================================
-    Quick Explorer Plugin
-    ========================================================================== */
+/* #endregion */
+/* #region  [Plugin - Community] Quick Explorer */
 div#quick-explorer {
   display: flex;
   align-items: center;
   line-height: normal;
   opacity: 1;
 }
-
 div#quick-explorer .explorable {
   opacity: 1;
   padding: 0px 1px;
   border-radius: var(--border-radius-small);
 }
-
-.titlebar-button-container.mod-right .titlebar-button {
-  opacity: 1;
+div#quick-explorer .explorable.selected, div#quick-explorer .explorable:hover {
+  color: var(--interactive-accent-text);
+  background-color: var(--background-primary);
 }
 
 div.qe-popup-menu {
   top: 30px !important;
 }
-
 .pt-windows-titlebar div.qe-popup-menu {
   top: 38px !important;
 }
-
 div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected {
   color: var(--interactive-accent-text);
   background-color: var(--background-primary);
 }
-
-.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label) .nav-file-tag {
+div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .nav-file-tag {
+  color: var(--interactive-accent-text);
+  background-color: var(--background-secondary);
+  border: 2px solid transparent;
+}
+div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label) .nav-file-tag {
   color: var(--text-primary);
   background-color: var(--background-primary);
   border-radius: var(--border-radius-small);
   border: 2px solid transparent;
 }
 
-.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .nav-file-tag {
-  color: var(--interactive-accent-text);
-  background-color: var(--background-secondary);
-  border: 2px solid transparent;
+.titlebar-button-container.mod-right .titlebar-button {
+  opacity: 1;
 }
 
-div#quick-explorer .explorable.selected,
-div#quick-explorer .explorable:hover {
-  color: var(--interactive-accent-text);
-  background-color: var(--background-primary);
-}
-
-/*  ==========================================================================
-    Style Settings
-    ========================================================================== */
-body div.style-settings-heading[data-level="0"] {
+/* #endregion */
+/* #region  [Plugin - Community] Style Settings */
+div.style-settings-heading[data-level="0"] {
   margin-bottom: 15px;
 }
-
-.style-settings-container[data-level="0"] {
-  margin-left: 4px;
+div.style-settings-heading[data-level="0"] + .style-settings-container {
+  padding-left: 0;
+  margin-left: 0;
 }
-
 div.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
   margin-left: 0;
 }
@@ -13967,57 +13235,29 @@ div.style-settings-heading[data-level="0"] + .style-settings-container .style-se
 div.style-settings-container {
   padding-bottom: 0;
 }
-
-div.style-settings-heading[data-level="0"] + .style-settings-container {
-  padding-left: 0;
-  margin-left: 0;
+div.style-settings-container[data-level="0"] {
+  margin-left: 4px;
 }
-
-/* Padding for each settings depth */
-.style-settings-container[data-level="1"],
-.style-settings-container[data-level="2"],
-.style-settings-container[data-level="3"],
-.style-settings-container[data-level="4"],
-.style-settings-container[data-level="5"] {
+div.style-settings-container[data-level="1"], div.style-settings-container[data-level="2"], div.style-settings-container[data-level="3"], div.style-settings-container[data-level="4"], div.style-settings-container[data-level="5"] {
   border-left: var(--style-settings-vertical-lines-width) solid var(--style-settings-vertical-lines-color);
   padding-left: 15px;
   margin-left: 4px;
 }
 
-.setting-item-description div small {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  max-width: 400px;
-  display: block;
-}
-
-div.setting-item,
-div.style-settings-heading {
-  border-top: unset;
-  border-bottom: unset;
-}
-
-.style-settings-heading:hover .setting-item-name {
-  color: var(--interactive-accent-text);
-}
-
-.style-settings-heading:hover .style-settings-collapse-indicator,
-.setting-item.setting-item-heading.style-settings-heading:not(.is-collapsed):hover .style-settings-collapse-indicator {
-  color: var(--interactive-accent-hover);
-}
-
 .vertical-tab-content > .setting-item.setting-item-heading.style-settings-heading {
   border-bottom: 1px solid var(--style-settings-vertical-lines-color);
 }
-
+.setting-item.setting-item-heading.style-settings-heading:hover .style-settings-collapse-indicator {
+  color: var(--interactive-accent-hover);
+}
+.setting-item.setting-item-heading.style-settings-heading:hover .setting-item-name {
+  color: var(--interactive-accent-text);
+}
 .setting-item.setting-item-heading.style-settings-heading[data-id=obsidian-prism-theme] {
   display: flex;
   flex-wrap: wrap;
   padding-top: unset;
 }
-
 .setting-item.setting-item-heading.style-settings-heading[data-id=obsidian-prism-theme]::before {
   content: "Visit the Wiki section of the GitHub Repository for additional detailed descriptions with images/GIFs of all Style Settings Options in Prism. \ahttps://github.com/damiankorcz/Prism-Theme/wiki";
   user-select: text;
@@ -14035,45 +13275,56 @@ div.style-settings-heading {
   border: var(--border-size) solid var(--color-dark-yellow);
   background-color: var(--color-yellow);
 }
-
 .setting-item.setting-item-heading.style-settings-heading:not(.is-collapsed) .style-settings-collapse-indicator {
   color: var(--interactive-accent-text);
 }
 
 .workspace-leaf-content[data-type=style-settings] .view-content {
+  /* Style Settings open as a note */
   padding: 20px 35px;
 }
-
-.view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
+.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
   flex-direction: row;
 }
 
+.setting-item-description div small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  max-width: 400px;
+  display: block;
+}
+
+div.setting-item,
+div.style-settings-heading {
+  border-top: unset;
+  border-bottom: unset;
+}
+
+/* #endregion */
+/* #region  [Plugin - Community] Dangling Links */
 .workspace-leaf-content[data-type=dangling-links] .view-content {
   padding: 0px 10px 0px 0px;
 }
-
-.workspace-leaf-content[data-type=dangling-links] .view-content .container h3:first-of-type {
-  display: none;
-}
-
 .workspace-leaf-content[data-type=dangling-links] .view-content .container {
   width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-
+.workspace-leaf-content[data-type=dangling-links] .view-content .container h3:first-of-type {
+  display: none;
+}
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details {
   border: 0px;
   background-color: var(--background-secondary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details:not(:last-child) {
   margin-bottom: 8px;
 }
-
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details summary {
   border-bottom-color: transparent;
   border: none;
@@ -14087,12 +13338,10 @@ div.style-settings-heading {
   font-size: 14px;
   font-weight: 600;
 }
-
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul {
   margin: 8px;
   padding-inline-start: 0px;
 }
-
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li {
   border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
@@ -14102,15 +13351,15 @@ div.style-settings-heading {
   background: var(--background-primary);
   box-shadow: var(--drop-shadow);
 }
-
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li:not(:last-child) {
+  margin-bottom: 8px;
+}
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li ::marker {
   display: none;
 }
 
-.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li:not(:last-child) {
-  margin-bottom: 8px;
-}
-
+/* #endregion */
+/* #region  [Info] Style Settings */
 /* @settings
 name: Prism Theme
 id: obsidian-prism-theme
@@ -21255,6 +20504,8 @@ settings:
                 value: pt-advanced-tables-align-right
 
 */
+/* #endregion */
+/* #region [Info] Hub Plugin Compatibility */
 /* @plugins
 core:
 - audio-recorder
@@ -21290,3 +20541,4 @@ community:
 - obsidian-kanban
 - quick-explorer
 */
+/* #endregion */

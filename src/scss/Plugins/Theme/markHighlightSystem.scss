@@ -1,97 +1,162 @@
-/*  ==========================================================================
-    Mark Highlight System
-    ========================================================================== */
+/*
+  ==========================================================================
+  Mark Highlight System
+  ==========================================================================
+*/
 
-    /* Adjusts the line height for lines of text that include the Mark Highlight so that it's contained in the line */
-    /* .markdown-preview-view mark {
+/* Adjusts the line height for lines of text that include the Mark Highlight so that it's contained in the line */
+/* .markdown-preview-view mark {
         line-height: 1.6;
     } */
 
-    /*  Mark Highlight Color Presets
-        ========================================================================== */  
+/* #region  [Plugin - Theme] Mark Highlight Color Presets */
+mark {
+	&.red,
+	&.Red {
+		--highlight-default: var(--color-red);
+		--dark-highlight-default: var(--color-dark-red);
+		--text-highlight-default: var(--color-text-red);
+	}
 
-        mark.red,    mark.Red    { --highlight-default: var(--color-red);    --dark-highlight-default: var(--color-dark-red);    --text-highlight-default: var(--color-text-red);    }
-        mark.orange, mark.Orange { --highlight-default: var(--color-orange); --dark-highlight-default: var(--color-dark-orange); --text-highlight-default: var(--color-text-orange); }
-        mark.yellow, mark.Yellow { --highlight-default: var(--color-yellow); --dark-highlight-default: var(--color-dark-yellow); --text-highlight-default: var(--color-text-yellow); }
-        mark.green,  mark.Green  { --highlight-default: var(--color-green);  --dark-highlight-default: var(--color-dark-green);  --text-highlight-default: var(--color-text-green);  }
-        mark.mint,   mark.Mint   { --highlight-default: var(--color-mint);   --dark-highlight-default: var(--color-dark-mint);   --text-highlight-default: var(--color-text-mint);   }
-        mark.aqua,   mark.Aqua   { --highlight-default: var(--color-aqua);   --dark-highlight-default: var(--color-dark-aqua);   --text-highlight-default: var(--color-text-aqua);   }
-        mark.blue,   mark.Blue   { --highlight-default: var(--color-blue);   --dark-highlight-default: var(--color-dark-blue);   --text-highlight-default: var(--color-text-blue);   }
-        mark.purple, mark.Purple { --highlight-default: var(--color-purple); --dark-highlight-default: var(--color-dark-purple); --text-highlight-default: var(--color-text-purple); }
-        mark.pink,   mark.Pink   { --highlight-default: var(--color-pink);   --dark-highlight-default: var(--color-dark-pink);   --text-highlight-default: var(--color-text-pink);   }
-        mark.grey,   mark.Grey   { --highlight-default: var(--color-grey);   --dark-highlight-default: var(--color-dark-grey);   --text-highlight-default: var(--color-text-grey);   }
+	&.orange,
+	&.Orange {
+		--highlight-default: var(--color-orange);
+		--dark-highlight-default: var(--color-dark-orange);
+		--text-highlight-default: var(--color-text-orange);
+	}
 
+	&.yellow,
+	&.Yellow {
+		--highlight-default: var(--color-yellow);
+		--dark-highlight-default: var(--color-dark-yellow);
+		--text-highlight-default: var(--color-text-yellow);
+	}
 
-    /*  Mark Highlight Styles
-        ========================================================================== */ 
+	&.green,
+	&.Green {
+		--highlight-default: var(--color-green);
+		--dark-highlight-default: var(--color-dark-green);
+		--text-highlight-default: var(--color-text-green);
+	}
 
-        .theme-dark.pt-highlight-style-text-dt .markdown-preview-view mark,
-        .theme-light.pt-highlight-style-text-lt .markdown-preview-view mark,
-        .theme-dark.pt-highlight-style-text-dt .cm-line span.cm-html-embed mark,
-        .theme-light.pt-highlight-style-text-lt .cm-line span.cm-html-embed mark {
-            font-weight: 600;
-            font-size: 0.875em;
-            color: var(--text-highlight-default);
-            opacity: 1;
-            background-color: transparent;
-            margin: 0px 0px;
-            border-radius: var(--border-radius-small);
-        }
+	&.mint,
+	&.Mint {
+		--highlight-default: var(--color-mint);
+		--dark-highlight-default: var(--color-dark-mint);
+		--text-highlight-default: var(--color-text-mint);
+	}
 
-        .theme-dark.pt-highlight-style-border-dt .markdown-preview-view mark,
-        .theme-light.pt-highlight-style-border-lt .markdown-preview-view mark,
-        .theme-dark.pt-highlight-style-border-dt .cm-line span.cm-html-embed mark,
-        .theme-light.pt-highlight-style-border-lt .cm-line span.cm-html-embed mark  {
-            font-weight: 600;
-            font-size: 0.875em;
-            background-color: var(--background-primary);
-            border: var(--border-size) solid var(--dark-highlight-default);
-            padding: 0px 5px;
-            border-radius: var(--border-radius-small);
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-        }
+	&.aqua,
+	&.Aqua {
+		--highlight-default: var(--color-aqua);
+		--dark-highlight-default: var(--color-dark-aqua);
+		--text-highlight-default: var(--color-text-aqua);
+	}
 
-        .theme-dark.pt-highlight-style-borderandtext-dt .markdown-preview-view mark,
-        .theme-light.pt-highlight-style-borderandtext-lt .markdown-preview-view mark,
-        .theme-dark.pt-highlight-style-borderandtext-dt .cm-line span.cm-html-embed mark,
-        .theme-light.pt-highlight-style-borderandtext-lt .cm-line span.cm-html-embed mark  {
-            font-weight: 600;
-            font-size: 0.875em;
-            color: var(--text-highlight-default);
-            background-color: var(--background-primary);
-            border: var(--border-size) solid var(--dark-highlight-default);
-            padding: 0px 5px;
-            border-radius: var(--border-radius-small);
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-        }
+	&.blue,
+	&.Blue {
+		--highlight-default: var(--color-blue);
+		--dark-highlight-default: var(--color-dark-blue);
+		--text-highlight-default: var(--color-text-blue);
+	}
 
-        .theme-dark.pt-highlight-style-filled-dt .markdown-preview-view mark,
-        .theme-light.pt-highlight-style-filled-lt .markdown-preview-view mark,
-        .theme-dark.pt-highlight-style-filled-dt .cm-line span.cm-html-embed mark,
-        .theme-light.pt-highlight-style-filled-lt .cm-line span.cm-html-embed mark  {
-            font-weight: 600;
-            font-size: 0.875em;
-            color: var(--highlight-text-normal);
-            background-color: var(--highlight-default);
-            padding: 2px 7px;
-            border-radius: var(--border-radius-small);
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-        }
+	&.purple,
+	&.Purple {
+		--highlight-default: var(--color-purple);
+		--dark-highlight-default: var(--color-dark-purple);
+		--text-highlight-default: var(--color-text-purple);
+	}
 
-        .theme-dark.pt-highlight-style-borderandfilled-dt .markdown-preview-view mark,
-        .theme-light.pt-highlight-style-borderandfilled-lt .markdown-preview-view mark,
-        .theme-dark.pt-highlight-style-borderandfilled-dt .cm-line span.cm-html-embed mark,
-        .theme-light.pt-highlight-style-borderandfilled-lt .cm-line span.cm-html-embed mark  {
-            font-weight: 600;
-            font-size: 0.875em;
-            color: var(--highlight-text-normal);
-            background-color: var(--highlight-default);
-            border: var(--border-size) solid var(--dark-highlight-default);
-            padding: 0px 5px;
-            border-radius: var(--border-radius-small);
-            -webkit-box-decoration-break: clone;
-            box-decoration-break: clone;
-        }
+	&.pink,
+	&.Pink {
+		--highlight-default: var(--color-pink);
+		--dark-highlight-default: var(--color-dark-pink);
+		--text-highlight-default: var(--color-text-pink);
+	}
+
+	&.grey,
+	&.Grey {
+		--highlight-default: var(--color-grey);
+		--dark-highlight-default: var(--color-dark-grey);
+		--text-highlight-default: var(--color-text-grey);
+	}
+}
+/* #endregion */
+
+/* #region  [Plugin - Theme} Mark Highlight Styles */
+.theme-dark.pt-highlight-style-text-dt,
+.theme-light.pt-highlight-style-text-lt {
+	.markdown-preview-view mark,
+	.cm-line span.cm-html-embed mark {
+		font-weight: 600;
+		font-size: 0.875em;
+		color: var(--text-highlight-default);
+		opacity: 1;
+		background-color: transparent;
+		margin: 0px 0px;
+		border-radius: var(--border-radius-small);
+	}
+}
+
+.theme-dark.pt-highlight-style-border-dt,
+.theme-light.pt-highlight-style-border-lt {
+	.markdown-preview-view mark,
+	.cm-line span.cm-html-embed mark {
+		font-weight: 600;
+		font-size: 0.875em;
+		background-color: var(--background-primary);
+		border: var(--border-size) solid var(--dark-highlight-default);
+		padding: 0px 5px;
+		border-radius: var(--border-radius-small);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+}
+
+.theme-dark.pt-highlight-style-borderandtext-dt,
+.theme-light.pt-highlight-style-borderandtext-lt {
+	.markdown-preview-view mark,
+	.cm-line span.cm-html-embed mark {
+		font-weight: 600;
+		font-size: 0.875em;
+		color: var(--text-highlight-default);
+		background-color: var(--background-primary);
+		border: var(--border-size) solid var(--dark-highlight-default);
+		padding: 0px 5px;
+		border-radius: var(--border-radius-small);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+}
+
+.theme-dark.pt-highlight-style-filled-dt,
+.theme-light.pt-highlight-style-filled-lt {
+	.markdown-preview-view mark,
+	.cm-line span.cm-html-embed mark {
+		font-weight: 600;
+		font-size: 0.875em;
+		color: var(--highlight-text-normal);
+		background-color: var(--highlight-default);
+		padding: 2px 7px;
+		border-radius: var(--border-radius-small);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+}
+
+.theme-dark.pt-highlight-style-borderandfilled-dt,
+.theme-light.pt-highlight-style-borderandfilled-lt {
+	.markdown-preview-view mark,
+	.cm-line span.cm-html-embed mark {
+		font-weight: 600;
+		font-size: 0.875em;
+		color: var(--highlight-text-normal);
+		background-color: var(--highlight-default);
+		border: var(--border-size) solid var(--dark-highlight-default);
+		padding: 0px 5px;
+		border-radius: var(--border-radius-small);
+		-webkit-box-decoration-break: clone;
+		box-decoration-break: clone;
+	}
+}
+/* #endregion */

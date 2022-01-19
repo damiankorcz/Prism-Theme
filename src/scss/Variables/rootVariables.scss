@@ -4,8 +4,9 @@
 	==========================================================================
 */
 
+/* #region  [Variables] Root */
 :root {
-	/* #region  [Variables Root] General Settings */
+	/* General Settings */
 	--default-font: "Source Sans Pro", sans-serif;
 
 	--border-size: 2px;
@@ -13,16 +14,14 @@
 
 	--file-explorer-vertical-lines-width: 2px;
 	--style-settings-vertical-lines-width: 2px;
-	/* #endregion */
 
-	/* #region  [Variables Root] Scrollbar Settings */
+	/* Scrollbar Settings */
 	--scroll-bar-border-radius: 0px;
 	--scroll-button-background-color: var(--background-secondary);
 	--scroll-button-background-color-hover: var(--background-secondary-alt);
 	--scroll-button-border-radius: 0px;
-	/* #endregion */
 
-	/* #region  [Variables Root] Base Colors */
+	/* Base Colors */
 	--color-desaturate-lt: 20%;
 	--color-darken-lt: 15%;
 	--color-darken-text-lt: 45%;
@@ -82,20 +81,16 @@
 	--color-grey-l: 93%;
 	/* #endregion */
 
-	/*
-		Style Settings Accessible Default Properties
-		==========================================================================
-	*/
+	/* Style Settings Accessible Default Properties */
 
-	/* #region  [Variables Root] Fonts */
+	/* Fonts */
 	--font-family-ui: "Source Sans Pro", sans-serif;
 	--font-family-edit: "Source Sans Pro", sans-serif;
 	--font-family-preview: "Source Sans Pro", sans-serif;
 	--font-family-code: "Fira Code", monospace;
 	/* #endregion */
 
-	/* #region  [Variables Root] Graph View */
-	/* Light Theme */
+	/* Graph View - Light Theme */
 	--graph-fill-opacity-lt: 1;
 	--graph-fill-focused-opacity-lt: 1;
 	--graph-tag-opacity-lt: 1;
@@ -112,7 +107,7 @@
 	--color-custom-graph-highlight-lt: #8670ff;
 	--color-custom-graph-highlight-line-lt: #8670ff;
 
-	/* Dark Theme */
+	/* Graph View - Dark Theme */
 	--graph-fill-opacity-dt: 1;
 	--graph-fill-focused-opacity-dt: 1;
 	--graph-tag-opacity-dt: 1;
@@ -128,16 +123,13 @@
 	--color-custom-graph-unresolved-dt: #b63a3a;
 	--color-custom-graph-highlight-dt: #4c3ab6;
 	--color-custom-graph-highlight-line-dt: #4c3ab6;
-	/* #endregion */
 
-	/* #region  [Variables Root] Window Adjustments */
+	/* Window Adjustments */
 	--window-gap: 10px;
 	--border-radius: 8px;
 	--border-radius-small: 4px;
-	/* #endregion */
 
-	/* #region  [Variables Root] Background Options */
-	/* Light Theme */
+	/* Background Options - Light Theme */
 	--background-color-lt: #e0e3e6;
 	--background-image-lt: url();
 	--background-blur-lt: 0;
@@ -146,7 +138,7 @@
 	--background-position-lt: center;
 	--background-size-lt: cover;
 
-	/* Dark Theme */
+	/* Background Options - Dark Theme */
 	--background-color-dt: #1a1a1a;
 	--background-image-dt: url();
 	--background-blur-dt: 0;
@@ -154,47 +146,39 @@
 	--background-attachment-dt: fixed;
 	--background-position-dt: center;
 	--background-size-dt: cover;
-	/* #endregion */
 
-	/* #region  [Variables Root] Accent Colors and Styles */
+	/* Accent Colors */
 	--color-accent-lt: #c7bdff;
 	--color-accent-dt: #8c7fd7;
-	/* #endregion */
 
-	/* #region  [Variables Root] Solid Titlebar Custom Colors */
+	/* Solid Titlebar Custom Colors */
 	--titlebar-background-color-lt: #ebecef;
 	--titlebar-background-color-dt: #2b2b2b;
-	/* #endregion */
 
-	/* #region  [Variables Root] Solid Status Bar Custom Colors */
+	/* Solid Status Bar Custom Colors */
 	--status-bar-background-color-lt: #ebecef;
 	--status-bar-background-color-dt: #2b2b2b;
-	/* #endregion */
 
-	/* #region  [Variables Root] Custom Vault Banner */
+	/* Custom Vault Banner */
 	--custom-vault-banner-icon-url: url(https://img.icons8.com/dusk/50/000000/safe.png);
-	/* #endregion */
 
-	/* #region  [Variables Root] File Explorer */
+	/* Vertical Line Widths */
 	--file-explorer-vertical-lines-width: 2px;
 	--outline-vertical-lines-width: 2px;
-	/* #endregion */
 
-	/* #region  [Variables Root] Scrollbar */
+	/* Scrollbar */
 	--scroll-bar-size: 8px; /* The width of the scrollbar */
 	--scroll-bar-size-hover: 15px; /* The width of the scrollbar when hovering over the window content */
-	/* #endregion */
 
-	/* #region  [Variables Root] Header Font Size */
+	/* Header Font Size */
 	--h1-font-size: 2em;
 	--h2-font-size: 1.8em;
 	--h3-font-size: 1.6em;
 	--h4-font-size: 1.4em;
 	--h5-font-size: 1.2em;
 	--h6-font-size: 1em;
-	/* #endregion */
 
-	/* #region  [Variables Root] Header Text */
+	/* Header Text */
 	--h1-text-opacity-lt: 100%;
 	--h2-text-opacity-lt: 100%;
 	--h3-text-opacity-lt: 100%;
@@ -208,9 +192,8 @@
 	--h4-text-opacity-dt: 100%;
 	--h5-text-opacity-dt: 100%;
 	--h6-text-opacity-dt: 100%;
-	/* #endregion */
 
-	/* #region  [Variables Root] Header Background */
+	/* Header Background */
 	--h1-background-opacity-lt: 100%;
 	--h2-background-opacity-lt: 100%;
 	--h3-background-opacity-lt: 100%;
@@ -224,9 +207,8 @@
 	--h4-background-opacity-dt: 100%;
 	--h5-background-opacity-dt: 100%;
 	--h6-background-opacity-dt: 100%;
-	/* #endregion */
 
-	/* #region  [Variables Root] Header Border */
+	/* Header Border */
 	--h1-border-opacity-lt: 100%;
 	--h2-border-opacity-lt: 100%;
 	--h3-border-opacity-lt: 100%;
@@ -254,9 +236,8 @@
 	--h4-border-width-dt: 2px;
 	--h5-border-width-dt: 2px;
 	--h6-border-width-dt: 2px;
-	/* #endregion */
 
-	/* #region  [Variables Root] Header Underline */
+	/* Header Underline */
 	--h1-underline-thickness-lt: 4px;
 	--h2-underline-thickness-lt: 4px;
 	--h3-underline-thickness-lt: 4px;
@@ -284,5 +265,5 @@
 	--h4-underline-opacity-dt: 100%;
 	--h5-underline-opacity-dt: 100%;
 	--h6-underline-opacity-dt: 100%;
-	/* #endregion */
 }
+/* #endregion */

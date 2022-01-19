@@ -1,260 +1,89 @@
 /*
 	==========================================================================
-	Colors
+	Color Variables
 	==========================================================================
 */
 
+/* #region  [Variables] Light Theme */
 .theme-light {
 	--highlight-default: var(--color-yellow);
 
-	/* #region  [Variables LT] Color Adjustments */
-	--color-yellow-s-desaturated: calc(
-		var(--color-yellow-s) - var(--color-desaturate-lt)
-	);
-	--color-green-s-desaturated: calc(
-		var(--color-green-s) - var(--color-desaturate-lt)
-	);
-	--color-mint-s-desaturated: calc(
-		var(--color-mint-s) - var(--color-desaturate-lt)
-	);
-	--color-aqua-s-desaturated: calc(
-		var(--color-aqua-s) - var(--color-desaturate-lt)
-	);
-	--color-pink-s-desaturated: calc(
-		var(--color-pink-s) - var(--color-desaturate-lt)
-	);
+	/* Light Theme Color Adjustments */
+	--color-yellow-s-desaturated: calc(var(--color-yellow-s) - var(--color-desaturate-lt));
+	--color-green-s-desaturated: calc(var(--color-green-s) - var(--color-desaturate-lt));
+	--color-mint-s-desaturated: calc(var(--color-mint-s) - var(--color-desaturate-lt));
+	--color-aqua-s-desaturated: calc(var(--color-aqua-s) - var(--color-desaturate-lt));
+	--color-pink-s-desaturated: calc(var(--color-pink-s) - var(--color-desaturate-lt));
 
-	--color-accent-l-darkened: calc(
-		var(--color-accent-lt-l) - var(--color-darken-lt)
-	);
+	--color-accent-l-darkened: calc(var(--color-accent-lt-l) - var(--color-darken-lt));
 
 	--color-red-l-darkened: calc(var(--color-red-l) - var(--color-darken-lt));
-	--color-orange-l-darkened: calc(
-		var(--color-orange-l) - var(--color-darken-lt)
-	);
-	--color-yellow-l-darkened: calc(
-		var(--color-yellow-l) - var(--color-darken-lt)
-	);
+	--color-orange-l-darkened: calc(var(--color-orange-l) - var(--color-darken-lt));
+	--color-yellow-l-darkened: calc(var(--color-yellow-l) - var(--color-darken-lt));
 	--color-green-l-darkened: calc(var(--color-green-l) - var(--color-darken-lt));
 	--color-mint-l-darkened: calc(var(--color-mint-l) - var(--color-darken-lt));
 	--color-aqua-l-darkened: calc(var(--color-aqua-l) - var(--color-darken-lt));
 	--color-blue-l-darkened: calc(var(--color-blue-l) - var(--color-darken-lt));
-	--color-purple-l-darkened: calc(
-		var(--color-purple-l) - var(--color-darken-lt)
-	);
+	--color-purple-l-darkened: calc(var(--color-purple-l) - var(--color-darken-lt));
 	--color-pink-l-darkened: calc(var(--color-pink-l) - var(--color-darken-lt));
 	--color-grey-l-darkened: calc(var(--color-grey-l) - var(--color-darken-lt));
 
-	--color-accent-l-darkened-text: calc(
-		var(--color-accent-lt-l) - var(--color-darken-text-lt)
-	);
+	--color-accent-l-darkened-text: calc(var(--color-accent-lt-l) - var(--color-darken-text-lt));
 
-	--color-red-l-darkened-text: calc(
-		var(--color-red-l) - var(--color-darken-text-lt)
-	);
-	--color-orange-l-darkened-text: calc(
-		var(--color-orange-l) - var(--color-darken-text-lt)
-	);
-	--color-yellow-l-darkened-text: calc(
-		var(--color-yellow-l) - var(--color-darken-text-lt)
-	);
-	--color-green-l-darkened-text: calc(
-		var(--color-green-l) - var(--color-darken-text-lt)
-	);
-	--color-mint-l-darkened-text: calc(
-		var(--color-mint-l) - var(--color-darken-text-lt)
-	);
-	--color-aqua-l-darkened-text: calc(
-		var(--color-aqua-l) - var(--color-darken-text-lt)
-	);
-	--color-blue-l-darkened-text: calc(
-		var(--color-blue-l) - var(--color-darken-text-lt)
-	);
-	--color-purple-l-darkened-text: calc(
-		var(--color-purple-l) - var(--color-darken-text-lt)
-	);
-	--color-pink-l-darkened-text: calc(
-		var(--color-pink-l) - var(--color-darken-text-lt)
-	);
-	--color-grey-l-darkened-text: calc(
-		var(--color-grey-l) - var(--color-darken-text-lt)
-	);
-	/* #endregion */
+	--color-red-l-darkened-text: calc(var(--color-red-l) - var(--color-darken-text-lt));
+	--color-orange-l-darkened-text: calc(var(--color-orange-l) - var(--color-darken-text-lt));
+	--color-yellow-l-darkened-text: calc(var(--color-yellow-l) - var(--color-darken-text-lt));
+	--color-green-l-darkened-text: calc(var(--color-green-l) - var(--color-darken-text-lt));
+	--color-mint-l-darkened-text: calc(var(--color-mint-l) - var(--color-darken-text-lt));
+	--color-aqua-l-darkened-text: calc(var(--color-aqua-l) - var(--color-darken-text-lt));
+	--color-blue-l-darkened-text: calc(var(--color-blue-l) - var(--color-darken-text-lt));
+	--color-purple-l-darkened-text: calc(var(--color-purple-l) - var(--color-darken-text-lt));
+	--color-pink-l-darkened-text: calc(var(--color-pink-l) - var(--color-darken-text-lt));
+	--color-grey-l-darkened-text: calc(var(--color-grey-l) - var(--color-darken-text-lt));
 
-	/* #region  [Variables LT] Base Colors */
-	--color-accent: hsl(
-		var(--color-accent-lt-h),
-		var(--color-accent-lt-s),
-		var(--color-accent-lt-l)
-	);
+	/* Light Theme Base Colors */
+	--color-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
 
 	--color-red: hsl(var(--color-red-h), var(--color-red-s), var(--color-red-l));
-	--color-orange: hsl(
-		var(--color-orange-h),
-		var(--color-orange-s),
-		var(--color-orange-l)
-	);
-	--color-yellow: hsl(
-		var(--color-yellow-h),
-		var(--color-yellow-s-desaturated),
-		var(--color-yellow-l)
-	);
-	--color-green: hsl(
-		var(--color-green-h),
-		var(--color-green-s-desaturated),
-		var(--color-green-l)
-	);
-	--color-mint: hsl(
-		var(--color-mint-h),
-		var(--color-mint-s-desaturated),
-		var(--color-mint-l)
-	);
-	--color-aqua: hsl(
-		var(--color-aqua-h),
-		var(--color-aqua-s-desaturated),
-		var(--color-aqua-l)
-	);
-	--color-blue: hsl(
-		var(--color-blue-h),
-		var(--color-blue-s),
-		var(--color-blue-l)
-	);
-	--color-purple: hsl(
-		var(--color-purple-h),
-		var(--color-purple-s),
-		var(--color-purple-l)
-	);
-	--color-pink: hsl(
-		var(--color-pink-h),
-		var(--color-pink-s-desaturated),
-		var(--color-pink-l)
-	);
-	--color-grey: hsl(
-		var(--color-grey-h),
-		var(--color-grey-s),
-		var(--color-grey-l)
-	);
-	/* #endregion */
+	--color-orange: hsl(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l));
+	--color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l));
+	--color-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l));
+	--color-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l));
+	--color-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l));
+	--color-blue: hsl(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l));
+	--color-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l));
+	--color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l));
+	--color-grey: hsl(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l));
 
-	/* #region  [Variables LT] Dark Colors */
-	--color-dark-accent: hsl(
-		var(--color-accent-lt-h),
-		var(--color-accent-lt-s),
-		var(--color-accent-l-darkened)
-	);
+	/* Light Theme Dark Colors */
+	--color-dark-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened));
 
-	--color-dark-red: hsl(
-		var(--color-red-h),
-		var(--color-red-s),
-		var(--color-red-l-darkened)
-	);
-	--color-dark-orange: hsl(
-		var(--color-orange-h),
-		var(--color-orange-s),
-		var(--color-orange-l-darkened)
-	);
-	--color-dark-yellow: hsl(
-		var(--color-yellow-h),
-		var(--color-yellow-s-desaturated),
-		var(--color-yellow-l-darkened)
-	);
-	--color-dark-green: hsl(
-		var(--color-green-h),
-		var(--color-green-s-desaturated),
-		var(--color-green-l-darkened)
-	);
-	--color-dark-mint: hsl(
-		var(--color-mint-h),
-		var(--color-mint-s-desaturated),
-		var(--color-mint-l-darkened)
-	);
-	--color-dark-aqua: hsl(
-		var(--color-aqua-h),
-		var(--color-aqua-s-desaturated),
-		var(--color-aqua-l-darkened)
-	);
-	--color-dark-blue: hsl(
-		var(--color-blue-h),
-		var(--color-blue-s),
-		var(--color-blue-l-darkened)
-	);
-	--color-dark-purple: hsl(
-		var(--color-purple-h),
-		var(--color-purple-s),
-		var(--color-purple-l-darkened)
-	);
-	--color-dark-pink: hsl(
-		var(--color-pink-h),
-		var(--color-pink-s-desaturated),
-		var(--color-pink-l-darkened)
-	);
-	--color-dark-grey: hsl(
-		var(--color-grey-h),
-		var(--color-grey-s),
-		var(--color-grey-l-darkened)
-	);
-	/* #endregion */
+	--color-dark-red: hsl(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened));
+	--color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened));
+	--color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
+	--color-dark-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
+	--color-dark-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
+	--color-dark-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
+	--color-dark-blue: hsl(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened));
+	--color-dark-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened));
+	--color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
+	--color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened));
 
-	/* #region  [Variables LT] Text Colors */
-	--color-text-accent: hsl(
-		var(--color-accent-lt-h),
-		var(--color-accent-lt-s),
-		var(--color-accent-l-darkened-text)
-	);
+	/* Light Theme Text Colors */
+	--color-text-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
 
-	--color-text-red: hsl(
-		var(--color-red-h),
-		var(--color-red-s),
-		var(--color-red-l-darkened-text)
-	);
-	--color-text-orange: hsl(
-		var(--color-orange-h),
-		var(--color-orange-s),
-		var(--color-orange-l-darkened-text)
-	);
-	--color-text-yellow: hsl(
-		var(--color-yellow-h),
-		var(--color-yellow-s-desaturated),
-		var(--color-yellow-l-darkened-text)
-	);
-	--color-text-green: hsl(
-		var(--color-green-h),
-		var(--color-green-s-desaturated),
-		var(--color-green-l-darkened-text)
-	);
-	--color-text-mint: hsl(
-		var(--color-mint-h),
-		var(--color-mint-s-desaturated),
-		var(--color-mint-l-darkened-text)
-	);
-	--color-text-aqua: hsl(
-		var(--color-aqua-h),
-		var(--color-aqua-s-desaturated),
-		var(--color-aqua-l-darkened-text)
-	);
-	--color-text-blue: hsl(
-		var(--color-blue-h),
-		var(--color-blue-s),
-		var(--color-blue-l-darkened-text)
-	);
-	--color-text-purple: hsl(
-		var(--color-purple-h),
-		var(--color-purple-s),
-		var(--color-purple-l-darkened-text)
-	);
-	--color-text-pink: hsl(
-		var(--color-pink-h),
-		var(--color-pink-s-desaturated),
-		var(--color-pink-l-darkened-text)
-	);
-	--color-text-grey: hsl(
-		var(--color-grey-h),
-		var(--color-grey-s),
-		var(--color-grey-l-darkened-text)
-	);
-	/* #endregion */
+	--color-text-red: hsl(var(--color-red-h), var(--color-red-s), var(--color-red-l-darkened-text));
+	--color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l-darkened-text));
+	--color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text));
+	--color-text-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text));
+	--color-text-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text));
+	--color-text-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text));
+	--color-text-blue: hsl(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l-darkened-text));
+	--color-text-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l-darkened-text));
+	--color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text));
+	--color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l-darkened-text));
 
-	/* #region  [Variables LT] Main Obsidian Colors */
+	/* Light Theme Main Obsidian Colors */
 	--text-normal: hsl(0, 0%, 20%);
 	--text-muted: hsl(0, 0%, 40%);
 	--text-faint: hsl(0, 0%, 60%);
@@ -282,13 +111,9 @@
 
 	--drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
 
-	--drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset,
-		hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset,
-		hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-		hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+	--drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset, hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
 
-	--drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-		hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+	--drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
 
 	--scroll-bar-thumb: hsla(0, 0%, 80%, 1);
 
@@ -314,314 +139,107 @@
 	--h4-border-color-custom-lt: hsl(0, 0%, 20%);
 	--h5-border-color-custom-lt: hsl(0, 0%, 20%);
 	--h6-border-color-custom-lt: hsl(0, 0%, 20%);
-	/* #endregion */
 }
+/* #endregion */
 
+/* #region  [Variables] Dark Theme */
 .theme-dark {
 	--highlight-default: var(--color-yellow);
 
-	/* #region  [Variables DT] Color Adjustments */
-	--color-red-s-desaturated: calc(
-		var(--color-red-s) - var(--color-desaturate-dt)
-	);
-	--color-orange-s-desaturated: calc(
-		var(--color-orange-s) - var(--color-desaturate-dt)
-	);
-	--color-yellow-s-desaturated: calc(
-		var(--color-yellow-s) - var(--color-desaturate-dt)
-	);
-	--color-green-s-desaturated: calc(
-		var(--color-green-s) - var(--color-desaturate-dt)
-	);
-	--color-mint-s-desaturated: calc(
-		var(--color-mint-s) - var(--color-desaturate-dt)
-	);
-	--color-aqua-s-desaturated: calc(
-		var(--color-aqua-s) - var(--color-desaturate-dt)
-	);
-	--color-blue-s-desaturated: calc(
-		var(--color-blue-s) - var(--color-desaturate-dt)
-	);
-	--color-purple-s-desaturated: calc(
-		var(--color-purple-s) - var(--color-desaturate-dt)
-	);
-	--color-pink-s-desaturated: calc(
-		var(--color-pink-s) - var(--color-desaturate-dt)
-	);
-	--color-grey-s-desaturated: calc(
-		var(--color-grey-s) - var(--color-desaturate-dt)
-	);
+	/* Dark Theme Color Adjustments */
+	--color-red-s-desaturated: calc(var(--color-red-s) - var(--color-desaturate-dt));
+	--color-orange-s-desaturated: calc(var(--color-orange-s) - var(--color-desaturate-dt));
+	--color-yellow-s-desaturated: calc(var(--color-yellow-s) - var(--color-desaturate-dt));
+	--color-green-s-desaturated: calc(var(--color-green-s) - var(--color-desaturate-dt));
+	--color-mint-s-desaturated: calc(var(--color-mint-s) - var(--color-desaturate-dt));
+	--color-aqua-s-desaturated: calc(var(--color-aqua-s) - var(--color-desaturate-dt));
+	--color-blue-s-desaturated: calc(var(--color-blue-s) - var(--color-desaturate-dt));
+	--color-purple-s-desaturated: calc(var(--color-purple-s) - var(--color-desaturate-dt));
+	--color-pink-s-desaturated: calc(var(--color-pink-s) - var(--color-desaturate-dt));
+	--color-grey-s-desaturated: calc(var(--color-grey-s) - var(--color-desaturate-dt));
 
-	--color-accent-l-darkened: calc(
-		var(--color-accent-dt-l) - var(--color-darken-dt)
-	);
+	--color-accent-l-darkened: calc(var(--color-accent-dt-l) - var(--color-darken-dt));
 
 	--color-red-l-darkened: calc(var(--color-red-l) - var(--color-darken-dt));
-	--color-orange-l-darkened: calc(
-		var(--color-orange-l) - var(--color-darken-dt)
-	);
-	--color-yellow-l-darkened: calc(
-		var(--color-yellow-l) - var(--color-darken-dt)
-	);
+	--color-orange-l-darkened: calc(var(--color-orange-l) - var(--color-darken-dt));
+	--color-yellow-l-darkened: calc(var(--color-yellow-l) - var(--color-darken-dt));
 	--color-green-l-darkened: calc(var(--color-green-l) - var(--color-darken-dt));
 	--color-mint-l-darkened: calc(var(--color-mint-l) - var(--color-darken-dt));
 	--color-aqua-l-darkened: calc(var(--color-aqua-l) - var(--color-darken-dt));
 	--color-blue-l-darkened: calc(var(--color-blue-l) - var(--color-darken-dt));
-	--color-purple-l-darkened: calc(
-		var(--color-purple-l) - var(--color-darken-dt)
-	);
+	--color-purple-l-darkened: calc(var(--color-purple-l) - var(--color-darken-dt));
 	--color-pink-l-darkened: calc(var(--color-pink-l) - var(--color-darken-dt));
 	--color-grey-l-darkened: calc(var(--color-grey-l) - var(--color-darken-dt));
 
-	--color-accent-l-darkened2x: calc(
-		var(--color-accent-dt-l) - var(--color-darken-dt) * 2
-	);
+	--color-accent-l-darkened2x: calc(var(--color-accent-dt-l) - var(--color-darken-dt) * 2);
 
-	--color-red-l-darkened2x: calc(
-		var(--color-red-l) - var(--color-darken-dt) * 2
-	);
-	--color-orange-l-darkened2x: calc(
-		var(--color-orange-l) - var(--color-darken-dt) * 2
-	);
-	--color-yellow-l-darkened2x: calc(
-		var(--color-yellow-l) - var(--color-darken-dt) * 2
-	);
-	--color-green-l-darkened2x: calc(
-		var(--color-green-l) - var(--color-darken-dt) * 2
-	);
-	--color-mint-l-darkened2x: calc(
-		var(--color-mint-l) - var(--color-darken-dt) * 2
-	);
-	--color-aqua-l-darkened2x: calc(
-		var(--color-aqua-l) - var(--color-darken-dt) * 2
-	);
-	--color-blue-l-darkened2x: calc(
-		var(--color-blue-l) - var(--color-darken-dt) * 2
-	);
-	--color-purple-l-darkened2x: calc(
-		var(--color-purple-l) - var(--color-darken-dt) * 2
-	);
-	--color-pink-l-darkened2x: calc(
-		var(--color-pink-l) - var(--color-darken-dt) * 2
-	);
-	--color-grey-l-darkened2x: calc(
-		var(--color-grey-l) - var(--color-darken-dt) * 2
-	);
+	--color-red-l-darkened2x: calc(var(--color-red-l) - var(--color-darken-dt) * 2);
+	--color-orange-l-darkened2x: calc(var(--color-orange-l) - var(--color-darken-dt) * 2);
+	--color-yellow-l-darkened2x: calc(var(--color-yellow-l) - var(--color-darken-dt) * 2);
+	--color-green-l-darkened2x: calc(var(--color-green-l) - var(--color-darken-dt) * 2);
+	--color-mint-l-darkened2x: calc(var(--color-mint-l) - var(--color-darken-dt) * 2);
+	--color-aqua-l-darkened2x: calc(var(--color-aqua-l) - var(--color-darken-dt) * 2);
+	--color-blue-l-darkened2x: calc(var(--color-blue-l) - var(--color-darken-dt) * 2);
+	--color-purple-l-darkened2x: calc(var(--color-purple-l) - var(--color-darken-dt) * 2);
+	--color-pink-l-darkened2x: calc(var(--color-pink-l) - var(--color-darken-dt) * 2);
+	--color-grey-l-darkened2x: calc(var(--color-grey-l) - var(--color-darken-dt) * 2);
 
-	--color-accent-l-darkened-text: calc(
-		var(--color-accent-dt-l) - var(--color-darken-text-dt)
-	);
+	--color-accent-l-darkened-text: calc(var(--color-accent-dt-l) - var(--color-darken-text-dt));
 
-	--color-red-l-darkened-text: calc(
-		var(--color-red-l) - var(--color-darken-text-dt)
-	);
-	--color-orange-l-darkened-text: calc(
-		var(--color-orange-l) - var(--color-darken-text-dt)
-	);
-	--color-yellow-l-darkened-text: calc(
-		var(--color-yellow-l) - var(--color-darken-text-dt)
-	);
-	--color-green-l-darkened-text: calc(
-		var(--color-green-l) - var(--color-darken-text-dt)
-	);
-	--color-mint-l-darkened-text: calc(
-		var(--color-mint-l) - var(--color-darken-text-dt)
-	);
-	--color-aqua-l-darkened-text: calc(
-		var(--color-aqua-l) - var(--color-darken-text-dt)
-	);
-	--color-blue-l-darkened-text: calc(
-		var(--color-blue-l) - var(--color-darken-text-dt)
-	);
-	--color-purple-l-darkened-text: calc(
-		var(--color-purple-l) - var(--color-darken-text-dt)
-	);
-	--color-pink-l-darkened-text: calc(
-		var(--color-pink-l) - var(--color-darken-text-dt)
-	);
-	--color-grey-l-darkened-text: calc(
-		var(--color-grey-l) - var(--color-darken-text-dt)
-	);
-	/* #endregion */
+	--color-red-l-darkened-text: calc(var(--color-red-l) - var(--color-darken-text-dt));
+	--color-orange-l-darkened-text: calc(var(--color-orange-l) - var(--color-darken-text-dt));
+	--color-yellow-l-darkened-text: calc(var(--color-yellow-l) - var(--color-darken-text-dt));
+	--color-green-l-darkened-text: calc(var(--color-green-l) - var(--color-darken-text-dt));
+	--color-mint-l-darkened-text: calc(var(--color-mint-l) - var(--color-darken-text-dt));
+	--color-aqua-l-darkened-text: calc(var(--color-aqua-l) - var(--color-darken-text-dt));
+	--color-blue-l-darkened-text: calc(var(--color-blue-l) - var(--color-darken-text-dt));
+	--color-purple-l-darkened-text: calc(var(--color-purple-l) - var(--color-darken-text-dt));
+	--color-pink-l-darkened-text: calc(var(--color-pink-l) - var(--color-darken-text-dt));
+	--color-grey-l-darkened-text: calc(var(--color-grey-l) - var(--color-darken-text-dt));
 
-	/* #region  [Variables DT] Base Colors */
-	--color-accent: hsl(
-		var(--color-accent-dt-h),
-		var(--color-accent-dt-s),
-		var(--color-accent-dt-l)
-	);
+	/* Dark Theme Base Colors */
+	--color-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l));
 
-	--color-red: hsl(
-		var(--color-red-h),
-		var(--color-red-s-desaturated),
-		var(--color-red-l-darkened)
-	);
-	--color-orange: hsl(
-		var(--color-orange-h),
-		var(--color-orange-s-desaturated),
-		var(--color-orange-l-darkened)
-	);
-	--color-yellow: hsl(
-		var(--color-yellow-h),
-		var(--color-yellow-s-desaturated),
-		var(--color-yellow-l-darkened)
-	);
-	--color-green: hsl(
-		var(--color-green-h),
-		var(--color-green-s-desaturated),
-		var(--color-green-l-darkened)
-	);
-	--color-mint: hsl(
-		var(--color-mint-h),
-		var(--color-mint-s-desaturated),
-		var(--color-mint-l-darkened)
-	);
-	--color-aqua: hsl(
-		var(--color-aqua-h),
-		var(--color-aqua-s-desaturated),
-		var(--color-aqua-l-darkened)
-	);
-	--color-blue: hsl(
-		var(--color-blue-h),
-		var(--color-blue-s-desaturated),
-		var(--color-blue-l-darkened)
-	);
-	--color-purple: hsl(
-		var(--color-purple-h),
-		var(--color-purple-s-desaturated),
-		var(--color-purple-l-darkened)
-	);
-	--color-pink: hsl(
-		var(--color-pink-h),
-		var(--color-pink-s-desaturated),
-		var(--color-pink-l-darkened)
-	);
-	--color-grey: hsl(
-		var(--color-grey-h),
-		var(--color-grey-s-desaturated),
-		var(--color-grey-l-darkened)
-	);
-	/* #endregion */
+	--color-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened));
+	--color-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened));
+	--color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
+	--color-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
+	--color-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
+	--color-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
+	--color-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened));
+	--color-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened));
+	--color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
+	--color-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened));
 
-	/* #region  [Variables DT] Dark Colors */
-	--color-dark-accent: hsl(
-		var(--color-accent-dt-h),
-		var(--color-accent-dt-s),
-		var(--color-accent-l-darkened2x)
-	);
+	/* Dark Theme Dark Colors */
+	--color-dark-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x));
 
-	--color-dark-red: hsl(
-		var(--color-red-h),
-		var(--color-red-s-desaturated),
-		var(--color-red-l-darkened2x)
-	);
-	--color-dark-orange: hsl(
-		var(--color-orange-h),
-		var(--color-orange-s-desaturated),
-		var(--color-orange-l-darkened2x)
-	);
-	--color-dark-yellow: hsl(
-		var(--color-yellow-h),
-		var(--color-yellow-s-desaturated),
-		var(--color-yellow-l-darkened2x)
-	);
-	--color-dark-green: hsl(
-		var(--color-green-h),
-		var(--color-green-s-desaturated),
-		var(--color-green-l-darkened2x)
-	);
-	--color-dark-mint: hsl(
-		var(--color-mint-h),
-		var(--color-mint-s-desaturated),
-		var(--color-mint-l-darkened2x)
-	);
-	--color-dark-aqua: hsl(
-		var(--color-aqua-h),
-		var(--color-aqua-s-desaturated),
-		var(--color-aqua-l-darkened2x)
-	);
-	--color-dark-blue: hsl(
-		var(--color-blue-h),
-		var(--color-blue-s-desaturated),
-		var(--color-blue-l-darkened2x)
-	);
-	--color-dark-purple: hsl(
-		var(--color-purple-h),
-		var(--color-purple-s-desaturated),
-		var(--color-purple-l-darkened2x)
-	);
-	--color-dark-pink: hsl(
-		var(--color-pink-h),
-		var(--color-pink-s-desaturated),
-		var(--color-pink-l-darkened2x)
-	);
-	--color-dark-grey: hsl(
-		var(--color-grey-h),
-		var(--color-grey-s-desaturated),
-		var(--color-grey-l-darkened2x)
-	);
-	/* #endregion */
+	--color-dark-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x));
+	--color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x));
+	--color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x));
+	--color-dark-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x));
+	--color-dark-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x));
+	--color-dark-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x));
+	--color-dark-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x));
+	--color-dark-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x));
+	--color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x));
+	--color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x));
 
-	/* #region  [Variables DT] Text Colors */
-	--color-text-accent: hsl(
-		var(--color-accent-dt-h),
-		var(--color-accent-dt-s),
-		var(--color-accent-l-darkened-text)
-	);
+	/* Dark Theme Text Colors */
+	--color-text-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text));
 
-	--color-text-red: hsl(
-		var(--color-red-h),
-		var(--color-red-s-desaturated),
-		var(--color-red-l-darkened-text)
-	);
-	--color-text-orange: hsl(
-		var(--color-orange-h),
-		var(--color-orange-s-desaturated),
-		var(--color-orange-l-darkened-text)
-	);
-	--color-text-yellow: hsl(
-		var(--color-yellow-h),
-		var(--color-yellow-s-desaturated),
-		var(--color-yellow-l-darkened-text)
-	);
-	--color-text-green: hsl(
-		var(--color-green-h),
-		var(--color-green-s-desaturated),
-		var(--color-green-l-darkened-text)
-	);
-	--color-text-mint: hsl(
-		var(--color-mint-h),
-		var(--color-mint-s-desaturated),
-		var(--color-mint-l-darkened-text)
-	);
-	--color-text-aqua: hsl(
-		var(--color-aqua-h),
-		var(--color-aqua-s-desaturated),
-		var(--color-aqua-l-darkened-text)
-	);
-	--color-text-blue: hsl(
-		var(--color-blue-h),
-		var(--color-blue-s-desaturated),
-		var(--color-blue-l-darkened-text)
-	);
-	--color-text-purple: hsl(
-		var(--color-purple-h),
-		var(--color-purple-s-desaturated),
-		var(--color-purple-l-darkened-text)
-	);
-	--color-text-pink: hsl(
-		var(--color-pink-h),
-		var(--color-pink-s-desaturated),
-		var(--color-pink-l-darkened-text)
-	);
-	--color-text-grey: hsl(
-		var(--color-grey-h),
-		var(--color-grey-s-desaturated),
-		var(--color-grey-l-darkened-text)
-	);
-	/* #endregion */
+	--color-text-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened-text));
+	--color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened-text));
+	--color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened-text));
+	--color-text-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened-text));
+	--color-text-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened-text));
+	--color-text-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened-text));
+	--color-text-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened-text));
+	--color-text-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened-text));
+	--color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened-text));
+	--color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened-text));
 
-	/* #region  [Variables DT] Main Obsidian Colors */
+	/* Dark Theme Main Obsidian Colors */
 	--text-normal: hsl(0, 0%, 85%);
 	--text-muted: hsl(0, 0%, 65%);
 	--text-faint: hsl(0, 0%, 45%);
@@ -649,13 +267,9 @@
 
 	--drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
 
-	--drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset,
-		hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset,
-		hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-		hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+	--drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset, hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
 
-	--drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px,
-		hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+	--drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
 
 	--scroll-bar-thumb: hsl(0, 0%, 32%);
 
@@ -681,5 +295,5 @@
 	--h4-border-color-custom-dt: hsla(0, 0%, 20%, 1);
 	--h5-border-color-custom-dt: hsla(0, 0%, 20%, 1);
 	--h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-	/* #endregion */
 }
+/* #endregion */

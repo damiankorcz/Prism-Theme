@@ -1,67 +1,67 @@
-/*  Suggestion popup
-    ========================================================================== */ 
-    .suggestion-container.mod-search-suggestion {
-        padding: 8px;
-        max-width: calc(100% - 20px);
-    }
+/* #region  [UI] Suggestion Popup */
+.suggestion-container.mod-search-suggestion {
+	padding: 8px;
+	max-width: calc(100% - 20px);
+}
 
-    /* Reset the display to flex for search suggestions since the one used for Slash commands doesn't have a specific class to point at so needs to be generic */
-    .suggestion-container.mod-search-suggestion .suggestion-item.search-suggest-item {
-        display: block;
-        padding-right: unset;
-        margin: unset;
-    }
+/* Reset the display to flex for search suggestions since the one used for Slash commands doesn't have a specific class to point at so needs to be generic */
+.suggestion-container.mod-search-suggestion .suggestion-item.search-suggest-item {
+	display: block;
+	padding-right: unset;
+	margin: unset;
+}
 
-    .suggestion-container.mod-search-suggestion .suggestion-item.search-suggest-item.list-item {
-        display: flex;
-    }
+.suggestion-container.mod-search-suggestion .suggestion-item.search-suggest-item.list-item {
+	display: flex;
+}
 
-    .suggestion-container {
-        background: var(--background-secondary-blur);
-        border: 1px solid var(--background-secondary);
-        backdrop-filter: blur(var(--blur-intensity));
-        -webkit-backdrop-filter: blur(var(--blur-intensity));
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: 2px;
-    }
+.suggestion-container {
+	background: var(--background-secondary-blur);
+	border: 1px solid var(--background-secondary);
+	backdrop-filter: blur(var(--blur-intensity));
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	padding: 2px;
+}
 
-    .suggestion-container .suggestion-prefix {
-        font-weight: 600;
-    }
+.suggestion-container .suggestion-prefix {
+	font-weight: 600;
+}
 
-    .suggestion-item.is-selected {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-        border-radius: var(--border-radius-small);
-        font-weight: 600;
-    }
+.suggestion-item.is-selected {
+	color: var(--interactive-accent-text);
+	background-color: var(--background-primary);
+	border-radius: var(--border-radius-small);
+	font-weight: 600;
+}
 
-    .suggestion-item.is-selected .suggestion-hotkey{
-        background-color: var(--background-secondary);
-    }
+.suggestion-item.is-selected .suggestion-hotkey {
+	background-color: var(--background-secondary);
+}
 
-    .search-input-clear-button {
-        top: 4px;
-    }
+.search-input-clear-button {
+	top: 4px;
+}
 
-    .search-suggest-item:hover {
-        background-color: var(--background-primary);
-    }
+.search-suggest-item:hover {
+	background-color: var(--background-primary);
+}
 
-    .list-item-part .search-suggest-icon .clickable-icon {
-        margin: 0px;
-    }
+.list-item-part .search-suggest-icon .clickable-icon {
+	margin: 0px;
+}
 
-    .suggestion-container .clickable-icon {
-        margin: 0px;
-    }
+.suggestion-container .clickable-icon {
+	margin: 0px;
+}
 
-    .search-suggest-item.mod-group {
-        padding: 10px;
-    }
+.search-suggest-item.mod-group {
+	padding: 10px;
+}
 
-    .suggestion-container.mod-search-suggestion .search-suggest-item.mod-group:not(:first-child) {
-        border-top: var(--border-size) solid var(--table-border-color);
-        margin-top: 10px;
-    }
+.suggestion-container.mod-search-suggestion .search-suggest-item.mod-group:not(:first-child) {
+	border-top: var(--border-size) solid var(--table-border-color);
+	margin-top: 10px;
+}
+/* #endregion */

@@ -1,30 +1,30 @@
-/*  Menu popup
-    ========================================================================== */ 
-    .menu {
-        background: var(--background-secondary-blur);
-        border: 1px solid var(--table-border-color);
-        backdrop-filter: blur(var(--blur-intensity));
-        -webkit-backdrop-filter: blur(var(--blur-intensity));
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        /* font-weight: 600; */
-    }
+/* #region  [UI] Menu Popup */
+.menu {
+	background: var(--background-secondary-blur);
+	border: 1px solid var(--table-border-color);
+	backdrop-filter: blur(var(--blur-intensity));
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	/* font-weight: 600; */
+}
 
-    .menu-separator {
-        border-bottom-color: var(--table-border-color);
-    }
+.menu-separator {
+	border-bottom-color: var(--table-border-color);
+}
 
-    .theme-dark .menu,
-    .theme-dark .menu-item-icon  {
-        color: var(--text-normal);
-    }
+.theme-dark .menu,
+.theme-dark .menu-item-icon {
+	color: var(--text-normal);
+}
 
-    .menu-item.selected:not(.is-disabled):not(.is-label) {
-        background-color: var(--background-primary);
-        font-weight: 600;
-    }
+.menu-item.selected:not(.is-disabled):not(.is-label) {
+	background-color: var(--background-primary);
+	font-weight: 600;
+}
 
-    .menu-item:hover:not(.is-disabled):not(.is-label),
-    .menu-item:hover:not(.is-disabled):not(.is-label) .menu-item-icon {
-        color: var(--interactive-accent-text);
-    }
+.menu-item:hover:not(.is-disabled):not(.is-label),
+.menu-item:hover:not(.is-disabled):not(.is-label) .menu-item-icon {
+	color: var(--interactive-accent-text);
+}
+/* #endregion */

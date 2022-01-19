@@ -1,95 +1,31 @@
-/*  ==========================================================================
-    Text Selection
-    ========================================================================== */
+/* #region  [Editor] Text Selection */
+.theme-light body ::selection,
+.theme-light div.view-header-title::selection {
+	background-color: var(--text-selection);
+	color: var(--highlight-text-normal);
+}
 
-    .theme-light body ::selection,
-    .theme-light div.view-header-title::selection {
-        background-color: var(--text-selection);
-        color: var(--highlight-text-normal);
-    }
+.theme-dark body ::selection,
+.theme-dark div.view-header-title::selection {
+	background-color: var(--text-selection);
+	color: var(--text-normal);
+}
 
-    .theme-dark body ::selection,
-    .theme-dark div.view-header-title::selection {
-        background-color: var(--text-selection);
-        color: var(--text-normal);
-    }
+mark::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+	color: var(--text-normal);
+}
 
-    mark::selection,
-    h1::selection,
-    h2::selection,
-    h3::selection,
-    h4::selection,
-    h5::selection,
-    h6::selection {
-        color: var(--text-normal);
-    }
-
-    a {
-        color: var(--interactive-accent-text);
-    }
-
-    a:hover {
-        color: var(--interactive-accent-hover);
-    }
-
-    .is-flashing,
-    .is-flashing *,
-    .cm-s-obsidian span.obsidian-search-match-highlight {
-        border-radius: var(--border-radius-small);
-        background-color: var(--interactive-accent);
-        color: var(--highlight-text-normal);
-    }
-
-    .theme-light .token.property,
-    .theme-light .token.tag,
-    .theme-light .token.constant,
-    .theme-light .token.symbol,
-    .theme-light .token.deleted,
-    .theme-light .cm-tag,
-    .theme-dark .token.property,
-    .theme-dark .token.tag,
-    .theme-dark .token.constant,
-    .theme-dark .token.symbol,
-    .theme-dark .token.deleted,
-    .theme-dark .cm-tag {
-        color: var(--color-text-pink);
-    }
-
-    .theme-light .token.selector,
-    .theme-light .token.attr-name,
-    .theme-light .token.string,
-    .theme-light .token.char,
-    .theme-light .token.builtin,
-    .theme-light .token.inserted,
-    .theme-light .cm-attribute,
-    .theme-dark .token.selector,
-    .theme-dark .token.attr-name,
-    .theme-dark .token.string,
-    .theme-dark .token.char,
-    .theme-dark .token.builtin,
-    .theme-dark .token.inserted,
-    .theme-dark .cm-attribute {
-        color: var(--color-text-green);
-    }
-
-    .theme-light .token.operator,
-    .theme-light .token.entity,
-    .theme-light .token.url,
-    .theme-light .language-css .token.string,
-    .theme-light .style .token.string,
-    .theme-light .cm-operator,
-    .theme-light .cm-string,
-    .theme-light .cm-string-2,
-    .theme-light .cm-link,
-    .theme-dark .token.operator,
-    .theme-dark .token.entity,
-    .theme-dark .token.url,
-    .theme-dark .language-css .token.string,
-    .theme-dark .style .token.string,
-    .theme-dark .cm-operator,
-    .theme-dark .cm-string,
-    .theme-dark .cm-string-2,
-    .theme-dark .cm-link {
-        color: var(--color-text-orange);
-        background: none;
-    }
+.is-flashing,
+.is-flashing *,
+.cm-s-obsidian span.obsidian-search-match-highlight {
+	border-radius: var(--border-radius-small);
+	background-color: var(--interactive-accent);
+	color: var(--highlight-text-normal);
+}
+/* #endregion */

@@ -1,27 +1,25 @@
-/*  ==========================================================================
-    Startup Progress Bar Screen
-    ========================================================================== */
+/* #region  [UI] Startup */
+.progress-bar {
+	background-color: var(--background-secondary-blur);
+	backdrop-filter: blur(var(--blur-intensity));
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+}
 
-    .progress-bar {
-        background-color: var(--background-secondary-blur);
-        backdrop-filter: blur(var(--blur-intensity));
-        -webkit-backdrop-filter: blur(var(--blur-intensity));
-    }
+.progress-bar .progress-bar-message {
+	color: var(--text-normal);
+}
 
-    .progress-bar .progress-bar-message {
-        color: var(--text-normal);
-    }
+.progress-bar-indicator .progress-bar-line {
+	position: absolute;
+	opacity: 0.4;
+	background-color: var(--interactive-accent);
+	width: 150%;
+	height: 8px;
+}
 
-    .progress-bar-indicator .progress-bar-line {
-        position: absolute;
-        opacity: 0.4;
-        background-color: var(--interactive-accent);
-        width: 150%;
-        height: 8px;
-    }
-
-    .progress-bar-indicator .progress-bar-subline {
-        position: absolute;
-        background-color: var(--interactive-accent);
-        height: 8px;
-    }
+.progress-bar-indicator .progress-bar-subline {
+	position: absolute;
+	background-color: var(--interactive-accent);
+	height: 8px;
+}
+/* #endregion */

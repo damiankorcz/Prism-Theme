@@ -1,77 +1,76 @@
-/*  ==========================================================================
-    Tags Pane
-    ========================================================================== */
+/* #region  [Plugin - Core] Tags */
+.workspace-leaf-content[data-type="tag"] {
+	.tree-item-self {
+		border-radius: var(--border-radius-small);
+		border: var(--border-size) solid transparent;
+		color: var(--text-normal);
+		width: 100%;
+		padding: 0px 5px 0px 10px;
+		background: var(--background-primary);
+		box-shadow: var(--drop-shadow);
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-self {
-        border-radius: var(--border-radius-small);
-        border: var(--border-size) solid transparent;
-        color: var(--text-normal);
-        width: 100%;
-        padding: 0px 5px 0px 10px;
-        background: var(--background-primary);
-        box-shadow: var(--drop-shadow);
-    }
+		.tree-item-inner {
+			padding-right: 5px;
+		}
 
-    .workspace-leaf-content[data-type='tag'] .tree-item-self .tree-item-inner {
-        padding-right: 5px;
-    }
+		.tree-item-icon {
+			margin-left: -12px;
+			padding: 8px 10px;
+			color: var(--text-muted);
 
-    .workspace-leaf-content[data-type="tag"] .tree-item:not(:last-child) {
-        margin-bottom: 8px;
-    }
+			&::after {
+				display: none;
+			}
+		}
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-self.is-clickable:hover {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-        border: var(--border-size) solid var(--background-primary);
-        font-weight: 600;
-        box-shadow: var(--drop-shadow);
-    }
+		&.is-clickable:hover {
+			color: var(--interactive-accent-text);
+			background-color: var(--background-primary);
+			border: var(--border-size) solid var(--background-primary);
+			font-weight: 600;
+			box-shadow: var(--drop-shadow);
+		}
+	}
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-self .tree-item-icon {
-        margin-left: -12px;
-        padding: 8px 10px;
-        color: var(--text-muted);
-    }
+	.tree-item:not(:last-child) {
+		margin-bottom: 8px;
+	}
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-self .tree-item-icon::after {
-        display: none;
-    }
+	.tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
+	.tree-item-self.is-clickable .tree-item-icon:hover {
+		color: var(--interactive-accent-hover);
+	}
 
+	.tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
+		color: var(--interactive-accent-text);
+	}
 
-    .workspace-leaf-content[data-type="tag"] .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover ,
-    .workspace-leaf-content[data-type="tag"] .tree-item-self.is-clickable .tree-item-icon:hover  {
-        color: var(--interactive-accent-hover);
-    }
+	.tree-item-children {
+		margin-left: 16px;
 
-    .workspace-leaf-content[data-type="tag"] .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon  {
-        color: var(--interactive-accent-text);
-    }
+		.tree-item {
+			margin-top: 8px;
+		}
+	}
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-children {
-        margin-left: 16px;
-    }
+	.tree-item-flair {
+		border: var(--border-size) solid transparent;
+	}
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-children .tree-item {
-        margin-top: 8px;
-    }
+	.tag-container {
+		padding: 0px 10px 0px 0px;
 
-    .workspace-leaf-content[data-type="tag"] .tree-item-flair {
-        border: var(--border-size) solid transparent;
-    }
+		> div:first-of-type {
+			padding: 8px;
+			border: none;
+			background-color: var(--background-secondary);
+			border-radius: var(--border-radius);
+			box-shadow: var(--drop-shadow);
+		}
+	}
 
-    .workspace-leaf-content[data-type="tag"] .tag-container > div:first-of-type {
-        padding: 8px;
-        border: none;
-        background-color: var(--background-secondary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-    }
-
-    .workspace-leaf-content[data-type="tag"] .tag-container {
-        padding: 0px 10px 0px 0px;
-    }
-
-    .workspace-leaf-content[data-type="tag"] .tag-pane-tag-text {
-        font-weight: 600;
-    }
+	.tag-pane-tag-text {
+		font-weight: 600;
+	}
+}
+/* #endregion */

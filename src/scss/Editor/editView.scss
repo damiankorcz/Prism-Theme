@@ -1,196 +1,207 @@
-/*  ==========================================================================
-    Edit View
-    ========================================================================== */
+/*
+  ==========================================================================
+  Editor
+  ==========================================================================
+*/
 
-    .cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
-        font-weight: 600;
-    }
+/* #region  [Editor] Edit Base */
+.cm-s-obsidian .cm-header,
+.cm-s-obsidian .cm-strong {
+	font-weight: 600;
+}
 
-    .cm-s-obsidian span.cm-builtin,
-    .cm-s-obsidian span.cm-hr {
-        color: var(--table-border-color);
-        font-weight: 600;
-    }
+.cm-s-obsidian span.cm-builtin,
+.cm-s-obsidian span.cm-hr {
+	color: var(--table-border-color);
+	font-weight: 600;
+}
 
-    .HyperMD-codeblock.HyperMD-codeblock-begin,
-    .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-        border-top-left-radius: var(--border-radius-small);
-        border-top-right-radius: var(--border-radius-small);
-        border-top: 2px solid var(--table-border-color);
-    }
+.HyperMD-codeblock.HyperMD-codeblock-begin,
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+	border-top-left-radius: var(--border-radius-small);
+	border-top-right-radius: var(--border-radius-small);
+	border-top: 2px solid var(--table-border-color);
+}
 
-    .cm-s-obsidian .HyperMD-codeblock,
-    .cm-s-obsidian div.HyperMD-codeblock {
-        border-left: 2px solid var(--table-border-color);
-        border-right: 2px solid var(--table-border-color);
-    }
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian div.HyperMD-codeblock {
+	border-left: 2px solid var(--table-border-color);
+	border-right: 2px solid var(--table-border-color);
+}
 
-    .HyperMD-codeblock.HyperMD-codeblock-end,
-    .cm-s-obsidian div.HyperMD-codeblock-end-bg {
-        border-bottom-left-radius: var(--border-radius-small);
-        border-bottom-right-radius: var(--border-radius-small);
-        border-bottom: 2px solid var(--table-border-color);
-    }
+.HyperMD-codeblock.HyperMD-codeblock-end,
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+	border-bottom-left-radius: var(--border-radius-small);
+	border-bottom-right-radius: var(--border-radius-small);
+	border-bottom: 2px solid var(--table-border-color);
+}
 
-    .CodeMirror-foldgutter-open::after {
-        color: var(--interactive-accent-text);
-    }
+.CodeMirror-foldgutter-open::after {
+	color: var(--interactive-accent-text);
+}
 
-    .CodeMirror-foldgutter-open:hover::after {
-        color: var(--interactive-accent-hover);
-    }
+.CodeMirror-foldgutter-open:hover::after {
+	color: var(--interactive-accent-hover);
+}
 
-    .CodeMirror-gutter-elt:hover .CodeMirror-guttermarker-subtle {
-        color: var(--interactive-accent-hover);
-    }
+.CodeMirror-gutter-elt:hover .CodeMirror-guttermarker-subtle {
+	color: var(--interactive-accent-hover);
+}
 
-    .CodeMirror-foldmarker {
-        color: var(--interactive-accent-text);
-    }
+.CodeMirror-foldmarker {
+	color: var(--interactive-accent-text);
+}
 
-    .CodeMirror-foldmarker:hover {
-        color: var(--interactive-accent-hover);
-    }
-    
-    /* Centers vertically the gutter elements (line number and collapse icon) with the text next to it */
-    .CodeMirror-gutter-wrapper {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        width: -webkit-fill-available;
-        height: -webkit-fill-available;
-    }
+.CodeMirror-foldmarker:hover {
+	color: var(--interactive-accent-hover);
+}
 
+/* Centers vertically the gutter elements (line number and collapse icon) with the text next to it */
+.CodeMirror-gutter-wrapper {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	width: -webkit-fill-available;
+	height: -webkit-fill-available;
+}
 
-    /* Gutter adjustment for New Editor modes */
-    .markdown-source-view.mod-cm6 .cm-gutters {
-        background-color: var(--page-background-color) !important;
-        padding-right: 5px;
-    }
+/* Gutter adjustment for New Editor modes */
+.markdown-source-view.mod-cm6 .cm-gutters {
+	background-color: var(--page-background-color) !important;
+	padding-right: 5px;
+}
 
-    .cm-gutter div.cm-gutterElement {
-        display: flex;
-        align-content: center;
-        align-items: center;
-        justify-content: flex-end;
-        min-width: -webkit-fill-available;
-    }
+.cm-gutter div.cm-gutterElement {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: flex-end;
+	min-width: -webkit-fill-available;
+}
 
-    .markdown-source-view.mod-cm6 .cm-scroller {
-        padding: 10px;
-    }
+.markdown-source-view.mod-cm6 .cm-scroller {
+	padding: 10px;
+}
+/* #endregion */
 
-
-    /*  Light Theme Edit
-        ========================================================================== */ 
-
-        .theme-light .cm-s-obsidian span.cm-hmd-escape-backslash {
+/* #region  [Editor] Edit LT */
+.theme-light {
+    .cm-s-obsidian {
+        span.cm-hmd-escape-backslash {
             color: var(--color-text-red);
         }
         
-        .theme-light .cm-s-obsidian .cm-inline-code,
-        .theme-light .cm-s-obsidian .cm-math {
+        .cm-inline-code,
+        .cm-math {
             color: var(--color-text-red);
         }
         
-        .theme-light .cm-s-obsidian .HyperMD-codeblock {
+        .HyperMD-codeblock {
             color: var(--interactive-accent-text);
         }
-
-        .theme-light .cm-s-obsidian div.HyperMD-codeblock-bg {
+        
+        div.HyperMD-codeblock-bg {
             background-color: var(--background-primary);
         }
         
-        .theme-light .cm-s-obsidian span.cm-inline-code,
-        .theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+        span.cm-inline-code,
+        span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
             color: var(--color-text-red);
             background-color: var(--background-primary);
         }
-
-        .theme-light .cm-s-obsidian span.cm-footref,
-        .theme-light .cm-s-obsidian span.cm-blockid,
-        .theme-light .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
+        
+        span.cm-footref,
+        span.cm-blockid,
+        .HyperMD-footnote span.cm-hmd-footnote {
             color: var(--color-text-grey);
         }
-
-        .theme-light .cm-s-obsidian .CodeMirror-linenumber,
+        
+        .CodeMirror-linenumber,
         .theme-light .CodeMirror-guttermarker-subtle {
             color: var(--color-text-grey);
         }
-
-        .theme-light .cm-s-obsidian span.cm-formatting-highlight,
-        .theme-light .cm-s-obsidian span.cm-highlight {
+        
+        span.cm-formatting-highlight,
+        span.cm-highlight {
             font-weight: 600;
             font-size: 0.9em;
             background-color: var(--color-yellow);
             color: var(--highlight-text-normal);
         }
-
-        .theme-light .cm-s-obsidian span.cm-formatting-highlight:first-of-type,
-        .theme-light .cm-s-obsidian span.cm-highlight:first-of-type {
+        
+        span.cm-formatting-highlight:first-of-type,
+        span.cm-highlight:first-of-type {
             border-top-left-radius: var(--border-radius-small);
             border-bottom-left-radius: var(--border-radius-small);
         }
-
-        .theme-light .cm-s-obsidian span.cm-formatting-highlight:last-of-type,
-        .theme-light .cm-s-obsidian span.cm-highlight:last-of-type {
+        
+        span.cm-formatting-highlight:last-of-type,
+        span.cm-highlight:last-of-type {
             border-top-right-radius: var(--border-radius-small);
             border-bottom-right-radius: var(--border-radius-small);
         }
+    }
+}
 
+/* #endregion */
 
-    /*  Dark Theme Edit
-        ========================================================================== */ 
-        
-        .theme-dark .cm-s-obsidian span.cm-hmd-escape-backslash {
+/* #region  [Editor] Edit DT */
+
+.theme-dark {
+    .cm-s-obsidian {
+        span.cm-hmd-escape-backslash {
             color: var(--color-text-red);
         }
         
-        .theme-dark .cm-s-obsidian .cm-inline-code,
-        .theme-dark .cm-s-obsidian .cm-math {
+        .cm-inline-code,
+        .cm-math {
             color: var(--color-text-red);
         }
-    
-        .theme-dark .cm-s-obsidian .HyperMD-codeblock {
+        
+        .HyperMD-codeblock {
             color: var(--interactive-accent-text);
         }
-
-        .theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg {
+        
+        div.HyperMD-codeblock-bg {
             background-color: var(--background-secondary-alt);
         }
-
-        .theme-dark .cm-s-obsidian span.cm-inline-code,
-        .theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+        
+        span.cm-inline-code,
+        span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
             color: var(--color-text-red);
             background-color: var(--background-secondary);
         }
-
-        .theme-dark .cm-s-obsidian span.cm-footref,
-        .theme-dark .cm-s-obsidian span.cm-blockid,
-        .theme-dark .cm-s-obsidian .HyperMD-footnote span.cm-hmd-footnote {
+        
+        span.cm-footref,
+        span.cm-blockid,
+        .HyperMD-footnote span.cm-hmd-footnote {
             color: var(--color-text-grey);
         }
-
-        .theme-dark .cm-s-obsidian .CodeMirror-linenumber,
-        .theme-dark .CodeMirror-guttermarker-subtle  {
+        
+        .CodeMirror-linenumber,
+        .CodeMirror-guttermarker-subtle {
             color: var(--text-faint);
         }
-
-        .theme-dark .cm-s-obsidian span.cm-formatting-highlight,
-        .theme-dark .cm-s-obsidian span.cm-highlight {
+        
+        span.cm-formatting-highlight,
+        span.cm-highlight {
             font-weight: 600;
             background-color: var(--color-text-yellow);
             color: var(--highlight-text-normal);
         }
-
-        .theme-dark .cm-s-obsidian span.cm-formatting-highlight:first-of-type,
-        .theme-dark .cm-s-obsidian span.cm-highlight:first-of-type {
+        
+        span.cm-formatting-highlight:first-of-type,
+        span.cm-highlight:first-of-type {
             border-top-left-radius: var(--border-radius-small);
             border-bottom-left-radius: var(--border-radius-small);
         }
-
-        .theme-dark .cm-s-obsidian span.cm-formatting-highlight:last-of-type,
-        .theme-dark .cm-s-obsidian span.cm-highlight:last-of-type {
+        
+        span.cm-formatting-highlight:last-of-type,
+        span.cm-highlight:last-of-type {
             border-top-right-radius: var(--border-radius-small);
             border-bottom-right-radius: var(--border-radius-small);
         }
+    }
+}
+
+/* #endregion */

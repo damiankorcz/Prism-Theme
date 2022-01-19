@@ -1,78 +1,76 @@
-/*  ==========================================================================
-    Slash Commands
-    ========================================================================== */
-    
-    .suggestion-container {
-        max-width: 700px;
-        padding: 8px;
-        border: 1px solid var(--table-border-color);
-    }
+/* #region  [Plugin - Core] Slash Commands */
+.suggestion-container {
+	max-width: 700px;
+	padding: 8px;
+	border: 1px solid var(--table-border-color);
+}
 
-    .suggestion {
-        padding-right: 8px;
-    }
+.suggestion {
+	padding-right: 8px;
+}
 
-    .suggestion-container kbd {
-        letter-spacing: 0.05em;
-    }
+.suggestion-container kbd {
+	letter-spacing: 0.05em;
+}
 
-    .suggestion-container .suggestion .suggestion-item {
-        display: flow-root;
-    }
+.suggestion-container .suggestion .suggestion-item {
+	display: flow-root;
+}
 
-    .suggestion-content {
-        word-wrap: break-word;
-        line-height: 28px;
-        padding-right: 10px;
-    }
+.suggestion-content {
+	word-wrap: break-word;
+	line-height: 28px;
+	padding-right: 10px;
+}
 
-    .suggestion-item {
-        padding: 5px 10px;
-        /* margin-right: 8px; */
-    }
+.suggestion-item {
+	padding: 5px 10px;
+	/* margin-right: 8px; */
 
-    .suggestion-item .suggestion-flair {
-        color: var(--interactive-accent-text);
-        display: inline-flex;
-        position: relative;
-        left: unset;
-        top: unset;
-    }
+	.suggestion-flair {
+		color: var(--interactive-accent-text);
+		display: inline-flex;
+		position: relative;
+		left: unset;
+		top: unset;
+	}
 
-    .suggestion-item .suggestion-flair:first-child {
-        padding: 0px 5px;
-        margin-right: 8px;
-        font-weight: 600;
-        font-size: .75rem;
-        background-color: var(--background-primary);
-        border-radius: var(--border-radius-small);
-    }
+	.suggestion-flair:first-child {
+		padding: 0px 5px;
+		margin-right: 8px;
+		font-weight: 600;
+		font-size: 0.75rem;
+		background-color: var(--background-primary);
+		border-radius: var(--border-radius-small);
+	}
 
-    .suggestion-item:hover .suggestion-flair:first-child {
-        background-color: var(--background-secondary);
-    }
+	&:hover .suggestion-flair:first-child {
+		background-color: var(--background-secondary);
+	}
 
-    .suggestion-item .suggestion-flair svg {
-        margin: 0 auto;
-        display: block;
-    }
+	.suggestion-flair svg {
+		margin: 0 auto;
+		display: block;
+	}
 
-    .suggestion-item .suggestion-prefix {
-        border-radius: var(--border-radius-small);
-        background-color: var(--background-primary);
-        margin-right: 5px;
-        padding: 2px 5px;
-        font-size: 12px;
-    }
+	.suggestion-prefix {
+		border-radius: var(--border-radius-small);
+		background-color: var(--background-primary);
+		margin-right: 5px;
+		padding: 2px 5px;
+		font-size: 12px;
+	}
 
-    .suggestion-item:hover .suggestion-prefix {
-        background-color: var(--background-secondary);
-    }
+	&:hover .suggestion-prefix {
+		background-color: var(--background-secondary);
+	}
 
-    .suggestion-item .suggestion-prefix::after {
-        display: none;
-    }
+	.suggestion-prefix::after {
+		display: none;
+	}
+}
 
-    /* .modal-container .prompt-results .suggestion-item span.suggestion-flair {
+/* .modal-container .prompt-results .suggestion-item span.suggestion-flair {
         padding-left: 34px;
     } */
+/* #endregion */

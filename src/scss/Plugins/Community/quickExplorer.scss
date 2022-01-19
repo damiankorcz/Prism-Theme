@@ -1,53 +1,51 @@
-/*  ==========================================================================
-    Quick Explorer Plugin
-    ========================================================================== */
+/* #region  [Plugin - Community] Quick Explorer */
+div#quick-explorer {
+	display: flex;
+	align-items: center;
+	line-height: normal;
+	opacity: 1;
 
-    div#quick-explorer {
-        display: flex;
-        align-items: center;
-        line-height: normal;
-        opacity: 1;
-    }
+	.explorable {
+		opacity: 1;
+		padding: 0px 1px;
+		border-radius: var(--border-radius-small);
 
-    div#quick-explorer .explorable {
-        opacity: 1;
-        padding: 0px 1px;
-        border-radius: var(--border-radius-small);
-    }
+		&.selected,
+		&:hover {
+			color: var(--interactive-accent-text);
+			background-color: var(--background-primary);
+		}
+	}
+}
 
-    .titlebar-button-container.mod-right .titlebar-button {
-        opacity: 1;
-    }
+div.qe-popup-menu {
+	top: 30px !important;
 
-    div.qe-popup-menu {
-        top: 30px !important;
-    }
+	.pt-windows-titlebar & {
+		top: 38px !important;
+	}
+	.menu-item:not(.is-disabled):not(.is-label) {
+		&.selected {
+			color: var(--interactive-accent-text);
+			background-color: var(--background-primary);
+		}
 
-    .pt-windows-titlebar div.qe-popup-menu {
-        top: 38px !important;
-    }
+		&:hover .nav-file-tag {
+			color: var(--interactive-accent-text);
+			background-color: var(--background-secondary);
+			border: 2px solid transparent;
+		}
 
-    div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
+		.nav-file-tag {
+			color: var(--text-primary);
+			background-color: var(--background-primary);
+			border-radius: var(--border-radius-small);
+			border: 2px solid transparent;
+		}
+	}
+}
 
-    .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label) .nav-file-tag {
-        color: var(--text-primary);
-        background-color: var(--background-primary);
-        border-radius: var(--border-radius-small);
-        border: 2px solid transparent;
-    }
-
-    .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .nav-file-tag {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-secondary);
-        border: 2px solid transparent;
-    }
-
-
-    div#quick-explorer .explorable.selected,
-    div#quick-explorer .explorable:hover {
-        color: var(--interactive-accent-text);
-        background-color: var(--background-primary);
-    }
+.titlebar-button-container.mod-right .titlebar-button {
+	opacity: 1;
+}
+/* #endregion */
