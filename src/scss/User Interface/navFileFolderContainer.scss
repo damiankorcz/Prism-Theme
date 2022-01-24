@@ -46,10 +46,16 @@
 	border-radius: 0px;
 }
 
+.nav-file-title-content:not(.is-being-renamed),
+.nav-folder-title-content:not(.is-being-renamed) {
+	// overflow: hidden;
+	// text-overflow: ellipsis;
+}
+
 .nav-file-title-content,
 .nav-folder-title-content {
-	overflow: hidden;
-	text-overflow: ellipsis;
+	word-wrap: break-word;
+	white-space: pre-wrap;
 }
 
 .nav-file-title.is-active {
