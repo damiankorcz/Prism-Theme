@@ -5144,8 +5144,24 @@ div.notice-container div.notice {
 
 /* Gutter adjustment for New Editor modes */
 .markdown-source-view.mod-cm6 .cm-gutters {
-  background-color: var(--page-background-color) !important;
-  padding-right: 5px;
+  padding-right: unset;
+  margin-right: 5px;
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator:not(.is-collapsed) .collapse-indicator {
+  color: var(--interactive-accent-text);
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder:hover {
+  color: var(--interactive-accent-hover);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-fold-indicator .collapse-indicator {
+  padding-right: 11px;
 }
 
 .cm-gutter div.cm-gutterElement {
@@ -5170,7 +5186,7 @@ div.notice-container div.notice {
   color: var(--color-text-red);
 }
 .theme-light .cm-s-obsidian .HyperMD-codeblock {
-  color: var(--interactive-accent-text);
+  color: var(--color-text-grey);
 }
 .theme-light .cm-s-obsidian div.HyperMD-codeblock-bg {
   background-color: var(--background-primary);
@@ -5206,6 +5222,10 @@ div.notice-container div.notice {
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
 }
+.theme-light .cm-s-obsidian span.cm-link,
+.theme-light .cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--interactive-accent-text);
+}
 
 /* #endregion */
 /* #region  [Editor] Edit DT */
@@ -5217,7 +5237,7 @@ div.notice-container div.notice {
   color: var(--color-text-red);
 }
 .theme-dark .cm-s-obsidian .HyperMD-codeblock {
-  color: var(--interactive-accent-text);
+  color: var(--color-text-grey);
 }
 .theme-dark .cm-s-obsidian div.HyperMD-codeblock-bg {
   background-color: var(--background-secondary-alt);
@@ -5225,7 +5245,7 @@ div.notice-container div.notice {
 .theme-dark .cm-s-obsidian span.cm-inline-code,
 .theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--color-text-red);
-  background-color: var(--background-secondary);
+  background-color: var(--background-secondary-alt);
 }
 .theme-dark .cm-s-obsidian span.cm-footref,
 .theme-dark .cm-s-obsidian span.cm-blockid,
@@ -5251,6 +5271,10 @@ div.notice-container div.notice {
 .theme-dark .cm-s-obsidian span.cm-highlight:last-of-type {
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
+}
+.theme-dark .cm-s-obsidian span.cm-link,
+.theme-dark .cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--interactive-accent-text);
 }
 
 /* #endregion */

@@ -67,8 +67,25 @@
 
 /* Gutter adjustment for New Editor modes */
 .markdown-source-view.mod-cm6 .cm-gutters {
-	background-color: var(--page-background-color) !important;
-	padding-right: 5px;
+	// background-color: var(--page-background-color) !important;
+	padding-right: unset;
+	margin-right: 5px;
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator:not(.is-collapsed) .collapse-indicator {
+	color: var(--interactive-accent-text);
+}
+
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator:hover {
+	color: var(--interactive-accent-hover);
+}
+
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder:hover {
+	color: var(--interactive-accent-hover);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-fold-indicator .collapse-indicator {
+	padding-right: 11px;
 }
 
 .cm-gutter div.cm-gutterElement {
@@ -97,7 +114,7 @@
 		}
 
 		.HyperMD-codeblock {
-			color: var(--interactive-accent-text);
+			color: var(--color-text-grey);
 		}
 
 		div.HyperMD-codeblock-bg {
@@ -140,6 +157,11 @@
 			border-top-right-radius: var(--border-radius-small);
 			border-bottom-right-radius: var(--border-radius-small);
 		}
+
+		span.cm-link,
+		span.cm-hmd-internal-link {
+			color: var(--interactive-accent-text);
+		}
 	}
 }
 
@@ -159,7 +181,7 @@
 		}
 
 		.HyperMD-codeblock {
-			color: var(--interactive-accent-text);
+			color: var(--color-text-grey);
 		}
 
 		div.HyperMD-codeblock-bg {
@@ -169,7 +191,7 @@
 		span.cm-inline-code,
 		span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
 			color: var(--color-text-red);
-			background-color: var(--background-secondary);
+			background-color: var(--background-secondary-alt);
 		}
 
 		span.cm-footref,
@@ -200,6 +222,11 @@
 		span.cm-highlight:last-of-type {
 			border-top-right-radius: var(--border-radius-small);
 			border-bottom-right-radius: var(--border-radius-small);
+		}
+
+		span.cm-link,
+		span.cm-hmd-internal-link {
+			color: var(--interactive-accent-text);
 		}
 	}
 }
