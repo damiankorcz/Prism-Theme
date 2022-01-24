@@ -85,9 +85,9 @@
 }
 /* #endregion */
 /*
-	==========================================================================
-	Main Fonts
-	==========================================================================
+   ==========================================================================
+   Main Fonts
+   ==========================================================================
 */
 /* #region [Font] UI */
 html,
@@ -620,9 +620,9 @@ a:hover {
 
 /* #endregion */
 /*
-    ==========================================================================
-    Accent Colors
-    ==========================================================================
+  ==========================================================================
+  Accent Colors
+  ==========================================================================
 */
 /* #region  [Accent Color Presets] Light Theme */
 .theme-light.pt-light-accent-color-custom {
@@ -877,7 +877,9 @@ a:hover {
 /* #endregion */
 /* #region  [Accent Style] Text Only */
 .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header {
+.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header,
+.theme-dark.pt-accent-style-text-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
+.theme-light.pt-accent-style-text-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
   background-color: var(--background-primary);
   color: var(--interactive-accent-text);
   border: var(--border-size) solid transparent;
@@ -979,6 +981,13 @@ a:hover {
 .theme-dark.pt-accent-style-text-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
 .theme-light.pt-accent-style-text-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: linear-gradient(to right, transparent, var(--background-primary));
+}
+
+.theme-dark.pt-accent-style-text-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-light.pt-accent-style-text-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-dark.pt-accent-style-text-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
+.theme-light.pt-accent-style-text-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary));
 }
 
 .theme-dark.pt-accent-style-text-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -1221,7 +1230,9 @@ a:hover {
 /* #endregion */
 /* #region  [Accent Style] Border Only */
 .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header {
+.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header,
+.theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
+.theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
   background-color: var(--background-primary);
   color: var(--text-normal);
   border: var(--border-size) solid var(--interactive-accent-dark);
@@ -1305,6 +1316,13 @@ a:hover {
 .theme-dark.pt-accent-style-border-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
 .theme-light.pt-accent-style-border-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: linear-gradient(to right, transparent, var(--background-primary));
+}
+
+.theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
+.theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary));
 }
 
 .theme-dark.pt-accent-style-border-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -1539,7 +1557,9 @@ a:hover {
 /* #endregion */
 /* #region  [Accent Style] Border & Text */
 .theme-dark.pt-accent-style-borderandtext-dt .workspace-leaf.mod-active .view-header,
-.theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header {
+.theme-light.pt-accent-style-borderandtext-lt .workspace-leaf.mod-active .view-header,
+.theme-dark.pt-accent-style-borderandtext-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
+.theme-light.pt-accent-style-borderandtext-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
   background-color: var(--background-primary);
   color: var(--interactive-accent-text);
   border: var(--border-size) solid var(--interactive-accent-dark);
@@ -1641,6 +1661,13 @@ a:hover {
 .theme-dark.pt-accent-style-borderandtext-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
 .theme-light.pt-accent-style-borderandtext-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: linear-gradient(to right, transparent, var(--background-primary));
+}
+
+.theme-dark.pt-accent-style-borderandtext-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-light.pt-accent-style-borderandtext-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-dark.pt-accent-style-borderandtext-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
+.theme-light.pt-accent-style-borderandtext-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary));
 }
 
 .theme-dark.pt-accent-style-borderandtext-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -1887,7 +1914,9 @@ a:hover {
 /* #endregion */
 /* #region  [Accent Style] Filled */
 .theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header {
+.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header,
+.theme-dark.pt-accent-style-filled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
+.theme-light.pt-accent-style-filled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
   background-color: var(--interactive-accent);
   border-radius: var(--border-radius);
   border: var(--border-size) solid transparent;
@@ -1972,6 +2001,13 @@ a:hover {
 .theme-dark.pt-accent-style-filled-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
 .theme-light.pt-accent-style-filled-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: linear-gradient(to right, transparent, var(--interactive-accent));
+}
+
+.theme-dark.pt-accent-style-filled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-light.pt-accent-style-filled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-dark.pt-accent-style-filled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
+.theme-light.pt-accent-style-filled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--interactive-accent));
 }
 
 .theme-dark.pt-accent-style-filled-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -2203,7 +2239,9 @@ a:hover {
 /* #endregion */
 /* #region  [Accent Style] Border and Filled */
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header {
+.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header,
+.theme-dark.pt-accent-style-borderandfilled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
+.theme-light.pt-accent-style-borderandfilled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
   background-color: var(--interactive-accent);
   border: var(--border-size) solid var(--interactive-accent-dark);
   border-radius: var(--border-radius);
@@ -2292,6 +2330,13 @@ a:hover {
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
   background: linear-gradient(to right, transparent, var(--interactive-accent));
+}
+
+.theme-dark.pt-accent-style-borderandfilled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-light.pt-accent-style-borderandfilled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
+.theme-dark.pt-accent-style-borderandfilled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
+.theme-light.pt-accent-style-borderandfilled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--interactive-accent));
 }
 
 .theme-dark.pt-accent-style-borderandfilled-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -2558,6 +2603,10 @@ a:hover {
   color: white;
 }
 
+body.pt-titlebar-hide-text .titlebar-text {
+  display: none;
+}
+
 /* #endregion */
 /* #region  [Titlebar] Default */
 .pt-default-titlebar .titlebar-text {
@@ -2727,9 +2776,6 @@ a:hover {
   letter-spacing: unset;
   opacity: 1;
 }
-body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
-  display: none;
-}
 
 /* #endregion */
 /* #region  [Titlebar] Solid */
@@ -2773,33 +2819,28 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 }
 
 .theme-light.pt-titlebar-default-lt div.titlebar-text,
-.theme-light.pt-titlebar-default-lt div.titlebar-button svg,
 .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
 .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right, .theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
   background-color: var(--tab-label-background-color);
   box-shadow: var(--drop-shadow);
 }
 .theme-light.pt-titlebar-custom-lt div.titlebar-text,
-.theme-light.pt-titlebar-custom-lt div.titlebar-button svg,
 .theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
 .theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right, .theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar {
   background-color: var(--titlebar-background-color-lt);
   box-shadow: var(--drop-shadow);
 }
 .theme-light.pt-titlebar-text-light-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-light-lt div.titlebar-button svg,
 .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
 .theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right, .theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar {
   color: var(--background-primary);
 }
 .theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-dark-lt div.titlebar-button svg,
 .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
 .theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right, .theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar {
   color: var(--text-normal);
 }
 .theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-accent-lt div.titlebar-button svg,
 .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
 .theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right, .theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar {
   color: var(--interactive-accent-text);
@@ -3221,33 +3262,29 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 
 /* #endregion */
 /* #region  [Sidebar] Tab Label */
-.workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
-  /* Moves the Tab Label to the left on the left sidebar */
-  /* Moves the Tab Label to the center on the left sidebar */
-  /* Moves the Tab Label to the right on the left sidebar */
-}
 .pt-tab-label-left-sidebar-left .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the left on the left sidebar */
   justify-content: flex-start;
 }
 .pt-tab-label-left-sidebar-center .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the center on the left sidebar */
   justify-content: center;
 }
 .pt-tab-label-left-sidebar-right .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the right on the left sidebar */
   justify-content: flex-end;
 }
 
-.workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
-  /* Moves the Tab Label to the left on the right sidebar */
-  /* Moves the Tab Label to the center on the right sidebar */
-  /* Moves the Tab Label to the right on the right sidebar */
-}
 .pt-tab-label-right-sidebar-left .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the left on the right sidebar */
   justify-content: flex-start;
 }
 .pt-tab-label-right-sidebar-center .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the center on the right sidebar */
   justify-content: center;
 }
 .pt-tab-label-right-sidebar-right .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  /* Moves the Tab Label to the right on the right sidebar */
   justify-content: flex-end;
 }
 
@@ -3390,15 +3427,21 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header,
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
-.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
   position: unset;
   order: 0;
+}
+
+.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  top: 5px;
+  margin-bottom: 10px;
+  order: 0;
+  position: sticky;
 }
 
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .nav-files-container,
@@ -3431,22 +3474,21 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
   bottom: calc(10px + var(--scroll-bar-size));
   margin-right: calc(10px + var(--scroll-bar-size));
 }
 
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  bottom: 10px;
+  margin-top: 20px;
   order: 2;
-  position: fixed;
+  position: sticky;
 }
 
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer]:hover .nav-header,
@@ -3454,29 +3496,30 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links]:hover .nav-header {
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink]:hover .nav-header {
   bottom: calc(10px + var(--scroll-bar-size-hover));
   margin-right: calc(10px + var(--scroll-bar-size-hover));
+}
+
+.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links]:hover .nav-header,
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links]:hover .nav-header {
+  bottom: calc(10px + var(--scroll-bar-size-hover));
 }
 
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .nav-files-container,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .view-content .container,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-results-children,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-files-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .view-content .container {
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children {
   padding-bottom: 65px;
 }
 
@@ -3484,14 +3527,12 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .view-content .container,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-results-children,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-files-container,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
-.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children,
-.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .view-content .container {
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children {
   padding-bottom: 75px;
 }
 
@@ -3500,7 +3541,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
   padding-bottom: calc(var(--window-gap) / 2);
 }
 
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button {
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button {
   right: 12px;
   top: 3px;
 }
@@ -3542,7 +3584,8 @@ body.pt-titlebar-hide-text .pt-windows-titlebar .titlebar-text {
 
 .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* #endregion */
@@ -4485,7 +4528,7 @@ input[type=range]:hover {
 .workspace-split.mod-vertical.mod-root .workspace-leaf,
 .workspace-split.mod-horizontal.mod-root .workspace-leaf {
   padding: calc(var(--window-gap) / 2);
-  contain: revert;
+  contain: revert !important;
 }
 
 .workspace-split.mod-vertical > .workspace-split {
@@ -5405,12 +5448,6 @@ button.copy-code-button {
 
 /* #endregion */
 /* #region  [Editor] Preview LT */
-.theme-light {
-  /* .markdown-embed,
-          .file-embed {
-              background-color: var(--background-primary);
-          } */
-}
 .theme-light .markdown-preview-view blockquote {
   border: 2px solid var(--table-border-color);
   background-color: var(--background-primary);
@@ -5490,12 +5527,6 @@ button.copy-code-button {
 
 /* #endregion */
 /* #region  [Editor] Preview DT */
-.theme-dark {
-  /* .markdown-embed,
-          .file-embed {
-              background-color: var(--background-secondary-alt);
-          } */
-}
 .theme-dark .markdown-preview-view blockquote {
   border: 2px solid var(--table-border-color);
   background-color: var(--background-secondary-alt);
@@ -13328,7 +13359,7 @@ div.style-settings-heading {
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details summary {
   border-bottom-color: transparent;
   border: none;
-  background-color: var(--background-primary);
+  background-color: var(--tab-label-background-color);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 15px;
@@ -13337,6 +13368,16 @@ div.style-settings-heading {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details summary:hover {
+  background-color: var(--background-primary);
+  color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details summary:hover::marker {
+  color: var(--interactive-accent-hover);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details summary::marker {
+  color: var(--text-faint);
 }
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul {
   margin: 8px;
@@ -13356,6 +13397,35 @@ div.style-settings-heading {
 }
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li ::marker {
   display: none;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content details:not([open]) summary {
+  margin-bottom: unset;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content details[open] summary {
+  background-color: var(--background-primary);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content details[open] summary::marker {
+  color: var(--interactive-accent-text);
+}
+
+/* #endregion */
+/* #region  [Plugin - Community] Sliding Panes */
+.theme-light.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
+.theme-dark.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+  box-shadow: none;
+}
+
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
+  background: linear-gradient(to bottom, transparent, var(--tab-label-background-color));
+}
+
+.theme-light.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > div.view-header {
+  border: var(--border-size) solid var(--background-color-lt);
+}
+
+.theme-dark.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > div.view-header {
+  border: var(--border-size) solid var(--background-color-dt);
 }
 
 /* #endregion */
