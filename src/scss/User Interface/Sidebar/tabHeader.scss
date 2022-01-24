@@ -14,16 +14,20 @@
 
 /* Tab label background */
 .workspace-tab-container-inner {
-	height: 36px;
+	min-height: 36px;
 	background-color: var(--tab-label-background-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+	flex-wrap: wrap;;
 }
 
 /* Tab label spacing */
 .workspace-tab-header-inner {
 	padding: 8px 12px;
+	width: 45px;
 	align-items: center;
+	justify-content: center;
+	margin: auto;	
 	height: fit-content;
 }
 
@@ -42,7 +46,6 @@
 
 /* Current Active Tab label */
 .workspace-tab-header.is-active {
-	flex: 1 1 auto;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 }
