@@ -209,14 +209,12 @@ a:hover {
   --color-grey-h: 210;
   --color-grey-s: 6%;
   --color-grey-l: 93%;
-  /* #endregion */
   /* Style Settings Accessible Default Properties */
   /* Fonts */
   --font-family-ui: "Source Sans Pro", sans-serif;
   --font-family-edit: "Source Sans Pro", sans-serif;
   --font-family-preview: "Source Sans Pro", sans-serif;
   --font-family-code: "Fira Code", monospace;
-  /* #endregion */
   /* Graph View - Light Theme */
   --graph-fill-opacity-lt: 1;
   --graph-fill-focused-opacity-lt: 1;
@@ -2584,10 +2582,27 @@ a:hover {
   font-weight: 600;
 }
 
+.titlebar-button-container.mod-left .titlebar-button {
+  display: flex;
+}
+
+/* Pane Relief */
+.titlebar .history-counter {
+  align-self: center;
+}
+
+/* Pane Relief */
 .titlebar-button-container {
   display: flex;
   flex-flow: row;
   position: absolute;
+}
+
+/* Pane Relief */
+.left-arrow-with-tail,
+.right-arrow-with-tail,
+.history-counter {
+  stroke-width: 3px;
 }
 
 .titlebar-button-container.mod-left .mod-back,
@@ -3200,16 +3215,20 @@ body.pt-titlebar-hide-text .titlebar-text {
 
 /* Tab label background */
 .workspace-tab-container-inner {
-  height: 36px;
+  min-height: 36px;
   background-color: var(--tab-label-background-color);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
+  flex-wrap: wrap;
 }
 
 /* Tab label spacing */
 .workspace-tab-header-inner {
-  padding: 8px 12px;
+  padding: 8px 10px;
+  width: 41px;
   align-items: center;
+  justify-content: center;
+  margin: auto;
   height: fit-content;
 }
 
@@ -3228,7 +3247,6 @@ body.pt-titlebar-hide-text .titlebar-text {
 
 /* Current Active Tab label */
 .workspace-tab-header.is-active {
-  flex: 1 1 auto;
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
@@ -3485,8 +3503,9 @@ body.pt-titlebar-hide-text .titlebar-text {
 
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
-  bottom: 10px;
-  margin-top: 20px;
+  bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   order: 2;
   position: sticky;
 }
@@ -4427,12 +4446,20 @@ input[type=range]:hover {
 /* #endregion */
 /* #region  [UI] Empty State */
 .search-empty-state,
-.pane-empty {
+.workspace-leaf-content[data-type=markdown] .pane-empty {
   padding: 5px 10px 5px 10px;
   background-color: var(--background-secondary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   margin: unset;
+}
+
+.pane-empty {
+  word-wrap: break-word;
+  width: unset;
+  margin: unset;
+  max-width: 200px;
+  text-align: left;
 }
 
 /* #endregion */
@@ -4539,9 +4566,11 @@ input[type=range]:hover {
   background-color: transparent;
 }
 
-.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
   border-top-left-radius: unset;
-  border-radius: var(--border-radius);
+  border-top-right-radius: unset;
+  border-radius: 0;
 }
 
 .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed.is-hidden {
@@ -4778,8 +4807,8 @@ input[type=range]:hover {
 
 .nav-file-title-content,
 .nav-folder-title-content {
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .nav-file-title.is-active {
@@ -6001,11 +6030,6 @@ input.prompt-input {
 
 .nav-folder.mod-root > .nav-folder-children > .nav-file {
   margin-left: unset;
-}
-
-/* Fixes the bounce caused by a random div in the nav-folder-children */
-.workspace-leaf-content[data-type=file-explorer] .nav-folder-children > div:not(.nav-folder):not(.nav-file) {
-  display: none;
 }
 
 /* #endregion */
