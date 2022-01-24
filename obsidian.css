@@ -6076,15 +6076,6 @@ input.prompt-input {
 }
 
 /* #endregion */
-/* #region  [Plugin - Core] File Explorer Text Wrap */
-/* Wrap long nav text */
-.pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-file-title,
-.pt-file-explorer-text-wrap .workspace-leaf-content[data-type=file-explorer] .nav-folder-title {
-  white-space: normal;
-  width: auto;
-}
-
-/* #endregion */
 /* #region  [Plugin - Core] Graph Base */
 .theme-light .workspace-leaf-content[data-type=graph] .view-content,
 .theme-light .workspace-leaf-content[data-type=localgraph] .view-content {
@@ -6523,14 +6514,6 @@ input.prompt-input {
 }
 .workspace-leaf-content[data-type=outline] .outline > .tree-item > .tree-item-children {
   margin-left: 10px;
-}
-
-/* #endregion */
-/* #region  [Plugin - Core] Outline Text Wrap */
-/* Wrap long nav text */
-.pt-outline-text-wrap .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-inner {
-  white-space: normal;
-  width: auto;
 }
 
 /* #endregion */
@@ -20108,12 +20091,6 @@ settings:
         level: 3
         collapsed: true 
     - 
-        id: pt-file-explorer-text-wrap
-        title: File Explorer Text Wrap
-        description: Toggles Text Wrapping on the file/folder names in the File Explorer to help fit the whole name when the name is longer than the visible area.
-        default: false
-        type: class-toggle
-    - 
         id: pt-file-explorer-vertical-lines
         title: File Explorer Vertical Lines (Relationship Lines)
         description: Toggles Vertical Lines (Relationship Lines) in the File Explorer to help visualise the folder and file depth.
@@ -20191,12 +20168,6 @@ settings:
         type: heading
         level: 3
         collapsed: true 
-    - 
-        id: pt-outline-text-wrap
-        title: Outline Text Wrap
-        description: Toggles Text Wrapping on the Headers in the Outline to help fit the whole name when the name is longer than the visible area.
-        default: false
-        type: class-toggle
     - 
         id: pt-outline-vertical-lines
         title: Outline Vertical Lines (Relationship Lines)
