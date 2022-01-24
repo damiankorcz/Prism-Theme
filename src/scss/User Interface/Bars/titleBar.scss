@@ -33,6 +33,10 @@
 .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover svg {
 	color: white;
 }
+
+body.pt-titlebar-hide-text .titlebar-text {
+	display: none;
+}
 /* #endregion */
 
 /* #region  [Titlebar] Default */
@@ -226,10 +230,6 @@
 		box-shadow: var(--drop-shadow);
 		letter-spacing: unset;
 		opacity: 1;
-
-		body.pt-titlebar-hide-text & {
-			display: none;
-		}
 	}
 }
 
