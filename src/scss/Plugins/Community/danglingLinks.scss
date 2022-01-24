@@ -12,16 +12,16 @@
 			display: none;
 		}
 
-        // h3:first-of-type {
-        //     border: 0px;
-        //     background-color: var(--background-primary);
-        //     border-radius: var(--border-radius);
-        //     box-shadow: var(--drop-shadow);
-        //     text-align: center;
-        //     padding: 8px;
-        //     margin-top: 0px;
-        //     margin-bottom: 8px;
-        // }
+		// h3:first-of-type {
+		//     border: 0px;
+		//     background-color: var(--background-primary);
+		//     border-radius: var(--border-radius);
+		//     box-shadow: var(--drop-shadow);
+		//     text-align: center;
+		//     padding: 8px;
+		//     margin-top: 0px;
+		//     margin-bottom: 8px;
+		// }
 
 		details {
 			border: 0px;
@@ -36,7 +36,7 @@
 			summary {
 				border-bottom-color: transparent;
 				border: none;
-				background-color: var(--background-primary);
+				background-color: var(--tab-label-background-color);
 				border-radius: var(--border-radius);
 				box-shadow: var(--drop-shadow);
 				padding: 5px 5px 5px 15px;
@@ -45,6 +45,19 @@
 				margin-bottom: 8px;
 				font-size: 14px;
 				font-weight: 600;
+
+				&:hover {
+					background-color: var(--background-primary);
+					color: var(--interactive-accent-text);
+					
+					&::marker {
+						color: var(--interactive-accent-hover);
+					}
+				}
+
+				&::marker {
+					color: var(--text-faint);
+				}
 			}
 
 			ul {
@@ -68,6 +81,22 @@
 						display: none;
 					}
 				}
+			}
+		}
+	}
+
+	details:not([open]) {
+		summary {
+			margin-bottom: unset;
+		}
+	}
+
+	details[open] {
+		summary {
+			background-color: var(--background-primary);
+
+			&::marker {
+				color: var(--interactive-accent-text);
 			}
 		}
 	}
