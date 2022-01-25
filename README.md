@@ -17,7 +17,7 @@
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Screenshots">Screenshots</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Getting-Started">Getting Started</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Plugin-Support">Plugin Support</a> •
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Snippets">Snippets</a> •
+		<a href="https://github.com/damiankorcz/Prism-Theme#%EF%B8%8F-snippets">Snippets</a> •
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Documentation">Documentation</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Roadmap">Roadmap</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contributing">Contributing</a> • 
