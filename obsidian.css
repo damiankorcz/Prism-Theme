@@ -453,7 +453,7 @@ a:hover {
   --background-primary: hsl(0, 0%, 100%);
   --background-primary-alt: hsl(220, 20%, 97%);
   --background-secondary: hsl(220, 13%, 95%);
-  --background-secondary-blur: hsl(220, 13%, 95%, 0.8);
+  --background-secondary-blur: hsl(220, 13%, 95%, 0.4);
   --background-secondary-alt: hsl(216, 10%, 85%);
   --background-modifier-border: hsl(216, 10%, 89%);
   --background-modifier-error: var(--color-dark-red);
@@ -582,7 +582,7 @@ a:hover {
   --background-primary: hsl(0, 0%, 22%);
   --background-primary-alt: hsl(0, 0%, 32%);
   --background-secondary: hsl(0, 0%, 15%);
-  --background-secondary-blur: hsla(0, 0%, 15%, 0.8);
+  --background-secondary-blur: hsla(0, 0%, 15%, 0.4);
   --background-secondary-alt: hsl(0, 0%, 12%);
   --background-modifier-border: hsl(0, 0%, 14%);
   --background-modifier-error: var(--color-dark-red);
@@ -13462,6 +13462,26 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /* #endregion */
+div#cMenuModalBar {
+  border: 1px solid var(--tab-label-background-color);
+  border-radius: var(--border-radius);
+  background-color: var(--tab-label-background-color);
+  box-shadow: var(--drop-shadow);
+}
+div#cMenuModalBar .cMenuCommandItem {
+  background-color: transparent;
+  color: var(--text-muted);
+}
+div#cMenuModalBar button.cMenuCommandItem:hover {
+  background-color: transparent;
+  color: var(--interactive-accent-hover);
+}
+div#cMenuModalBar.cMenuGlassAesthetic {
+  background: var(--background-secondary-blur);
+  backdrop-filter: blur(var(--blur-intensity));
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+}
+
 /* #region  [Info] Style Settings */
 /* @settings
 name: Prism Theme
