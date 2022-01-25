@@ -58,7 +58,7 @@
         .today {
             font-weight: 600;
             font-size: 1em;
-            color: var(--interactive-accent-dark);
+            color: var(--interactive-accent-text);
         }
 
         .day,
@@ -78,11 +78,19 @@
                     fill: var(--highlight-text-normal);
                 }
 
+                .hollow.task {
+                    stroke: var(--highlight-text-normal);
+                }
+
                 &:hover {
                     color: var(--text-normal);
 
                     .dot {
-                        fill: var(--interactive-accent-dark);
+                        fill: var(--interactive-accent-text);
+                    }
+
+                    .hollow.task {
+                        stroke: var(--interactive-accent-text);
                     }
                 }
             }
@@ -101,7 +109,12 @@
         }
 
         .dot.filled {
-            fill: var(--interactive-accent-dark);
+            fill: var(--interactive-accent-text);
+        }
+
+        .hollow.task {
+            stroke: var(--interactive-accent-text);
+            stroke-width: 1.5px;
         }
 
         .arrow {
