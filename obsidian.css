@@ -13539,7 +13539,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=calendar] #calendar-container .today {
   font-weight: 600;
   font-size: 1em;
-  color: var(--interactive-accent-dark);
+  color: var(--interactive-accent-text);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .day,
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num {
@@ -13559,13 +13559,21 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active .dot {
   fill: var(--highlight-text-normal);
 }
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active .hollow.task,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active .hollow.task {
+  stroke: var(--highlight-text-normal);
+}
 .workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active:hover,
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active:hover {
   color: var(--text-normal);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active:hover .dot,
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active:hover .dot {
-  fill: var(--interactive-accent-dark);
+  fill: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active:hover .hollow.task,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active:hover .hollow.task {
+  stroke: var(--interactive-accent-text);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num {
   font-size: 0.7em;
@@ -13577,7 +13585,11 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   opacity: 0.4;
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .dot.filled {
-  fill: var(--interactive-accent-dark);
+  fill: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .hollow.task {
+  stroke: var(--interactive-accent-text);
+  stroke-width: 1.5px;
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .arrow {
   color: var(--text-normal);
