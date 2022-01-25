@@ -13514,18 +13514,27 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   margin: 6px 10px 10px 10px;
   width: -webkit-fill-available;
 }
+.workspace-leaf-content[data-type=calendar] #calendar-container thead tr:first-of-type th:first-child {
+  border-top-left-radius: var(--border-radius);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container tbody tr:last-of-type td:first-child {
+  border-bottom-left-radius: var(--border-radius);
+}
 .workspace-leaf-content[data-type=calendar] #calendar-container td.svelte-egt0yd {
+  border-right: 1px solid var(--table-border-color);
   background-color: var(--tab-label-background-color);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8 {
-  border-bottom: var(--border-size) solid var(--table-border-color);
+  border-bottom: 1px solid var(--table-border-color);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8:first-of-type {
+  border-right: 1px solid var(--table-border-color);
   background-color: var(--tab-label-background-color);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .today {
   font-weight: 600;
   font-size: 1em;
+  color: var(--interactive-accent-dark);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .day,
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num {
