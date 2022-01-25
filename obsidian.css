@@ -13462,6 +13462,7 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 
 /* #endregion */
+/* #region  [Plugin - Community] cMenu */
 div#cMenuModalBar {
   border: 1px solid var(--tab-label-background-color);
   border-radius: var(--border-radius);
@@ -13482,6 +13483,102 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   -webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
+/* #endregion */
+/* #region  [Plugin - Community] Calendar */
+.workspace-leaf-content[data-type=calendar] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container {
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: unset;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  border: 1px solid var(--tab-label-background-color);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .nav {
+  margin: unset;
+  align-items: center;
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 10px;
+  height: fit-content;
+  width: fit-content;
+  min-width: -webkit-fill-available;
+  border: unset;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container table.calendar {
+  margin: 6px 10px 10px 10px;
+  width: -webkit-fill-available;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container td.svelte-egt0yd {
+  background-color: var(--tab-label-background-color);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8 {
+  border-bottom: var(--border-size) solid var(--table-border-color);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8:first-of-type {
+  background-color: var(--tab-label-background-color);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .today {
+  font-weight: 600;
+  font-size: 1em;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num {
+  border-radius: var(--border-radius-small);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day:hover,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num:hover {
+  background-color: var(--background-primary);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active {
+  color: var(--highlight-text-normal);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active .dot,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active .dot {
+  fill: var(--highlight-text-normal);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active:hover,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active:hover {
+  color: var(--text-normal);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active:hover .dot,
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active:hover .dot {
+  fill: var(--interactive-accent-dark);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num {
+  font-size: 0.7em;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .year {
+  color: var(--interactive-accent-dark);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .adjacent-month {
+  opacity: 0.4;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .dot.filled {
+  fill: var(--interactive-accent-dark);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .arrow {
+  color: var(--text-normal);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .arrow:hover svg {
+  color: var(--interactive-accent-hover);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .reset-button {
+  color: var(--text-normal);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .reset-button:hover {
+  color: var(--interactive-accent-hover);
+}
+
+/* #endregion */
 /* #region  [Info] Style Settings */
 /* @settings
 name: Prism Theme

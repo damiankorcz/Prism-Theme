@@ -1,0 +1,114 @@
+/* #region  [Plugin - Community] Calendar */
+.workspace-leaf-content[data-type="calendar"] {
+
+    .view-content {
+        padding: unset;
+    }
+
+    #calendar-container {
+        background-color: var(--background-secondary);
+        border-radius: var(--border-radius);
+        box-shadow: var(--drop-shadow);
+        padding: unset;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        border: 1px solid var(--tab-label-background-color);
+        
+        .nav {
+            margin: unset;
+            align-items: center;
+            background: var(--background-primary);
+            border-radius: var(--border-radius);
+            box-shadow: var(--drop-shadow);
+            padding: 10px;
+            height: fit-content;
+            width: fit-content;
+            min-width: -webkit-fill-available;
+            border: unset;
+        }
+
+        table.calendar {
+            margin: 6px 10px 10px 10px;
+            width: -webkit-fill-available;
+        }
+
+        td.svelte-egt0yd {
+            // border-right: var(--border-size) solid var(--table-border-color);
+            background-color: var(--tab-label-background-color);
+        }
+
+        th.svelte-pcimu8 {
+            border-bottom: var(--border-size) solid var(--table-border-color);
+
+            &:first-of-type {
+                background-color: var(--tab-label-background-color);
+            }
+        }
+
+        .today {
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .day,
+        .week-num {
+            border-radius: var(--border-radius-small);
+    
+            &:hover {
+                background-color: var(--background-primary);
+            }
+
+            &.has-note.active {
+                color: var(--highlight-text-normal);
+                font-weight: 600;
+                font-size: 0.9em;
+
+                .dot {
+                    fill: var(--highlight-text-normal);
+                }
+
+                &:hover {
+                    color: var(--text-normal);
+
+                    .dot {
+                        fill: var(--interactive-accent-dark);
+                    }
+                }
+            }
+        }
+
+        .week-num {
+            font-size: 0.7em;
+        }
+
+        .year {
+            color: var(--interactive-accent-dark);
+        }
+
+        .adjacent-month {
+            opacity: 0.4;
+        }
+
+        .dot.filled {
+            fill: var(--interactive-accent-dark);
+        }
+
+        .arrow {
+            color: var(--text-normal);
+
+            &:hover svg {
+                color: var(--interactive-accent-hover);
+            }
+        }
+        
+        .reset-button {
+            color: var(--text-normal);
+
+            &:hover {
+                color: var(--interactive-accent-hover);
+            }
+        }
+    }
+}
+/* #endregion */
