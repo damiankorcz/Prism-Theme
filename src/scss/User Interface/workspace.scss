@@ -84,6 +84,20 @@
 	border-radius: 0;
 }
 
+/* Warning prompt to install Style Settings */
+body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
+	height: fit-content;
+	width: -webkit-fill-avaliable;
+	display: block;
+	content: "'Style Settings' Plugin is required for Prism to function correctly!";
+	padding: 10px;
+	border-radius: var(--border-radius);
+	border: var(--border-size) solid var(--color-dark-red);
+	background-color: var(--color-red);
+	font-weight: 600;
+	text-align: center;
+}
+
 .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed.is-hidden {
 	display: flex;
 	flex: 0 0 5px;
