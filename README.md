@@ -126,6 +126,8 @@ Explicitly supported by the theme:
 * [**Pane Relief**](https://github.com/pjeby/pane-relief) - _Adds per-pane navigation history to Obsidian.md._
 * [**Sliding Panes**](https://github.com/deathau/sliding-panes-obsidian) - _Changes the way panes in the main workspace are handled. Inspired by the UI of [**Andy Matuschak's notes**](https://notes.andymatuschak.org/About_these_notes)._
 
+...and more! Checkout the full list in the [Plugins Supported](https://github.com/damiankorcz/Prism-Theme/wiki/Plugins-Supported) section of the Wiki.
+
 (These plugins have been checked to work correctly and might have additional settings in Style Settings)
 
 If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
