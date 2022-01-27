@@ -463,8 +463,6 @@ a:hover {
   --style-settings-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
   --outline-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
   --drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset, hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
-  --drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
   --scroll-bar-thumb: hsla(0, 0%, 80%, 1);
   --table-border-color: var(--background-secondary-alt);
   --h1-text-color-custom-lt: hsl(0, 0%, 20%);
@@ -13241,19 +13239,22 @@ div.modal.kanban-plugin__board-settings-modal .modal-content {
   background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.theme-light.pt-kanban-background-dots-accent-lt .theme-dark.pt-kanban-background-dots-accent-dt .kanban-plugin__board {
+.theme-light.pt-kanban-background-dots-accent-lt .kanban-plugin__board,
+.theme-dark.pt-kanban-background-dots-accent-dt .kanban-plugin__board {
   background-size: 8px 8px;
   background-attachment: local;
   background-image: radial-gradient(circle, var(--interactive-accent) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.theme-light.pt-kanban-background-grid-plain-lt .theme-dark.pt-kanban-background-grid-plain-dt .kanban-plugin__board {
+.theme-light.pt-kanban-background-grid-plain-lt .kanban-plugin__board,
+.theme-dark.pt-kanban-background-grid-plain-dt .kanban-plugin__board {
   background-size: 8px 8px;
   background-attachment: local;
   background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
 }
 
-.theme-light.pt-kanban-background-grid-accent-lt .theme-dark.pt-kanban-background-grid-accent-dt .kanban-plugin__board {
+.theme-light.pt-kanban-background-grid-accent-lt .kanban-plugin__board,
+.theme-dark.pt-kanban-background-grid-accent-dt .kanban-plugin__board {
   background-size: 8px 8px;
   background-attachment: local;
   background-image: linear-gradient(to right, var(--interactive-accent) 1px, transparent 1px), linear-gradient(to bottom, var(--interactive-accent) 1px, transparent 1px);
@@ -13620,6 +13621,20 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 
 /* #endregion */
+.pt-icon-folder-accent .obsidian-icon-folder-icon {
+  color: var(--interactive-accent-text);
+}
+.pt-icon-folder-accent .obsidian-icon-folder-icon-preview {
+  color: var(--interactive-accent-text);
+}
+
+.prompt-results.obsidian-icon-folder-modal .obsidian-icon-folder-subheadline {
+  color: var(--text-normal);
+}
+.prompt-results.obsidian-icon-folder-modal .suggestion-item div:first-child {
+  color: var(--text-normal);
+}
+
 /* #region  [Info] Style Settings */
 /* @settings
 name: Prism Theme
@@ -20751,7 +20766,19 @@ settings:
             - 
                 label: Right
                 value: pt-advanced-tables-align-right
-
+    -
+        id: icon-folder-settings
+        title: Icon Folder
+        description: Florian Woelki's Icon Folder (https://github.com/FlorianWoelki/obsidian-icon-folder).
+        type: heading
+        level: 2
+        collapsed: true
+    -            
+        id: pt-icon-folder-accent
+        title: Use UI Accent Color for Icon Folder
+        description: Makes the Folder Icons inherit the UI Accent Color.
+        type: class-toggle
+        default: false
 */
 /* #endregion */
 /* #region [Info] Hub Plugin Compatibility */
