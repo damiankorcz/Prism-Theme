@@ -13,14 +13,16 @@
 	box-shadow: var(--drop-shadow);
 }
 
-.graph-controls,
-.graph-controls.is-close {
+div.graph-controls,
+div.graph-controls.is-close {
 	border: 1px solid var(--background-secondary);
 	border-radius: var(--border-radius);
 	background-color: var(--background-secondary-blur);
 	backdrop-filter: blur(var(--blur-intensity));
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	box-shadow: var(--drop-shadow);
+	position: absolute;
+	margin-top: unset;
 }
 
 .graph-controls.is-close {
