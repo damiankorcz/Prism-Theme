@@ -486,6 +486,10 @@ a:hover {
   --h6-border-color-custom-lt: hsl(0, 0%, 20%);
 }
 
+.theme-light.pt-remove-blur {
+  --background-secondary-blur: hsl(220, 13%, 95%, 1);
+}
+
 /* #endregion */
 /* #region  [Variables] Dark Theme */
 .theme-dark {
@@ -613,6 +617,10 @@ a:hover {
   --h4-border-color-custom-dt: hsla(0, 0%, 20%, 1);
   --h5-border-color-custom-dt: hsla(0, 0%, 20%, 1);
   --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
+}
+
+.theme-dark.pt-remove-blur {
+  --background-secondary-blur: hsla(0, 0%, 15%, 1);
 }
 
 /* #endregion */
@@ -19935,6 +19943,12 @@ settings:
         level: 1
         collapsed: true
     -
+        id: pt-remove-blur
+        title: Remove Blurred Background Effect
+        description: Remove the blur background in all elements that use it by making them opaque.
+        default: false
+        type: class-toggle
+    - 
         id: accent-colors-styles
         title: Accent Colors and Styles
         description: Adjust the Accent Color and Styles used throughout the UI.
