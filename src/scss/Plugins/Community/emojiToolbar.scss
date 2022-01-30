@@ -1,0 +1,129 @@
+/* #region  [Plugin - Community] Emoji Toolbar */
+.modal#emoji-modal {
+	background-color: var(--background-secondary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
+	border: unset;
+
+	.emoji-mart {
+		font-family: var(--font-family-ui);
+		font-size: 14px;
+		border: unset;
+		background: unset;
+		color: var(--text-normal);
+	}
+
+    .emoji-mart-bar {
+        border: unset;
+    }
+
+	.emoji-mart-title-label {
+		color: var(--text-muted);
+	}
+
+	.emoji-mart-bar:first-child {
+		background-color: var(--background-primary);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+		padding: 0px 8px;
+		min-width: -webkit-fill-available;
+		border: unset;
+	}
+
+	.emoji-mart-preview-emoji {
+		background: var(--background-primary);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.emoji-mart-preview-data {
+		padding: 0px 8px;
+	}
+
+	.emoji-mart-anchors {
+		padding: unset;
+	}
+
+	.emoji-mart-search {
+		margin: 8px 8px 0px 8px;
+
+		input {
+			border: unset;
+			border-radius: var(--border-radius-small);
+		}
+	}
+
+	section.emoji-mart-category {
+		&:not(:last-of-type) {
+			margin-bottom: 8px;
+		}
+
+		.emoji-mart-emoji:hover:before,
+		.emoji-mart-emoji:focus:before {
+			background-color: var(--background-secondary);
+			border-radius: var(--border-radius-small);
+		}
+	}
+
+	.emoji-mart-preview-name {
+		font-weight: 600;
+	}
+
+	.emoji-mart-preview-shortname {
+		color: var(--interactive-accent-text);
+	}
+
+	.emoji-mart-preview-emoticon {
+		color: var(--text-muted);
+	}
+
+	.emoji-mart-category-list {
+		background: var(--background-primary);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.emoji-mart-category-label span {
+		background-color: var(--background-secondary);
+		text-align: center;
+		font-weight: 600;
+	}
+
+	button {
+		justify-content: unset;
+		align-content: unset;
+		flex-direction: unset;
+		border: unset;
+		margin-right: unset;
+
+		&.emoji-mart-anchor {
+			padding: 8px;
+            flex: unset;
+		}
+
+		.emoji-mart-anchor-icon {
+			color: var(--text-muted);
+            justify-content: center;
+            align-content: center;
+            display: flex;
+		}
+        
+        &:hover {
+            .emoji-mart-anchor-icon {
+                color: var(--interactive-accent-hover);
+            }
+        }
+
+		&.emoji-mart-anchor-selected {
+			.emoji-mart-anchor-icon {
+				color: var(--interactive-accent-text);
+			}
+		}
+
+        .emoji-mart-anchor-bar {
+            display: none;
+        }
+
+	}
+}
+/* #endregion */
