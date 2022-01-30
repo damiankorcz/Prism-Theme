@@ -155,7 +155,7 @@ a:hover {
   /* General Settings */
   --default-font: "Source Sans Pro", sans-serif;
   --border-size: 2px;
-  --blur-intensity: 6px;
+  --blur-intensity: 10px;
   --file-explorer-vertical-lines-width: 2px;
   --style-settings-vertical-lines-width: 2px;
   /* Scrollbar Settings */
@@ -454,7 +454,7 @@ a:hover {
   --background-primary: hsl(0, 0%, 100%);
   --background-primary-alt: hsl(220, 20%, 97%);
   --background-secondary: hsl(220, 13%, 95%);
-  --background-secondary-blur: hsl(220, 13%, 95%, 0.4);
+  --background-secondary-blur: hsl(220, 13%, 95%, 0.6);
   --background-secondary-alt: hsl(216, 10%, 85%);
   --background-modifier-border: hsl(216, 10%, 89%);
   --background-modifier-error: var(--color-dark-red);
@@ -581,7 +581,7 @@ a:hover {
   --background-primary: hsl(0, 0%, 22%);
   --background-primary-alt: hsl(0, 0%, 32%);
   --background-secondary: hsl(0, 0%, 15%);
-  --background-secondary-blur: hsla(0, 0%, 15%, 0.4);
+  --background-secondary-blur: hsla(0, 0%, 15%, 0.6);
   --background-secondary-alt: hsl(0, 0%, 12%);
   --background-modifier-border: hsl(0, 0%, 14%);
   --background-modifier-error: var(--color-dark-red);
@@ -3339,7 +3339,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   padding: 0px;
   width: 100%;
   height: min-content;
-  z-index: 50;
+  z-index: 500;
   order: 2;
   position: absolute;
   pointer-events: none;
@@ -3377,7 +3377,9 @@ body.pt-titlebar-hide-text .titlebar-text {
 }
 
 .embedded-backlinks div.nav-header {
-  position: relative;
+  position: sticky;
+  display: inline-flex;
+  top: 0px;
   justify-content: center;
   margin: 8px 0px;
 }
@@ -3385,9 +3387,11 @@ body.pt-titlebar-hide-text .titlebar-text {
 /* #endregion */
 /* #region  [Nav Header] Buttons */
 .embedded-backlinks .nav-buttons-container {
-  background-color: var(--background-primary);
-  border-radius: var(--border-radius);
+  border: 1px solid var(--tab-label-background-color);
   box-shadow: var(--drop-shadow);
+  background-color: var(--background-secondary-blur);
+  backdrop-filter: blur(var(--blur-intensity));
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
 .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
@@ -5801,21 +5805,6 @@ h6::selection {
   background-color: var(--background-color-dt);
 }
 
-.embedded-backlinks:before {
-  position: relative;
-  content: "Backlinks";
-  font-size: 16px;
-  font-weight: 600;
-  background: var(--background-primary);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  margin: 0px;
-  z-index: 50;
-}
-
 .embedded-backlinks {
   border-radius: var(--border-radius);
   margin: 0 auto;
@@ -6051,7 +6040,7 @@ input.prompt-input {
 }
 
 .modal-container .prompt {
-  border: 1px solid var(--table-border-color);
+  border: 1px solid var(--tab-label-background-color);
   box-shadow: var(--drop-shadow);
   background-color: var(--background-secondary-blur);
   backdrop-filter: blur(var(--blur-intensity));

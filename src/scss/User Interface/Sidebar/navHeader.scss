@@ -10,7 +10,7 @@
 	padding: 0px;
 	width: 100%;
 	height: min-content;
-	z-index: 50;
+	z-index: 500;
 	order: 2;
 	position: absolute;
 	pointer-events: none;
@@ -48,7 +48,9 @@
 }
 
 .embedded-backlinks div.nav-header {
-	position: relative;
+	position: sticky;
+	display: inline-flex;
+	top: 0px;
 	justify-content: center;
 	margin: 8px 0px;
 }
@@ -56,9 +58,11 @@
 
 /* #region  [Nav Header] Buttons */
 .embedded-backlinks .nav-buttons-container {
-	background-color: var(--background-primary);
-	border-radius: var(--border-radius);
+	border: 1px solid var(--tab-label-background-color);
 	box-shadow: var(--drop-shadow);
+	background-color: var(--background-secondary-blur);
+	backdrop-filter: blur(var(--blur-intensity));
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
 .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type="file-explorer"] .nav-buttons-container,
