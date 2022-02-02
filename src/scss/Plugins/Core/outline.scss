@@ -16,6 +16,8 @@
 	.tree-item-inner {
 		font-weight: 600;
 		color: var(--text-normal);
+		padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
+		line-height: 14px;
 	}
 
 	.tree-item-self.is-clickable:hover {
@@ -38,11 +40,6 @@
 	.tree-item-self .tree-item-inner {
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
-
-	.tree-item-inner {
-		padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
-		line-height: 14px;
 	}
 
 	.tree-item-self .tree-item-icon {
