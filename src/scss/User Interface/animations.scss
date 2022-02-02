@@ -1,0 +1,227 @@
+@keyframes OnHover {
+    from {
+        font-variation-settings: "wght" 600;
+    }
+
+    to {
+        color: var(--interactive-accent-hover);
+        font-variation-settings: "wght" 800;
+    }
+}
+
+
+@keyframes OnHover2 {
+    from {
+        font-variation-settings: "wght" 400;
+    }
+    
+    to {
+        color: var(--interactive-accent-hover);
+        font-variation-settings: "wght" 600;
+    }
+}
+
+@keyframes iconEnlarge {
+    0% {
+        
+        transform: translatey(0px);
+    }
+    50% {
+        transform: scale(1.08);
+        filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, .1));
+    }
+    100% {
+        
+        transform: translatey(0px);
+    }
+}
+
+@keyframes iconEnlargeHold {
+    0% {
+        
+        transform: translatey(0px);
+	}
+	100% {
+        transform: scale(1.03);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	}
+}
+
+@keyframes iconEnlargeHoldBold {
+    0% {
+        
+        transform: translatey(0px);
+    }
+    100% {
+        transform: scale(1.03);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        font-variation-settings: "wght" 600;
+    }
+}
+
+@keyframes floatIconRight {
+	0% {
+		
+		transform: translatex(0px);
+	}
+	50% {
+		
+		transform: translatex(-3px);
+        filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, .1));
+	}
+	100% {
+		
+		transform: translatex(0px);
+	}
+}
+
+@keyframes floatIconLeft {
+	0% {
+		
+		transform: translatex(0px);
+	}
+	50% {
+		
+		transform: translatex(3px);
+        filter: drop-shadow(-5px 0px 2px rgba(0, 0, 0, .1));
+	}
+	100% {
+		
+		transform: translatex(0px);
+	}
+}
+
+.view-header-title:hover,
+.kanban-plugin__lane-header-wrapper p:hover {
+    animation-duration: 0.15s;
+    animation-name: OnHover;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+}
+
+.horizontal-tab-nav-item:hover,
+.vertical-tab-nav-item:hover {
+    animation-fill-mode: forwards;
+    animation-duration: 0.15s;
+    animation-name: iconEnlargeHoldBold;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+.workspace-ribbon-collapse-btn[aria-label-position="right"]:hover svg {
+    animation-duration: 0.25s;
+    animation-name: floatIconRight;
+    animation-iteration-count: 2;
+}
+
+.workspace-ribbon-collapse-btn[aria-label-position="left"]:hover svg {
+    animation-duration: 0.25s;
+    animation-name: floatIconLeft;
+    animation-iteration-count: 2;
+}
+
+.setting-add-hotkey-button:hover svg,
+.clickable-icon:hover svg,
+.view-action:hover svg,
+.view-header-icon:hover svg,
+.nav-action-button:hover svg,
+.side-dock-ribbon-action:hover svg,
+.workspace-tab-header:hover svg,
+.kanban-plugin__lane-settings-button:hover svg {
+    animation-duration: 0.25s;
+    animation-name: iconEnlarge;
+    animation-iteration-count: 2;
+}
+
+.workspace-leaf-content[data-type="calendar"] {
+    .arrow:not(.right):hover svg {
+        animation-duration: 0.25s;
+        animation-name: floatIconRight;
+        animation-iteration-count: 2;
+    }
+    
+    .arrow.right:hover svg {
+        animation-duration: 0.25s;
+        animation-name: floatIconRight;
+        animation-iteration-count: 2;
+    }
+
+    .reset-button:hover {
+        animation-duration: 0.25s;
+        animation-name: iconEnlarge;
+        animation-iteration-count: 2;
+    }
+
+    .day:hover {
+        animation-fill-mode: forwards;
+        animation-duration: 0.25s;
+        animation-name: iconEnlargeHoldBold;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+    }
+}
+
+.side-dock-ribbon-action.separator:not(.is-collapsed):hover {
+
+}
+
+.side-dock-ribbon-action.separator.is-collapsed:hover {
+
+}
+
+.titlebar-button {
+    &.mod-back:hover svg {
+        animation-duration: 0.25s;
+        animation-name: floatIconRight;
+        animation-iteration-count: 2;
+    }
+
+    &.mod-forward:hover svg{
+        animation-duration: 0.25s;
+        animation-name: floatIconLeft;
+        animation-iteration-count: 2;
+    }
+}
+
+.nav-file-title:hover,
+.nav-folder-title:not([data-path="/"]):hover,
+.tree-item-self:not(.search-result-file-title,[aria-label="Click to collapse"]):hover,
+.community-theme:hover,
+.community-plugin-item:hover,
+.search-result-file-match:hover.arrow.right:hover,
+.kanban-plugin__item:hover,
+.kanban-plugin__new-item-button:hover {
+    animation-fill-mode: forwards;
+    animation-duration: 0.25s;
+    animation-name: iconEnlargeHold;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+.nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
+    animation-duration: 1s;
+    animation-name: iconEnlarge;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.modal button:hover,
+.search-result-file-match-destination-file:hover {
+    animation-fill-mode: forwards;
+    animation-duration: 0.25s;
+    animation-name: iconEnlargeHold;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+// .checkbox-container.is-enabled:hover:after {
+//     animation-duration: 0.3s;
+//     animation-name: floatIconRight;
+//     animation-iteration-count: 2;
+// }
+
+// .checkbox-container:not(.is-enabled):hover:after {
+//     animation-duration: 0.3s;
+//     animation-name: floatIconLeft;
+//     animation-iteration-count: 2;
+// }
