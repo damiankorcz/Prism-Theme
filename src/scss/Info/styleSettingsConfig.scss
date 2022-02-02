@@ -6157,12 +6157,6 @@ settings:
         level: 1
         collapsed: true
     -
-        id: pt-remove-blur
-        title: Remove Blurred Background Effect
-        description: Remove the blur background in all elements that use it by making them opaque.
-        default: false
-        type: class-toggle
-    - 
         id: accent-colors-styles
         title: Accent Colors and Styles
         description: Adjust the Accent Color and Styles used throughout the UI.
@@ -7148,5 +7142,24 @@ settings:
         description: Makes the Folder Icons inherit the UI Accent Color.
         type: class-toggle
         default: true
+    -
+        id: feature-toggles
+        title: Feature Toggles
+        description: Disable certain aspects of the theme.
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: pt-disable-blur
+        title: Disable Blurred Background Effect
+        description: Disables the blur background in all elements that use it by making them opaque.
+        default: false
+        type: class-toggle
+    - 
+        id: pt-disable-animations
+        title: Disable Animations
+        description: Disables all animations added by Prism (default Obsidian animations remain).
+        default: false
+        type: class-toggle
 */
 /* #endregion */

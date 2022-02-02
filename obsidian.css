@@ -443,7 +443,7 @@ a:hover {
   --h6-border-color-custom-lt: hsl(0, 0%, 20%);
 }
 
-.theme-light.pt-remove-blur {
+.theme-light.pt-disable-blur {
   --background-secondary-blur: hsl(220, 13%, 95%, 1);
 }
 
@@ -577,7 +577,7 @@ a:hover {
   --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
 }
 
-.theme-dark.pt-remove-blur {
+.theme-dark.pt-disable-blur {
   --background-secondary-blur: hsla(0, 0%, 10%, 1);
 }
 
@@ -3619,22 +3619,17 @@ body.pt-titlebar-hide-text .titlebar-text {
 }
 
 /* #endregion */
-@keyframes OnHover {
+/* #region  [UI] Animations */
+body:not(.pt-disable-animations) {
+  /* #endregion */
+}
+@keyframes fontEnlargeHighlight {
   from {
     font-variation-settings: "wght" 600;
   }
   to {
     color: var(--interactive-accent-hover);
     font-variation-settings: "wght" 800;
-  }
-}
-@keyframes OnHover2 {
-  from {
-    font-variation-settings: "wght" 400;
-  }
-  to {
-    color: var(--interactive-accent-hover);
-    font-variation-settings: "wght" 600;
   }
 }
 @keyframes iconEnlarge {
@@ -3714,119 +3709,111 @@ body.pt-titlebar-hide-text .titlebar-text {
     transform: translatex(0px);
   }
 }
-.view-header-title:hover,
-.kanban-plugin__lane-header-wrapper p:hover {
+body:not(.pt-disable-animations) .view-header-title:hover,
+body:not(.pt-disable-animations) .kanban-plugin__lane-header-wrapper p:hover {
   animation-duration: 0.15s;
-  animation-name: OnHover;
+  animation-name: fontEnlargeHighlight;
   animation-iteration-count: 4;
   animation-direction: alternate;
 }
-
-.horizontal-tab-nav-item:hover,
-.vertical-tab-nav-item:hover {
+body:not(.pt-disable-animations) .horizontal-tab-nav-item:hover,
+body:not(.pt-disable-animations) .vertical-tab-nav-item:hover {
   animation-fill-mode: forwards;
   animation-duration: 0.15s;
   animation-name: iconEnlargeHoldBold;
   animation-iteration-count: 1;
   animation-direction: alternate;
 }
-
-.workspace-ribbon-collapse-btn[aria-label-position=right]:hover svg {
+body:not(.pt-disable-animations) .workspace-ribbon-collapse-btn[aria-label-position=right]:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
 }
-
-.workspace-ribbon-collapse-btn[aria-label-position=left]:hover svg {
+body:not(.pt-disable-animations) .workspace-ribbon-collapse-btn[aria-label-position=left]:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconLeft;
   animation-iteration-count: 2;
 }
-
-.setting-add-hotkey-button:hover svg,
-.clickable-icon:hover svg,
-.view-action:hover svg,
-.view-header-icon:hover svg,
-.nav-action-button:hover svg,
-.side-dock-ribbon-action:hover svg,
-.workspace-tab-header:hover svg,
-.kanban-plugin__lane-settings-button:hover svg {
+body:not(.pt-disable-animations) .setting-add-hotkey-button:hover svg,
+body:not(.pt-disable-animations) .clickable-icon:hover svg,
+body:not(.pt-disable-animations) .view-action:hover svg,
+body:not(.pt-disable-animations) .view-header-icon:hover svg,
+body:not(.pt-disable-animations) .nav-action-button:hover svg,
+body:not(.pt-disable-animations) .side-dock-ribbon-action:hover svg,
+body:not(.pt-disable-animations) .workspace-tab-header:hover svg,
+body:not(.pt-disable-animations) .graph-controls-button:hover svg,
+body:not(.pt-disable-animations) .kanban-plugin__lane-settings-button:hover svg,
+body:not(.pt-disable-animations) .kanban-plugin__item-postfix-button:hover svg {
   animation-duration: 0.25s;
   animation-name: iconEnlarge;
   animation-iteration-count: 2;
 }
-
-.workspace-leaf-content[data-type=calendar] .arrow:not(.right):hover svg {
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .arrow:not(.right):hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
 }
-.workspace-leaf-content[data-type=calendar] .arrow.right:hover svg {
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .arrow.right:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
 }
-.workspace-leaf-content[data-type=calendar] .reset-button:hover {
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .reset-button:hover {
   animation-duration: 0.25s;
   animation-name: iconEnlarge;
   animation-iteration-count: 2;
 }
-.workspace-leaf-content[data-type=calendar] .day:hover {
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .day:hover {
   animation-fill-mode: forwards;
   animation-duration: 0.25s;
   animation-name: iconEnlargeHoldBold;
   animation-iteration-count: 1;
   animation-direction: alternate;
 }
-
-.side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
+body:not(.pt-disable-animations) .side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconUp;
   animation-iteration-count: 2;
 }
-
-.side-dock-ribbon-action.separator.is-collapsed:hover svg {
+body:not(.pt-disable-animations) .side-dock-ribbon-action.separator.is-collapsed:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconDown;
   animation-iteration-count: 2;
 }
-
-.titlebar-button.mod-back:hover svg {
+body:not(.pt-disable-animations) .titlebar-button.mod-back:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
 }
-.titlebar-button.mod-forward:hover svg {
+body:not(.pt-disable-animations) .titlebar-button.mod-forward:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconLeft;
   animation-iteration-count: 2;
 }
-
-.nav-file-title:hover,
-.nav-folder-title:not([data-path="/"]):hover,
-.tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"]):hover,
-.community-theme:hover,
-.community-plugin-item:hover,
-.search-result-file-match:hover,
-.kanban-plugin__item:hover,
-.kanban-plugin__new-item-button:hover,
-.workspace-leaf-content[data-type=dangling-links] li:hover {
+body:not(.pt-disable-animations) .nav-file-title:hover,
+body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]):hover,
+body:not(.pt-disable-animations) .tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"]):hover,
+body:not(.pt-disable-animations) .community-theme:hover,
+body:not(.pt-disable-animations) .community-plugin-item:hover,
+body:not(.pt-disable-animations) .search-result-file-match:hover,
+body:not(.pt-disable-animations) .kanban-plugin__item:hover,
+body:not(.pt-disable-animations) .kanban-plugin__new-item-button:hover,
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dangling-links] li:hover {
   animation-fill-mode: forwards;
   animation-duration: 0.25s;
   animation-name: iconEnlargeHold;
   animation-iteration-count: 1;
   animation-direction: alternate;
 }
-
-.nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
+body:not(.pt-disable-animations) .nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
   animation-duration: 1s;
   animation-name: iconEnlarge;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
-.modal button:hover,
-.search-result-file-match-destination-file:hover {
+body:not(.pt-disable-animations) .modal button:hover,
+body:not(.pt-disable-animations) .graph-controls button:hover,
+body:not(.pt-disable-animations) .search-result-file-match-destination-file:hover {
   animation-fill-mode: forwards;
   animation-duration: 0.25s;
   animation-name: iconEnlargeHold;
@@ -5301,6 +5288,21 @@ div.notice-container div.notice {
   margin-top: unset;
   margin-left: -3px;
   border-left: 5px solid var(--table-border-color);
+}
+
+/* #endregion */
+/* #region  [UI] Drag Ghost */
+.drag-ghost {
+  background: var(--background-secondary-blur);
+  border: 2px solid var(--table-border-color);
+  backdrop-filter: blur(var(--blur-intensity));
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow-popup);
+  color: var(--text-normal);
+  font-weight: 600;
+  padding: 5px 14px;
+  animation: pop-down 200ms forwards ease-in-out;
 }
 
 /* #endregion */
@@ -13366,6 +13368,9 @@ div.kanban-plugin__item-button-wrapper {
 div.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
   color: var(--text-normal);
 }
+div.kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
+  box-shadow: var(--drop-shadow-popup);
+}
 div.kanban-plugin__date-picker .flatpickr-calendar {
   background: var(--background-secondary-blur);
   border: 1px solid var(--background-secondary);
@@ -20238,12 +20243,6 @@ settings:
         level: 1
         collapsed: true
     -
-        id: pt-remove-blur
-        title: Remove Blurred Background Effect
-        description: Remove the blur background in all elements that use it by making them opaque.
-        default: false
-        type: class-toggle
-    - 
         id: accent-colors-styles
         title: Accent Colors and Styles
         description: Adjust the Accent Color and Styles used throughout the UI.
@@ -21229,6 +21228,25 @@ settings:
         description: Makes the Folder Icons inherit the UI Accent Color.
         type: class-toggle
         default: true
+    -
+        id: feature-toggles
+        title: Feature Toggles
+        description: Disable certain aspects of the theme.
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: pt-disable-blur
+        title: Disable Blurred Background Effect
+        description: Disables the blur background in all elements that use it by making them opaque.
+        default: false
+        type: class-toggle
+    - 
+        id: pt-disable-animations
+        title: Disable Animations
+        description: Disables all animations added by Prism (default Obsidian animations remain).
+        default: false
+        type: class-toggle
 */
 /* #endregion */
 /* #region [Info] Hub Plugin Compatibility */
