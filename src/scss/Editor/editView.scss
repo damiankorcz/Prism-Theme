@@ -5,11 +5,6 @@
 */
 
 /* #region  [Editor] Edit Base */
-.cm-s-obsidian .cm-header,
-.cm-s-obsidian .cm-strong {
-	font-weight: 600;
-}
-
 .cm-s-obsidian span.cm-builtin,
 .cm-s-obsidian span.cm-hr {
 	color: var(--table-border-color);
@@ -84,10 +79,6 @@
 	color: var(--interactive-accent-hover);
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-codeblock .cm-fold-indicator .collapse-indicator {
-	padding-right: 11px;
-}
-
 .cm-gutter div.cm-gutterElement {
 	display: flex;
 	align-content: center;
@@ -98,6 +89,18 @@
 
 .markdown-source-view.mod-cm6 .cm-scroller {
 	padding: 10px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line {
+	padding: unset;
+}
+
+.cm-s-obsidian span.cm-url {
+	color: var(--interactive-accent-text);
+
+	&:hover {
+		color: var(--interactive-accent-hover);
+	}
 }
 /* #endregion */
 
