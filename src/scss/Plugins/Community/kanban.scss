@@ -21,6 +21,10 @@ div.kanban-plugin__ {
 		&-header-wrapper {
 			background: var(--background-primary);
 			border-radius: var(--border-radius);
+
+			.markdown-preview-view.kanban-plugin__markdown-preview-view {
+				line-height: initial;
+			}
 		}
 
 		&-grip {
@@ -117,9 +121,18 @@ div.kanban-plugin__ {
 	}
 }
 
-div.modal.kanban-plugin__board-settings-modal .modal-content {
-	padding: 0px 25px;
-	margin: 40px 16px 10px 40px;
+div.modal.kanban-plugin__board-settings-modal {
+    width: 80vw;
+    height: 80vh;
+    max-height: 1000px;
+    max-width: 1400px;
+    box-shadow: var(--drop-shadow-popup);
+    border-radius: var(--border-radius);
+	
+	.modal-content {
+		padding: 0px 25px;
+		margin: 40px 16px 10px 40px;
+	}
 }
 /* #endregion */
 
