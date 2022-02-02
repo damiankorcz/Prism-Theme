@@ -59,6 +59,36 @@
     }
 }
 
+@keyframes floatIconUp {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-3px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+
+@keyframes floatIconDown {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(3px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}
+
 @keyframes floatIconRight {
 	0% {
 		
@@ -161,12 +191,16 @@
     }
 }
 
-.side-dock-ribbon-action.separator:not(.is-collapsed):hover {
-
+.side-dock-ribbon-action.separator:not(.is-collapsed):hover svg{
+    animation-duration: 0.25s;
+    animation-name: floatIconUp;
+    animation-iteration-count: 2;
 }
 
-.side-dock-ribbon-action.separator.is-collapsed:hover {
-
+.side-dock-ribbon-action.separator.is-collapsed:hover svg {
+    animation-duration: 0.25s;
+    animation-name: floatIconDown;
+    animation-iteration-count: 2;
 }
 
 .titlebar-button {
@@ -188,9 +222,10 @@
 .tree-item-self:not(.search-result-file-title,[aria-label="Click to collapse"]):hover,
 .community-theme:hover,
 .community-plugin-item:hover,
-.search-result-file-match:hover.arrow.right:hover,
+.search-result-file-match:hover,
 .kanban-plugin__item:hover,
-.kanban-plugin__new-item-button:hover {
+.kanban-plugin__new-item-button:hover,
+.workspace-leaf-content[data-type="dangling-links"] li:hover {
     animation-fill-mode: forwards;
     animation-duration: 0.25s;
     animation-name: iconEnlargeHold;
