@@ -1,21 +1,21 @@
 /* #region  [UI] File Preview Popover */
-.popover.hover-popover {
-	transform: scale(0.9);
-	min-height: 500px;
-	width: 500px;
-	overflow: auto;
-	padding-left: 10px;
-	box-shadow: var(--drop-shadow-popup);
-	clear: both;
+.popover {
+	background-color: var(--page-background-color);
 
-	.markdown-embed {
-		min-height: 499px;
-		height: 499px;
+	&.hover-popover {
+		transform: scale(0.9);
+		min-height: 500px;
+		width: 500px;
+		overflow: auto;
+		padding: 2px 0px 2px 10px;
+		box-shadow: var(--drop-shadow-popup);
+		clear: both;
+		border: 2px solid var(--table-border-color);
+	
+		.markdown-embed {
+			min-height: 491px;
+			height: 491px;
+		}
 	}
-}
-
-/* Hides the second limited scrollbar in popovers */
-.markdown-embed-content > div.markdown-preview-view {
-	overflow: visible;
 }
 /* #endregion */
