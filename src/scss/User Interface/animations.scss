@@ -16,8 +16,8 @@ body:not(.pt-disable-animations) {
             transform: translatey(0px);
         }
         50% {
-            transform: scale(1.08);
-            filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
+            transform: scale(1.078);
+            // filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
         }
         100% {
             transform: translatey(0px);
@@ -101,6 +101,7 @@ body:not(.pt-disable-animations) {
         animation-name: fontEnlargeHighlight;
         animation-iteration-count: 4;
         animation-direction: alternate;
+        will-change: transform;
     }
     
     .horizontal-tab-nav-item:hover,
@@ -110,18 +111,21 @@ body:not(.pt-disable-animations) {
         animation-name: iconEnlargeHoldBold;
         animation-iteration-count: 1;
         animation-direction: alternate;
+        will-change: transform;
     }
     
     .workspace-ribbon-collapse-btn[aria-label-position="right"]:hover svg {
         animation-duration: 0.25s;
         animation-name: floatIconRight;
         animation-iteration-count: 2;
+        will-change: transform;
     }
     
     .workspace-ribbon-collapse-btn[aria-label-position="left"]:hover svg {
         animation-duration: 0.25s;
         animation-name: floatIconLeft;
         animation-iteration-count: 2;
+        will-change: transform;
     }
     
     .setting-add-hotkey-button:hover svg,
@@ -137,6 +141,7 @@ body:not(.pt-disable-animations) {
         animation-duration: 0.25s;
         animation-name: iconEnlarge;
         animation-iteration-count: 2;
+        will-change: transform;
     }
     
     .workspace-leaf-content[data-type="calendar"] {
@@ -144,26 +149,30 @@ body:not(.pt-disable-animations) {
             animation-duration: 0.25s;
             animation-name: floatIconRight;
             animation-iteration-count: 2;
+            will-change: transform;
         }
     
         .arrow.right:hover svg {
             animation-duration: 0.25s;
             animation-name: floatIconRight;
             animation-iteration-count: 2;
+            will-change: transform;
         }
     
         .reset-button:hover {
             animation-duration: 0.25s;
             animation-name: iconEnlarge;
             animation-iteration-count: 2;
+            will-change: transform;
         }
     
         .day:hover {
             animation-fill-mode: forwards;
-            animation-duration: 0.25s;
+            animation-duration: 0.15s;
             animation-name: iconEnlargeHoldBold;
             animation-iteration-count: 1;
             animation-direction: alternate;
+            will-change: transform;
         }
     }
     
@@ -171,12 +180,14 @@ body:not(.pt-disable-animations) {
         animation-duration: 0.25s;
         animation-name: floatIconUp;
         animation-iteration-count: 2;
+        will-change: transform;
     }
     
     .side-dock-ribbon-action.separator.is-collapsed:hover svg {
         animation-duration: 0.25s;
         animation-name: floatIconDown;
         animation-iteration-count: 2;
+        will-change: transform;
     }
     
     .titlebar-button {
@@ -184,12 +195,14 @@ body:not(.pt-disable-animations) {
             animation-duration: 0.25s;
             animation-name: floatIconRight;
             animation-iteration-count: 2;
+            will-change: transform;
         }
     
         &.mod-forward:hover svg {
             animation-duration: 0.25s;
             animation-name: floatIconLeft;
             animation-iteration-count: 2;
+            will-change: transform;
         }
     }
     
@@ -203,7 +216,7 @@ body:not(.pt-disable-animations) {
     .kanban-plugin__new-item-button:hover,
     .workspace-leaf-content[data-type="dangling-links"] li:hover {
         animation-fill-mode: forwards;
-        animation-duration: 0.25s;
+        animation-duration: 0.15s;
         animation-name: iconEnlargeHold;
         animation-iteration-count: 1;
         animation-direction: alternate;
@@ -220,10 +233,11 @@ body:not(.pt-disable-animations) {
     .graph-controls button:hover,
     .search-result-file-match-destination-file:hover {
         animation-fill-mode: forwards;
-        animation-duration: 0.25s;
+        animation-duration: 0.15s;
         animation-name: iconEnlargeHold;
         animation-iteration-count: 1;
         animation-direction: alternate;
+        will-change: transform;
     }
     
     // .checkbox-container.is-enabled:hover:after {

@@ -186,7 +186,7 @@ a:hover {
   --default-font: "Source Sans 3", sans-serif;
   --font-family-ui: "Source Sans 3", sans-serif;
   --font-family-edit: "Source Sans 3", sans-serif;
-  --font-family-preview: "Source Serif 4", serif;
+  --font-family-preview: "Source Sans 3", sans-serif;
   --font-family-code: "Fira Code", monospace;
   /* Graph View - Light Theme */
   --graph-fill-opacity-lt: 1;
@@ -2592,6 +2592,9 @@ a:hover {
   align-self: center;
   color: var(--interactive-accent-text);
   font-weight: 600;
+  line-height: initial;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 /* Pane Relief */
@@ -2797,42 +2800,42 @@ body.pt-titlebar-hide-text .titlebar-text {
 
 /* #endregion */
 /* #region  [Titlebar] Solid */
-.pt-solid-titlebar-dt.theme-dark.pt-titlebar-custom-dt div.titlebar {
+body.pt-solid-titlebar-dt.theme-dark.pt-titlebar-custom-dt div.titlebar {
   background-color: var(--titlebar-background-color-dt);
   box-shadow: var(--drop-shadow);
 }
-.pt-solid-titlebar-dt.theme-dark.pt-titlebar-default-dt div.titlebar {
+body.pt-solid-titlebar-dt.theme-dark.pt-titlebar-default-dt div.titlebar {
   background-color: var(--tab-label-background-color);
   box-shadow: var(--drop-shadow);
 }
-.pt-solid-titlebar-dt.theme-dark div.titlebar-text,
-.pt-solid-titlebar-dt.theme-dark div.titlebar-button-container.mod-left,
-.pt-solid-titlebar-dt.theme-dark div.titlebar-button-container.mod-right {
+body.pt-solid-titlebar-dt.theme-dark div.titlebar-text,
+body.pt-solid-titlebar-dt.theme-dark div.titlebar-button-container.mod-left,
+body.pt-solid-titlebar-dt.theme-dark div.titlebar-button-container.mod-right {
   background-color: transparent;
   box-shadow: unset;
 }
-.pt-solid-titlebar-dt.theme-dark .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
-.pt-solid-titlebar-dt.theme-dark .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
-.pt-solid-titlebar-dt.theme-dark .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
+body.pt-solid-titlebar-dt.theme-dark .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
+body.pt-solid-titlebar-dt.theme-dark .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
+body.pt-solid-titlebar-dt.theme-dark .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
   border-radius: unset;
 }
-.pt-solid-titlebar-lt.theme-light.pt-titlebar-custom-lt div.titlebar {
+body.pt-solid-titlebar-lt.theme-light.pt-titlebar-custom-lt div.titlebar {
   background-color: var(--titlebar-background-color-lt);
   box-shadow: var(--drop-shadow);
 }
-.pt-solid-titlebar-lt.theme-light.pt-titlebar-default-lt div.titlebar {
+body.pt-solid-titlebar-lt.theme-light.pt-titlebar-default-lt div.titlebar {
   background-color: var(--tab-label-background-color);
   box-shadow: var(--drop-shadow);
 }
-.pt-solid-titlebar-lt.theme-light div.titlebar-text,
-.pt-solid-titlebar-lt.theme-light div.titlebar-button-container.mod-left,
-.pt-solid-titlebar-lt.theme-light div.titlebar-button-container.mod-right {
+body.pt-solid-titlebar-lt.theme-light div.titlebar-text,
+body.pt-solid-titlebar-lt.theme-light div.titlebar-button-container.mod-left,
+body.pt-solid-titlebar-lt.theme-light div.titlebar-button-container.mod-right {
   background-color: transparent;
   box-shadow: unset;
 }
-.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
-.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
-.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
+body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.titlebar-button.mod-minimize:hover,
+body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.titlebar-button.mod-maximize:hover,
+body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.titlebar-button.mod-close:hover {
   border-radius: unset;
 }
 
@@ -3653,8 +3656,7 @@ body:not(.pt-disable-animations) {
     transform: translatey(0px);
   }
   50% {
-    transform: scale(1.08);
-    filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
+    transform: scale(1.078);
   }
   100% {
     transform: translatey(0px);
@@ -3731,6 +3733,7 @@ body:not(.pt-disable-animations) .kanban-plugin__lane-header-wrapper p:hover {
   animation-name: fontEnlargeHighlight;
   animation-iteration-count: 4;
   animation-direction: alternate;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .horizontal-tab-nav-item:hover,
 body:not(.pt-disable-animations) .vertical-tab-nav-item:hover {
@@ -3739,16 +3742,19 @@ body:not(.pt-disable-animations) .vertical-tab-nav-item:hover {
   animation-name: iconEnlargeHoldBold;
   animation-iteration-count: 1;
   animation-direction: alternate;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .workspace-ribbon-collapse-btn[aria-label-position=right]:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .workspace-ribbon-collapse-btn[aria-label-position=left]:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconLeft;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .setting-add-hotkey-button:hover svg,
 body:not(.pt-disable-animations) .clickable-icon:hover svg,
@@ -3763,48 +3769,57 @@ body:not(.pt-disable-animations) .kanban-plugin__item-postfix-button:hover svg {
   animation-duration: 0.25s;
   animation-name: iconEnlarge;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .arrow:not(.right):hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .arrow.right:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .reset-button:hover {
   animation-duration: 0.25s;
   animation-name: iconEnlarge;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .day:hover {
   animation-fill-mode: forwards;
-  animation-duration: 0.25s;
+  animation-duration: 0.15s;
   animation-name: iconEnlargeHoldBold;
   animation-iteration-count: 1;
   animation-direction: alternate;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconUp;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .side-dock-ribbon-action.separator.is-collapsed:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconDown;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .titlebar-button.mod-back:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .titlebar-button.mod-forward:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconLeft;
   animation-iteration-count: 2;
+  will-change: transform;
 }
 body:not(.pt-disable-animations) .nav-file-title:hover,
 body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]):hover,
@@ -3816,7 +3831,7 @@ body:not(.pt-disable-animations) .kanban-plugin__item:hover,
 body:not(.pt-disable-animations) .kanban-plugin__new-item-button:hover,
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dangling-links] li:hover {
   animation-fill-mode: forwards;
-  animation-duration: 0.25s;
+  animation-duration: 0.15s;
   animation-name: iconEnlargeHold;
   animation-iteration-count: 1;
   animation-direction: alternate;
@@ -3831,10 +3846,11 @@ body:not(.pt-disable-animations) .modal button:hover,
 body:not(.pt-disable-animations) .graph-controls button:hover,
 body:not(.pt-disable-animations) .search-result-file-match-destination-file:hover {
   animation-fill-mode: forwards;
-  animation-duration: 0.25s;
+  animation-duration: 0.15s;
   animation-name: iconEnlargeHold;
   animation-iteration-count: 1;
   animation-direction: alternate;
+  will-change: transform;
 }
 
 /*
@@ -5134,23 +5150,22 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 /* #endregion */
 /* #region  [UI] File Preview Popover */
+.popover {
+  background-color: var(--page-background-color);
+}
 .popover.hover-popover {
   transform: scale(0.9);
   min-height: 500px;
   width: 500px;
   overflow: auto;
-  padding-left: 10px;
+  padding: 2px 0px 2px 10px;
   box-shadow: var(--drop-shadow-popup);
   clear: both;
+  border: 2px solid var(--table-border-color);
 }
 .popover.hover-popover .markdown-embed {
-  min-height: 499px;
-  height: 499px;
-}
-
-/* Hides the second limited scrollbar in popovers */
-.markdown-embed-content > div.markdown-preview-view {
-  overflow: visible;
+  min-height: 491px;
+  height: 491px;
 }
 
 /* #endregion */
@@ -5563,16 +5578,10 @@ div.notice-container div.notice {
   justify-content: center;
 }
 
-.theme-light .markdown-embed-content > div.markdown-preview-view,
-.theme-light .markdown-source-view .markdown-embed,
-.theme-light .markdown-source-view .file-embed {
-  background-color: var(--background-primary);
-}
-
-.theme-dark .markdown-embed-content > div.markdown-preview-view,
-.theme-dark .markdown-source-view .markdown-embed,
-.theme-dark .markdown-source-view .file-embed {
-  background-color: var(--background-secondary-alt);
+.markdown-embed-content > div.markdown-preview-view,
+.markdown-source-view .markdown-embed,
+.markdown-source-view .file-embed {
+  background-color: var(--page-background-color);
 }
 
 .markdown-embed .markdown-preview-sizer.markdown-preview-section {
@@ -13848,6 +13857,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .reset-button {
   color: var(--text-normal);
+  margin: unset;
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .reset-button:hover {
   color: var(--interactive-accent-hover);
