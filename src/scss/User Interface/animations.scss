@@ -11,12 +11,28 @@ body:not(.pt-disable-animations) {
         }
     }
     
-    @keyframes iconEnlarge {
+    @keyframes iconEnlargeIcon {
         0% {
             transform: translatey(0px);
         }
         50% {
             transform: scale(1.128);
+            stroke-width: 3px;
+            // filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
+        }
+        100% {
+            transform: translatey(0px);
+        }
+    }
+
+        
+    @keyframes iconEnlargeText {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: scale(1.058);
+            stroke-width: 3px;
             // filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
         }
         100% {
@@ -33,7 +49,33 @@ body:not(.pt-disable-animations) {
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
         }
     }
-    
+
+    @keyframes iconEnlargeHoldDropdown {
+        0% {
+            transform: translatey(0px);
+        }
+        25% {
+            background-position-y: 70%;
+            transform: scale(1.03);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        50% {
+            background-position-y: 60%;
+            transform: scale(1.03);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        75% {
+            background-position-y: 70%;
+            transform: scale(1.03);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        100% {
+            background-position-y: 60%;
+            transform: scale(1.03);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+    }
+        
     @keyframes iconEnlargeHoldBold {
         0% {
             transform: translatey(0px);
@@ -96,7 +138,8 @@ body:not(.pt-disable-animations) {
     }
     
     .view-header-title:hover,
-    .kanban-plugin__lane-header-wrapper p:hover {
+    .kanban-plugin__lane-header-wrapper p:hover,
+    input:hover {
         animation-duration: 0.15s;
         animation-name: fontEnlargeHighlight;
         animation-iteration-count: 4;
@@ -137,9 +180,10 @@ body:not(.pt-disable-animations) {
     .workspace-tab-header:hover svg,
     .graph-controls-button:hover svg,
     .kanban-plugin__lane-settings-button:hover svg,
-    .kanban-plugin__item-postfix-button:hover svg {
+    .kanban-plugin__item-postfix-button:hover svg,
+    .modal-close-button:hover {
         animation-duration: 0.25s;
-        animation-name: iconEnlarge;
+        animation-name: iconEnlargeIcon;
         animation-iteration-count: 2;
         will-change: transform;
     }
@@ -161,7 +205,7 @@ body:not(.pt-disable-animations) {
     
         .reset-button:hover {
             animation-duration: 0.25s;
-            animation-name: iconEnlarge;
+            animation-name: iconEnlargeText;
             animation-iteration-count: 2;
             will-change: transform;
         }
@@ -214,7 +258,9 @@ body:not(.pt-disable-animations) {
     .search-result-file-match:hover,
     .kanban-plugin__item:hover,
     .kanban-plugin__new-item-button:hover,
-    .workspace-leaf-content[data-type="dangling-links"] li:hover {
+    .workspace-leaf-content[data-type="dangling-links"] li:hover,
+    div#quick-explorer .explorable:hover,
+    .setting-item-control input.slider:hover {
         animation-fill-mode: forwards;
         animation-duration: 0.15s;
         animation-name: iconEnlargeHold;
@@ -224,7 +270,7 @@ body:not(.pt-disable-animations) {
     
     .nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
         animation-duration: 1s;
-        animation-name: iconEnlarge;
+        animation-name: iconEnlargeIcon;
         animation-iteration-count: infinite;
         animation-direction: alternate;
     }
@@ -240,16 +286,38 @@ body:not(.pt-disable-animations) {
         will-change: transform;
     }
     
-    // .checkbox-container.is-enabled:hover:after {
-    //     animation-duration: 0.3s;
-    //     animation-name: floatIconRight;
-    //     animation-iteration-count: 2;
-    // }
+
+    @keyframes floatIconRight2 {
+        0% {
+            transform: translatex(20px);
+        }
+        50% {
+            transform: translatex(17px);
+            filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
+        }
+        100% {
+            transform: translatex(20px);
+        }
+    }
+
+    .checkbox-container.is-enabled:hover:after {
+        animation-duration: 0.3s;
+        animation-name: floatIconRight2;
+        animation-iteration-count: 2;
+    }
     
-    // .checkbox-container:not(.is-enabled):hover:after {
-    //     animation-duration: 0.3s;
-    //     animation-name: floatIconLeft;
-    //     animation-iteration-count: 2;
-    // }
+    .checkbox-container:not(.is-enabled):hover:after {
+        animation-duration: 0.3s;
+        animation-name: floatIconLeft;
+        animation-iteration-count: 2;
+    }
+
+    .dropdown:hover {
+        animation-fill-mode: forwards;
+        animation-duration: 0.6s;
+        animation-name: iconEnlargeHoldDropdown;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+    }
     /* #endregion */
 }
