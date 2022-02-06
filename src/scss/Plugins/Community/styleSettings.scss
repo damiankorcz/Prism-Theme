@@ -45,41 +45,22 @@ div.style-settings-container {
 		}
 	}
 
-	&[data-id="obsidian-prism-theme"] {
-		display: flex;
-		flex-wrap: wrap;
-		padding-top: unset;
-
-		&::before {
-			content: "Visit the Wiki section of the GitHub Repository for additional detailed descriptions with images/GIFs of all Style Settings Options in Prism. \A https://github.com/damiankorcz/Prism-Theme/wiki";
-			user-select: text;
-			color: var(--highlight-text-normal);
-			text-align: center;
-			font-variation-settings: 'wght' 600;
-			font-size: 0.875em;
-			white-space: pre-wrap;
-			pointer-events: none;
-			height: fit-content;
-			width: 100%;
-			padding: 10px;
-			margin-bottom: 10px;
-			border-radius: var(--border-radius);
-			border: var(--border-size) solid var(--color-dark-yellow);
-			background-color: var(--color-yellow);
-		}
-	}
-
 	&:not(.is-collapsed) .style-settings-collapse-indicator {
 		color: var(--interactive-accent-text);
 	}
 }
 
-.workspace-leaf-content[data-type="style-settings"] .view-content {
-	/* Style Settings open as a note */
-	padding: 20px 35px;
+div.workspace-leaf-content[data-type="style-settings"] {
+	background-color: var(--background-secondary) !important;
 
-	.style-settings-container div.setting-item:not(.setting-item-heading) {
-		flex-direction: row;
+	.view-content {
+		/* Style Settings open as a note */
+		padding: 20px 35px;
+		background-color: var(--background-secondary);
+	
+		.style-settings-container div.setting-item:not(.setting-item-heading) {
+			flex-direction: row;
+		}
 	}
 }
 
@@ -96,5 +77,218 @@ div.setting-item,
 div.style-settings-heading {
 	border-top: unset;
 	border-bottom: unset;
+}
+
+.setting-item.style-settings-heading[data-id="editor"] {
+	.style-settings-collapse-indicator:after {
+		content: "📝";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-left: 8px;
+	}
+}
+
+.setting-item.style-settings-heading[data-id="graph-view"] {
+	.style-settings-collapse-indicator:after {
+		content: "🕸️";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-left: 8px;
+	}
+}
+
+.setting-item.style-settings-heading[data-id="user-interface"] {
+	.style-settings-collapse-indicator:after {
+		content: "👆";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-left: 8px;
+	}
+}
+
+.setting-item.style-settings-heading[data-id="plugins"] {
+	.style-settings-collapse-indicator:after {
+		content: "🔌";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-left: 8px;
+	}
+}
+
+.setting-item.style-settings-heading[data-id="feature-toggles"] {
+	.style-settings-collapse-indicator:after {
+		content: "🪠";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-left: 8px;
+	}
+}
+
+.style-settings-heading[data-id="prism-wiki"] {
+	border-top: 2px solid var(--table-border-color);
+	margin-top: 10px;
+	margin-bottom: 0px;
+    cursor: text;
+	pointer-events: none;
+
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+
+	.setting-item-name:before {
+		content: "📖";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-right: 8px;
+	}
+
+
+}
+
+.style-settings-heading[data-id="prism-wiki-link"] {
+	cursor: default;
+	margin-bottom: 0;
+
+	.setting-item-name,
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+
+	.setting-item-description {
+		cursor: text;
+		user-select: all;
+		color: var(--interactive-accent-text);
+	}
+}
+
+.style-settings-heading[data-id="support"] {
+	pointer-events: none;
+
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+
+	.setting-item-name:before {
+		content: "❤️";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-right: 8px;
+	}
+}
+.style-settings-heading[data-id="support-star-repo"],
+.style-settings-heading[data-id="support-submit-issue"],
+.style-settings-heading[data-id="support-donate"] {
+	margin-bottom: 0px;
+
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+}
+
+.setting-item.style-settings-heading[data-id="support-star-repo"] {
+	cursor: default;
+
+	&:hover div.setting-item-name {
+		color: var(--text-normal);
+	}
+
+	.setting-item-name:before {
+		content: "⭐";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-right: 8px;
+	}
+
+	.setting-item-description {
+		cursor: text;
+		user-select: all;
+		color: var(--interactive-accent-text);
+	}
+}
+
+.setting-item.style-settings-heading[data-id="support-submit-issue"] {
+	cursor: default;
+
+	&:hover div.setting-item-name {
+		color: var(--text-normal);
+	}
+
+	.setting-item-name:before {
+		content: "⚠️";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-right: 8px;
+	}
+
+	.setting-item-description {
+		cursor: text;
+		user-select: all;
+		color: var(--interactive-accent-text);
+	}
+} 
+
+.setting-item.style-settings-heading[data-id="support-donate"] {
+	cursor: default;
+
+	&:hover div.setting-item-name {
+		color: var(--text-normal);
+	}
+
+	.setting-item-name:before {
+		content: "☕";
+		font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+		font-weight: initial;
+		color: unset;
+		display: inline-block;
+		height: fit-content;
+		width: 20px;
+		padding-right: 8px;
+	}
+
+	.setting-item-description {
+		cursor: text;
+		user-select: all;
+		color: var(--interactive-accent-text);
+	}
 }
 /* #endregion */
