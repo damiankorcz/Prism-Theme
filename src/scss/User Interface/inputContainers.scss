@@ -8,7 +8,17 @@ input[type="number"] {
 	background-color: var(--background-primary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	max-width: 208px;
+}
+
+.mod-settings,
+.workspace-leaf-content[data-type="style-settings"] {
+	input[type="text"],
+	input[type="search"],
+	input[type="email"],
+	input[type="password"],
+	input[type="number"] {
+		max-width: 208px;
+	}
 }
 
 input[type="text"]:hover,
