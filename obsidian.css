@@ -3871,13 +3871,21 @@ body:not(.pt-disable-animations) .side-dock-ribbon-action.separator.is-collapsed
   animation-iteration-count: 2;
 }
 body:not(.pt-disable-animations) .style-settings-heading.is-collapsed:hover .style-settings-collapse-indicator svg,
-body:not(.pt-disable-animations) .nav-files-container .nav-folder.is-collapsed > .nav-folder-title:hover .nav-folder-collapse-indicator svg {
+body:not(.pt-disable-animations) .nav-files-container .nav-folder.is-collapsed > .nav-folder-title:hover .nav-folder-collapse-indicator svg,
+body:not(.pt-disable-animations) .outgoing-link-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
+body:not(.pt-disable-animations) .backlink-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
+body:not(.pt-disable-animations) .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
+body:not(.pt-disable-animations) .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg {
   animation-duration: 0.25s;
   animation-name: floatIconDownIndicator;
   animation-iteration-count: 2;
 }
 body:not(.pt-disable-animations) .style-settings-heading:not(.is-collapsed):hover .style-settings-collapse-indicator svg,
-body:not(.pt-disable-animations) .nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title:hover > .nav-folder-collapse-indicator.collapse-icon svg {
+body:not(.pt-disable-animations) .nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title:hover > .nav-folder-collapse-indicator.collapse-icon svg,
+body:not(.pt-disable-animations) .outgoing-link-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
+body:not(.pt-disable-animations) .backlink-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
+body:not(.pt-disable-animations) .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
+body:not(.pt-disable-animations) .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg {
   animation-duration: 0.25s;
   animation-name: floatIconRightIndicator;
   animation-iteration-count: 2;
@@ -3894,7 +3902,7 @@ body:not(.pt-disable-animations) .titlebar-button.mod-forward:hover svg {
 }
 body:not(.pt-disable-animations) .nav-file-title:hover,
 body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]):hover,
-body:not(.pt-disable-animations) .tree-item-self:not(.search-result-file-title):hover,
+body:not(.pt-disable-animations) .tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"], [aria-label="Click to expand"]):hover,
 body:not(.pt-disable-animations) .community-theme:hover,
 body:not(.pt-disable-animations) .community-plugin-item:hover,
 body:not(.pt-disable-animations) .search-result-file-match:hover,

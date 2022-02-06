@@ -262,14 +262,22 @@ body:not(.pt-disable-animations) {
     }
 
     .style-settings-heading.is-collapsed:hover .style-settings-collapse-indicator svg,
-    .nav-files-container .nav-folder.is-collapsed > .nav-folder-title:hover .nav-folder-collapse-indicator svg {
+    .nav-files-container .nav-folder.is-collapsed > .nav-folder-title:hover .nav-folder-collapse-indicator svg,
+    .outgoing-link-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
+    .backlink-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
+    .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
+    .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg {
         animation-duration: 0.25s;
         animation-name: floatIconDownIndicator;
         animation-iteration-count: 2;
     }
 
     .style-settings-heading:not(.is-collapsed):hover .style-settings-collapse-indicator svg,
-    .nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title:hover > .nav-folder-collapse-indicator.collapse-icon svg {
+    .nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title:hover > .nav-folder-collapse-indicator.collapse-icon svg,
+    .outgoing-link-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
+    .backlink-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
+    .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
+    .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg {
         animation-duration: 0.25s;
         animation-name: floatIconRightIndicator;
         animation-iteration-count: 2;
@@ -280,21 +288,19 @@ body:not(.pt-disable-animations) {
             animation-duration: 0.25s;
             animation-name: floatIconRight;
             animation-iteration-count: 2;
-
         }
     
         &.mod-forward:hover svg {
             animation-duration: 0.25s;
             animation-name: floatIconLeft;
             animation-iteration-count: 2;
-
         }
     }
     
     //.suggestion-item.is-selected:hover
     .nav-file-title:hover,
     .nav-folder-title:not([data-path="/"]):hover,
-    .tree-item-self:not(.search-result-file-title):hover,
+    .tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"], [aria-label="Click to expand"]):hover,
     .community-theme:hover,
     .community-plugin-item:hover,
     .search-result-file-match:hover,
