@@ -3680,7 +3680,7 @@ body:not(.pt-disable-animations) {
     transform: translatey(0px);
   }
   100% {
-    transform: scale(1.03);
+    transform: scale(1.028);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
 }
@@ -3690,22 +3690,22 @@ body:not(.pt-disable-animations) {
   }
   25% {
     background-position-y: 70%;
-    transform: scale(1.03);
+    transform: scale(1.028);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
   50% {
     background-position-y: 60%;
-    transform: scale(1.03);
+    transform: scale(1.028);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
   75% {
     background-position-y: 70%;
-    transform: scale(1.03);
+    transform: scale(1.028);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
   100% {
     background-position-y: 60%;
-    transform: scale(1.03);
+    transform: scale(1.028);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
 }
@@ -3714,7 +3714,7 @@ body:not(.pt-disable-animations) {
     transform: translatey(0px);
   }
   100% {
-    transform: scale(1.03);
+    transform: scale(1.028);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     font-variation-settings: "wght" 500;
   }
@@ -3753,6 +3753,18 @@ body:not(.pt-disable-animations) {
     transform: translatex(0px);
   }
 }
+@keyframes floatIconRightCheckbox {
+  0% {
+    transform: translatex(20px);
+  }
+  50% {
+    transform: translatex(17px);
+    filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
+  }
+  100% {
+    transform: translatex(20px);
+  }
+}
 @keyframes floatIconLeft {
   0% {
     transform: translatex(0px);
@@ -3763,6 +3775,17 @@ body:not(.pt-disable-animations) {
   }
   100% {
     transform: translatex(0px);
+  }
+}
+@keyframes floatIconDownIndicator {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(2px);
+  }
+  100% {
+    transform: translatey(0px);
   }
 }
 body:not(.pt-disable-animations) .view-header-title:hover,
@@ -3849,6 +3872,13 @@ body:not(.pt-disable-animations) .side-dock-ribbon-action.separator.is-collapsed
   animation-iteration-count: 2;
   will-change: transform;
 }
+body:not(.pt-disable-animations) .style-settings-heading.is-collapsed:hover .style-settings-collapse-indicator svg,
+body:not(.pt-disable-animations) .nav-folder.is-collapsed:hover .nav-folder-collapse-indicator svg {
+  animation-duration: 0.25s;
+  animation-name: floatIconDownIndicator;
+  animation-iteration-count: 2;
+  will-change: transform;
+}
 body:not(.pt-disable-animations) .titlebar-button.mod-back:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRight;
@@ -3863,7 +3893,7 @@ body:not(.pt-disable-animations) .titlebar-button.mod-forward:hover svg {
 }
 body:not(.pt-disable-animations) .nav-file-title:hover,
 body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]):hover,
-body:not(.pt-disable-animations) .tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"]):hover,
+body:not(.pt-disable-animations) .tree-item-self:not(.search-result-file-title):hover,
 body:not(.pt-disable-animations) .community-theme:hover,
 body:not(.pt-disable-animations) .community-plugin-item:hover,
 body:not(.pt-disable-animations) .search-result-file-match:hover,
@@ -3872,6 +3902,7 @@ body:not(.pt-disable-animations) .kanban-plugin__new-item-button:hover,
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dangling-links] li:hover,
 body:not(.pt-disable-animations) div#quick-explorer .explorable:hover,
 body:not(.pt-disable-animations) .setting-item-control input.slider:hover {
+  overflow: visible;
   animation-fill-mode: forwards;
   animation-duration: 0.15s;
   animation-name: iconEnlargeHold;
@@ -3894,21 +3925,9 @@ body:not(.pt-disable-animations) .search-result-file-match-destination-file:hove
   animation-direction: alternate;
   will-change: transform;
 }
-@keyframes floatIconRight2 {
-  0% {
-    transform: translatex(20px);
-  }
-  50% {
-    transform: translatex(17px);
-    filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
-  }
-  100% {
-    transform: translatex(20px);
-  }
-}
 body:not(.pt-disable-animations) .checkbox-container.is-enabled:hover:after {
   animation-duration: 0.3s;
-  animation-name: floatIconRight2;
+  animation-name: floatIconRightCheckbox;
   animation-iteration-count: 2;
 }
 body:not(.pt-disable-animations) .checkbox-container:not(.is-enabled):hover:after {
@@ -4148,7 +4167,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
   background-color: var(--background-secondary-alt);
 }
 
-/* option background */
+/* Option background */
 .theme-light .dropdown option {
   background-color: var(--background-primary-alt);
   color: var(--text-normal);
@@ -4558,6 +4577,18 @@ input[type=number] {
   background-color: var(--background-primary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
+}
+
+.mod-settings input[type=text],
+.mod-settings input[type=search],
+.mod-settings input[type=email],
+.mod-settings input[type=password],
+.mod-settings input[type=number],
+.workspace-leaf-content[data-type=style-settings] input[type=text],
+.workspace-leaf-content[data-type=style-settings] input[type=search],
+.workspace-leaf-content[data-type=style-settings] input[type=email],
+.workspace-leaf-content[data-type=style-settings] input[type=password],
+.workspace-leaf-content[data-type=style-settings] input[type=number] {
   max-width: 208px;
 }
 
@@ -6375,6 +6406,11 @@ input.prompt-input {
 
 .nav-folder.mod-root > .nav-folder-children > .nav-file {
   margin-left: unset;
+}
+
+.workspace-leaf-content[data-type=file-explorer] .search-input-container {
+  margin: unset;
+  padding: 0px 0px 10px 0px;
 }
 
 /* #endregion */
@@ -13605,6 +13641,9 @@ div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected {
   color: var(--interactive-accent-text);
   background-color: var(--background-primary);
 }
+div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected .menu-item-icon {
+  color: var(--interactive-accent-text);
+}
 div.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .nav-file-tag {
   color: var(--interactive-accent-text);
   background-color: var(--background-secondary);
@@ -13655,37 +13694,19 @@ div.style-settings-container[data-level="1"], div.style-settings-container[data-
 .setting-item.setting-item-heading.style-settings-heading:hover .setting-item-name {
   color: var(--interactive-accent-text);
 }
-.setting-item.setting-item-heading.style-settings-heading[data-id=obsidian-prism-theme] {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: unset;
-}
-.setting-item.setting-item-heading.style-settings-heading[data-id=obsidian-prism-theme]::before {
-  content: "Visit the Wiki section of the GitHub Repository for additional detailed descriptions with images/GIFs of all Style Settings Options in Prism. \ahttps://github.com/damiankorcz/Prism-Theme/wiki";
-  user-select: text;
-  color: var(--highlight-text-normal);
-  text-align: center;
-  font-variation-settings: "wght" 600;
-  font-size: 0.875em;
-  white-space: pre-wrap;
-  pointer-events: none;
-  height: fit-content;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: var(--border-radius);
-  border: var(--border-size) solid var(--color-dark-yellow);
-  background-color: var(--color-yellow);
-}
 .setting-item.setting-item-heading.style-settings-heading:not(.is-collapsed) .style-settings-collapse-indicator {
   color: var(--interactive-accent-text);
 }
 
-.workspace-leaf-content[data-type=style-settings] .view-content {
+div.workspace-leaf-content[data-type=style-settings] {
+  background-color: var(--background-secondary) !important;
+}
+div.workspace-leaf-content[data-type=style-settings] .view-content {
   /* Style Settings open as a note */
   padding: 20px 35px;
+  background-color: var(--background-secondary);
 }
-.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
+div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
   flex-direction: row;
 }
 
@@ -13702,6 +13723,196 @@ div.setting-item,
 div.style-settings-heading {
   border-top: unset;
   border-bottom: unset;
+}
+
+.setting-item.style-settings-heading[data-id=editor] .style-settings-collapse-indicator:after {
+  content: "📝";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-left: 8px;
+}
+
+.setting-item.style-settings-heading[data-id=graph-view] .style-settings-collapse-indicator:after {
+  content: "🕸️";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-left: 8px;
+}
+
+.setting-item.style-settings-heading[data-id=user-interface] .style-settings-collapse-indicator:after {
+  content: "👆";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-left: 8px;
+}
+
+.setting-item.style-settings-heading[data-id=plugins] .style-settings-collapse-indicator:after {
+  content: "🔌";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-left: 8px;
+}
+
+.setting-item.style-settings-heading[data-id=feature-toggles] .style-settings-collapse-indicator:after {
+  content: "🪠";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-left: 8px;
+}
+
+.style-settings-heading[data-id=prism-wiki] {
+  border-top: 2px solid var(--table-border-color);
+  margin-top: 10px;
+  margin-bottom: 0px;
+  cursor: text;
+  pointer-events: none;
+}
+.style-settings-heading[data-id=prism-wiki] .setting-item-control,
+.style-settings-heading[data-id=prism-wiki] .style-settings-collapse-indicator {
+  display: none;
+}
+.style-settings-heading[data-id=prism-wiki] .setting-item-name:before {
+  content: "📖";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-right: 8px;
+}
+
+.style-settings-heading[data-id=prism-wiki-link] {
+  cursor: default;
+  margin-bottom: 0;
+}
+.style-settings-heading[data-id=prism-wiki-link] .setting-item-name,
+.style-settings-heading[data-id=prism-wiki-link] .setting-item-control,
+.style-settings-heading[data-id=prism-wiki-link] .style-settings-collapse-indicator {
+  display: none;
+}
+.style-settings-heading[data-id=prism-wiki-link] .setting-item-description {
+  cursor: text;
+  user-select: all;
+  color: var(--interactive-accent-text);
+}
+
+.style-settings-heading[data-id=support] {
+  pointer-events: none;
+}
+.style-settings-heading[data-id=support] .setting-item-control,
+.style-settings-heading[data-id=support] .style-settings-collapse-indicator {
+  display: none;
+}
+.style-settings-heading[data-id=support] .setting-item-name:before {
+  content: "❤️";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-right: 8px;
+}
+
+.style-settings-heading[data-id=support-star-repo],
+.style-settings-heading[data-id=support-submit-issue],
+.style-settings-heading[data-id=support-donate] {
+  margin-bottom: 0px;
+}
+.style-settings-heading[data-id=support-star-repo] .setting-item-control,
+.style-settings-heading[data-id=support-star-repo] .style-settings-collapse-indicator,
+.style-settings-heading[data-id=support-submit-issue] .setting-item-control,
+.style-settings-heading[data-id=support-submit-issue] .style-settings-collapse-indicator,
+.style-settings-heading[data-id=support-donate] .setting-item-control,
+.style-settings-heading[data-id=support-donate] .style-settings-collapse-indicator {
+  display: none;
+}
+
+.setting-item.style-settings-heading[data-id=support-star-repo] {
+  cursor: default;
+}
+.setting-item.style-settings-heading[data-id=support-star-repo]:hover div.setting-item-name {
+  color: var(--text-normal);
+}
+.setting-item.style-settings-heading[data-id=support-star-repo] .setting-item-name:before {
+  content: "⭐";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-right: 8px;
+}
+.setting-item.style-settings-heading[data-id=support-star-repo] .setting-item-description {
+  cursor: text;
+  user-select: all;
+  color: var(--interactive-accent-text);
+}
+
+.setting-item.style-settings-heading[data-id=support-submit-issue] {
+  cursor: default;
+}
+.setting-item.style-settings-heading[data-id=support-submit-issue]:hover div.setting-item-name {
+  color: var(--text-normal);
+}
+.setting-item.style-settings-heading[data-id=support-submit-issue] .setting-item-name:before {
+  content: "⚠️";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-right: 8px;
+}
+.setting-item.style-settings-heading[data-id=support-submit-issue] .setting-item-description {
+  cursor: text;
+  user-select: all;
+  color: var(--interactive-accent-text);
+}
+
+.setting-item.style-settings-heading[data-id=support-donate] {
+  cursor: default;
+}
+.setting-item.style-settings-heading[data-id=support-donate]:hover div.setting-item-name {
+  color: var(--text-normal);
+}
+.setting-item.style-settings-heading[data-id=support-donate] .setting-item-name:before {
+  content: "☕";
+  font-family: "Seugoe UI Emoji", "Apple Color Emoji";
+  font-weight: initial;
+  color: unset;
+  display: inline-block;
+  height: fit-content;
+  width: 20px;
+  padding-right: 8px;
+}
+.setting-item.style-settings-heading[data-id=support-donate] .setting-item-description {
+  cursor: text;
+  user-select: all;
+  color: var(--interactive-accent-text);
 }
 
 /* #endregion */
@@ -21446,6 +21657,48 @@ settings:
         description: Disables all animations added by Prism (default Obsidian animations remain).
         default: false
         type: class-toggle
+    -
+        id: prism-wiki
+        title: Prism Wiki
+        description: Visit the Wiki section of the GitHub Repository for additional detailed descriptions with images/GIFs of all Style Settings Options in Prism.
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: prism-wiki-link
+        description: https://github.com/damiankorcz/Prism-Theme/wiki
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: support
+        title: Support the Development of Prism
+        description: If you are enjoying the theme here are some ways to support its development.
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: support-star-repo
+        title: Star the project on GitHub
+        description: https://github.com/damiankorcz/Prism-Theme
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: support-submit-issue
+        title: Submit an issue with the theme 
+        description: https://github.com/damiankorcz/Prism-Theme/issues
+        type: heading
+        level: 2
+        collapsed: true
+    - 
+        id: support-donate
+        title: Buy Me a Coffee!
+        description: https://www.buymeacoffee.com/DamianKorcz
+        type: heading
+        level: 2
+        collapsed: true
+    -
 */
 /* #endregion */
 /* #region [Info] Hub Plugin Compatibility */
