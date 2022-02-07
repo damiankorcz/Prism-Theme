@@ -3324,7 +3324,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   padding: 0px;
   width: 100%;
   height: min-content;
-  z-index: 500;
+  z-index: var(--layer-popover);
   order: 2;
   position: absolute;
   pointer-events: none;
@@ -3343,7 +3343,6 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   display: flex;
   border-radius: var(--border-radius);
   padding: 2px;
-  z-index: 1000;
   order: 2;
   width: fit-content;
   stroke-width: 2px;
@@ -3354,7 +3353,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   display: flex;
   border-radius: var(--border-radius);
   padding: 2px;
-  z-index: 1000;
+  z-index: var(--layer-popover);
   order: 2;
   width: fit-content;
   stroke-width: 2px;
@@ -4380,7 +4379,7 @@ img.community-theme-lightbox {
   height: fit-content;
   width: -webkit-fill-available;
   margin-right: 15px;
-  z-index: 500;
+  z-index: var(--layer-notice);
   display: inline-block;
   text-transform: capitalize;
 }
@@ -6310,7 +6309,7 @@ h6::selection {
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 25px;
   position: relative;
-  z-index: 50;
+  z-index: var(--layer-cover);
   margin-bottom: 8px;
   font-size: 14px;
   font-variation-settings: "wght" 600;
@@ -6728,7 +6727,7 @@ div.graph-controls.is-close {
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 25px;
   position: relative;
-  z-index: 500;
+  z-index: var(--layer-popover);
   margin-bottom: 8px;
   font-size: 14px;
   font-variation-settings: "wght" 600;
@@ -6859,7 +6858,7 @@ div.graph-controls.is-close {
   height: 16px;
   justify-content: center;
   align-items: center;
-  z-index: 50;
+  z-index: var(--layer-popover);
 }
 .workspace-leaf-content[data-type=outline] .tree-item-self .tree-item-icon:after {
   display: none;
@@ -6947,7 +6946,7 @@ div.graph-controls.is-close {
 .workspace-leaf-content[data-type=search] .search-input-container {
   width: 100%;
   margin: 0px;
-  z-index: 1000;
+  z-index: var(--layer-popover);
   background: transparent;
 }
 .workspace-leaf-content[data-type=search] .search-result-container {
@@ -13301,7 +13300,7 @@ div.workspace-tabs, div.workspace-tab-header-container, div.workspace-split.mod-
 .pt-custom-vault-banner.pt-custom-vault-banner-sticky .nav-folder-title[data-path="/"] {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: var(--layer-popover);
 }
 .pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 0;
@@ -13973,7 +13972,7 @@ div.style-settings-heading {
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 15px;
   position: relative;
-  z-index: 500;
+  z-index: var(--layer-cover);
   margin-bottom: 8px;
   font-size: 14px;
   font-variation-settings: "wght" 600;
@@ -14432,7 +14431,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 /* #endregion */
 /* #region  [Plugin - Community] Reminder */
 .date-time-chooser-popup {
-  z-index: 30;
+  z-index: var(--layer-popover);
   border-radius: var(--border-radius);
   border: 1px solid var(--table-border-color);
   background: var(--background-secondary-blur);
