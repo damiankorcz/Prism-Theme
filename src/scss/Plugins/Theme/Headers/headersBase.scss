@@ -1,70 +1,60 @@
 /* #region  [Plugin - Theme] Headers Font Size */
-.cm-s-obsidian .cm-header {
-	font-weight: unset;
-}
-
 .markdown-preview-view {
 	h1 {
 		font-size: var(--h1-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	h2 {
 		font-size: var(--h2-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	h3 {
 		font-size: var(--h3-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	h4 {
 		font-size: var(--h4-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	h5 {
 		font-size: var(--h5-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	h6 {
 		font-size: var(--h6-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 }
 
 .cm-header- {
 	&1 {
 		font-size: var(--h1-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	&2 {
 		font-size: var(--h2-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	&3 {
 		font-size: var(--h3-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	&4 {
 		font-size: var(--h4-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	&5 {
 		font-size: var(--h5-font-size);
-		font-variation-settings: 'wght' 800;
 	}
 
 	&6 {
 		font-size: var(--h6-font-size);
-		font-variation-settings: 'wght' 800;
 	}
+}
+
+.cm-s-obsidian .cm-header,
+.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+	font-weight: unset;
+	font-variation-settings: 'wght' 800;
 }
 
 /* Headers (Legacy Edit Mode) */
@@ -84,7 +74,6 @@
 		display: block;
 		padding: 0px 4px;
 		font-weight: unset;
-		font-variation-settings: 'wght' 800;
 		z-index: 1;
 	}
 }
@@ -93,8 +82,6 @@
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
 	position: relative;
 	padding: 0px 4px;
-	font-weight: unset;
-	font-variation-settings: 'wght' 800;
 	z-index: 1;
 }
 
