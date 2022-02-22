@@ -73,6 +73,7 @@ input[type=number],
 textarea,
 button,
 .setting-hotkey,
+.suggestion-hotkey,
 .view-header-title {
   font-family: var(--font-family-ui);
 }
@@ -3339,6 +3340,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .workspace-leaf-content[data-type=search] .nav-buttons-container,
 .workspace-leaf-content[data-type=starred] .nav-buttons-container,
 .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
+.workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
 .embedded-backlinks .nav-buttons-container {
   display: flex;
   border-radius: var(--border-radius);
@@ -3378,17 +3380,13 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   -webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=tag] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=search] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=starred] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=tag] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=search] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=starred] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=backlink] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=tag] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=search] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=starred] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=dangling-links] .nav-header {
   border: 1px solid transparent;
   background-color: var(--tab-label-background-color);
@@ -3396,17 +3394,13 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   box-shadow: var(--drop-shadow-popup);
 }
 
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=tag] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=search] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=starred] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=tag] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=search] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=starred] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=backlink] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=tag] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=search] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=starred] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header {
   border: 1px solid var(--tab-label-background-color);
   background: var(--background-secondary-blur);
@@ -3414,7 +3408,6 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   box-shadow: var(--drop-shadow-popup);
 }
-
 .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header {
   width: fit-content;
@@ -3430,18 +3423,14 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   width: 32px;
   height: 32px;
 }
-
 .nav-action-button svg {
   height: 17px;
   width: 17px;
 }
-
-.nav-action-button:hover,
-.nav-action-button:hover svg {
+.nav-action-button:hover, .nav-action-button:hover svg {
   fill: var(--interactive-accent-hover);
   color: var(--interactive-accent-hover);
 }
-
 .nav-action-button.is-active {
   background-color: var(--interactive-accent);
   color: var(--text-normal);
@@ -3449,20 +3438,16 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 /* #endregion */
 /* #region  [Nav Header] Position Top */
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   position: unset;
   order: 0;
 }
-
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   top: 5px;
@@ -3470,7 +3455,15 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   order: 0;
   position: sticky;
 }
-
+.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content .search-input-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content .search-input-container {
+  padding: 10px 0px 10px 0px;
+}
+.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button {
+  right: 12px;
+  top: 13px;
+}
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .nav-files-container,
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .item-list,
@@ -3484,32 +3477,18 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   margin-top: calc(var(--window-gap) / 2);
 }
 
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content .search-input-container,
-.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content .search-input-container {
-  padding: 10px 0px 10px 0px;
-}
-
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button,
-.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button {
-  right: 12px;
-  top: 13px;
-}
-
 /* #endregion */
 /* #region  [Nav Header] Position Bottom */
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   bottom: calc(10px + var(--scroll-bar-size));
   margin-right: calc(10px + var(--scroll-bar-size));
 }
-
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   bottom: 0px;
@@ -3519,20 +3498,16 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   position: sticky;
 }
 
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink]:hover .nav-header,
+.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer]:hover .nav-header, .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag]:hover .nav-header, .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search]:hover .nav-header, .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred]:hover .nav-header, .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink]:hover .nav-header, .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred]:hover .nav-header,
-.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink]:hover .nav-header {
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink]:hover .nav-header,
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   bottom: calc(10px + var(--scroll-bar-size-hover));
   margin-right: calc(10px + var(--scroll-bar-size-hover));
 }
-
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links]:hover .nav-header,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links]:hover .nav-header {
   bottom: calc(10px + var(--scroll-bar-size-hover));
@@ -3550,6 +3525,19 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children {
   padding-bottom: 65px;
 }
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-input-container,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-input-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-input-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-input-container {
+  padding-bottom: calc(var(--window-gap) / 2);
+}
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button {
+  right: 12px;
+  top: 3px;
+}
 
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .nav-files-container,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .tag-container,
@@ -3564,32 +3552,17 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   padding-bottom: 75px;
 }
 
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-input-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-input-container {
-  padding-bottom: calc(var(--window-gap) / 2);
-}
-
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content .search-input-clear-button,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content .search-input-clear-button {
-  right: 12px;
-  top: 3px;
-}
-
 /* #endregion */
 /* #region  [Nav Header] Align Left */
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header, .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header, .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header, .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header, .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header, .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header,
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
+.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   justify-content: flex-start;
 }
-
 .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   margin-right: auto;
@@ -3597,19 +3570,15 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 /* #endregion */
 /* #region  [Nav Header] Align Center */
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header, .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header, .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header, .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header, .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header, .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header,
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
+.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   justify-content: center;
 }
-
 .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   margin-left: auto;
@@ -3618,19 +3587,15 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 /* #endregion */
 /* #region  [Nav Header] Align Right */
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header,
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header,
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-header, .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-header, .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-header, .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-header, .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-header, .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header,
 .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-header,
 .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-header,
 .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-header,
 .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-header,
-.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header {
+.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-header,
+.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   justify-content: flex-end;
 }
-
 .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
 .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   margin-left: auto;
@@ -14512,6 +14477,47 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 
 /* #endregion */
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root {
+  padding-bottom: unset;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root > .nav-folder-title {
+  margin: unset;
+  align-items: center;
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 10px;
+  height: fit-content;
+  width: fit-content;
+  min-width: -webkit-fill-available;
+  border: unset;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content {
+  margin: 0 auto;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root > .nav-folder-title:hover {
+  animation: unset;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root > .nav-folder-title:hover .nav-folder-title-content {
+  color: var(--text-normal);
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root > div.nav-folder-children {
+  padding: 8px;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .tree-item-self {
+  border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
+  color: var(--text-normal);
+  width: 100%;
+  padding: 0px 5px 0px 10px;
+  background: var(--background-primary);
+  box-shadow: var(--drop-shadow);
+}
+.workspace-leaf-content[data-type=tagfolder-view] .search-input-container {
+  margin: unset;
+  padding: 0px 0px 10px 0px;
+}
+
 /* #region  [Info] Style Settings */
 /* @settings
 name: Prism Theme
