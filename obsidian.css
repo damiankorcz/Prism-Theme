@@ -437,7 +437,7 @@ a:hover {
   --style-settings-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
   --outline-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
   --drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-popup: rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.05) 0px 2px 4px, rgba(0, 0, 0, 0.05) 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+  --drop-shadow-popup: rgba(0, 0, 0, 0.03) 0px 1px 2px, rgba(0, 0, 0, 0.03) 0px 2px 4px, rgba(0, 0, 0, 0.03) 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
   --scroll-bar-thumb: hsla(0, 0%, 80%, 1);
   --table-border-color: var(--background-secondary-alt);
   --h1-text-color-custom-lt: hsl(0, 0%, 20%);
@@ -3351,7 +3351,8 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   pointer-events: bounding-box;
 }
 
-.workspace-leaf-content[data-type=dangling-links] .nav-header {
+.workspace-leaf-content[data-type=dangling-links] .nav-header,
+.workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   display: flex;
   border-radius: var(--border-radius);
   padding: 2px;
@@ -3380,36 +3381,39 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   -webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
-.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=tag] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=search] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=starred] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=backlink] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=tag] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=search] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=starred] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   border: 1px solid transparent;
   background-color: var(--tab-label-background-color);
   border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow-popup);
+  box-shadow: var(--drop-shadow);
 }
 
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=tag] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=search] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=starred] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=backlink] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=tag] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=search] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=starred] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tag] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=file-explorer] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   border: 1px solid var(--tab-label-background-color);
   background: var(--background-secondary-blur);
   backdrop-filter: blur(var(--blur-intensity));
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   box-shadow: var(--drop-shadow-popup);
 }
-.pt-nav-header-left-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   width: fit-content;
 }
 
@@ -3448,8 +3452,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   position: unset;
   order: 0;
 }
-.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header, .pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   top: 5px;
   margin-bottom: 10px;
   order: 0;
@@ -3489,8 +3494,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   bottom: calc(10px + var(--scroll-bar-size));
   margin-right: calc(10px + var(--scroll-bar-size));
 }
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header, .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   bottom: 0px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -3518,11 +3524,13 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-results-children,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .contents,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-files-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children {
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .contents {
   padding-bottom: 65px;
 }
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-input-container,
@@ -3544,11 +3552,13 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
 .pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=search] .search-results-children,
+.pt-scroll-hover.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .contents,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-files-container,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=tag] .tag-container,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=starred] .item-list,
 .pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=backlink] .backlink-pane,
-.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children {
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=search] .search-results-children,
+.pt-scroll-hover.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .contents {
   padding-bottom: 75px;
 }
 
@@ -3563,8 +3573,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   justify-content: flex-start;
 }
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header, .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   margin-right: auto;
 }
 
@@ -3579,8 +3590,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   justify-content: center;
 }
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header, .pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   margin-left: auto;
   margin-right: auto;
 }
@@ -3596,8 +3608,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=tagfolder-view] .nav-header {
   justify-content: flex-end;
 }
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
-.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header, .pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   margin-left: auto;
 }
 
@@ -3839,7 +3852,8 @@ body:not(.pt-disable-animations) .nav-files-container .nav-folder.is-collapsed >
 body:not(.pt-disable-animations) .outgoing-link-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .backlink-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
-body:not(.pt-disable-animations) .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg {
+body:not(.pt-disable-animations) .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconDownIndicator;
   animation-iteration-count: 2;
@@ -3849,7 +3863,8 @@ body:not(.pt-disable-animations) .nav-files-container .nav-folder:not(.is-collap
 body:not(.pt-disable-animations) .outgoing-link-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .backlink-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
-body:not(.pt-disable-animations) .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg {
+body:not(.pt-disable-animations) .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconRightIndicator;
   animation-iteration-count: 2;
@@ -14518,6 +14533,147 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   padding: 0px 0px 10px 0px;
 }
 
+.workspace-leaf-content[data-type=dictionary-view] .view-content {
+  padding: unset;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.workspace-leaf-content[data-type=dictionary-view] .search-input-container {
+  margin: unset;
+  padding: 0px 0px calc(var(--window-gap) / 2) 0px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .results {
+  display: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main {
+  padding: unset;
+  border-bottom-color: transparent;
+  border: none;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener {
+  padding: 5px;
+  border-bottom-color: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  position: relative;
+  z-index: var(--layer-popover);
+  font-size: 14px;
+  font-variation-settings: "wght" 600;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener .collapse-icon {
+  padding: 8px 10px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener .collapse-icon:after {
+  display: none;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:hover {
+  color: var(--interactive-accent-text);
+  background-color: var(--background-primary);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:hover .collapse-icon {
+  color: var(--interactive-accent-hover);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open {
+  background-color: var(--background-primary);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open .collapse-icon {
+  color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main:last-child {
+  margin-bottom: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main > div:nth-child(2) {
+  display: flex;
+  height: auto;
+  flex-flow: column;
+  padding: 8px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main audio {
+  margin-top: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main audio::-webkit-media-controls-panel {
+  background: var(--background-primary);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .error,
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .errorDescription {
+  margin: unset;
+  align-items: center;
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 10px;
+  height: fit-content;
+  width: fit-content;
+  min-width: -webkit-fill-available;
+  border: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main i.mark {
+  box-shadow: inset 0 -2px var(--interactive-accent-dark);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .definition {
+  padding: 4px;
+  margin-bottom: 4px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .definition:not(:last-child) {
+  border-bottom: 2px solid var(--table-border-color);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .definition p,
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .definition blockquote {
+  margin-bottom: 4px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .main .definition blockquote {
+  border: 2px solid var(--table-border-color);
+  background-color: var(--background-primary-alt);
+  border-left-width: 5px;
+  padding: 4px 4px 4px 1rem;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .container {
+  margin: unset;
+  padding: unset;
+  background-color: unset;
+  margin-right: 8px;
+  margin-bottom: 16px;
+  max-width: -webkit-fill-available;
+  flex: 1;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .container > h3 {
+  margin: unset;
+  align-items: center;
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  padding: 4px 4px 4px 8px;
+  height: fit-content;
+  width: fit-content;
+  min-width: -webkit-fill-available;
+  border: unset;
+  margin-bottom: 8px;
+  font-variation-settings: "wght" 600;
+  font-size: 14px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .container > .main {
+  margin-left: 10px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .center {
+  margin-top: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents .center .spinner {
+  margin: 0 auto;
+}
+
+/* #region  [Plugin - Community] Icons */
+.pt-icons-accent .obsidian-icon {
+  color: var(--interactive-accent-text);
+}
+
+/* #endregion */
 /* #region  [Info] Style Settings */
 /* @settings
 name: Prism Theme
@@ -21663,6 +21819,19 @@ settings:
         type: class-toggle
         default: true
     -
+        id: icons-settings
+        title: Icons
+        description: visini's Icons (https://github.com/visini/obsidian-icons-plugin).
+        type: heading
+        level: 2
+        collapsed: true
+    -            
+        id: pt-icons-accent
+        title: Use UI Accent Color for Icons
+        description: Makes the Icons inherit the UI Accent Color.
+        type: class-toggle
+        default: false
+    -
         id: feature-toggles
         title: Feature Toggles
         description: Disable certain aspects of the theme.
@@ -21769,5 +21938,9 @@ community:
 - obsidian-map-view
 - obsidian-emoji-toolbar
 - obsidian-reminder-plugin
+- obsidian-tagfolder
+- obsidian-dictionary-plugin
+- obsidian-icons-plugin
+
 */
 /* #endregion */
