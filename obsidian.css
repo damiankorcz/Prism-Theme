@@ -3616,9 +3616,6 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 /* #endregion */
 /* #region  [UI] Animations */
-body:not(.pt-disable-animations) {
-  /* #endregion */
-}
 @keyframes fontEnlargeHighlight {
   from {
     font-variation-settings: "wght" 600;
@@ -3837,6 +3834,16 @@ body:not(.pt-disable-animations) .workspace-leaf-content[data-type=calendar] .da
   animation-name: iconEnlargeHoldBold;
   animation-iteration-count: 1;
 }
+body:not(.pt-disable-animations) .flatpickr-prev-month:hover svg {
+  animation-duration: 0.25s;
+  animation-name: floatIconRight;
+  animation-iteration-count: 2;
+}
+body:not(.pt-disable-animations) .flatpickr-next-month:hover svg {
+  animation-duration: 0.25s;
+  animation-name: floatIconLeft;
+  animation-iteration-count: 2;
+}
 body:not(.pt-disable-animations) .side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
   animation-duration: 0.25s;
   animation-name: floatIconUp;
@@ -3929,6 +3936,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
   animation-direction: alternate;
 }
 
+/* #endregion */
 /*
   ==========================================================================
   User Interface
@@ -5874,6 +5882,9 @@ button.copy-code-button {
   background-color: var(--background-primary-alt);
   border-radius: var(--border-radius-small);
   padding: 2px 4px;
+}
+.theme-light .markdown-preview-view pre > code {
+  padding: unset;
 }
 .theme-light .markdown-preview-view pre,
 .theme-light :not(pre) > code[class*=language-],
@@ -14105,6 +14116,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   color: var(--highlight-text-normal);
   font-variation-settings: "wght" 600;
   font-size: 0.9em;
+  box-shadow: var(--drop-shadow);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .day.has-note.active .dot,
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num.has-note.active .dot {
@@ -14671,6 +14683,110 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 /* #region  [Plugin - Community] Icons */
 .pt-icons-accent .obsidian-icon {
   color: var(--interactive-accent-text);
+}
+
+/* #endregion */
+/* #region  [Plugin - Community] Jump To Date */
+.flatpickr-calendar.obsidian42-jump-to-date {
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow-popup);
+  border: 1px solid var(--tab-label-background-color);
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-calendar.arrowTop:before {
+  border-bottom-color: var(--background-primary);
+}
+.flatpickr-calendar.obsidian42-jump-to-date.open {
+  z-index: 15;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months {
+  margin: unset;
+  align-items: center;
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  height: fit-content;
+  width: fit-content;
+  min-width: -webkit-fill-available;
+  border: unset;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-prev-month,
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-next-month {
+  padding: 7px;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month {
+  padding-top: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months {
+  font-weight: 600;
+  text-align: center;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month:hover {
+  background-color: red;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper {
+  width: 7ch;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .numInput.cur-year {
+  font-weight: 800;
+  color: var(--interactive-accent-dark);
+  box-shadow: unset;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer {
+  margin: 6px 10px 10px 10px;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-rContainer,
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-days,
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer {
+  max-width: -webkit-fill-available;
+  min-width: unset;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day,
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay {
+  border: unset;
+  border-radius: var(--border-radius-small) !important;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day {
+  font-variation-settings: "wght" 600;
+  color: var(--highlight-text-normal);
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day:hover {
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius-small);
+  font-variation-settings: "wght" 600;
+  transition: unset;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.today {
+  font-variation-settings: "wght" 800;
+  color: var(--interactive-accent-text);
+  font-size: 1.2em;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay {
+  opacity: 0.4;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected {
+  background: var(--interactive-accent);
+  box-shadow: var(--drop-shadow);
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected:hover {
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius-small);
+  font-variation-settings: "wght" 600;
+  transition: unset;
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-weekdays {
+  border-bottom: 1px solid var(--table-border-color);
+}
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-weekdays span.flatpickr-weekday {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /* #endregion */
@@ -21941,6 +22057,7 @@ community:
 - obsidian-tagfolder
 - obsidian-dictionary-plugin
 - obsidian-icons-plugin
+- obsidian-jump-to-date-plugin
 
 */
 /* #endregion */
