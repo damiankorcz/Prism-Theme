@@ -5503,165 +5503,190 @@ div.notice-container div.notice {
 
 /* #endregion */
 /* #region  [Editor] Callouts */
-.admonition.admonition-plugin {
-  background-color: var(--page-background-color);
+.callout {
+  background-color: unset;
   border-radius: var(--border-radius);
   border-left: unset;
+}
+.callout:not(.is-collapsed) {
   box-shadow: var(--drop-shadow);
 }
-.admonition.admonition-plugin .admonition-title {
+.callout .callout-title {
   padding: unset;
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   border: 2px solid;
   z-index: 5;
+  gap: 4px;
 }
-.admonition.admonition-plugin .admonition-title-icon {
+.callout .callout-icon {
   padding: 8px;
   border-radius: var(--border-radius);
 }
-.admonition.admonition-plugin .admonition-title-markdown {
-  padding: 8px 0px;
+.callout .callout-icon svg {
+  width: 20px;
+  height: 20px;
 }
-.admonition.admonition-plugin .admonition-content-holder {
+.callout .callout-title-inner {
+  padding: 6px 0px;
+}
+.callout .callout-fold {
+  display: flex;
+  align-self: center;
+  padding: 10px;
+}
+.callout .callout-content {
   border-left: 1px solid;
   border-bottom: 1px solid;
   border-right: 1px solid;
   margin-top: -15px;
   padding-top: 15px;
-  border-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
-.admonition.admonition-plugin.admonition-note .admonition-title {
+.callout[data-callout=note] .callout-title {
   background-color: var(--color-grey);
   border-color: var(--color-dark-grey);
   color: var(--color-text-grey);
 }
-.admonition.admonition-plugin.admonition-note .admonition-title-icon {
+.callout[data-callout=note] .callout-icon {
   color: var(--color-text-grey);
 }
-.admonition.admonition-plugin.admonition-note .admonition-content-holder {
+.callout[data-callout=note] .callout-content {
   border-color: var(--color-dark-grey);
+  background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-abstract .admonition-title, .admonition.admonition-plugin.admonition-summary .admonition-title, .admonition.admonition-plugin.admonition-tldr .admonition-title {
+.callout[data-callout=abstract] .callout-title, .callout[data-callout=summary] .callout-title, .callout[data-callout=tldr] .callout-title {
   background-color: var(--color-aqua);
   border-color: var(--color-dark-aqua);
   color: var(--color-text-aqua);
 }
-.admonition.admonition-plugin.admonition-abstract .admonition-title-icon, .admonition.admonition-plugin.admonition-summary .admonition-title-icon, .admonition.admonition-plugin.admonition-tldr .admonition-title-icon {
+.callout[data-callout=abstract] .callout-icon, .callout[data-callout=summary] .callout-icon, .callout[data-callout=tldr] .callout-icon {
   color: var(--color-text-aqua);
 }
-.admonition.admonition-plugin.admonition-abstract .admonition-content-holder, .admonition.admonition-plugin.admonition-summary .admonition-content-holder, .admonition.admonition-plugin.admonition-tldr .admonition-content-holder {
+.callout[data-callout=abstract] .callout-content, .callout[data-callout=summary] .callout-content, .callout[data-callout=tldr] .callout-content {
   border-color: var(--color-dark-aqua);
+  background-color: hsla(var(--color-aqua-h), var(--color-aqua-s), var(--color-aqua-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-info .admonition-title, .admonition.admonition-plugin.admonition-todo .admonition-title {
+.callout[data-callout=info] .callout-title, .callout[data-callout=todo] .callout-title {
   background-color: var(--color-blue);
   border-color: var(--color-dark-blue);
   color: var(--color-text-blue);
 }
-.admonition.admonition-plugin.admonition-info .admonition-title-icon, .admonition.admonition-plugin.admonition-todo .admonition-title-icon {
+.callout[data-callout=info] .callout-icon, .callout[data-callout=todo] .callout-icon {
   color: var(--color-text-blue);
 }
-.admonition.admonition-plugin.admonition-info .admonition-content-holder, .admonition.admonition-plugin.admonition-todo .admonition-content-holder {
+.callout[data-callout=info] .callout-content, .callout[data-callout=todo] .callout-content {
   border-color: var(--color-dark-blue);
+  background-color: hsla(var(--color-blue-h), var(--color-blue-s), var(--color-blue-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-tip .admonition-title, .admonition.admonition-plugin.admonition-hint .admonition-title, .admonition.admonition-plugin.admonition-important .admonition-title {
+.callout[data-callout=tip] .callout-title, .callout[data-callout=hint] .callout-title, .callout[data-callout=important] .callout-title {
   background-color: var(--color-mint);
   border-color: var(--color-dark-mint);
   color: var(--color-text-mint);
 }
-.admonition.admonition-plugin.admonition-tip .admonition-title-icon, .admonition.admonition-plugin.admonition-hint .admonition-title-icon, .admonition.admonition-plugin.admonition-important .admonition-title-icon {
+.callout[data-callout=tip] .callout-icon, .callout[data-callout=hint] .callout-icon, .callout[data-callout=important] .callout-icon {
   color: var(--color-text-mint);
 }
-.admonition.admonition-plugin.admonition-tip .admonition-content-holder, .admonition.admonition-plugin.admonition-hint .admonition-content-holder, .admonition.admonition-plugin.admonition-important .admonition-content-holder {
+.callout[data-callout=tip] .callout-content, .callout[data-callout=hint] .callout-content, .callout[data-callout=important] .callout-content {
   border-color: var(--color-dark-mint);
+  background-color: hsla(var(--color-mint-h), var(--color-mint-s), var(--color-mint-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-success .admonition-title, .admonition.admonition-plugin.admonition-check .admonition-title, .admonition.admonition-plugin.admonition-done .admonition-title {
+.callout[data-callout=success] .callout-title, .callout[data-callout=check] .callout-title, .callout[data-callout=done] .callout-title {
   background-color: var(--color-green);
   border-color: var(--color-dark-green);
   color: var(--color-text-green);
 }
-.admonition.admonition-plugin.admonition-success .admonition-title-icon, .admonition.admonition-plugin.admonition-check .admonition-title-icon, .admonition.admonition-plugin.admonition-done .admonition-title-icon {
+.callout[data-callout=success] .callout-icon, .callout[data-callout=check] .callout-icon, .callout[data-callout=done] .callout-icon {
   color: var(--color-text-green);
 }
-.admonition.admonition-plugin.admonition-success .admonition-content-holder, .admonition.admonition-plugin.admonition-check .admonition-content-holder, .admonition.admonition-plugin.admonition-done .admonition-content-holder {
+.callout[data-callout=success] .callout-content, .callout[data-callout=check] .callout-content, .callout[data-callout=done] .callout-content {
   border-color: var(--color-dark-green);
+  background-color: hsla(var(--color-green-h), var(--color-green-s), var(--color-green-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-question .admonition-title, .admonition.admonition-plugin.admonition-help .admonition-title, .admonition.admonition-plugin.admonition-faq .admonition-title {
+.callout[data-callout=question] .callout-title, .callout[data-callout=help] .callout-title, .callout[data-callout=faq] .callout-title {
   background-color: var(--color-yellow);
   border-color: var(--color-dark-yellow);
   color: var(--color-text-yellow);
 }
-.admonition.admonition-plugin.admonition-question .admonition-title-icon, .admonition.admonition-plugin.admonition-help .admonition-title-icon, .admonition.admonition-plugin.admonition-faq .admonition-title-icon {
+.callout[data-callout=question] .callout-icon, .callout[data-callout=help] .callout-icon, .callout[data-callout=faq] .callout-icon {
   color: var(--color-text-yellow);
 }
-.admonition.admonition-plugin.admonition-question .admonition-content-holder, .admonition.admonition-plugin.admonition-help .admonition-content-holder, .admonition.admonition-plugin.admonition-faq .admonition-content-holder {
+.callout[data-callout=question] .callout-content, .callout[data-callout=help] .callout-content, .callout[data-callout=faq] .callout-content {
   border-color: var(--color-dark-yellow);
+  background-color: hsla(var(--color-yellow-h), var(--color-yellow-s), var(--color-yellow-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-warning .admonition-title, .admonition.admonition-plugin.admonition-caution .admonition-title, .admonition.admonition-plugin.admonition-attention .admonition-title {
+.callout[data-callout=warning] .callout-title, .callout[data-callout=caution] .callout-title, .callout[data-callout=attention] .callout-title {
   background-color: var(--color-orange);
   border-color: var(--color-dark-orange);
   color: var(--color-text-orange);
 }
-.admonition.admonition-plugin.admonition-warning .admonition-title-icon, .admonition.admonition-plugin.admonition-caution .admonition-title-icon, .admonition.admonition-plugin.admonition-attention .admonition-title-icon {
+.callout[data-callout=warning] .callout-icon, .callout[data-callout=caution] .callout-icon, .callout[data-callout=attention] .callout-icon {
   color: var(--color-text-orange);
 }
-.admonition.admonition-plugin.admonition-warning .admonition-content-holder, .admonition.admonition-plugin.admonition-caution .admonition-content-holder, .admonition.admonition-plugin.admonition-attention .admonition-content-holder {
+.callout[data-callout=warning] .callout-content, .callout[data-callout=caution] .callout-content, .callout[data-callout=attention] .callout-content {
   border-color: var(--color-dark-orange);
+  background-color: hsla(var(--color-orange-h), var(--color-orange-s), var(--color-orange-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-failure .admonition-title, .admonition.admonition-plugin.admonition-fail .admonition-title, .admonition.admonition-plugin.admonition-missing .admonition-title {
+.callout[data-callout=failure] .callout-title, .callout[data-callout=fail] .callout-title, .callout[data-callout=missing] .callout-title {
   background-color: var(--color-red);
   border-color: var(--color-dark-red);
   color: var(--color-text-red);
 }
-.admonition.admonition-plugin.admonition-failure .admonition-title-icon, .admonition.admonition-plugin.admonition-fail .admonition-title-icon, .admonition.admonition-plugin.admonition-missing .admonition-title-icon {
+.callout[data-callout=failure] .callout-icon, .callout[data-callout=fail] .callout-icon, .callout[data-callout=missing] .callout-icon {
   color: var(--color-text-red);
 }
-.admonition.admonition-plugin.admonition-failure .admonition-content-holder, .admonition.admonition-plugin.admonition-fail .admonition-content-holder, .admonition.admonition-plugin.admonition-missing .admonition-content-holder {
+.callout[data-callout=failure] .callout-content, .callout[data-callout=fail] .callout-content, .callout[data-callout=missing] .callout-content {
   border-color: var(--color-dark-red);
+  background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-danger .admonition-title, .admonition.admonition-plugin.admonition-error .admonition-title {
+.callout[data-callout=danger] .callout-title, .callout[data-callout=error] .callout-title {
   background-color: var(--color-red);
   border-color: var(--color-dark-red);
   color: var(--color-text-red);
 }
-.admonition.admonition-plugin.admonition-danger .admonition-title-icon, .admonition.admonition-plugin.admonition-error .admonition-title-icon {
+.callout[data-callout=danger] .callout-icon, .callout[data-callout=error] .callout-icon {
   color: var(--color-text-red);
 }
-.admonition.admonition-plugin.admonition-danger .admonition-content-holder, .admonition.admonition-plugin.admonition-error .admonition-content-holder {
+.callout[data-callout=danger] .callout-content, .callout[data-callout=error] .callout-content {
   border-color: var(--color-dark-red);
+  background-color: hsla(var(--color-red-h), var(--color-red-s), var(--color-red-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-bug .admonition-title {
+.callout[data-callout=bug] .callout-title {
   background-color: var(--color-pink);
   border-color: var(--color-dark-pink);
   color: var(--color-text-pink);
 }
-.admonition.admonition-plugin.admonition-bug .admonition-title-icon {
+.callout[data-callout=bug] .callout-icon {
   color: var(--color-text-pink);
 }
-.admonition.admonition-plugin.admonition-bug .admonition-content-holder {
+.callout[data-callout=bug] .callout-content {
   border-color: var(--color-dark-pink);
+  background-color: hsla(var(--color-pink-h), var(--color-pink-s), var(--color-pink-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-example .admonition-title {
+.callout[data-callout=example] .callout-title {
   background-color: var(--color-purple);
   border-color: var(--color-dark-purple);
   color: var(--color-text-purple);
 }
-.admonition.admonition-plugin.admonition-example .admonition-title-icon {
+.callout[data-callout=example] .callout-icon {
   color: var(--color-text-purple);
 }
-.admonition.admonition-plugin.admonition-example .admonition-content-holder {
+.callout[data-callout=example] .callout-content {
   border-color: var(--color-dark-purple);
+  background-color: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), 0.1);
 }
-.admonition.admonition-plugin.admonition-quote .admonition-title, .admonition.admonition-plugin.admonition-cite .admonition-title {
+.callout[data-callout=quote] .callout-title, .callout[data-callout=cite] .callout-title {
   background-color: var(--color-grey);
   border-color: var(--color-dark-grey);
   color: var(--color-text-grey);
 }
-.admonition.admonition-plugin.admonition-quote .admonition-title-icon, .admonition.admonition-plugin.admonition-cite .admonition-title-icon {
+.callout[data-callout=quote] .callout-icon, .callout[data-callout=cite] .callout-icon {
   color: var(--color-text-grey);
 }
-.admonition.admonition-plugin.admonition-quote .admonition-content-holder, .admonition.admonition-plugin.admonition-cite .admonition-content-holder {
+.callout[data-callout=quote] .callout-content, .callout[data-callout=cite] .callout-content {
   border-color: var(--color-dark-grey);
+  background-color: hsla(var(--color-grey-h), var(--color-grey-s), var(--color-grey-l), 0.1);
 }
 
 /* #endregion */
@@ -13629,7 +13654,7 @@ mark.grey, mark.Grey {
 .theme-light.pt-highlight-style-filled-lt .cm-line span.cm-html-embed mark {
   font-variation-settings: "wght" 600;
   font-size: 0.875em;
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   background-color: var(--highlight-default);
   padding: 2px 7px;
   border-radius: var(--border-radius-small);
@@ -13643,7 +13668,7 @@ mark.grey, mark.Grey {
 .theme-light.pt-highlight-style-borderandfilled-lt .cm-line span.cm-html-embed mark {
   font-variation-settings: "wght" 600;
   font-size: 0.875em;
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   background-color: var(--highlight-default);
   border: var(--border-size) solid var(--dark-highlight-default);
   padding: 0px 5px;

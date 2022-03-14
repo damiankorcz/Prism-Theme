@@ -3,7 +3,7 @@
     Prism Mark Highlight System for Obsidian.md
     > Snippet Extracted from the Prism Theme for Obsidian.md
 
-    Version: v1.0.0
+    Version: v1.1.0
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
     Distributed under the MIT License. See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
@@ -12,7 +12,7 @@
 /* #endregion */
 /* #region   */
 /* @settings
-name: Prism Mark Highlight System v1.0.0
+name: Prism Mark Highlight System v1.1.0
 id: obsidian-prism-mark-highlight-system
 settings:
     -
@@ -125,7 +125,7 @@ settings:
 /* #endregion */
 /* #region  Light Theme Variables */
 .theme-light {
-  --background-primary: hsl(0, 0%, 100%);
+  --mark-background: hsl(0, 0%, 100%);
   --highlight-text-normal: hsl(0, 0%, 20%);
   --highlight-default: var(--color-yellow);
   /* Light Theme Color Adjustments */
@@ -192,7 +192,7 @@ settings:
 /* #endregion */
 /* #region  Dark Theme Variables */
 .theme-dark {
-  --background-primary: hsl(0, 0%, 22%);
+  --mark-background: hsl(0, 0%, 22%);
   --highlight-text-normal: hsl(270, 2%, 8%);
   --highlight-default: var(--color-yellow);
   /* Dark Theme Color Adjustments */
@@ -354,7 +354,7 @@ mark.grey, mark.Grey {
 .theme-light.pt-highlight-style-border-lt .cm-line span.cm-html-embed mark {
   font-weight: 600;
   font-size: 0.875em;
-  background-color: var(--background-primary);
+  background-color: var(--mark-background);
   border: var(--border-size) solid var(--dark-highlight-default);
   padding: 0px 5px;
   border-radius: var(--border-radius-small);
@@ -369,7 +369,7 @@ mark.grey, mark.Grey {
   font-weight: 600;
   font-size: 0.875em;
   color: var(--text-highlight-default);
-  background-color: var(--background-primary);
+  background-color: var(--mark-background);
   border: var(--border-size) solid var(--dark-highlight-default);
   padding: 0px 5px;
   border-radius: var(--border-radius-small);
