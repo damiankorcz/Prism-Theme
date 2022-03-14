@@ -6242,6 +6242,34 @@ settings:
         opacity: false
         default: '#C7BDFF'
     -
+        id: highlight-text-accent-lt
+        title: Light Theme Accent Text Color
+        description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-dark-lt 
+        options:
+            -
+                label: Dark
+                value: pt-highlight-text-dark-lt 
+            - 
+                label: Light
+                value: pt-highlight-text-light-lt 
+            - 
+                label: Accent
+                value: pt-highlight-text-accent-lt
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-lt
+    -
+        id: highlight-text-accent-custom-lt
+        title: Light Theme Custom Accent Text Color
+        description: Make sure you selected 'Custom' in Light Theme Accent Text Color for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FFFFFF'
+    -
         id: accent-colors-styles-dt
         title: Dark Theme
         type: heading
@@ -6319,6 +6347,34 @@ settings:
         format: hsl-split
         opacity: false
         default: '#8C7FD7'
+    -
+        id: highlight-text-accent-dt
+        title: Dark Theme Accent Text Color
+        description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-dark-dt 
+        options:
+            -
+                label: Dark
+                value: pt-highlight-text-dark-dt 
+            - 
+                label: Light
+                value: pt-highlight-text-light-dt 
+            - 
+                label: Accent
+                value: pt-highlight-text-accent-dt
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-dt
+    -
+        id: highlight-text-accent-custom-dt
+        title: Dark Theme Custom Accent Text Color
+        description: Make sure you selected 'Custom' in Dark Theme Accent Text Color for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FFFFFF'
     -
         id: background-options
         title: Background Options
