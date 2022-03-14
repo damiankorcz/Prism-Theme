@@ -4,7 +4,7 @@
     Prism Theme for Obsidian.md
     > A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md
 
-    Version: v1.5.2
+    Version: v1.6.0
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
     Distributed under the MIT License. See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
@@ -423,7 +423,10 @@ a:hover {
   --text-selection: var(--background-secondary-alt);
   --text-error: var(--color-dark-red);
   --text-highlight-bg: var(--interactive-accent-dark);
+  --highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
   --highlight-text-normal: hsl(0, 0%, 20%);
+  --highlight-text-dark: hsl(0, 0%, 20%);
+  --highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
   --background-primary: hsl(0, 0%, 100%);
   --background-primary-alt: hsl(220, 0%, 98%);
   --background-secondary: hsl(220, 13%, 95%);
@@ -459,9 +462,17 @@ a:hover {
   --h5-border-color-custom-lt: hsl(0, 0%, 20%);
   --h6-border-color-custom-lt: hsl(0, 0%, 20%);
 }
-
 .theme-light.pt-disable-blur {
   --background-secondary-blur: hsl(220, 13%, 95%, 1);
+}
+.theme-light.pt-highlight-text-light-lt {
+  --highlight-text-normal: hsl(0, 0%, 100%);
+}
+.theme-light.pt-highlight-text-accent-lt {
+  --highlight-text-normal: var(--interactive-accent-text);
+}
+.theme-light.pt-highlight-text-custom-lt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
 }
 
 /* #endregion */
@@ -556,6 +567,8 @@ a:hover {
   --text-error: var(--color-dark-red);
   --text-highlight-bg: var(--interactive-accent-dark);
   --highlight-text-normal: hsl(270, 2%, 8%);
+  --highlight-text-dark: hsl(270, 2%, 8%);
+  --highlight-text-accent-custom-dt: hsl(0, 0%, 100%);
   --background-primary: hsl(0, 0%, 18%);
   --background-primary-alt: hsl(0, 0%, 25%);
   --background-secondary: hsl(0, 0%, 10%);
@@ -593,9 +606,17 @@ a:hover {
   --h5-border-color-custom-dt: hsla(0, 0%, 20%, 1);
   --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
 }
-
 .theme-dark.pt-disable-blur {
   --background-secondary-blur: hsla(0, 0%, 10%, 1);
+}
+.theme-dark.pt-highlight-text-light-dt {
+  --highlight-text-normal: hsl(0, 0%, 100%);
+}
+.theme-dark.pt-highlight-text-accent-dt {
+  --highlight-text-normal: var(--interactive-accent-dark);
+}
+.theme-dark.pt-highlight-text-custom-dt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 
 /* #endregion */
@@ -2136,7 +2157,7 @@ a:hover {
 .theme-light.pt-accent-style-filled-lt button.mod-warning {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   border: var(--border-size) solid transparent;
   background-color: var(--color-red);
 }
@@ -2147,7 +2168,7 @@ a:hover {
 .theme-light.pt-accent-style-filled-lt .graph-control-content button {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   background-color: var(--color-grey);
   border: var(--border-size) solid var(--color-grey);
 }
@@ -2182,7 +2203,7 @@ a:hover {
 .theme-light.pt-accent-style-filled-lt .setting-hotkey.mod-empty {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   border: var(--border-size) solid var(--color-grey);
   background-color: var(--color-grey);
 }
@@ -2202,7 +2223,7 @@ a:hover {
 .theme-light.pt-accent-style-filled-lt .setting-hotkey.has-conflict {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   border: var(--border-size) solid var(--color-red);
   background-color: var(--color-red);
 }
@@ -2469,7 +2490,7 @@ a:hover {
 .theme-light.pt-accent-style-borderandfilled-lt button.mod-warning {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   border: var(--border-size) solid var(--color-dark-red);
   background-color: var(--color-red);
 }
@@ -2480,7 +2501,7 @@ a:hover {
 .theme-light.pt-accent-style-borderandfilled-lt .graph-control-content button {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   background-color: var(--color-grey);
   border: var(--border-size) solid var(--color-dark-grey);
 }
@@ -2515,7 +2536,7 @@ a:hover {
 .theme-light.pt-accent-style-borderandfilled-lt .setting-hotkey.mod-empty {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   border: var(--border-size) solid var(--color-dark-grey);
   background-color: var(--color-grey);
 }
@@ -2524,7 +2545,7 @@ a:hover {
 .theme-light.pt-accent-style-borderandfilled-lt .setting-hotkey.has-conflict {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   border: var(--border-size) solid var(--color-dark-red);
   background-color: var(--color-red);
 }
@@ -4008,7 +4029,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
 }
 
 .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
-  content: "Prism Theme v1.5.2";
+  content: "Prism Theme v1.6.0";
   font-size: 16px;
   font-variation-settings: "wght" 600;
   background: var(--background-primary);
@@ -4209,7 +4230,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
   content: "ON";
   font-size: 10px;
   font-variation-settings: "wght" 600;
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 
 .theme-light .checkbox-container:not(.is-enabled):after {
@@ -4217,7 +4238,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
   content: "OFF";
   font-size: 10px;
   font-variation-settings: "wght" 600;
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 
 .theme-dark .checkbox-container.is-enabled:after {
@@ -4225,7 +4246,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
   content: "ON";
   font-size: 10px;
   font-variation-settings: "wght" 600;
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 
 .theme-dark .checkbox-container:not(.is-enabled):after {
@@ -4233,7 +4254,7 @@ body:not(.pt-disable-animations) .dropdown:hover {
   content: "OFF";
   font-size: 10px;
   font-variation-settings: "wght" 600;
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 
 .checkbox-container.is-enabled:hover {
@@ -4635,7 +4656,7 @@ input[type=range]:hover {
   width: 14px;
   margin-top: -1px;
   border-radius: var(--border-radius-small);
-  background-color: var(--highlight-text-normal);
+  background-color: var(--highlight-text-dark);
   box-shadow: var(--drop-shadow);
 }
 
@@ -4646,7 +4667,7 @@ input[type=range]:hover {
   width: 14px;
   margin-top: -1px;
   border-radius: var(--border-radius-small);
-  background-color: var(--highlight-text-normal);
+  background-color: var(--highlight-text-dark);
   box-shadow: var(--drop-shadow);
 }
 
@@ -4930,11 +4951,51 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   border: var(--border-size) solid transparent;
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
+  transition: all ease 200ms;
+}
+
+body.pt-hide-view-header div.workspace-leaf-content div.view-header {
+  box-shadow: unset;
+  border: var(--border-size) solid transparent;
+  height: 1px;
+  transition-delay: 600ms;
+}
+body.pt-hide-view-header div.workspace-leaf-content div.view-header svg {
+  transition: opacity 200ms;
+  transition-delay: 600ms;
+  opacity: 0;
+}
+
+body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
+  background-color: var(--tab-label-background-color);
+  border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  height: 36px;
+  transition: all ease 200ms;
+}
+body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
+  transition: opacity 200ms;
+  transition-delay: 200ms;
+  opacity: 1;
+  display: unset;
+}
+
+.view-header:after {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  height: 20px;
+  width: 100%;
+  content: " ";
+  background-color: transparent;
 }
 
 /* Matches the gradient next to the right hand buttons in the View Header with the background */
 .view-header-title-container:after {
   background: linear-gradient(to right, transparent, var(--tab-label-background-color));
+  transition: background ease 200ms;
+  transition-delay: 200ms;
 }
 
 .workspace-tab-header,
@@ -5337,7 +5398,8 @@ div.notice-container div.notice {
   padding: 2px;
 }
 
-.suggestion-container .suggestion-prefix {
+.suggestion-container .suggestion-prefix,
+.suggestion-item .suggestion-prefix {
   font-variation-settings: "wght" 600;
 }
 
@@ -5437,6 +5499,169 @@ div.notice-container div.notice {
   font-variation-settings: "wght" 600;
   padding: 5px 14px;
   animation: pop-down 200ms forwards ease-in-out;
+}
+
+/* #endregion */
+/* #region  [Editor] Callouts */
+.admonition.admonition-plugin {
+  background-color: var(--page-background-color);
+  border-radius: var(--border-radius);
+  border-left: unset;
+  box-shadow: var(--drop-shadow);
+}
+.admonition.admonition-plugin .admonition-title {
+  padding: unset;
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  border: 2px solid;
+  z-index: 5;
+}
+.admonition.admonition-plugin .admonition-title-icon {
+  padding: 8px;
+  border-radius: var(--border-radius);
+}
+.admonition.admonition-plugin .admonition-title-markdown {
+  padding: 8px 0px;
+}
+.admonition.admonition-plugin .admonition-content-holder {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  margin-top: -15px;
+  padding-top: 15px;
+  border-radius: var(--border-radius);
+}
+.admonition.admonition-plugin.admonition-note .admonition-title {
+  background-color: var(--color-grey);
+  border-color: var(--color-dark-grey);
+  color: var(--color-text-grey);
+}
+.admonition.admonition-plugin.admonition-note .admonition-title-icon {
+  color: var(--color-text-grey);
+}
+.admonition.admonition-plugin.admonition-note .admonition-content-holder {
+  border-color: var(--color-dark-grey);
+}
+.admonition.admonition-plugin.admonition-abstract .admonition-title, .admonition.admonition-plugin.admonition-summary .admonition-title, .admonition.admonition-plugin.admonition-tldr .admonition-title {
+  background-color: var(--color-aqua);
+  border-color: var(--color-dark-aqua);
+  color: var(--color-text-aqua);
+}
+.admonition.admonition-plugin.admonition-abstract .admonition-title-icon, .admonition.admonition-plugin.admonition-summary .admonition-title-icon, .admonition.admonition-plugin.admonition-tldr .admonition-title-icon {
+  color: var(--color-text-aqua);
+}
+.admonition.admonition-plugin.admonition-abstract .admonition-content-holder, .admonition.admonition-plugin.admonition-summary .admonition-content-holder, .admonition.admonition-plugin.admonition-tldr .admonition-content-holder {
+  border-color: var(--color-dark-aqua);
+}
+.admonition.admonition-plugin.admonition-info .admonition-title, .admonition.admonition-plugin.admonition-todo .admonition-title {
+  background-color: var(--color-blue);
+  border-color: var(--color-dark-blue);
+  color: var(--color-text-blue);
+}
+.admonition.admonition-plugin.admonition-info .admonition-title-icon, .admonition.admonition-plugin.admonition-todo .admonition-title-icon {
+  color: var(--color-text-blue);
+}
+.admonition.admonition-plugin.admonition-info .admonition-content-holder, .admonition.admonition-plugin.admonition-todo .admonition-content-holder {
+  border-color: var(--color-dark-blue);
+}
+.admonition.admonition-plugin.admonition-tip .admonition-title, .admonition.admonition-plugin.admonition-hint .admonition-title, .admonition.admonition-plugin.admonition-important .admonition-title {
+  background-color: var(--color-mint);
+  border-color: var(--color-dark-mint);
+  color: var(--color-text-mint);
+}
+.admonition.admonition-plugin.admonition-tip .admonition-title-icon, .admonition.admonition-plugin.admonition-hint .admonition-title-icon, .admonition.admonition-plugin.admonition-important .admonition-title-icon {
+  color: var(--color-text-mint);
+}
+.admonition.admonition-plugin.admonition-tip .admonition-content-holder, .admonition.admonition-plugin.admonition-hint .admonition-content-holder, .admonition.admonition-plugin.admonition-important .admonition-content-holder {
+  border-color: var(--color-dark-mint);
+}
+.admonition.admonition-plugin.admonition-success .admonition-title, .admonition.admonition-plugin.admonition-check .admonition-title, .admonition.admonition-plugin.admonition-done .admonition-title {
+  background-color: var(--color-green);
+  border-color: var(--color-dark-green);
+  color: var(--color-text-green);
+}
+.admonition.admonition-plugin.admonition-success .admonition-title-icon, .admonition.admonition-plugin.admonition-check .admonition-title-icon, .admonition.admonition-plugin.admonition-done .admonition-title-icon {
+  color: var(--color-text-green);
+}
+.admonition.admonition-plugin.admonition-success .admonition-content-holder, .admonition.admonition-plugin.admonition-check .admonition-content-holder, .admonition.admonition-plugin.admonition-done .admonition-content-holder {
+  border-color: var(--color-dark-green);
+}
+.admonition.admonition-plugin.admonition-question .admonition-title, .admonition.admonition-plugin.admonition-help .admonition-title, .admonition.admonition-plugin.admonition-faq .admonition-title {
+  background-color: var(--color-yellow);
+  border-color: var(--color-dark-yellow);
+  color: var(--color-text-yellow);
+}
+.admonition.admonition-plugin.admonition-question .admonition-title-icon, .admonition.admonition-plugin.admonition-help .admonition-title-icon, .admonition.admonition-plugin.admonition-faq .admonition-title-icon {
+  color: var(--color-text-yellow);
+}
+.admonition.admonition-plugin.admonition-question .admonition-content-holder, .admonition.admonition-plugin.admonition-help .admonition-content-holder, .admonition.admonition-plugin.admonition-faq .admonition-content-holder {
+  border-color: var(--color-dark-yellow);
+}
+.admonition.admonition-plugin.admonition-warning .admonition-title, .admonition.admonition-plugin.admonition-caution .admonition-title, .admonition.admonition-plugin.admonition-attention .admonition-title {
+  background-color: var(--color-orange);
+  border-color: var(--color-dark-orange);
+  color: var(--color-text-orange);
+}
+.admonition.admonition-plugin.admonition-warning .admonition-title-icon, .admonition.admonition-plugin.admonition-caution .admonition-title-icon, .admonition.admonition-plugin.admonition-attention .admonition-title-icon {
+  color: var(--color-text-orange);
+}
+.admonition.admonition-plugin.admonition-warning .admonition-content-holder, .admonition.admonition-plugin.admonition-caution .admonition-content-holder, .admonition.admonition-plugin.admonition-attention .admonition-content-holder {
+  border-color: var(--color-dark-orange);
+}
+.admonition.admonition-plugin.admonition-failure .admonition-title, .admonition.admonition-plugin.admonition-fail .admonition-title, .admonition.admonition-plugin.admonition-missing .admonition-title {
+  background-color: var(--color-red);
+  border-color: var(--color-dark-red);
+  color: var(--color-text-red);
+}
+.admonition.admonition-plugin.admonition-failure .admonition-title-icon, .admonition.admonition-plugin.admonition-fail .admonition-title-icon, .admonition.admonition-plugin.admonition-missing .admonition-title-icon {
+  color: var(--color-text-red);
+}
+.admonition.admonition-plugin.admonition-failure .admonition-content-holder, .admonition.admonition-plugin.admonition-fail .admonition-content-holder, .admonition.admonition-plugin.admonition-missing .admonition-content-holder {
+  border-color: var(--color-dark-red);
+}
+.admonition.admonition-plugin.admonition-danger .admonition-title, .admonition.admonition-plugin.admonition-error .admonition-title {
+  background-color: var(--color-red);
+  border-color: var(--color-dark-red);
+  color: var(--color-text-red);
+}
+.admonition.admonition-plugin.admonition-danger .admonition-title-icon, .admonition.admonition-plugin.admonition-error .admonition-title-icon {
+  color: var(--color-text-red);
+}
+.admonition.admonition-plugin.admonition-danger .admonition-content-holder, .admonition.admonition-plugin.admonition-error .admonition-content-holder {
+  border-color: var(--color-dark-red);
+}
+.admonition.admonition-plugin.admonition-bug .admonition-title {
+  background-color: var(--color-pink);
+  border-color: var(--color-dark-pink);
+  color: var(--color-text-pink);
+}
+.admonition.admonition-plugin.admonition-bug .admonition-title-icon {
+  color: var(--color-text-pink);
+}
+.admonition.admonition-plugin.admonition-bug .admonition-content-holder {
+  border-color: var(--color-dark-pink);
+}
+.admonition.admonition-plugin.admonition-example .admonition-title {
+  background-color: var(--color-purple);
+  border-color: var(--color-dark-purple);
+  color: var(--color-text-purple);
+}
+.admonition.admonition-plugin.admonition-example .admonition-title-icon {
+  color: var(--color-text-purple);
+}
+.admonition.admonition-plugin.admonition-example .admonition-content-holder {
+  border-color: var(--color-dark-purple);
+}
+.admonition.admonition-plugin.admonition-quote .admonition-title, .admonition.admonition-plugin.admonition-cite .admonition-title {
+  background-color: var(--color-grey);
+  border-color: var(--color-dark-grey);
+  color: var(--color-text-grey);
+}
+.admonition.admonition-plugin.admonition-quote .admonition-title-icon, .admonition.admonition-plugin.admonition-cite .admonition-title-icon {
+  color: var(--color-text-grey);
+}
+.admonition.admonition-plugin.admonition-quote .admonition-content-holder, .admonition.admonition-plugin.admonition-cite .admonition-content-holder {
+  border-color: var(--color-dark-grey);
 }
 
 /* #endregion */
@@ -5576,7 +5801,7 @@ div.notice-container div.notice {
   font-variation-settings: "wght" 600;
   font-size: 0.9em;
   background-color: var(--color-yellow);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 .theme-light .cm-s-obsidian span.cm-formatting-highlight:first-of-type,
 .theme-light .cm-s-obsidian span.cm-highlight:first-of-type {
@@ -5626,7 +5851,7 @@ div.notice-container div.notice {
 .theme-dark .cm-s-obsidian span.cm-highlight {
   font-variation-settings: "wght" 600;
   background-color: var(--color-text-yellow);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 .theme-dark .cm-s-obsidian span.cm-formatting-highlight:first-of-type,
 .theme-dark .cm-s-obsidian span.cm-highlight:first-of-type {
@@ -6073,7 +6298,7 @@ button.copy-code-button {
 .theme-light body ::selection,
 .theme-light div.view-header-title::selection {
   background-color: var(--text-selection);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 
 .theme-dark body ::selection,
@@ -6097,7 +6322,7 @@ h6::selection {
 .cm-s-obsidian span.obsidian-search-match-highlight {
   border-radius: var(--border-radius-small);
   background-color: var(--interactive-accent);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
 }
 
 /* #endregion */
@@ -6670,7 +6895,6 @@ div.graph-controls.is-close {
 /* #region  [Plugin - Core] Markdown */
 .workspace-leaf-content[data-type=markdown] .view-content {
   background-color: var(--page-background-color);
-  box-shadow: var(--drop-shadow);
 }
 
 .mod-left-split .workspace-leaf-content[data-type=markdown] .view-content,
@@ -13552,14 +13776,14 @@ div.kanban-plugin__lane-form-wrapper {
 .theme-dark button.kanban-plugin__confirm-action-button {
   border: var(--border-size) solid var(--color-dark-red);
   background-color: var(--color-red);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   font-variation-settings: "wght" 600;
 }
 .theme-light button.kanban-plugin__cancel-action-button,
 .theme-dark button.kanban-plugin__cancel-action-button {
   border: var(--border-size) solid var(--color-dark-grey);
   background-color: var(--color-grey);
-  color: var(--highlight-text-normal);
+  color: var(--highlight-text-dark);
   font-variation-settings: "wght" 600;
 }
 
@@ -14096,7 +14320,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border-right: 1px solid var(--table-border-color);
   background-color: var(--tab-label-background-color);
 }
-.workspace-leaf-content[data-type=calendar] #calendar-container .today {
+.workspace-leaf-content[data-type=calendar] #calendar-container div.today {
   font-variation-settings: "wght" 600;
   font-size: 1em;
   color: var(--interactive-accent-text);
@@ -14106,6 +14330,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border-radius: var(--border-radius-small);
   font-variation-settings: "wght" 600;
   transition: unset;
+  color: var(--text-normal);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container .day:hover,
 .workspace-leaf-content[data-type=calendar] #calendar-container .week-num:hover {
@@ -14752,7 +14977,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day {
   font-variation-settings: "wght" 600;
-  color: var(--highlight-text-normal);
+  color: var(--text-normal);
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day:hover {
   background-color: var(--background-primary);
@@ -21034,6 +21259,34 @@ settings:
         opacity: false
         default: '#C7BDFF'
     -
+        id: highlight-text-accent-lt
+        title: Light Theme Accent Text Color
+        description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-dark-lt 
+        options:
+            -
+                label: Dark
+                value: pt-highlight-text-dark-lt 
+            - 
+                label: Light
+                value: pt-highlight-text-light-lt 
+            - 
+                label: Accent
+                value: pt-highlight-text-accent-lt
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-lt
+    -
+        id: highlight-text-accent-custom-lt
+        title: Light Theme Custom Accent Text Color
+        description: Make sure you selected 'Custom' in Light Theme Accent Text Color for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FFFFFF'
+    -
         id: accent-colors-styles-dt
         title: Dark Theme
         type: heading
@@ -21111,6 +21364,34 @@ settings:
         format: hsl-split
         opacity: false
         default: '#8C7FD7'
+    -
+        id: highlight-text-accent-dt
+        title: Dark Theme Accent Text Color
+        description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-dark-dt 
+        options:
+            -
+                label: Dark
+                value: pt-highlight-text-dark-dt 
+            - 
+                label: Light
+                value: pt-highlight-text-light-dt 
+            - 
+                label: Accent
+                value: pt-highlight-text-accent-dt
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-dt
+    -
+        id: highlight-text-accent-custom-dt
+        title: Dark Theme Custom Accent Text Color
+        description: Make sure you selected 'Custom' in Dark Theme Accent Text Color for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FFFFFF'
     -
         id: background-options
         title: Background Options
@@ -21964,6 +22245,12 @@ settings:
         id: pt-disable-animations
         title: Disable Animations
         description: Disables all animations added by Prism (default Obsidian animations remain).
+        default: false
+        type: class-toggle
+    -
+        id: pt-hide-view-header
+        title: Hide Note Titlebar
+        description: Hides the Note Titlebar until you hover over the top part of a note.
         default: false
         type: class-toggle
     -
