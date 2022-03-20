@@ -8,7 +8,7 @@
 .modal-bg {
 	background-color: unset;
 	background: var(--background-primary);
-	opacity: 0.3;
+	opacity: 0.4;
 }
 
 .modal.mod-settings {
@@ -70,15 +70,39 @@
 }
 
 .modal.mod-settings .vertical-tab-header-group:first-of-type::before {
-	content: "Prism Theme v1.6.0";
+	content: "Prism Theme";
 	font-size: 16px;
 	font-variation-settings: 'wght' 600;
 	background: var(--background-primary);
-	border-radius: var(--border-radius);
+	border-top-left-radius: var(--border-radius);
+	border-top-right-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	padding: 8px;
+	padding: unset;
+	padding-top: 2px;
 	display: flex;
 	justify-content: center;
+}
+
+.vertical-tab-header > .vertical-tab-header-group:first-of-type {
+	.vertical-tab-header-group-title {
+		padding: unset;
+
+		&::before  {
+			content: "v1.6.0";
+			text-transform: lowercase;
+			font-size: 15px;
+			font-variation-settings: 'wght' 600;
+			color: var(--interactive-accent-text);
+			background: var(--background-primary);
+			border-bottom-left-radius: var(--border-radius);
+			border-bottom-right-radius: var(--border-radius);
+			box-shadow: var(--drop-shadow);
+			margin-bottom: 5px;
+			padding: unset;
+			display: flex;
+			justify-content: center;
+		}
+	}
 }
 
 .modal.mod-settings .vertical-tab-header {
