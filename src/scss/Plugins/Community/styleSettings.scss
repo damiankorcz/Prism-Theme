@@ -79,68 +79,53 @@ div.style-settings-heading {
 	border-bottom: unset;
 }
 
+.style-settings-collapse-indicator:after {
+	background-color: var(--background-primary-alt);
+	border-radius: var(--border-radius-small);
+	font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
+	font-weight: initial;
+	color: unset;
+	display: inline-block;
+	height: fit-content;
+	width: 24px;
+	margin-left: 8px;
+	padding: 0px;
+	text-align: center;
+}
+
+.setting-item.style-settings-heading[data-id="color-schemes"] {
+	.style-settings-collapse-indicator:after {
+		content: "🎨";
+	}
+}
+
 .setting-item.style-settings-heading[data-id="editor"] {
 	.style-settings-collapse-indicator:after {
 		content: "📝";
-		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-left: 8px;
 	}
 }
 
 .setting-item.style-settings-heading[data-id="graph-view"] {
 	.style-settings-collapse-indicator:after {
 		content: "🕸️";
-		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-left: 8px;
 	}
 }
 
 .setting-item.style-settings-heading[data-id="user-interface"] {
 	.style-settings-collapse-indicator:after {
 		content: "👆";
-		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-left: 8px;
 	}
 }
 
 .setting-item.style-settings-heading[data-id="plugins"] {
 	.style-settings-collapse-indicator:after {
 		content: "🔌";
-		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-left: 8px;
 	}
 }
 
 .setting-item.style-settings-heading[data-id="feature-toggles"] {
 	.style-settings-collapse-indicator:after {
 		content: "🪠";
-		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-left: 8px;
 	}
 }
 

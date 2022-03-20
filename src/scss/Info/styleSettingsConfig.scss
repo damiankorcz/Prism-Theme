@@ -4,6 +4,39 @@ name: Prism Theme
 id: obsidian-prism-theme
 settings:
     -
+        id: color-schemes
+        title: Color Schemes
+        description: Color Schemes change all colors used by Prism for a different feel.
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: color-schemes-lt
+        title: Light Theme Color Scheme
+        type: class-select
+        allowEmpty: false
+        default: pt-color-scheme-default-lt
+        options:
+            -
+                label: Default
+                value: pt-color-scheme-default-lt
+            -
+                label: Caffè Latte
+                value: pt-color-scheme-caffe-latte-lt
+    -
+        id: color-schemes-dt
+        title: Dark Theme Color Scheme
+        type: class-select
+        allowEmpty: false
+        default: pt-color-scheme-default-dt
+        options:
+            -
+                label: Default
+                value: pt-color-scheme-default-dt
+            -
+                label: Caffè Mocha
+                value: pt-color-scheme-caffe-mocha-dt
+    -
         id: editor
         title: Editor
         description: Settings for elements inside the Editor / Preview area of Obsidian.
@@ -6353,7 +6386,7 @@ settings:
         description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
-        default: pt-highlight-text-dark-dt 
+        default: pt-highlight-text-light-dt 
         options:
             -
                 label: Dark

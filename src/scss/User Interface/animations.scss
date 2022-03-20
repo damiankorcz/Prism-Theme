@@ -364,5 +364,13 @@ body:not(.pt-disable-animations) {
         animation-iteration-count: 1;
         animation-direction: alternate;
     }
+
+    .workspace-tab-header,
+    .view-header,
+    .nav-file-title:not([data-path="/"]),
+    .nav-folder-title:not([data-path="/"]) {
+        transition: all ease 200ms;
+    }
+
 }
 /* #endregion */

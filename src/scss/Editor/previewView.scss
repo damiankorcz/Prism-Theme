@@ -11,8 +11,12 @@
 	border-color: var(--table-border-color);
 }
 
-.markdown-preview-view table {
-	background-color: var(--background-primary);
+.theme-light .markdown-preview-view table {
+	background-color: var(--background-primary-alt);
+}
+
+.theme-dark .markdown-preview-view table {
+	background-color: var(--background-secondary-alt);
 }
 
 .markdown-embed,
@@ -139,6 +143,11 @@ input[type="checkbox"]:checked:before {
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
+
+.theme-dark input[type="checkbox"]:checked:before {
+	filter: invert(1);
+}
+
 
 /* Copy Button in the Code blocks */
 button.copy-code-button {

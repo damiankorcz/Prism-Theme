@@ -28,7 +28,8 @@
 }
 
 .view-action svg {
-	width: 26px;
+	// width: 26px;
+	margin: 0px 2px;
 }
 
 .view-action:not(:last-child) {
@@ -53,9 +54,9 @@
 }
 
 /* Background fill behind the Normal View Header */
-.workspace-split.mod-root .workspace-leaf .workspace-leaf-content {
-	background-color: var(--background-primary);
-	border-radius: var(--border-radius) !important;
+body .workspace-split.mod-root .workspace-leaf div.workspace-leaf-content {
+	background-color: var(--page-background-color);
+	border-radius: var(--border-radius);
 }
 
 /* Background fill behind the Kanban View Header */
@@ -112,7 +113,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border: var(--border-size) solid transparent;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	transition: all ease 200ms;
 }
 
 body.pt-hide-view-header div.workspace-leaf-content div.view-header {
