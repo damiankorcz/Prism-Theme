@@ -38,8 +38,10 @@
 
 .modal.mod-settings .vertical-tab-header {
 	padding: 0px;
-	border-radius: var(--border-radius);
+	background-color: unset;
 	margin: 0px 15px 15px 15px;
+	padding-right: 8px;
+	flex: 0 0 220px;
 	height: unset;
 }
 
@@ -50,16 +52,35 @@
 .modal.mod-settings .modal-title {
 	height: 40px;
 	font-size: unset;
+	display: flex;
 }
 
 .modal.mod-settings .modal-title::before {
+	content: "Prism Theme v2.0.0";
+	font-size: 14px;
+	padding: 0px 8px;
+	height: 24px;
+	margin: 8px 15px;
+	color: var(--interactive-accent-text);
+	background: var(--background-primary);
+	border-radius: var(--border-radius-small);
+	box-shadow: var(--drop-shadow);
+	width: fit-content;
+	display: inline-flex;
+	position: absolute;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+}
+
+.modal.mod-settings .modal-title::after {
 	content: "Settings";
 	font-size: 16px;
 	padding: 2px 10px;
 	height: 25px;
 	margin: 5px auto;
 	width: fit-content;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-content: center;
 	flex-direction: column;
@@ -69,59 +90,23 @@
 	height: -webkit-fill-available;
 }
 
-.modal.mod-settings .vertical-tab-header-group:first-of-type::before {
-	content: "Prism Theme";
-	font-size: 16px;
-	font-variation-settings: 'wght' 600;
-	background: var(--background-primary);
-	border-top-left-radius: var(--border-radius);
-	border-top-right-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
-	padding: unset;
-	padding-top: 2px;
-	display: flex;
-	justify-content: center;
-}
-
-.vertical-tab-header > .vertical-tab-header-group:first-of-type {
-	.vertical-tab-header-group-title {
-		padding: unset;
-
-		&::before  {
-			content: "v1.6.0";
-			text-transform: lowercase;
-			font-size: 15px;
-			font-variation-settings: 'wght' 600;
-			color: var(--interactive-accent-text);
-			background: var(--background-primary);
-			border-bottom-left-radius: var(--border-radius);
-			border-bottom-right-radius: var(--border-radius);
-			box-shadow: var(--drop-shadow);
-			margin-bottom: 5px;
-			padding: unset;
-			display: flex;
-			justify-content: center;
-		}
-	}
-}
-
-.modal.mod-settings .vertical-tab-header {
-	background-color: var(--background-secondary);
-	box-shadow: var(--drop-shadow);
-}
-
 .modal.mod-settings .vertical-tab-header-group {
 	padding: 0px;
 	border-radius: var(--border-radius);
 	background: transparent;
+
+    border: 0px;
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--drop-shadow);
 }
 
-.modal.mod-settings .vertical-tab-header-group:first-of-type .vertical-tab-header-group-items {
-	border-bottom: 1px solid var(--table-border-color);
-	padding-bottom: 10px;
+.modal.mod-settings .vertical-tab-header-group .vertical-tab-header-group-items {
+	border-bottom: unset;
+	padding: 8px;
 }
 
-.modal.mod-settings .vertical-tab-header-group {
+.modal.mod-settings .vertical-tab-header-group:first-of-type {
 	margin-bottom: 10px;
 }
 
@@ -166,9 +151,19 @@
 
 .vertical-tab-header-group-title {
 	color: var(--text-normal);
+    background: var(--background-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--drop-shadow);
+	text-transform: capitalize;
+	font-size: 15px;
 	font-weight: bold;
-	text-align: center;
-	padding: 5px 15px;
+	padding: 8px;
+	margin: unset;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+    min-width: -webkit-fill-available;
+    border: unset;
 }
 
 .modal-content.community-plugin {
@@ -194,10 +189,11 @@
 
 .horizontal-tab-nav-item,
 .vertical-tab-nav-item {
-	margin: 0px 10px;
+	margin: unset;
 	border-radius: var(--border-radius);
 	border: var(--border-size) solid transparent;
-	padding: 3px 10px 3px 16px;
+	padding: 2px 10px;
+	font-size: 15px;
 }
 
 .horizontal-tab-nav-item,
