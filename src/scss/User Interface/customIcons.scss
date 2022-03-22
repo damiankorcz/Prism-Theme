@@ -173,22 +173,7 @@ body:not(.pt-disable-custom-icons) {
     svg.go-to-file,
     svg.add-note-glyph,
     svg.link-glyph,
-    .nav-action-button[title="left align column"] svg.widget-icon,
-    .nav-action-button[title="center align column"] svg.widget-icon,
-    .nav-action-button[title="right align column"] svg.widget-icon,
-    .nav-action-button[title="move row up"] svg.widget-icon,
-    .nav-action-button[title="move row down"] svg.widget-icon,
-    .nav-action-button[title="move column left"] svg.widget-icon,
-    .nav-action-button[title="move column right"] svg.widget-icon,
-    .nav-action-button[title="sort by column ascending"] svg.widget-icon,
-    .nav-action-button[title="sort by column descending"] svg.widget-icon,
-    .nav-action-button[title="delete column"] svg.widget-icon,
-    .nav-action-button[title="delete row"] svg.widget-icon,
-    .nav-action-button[title="insert column left"] svg.widget-icon,
-    .nav-action-button[title="insert row above"] svg.widget-icon,
-    .nav-action-button[title="evaluate formulas"] svg.widget-icon,
-    .nav-action-button[title="export as csv"] svg.widget-icon,
-    .nav-action-button[title="help"] svg.widget-icon,
+    svg.widget-icon,
     svg.links-coming-in,
     svg.links-going-out,
     svg.broken-link,
@@ -203,33 +188,6 @@ body:not(.pt-disable-custom-icons) {
     svg.create-new,
     .kanban-plugin__lane-grip svg,
     svg.github-glyph,
-    div[data-callout="note"] .callout-icon svg,
-    div[data-callout="abstract"] .callout-icon svg,
-    div[data-callout="summary"] .callout-icon svg,
-    div[data-callout="tldr"] .callout-icon svg,
-    div[data-callout="info"] .callout-icon svg,
-    div[data-callout="todo"] .callout-icon svg,
-    div[data-callout="tip"] .callout-icon svg,
-    div[data-callout="hint"] .callout-icon svg,
-    div[data-callout="important"] .callout-icon svg,
-    div[data-callout="success"] .callout-icon svg, 
-    div[data-callout="check"] .callout-icon svg, 
-    div[data-callout="done"] .callout-icon svg, 
-    div[data-callout="question"] .callout-icon svg,
-    div[data-callout="help"] .callout-icon svg,
-    div[data-callout="faq"] .callout-icon svg,
-    div[data-callout="warning"] .callout-icon svg,
-    div[data-callout="caution"] .callout-icon svg,
-    div[data-callout="attention"] .callout-icon svg,
-    div[data-callout="failure"] .callout-icon svg,
-    div[data-callout="fail"] .callout-icon svg,
-    div[data-callout="missing"] .callout-icon svg,
-    div[data-callout="danger"] .callout-icon svg,
-    div[data-callout="error"] .callout-icon svg,
-    div[data-callout="bug"] .callout-icon svg,
-    div[data-callout="example"] .callout-icon svg,
-    div[data-callout="quote"] .callout-icon svg,
-    div[data-callout="cite"] .callout-icon svg,
     svg.globe,
     svg.filled-pin,
     svg.three-horizontal-bars,
@@ -241,45 +199,163 @@ body:not(.pt-disable-custom-icons) {
         -webkit-mask-repeat: no-repeat;
     }
 
+    .workspace-tab-header.is-active svg,
+    .workspace-ribbon-collapse-btn[aria-label="Collapse"] svg,
+    .workspace-leaf.mod-active .view-header svg,
+    .nav-action-button.is-active svg
+    {
+        background-color: var(--highlight-text-normal);
+    }
+
+    .workspace-tab-header.is-active svg,
+    .workspace-ribbon-collapse-btn[aria-label="Collapse"] svg,
+    .workspace-leaf.mod-active .view-header svg,
+    .nav-action-button.is-active svg
+    {
+        background-color: var(--highlight-text-normal);
+    }
+
+    .workspace-tab-header.is-active :hover > svg,
+    .workspace-ribbon-collapse-btn[aria-label="Collapse"] :hover > svg,
+    .workspace-leaf.mod-active .view-header :hover > svg,
+    .nav-action-button.is-active :hover > svg
+    {
+        background-color: var(--interactive-accent-hover);
+    }
+
+
+    :hover > {
+        svg.folder,
+        svg.search,
+        svg.star,
+        svg.stacked-levels,
+        svg.up-and-down-arrows,
+        svg.document,
+        svg.hashtag,
+        svg.quote-glyph,
+        svg.calendar-with-checkmark,
+        svg.pencil,
+        svg.cross,
+        svg.vertical-three-dots,
+        svg.left-arrow,
+        svg.right-arrow,
+        svg.double-up-arrow-glyph,
+        svg.double-down-arrow-glyph,
+        svg.bullet-list,
+        svg.expand-vertically,
+        svg.magnifying-glass,
+        svg.JumpToDate,
+        svg.spreadsheet,
+        svg.dot-network,
+        svg.documents,
+        svg.run-command,
+        svg.pane-layout,
+        svg.paper-plane,
+        svg.left-arrow-with-tail,
+        svg.right-arrow-with-tail,
+        svg.vault,
+        svg.open-vault,
+        svg.help,
+        svg.gear,
+        svg.switch,
+        svg.any-key,
+        svg.reset,
+        svg.install,
+        svg.info,
+        svg.reading-glasses,
+        svg.trash,
+        svg.link,
+        svg.presentation,
+        svg.popup-open,
+        svg.merge-files,
+        svg.code-glyph,
+        svg.horizontal-split,
+        svg.vertical-split,
+        svg.pin,
+        svg.microphone,
+        svg.dice,
+        svg.sheets-in-box,
+        svg.blocks,
+        svg.go-to-file,
+        svg.add-note-glyph,
+        svg.link-glyph,
+        svg.links-coming-in,
+        svg.links-going-out,
+        svg.broken-link,
+        svg.cloud,
+        svg.languages,
+        svg.uppercase-lowercase-a,
+        svg.plus-with-circle,
+        svg.crossed-star,
+        svg.wand,
+        svg.image-file,
+        svg.split,
+        svg.create-new,
+        .kanban-plugin__lane-grip svg,
+        svg.github-glyph,
+        svg.globe,
+        svg.filled-pin,
+        svg.three-horizontal-bars,
+        svg.ChevronDown,
+        svg.widget-icon
+        {
+            background-color: var(--interactive-accent-hover);
+        }
+    }
+
     div[data-callout="note"] .callout-title svg,
     div[data-callout="quote"] .callout-title svg,
     div[data-callout="cite"] .callout-title svg {
         background-color: var(--color-text-grey);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="abstract"] .callout-title svg,
     div[data-callout="summary"] .callout-title svg,
     div[data-callout="tldr"] .callout-title svg {
         background-color: var(--color-text-aqua);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="info"] .callout-title svg,
     div[data-callout="todo"] .callout-title svg {
         background-color: var(--color-text-blue);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="tip"] .callout-title svg,
     div[data-callout="hint"] .callout-title svg,
     div[data-callout="important"] .callout-title svg {
         background-color: var(--color-text-mint);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="success"] .callout-title svg, 
     div[data-callout="check"] .callout-title svg, 
     div[data-callout="done"] .callout-title svg {
         background-color: var(--color-text-green);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="question"] .callout-title svg,
     div[data-callout="help"] .callout-title svg,
     div[data-callout="faq"] .callout-title svg {
         background-color: var(--color-text-yellow);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="warning"] .callout-title svg,
     div[data-callout="caution"] .callout-title svg,
     div[data-callout="attention"] .callout-title svg {
         background-color: var(--color-text-orange);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="failure"] .callout-title svg,
@@ -288,14 +364,20 @@ body:not(.pt-disable-custom-icons) {
     div[data-callout="danger"] .callout-title svg,
     div[data-callout="error"] .callout-title svg {
         background-color: var(--color-text-red);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="bug"] .callout-title svg {
         background-color: var(--color-text-pink);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     div[data-callout="example"] .callout-title svg {
         background-color: var(--color-text-purple);
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
     }
 
     svg.folder {
