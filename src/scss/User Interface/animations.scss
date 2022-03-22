@@ -277,7 +277,8 @@ body:not(.pt-disable-animations) {
     .backlink-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
     .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
     .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
-    .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg {
+    .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg,
+    .callout.is-collapsed:hover .callout-fold svg {
         animation-duration: 0.25s;
         animation-name: floatIconDownIndicator;
         animation-iteration-count: 2;
@@ -289,7 +290,8 @@ body:not(.pt-disable-animations) {
     .backlink-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
     .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
     .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
-    .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg {
+    .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg,
+    .callout:not(.is-collapsed):hover .callout-fold svg {
         animation-duration: 0.25s;
         animation-name: floatIconRightIndicator;
         animation-iteration-count: 2;
@@ -371,6 +373,5 @@ body:not(.pt-disable-animations) {
     .nav-folder-title:not([data-path="/"]) {
         transition: all ease 200ms;
     }
-
 }
 /* #endregion */
