@@ -589,7 +589,6 @@ body.theme-dark.pt-color-scheme-caffe-mocha-dt {
   --text-highlight-bg: var(--interactive-accent-dark);
   --highlight-text-normal: hsl(28, 32%, 18%);
   --highlight-text-dark: hsl(28, 32%, 18%);
-  --highlight-text-accent-custom-lt: hsl(28, 32%, 85%);
   --background-primary: hsl(28, 32%, 95%);
   --background-primary-alt: hsl(28, 32%, 93%);
   --background-secondary: hsl(28, 32%, 90%);
@@ -656,15 +655,15 @@ body.theme-dark.pt-color-scheme-caffe-mocha-dt {
   --color-pink-l-darkened: 19%;
   --color-grey-l-darkened: 20%;
   --color-accent-l-darkened2x: calc(var(--color-accent-dt-l) - var(--color-darken-dt) * 2);
-  --color-red-l-darkened2x: 27%;
+  --color-red-l-darkened2x: 29%;
   --color-orange-l-darkened2x: 31%;
   --color-yellow-l-darkened2x: 27%;
   --color-green-l-darkened2x: 33%;
   --color-mint-l-darkened2x: 35%;
   --color-aqua-l-darkened2x: 30%;
-  --color-blue-l-darkened2x: 38%;
-  --color-purple-l-darkened2x: 32%;
-  --color-pink-l-darkened2x: 30%;
+  --color-blue-l-darkened2x: 40%;
+  --color-purple-l-darkened2x: 34%;
+  --color-pink-l-darkened2x: 32%;
   --color-grey-l-darkened2x: 34%;
   /* Dark Theme Color Adjustments */
   --color-red-s-desaturated-text: 47%;
@@ -733,7 +732,6 @@ body.theme-dark.pt-color-scheme-caffe-mocha-dt {
   --text-highlight-bg: var(--interactive-accent-dark);
   --highlight-text-normal: hsl(28, 32%, 8%);
   --highlight-text-dark: hsl(28, 32%, 8%);
-  --highlight-text-accent-custom-dt: hsl(28, 32%, 82%);
   --background-primary: hsl(28, 32%, 14%);
   --background-primary-alt: hsl(28, 32%, 18%);
   --background-secondary: hsl(28, 32%, 9.2%);
@@ -744,7 +742,6 @@ body.theme-dark.pt-color-scheme-caffe-mocha-dt {
   --tab-label-background-color: hsl(28, 32%, 8.2%);
   --page-background-color: var(--background-secondary);
   --background-color-dt: hsl(28, 32%, 6.2%);
-  --highlight-text-accent-custom-dt: hsl(28, 32%, 85%);
   --file-explorer-vertical-lines-color: hsl(28, 32%, 16%);
   --style-settings-vertical-lines-color: hsl(28, 32%, 16%);
   --outline-vertical-lines-color: hsl(28, 32%, 16%);
@@ -2564,7 +2561,7 @@ body.theme-dark.pt-color-scheme-caffe-mocha-dt {
 .theme-light.pt-accent-style-borderandfilled-lt .flair.mod-pop {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
-  color: var(--highlight-text-normal);
+  color: var(--text-normal);
   border: var(--border-size) solid var(--color-dark-green);
   background-color: var(--color-green);
 }
@@ -3262,7 +3259,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 /* Tab label spacing */
 .workspace-tab-header-inner {
-  padding: 8px 10px;
+  padding: unset;
   width: 41px;
   align-items: center;
   justify-content: center;
@@ -3272,6 +3269,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 /* Tab label icon centering */
 .workspace-tab-header-inner-icon {
+  padding: 8px 10px;
   display: flex;
   align-items: center;
 }
@@ -3892,7 +3890,7 @@ body:not(.pt-disable-animations) .backlink-pane .tree-item-self.is-collapsed:hov
 body:not(.pt-disable-animations) .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg,
-body:not(.pt-disable-animations) .callout.is-collapsed:hover .callout-fold svg {
+body:not(.pt-disable-animations) .callout.is-collapsed .callout-title:hover .callout-fold svg {
   animation-duration: 0.25s;
   animation-name: floatIconDownIndicator;
   animation-iteration-count: 2;
@@ -3904,7 +3902,7 @@ body:not(.pt-disable-animations) .backlink-pane .tree-item-self:not(.is-collapse
 body:not(.pt-disable-animations) .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg,
-body:not(.pt-disable-animations) .callout:not(.is-collapsed):hover .callout-fold svg {
+body:not(.pt-disable-animations) .callout:not(.is-collapsed) .callout-title:hover .callout-fold svg {
   animation-duration: 0.25s;
   animation-name: floatIconRightIndicator;
   animation-iteration-count: 2;
@@ -4015,8 +4013,10 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
 
 .modal.mod-settings .vertical-tab-header {
   padding: 0px;
-  border-radius: var(--border-radius);
+  background-color: unset;
   margin: 0px 15px 15px 15px;
+  padding-right: 8px;
+  flex: 0 0 220px;
   height: unset;
 }
 
@@ -4027,16 +4027,35 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
 .modal.mod-settings .modal-title {
   height: 40px;
   font-size: unset;
+  display: flex;
 }
 
 .modal.mod-settings .modal-title::before {
+  content: "Prism Theme v2.0.0";
+  font-size: 14px;
+  padding: 0px 8px;
+  height: 24px;
+  margin: 8px 15px;
+  color: var(--interactive-accent-text);
+  background: var(--background-primary);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+  width: fit-content;
+  display: inline-flex;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.modal.mod-settings .modal-title::after {
   content: "Settings";
   font-size: 16px;
   padding: 2px 10px;
   height: 25px;
   margin: 5px auto;
   width: fit-content;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
@@ -4046,56 +4065,22 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
   height: -webkit-fill-available;
 }
 
-.modal.mod-settings .vertical-tab-header-group:first-of-type::before {
-  content: "Prism Theme";
-  font-size: 16px;
-  font-variation-settings: "wght" 600;
-  background: var(--background-primary);
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-  padding: unset;
-  padding-top: 2px;
-  display: flex;
-  justify-content: center;
-}
-
-.vertical-tab-header > .vertical-tab-header-group:first-of-type .vertical-tab-header-group-title {
-  padding: unset;
-}
-.vertical-tab-header > .vertical-tab-header-group:first-of-type .vertical-tab-header-group-title::before {
-  content: "v1.6.0";
-  text-transform: lowercase;
-  font-size: 15px;
-  font-variation-settings: "wght" 600;
-  color: var(--interactive-accent-text);
-  background: var(--background-primary);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
-  margin-bottom: 5px;
-  padding: unset;
-  display: flex;
-  justify-content: center;
-}
-
-.modal.mod-settings .vertical-tab-header {
-  background-color: var(--background-secondary);
-  box-shadow: var(--drop-shadow);
-}
-
 .modal.mod-settings .vertical-tab-header-group {
   padding: 0px;
   border-radius: var(--border-radius);
   background: transparent;
+  border: 0px;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
 }
 
-.modal.mod-settings .vertical-tab-header-group:first-of-type .vertical-tab-header-group-items {
-  border-bottom: 1px solid var(--table-border-color);
-  padding-bottom: 10px;
+.modal.mod-settings .vertical-tab-header-group .vertical-tab-header-group-items {
+  border-bottom: unset;
+  padding: 8px;
 }
 
-.modal.mod-settings .vertical-tab-header-group {
+.modal.mod-settings .vertical-tab-header-group:first-of-type {
   margin-bottom: 10px;
 }
 
@@ -4140,9 +4125,19 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
 
 .vertical-tab-header-group-title {
   color: var(--text-normal);
+  background: var(--background-primary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+  text-transform: capitalize;
+  font-size: 15px;
   font-weight: bold;
+  padding: 8px;
+  margin: unset;
   text-align: center;
-  padding: 5px 15px;
+  height: fit-content;
+  width: fit-content;
+  min-width: -webkit-fill-available;
+  border: unset;
 }
 
 .modal-content.community-plugin {
@@ -4168,10 +4163,11 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
 
 .horizontal-tab-nav-item,
 .vertical-tab-nav-item {
-  margin: 0px 10px;
+  margin: unset;
   border-radius: var(--border-radius);
   border: var(--border-size) solid transparent;
-  padding: 3px 10px 3px 16px;
+  padding: 2px 10px;
+  font-size: 15px;
 }
 
 .horizontal-tab-nav-item,
@@ -5156,6 +5152,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   stroke-width: 2px;
+  transition: all ease 200ms;
 }
 
 .workspace-ribbon-collapse-btn:hover {
@@ -5720,22 +5717,7 @@ body:not(.pt-disable-custom-icons) svg.blocks,
 body:not(.pt-disable-custom-icons) svg.go-to-file,
 body:not(.pt-disable-custom-icons) svg.add-note-glyph,
 body:not(.pt-disable-custom-icons) svg.link-glyph,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="left align column"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="center align column"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="right align column"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="move row up"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="move row down"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="move column left"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="move column right"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="sort by column ascending"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="sort by column descending"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="delete column"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="delete row"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="insert column left"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="insert row above"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="evaluate formulas"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title="export as csv"] svg.widget-icon,
-body:not(.pt-disable-custom-icons) .nav-action-button[title=help] svg.widget-icon,
+body:not(.pt-disable-custom-icons) svg.widget-icon,
 body:not(.pt-disable-custom-icons) svg.links-coming-in,
 body:not(.pt-disable-custom-icons) svg.links-going-out,
 body:not(.pt-disable-custom-icons) svg.broken-link,
@@ -5750,33 +5732,6 @@ body:not(.pt-disable-custom-icons) svg.split,
 body:not(.pt-disable-custom-icons) svg.create-new,
 body:not(.pt-disable-custom-icons) .kanban-plugin__lane-grip svg,
 body:not(.pt-disable-custom-icons) svg.github-glyph,
-body:not(.pt-disable-custom-icons) div[data-callout=note] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=abstract] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=summary] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=tldr] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=info] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=todo] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=tip] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=hint] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=important] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=success] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=help] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=faq] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=warning] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=caution] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=missing] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=danger] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=error] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=bug] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=example] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=quote] .callout-icon svg,
-body:not(.pt-disable-custom-icons) div[data-callout=cite] .callout-icon svg,
 body:not(.pt-disable-custom-icons) svg.globe,
 body:not(.pt-disable-custom-icons) svg.filled-pin,
 body:not(.pt-disable-custom-icons) svg.three-horizontal-bars,
@@ -5785,39 +5740,146 @@ body:not(.pt-disable-custom-icons) svg.ChevronDown {
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
 }
+body:not(.pt-disable-custom-icons) .workspace-tab-header.is-active svg,
+body:not(.pt-disable-custom-icons) .workspace-ribbon-collapse-btn[aria-label=Collapse] svg,
+body:not(.pt-disable-custom-icons) .workspace-leaf.mod-active .view-header svg,
+body:not(.pt-disable-custom-icons) .nav-action-button.is-active svg {
+  background-color: var(--highlight-text-normal);
+}
+body:not(.pt-disable-custom-icons) .workspace-tab-header.is-active svg,
+body:not(.pt-disable-custom-icons) .workspace-ribbon-collapse-btn[aria-label=Collapse] svg,
+body:not(.pt-disable-custom-icons) .workspace-leaf.mod-active .view-header svg,
+body:not(.pt-disable-custom-icons) .nav-action-button.is-active svg {
+  background-color: var(--highlight-text-normal);
+}
+body:not(.pt-disable-custom-icons) .workspace-tab-header.is-active :hover > svg,
+body:not(.pt-disable-custom-icons) .workspace-ribbon-collapse-btn[aria-label=Collapse] :hover > svg,
+body:not(.pt-disable-custom-icons) .workspace-leaf.mod-active .view-header :hover > svg,
+body:not(.pt-disable-custom-icons) .nav-action-button.is-active :hover > svg {
+  background-color: var(--interactive-accent-hover);
+}
+body:not(.pt-disable-custom-icons) :hover > svg.folder,
+body:not(.pt-disable-custom-icons) :hover > svg.search,
+body:not(.pt-disable-custom-icons) :hover > svg.star,
+body:not(.pt-disable-custom-icons) :hover > svg.stacked-levels,
+body:not(.pt-disable-custom-icons) :hover > svg.up-and-down-arrows,
+body:not(.pt-disable-custom-icons) :hover > svg.document,
+body:not(.pt-disable-custom-icons) :hover > svg.hashtag,
+body:not(.pt-disable-custom-icons) :hover > svg.quote-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.calendar-with-checkmark,
+body:not(.pt-disable-custom-icons) :hover > svg.pencil,
+body:not(.pt-disable-custom-icons) :hover > svg.cross,
+body:not(.pt-disable-custom-icons) :hover > svg.vertical-three-dots,
+body:not(.pt-disable-custom-icons) :hover > svg.left-arrow,
+body:not(.pt-disable-custom-icons) :hover > svg.right-arrow,
+body:not(.pt-disable-custom-icons) :hover > svg.double-up-arrow-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.double-down-arrow-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.bullet-list,
+body:not(.pt-disable-custom-icons) :hover > svg.expand-vertically,
+body:not(.pt-disable-custom-icons) :hover > svg.magnifying-glass,
+body:not(.pt-disable-custom-icons) :hover > svg.JumpToDate,
+body:not(.pt-disable-custom-icons) :hover > svg.spreadsheet,
+body:not(.pt-disable-custom-icons) :hover > svg.dot-network,
+body:not(.pt-disable-custom-icons) :hover > svg.documents,
+body:not(.pt-disable-custom-icons) :hover > svg.run-command,
+body:not(.pt-disable-custom-icons) :hover > svg.pane-layout,
+body:not(.pt-disable-custom-icons) :hover > svg.paper-plane,
+body:not(.pt-disable-custom-icons) :hover > svg.left-arrow-with-tail,
+body:not(.pt-disable-custom-icons) :hover > svg.right-arrow-with-tail,
+body:not(.pt-disable-custom-icons) :hover > svg.vault,
+body:not(.pt-disable-custom-icons) :hover > svg.open-vault,
+body:not(.pt-disable-custom-icons) :hover > svg.help,
+body:not(.pt-disable-custom-icons) :hover > svg.gear,
+body:not(.pt-disable-custom-icons) :hover > svg.switch,
+body:not(.pt-disable-custom-icons) :hover > svg.any-key,
+body:not(.pt-disable-custom-icons) :hover > svg.reset,
+body:not(.pt-disable-custom-icons) :hover > svg.install,
+body:not(.pt-disable-custom-icons) :hover > svg.info,
+body:not(.pt-disable-custom-icons) :hover > svg.reading-glasses,
+body:not(.pt-disable-custom-icons) :hover > svg.trash,
+body:not(.pt-disable-custom-icons) :hover > svg.link,
+body:not(.pt-disable-custom-icons) :hover > svg.presentation,
+body:not(.pt-disable-custom-icons) :hover > svg.popup-open,
+body:not(.pt-disable-custom-icons) :hover > svg.merge-files,
+body:not(.pt-disable-custom-icons) :hover > svg.code-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.horizontal-split,
+body:not(.pt-disable-custom-icons) :hover > svg.vertical-split,
+body:not(.pt-disable-custom-icons) :hover > svg.pin,
+body:not(.pt-disable-custom-icons) :hover > svg.microphone,
+body:not(.pt-disable-custom-icons) :hover > svg.dice,
+body:not(.pt-disable-custom-icons) :hover > svg.sheets-in-box,
+body:not(.pt-disable-custom-icons) :hover > svg.blocks,
+body:not(.pt-disable-custom-icons) :hover > svg.go-to-file,
+body:not(.pt-disable-custom-icons) :hover > svg.add-note-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.link-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.links-coming-in,
+body:not(.pt-disable-custom-icons) :hover > svg.links-going-out,
+body:not(.pt-disable-custom-icons) :hover > svg.broken-link,
+body:not(.pt-disable-custom-icons) :hover > svg.cloud,
+body:not(.pt-disable-custom-icons) :hover > svg.languages,
+body:not(.pt-disable-custom-icons) :hover > svg.uppercase-lowercase-a,
+body:not(.pt-disable-custom-icons) :hover > svg.plus-with-circle,
+body:not(.pt-disable-custom-icons) :hover > svg.crossed-star,
+body:not(.pt-disable-custom-icons) :hover > svg.wand,
+body:not(.pt-disable-custom-icons) :hover > svg.image-file,
+body:not(.pt-disable-custom-icons) :hover > svg.split,
+body:not(.pt-disable-custom-icons) :hover > svg.create-new,
+body:not(.pt-disable-custom-icons) :hover > .kanban-plugin__lane-grip svg,
+body:not(.pt-disable-custom-icons) :hover > svg.github-glyph,
+body:not(.pt-disable-custom-icons) :hover > svg.globe,
+body:not(.pt-disable-custom-icons) :hover > svg.filled-pin,
+body:not(.pt-disable-custom-icons) :hover > svg.three-horizontal-bars,
+body:not(.pt-disable-custom-icons) :hover > svg.ChevronDown,
+body:not(.pt-disable-custom-icons) :hover > svg.widget-icon {
+  background-color: var(--interactive-accent-hover);
+}
 body:not(.pt-disable-custom-icons) div[data-callout=note] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=quote] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=cite] .callout-title svg {
   background-color: var(--color-text-grey);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=abstract] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=summary] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=tldr] .callout-title svg {
   background-color: var(--color-text-aqua);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=info] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=todo] .callout-title svg {
   background-color: var(--color-text-blue);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=tip] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=hint] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=important] .callout-title svg {
   background-color: var(--color-text-mint);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=success] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-title svg {
   background-color: var(--color-text-green);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=help] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=faq] .callout-title svg {
   background-color: var(--color-text-yellow);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=warning] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=caution] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-title svg {
   background-color: var(--color-text-orange);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-title svg,
@@ -5825,12 +5887,18 @@ body:not(.pt-disable-custom-icons) div[data-callout=missing] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=danger] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=error] .callout-title svg {
   background-color: var(--color-text-red);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=bug] .callout-title svg {
   background-color: var(--color-text-pink);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) div[data-callout=example] .callout-title svg {
   background-color: var(--color-text-purple);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
 }
 body:not(.pt-disable-custom-icons) svg.folder {
   -webkit-mask-size: 19px;
@@ -15921,10 +15989,10 @@ settings:
         default: pt-accent-style-borderandfilled-lt
         options:
             -
-                label: Text Only
+                label: Plain
                 value: pt-accent-style-text-lt
             - 
-                label: Border Only
+                label: Border
                 value: pt-accent-style-border-lt
             - 
                 label: Filled
@@ -16037,10 +16105,10 @@ settings:
         default: pt-accent-style-borderandfilled-dt
         options:
             -
-                label: Text Only
+                label: Plain
                 value: pt-accent-style-text-dt
             - 
-                label: Border Only
+                label: Border
                 value: pt-accent-style-border-dt
             - 
                 label: Filled
@@ -22229,10 +22297,10 @@ settings:
         default: pt-highlight-style-borderandfilled-lt
         options:
             -
-                label: Text Only
+                label: Text
                 value: pt-highlight-style-text-lt
             - 
-                label: Border Only
+                label: Border
                 value: pt-highlight-style-border-lt
             - 
                 label: Filled
@@ -22248,10 +22316,10 @@ settings:
         default: pt-highlight-style-borderandfilled-dt
         options:
             -
-                label: Text Only
+                label: Text
                 value: pt-highlight-style-text-dt
             - 
-                label: Border Only
+                label: Border
                 value: pt-highlight-style-border-dt
             - 
                 label: Filled
