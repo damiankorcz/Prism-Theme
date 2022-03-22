@@ -4,11 +4,24 @@ name: Prism Theme
 id: obsidian-prism-theme
 settings:
     -
-        id: color-schemes
-        title: Color Schemes
-        description: Color Schemes change all colors used by Prism for a different feel.
+        id: appearance
+        title: Appearance
+        description: Options which change how Prism styles Obsidian.
         type: heading
         level: 1
+        collapsed: true
+    -
+        id: accent-color-schemes-and-style
+        title: Accent, Color Schemes and Style
+        description: Main visual options for Prism.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: accent-colors-styles-lt
+        title: Light Theme
+        type: heading
+        level: 3
         collapsed: true
     -
         id: color-schemes-lt
@@ -24,6 +37,109 @@ settings:
                 label: Caffè Latte
                 value: pt-color-scheme-caffe-latte-lt
     -
+        id: accent-style-lt
+        title: Light Theme Accent Style
+        description: Adjusts the style used by the Accented elements in the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-accent-style-borderandfilled-lt
+        options:
+            -
+                label: Text Only
+                value: pt-accent-style-text-lt
+            - 
+                label: Border Only
+                value: pt-accent-style-border-lt
+            - 
+                label: Filled
+                value: pt-accent-style-filled-lt
+            - 
+                label: Border & Filled
+                value: pt-accent-style-borderandfilled-lt
+    -
+        id: light-accent-color-preset
+        title: Light Theme Accent Color Preset
+        description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
+        type: class-select
+        allowEmpty: false
+        default: pt-light-accent-color-purple
+        options:
+            -
+                label: Custom
+                value: pt-light-accent-color-custom
+            -
+                label: Red
+                value: pt-light-accent-color-red
+            -
+                label: Orange
+                value: pt-light-accent-color-orange
+            -
+                label: Yellow
+                value: pt-light-accent-color-yellow
+            -
+                label: Green
+                value: pt-light-accent-color-green
+            -
+                label: Mint
+                value: pt-light-accent-color-mint
+            -
+                label: Aqua
+                value: pt-light-accent-color-aqua
+            -
+                label: Blue
+                value: pt-light-accent-color-blue
+            -
+                label: Purple
+                value: pt-light-accent-color-purple
+            -
+                label: Pink
+                value: pt-light-accent-color-pink
+            -
+                label: Grey
+                value: pt-light-accent-color-grey
+    -
+        id: color-accent-lt
+        title: Light Theme Custom Accent Color
+        description: Make sure you selected 'Custom' in Light Theme Accent Color Preset for this to work.
+        type: variable-color
+        format: hsl-split
+        opacity: false
+        default: '#C7BDFF'
+    -
+        id: highlight-text-accent-lt
+        title: Light Theme Accent Text Color
+        description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-dark-lt 
+        options:
+            -
+                label: Dark
+                value: pt-highlight-text-dark-lt 
+            - 
+                label: Light
+                value: pt-highlight-text-light-lt 
+            - 
+                label: Accent
+                value: pt-highlight-text-accent-lt
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-lt
+    -
+        id: highlight-text-accent-custom-lt
+        title: Light Theme Custom Accent Text Color
+        description: Make sure you selected 'Custom' in Light Theme Accent Text Color for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FFFFFF'
+    -
+        id: accent-colors-styles-dt
+        title: Dark Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
         id: color-schemes-dt
         title: Dark Theme Color Scheme
         type: class-select
@@ -36,6 +152,1022 @@ settings:
             -
                 label: Caffè Mocha
                 value: pt-color-scheme-caffe-mocha-dt
+    -
+        id: accent-style-dt
+        title: Dark Theme Accent Style
+        description: Adjusts the style used by the Accented elements in the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-accent-style-borderandfilled-dt
+        options:
+            -
+                label: Text Only
+                value: pt-accent-style-text-dt
+            - 
+                label: Border Only
+                value: pt-accent-style-border-dt
+            - 
+                label: Filled
+                value: pt-accent-style-filled-dt
+            - 
+                label: Border & Filled
+                value: pt-accent-style-borderandfilled-dt
+    -
+        id: dark-accent-color-preset
+        title: Dark Theme Accent Color Preset
+        description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
+        type: class-select
+        allowEmpty: false
+        default: pt-dark-accent-color-purple
+        options:
+            -
+                label: Custom
+                value: pt-dark-accent-color-custom
+            -
+                label: Red
+                value: pt-dark-accent-color-red
+            -
+                label: Orange
+                value: pt-dark-accent-color-orange
+            -
+                label: Yellow
+                value: pt-dark-accent-color-yellow
+            -
+                label: Green
+                value: pt-dark-accent-color-green
+            -
+                label: Mint
+                value: pt-dark-accent-color-mint
+            -
+                label: Aqua
+                value: pt-dark-accent-color-aqua
+            -
+                label: Blue
+                value: pt-dark-accent-color-blue
+            -
+                label: Purple
+                value: pt-dark-accent-color-purple
+            -
+                label: Pink
+                value: pt-dark-accent-color-pink
+            -
+                label: Grey
+                value: pt-dark-accent-color-grey
+    -
+        id: color-accent-dt
+        title: Dark Theme Custom Accent Color
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work.
+        type: variable-color
+        format: hsl-split
+        opacity: false
+        default: '#8C7FD7'
+    -
+        id: highlight-text-accent-dt
+        title: Dark Theme Accent Text Color
+        description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-light-dt 
+        options:
+            -
+                label: Dark
+                value: pt-highlight-text-dark-dt 
+            - 
+                label: Light
+                value: pt-highlight-text-light-dt 
+            - 
+                label: Accent
+                value: pt-highlight-text-accent-dt
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-dt
+    -
+        id: highlight-text-accent-custom-dt
+        title: Dark Theme Custom Accent Text Color
+        description: Make sure you selected 'Custom' in Dark Theme Accent Text Color for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FFFFFF'
+    -
+        id: graph-view-colors
+        title: Graph Color Customisation
+        description: Define the colors used in the Graph View. In order to see changes you need to refresh the Graph View (restart Obsidian or toggle the Light/Dark theme). 
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: graph-view-light-theme
+        title: Light Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: graph-note-color-lt
+        title: Graph Note Color
+        description: The color of a Graph Node representing a note file.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-note-color-presets-lt
+        title: Light Theme Graph Note Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-note-grey-lt
+        options:
+            -
+                label: Custom
+                value: pt-graph-note-custom-lt
+            -
+                label: Red
+                value: pt-graph-note-red-lt
+            -
+                label: Orange
+                value: pt-graph-note-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-note-yellow-lt
+            -
+                label: Green
+                value: pt-graph-note-green-lt
+            -
+                label: Mint
+                value: pt-graph-note-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-note-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-note-blue-lt
+            -
+                label: Purple
+                value: pt-graph-note-purple-lt
+            -
+                label: Pink
+                value: pt-graph-note-pink-lt
+            -
+                label: Grey
+                value: pt-graph-note-grey-lt
+    -
+        id: color-custom-graph-note-lt
+        title: Light Theme Graph Note Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#C4C7CA'
+    -
+        id: graph-fill-opacity-lt
+        title: Light Theme Graph Note Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-note-focused-color-lt
+        title: Graph Note Focused Color
+        description: The color of a Graph Node representing currently focused note file.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-note-focused-color-presets-lt
+        title: Light Theme Graph Note Focused Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-note-focused-accent-lt
+        options:
+            -
+                label: Accent Color
+                value: pt-graph-note-focused-accent-lt
+            -
+                label: Custom
+                value: pt-graph-note-focused-custom-lt
+            -
+                label: Red
+                value: pt-graph-note-focused-red-lt
+            -
+                label: Orange
+                value: pt-graph-note-focused-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-note-focused-yellow-lt
+            -
+                label: Green
+                value: pt-graph-note-focused-green-lt
+            -
+                label: Mint
+                value: pt-graph-note-focused-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-note-focused-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-note-focused-blue-lt
+            -
+                label: Purple
+                value: pt-graph-note-focused-purple-lt
+            -
+                label: Pink
+                value: pt-graph-note-focused-pink-lt
+            -
+                label: Grey
+                value: pt-graph-note-focused-grey-lt
+    -
+        id: color-custom-graph-note-focused-lt
+        title: Light Theme Graph Note Focused Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#8670FF'
+    -
+        id: graph-fill-focused-opacity-lt
+        title: Light Theme Graph Note Focused Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-tag-color-lt
+        title: Graph Tag Color
+        description: The color of a Graph Node representing a tag.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-tag-color-presets-lt
+        title: Light Theme Graph Tag Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-tag-blue-lt
+        options:
+            -
+                label: Custom
+                value: pt-graph-tag-custom-lt
+            -
+                label: Red
+                value: pt-graph-tag-red-lt
+            -
+                label: Orange
+                value: pt-graph-tag-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-tag-yellow-lt
+            -
+                label: Green
+                value: pt-graph-tag-green-lt
+            -
+                label: Mint
+                value: pt-graph-tag-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-tag-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-tag-blue-lt
+            -
+                label: Purple
+                value: pt-graph-tag-purple-lt
+            -
+                label: Pink
+                value: pt-graph-tag-pink-lt
+            -
+                label: Grey
+                value: pt-graph-tag-grey-lt
+    -
+        id: color-custom-graph-tag-lt
+        title: Light Theme Graph Tag Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#619EFF'
+    -
+        id: graph-tag-opacity-lt
+        title: Light Theme Graph Tag Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-attachment-color-lt
+        title: Graph Attachment Color
+        description: The color of a Graph Node representing an attachment.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-attachment-color-presets-lt
+        title: Light Theme Graph Attachment Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-attachment-yellow-lt
+        options:
+            -
+                label: Custom
+                value: pt-graph-attachment-custom-lt
+            -
+                label: Red
+                value: pt-graph-attachment-red-lt
+            -
+                label: Orange
+                value: pt-graph-attachment-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-attachment-yellow-lt
+            -
+                label: Green
+                value: pt-graph-attachment-green-lt
+            -
+                label: Mint
+                value: pt-graph-attachment-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-attachment-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-attachment-blue-lt
+            -
+                label: Purple
+                value: pt-graph-attachment-purple-lt
+            -
+                label: Pink
+                value: pt-graph-attachment-pink-lt
+            -
+                label: Grey
+                value: pt-graph-attachment-grey-lt
+    -
+        id: color-custom-graph-attachment-lt
+        title: Light Theme Graph Attachment Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FDDB6D'
+    -
+        id: graph-attachment-opacity-lt
+        title: Light Theme Graph Attachment Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-unresolved-color-lt
+        title: Graph Unresolved Color
+        description: The color of a Graph Node representing an unresolved note.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-unresolved-color-presets-lt
+        title: Light Theme Graph Unresolved Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-unresolved-red-lt
+        options:
+            -
+                label: Custom
+                value: pt-graph-unresolved-custom-lt
+            -
+                label: Red
+                value: pt-graph-unresolved-red-lt
+            -
+                label: Orange
+                value: pt-graph-unresolved-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-unresolved-yellow-lt
+            -
+                label: Green
+                value: pt-graph-unresolved-green-lt
+            -
+                label: Mint
+                value: pt-graph-unresolved-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-unresolved-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-unresolved-blue-lt
+            -
+                label: Purple
+                value: pt-graph-unresolved-purple-lt
+            -
+                label: Pink
+                value: pt-graph-unresolved-pink-lt
+            -
+                label: Grey
+                value: pt-graph-unresolved-grey-lt
+    -
+        id: color-custom-graph-unresolved-lt
+        title: Light Theme Graph Unresolved Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#FF7070'
+    -
+        id: graph-unresolved-opacity-lt
+        title: Light Theme Graph Unresolved Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-highlight-color-lt
+        title: Graph Highlight Color
+        description: The color of a Graph Node when highlighted.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-highlight-color-presets-lt
+        title: Light Theme Graph Highlight Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-highlight-accent-lt
+        options:
+            -
+                label: Accent Color
+                value: pt-graph-highlight-accent-lt
+            -
+                label: Custom
+                value: pt-graph-highlight-custom-lt
+            -
+                label: Red
+                value: pt-graph-highlight-red-lt
+            -
+                label: Orange
+                value: pt-graph-highlight-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-highlight-yellow-lt
+            -
+                label: Green
+                value: pt-graph-highlight-green-lt
+            -
+                label: Mint
+                value: pt-graph-highlight-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-highlight-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-highlight-blue-lt
+            -
+                label: Purple
+                value: pt-graph-highlight-purple-lt
+            -
+                label: Pink
+                value: pt-graph-highlight-pink-lt
+            -
+                label: Grey
+                value: pt-graph-highlight-grey-lt
+    -
+        id: color-custom-graph-highlight-lt
+        title: Light Theme Graph Highlight Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#8670FF'
+    -
+        id: graph-highlight-opacity-lt
+        title: Light Theme Graph Highlight Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-highlight-line-color-lt
+        title: Graph Highlight Line Color
+        description: The color of the lines connected to a highlighted Graph Node.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-highlight-line-color-presets-lt
+        title: Light Theme Graph Highlight Line Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-highlight-line-accent-lt
+        options:
+            -
+                label: Accent Color
+                value: pt-graph-highlight-line-accent-lt
+            -
+                label: Custom
+                value: pt-graph-highlight-line-custom-lt
+            -
+                label: Red
+                value: pt-graph-highlight-line-red-lt
+            -
+                label: Orange
+                value: pt-graph-highlight-line-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-highlight-line-yellow-lt
+            -
+                label: Green
+                value: pt-graph-highlight-line-green-lt
+            -
+                label: Mint
+                value: pt-graph-highlight-line-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-highlight-line-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-highlight-line-blue-lt
+            -
+                label: Purple
+                value: pt-graph-highlight-line-purple-lt
+            -
+                label: Pink
+                value: pt-graph-highlight-line-pink-lt
+            -
+                label: Grey
+                value: pt-graph-highlight-line-grey-lt
+    -
+        id: color-custom-graph-highlight-line-lt
+        title: Light Theme Graph Highlight Line Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#8670FF'
+    -
+        id: graph-highlight-line-opacity-lt
+        title: Light Theme Graph Highlight Line Opacity
+        type: variable-number-slider
+        default: 0.4
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-view-dark-theme
+        title: Dark Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: graph-note-color-dt
+        title: Graph Note Color
+        description: The color of a Graph Node representing a note file.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-note-color-presets-dt
+        title: Dark Theme Graph Note Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-note-grey-dt
+        options:
+            -
+                label: Custom
+                value: pt-graph-note-custom-dt
+            -
+                label: Red
+                value: pt-graph-note-red-dt
+            -
+                label: Orange
+                value: pt-graph-note-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-note-yellow-dt
+            -
+                label: Green
+                value: pt-graph-note-green-dt
+            -
+                label: Mint
+                value: pt-graph-note-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-note-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-note-blue-dt
+            -
+                label: Purple
+                value: pt-graph-note-purple-dt
+            -
+                label: Pink
+                value: pt-graph-note-pink-dt
+            -
+                label: Grey
+                value: pt-graph-note-grey-dt
+    -
+        id: color-custom-graph-note-dt
+        title: Dark Theme Graph Note Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Note Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#878787'
+    -
+        id: graph-fill-opacity-dt
+        title: Dark Theme Graph Note Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-note-focused-color-dt
+        title: Graph Note Focused Color
+        description: The color of a Graph Node representing currently focused note file.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-note-focused-color-presets-dt
+        title: Dark Theme Graph Note Focused Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-note-focused-accent-dt
+        options:
+            -
+                label: Accent Color
+                value: pt-graph-note-focused-accent-dt
+            -
+                label: Custom
+                value: pt-graph-note-focused-custom-dt
+            -
+                label: Red
+                value: pt-graph-note-focused-red-dt
+            -
+                label: Orange
+                value: pt-graph-note-focused-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-note-focused-yellow-dt
+            -
+                label: Green
+                value: pt-graph-note-focused-green-dt
+            -
+                label: Mint
+                value: pt-graph-note-focused-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-note-focused-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-note-focused-blue-dt
+            -
+                label: Purple
+                value: pt-graph-note-focused-purple-dt
+            -
+                label: Pink
+                value: pt-graph-note-focused-pink-dt
+            -
+                label: Grey
+                value: pt-graph-note-focused-grey-dt
+    -
+        id: color-custom-graph-note-focused-dt
+        title: Dark Theme Graph Note Focused Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Note Focused Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#4C3AB6'
+    -
+        id: graph-fill-focused-opacity-dt
+        title: Dark Theme Graph Note Focused Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-tag-color-dt
+        title: Graph Tag Color
+        description: The color of a Graph Node representing a tag.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-tag-color-presets-dt
+        title: Dark Theme Graph Tag Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-tag-blue-dt
+        options:
+            -
+                label: Custom
+                value: pt-graph-tag-custom-dt
+            -
+                label: Red
+                value: pt-graph-tag-red-dt
+            -
+                label: Orange
+                value: pt-graph-tag-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-tag-yellow-dt
+            -
+                label: Green
+                value: pt-graph-tag-green-dt
+            -
+                label: Mint
+                value: pt-graph-tag-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-tag-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-tag-blue-dt
+            -
+                label: Purple
+                value: pt-graph-tag-purple-dt
+            -
+                label: Pink
+                value: pt-graph-tag-pink-dt
+            -
+                label: Grey
+                value: pt-graph-tag-grey-dt
+    -
+        id: color-custom-graph-tag-dt
+        title: Dark Theme Graph Tag Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Tag Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#3663AB'
+    -
+        id: graph-tag-opacity-dt
+        title: Dark Theme Graph Tag Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-attachment-color-dt
+        title: Graph Attachment Color
+        description: The color of a Graph Node representing an attachment.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-attachment-color-presets-dt
+        title: Dark Theme Graph Attachment Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-attachment-yellow-dt
+        options:
+            -
+                label: Custom
+                value: pt-graph-attachment-custom-dt
+            -
+                label: Red
+                value: pt-graph-attachment-red-dt
+            -
+                label: Orange
+                value: pt-graph-attachment-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-attachment-yellow-dt
+            -
+                label: Green
+                value: pt-graph-attachment-green-dt
+            -
+                label: Mint
+                value: pt-graph-attachment-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-attachment-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-attachment-blue-dt
+            -
+                label: Purple
+                value: pt-graph-attachment-purple-dt
+            -
+                label: Pink
+                value: pt-graph-attachment-pink-dt
+            -
+                label: Grey
+                value: pt-graph-attachment-grey-dt
+    -
+        id: color-custom-graph-attachment-dt
+        title: Dark Theme Graph Attachment Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Attachment Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#AF943C'
+    -
+        id: graph-attachment-opacity-dt
+        title: Dark Theme Graph Attachment Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-unresolved-color-dt
+        title: Graph Unresolved Color
+        description: The color of a Graph Node representing an unresolved note.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-unresolved-color-presets-dt
+        title: Dark Theme Graph Unresolved Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-unresolved-red-dt
+        options:
+            -
+                label: Custom
+                value: pt-graph-unresolved-custom-dt
+            -
+                label: Red
+                value: pt-graph-unresolved-red-dt
+            -
+                label: Orange
+                value: pt-graph-unresolved-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-unresolved-yellow-dt
+            -
+                label: Green
+                value: pt-graph-unresolved-green-dt
+            -
+                label: Mint
+                value: pt-graph-unresolved-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-unresolved-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-unresolved-blue-dt
+            -
+                label: Purple
+                value: pt-graph-unresolved-purple-dt
+            -
+                label: Pink
+                value: pt-graph-unresolved-pink-dt
+            -
+                label: Grey
+                value: pt-graph-unresolved-grey-dt
+    -
+        id: color-custom-graph-unresolved-dt
+        title: Dark Theme Graph Unresolved Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Unresolved Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#B63A3A'
+    -
+        id: graph-unresolved-opacity-dt
+        title: Dark Theme Graph Unresolved Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-highlight-color-dt
+        title: Graph Highlight Color
+        description: The color of a Graph Node when highlighted.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-highlight-color-presets-dt
+        title: Dark Theme Graph Highlight Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-highlight-accent-dt
+        options:
+            -
+                label: Accent Color
+                value: pt-graph-highlight-accent-dt
+            -
+                label: Custom
+                value: pt-graph-highlight-custom-dt
+            -
+                label: Red
+                value: pt-graph-highlight-red-dt
+            -
+                label: Orange
+                value: pt-graph-highlight-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-highlight-yellow-dt
+            -
+                label: Green
+                value: pt-graph-highlight-green-dt
+            -
+                label: Mint
+                value: pt-graph-highlight-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-highlight-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-highlight-blue-dt
+            -
+                label: Purple
+                value: pt-graph-highlight-purple-dt
+            -
+                label: Pink
+                value: pt-graph-highlight-pink-dt
+            -
+                label: Grey
+                value: pt-graph-highlight-grey-dt
+    -
+        id: color-custom-graph-highlight-dt
+        title: Dark Theme Graph Highlight Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#4C3AB6'
+    -
+        id: graph-highlight-opacity-dt
+        title: Dark Theme Graph Highlight Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05 
+    -
+        id: graph-highlight-line-color-lt
+        title: Graph Highlight Line Color
+        description: The color of the lines connected to a highlighted Graph Node.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-highlight-line-color-presets-dt
+        title: Dark Theme Graph Highlight Line Color Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-highlight-line-accent-dt
+        options:
+            -
+                label: Accent Color
+                value: pt-graph-highlight-line-accent-dt
+            -
+                label: Custom
+                value: pt-graph-highlight-line-custom-dt
+            -
+                label: Red
+                value: pt-graph-highlight-line-red-dt
+            -
+                label: Orange
+                value: pt-graph-highlight-line-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-highlight-line-yellow-dt
+            -
+                label: Green
+                value: pt-graph-highlight-line-green-dt
+            -
+                label: Mint
+                value: pt-graph-highlight-line-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-highlight-line-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-highlight-line-blue-dt
+            -
+                label: Purple
+                value: pt-graph-highlight-line-purple-dt
+            -
+                label: Pink
+                value: pt-graph-highlight-line-pink-dt
+            -
+                label: Grey
+                value: pt-graph-highlight-line-grey-dt
+    -
+        id: color-custom-graph-highlight-line-dt
+        title: Dark Theme Graph Highlight Line Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#4C3AB6'
+    -
+        id: graph-highlight-line-opacity-dt
+        title: Dark Theme Graph Highlight Line Opacity
+        type: variable-number-slider
+        default: 0.4
+        min: 0
+        max: 1
+        step: 0.05 
     -
         id: editor
         title: Editor
@@ -5227,9 +6359,6 @@ settings:
                 label: Border Only
                 value: pt-highlight-style-border-lt
             - 
-                label: Border & Text
-                value: pt-highlight-style-borderandtext-lt
-            - 
                 label: Filled
                 value: pt-highlight-style-filled-lt
             - 
@@ -5249,939 +6378,11 @@ settings:
                 label: Border Only
                 value: pt-highlight-style-border-dt
             - 
-                label: Border & Text
-                value: pt-highlight-style-borderandtext-dt
-            - 
                 label: Filled
                 value: pt-highlight-style-filled-dt
             - 
                 label: Border & Filled
                 value: pt-highlight-style-borderandfilled-dt
-    -
-        id: graph-view
-        title: Graph View
-        description: Define the colors used in the Graph View. In order to see changes you need to refresh the Graph View (restart Obsidian or toggle the Light/Dark theme). 
-        type: heading
-        level: 1
-        collapsed: true
-    -
-        id: graph-colors
-        title: Graph Color Customisation
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: graph-view-light-theme
-        title: Light Theme
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: graph-note-color-lt
-        title: Graph Note Color
-        description: The color of a Graph Node representing a note file.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-note-color-presets-lt
-        title: Light Theme Graph Note Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-note-grey-lt
-        options:
-            -
-                label: Custom
-                value: pt-graph-note-custom-lt
-            -
-                label: Red
-                value: pt-graph-note-red-lt
-            -
-                label: Orange
-                value: pt-graph-note-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-note-yellow-lt
-            -
-                label: Green
-                value: pt-graph-note-green-lt
-            -
-                label: Mint
-                value: pt-graph-note-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-note-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-note-blue-lt
-            -
-                label: Purple
-                value: pt-graph-note-purple-lt
-            -
-                label: Pink
-                value: pt-graph-note-pink-lt
-            -
-                label: Grey
-                value: pt-graph-note-grey-lt
-    -
-        id: color-custom-graph-note-lt
-        title: Light Theme Graph Note Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#C4C7CA'
-    -
-        id: graph-fill-opacity-lt
-        title: Light Theme Graph Note Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-note-focused-color-lt
-        title: Graph Note Focused Color
-        description: The color of a Graph Node representing currently focused note file.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-note-focused-color-presets-lt
-        title: Light Theme Graph Note Focused Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-note-focused-accent-lt
-        options:
-            -
-                label: Accent Color
-                value: pt-graph-note-focused-accent-lt
-            -
-                label: Custom
-                value: pt-graph-note-focused-custom-lt
-            -
-                label: Red
-                value: pt-graph-note-focused-red-lt
-            -
-                label: Orange
-                value: pt-graph-note-focused-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-note-focused-yellow-lt
-            -
-                label: Green
-                value: pt-graph-note-focused-green-lt
-            -
-                label: Mint
-                value: pt-graph-note-focused-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-note-focused-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-note-focused-blue-lt
-            -
-                label: Purple
-                value: pt-graph-note-focused-purple-lt
-            -
-                label: Pink
-                value: pt-graph-note-focused-pink-lt
-            -
-                label: Grey
-                value: pt-graph-note-focused-grey-lt
-    -
-        id: color-custom-graph-note-focused-lt
-        title: Light Theme Graph Note Focused Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#8670FF'
-    -
-        id: graph-fill-focused-opacity-lt
-        title: Light Theme Graph Note Focused Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-tag-color-lt
-        title: Graph Tag Color
-        description: The color of a Graph Node representing a tag.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-tag-color-presets-lt
-        title: Light Theme Graph Tag Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-tag-blue-lt
-        options:
-            -
-                label: Custom
-                value: pt-graph-tag-custom-lt
-            -
-                label: Red
-                value: pt-graph-tag-red-lt
-            -
-                label: Orange
-                value: pt-graph-tag-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-tag-yellow-lt
-            -
-                label: Green
-                value: pt-graph-tag-green-lt
-            -
-                label: Mint
-                value: pt-graph-tag-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-tag-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-tag-blue-lt
-            -
-                label: Purple
-                value: pt-graph-tag-purple-lt
-            -
-                label: Pink
-                value: pt-graph-tag-pink-lt
-            -
-                label: Grey
-                value: pt-graph-tag-grey-lt
-    -
-        id: color-custom-graph-tag-lt
-        title: Light Theme Graph Tag Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#619EFF'
-    -
-        id: graph-tag-opacity-lt
-        title: Light Theme Graph Tag Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-attachment-color-lt
-        title: Graph Attachment Color
-        description: The color of a Graph Node representing an attachment.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-attachment-color-presets-lt
-        title: Light Theme Graph Attachment Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-attachment-yellow-lt
-        options:
-            -
-                label: Custom
-                value: pt-graph-attachment-custom-lt
-            -
-                label: Red
-                value: pt-graph-attachment-red-lt
-            -
-                label: Orange
-                value: pt-graph-attachment-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-attachment-yellow-lt
-            -
-                label: Green
-                value: pt-graph-attachment-green-lt
-            -
-                label: Mint
-                value: pt-graph-attachment-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-attachment-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-attachment-blue-lt
-            -
-                label: Purple
-                value: pt-graph-attachment-purple-lt
-            -
-                label: Pink
-                value: pt-graph-attachment-pink-lt
-            -
-                label: Grey
-                value: pt-graph-attachment-grey-lt
-    -
-        id: color-custom-graph-attachment-lt
-        title: Light Theme Graph Attachment Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#FDDB6D'
-    -
-        id: graph-attachment-opacity-lt
-        title: Light Theme Graph Attachment Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-unresolved-color-lt
-        title: Graph Unresolved Color
-        description: The color of a Graph Node representing an unresolved note.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-unresolved-color-presets-lt
-        title: Light Theme Graph Unresolved Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-unresolved-red-lt
-        options:
-            -
-                label: Custom
-                value: pt-graph-unresolved-custom-lt
-            -
-                label: Red
-                value: pt-graph-unresolved-red-lt
-            -
-                label: Orange
-                value: pt-graph-unresolved-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-unresolved-yellow-lt
-            -
-                label: Green
-                value: pt-graph-unresolved-green-lt
-            -
-                label: Mint
-                value: pt-graph-unresolved-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-unresolved-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-unresolved-blue-lt
-            -
-                label: Purple
-                value: pt-graph-unresolved-purple-lt
-            -
-                label: Pink
-                value: pt-graph-unresolved-pink-lt
-            -
-                label: Grey
-                value: pt-graph-unresolved-grey-lt
-    -
-        id: color-custom-graph-unresolved-lt
-        title: Light Theme Graph Unresolved Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#FF7070'
-    -
-        id: graph-unresolved-opacity-lt
-        title: Light Theme Graph Unresolved Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-highlight-color-lt
-        title: Graph Highlight Color
-        description: The color of a Graph Node when highlighted.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-highlight-color-presets-lt
-        title: Light Theme Graph Highlight Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-highlight-accent-lt
-        options:
-            -
-                label: Accent Color
-                value: pt-graph-highlight-accent-lt
-            -
-                label: Custom
-                value: pt-graph-highlight-custom-lt
-            -
-                label: Red
-                value: pt-graph-highlight-red-lt
-            -
-                label: Orange
-                value: pt-graph-highlight-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-highlight-yellow-lt
-            -
-                label: Green
-                value: pt-graph-highlight-green-lt
-            -
-                label: Mint
-                value: pt-graph-highlight-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-highlight-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-highlight-blue-lt
-            -
-                label: Purple
-                value: pt-graph-highlight-purple-lt
-            -
-                label: Pink
-                value: pt-graph-highlight-pink-lt
-            -
-                label: Grey
-                value: pt-graph-highlight-grey-lt
-    -
-        id: color-custom-graph-highlight-lt
-        title: Light Theme Graph Highlight Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#8670FF'
-    -
-        id: graph-highlight-opacity-lt
-        title: Light Theme Graph Highlight Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-highlight-line-color-lt
-        title: Graph Highlight Line Color
-        description: The color of the lines connected to a highlighted Graph Node.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-highlight-line-color-presets-lt
-        title: Light Theme Graph Highlight Line Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-highlight-line-accent-lt
-        options:
-            -
-                label: Accent Color
-                value: pt-graph-highlight-line-accent-lt
-            -
-                label: Custom
-                value: pt-graph-highlight-line-custom-lt
-            -
-                label: Red
-                value: pt-graph-highlight-line-red-lt
-            -
-                label: Orange
-                value: pt-graph-highlight-line-orange-lt
-            -
-                label: Yellow
-                value: pt-graph-highlight-line-yellow-lt
-            -
-                label: Green
-                value: pt-graph-highlight-line-green-lt
-            -
-                label: Mint
-                value: pt-graph-highlight-line-mint-lt
-            -
-                label: Aqua
-                value: pt-graph-highlight-line-aqua-lt
-            -
-                label: Blue
-                value: pt-graph-highlight-line-blue-lt
-            -
-                label: Purple
-                value: pt-graph-highlight-line-purple-lt
-            -
-                label: Pink
-                value: pt-graph-highlight-line-pink-lt
-            -
-                label: Grey
-                value: pt-graph-highlight-line-grey-lt
-    -
-        id: color-custom-graph-highlight-line-lt
-        title: Light Theme Graph Highlight Line Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#8670FF'
-    -
-        id: graph-highlight-line-opacity-lt
-        title: Light Theme Graph Highlight Line Opacity
-        type: variable-number-slider
-        default: 0.4
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-view-dark-theme
-        title: Dark Theme
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: graph-note-color-dt
-        title: Graph Note Color
-        description: The color of a Graph Node representing a note file.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-note-color-presets-dt
-        title: Dark Theme Graph Note Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-note-grey-dt
-        options:
-            -
-                label: Custom
-                value: pt-graph-note-custom-dt
-            -
-                label: Red
-                value: pt-graph-note-red-dt
-            -
-                label: Orange
-                value: pt-graph-note-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-note-yellow-dt
-            -
-                label: Green
-                value: pt-graph-note-green-dt
-            -
-                label: Mint
-                value: pt-graph-note-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-note-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-note-blue-dt
-            -
-                label: Purple
-                value: pt-graph-note-purple-dt
-            -
-                label: Pink
-                value: pt-graph-note-pink-dt
-            -
-                label: Grey
-                value: pt-graph-note-grey-dt
-    -
-        id: color-custom-graph-note-dt
-        title: Dark Theme Graph Note Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Note Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#878787'
-    -
-        id: graph-fill-opacity-dt
-        title: Dark Theme Graph Note Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-note-focused-color-dt
-        title: Graph Note Focused Color
-        description: The color of a Graph Node representing currently focused note file.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-note-focused-color-presets-dt
-        title: Dark Theme Graph Note Focused Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-note-focused-accent-dt
-        options:
-            -
-                label: Accent Color
-                value: pt-graph-note-focused-accent-dt
-            -
-                label: Custom
-                value: pt-graph-note-focused-custom-dt
-            -
-                label: Red
-                value: pt-graph-note-focused-red-dt
-            -
-                label: Orange
-                value: pt-graph-note-focused-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-note-focused-yellow-dt
-            -
-                label: Green
-                value: pt-graph-note-focused-green-dt
-            -
-                label: Mint
-                value: pt-graph-note-focused-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-note-focused-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-note-focused-blue-dt
-            -
-                label: Purple
-                value: pt-graph-note-focused-purple-dt
-            -
-                label: Pink
-                value: pt-graph-note-focused-pink-dt
-            -
-                label: Grey
-                value: pt-graph-note-focused-grey-dt
-    -
-        id: color-custom-graph-note-focused-dt
-        title: Dark Theme Graph Note Focused Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Note Focused Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#4C3AB6'
-    -
-        id: graph-fill-focused-opacity-dt
-        title: Dark Theme Graph Note Focused Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-tag-color-dt
-        title: Graph Tag Color
-        description: The color of a Graph Node representing a tag.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-tag-color-presets-dt
-        title: Dark Theme Graph Tag Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-tag-blue-dt
-        options:
-            -
-                label: Custom
-                value: pt-graph-tag-custom-dt
-            -
-                label: Red
-                value: pt-graph-tag-red-dt
-            -
-                label: Orange
-                value: pt-graph-tag-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-tag-yellow-dt
-            -
-                label: Green
-                value: pt-graph-tag-green-dt
-            -
-                label: Mint
-                value: pt-graph-tag-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-tag-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-tag-blue-dt
-            -
-                label: Purple
-                value: pt-graph-tag-purple-dt
-            -
-                label: Pink
-                value: pt-graph-tag-pink-dt
-            -
-                label: Grey
-                value: pt-graph-tag-grey-dt
-    -
-        id: color-custom-graph-tag-dt
-        title: Dark Theme Graph Tag Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Tag Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#3663AB'
-    -
-        id: graph-tag-opacity-dt
-        title: Dark Theme Graph Tag Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-attachment-color-dt
-        title: Graph Attachment Color
-        description: The color of a Graph Node representing an attachment.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-attachment-color-presets-dt
-        title: Dark Theme Graph Attachment Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-attachment-yellow-dt
-        options:
-            -
-                label: Custom
-                value: pt-graph-attachment-custom-dt
-            -
-                label: Red
-                value: pt-graph-attachment-red-dt
-            -
-                label: Orange
-                value: pt-graph-attachment-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-attachment-yellow-dt
-            -
-                label: Green
-                value: pt-graph-attachment-green-dt
-            -
-                label: Mint
-                value: pt-graph-attachment-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-attachment-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-attachment-blue-dt
-            -
-                label: Purple
-                value: pt-graph-attachment-purple-dt
-            -
-                label: Pink
-                value: pt-graph-attachment-pink-dt
-            -
-                label: Grey
-                value: pt-graph-attachment-grey-dt
-    -
-        id: color-custom-graph-attachment-dt
-        title: Dark Theme Graph Attachment Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Attachment Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#AF943C'
-    -
-        id: graph-attachment-opacity-dt
-        title: Dark Theme Graph Attachment Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-unresolved-color-dt
-        title: Graph Unresolved Color
-        description: The color of a Graph Node representing an unresolved note.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-unresolved-color-presets-dt
-        title: Dark Theme Graph Unresolved Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-unresolved-red-dt
-        options:
-            -
-                label: Custom
-                value: pt-graph-unresolved-custom-dt
-            -
-                label: Red
-                value: pt-graph-unresolved-red-dt
-            -
-                label: Orange
-                value: pt-graph-unresolved-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-unresolved-yellow-dt
-            -
-                label: Green
-                value: pt-graph-unresolved-green-dt
-            -
-                label: Mint
-                value: pt-graph-unresolved-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-unresolved-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-unresolved-blue-dt
-            -
-                label: Purple
-                value: pt-graph-unresolved-purple-dt
-            -
-                label: Pink
-                value: pt-graph-unresolved-pink-dt
-            -
-                label: Grey
-                value: pt-graph-unresolved-grey-dt
-    -
-        id: color-custom-graph-unresolved-dt
-        title: Dark Theme Graph Unresolved Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Unresolved Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#B63A3A'
-    -
-        id: graph-unresolved-opacity-dt
-        title: Dark Theme Graph Unresolved Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-highlight-color-dt
-        title: Graph Highlight Color
-        description: The color of a Graph Node when highlighted.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-highlight-color-presets-dt
-        title: Dark Theme Graph Highlight Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-highlight-accent-dt
-        options:
-            -
-                label: Accent Color
-                value: pt-graph-highlight-accent-dt
-            -
-                label: Custom
-                value: pt-graph-highlight-custom-dt
-            -
-                label: Red
-                value: pt-graph-highlight-red-dt
-            -
-                label: Orange
-                value: pt-graph-highlight-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-highlight-yellow-dt
-            -
-                label: Green
-                value: pt-graph-highlight-green-dt
-            -
-                label: Mint
-                value: pt-graph-highlight-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-highlight-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-highlight-blue-dt
-            -
-                label: Purple
-                value: pt-graph-highlight-purple-dt
-            -
-                label: Pink
-                value: pt-graph-highlight-pink-dt
-            -
-                label: Grey
-                value: pt-graph-highlight-grey-dt
-    -
-        id: color-custom-graph-highlight-dt
-        title: Dark Theme Graph Highlight Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#4C3AB6'
-    -
-        id: graph-highlight-opacity-dt
-        title: Dark Theme Graph Highlight Opacity
-        type: variable-number-slider
-        default: 1
-        min: 0
-        max: 1
-        step: 0.05 
-    -
-        id: graph-highlight-line-color-lt
-        title: Graph Highlight Line Color
-        description: The color of the lines connected to a highlighted Graph Node.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: graph-highlight-line-color-presets-dt
-        title: Dark Theme Graph Highlight Line Color Presets
-        type: class-select
-        allowEmpty: false
-        default: pt-graph-highlight-line-accent-dt
-        options:
-            -
-                label: Accent Color
-                value: pt-graph-highlight-line-accent-dt
-            -
-                label: Custom
-                value: pt-graph-highlight-line-custom-dt
-            -
-                label: Red
-                value: pt-graph-highlight-line-red-dt
-            -
-                label: Orange
-                value: pt-graph-highlight-line-orange-dt
-            -
-                label: Yellow
-                value: pt-graph-highlight-line-yellow-dt
-            -
-                label: Green
-                value: pt-graph-highlight-line-green-dt
-            -
-                label: Mint
-                value: pt-graph-highlight-line-mint-dt
-            -
-                label: Aqua
-                value: pt-graph-highlight-line-aqua-dt
-            -
-                label: Blue
-                value: pt-graph-highlight-line-blue-dt
-            -
-                label: Purple
-                value: pt-graph-highlight-line-purple-dt
-            -
-                label: Pink
-                value: pt-graph-highlight-line-pink-dt
-            -
-                label: Grey
-                value: pt-graph-highlight-line-grey-dt
-    -
-        id: color-custom-graph-highlight-line-dt
-        title: Dark Theme Graph Highlight Line Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#4C3AB6'
-    -
-        id: graph-highlight-line-opacity-dt
-        title: Dark Theme Graph Highlight Line Opacity
-        type: variable-number-slider
-        default: 0.4
-        min: 0
-        max: 1
-        step: 0.05 
     -
         id: user-interface
         title: User Interface
@@ -6189,225 +6390,6 @@ settings:
         type: heading
         level: 1
         collapsed: true
-    -
-        id: accent-colors-styles
-        title: Accent Colors and Styles
-        description: Adjust the Accent Color and Styles used throughout the UI.
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: accent-colors-styles-lt
-        title: Light Theme
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: accent-style-lt
-        title: Light Theme Accent Style
-        description: Adjusts the style used by the Accented elements in the UI.
-        type: class-select
-        allowEmpty: false
-        default: pt-accent-style-borderandfilled-lt
-        options:
-            -
-                label: Text Only
-                value: pt-accent-style-text-lt
-            - 
-                label: Border Only
-                value: pt-accent-style-border-lt
-            - 
-                label: Border & Text
-                value: pt-accent-style-borderandtext-lt
-            - 
-                label: Filled
-                value: pt-accent-style-filled-lt
-            - 
-                label: Border & Filled
-                value: pt-accent-style-borderandfilled-lt
-    -
-        id: light-accent-color-preset
-        title: Light Theme Accent Color Preset
-        description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
-        type: class-select
-        allowEmpty: false
-        default: pt-light-accent-color-purple
-        options:
-            -
-                label: Custom
-                value: pt-light-accent-color-custom
-            -
-                label: Red
-                value: pt-light-accent-color-red
-            -
-                label: Orange
-                value: pt-light-accent-color-orange
-            -
-                label: Yellow
-                value: pt-light-accent-color-yellow
-            -
-                label: Green
-                value: pt-light-accent-color-green
-            -
-                label: Mint
-                value: pt-light-accent-color-mint
-            -
-                label: Aqua
-                value: pt-light-accent-color-aqua
-            -
-                label: Blue
-                value: pt-light-accent-color-blue
-            -
-                label: Purple
-                value: pt-light-accent-color-purple
-            -
-                label: Pink
-                value: pt-light-accent-color-pink
-            -
-                label: Grey
-                value: pt-light-accent-color-grey
-    -
-        id: color-accent-lt
-        title: Light Theme Custom Accent Color
-        description: Make sure you selected 'Custom' in Light Theme Accent Color Preset for this to work.
-        type: variable-color
-        format: hsl-split
-        opacity: false
-        default: '#C7BDFF'
-    -
-        id: highlight-text-accent-lt
-        title: Light Theme Accent Text Color
-        description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
-        type: class-select
-        allowEmpty: false
-        default: pt-highlight-text-dark-lt 
-        options:
-            -
-                label: Dark
-                value: pt-highlight-text-dark-lt 
-            - 
-                label: Light
-                value: pt-highlight-text-light-lt 
-            - 
-                label: Accent
-                value: pt-highlight-text-accent-lt
-            - 
-                label: Custom
-                value: pt-highlight-text-custom-lt
-    -
-        id: highlight-text-accent-custom-lt
-        title: Light Theme Custom Accent Text Color
-        description: Make sure you selected 'Custom' in Light Theme Accent Text Color for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#FFFFFF'
-    -
-        id: accent-colors-styles-dt
-        title: Dark Theme
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: accent-style-dt
-        title: Dark Theme Accent Style
-        description: Adjusts the style used by the Accented elements in the UI.
-        type: class-select
-        allowEmpty: false
-        default: pt-accent-style-borderandfilled-dt
-        options:
-            -
-                label: Text Only
-                value: pt-accent-style-text-dt
-            - 
-                label: Border Only
-                value: pt-accent-style-border-dt
-            - 
-                label: Border & Text
-                value: pt-accent-style-borderandtext-dt
-            - 
-                label: Filled
-                value: pt-accent-style-filled-dt
-            - 
-                label: Border & Filled
-                value: pt-accent-style-borderandfilled-dt
-    -
-        id: dark-accent-color-preset
-        title: Dark Theme Accent Color Preset
-        description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
-        type: class-select
-        allowEmpty: false
-        default: pt-dark-accent-color-purple
-        options:
-            -
-                label: Custom
-                value: pt-dark-accent-color-custom
-            -
-                label: Red
-                value: pt-dark-accent-color-red
-            -
-                label: Orange
-                value: pt-dark-accent-color-orange
-            -
-                label: Yellow
-                value: pt-dark-accent-color-yellow
-            -
-                label: Green
-                value: pt-dark-accent-color-green
-            -
-                label: Mint
-                value: pt-dark-accent-color-mint
-            -
-                label: Aqua
-                value: pt-dark-accent-color-aqua
-            -
-                label: Blue
-                value: pt-dark-accent-color-blue
-            -
-                label: Purple
-                value: pt-dark-accent-color-purple
-            -
-                label: Pink
-                value: pt-dark-accent-color-pink
-            -
-                label: Grey
-                value: pt-dark-accent-color-grey
-    -
-        id: color-accent-dt
-        title: Dark Theme Custom Accent Color
-        description: Make sure you selected 'Custom' in Accent Color Preset for this to work.
-        type: variable-color
-        format: hsl-split
-        opacity: false
-        default: '#8C7FD7'
-    -
-        id: highlight-text-accent-dt
-        title: Dark Theme Accent Text Color
-        description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
-        type: class-select
-        allowEmpty: false
-        default: pt-highlight-text-light-dt 
-        options:
-            -
-                label: Dark
-                value: pt-highlight-text-dark-dt 
-            - 
-                label: Light
-                value: pt-highlight-text-light-dt 
-            - 
-                label: Accent
-                value: pt-highlight-text-accent-dt
-            - 
-                label: Custom
-                value: pt-highlight-text-custom-dt
-    -
-        id: highlight-text-accent-custom-dt
-        title: Dark Theme Custom Accent Text Color
-        description: Make sure you selected 'Custom' in Dark Theme Accent Text Color for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#FFFFFF'
     -
         id: background-options
         title: Background Options
