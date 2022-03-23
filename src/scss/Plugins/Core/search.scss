@@ -54,12 +54,12 @@
 		z-index: var(--layer-popover);
 		background: transparent;
 	}
-
+	
 	.search-result-container {
 		padding: 0px 10px 0px 0px;
 		box-sizing: border-box;
 	}
-
+	
 	.search-result-file-match {
 		width: 100%;
 		padding: 5px 20px 5px 10px;
@@ -72,41 +72,42 @@
 		border-radius: var(--border-radius-small);
 		border: 1px solid var(--background-modifier-border);
 	}
-
+	
 	.search-result-file-match:hover {
 		background: var(--background-primary);
 	}
-
+	
 	.search-result-file-matches {
 		margin: 0px;
 		padding: 8px;
+		border-bottom: unset;
 	}
-
+	
 	.search-result-file-match:after {
 		display: none;
 	}
 
 	.search-result {
-		border: none;
 		background-color: var(--background-secondary);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
+		border: 1px solid var(--window-border);
 	}
-
+	
 	.search-result .tree-item-self {
 		border: unset;
 		background: var(--tab-label-background-color);
 		border-radius: var(--border-radius);
 		padding: 5px 5px 5px 25px;
 	}
-
+	
 	.search-result .tree-item-self.is-clickable:hover {
 		box-shadow: unset;
 		border: unset;
 		background: unset;
 		background: var(--tab-label-background-color);
 	}
-
+	
 	.search-info-container {
 		font-size: 14px;
 		font-variation-settings: 'wght' 600;
@@ -154,8 +155,5 @@
 		color: var(--interactive-accent-hover);
 	}
 
-	.search-result-file-matches {
-		border-bottom: unset;
-	}
 }
 /* #endregion */

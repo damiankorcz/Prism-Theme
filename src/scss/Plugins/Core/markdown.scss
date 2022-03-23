@@ -1,10 +1,14 @@
 /* #region  [Plugin - Core] Markdown */
-.workspace-leaf-content[data-type="markdown"] .view-content {
+.workspace-leaf-content[data-type="markdown"] .view-content,
+.workspace-leaf-content[data-type="map"] .view-content,
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="kanban"] .view-content {
+	padding-top: 15px !important;
+	margin-top: -15px;
+	height: -webkit-fill-available;
+	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
 	background-color: var(--page-background-color);
 }
 
-.mod-left-split .workspace-leaf-content[data-type="markdown"] .view-content,
-.mod-right-split .workspace-leaf-content[data-type="markdown"] .view-content {
-	border-radius: var(--border-radius);
-}
 /* #endregion */

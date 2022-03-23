@@ -5,6 +5,7 @@ div.kanban-plugin__ {
 		background-color: var(--background-secondary);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
+		border: 1px solid var(--window-border);
 
 		button.kanban-plugin__lane-settings-button:hover {
 			color: var(--interactive-accent-hover);
@@ -34,6 +35,10 @@ div.kanban-plugin__ {
 		&-grip:hover {
 			color: var(--interactive-accent-hover);
 		}
+	}
+
+	&board > div {
+		padding: 15px;
 	}
 
 	&item {

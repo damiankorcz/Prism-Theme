@@ -35,6 +35,7 @@
 	stroke-width: 2px;
 	transition: all ease 200ms;
 }
+
 .workspace-ribbon-collapse-btn:hover {
 	color: var(--interactive-accent-hover);
 }
@@ -51,6 +52,7 @@
 	background-color: var(--tab-label-background-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+	border: 1px solid var(--window-border);
 }
 
 .workspace-ribbon .side-dock-settings {
@@ -58,6 +60,7 @@
 	background-color: var(--tab-label-background-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+	border: 1px solid var(--window-border);
 }
 
 /* Moves the settings section closer to the bottom of th window */
@@ -69,7 +72,10 @@
 .side-dock-ribbon-action {
 	display: flex;
 	padding: 10px;
-	margin-bottom: 5px;
+	
+	&:not(:last-child) {
+		margin-bottom: 5px;
+	}
 }
 
 .side-dock-ribbon-tab,
