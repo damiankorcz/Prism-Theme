@@ -10,63 +10,62 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-red-h: 0;
 	--color-red-s: 100%;
 	--color-red-l: 87%;
-	
+
 	--color-orange-h: 33;
 	--color-orange-s: 100%;
 	--color-orange-l: 85%;
-	
-	--color-yellow-h: 46;
+
+	--color-yellow-h: 50;
 	--color-yellow-s: 97%;
 	--color-yellow-l: 86%;
-	
+
 	--color-green-h: 100;
 	--color-green-s: 100%;
 	--color-green-l: 85%;
-	
+
 	--color-mint-h: 157;
 	--color-mint-s: 89%;
 	--color-mint-l: 86%;
-	
+
 	--color-aqua-h: 185;
 	--color-aqua-s: 100%;
 	--color-aqua-l: 83%;
-	
+
 	--color-blue-h: 217;
 	--color-blue-s: 100%;
 	--color-blue-l: 84%;
-	
-	--color-purple-h: 249;
+
+	--color-purple-h: 257;
 	--color-purple-s: 100%;
 	--color-purple-l: 89%;
-	
+
 	--color-pink-h: 300;
 	--color-pink-s: 100%;
 	--color-pink-l: 89%;
-	
-	--color-grey-h: 210;
-	--color-grey-s: 6%;
+
+	--color-grey-h: 0;
+	--color-grey-s: 0%;
 	--color-grey-l: 93%;
 }
 
 /* #region  [Variables] Light Theme */
 .theme-light.pt-color-scheme-default-lt {
 	--highlight-default: var(--color-yellow);
-	
+
 	--color-darken-lt: 15%;
 	--color-darken-text-lt: 50%;
-	
 
 	/* Light Theme Color Adjustments */
-	--color-red-s-desaturated: 84%;
+	--color-red-s-desaturated: 88%;
 	--color-orange-s-desaturated: 72%;
 	--color-yellow-s-desaturated: 70%;
-	--color-green-s-desaturated: 55%;
+	--color-green-s-desaturated: 52%;
 	--color-mint-s-desaturated: 62%;
-	--color-aqua-s-desaturated: 70%;
-	--color-blue-s-desaturated: 71%;
+	--color-aqua-s-desaturated: 65%;
+	--color-blue-s-desaturated: 65%;
 	--color-purple-s-desaturated: 86%;
 	--color-pink-s-desaturated: 70%;
-	--color-grey-s-desaturated: 31%;
+	--color-grey-s-desaturated: 0%;
 
 	--color-accent-l-darkened: calc(var(--color-accent-lt-l) - var(--color-darken-lt));
 	--color-red-l-darkened: 89%;
@@ -83,7 +82,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-accent-l-darkened2x: calc(var(--color-accent-lt-l) - var(--color-darken-lt) * 2);
 	--color-red-l-darkened2x: 78%;
 	--color-orange-l-darkened2x: 64%;
-	--color-yellow-l-darkened2x: 53%;
+	--color-yellow-l-darkened2x: 51%;
 	--color-green-l-darkened2x: 60%;
 	--color-mint-l-darkened2x: 60%;
 	--color-aqua-l-darkened2x: 60%;
@@ -102,7 +101,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-blue-s-desaturated-text: 40%;
 	--color-purple-s-desaturated-text: 46%;
 	--color-pink-s-desaturated-text: 42%;
-	--color-grey-s-desaturated-text: 5%;
+	--color-grey-s-desaturated-text: 0%;
 
 	--color-accent-l-darkened-text: calc(var(--color-accent-lt-l) - var(--color-darken-text-lt));
 	--color-red-l-darkened-text: 56%;
@@ -112,49 +111,10 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-mint-l-darkened-text: 37%;
 	--color-aqua-l-darkened-text: 41%;
 	--color-blue-l-darkened-text: 52%;
-	--color-purple-l-darkened-text: 54%;
+	--color-purple-l-darkened-text: 58%;
 	--color-pink-l-darkened-text: 52%;
-	--color-grey-l-darkened-text: 47%;
+	--color-grey-l-darkened-text: 45%;
 
-	/* Light Theme Base Colors */
-	--color-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
-	--color-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened));
-	--color-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened));
-	--color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
-	--color-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
-	--color-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
-	--color-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
-	--color-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened));
-	--color-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened));
-	--color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
-	--color-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened));
-	
-	/* Light Theme Dark Colors */
-	--color-dark-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened2x));
-	--color-dark-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x));
-	--color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x));
-	--color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x));
-	--color-dark-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x));
-	--color-dark-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x));
-	--color-dark-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x));
-	--color-dark-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x));
-	--color-dark-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x));
-	--color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x));
-	--color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x));
-	
-	/* Light Theme Text Colors */
-	--color-text-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
-	--color-text-red: hsl(var(--color-red-h), var(--color-red-s-desaturated-text), var(--color-red-l-darkened-text));
-	--color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated-text), var(--color-orange-l-darkened-text));
-	--color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated-text), var(--color-yellow-l-darkened-text));
-	--color-text-green: hsl(var(--color-green-h), var(--color-green-s-desaturated-text), var(--color-green-l-darkened-text));
-	--color-text-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated-text), var(--color-mint-l-darkened-text));
-	--color-text-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated-text), var(--color-aqua-l-darkened-text));
-	--color-text-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated-text), var(--color-blue-l-darkened-text));
-	--color-text-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated-text), var(--color-purple-l-darkened-text));
-	--color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated-text), var(--color-pink-l-darkened-text));
-	--color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated-text), var(--color-grey-l-darkened-text));
-	
 	/* Light Theme Main Obsidian Colors */
 	--text-normal: hsl(0, 0%, 20%);
 	--text-muted: hsl(0, 0%, 50%);
@@ -169,22 +129,25 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
 
 	--background-primary: hsl(0, 0%, 100%);
-	--background-primary-alt: hsl(220, 0%, 98%);
-	--background-secondary: hsl(220, 13%, 95%);
-	--background-secondary-blur: hsl(220, 13%, 93%, 0.7);
-	--background-secondary-alt: hsl(216, 10%, 85%);
-	--background-modifier-border: hsl(216, 10%, 89%);
+	--background-primary-alt: hsl(0, 0%, 98%);
+	--background-secondary: hsl(0, 0%, 95%);
+	--background-secondary-blur: hsl(0, 0%, 95%, 0.75);
+	--background-secondary-alt: hsl(0, 0%, 85%);
+	--background-modifier-border: hsl(0, 0%, 89%);
 	--background-modifier-error: var(--color-dark-red);
 
-	--tab-label-background-color: hsl(220, 13%, 93%);
+	--tab-label-background-color: hsl(0, 0%, 93%);
 	--page-background-color: var(--background-primary);
+
+	--background-color-lt: hsl(0, 0%, 90%);
 
 	--file-explorer-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
 	--style-settings-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
 	--outline-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
 
+	--window-border: var(--background-primary);
 	--drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-	--drop-shadow-popup: rgba(0, 0, 0, 0.03) 0px 1px 2px, rgba(0, 0, 0, 0.03) 0px 2px 4px, rgba(0, 0, 0, 0.03) 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
+	--drop-shadow-popup: rgba(0, 0, 0, 0.02) 0px 1px 2px, rgba(0, 0, 0, 0.02) 0px 2px 4px, rgba(0, 0, 0, 0.02) 0px 4px 8px, rgba(0, 0, 0, 0.1) 0px 8px 16px;
 
 	--scroll-bar-thumb: hsla(0, 0%, 80%, 1);
 
@@ -232,7 +195,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-purple-s-desaturated: 35%;
 	--color-pink-s-desaturated: 35%;
 	--color-grey-s-desaturated: 0%;
-	
+
 	--color-accent-l-darkened: calc(var(--color-accent-dt-l) - var(--color-darken-dt));
 	--color-red-l-darkened: 27%;
 	--color-orange-l-darkened: 25%;
@@ -244,7 +207,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-purple-l-darkened: 25%;
 	--color-pink-l-darkened: 22%;
 	--color-grey-l-darkened: 22%;
-	
+
 	--color-accent-l-darkened2x: calc(var(--color-accent-dt-l) - var(--color-darken-dt) * 2);
 	--color-red-l-darkened2x: 40%;
 	--color-orange-l-darkened2x: 36%;
@@ -256,69 +219,30 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-purple-l-darkened2x: 44%;
 	--color-pink-l-darkened2x: 38%;
 	--color-grey-l-darkened2x: 34%;
-	
+
 	/* Dark Theme Color Adjustments */
-	--color-red-s-desaturated-text: 58%;
-	--color-orange-s-desaturated-text: 56%;
-	--color-yellow-s-desaturated-text: 50%;
-	--color-green-s-desaturated-text: 52%;
-	--color-mint-s-desaturated-text: 50%;
-	--color-aqua-s-desaturated-text: 50%;
-	--color-blue-s-desaturated-text: 50%;
-	--color-purple-s-desaturated-text: 50%;
-	--color-pink-s-desaturated-text: 48%;
+	--color-red-s-desaturated-text: 64%;
+	--color-orange-s-desaturated-text: 62%;
+	--color-yellow-s-desaturated-text: 54%;
+	--color-green-s-desaturated-text: 42%;
+	--color-mint-s-desaturated-text: 54%;
+	--color-aqua-s-desaturated-text: 52%;
+	--color-blue-s-desaturated-text: 54%;
+	--color-purple-s-desaturated-text: 54%;
+	--color-pink-s-desaturated-text: 52%;
 	--color-grey-s-desaturated-text: 0%;
 
 	--color-accent-l-darkened-text: calc(var(--color-accent-dt-l) - var(--color-darken-text-dt));
 	--color-red-l-darkened-text: 78%;
 	--color-orange-l-darkened-text: 72%;
 	--color-yellow-l-darkened-text: 70%;
-	--color-green-l-darkened-text: 70%;
+	--color-green-l-darkened-text: 65%;
 	--color-mint-l-darkened-text: 67%;
-	--color-aqua-l-darkened-text: 69%;
+	--color-aqua-l-darkened-text: 65%;
 	--color-blue-l-darkened-text: 76%;
 	--color-purple-l-darkened-text: 78%;
 	--color-pink-l-darkened-text: 76%;
 	--color-grey-l-darkened-text: 69%;
-	
-	/* Dark Theme Base Colors */
-	--color-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l));
-	--color-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened));
-	--color-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened));
-	--color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
-	--color-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
-	--color-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
-	--color-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
-	--color-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened));
-	--color-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened));
-	--color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
-	--color-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened));
-	
-	/* Dark Theme Dark Colors */
-	--color-dark-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x));
-	--color-dark-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x));
-	--color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x));
-	--color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x));
-	--color-dark-green: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x));
-	--color-dark-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x));
-	--color-dark-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x));
-	--color-dark-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x));
-	--color-dark-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x));
-	--color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x));
-	--color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x));
-
-	/* Dark Theme Text Colors */
-	--color-text-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text));
-	--color-text-red: hsl(var(--color-red-h), var(--color-red-s-desaturated-text), var(--color-red-l-darkened-text));
-	--color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated-text), var(--color-orange-l-darkened-text));
-	--color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated-text), var(--color-yellow-l-darkened-text));
-	--color-text-green: hsl(var(--color-green-h), var(--color-green-s-desaturated-text), var(--color-green-l-darkened-text));
-	--color-text-mint: hsl(var(--color-mint-h), var(--color-mint-s-desaturated-text), var(--color-mint-l-darkened-text));
-	--color-text-aqua: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated-text), var(--color-aqua-l-darkened-text));
-	--color-text-blue: hsl(var(--color-blue-h), var(--color-blue-s-desaturated-text), var(--color-blue-l-darkened-text));
-	--color-text-purple: hsl(var(--color-purple-h), var(--color-purple-s-desaturated-text), var(--color-purple-l-darkened-text));
-	--color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated-text), var(--color-pink-l-darkened-text));
-	--color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated-text), var(--color-grey-l-darkened-text));
 
 	/* Dark Theme Main Obsidian Colors */
 	--text-normal: hsl(0, 0%, 90%);
@@ -329,31 +253,31 @@ body.theme-dark.pt-color-scheme-default-dt {
 
 	--text-highlight-bg: var(--interactive-accent-dark);
 
-	--highlight-text-normal: hsl(270, 2%, 8%);
-	--highlight-text-dark: hsl(270, 2%, 8%);
+	--highlight-text-normal: hsl(0, 0%, 8%);
+	--highlight-text-dark: hsl(0, 0%, 8%);
 	--highlight-text-accent-custom-dt: hsl(0, 0%, 100%);
 
 	--background-primary: hsl(0, 0%, 18%);
 	--background-primary-alt: hsl(0, 0%, 25%);
 	--background-secondary: hsl(0, 0%, 10%);
-	--background-secondary-blur: hsla(0, 0%, 8%, 0.7);
+	--background-secondary-blur: hsla(0, 0%, 10%, 0.75);
 	--background-secondary-alt: hsl(0, 0%, 8%);
 	--background-modifier-border: hsl(0, 0%, 14%);
 	--background-modifier-error: var(--color-dark-red);
 
-	--tab-label-background-color: hsl(0, 0%, 12%);
+	--tab-label-background-color: hsl(0, 0%, 14%);
 	--page-background-color: var(--background-secondary);
+
+	--background-color-dt: hsl(0, 0%, 6%);
 
 	--file-explorer-vertical-lines-color: hsl(0, 0%, 22%);
 	--style-settings-vertical-lines-color: hsl(0, 0%, 22%);
 	--outline-vertical-lines-color: hsl(0, 0%, 22%);
 
+	--window-border: var(--background-primary);
 	--drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-	--drop-shadow-popup: rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.05) 0px 2px 4px, rgba(0, 0, 0, 0.05) 0px 4px 8px, rgba(0, 0, 0, 0.05) 0px 8px 16px, rgba(0, 0, 0, 0.05) 0px 16px 32px, rgba(0, 0, 0, 0.05) 0px 32px 64px;
-
-	--drop-shadow-inset: hsla(0, 0%, 80%, 0.4) 3px 3px 6px 0px inset, hsla(0, 0%, 100%, 0.4) -3px -3px 6px 1px inset, hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
-
-	--drop-shadow-ridge: hsla(0, 0%, 80%, 0.5) 3px 3px 6px 0px, hsla(0, 0%, 100%, 0.3) -3px -3px 6px 1px;
+	--drop-shadow-popup: rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.05) 0px 2px 4px, rgba(0, 0, 0, 0.05) 0px 4px 8px, rgba(0, 0, 0, 0.05) 0px 8px 16px, rgba(0, 0, 0, 0.05) 0px 16px 32px,
+		rgba(0, 0, 0, 0.05) 0px 32px 64px;
 
 	--scroll-bar-thumb: hsl(0, 0%, 32%);
 
