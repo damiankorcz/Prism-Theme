@@ -6,14 +6,16 @@
 @use 'Fonts/fontFamilySetup.scss';
 
 // Variables
-@use 'Variables/colorSchemeDefault.scss';
-@use 'Variables/colorSchemeCoffee.scss';
-@use 'Variables/colorSchemeFlower.scss';
 @use 'Variables/rootVariables.scss';
 
+// Color Schemes
+@use 'Color Schemes/colorSchemeDefault.scss';
+@use 'Color Schemes/colorSchemeCoffee.scss';
+@use 'Color Schemes/colorSchemeFlower.scss';
+
 // Accent Colors
-@use 'User Interface/Accent Color/baseAccentColors.scss';
 @use 'User Interface/Accent Color/accentStyleBase.scss';
+@use 'User Interface/Accent Color/accentStyleBaseColor.scss';
 @use 'User Interface/Accent Color/accentStyleTextOnly.scss';
 @use 'User Interface/Accent Color/accentStyleBorderOnly.scss';
 @use 'User Interface/Accent Color/accentStyleFilled.scss';
@@ -46,7 +48,6 @@
 @use 'User Interface/Popups/suggestionPopup.scss';
 @use 'User Interface/Popups/tooltipPopup.scss';
 @use 'User Interface/Popups/dragGhost.scss';
-@use 'User Interface/customIcons.scss';
 
 // Editor
 @use 'Editor/callouts.scss';
@@ -72,8 +73,10 @@
 // Theme Plugins
 @use 'Plugins/Theme/Headers/headersBase.scss';
 @use 'Plugins/Theme/background.scss';
+@use 'Plugins/Theme/customIcons.scss';
 @use 'Plugins/Theme/customVaultBanner.scss';
 @use 'Plugins/Theme/markHighlightSystem.scss';
+
 
 // Community Plugins
 @use 'Plugins/Community/advancedTables.scss';

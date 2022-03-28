@@ -1,27 +1,21 @@
-/*
-	==========================================================================
-	Color Variables
-	==========================================================================
-*/
+/* #region  [Color Scheme - Coffee] Base Colors */
+body.theme-light.pt-color-scheme-latte-lt,
+body.theme-dark.pt-color-scheme-mocha-dt {
+	--color-red-h: 352;
+	--color-red-s: 91%;
+	--color-red-l: 57%;
 
-body.theme-light.pt-color-scheme-periwinkle-lt,
-body.theme-dark.pt-color-scheme-indigo-dt {
-	/* Base Colors */
-	--color-red-h: 345;
-	--color-red-s: 75%;
-	--color-red-l: 53%;
-
-	--color-orange-h: 12;
-	--color-orange-s: 44%;
+	--color-orange-h: 18;
+	--color-orange-s: 64%;
 	--color-orange-l: 61%;
 
-	--color-yellow-h: 36;
-	--color-yellow-s: 76%;
+	--color-yellow-h: 35;
+	--color-yellow-s: 96%;
 	--color-yellow-l: 61%;
 
 	--color-green-h: 121;
-	--color-green-s: 24%;
-	--color-green-l: 49%;
+	--color-green-s: 17%;
+	--color-green-l: 53%;
 
 	--color-mint-h: 149;
 	--color-mint-s: 58%;
@@ -31,25 +25,26 @@ body.theme-dark.pt-color-scheme-indigo-dt {
 	--color-aqua-s: 50%;
 	--color-aqua-l: 56%;
 
-	--color-blue-h: 232;
-	--color-blue-s: 86%;
-	--color-blue-l: 59%;
+	--color-blue-h: 235;
+	--color-blue-s: 76%;
+	--color-blue-l: 65%;
 
-	--color-purple-h: 255;
-	--color-purple-s: 96%;
-	--color-purple-l: 47%;
+	--color-purple-h: 275;
+	--color-purple-s: 95%;
+	--color-purple-l: 43%;
 
-	--color-pink-h: 303;
-	--color-pink-s: 55%;
-	--color-pink-l: 68%;
+	--color-pink-h: 325;
+	--color-pink-s: 76%;
+	--color-pink-l: 72%;
 
-	--color-grey-h: 233;
-	--color-grey-s: 19%;
+	--color-grey-h: 356;
+	--color-grey-s: 13%;
 	--color-grey-l: 75%;
 }
+/* #endregion */
 
-/* #region  [Variables] Light Theme */
-.theme-light.pt-color-scheme-periwinkle-lt {
+/* #region  [Color Scheme - Coffee] Light Theme */
+.theme-light.pt-color-scheme-latte-lt {
 	--highlight-default: var(--color-yellow);
 
 	--color-desaturate-lt: 48%;
@@ -117,39 +112,39 @@ body.theme-dark.pt-color-scheme-indigo-dt {
 	--color-grey-l-darkened-text: 47%;
 
 	/* Light Theme Main Obsidian Colors */
-	--text-normal: hsl(225, 35%, 18%);
-	--text-muted: hsl(225, 35%, 35%);
-	--text-faint: hsl(225, 35%, 50%);
+	--text-normal: hsl(28, 32%, 18%);
+	--text-muted: hsl(28, 32%, 35%);
+	--text-faint: hsl(28, 32%, 50%);
 	--text-selection: var(--background-primary-alt);
 	--text-error: var(--color-dark-red);
 
 	--text-highlight-bg: var(--interactive-accent-dark);
 
-	--highlight-text-normal: hsl(225, 35%, 18%);
-	--highlight-text-dark: hsl(225, 35%, 18%);
+	--highlight-text-normal: hsl(28, 32%, 18%);
+	--highlight-text-dark: hsl(28, 32%, 18%);
 
-	--background-primary: hsl(225, 35%, 95%);
-	--background-primary-alt: hsl(225, 35%, 93%);
-	--background-secondary: hsl(225, 35%, 90%);
-	--background-secondary-blur: hsla(225, 35%, 90%, 0.75);
-	--background-secondary-alt: hsl(225, 35%, 80%);
-	--background-modifier-border: hsl(225, 35%, 90%);
+	--background-primary: hsl(28, 32%, 95%);
+	--background-primary-alt: hsl(28, 32%, 93%);
+	--background-secondary: hsl(28, 32%, 90%);
+	--background-secondary-blur: hsla(28, 32%, 90%, 0.75);
+	--background-secondary-alt: hsl(28, 32%, 80%);
+	--background-modifier-border: hsl(28, 32%, 90%);
 	--background-modifier-error: var(--color-dark-red);
 
-	--tab-label-background-color: hsl(225, 35%, 91.8%);
+	--tab-label-background-color: hsl(28, 32%, 91.8%);
 	--page-background-color: var(--background-secondary);
 
-	--background-color-lt: hsl(225, 35%, 83.8%);
+	--background-color-lt: hsl(28, 32%, 83.8%);
 
-	--file-explorer-vertical-lines-color: hsl(225, 35%, 84%);
-	--style-settings-vertical-lines-color: hsl(225, 35%, 84%);
-	--outline-vertical-lines-color: hsl(225, 35%, 84%);
+	--file-explorer-vertical-lines-color: hsl(28, 32%, 84%);
+	--style-settings-vertical-lines-color: hsl(28, 32%, 84%);
+	--outline-vertical-lines-color: hsl(28, 32%, 84%);
 
 	--window-border: var(--background-primary);
-	--drop-shadow: hsla(225, 35%, 7%, 0.1) 0px 1px 2px 0px;
-	--drop-shadow-popup: hsla(225, 35%, 7%, 0.04) 0px 1px 2px, hsla(225, 35%, 7%, 0.04) 0px 2px 4px, hsla(225, 35%, 7%, 0.04) 0px 4px 8px, hsla(225, 35%, 7%, 0.04) 0px 8px 16px;
+	--drop-shadow: hsla(28, 32%, 7%, 0.1) 0px 1px 2px 0px;
+	--drop-shadow-popup: hsla(28, 32%, 7%, 0.04) 0px 1px 2px, hsla(28, 32%, 7%, 0.04) 0px 2px 4px, hsla(28, 32%, 7%, 0.04) 0px 4px 8px, hsla(28, 32%, 7%, 0.04) 0px 8px 16px;
 
-	--scroll-bar-thumb: hsl(225, 35%, 25%);
+	--scroll-bar-thumb: hsl(28, 32%, 25%);
 
 	--table-border-color: var(--background-secondary-alt);
 
@@ -158,11 +153,11 @@ body.theme-dark.pt-color-scheme-indigo-dt {
 	--scroll-button-background-color-hover: var(--background-secondary-alt);
 
 	&.pt-disable-blur {
-		--background-secondary-blur: hsla(225, 35%, 88%, 1);
+		--background-secondary-blur: hsla(28, 32%, 88%, 1);
 	}
 
 	&.pt-highlight-text-light-lt {
-		--highlight-text-normal: hsl(225, 35%, 95%);
+		--highlight-text-normal: hsl(28, 32%, 95%);
 	}
 
 	&.pt-highlight-text-accent-lt {
@@ -173,11 +168,10 @@ body.theme-dark.pt-color-scheme-indigo-dt {
 		--highlight-text-normal: var(--highlight-text-accent-custom-lt);
 	}
 }
-
 /* #endregion */
 
-/* #region  [Variables] Dark Theme */
-.theme-dark.pt-color-scheme-indigo-dt {
+/* #region  [Color Scheme - Coffee] Dark Theme */
+.theme-dark.pt-color-scheme-mocha-dt {
 	--highlight-default: var(--color-yellow);
 
 	--color-desaturate-dt: 48%;
@@ -185,113 +179,112 @@ body.theme-dark.pt-color-scheme-indigo-dt {
 	--color-darken-text-dt: 20%;
 
 	/* Dark Theme Color Adjustments */
-	--color-red-s-desaturated: 65%;
-	--color-orange-s-desaturated: 63%;
-	--color-yellow-s-desaturated: 79%;
-	--color-green-s-desaturated: 28%;
-	--color-mint-s-desaturated: 33%;
-	--color-aqua-s-desaturated: 38%;
-	--color-blue-s-desaturated: 35%;
-	--color-purple-s-desaturated: 33%;
-	--color-pink-s-desaturated: 42%;
+	--color-red-s-desaturated: 62%;
+	--color-orange-s-desaturated: 60%;
+	--color-yellow-s-desaturated: 76%;
+	--color-green-s-desaturated: 25%;
+	--color-mint-s-desaturated: 30%;
+	--color-aqua-s-desaturated: 35%;
+	--color-blue-s-desaturated: 30%;
+	--color-purple-s-desaturated: 30%;
+	--color-pink-s-desaturated: 39%;
 	--color-grey-s-desaturated: 5%;
 
 	--color-accent-l-darkened: calc(var(--color-accent-dt-l) - var(--color-darken-dt));
-	--color-red-l-darkened: 21%;
-	--color-orange-l-darkened: 23%;
-	--color-yellow-l-darkened: 19%;
-	--color-green-l-darkened: 23%;
-	--color-mint-l-darkened: 25%;
-	--color-aqua-l-darkened: 20%;
-	--color-blue-l-darkened: 24%;
-	--color-purple-l-darkened: 22%;
-	--color-pink-l-darkened: 22%;
-	--color-grey-l-darkened: 23%;
+	--color-red-l-darkened: 18%;
+	--color-orange-l-darkened: 20%;
+	--color-yellow-l-darkened: 16%;
+	--color-green-l-darkened: 20%;
+	--color-mint-l-darkened: 22%;
+	--color-aqua-l-darkened: 17%;
+	--color-blue-l-darkened: 21%;
+	--color-purple-l-darkened: 19%;
+	--color-pink-l-darkened: 19%;
+	--color-grey-l-darkened: 20%;
 
 	--color-accent-l-darkened2x: calc(var(--color-accent-dt-l) - var(--color-darken-dt) * 2);
-	--color-red-l-darkened2x: 34%;
-	--color-orange-l-darkened2x: 38%;
-	--color-yellow-l-darkened2x: 31%;
-	--color-green-l-darkened2x: 36%;
-	--color-mint-l-darkened2x: 38%;
-	--color-aqua-l-darkened2x: 33%;
-	--color-blue-l-darkened2x: 46%;
-	--color-purple-l-darkened2x: 43%;
-	--color-pink-l-darkened2x: 38%;
-	--color-grey-l-darkened2x: 40%;
+	--color-red-l-darkened2x: 29%;
+	--color-orange-l-darkened2x: 31%;
+	--color-yellow-l-darkened2x: 27%;
+	--color-green-l-darkened2x: 33%;
+	--color-mint-l-darkened2x: 35%;
+	--color-aqua-l-darkened2x: 30%;
+	--color-blue-l-darkened2x: 40%;
+	--color-purple-l-darkened2x: 34%;
+	--color-pink-l-darkened2x: 32%;
+	--color-grey-l-darkened2x: 34%;
 
 	/* Dark Theme Color Adjustments */
 	--color-red-s-desaturated-text: 57%;
 	--color-orange-s-desaturated-text: 56%;
 	--color-yellow-s-desaturated-text: 55%;
-	--color-green-s-desaturated-text: 33%;
+	--color-green-s-desaturated-text: 42%;
 	--color-mint-s-desaturated-text: 50%;
-	--color-aqua-s-desaturated-text: 40%;
+	--color-aqua-s-desaturated-text: 42%;
 	--color-blue-s-desaturated-text: 54%;
 	--color-purple-s-desaturated-text: 50%;
 	--color-pink-s-desaturated-text: 52%;
 	--color-grey-s-desaturated-text: 5%;
 
 	--color-accent-l-darkened-text: calc(var(--color-accent-dt-l) - var(--color-darken-text-dt));
-	--color-red-l-darkened-text: 73%;
-	--color-orange-l-darkened-text: 72%;
+	--color-red-l-darkened-text: 72%;
+	--color-orange-l-darkened-text: 70%;
 	--color-yellow-l-darkened-text: 64%;
 	--color-green-l-darkened-text: 64%;
 	--color-mint-l-darkened-text: 64%;
-	--color-aqua-l-darkened-text: 60%;
-	--color-blue-l-darkened-text: 76%;
-	--color-purple-l-darkened-text: 74%;
+	--color-aqua-l-darkened-text: 56%;
+	--color-blue-l-darkened-text: 78%;
+	--color-purple-l-darkened-text: 72%;
 	--color-pink-l-darkened-text: 74%;
 	--color-grey-l-darkened-text: 72%;
 
 	/* Dark Theme Main Obsidian Colors */
-	--text-normal: hsl(245, 30%, 82%);
-	--text-muted: hsl(245, 30%, 66%);
-	--text-faint: hsl(245, 30%, 55%);
+	--text-normal: hsl(28, 32%, 82%);
+	--text-muted: hsl(28, 32%, 66%);
+	--text-faint: hsl(28, 32%, 55%);
 	--text-selection: var(--background-primary-alt);
 	--text-error: var(--color-dark-red);
 
 	--text-highlight-bg: var(--interactive-accent-dark);
 
-	--highlight-text-normal: hsl(245, 30%, 8%);
-	--highlight-text-dark: hsl(245, 30%, 8%);
+	--highlight-text-normal: hsl(28, 32%, 8%);
+	--highlight-text-dark: hsl(28, 32%, 8%);
 
-	--background-primary: hsl(245, 30%, 16%);
-	--background-primary-alt: hsl(245, 30%, 18%);
-	--background-secondary: hsl(245, 30%, 9.2%);
-	--background-secondary-blur: hsla(245, 30%, 7.2%, 0.75);
-	--background-secondary-alt: hsl(245, 30%, 7.5%);
-	--background-modifier-border: hsl(245, 30%, 9.2%);
+	--background-primary: hsl(28, 32%, 14%);
+	--background-primary-alt: hsl(28, 32%, 18%);
+	--background-secondary: hsl(28, 32%, 9.2%);
+	--background-secondary-blur: hsla(28, 32%, 7.2%, 0.75);
+	--background-secondary-alt: hsl(28, 32%, 7.5%);
+	--background-modifier-border: hsl(28, 32%, 9.2%);
 	--background-modifier-error: var(--color-dark-red);
 
-	--tab-label-background-color: hsl(245, 30%, 8.2%);
+	--tab-label-background-color: hsl(28, 32%, 8.2%);
 	--page-background-color: var(--background-secondary);
 
-	--background-color-dt: hsl(245, 30%, 6.2%);
+	--background-color-dt: hsl(28, 32%, 6.2%);
 
-	--file-explorer-vertical-lines-color: hsl(245, 30%, 16%);
-	--style-settings-vertical-lines-color: hsl(245, 30%, 16%);
-	--outline-vertical-lines-color: hsl(245, 30%, 16%);
+	--file-explorer-vertical-lines-color: hsl(28, 32%, 16%);
+	--style-settings-vertical-lines-color: hsl(28, 32%, 16%);
+	--outline-vertical-lines-color: hsl(28, 32%, 16%);
 
-	// --window-border: red;
 	--window-border: var(--background-primary);
-	--drop-shadow: hsla(245, 30%, 7%, 0.1) 0px 1px 2px 0px;
-	--drop-shadow-popup: hsla(245, 30%, 7%, 0.1) 0px 1px 2px, hsla(245, 30%, 7%, 0.1) 0px 2px 4px, hsla(245, 30%, 7%, 0.1) 0px 4px 8px, hsla(245, 30%, 7%, 0.1) 0px 8px 16px;
+	--drop-shadow: hsla(28, 32%, 7%, 0.5) 0px 1px 2px 0px;
+	--drop-shadow-popup: hsla(28, 32%, 7%, 0.5) 0px 1px 2px, hsla(28, 32%, 7%, 0.5) 0px 2px 4px, hsla(28, 32%, 7%, 0.5) 0px 4px 8px, hsla(28, 32%, 7%, 0.5) 0px 8px 16px;
 
-	--scroll-bar-thumb: hsl(245, 30%, 25%);
+	--scroll-bar-thumb: hsl(28, 32%, 25%);
 
-	--table-border-color: hsl(245, 30%, 25%);
+	--table-border-color: hsl(28, 32%, 25%);
 
 	/* Scrollbar Settings */
 	--scroll-button-background-color: var(--background-secondary);
 	--scroll-button-background-color-hover: var(--background-secondary-alt);
 
 	&.pt-disable-blur {
-		--background-secondary-blur: hsla(245, 30%, 7.2%, 1);
+		--background-secondary-blur: hsla(28, 32%, 7.2%, 1);
 	}
 
 	&.pt-highlight-text-light-dt {
-		--highlight-text-normal: hsl(245, 30%, 85%);
+		--highlight-text-normal: hsl(28, 32%, 85%);
 	}
 
 	&.pt-highlight-text-accent-dt {
@@ -302,5 +295,4 @@ body.theme-dark.pt-color-scheme-indigo-dt {
 		--highlight-text-normal: var(--highlight-text-accent-custom-dt);
 	}
 }
-
 /* #endregion */
