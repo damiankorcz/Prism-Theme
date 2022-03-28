@@ -11,14 +11,18 @@
 	opacity: 0.4;
 }
 
+.modal {
+	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow-popup);
+}
+
 .modal.mod-settings {
 	padding: 0px;
 	width: 80vw;
 	height: 80vh;
 	max-height: 1000px;
 	max-width: 1400px;
-	box-shadow: var(--drop-shadow-popup);
-	border-radius: var(--border-radius);
 }
 
 .theme-dark .modal.mod-settings {
@@ -61,10 +65,11 @@
 	font-size: 14px;
 	padding: 0px 8px;
 	height: 24px;
-	margin: 8px 15px;
+	margin: 7px 15px;
 	color: var(--interactive-accent-text);
-	background: var(--background-primary);
-	border-radius: var(--border-radius-small);
+	background: var(--background-secondary);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--window-border);
 	box-shadow: var(--drop-shadow);
 	width: fit-content;
 	display: inline-flex;
@@ -190,7 +195,7 @@
 	margin: unset;
 	border-radius: var(--border-radius);
 	border: var(--border-size) solid transparent;
-	padding: 2px 10px;
+	padding: 2px 12px;
 	font-size: 15px;
 }
 
@@ -274,6 +279,7 @@
 	border-radius: var(--border-radius-small);
 	background-color: var(--background-secondary-alt);
 	box-shadow: var(--drop-shadow);
+	border: 1px solid var(--window-border);
 }
 
 .checkbox-container:after {
@@ -281,8 +287,8 @@
 	align-items: center;
 	justify-content: center;
 	margin: 0px;
-	width: 22px;
-	height: 22px;
+	width: 20px;
+	height: 20px;
 	background-color: var(--background-primary);
 	box-shadow: var(--drop-shadow);
 	border-radius: var(--border-radius-small);

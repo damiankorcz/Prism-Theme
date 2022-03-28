@@ -8,6 +8,10 @@ input[type="number"] {
 	background-color: var(--background-primary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+	
+	&:hover {
+		background-color: var(--background-primary);
+	}
 }
 
 .mod-settings,
@@ -19,14 +23,6 @@ input[type="number"] {
 	input[type="number"] {
 		max-width: 208px;
 	}
-}
-
-input[type="text"]:hover,
-input[type="search"]:hover,
-input[type="email"]:hover,
-input[type="password"]:hover,
-input[type="number"]:hover {
-	background-color: var(--background-primary);
 }
 
 input[type="text"]::placeholder,
@@ -57,6 +53,7 @@ textarea:focus::placeholder {
 .theme-dark input[type="range"] {
 	background-color: var(--background-secondary-alt);
 	box-shadow: var(--drop-shadow);
+	border: 1px solid var(--window-border);
 }
 
 input[type="range"]:hover {

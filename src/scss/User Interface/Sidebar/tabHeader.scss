@@ -18,7 +18,8 @@
 	background-color: var(--tab-label-background-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	flex-wrap: wrap;;
+	flex-wrap: wrap;
+	border: 1px solid var(--window-border);
 }
 
 /* Tab label spacing */
@@ -32,15 +33,19 @@
 
 /* Tab label icon centering */
 .workspace-tab-header-inner-icon {
-	padding: 8px 12px;
+	height: 28px;
+	width: 28px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 /* Tab label border/radius */
 .workspace-tab-header {
 	border: var(--border-size) solid transparent;
 	color: var(--text-muted);
+	margin: 0px;
+	padding: 2px 6px;
 }
 
 /* Current Active Tab label */

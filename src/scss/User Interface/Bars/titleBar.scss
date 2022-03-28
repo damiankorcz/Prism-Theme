@@ -21,7 +21,9 @@
 
 /* Pane Relief */
 .titlebar .history-counter {
-	align-self: center;
+	display: flex;
+	align-items: center;
+	height: -webkit-fill-available;
 	color: var(--interactive-accent-text);
     font-variation-settings: 'wght' 600;
 	line-height: initial;
@@ -34,6 +36,7 @@
 	display: flex;
 	flex-flow: row;
 	position: absolute;
+	align-items: center;
 }
 
 /* Pane Relief */
@@ -74,34 +77,34 @@ body.pt-titlebar-hide-text .titlebar-text {
 		flex-direction: column;
 		margin: 2px auto 0px auto;
 		width: fit-content;
-		padding: 0 10px;
+		padding: 0px 10px;
 		color: var(--text-muted);
 		background-color: var(--tab-label-background-color);
 		border-radius: var(--border-radius-small);
+		border: 1px solid var(--window-border);
 		box-shadow: var(--drop-shadow);
 		letter-spacing: unset;
 		opacity: 1;
 	}
 
 	.titlebar-button-container.mod-left {
-		height: 18px;
+		height: -webkit-fill-available;
 		margin-top: 4px;
 		background-color: var(--tab-label-background-color);
 		border-radius: var(--border-radius-small);
+		border: 1px solid var(--window-border);
 		box-shadow: var(--drop-shadow);
 
 		svg {
-			height: 18px;
 			width: 18px;
 			display: flex;
-			justify-content: center;
-			align-content: center;
-			flex-direction: column;
+			align-items: center;
+			height: -webkit-fill-available;
 		}
 
 		.mod-back,
 		.mod-forward {
-			height: 18px;
+			height: -webkit-fill-available;
 			stroke-width: 2px;
 		}
 	}
@@ -109,7 +112,9 @@ body.pt-titlebar-hide-text .titlebar-text {
 	.titlebar-button-container.mod-right {
 		background-color: var(--tab-label-background-color);
 		border-radius: var(--border-radius-small);
+		border: 1px solid var(--window-border);
 		box-shadow: var(--drop-shadow);
+		height: 24px;
 	}
 
 	.mod-minimize:hover,
@@ -147,20 +152,19 @@ body.pt-titlebar-hide-text .titlebar-text {
 		margin-top: 4px;
 		background-color: var(--tab-label-background-color);
 		border-radius: var(--border-radius-small);
+		border: 1px solid var(--window-border);
 		box-shadow: var(--drop-shadow);
 
 		svg {
-			height: 17px;
 			width: 17px;
 			display: flex;
-			justify-content: center;
-			align-content: center;
-			flex-direction: column;
+			align-items: center;
+			height: -webkit-fill-available;
 		}
 
 		.mod-back,
 		.mod-forward {
-			padding: 2px 10px;
+			padding: 0px 10px;
 			margin: 0px;
 			height: 22px;
 		}
@@ -195,6 +199,8 @@ body.pt-titlebar-hide-text .titlebar-text {
 	.titlebar-button-container.mod-right {
 		background-color: var(--tab-label-background-color);
 		border-radius: var(--border-radius-small);
+		border: 1px solid var(--window-border);
+		height: 30px;
 		box-shadow: var(--drop-shadow);
 
 		.mod-minimize,
@@ -249,6 +255,7 @@ body.pt-titlebar-hide-text .titlebar-text {
 		color: var(--text-muted);
 		background-color: var(--tab-label-background-color);
 		border-radius: var(--border-radius-small);
+		border: 1px solid var(--window-border);
 		box-shadow: var(--drop-shadow);
 		letter-spacing: unset;
 		opacity: 1;
@@ -263,17 +270,20 @@ body.pt-solid-titlebar- {
 		&.pt-titlebar-custom-dt div.titlebar {
 			background-color: var(--titlebar-background-color-dt);
 			box-shadow: var(--drop-shadow);
+			border-bottom: 1px solid var(--window-border);
 		}
 
 		&.pt-titlebar-default-dt div.titlebar {
 			background-color: var(--tab-label-background-color);
 			box-shadow: var(--drop-shadow);
+			border-bottom: 1px solid var(--window-border);
 		}
 		div.titlebar-text,
 		div.titlebar-button-container.mod-left,
 		div.titlebar-button-container.mod-right {
 			background-color: transparent;
 			box-shadow: unset;
+			border: unset;
 		}
 
 		.titlebar-button-container.mod-right div.titlebar-button.mod-minimize,
@@ -301,6 +311,7 @@ body.pt-solid-titlebar- {
 		div.titlebar-button-container.mod-right {
 			background-color: transparent;
 			box-shadow: unset;
+			border: unset;
 		}
 
 		.titlebar-button-container.mod-right div.titlebar-button.mod-minimize,
