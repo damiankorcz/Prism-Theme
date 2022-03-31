@@ -68,41 +68,41 @@ settings:
         description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
         type: class-select
         allowEmpty: false
-        default: pt-light-accent-color-purple
+        default: pt-accent-color-purple-lt
         options:
             -
                 label: Custom
-                value: pt-light-accent-color-custom
+                value: pt-accent-color-custom-lt
             -
                 label: Red
-                value: pt-light-accent-color-red
+                value: pt-accent-color-red-lt
             -
                 label: Orange
-                value: pt-light-accent-color-orange
+                value: pt-accent-color-orange-lt
             -
                 label: Yellow
-                value: pt-light-accent-color-yellow
+                value: pt-accent-color-yellow-lt
             -
                 label: Green
-                value: pt-light-accent-color-green
+                value: pt-accent-color-green-lt
             -
                 label: Mint
-                value: pt-light-accent-color-mint
+                value: pt-accent-color-mint-lt
             -
                 label: Aqua
-                value: pt-light-accent-color-aqua
+                value: pt-accent-color-aqua-lt
             -
                 label: Blue
-                value: pt-light-accent-color-blue
+                value: pt-accent-color-blue-lt
             -
                 label: Purple
-                value: pt-light-accent-color-purple
+                value: pt-accent-color-purple-lt
             -
                 label: Pink
-                value: pt-light-accent-color-pink
+                value: pt-accent-color-pink-lt
             -
                 label: Grey
-                value: pt-light-accent-color-grey
+                value: pt-accent-color-grey-lt
     -
         id: color-accent-lt
         title: Light Theme Custom Accent Color
@@ -113,12 +113,15 @@ settings:
         default: '#C7BDFF'
     -
         id: highlight-text-accent-lt
-        title: Light Theme Accent Text Color
+        title: Light Theme Accent Text Color Preset
         description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
         default: pt-highlight-text-dark-lt 
         options:
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-lt
             -
                 label: Dark
                 value: pt-highlight-text-dark-lt 
@@ -128,9 +131,6 @@ settings:
             - 
                 label: Accent
                 value: pt-highlight-text-accent-lt
-            - 
-                label: Custom
-                value: pt-highlight-text-custom-lt
     -
         id: highlight-text-accent-custom-lt
         title: Light Theme Custom Accent Text Color
@@ -190,41 +190,41 @@ settings:
         description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
         type: class-select
         allowEmpty: false
-        default: pt-dark-accent-color-purple
+        default: pt-accent-color-purple-dt
         options:
             -
                 label: Custom
-                value: pt-dark-accent-color-custom
+                value: pt-accent-color-custom-dt
             -
                 label: Red
-                value: pt-dark-accent-color-red
+                value: pt-accent-color-red-dt
             -
                 label: Orange
-                value: pt-dark-accent-color-orange
+                value: pt-accent-color-orange-dt
             -
                 label: Yellow
-                value: pt-dark-accent-color-yellow
+                value: pt-accent-color-yellow-dt
             -
                 label: Green
-                value: pt-dark-accent-color-green
+                value: pt-accent-color-green-dt
             -
                 label: Mint
-                value: pt-dark-accent-color-mint
+                value: pt-accent-color-mint-dt
             -
                 label: Aqua
-                value: pt-dark-accent-color-aqua
+                value: pt-accent-color-aqua-dt
             -
                 label: Blue
-                value: pt-dark-accent-color-blue
+                value: pt-accent-color-blue-dt
             -
                 label: Purple
-                value: pt-dark-accent-color-purple
+                value: pt-accent-color-purple-dt
             -
                 label: Pink
-                value: pt-dark-accent-color-pink
+                value: pt-accent-color-pink-dt
             -
                 label: Grey
-                value: pt-dark-accent-color-grey
+                value: pt-accent-color-grey-dt
     -
         id: color-accent-dt
         title: Dark Theme Custom Accent Color
@@ -235,12 +235,15 @@ settings:
         default: '#8C7FD7'
     -
         id: highlight-text-accent-dt
-        title: Dark Theme Accent Text Color
+        title: Dark Theme Accent Text Color Preset
         description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
         default: pt-highlight-text-light-dt 
         options:
+            - 
+                label: Custom
+                value: pt-highlight-text-custom-dt
             -
                 label: Dark
                 value: pt-highlight-text-dark-dt 
@@ -250,9 +253,6 @@ settings:
             - 
                 label: Accent
                 value: pt-highlight-text-accent-dt
-            - 
-                label: Custom
-                value: pt-highlight-text-custom-dt
     -
         id: highlight-text-accent-custom-dt
         title: Dark Theme Custom Accent Text Color
