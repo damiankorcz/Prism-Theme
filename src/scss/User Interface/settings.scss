@@ -19,6 +19,12 @@
 	max-width: 1400px;
 }
 
+.modal.modal-style-settings {
+	.modal-content {
+		overflow: unset;
+	}
+}
+
 .theme-dark .modal.mod-settings {
 	background-color: var(--background-color-dt);
 }
@@ -216,7 +222,6 @@
 	color: var(--interactive-accent-text);
 }
 
-
 .dropdown {
 	font-family: var(--font-family-ui);
 	border: 0px;
@@ -411,9 +416,9 @@ img.community-theme-lightbox {
 	margin: 5px;
 	width: 50%;
 	max-width: 240px;
-	border: var(--border-size) solid transparent;
+	border: 1px solid var(--window-border);
 	box-shadow: var(--drop-shadow);
-	background-color: var(--background-primary);
+	background-color: var(--tab-label-background-color);
 }
 
 .community-theme,

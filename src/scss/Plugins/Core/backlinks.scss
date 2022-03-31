@@ -41,8 +41,7 @@
 
 .workspace-leaf-content[data-type="backlink"] .tree-item.search-result,
 .embedded-backlinks .tree-item.search-result {
-	border-bottom-color: transparent;
-	border: none;
+	border: 1px solid var(--window-border);
 	background-color: var(--background-secondary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
@@ -150,11 +149,6 @@
 	color: var(--interactive-accent-text);
 }
 
-.workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type):hover,
-.embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type):hover {
-	color: var(--interactive-accent-text);
-	background-color: var(--background-primary);
-}
 
 .workspace-leaf-content[data-type="backlink"] .backlink-pane .search-results-children,
 .embedded-backlinks .backlink-pane .search-results-children {
@@ -178,8 +172,7 @@
 
 .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type),
 .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type) {
-	border-bottom-color: transparent;
-	border: unset;
+	border: 1px solid var(--window-border);
 	background-color: var(--tab-label-background-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
@@ -189,6 +182,11 @@
 	margin-bottom: 8px;
 	font-size: 14px;
 	font-variation-settings: 'wght' 600;
+
+	&:hover {
+		color: var(--interactive-accent-text);
+		background-color: var(--background-primary);
+	}
 }
 
 .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self.is-collapsed:not(:first-of-type),
