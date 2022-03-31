@@ -1,38 +1,84 @@
 /* #region  [Plugin - Community] Style Settings */
 div.style-settings-heading[data-level="0"] {
-	margin-bottom: 15px;
+	position: relative;
+	margin-bottom: 0px;
+	padding: 8px;
+	background-color: var(--background-primary);
+	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
 
 	+ .style-settings-container {
-		padding-left: 0;
-		margin-left: 0;
+		margin-top: -10px;
+		padding: 25px 20px 20px 20px;
+		margin-left: 0px;
+		margin-bottom: 15px;
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
 
 		.style-settings-collapse-indicator {
 			margin-left: 0;
 		}
 	}
+
+	&.is-collapsed {
+		margin-bottom: 15px;
+		padding-bottom: 8px;
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+}
+
+.theme-light div.style-settings-heading[data-level="0"].is-collapsed {
+	background-color: var(--background-primary-alt);
+}
+
+.theme-dark div.style-settings-heading[data-level="0"].is-collapsed {
+	background-color: var(--tab-label-background-color);
+}
+
+.theme-light div.style-settings-heading[data-level="0"] + .style-settings-container {
+	background-color: var(--tab-label-background-color);
+}
+
+.theme-dark div.style-settings-heading[data-level="0"] + .style-settings-container {
+	background-color: var(--background-secondary-alt);
+}
+
+
+div.style-settings-heading {
+	margin-bottom: 5px;
+	
+	&.is-collapsed {
+		padding-bottom: 0px;
+	}
 }
 
 div.style-settings-container {
-	padding-bottom: 0;
+	margin-left: 15px;
 
 	&[data-level="0"] {
 		margin-left: 4px;
 	}
 
-	&[data-level="1"],
-	&[data-level="2"],
-	&[data-level="3"],
-	&[data-level="4"],
-	&[data-level="5"] {
+	&[data-level] {
 		border-left: var(--style-settings-vertical-lines-width) solid var(--style-settings-vertical-lines-color);
-		padding-left: 15px;
-		margin-left: 4px;
+		padding-left: 10px;
+		padding-bottom: 0px;
+		margin-left: 12px;
 	}
 }
 
 .setting-item.setting-item-heading.style-settings-heading {
 	.vertical-tab-content > & {
 		border-bottom: 1px solid var(--style-settings-vertical-lines-color);
+	}
+
+	.setting-item-name {
+		width: fit-content;
+		padding: 0px 8px;
+		border-radius: var(--border-radius-small);
 	}
 
 	&:hover {
@@ -53,8 +99,8 @@ div.style-settings-container {
 div.workspace-leaf-content[data-type="style-settings"] {
 	background-color: var(--background-secondary) !important;
 
+	/* Style Settings open as a note */
 	.view-content {
-		/* Style Settings open as a note */
 		padding: 20px 35px;
 		background-color: var(--background-secondary);
 
@@ -80,8 +126,6 @@ div.style-settings-heading {
 }
 
 .style-settings-collapse-indicator:after {
-	background-color: var(--background-primary-alt);
-	border-radius: var(--border-radius-small);
 	font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 	font-weight: initial;
 	color: unset;
@@ -275,4 +319,13 @@ div.style-settings-heading {
 		color: var(--interactive-accent-text);
 	}
 }
+
+.theme-light div.style-settings-container select.dropdown:hover {
+	background-color: var(--background-primary-alt);
+}
+
+.theme-dark div.style-settings-container select.dropdown:hover {
+	background-color: var(--background-secondary);
+}
+
 /* #endregion */
