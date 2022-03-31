@@ -13,9 +13,10 @@
 		border-color: var(--interactive-accent-dark);
 	}
 
-	.workspace-leaf.mod-active .view-header .view-header-icon,
-	.workspace-leaf.mod-active .view-header .view-actions .view-action {
-		color: var(--text-muted);
+	.workspace-leaf .view-header .view-header-icon,
+	.workspace-leaf .view-header .view-actions .view-action,
+	.workspace-leaf.mod-active .view-header .view-header-title {
+		color: var(--highlight-text-normal);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
@@ -23,28 +24,31 @@
 	}
 
 	.workspace-tab-header.is-active {
-		color: var(--text-normal);
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-dark);
 	}
 
 	.nav-action-button.is-active {
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border: var(--border-size) solid var(--interactive-accent-dark);
 	}
 
 	.vertical-tab-nav-item.is-active {
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-dark);
 	}
 
 	.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active {
-		color: var(--text-normal);
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-dark);
 	}
 
 	.suggestion-hotkey {
+		color: var(--highlight-text-normal);
 		border-color: var(--interactive-accent-dark);
 	}
 
@@ -65,7 +69,7 @@
 	.backlink-pane .tree-item-self:hover .tree-item-flair,
 	.outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair,
 	.nav-file-title:hover .nav-file-tag {
-		color: var(--text-normal);
+		color: var(--highlight-text-normal);
 		background-color: transparent;
 		border-color: var(--interactive-accent-dark);
 	}
@@ -90,7 +94,7 @@
 
 	.workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button,
 	.embedded-backlinks .search-result-file-match-replace-button {
-		color: var(--text-normal);
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--color-dark-grey);
 
@@ -101,7 +105,7 @@
 
 	.community-theme {
 		&.is-selected {
-			color: var(--text-normal);
+			color: var(--highlight-text-normal);
 			background-color: var(--background-primary);
 			border-color: var(--interactive-accent-dark);
 		}
@@ -118,7 +122,7 @@
 	}
 
 	button.mod-cta {
-		color: var(--text-normal);
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-dark);
 
@@ -169,7 +173,7 @@
 	}
 
 	button.copy-code-button {
-		color: var(--text-normal);
+		color: var(--color-grey);
 		border-color: var(--color-dark-grey);
 
 		&:hover {
@@ -179,7 +183,7 @@
 
 	.workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
 	.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
-		color: var(--text-normal);
+		color: var(--highlight-text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-dark);
 
