@@ -1,4 +1,23 @@
 /* #region  [Editor] Callouts */
+.markdown-source-view.mod-cm6 {
+    .cm-callout {
+        .edit-block-button {
+            top: 16px;
+            right: 12px;
+            z-index: var(--layer-popover);
+            color: var(--text-normal);
+            background-color: var(--background-secondary);
+            transition: all ease 200ms;
+        }
+    }
+
+    .cm-embed-block {
+        &:hover {
+            border-color: var(--interactive-accent-hover);
+            transition: all ease 200ms;
+        }
+    }
+}
 .callout {
     background-color: unset;
     border-radius: var(--border-radius);
@@ -15,7 +34,7 @@
         border: 2px solid;
         position: relative;
         z-index: 5;
-        gap: 4px;
+        gap: unset;
     }
 
     .callout-icon {
