@@ -23,20 +23,90 @@ div.graph-controls.is-close {
 	box-shadow: var(--drop-shadow);
 	position: absolute;
 	margin-top: unset;
-    top: 24px;
+    top: 8px;
 	left: 8px;
 }
 
 .graph-controls.is-close {
-	padding: 8px;
+	padding: 6px 8px 8px 8px;
 }
 
 .graph-controls-button {
 	color: var(--text-muted);
+
+	&:hover {
+		color: var(--interactive-accent-hover);
+	}
 }
 
-.graph-controls-button:hover {
-	color: var(--interactive-accent-hover);
+.graph-controls:not(.is-close) {
+	padding: 30px 8px 8px 8px;
+	// min-width: 240px;
+
+	.graph-controls-button.mod-reset,
+	.graph-controls-button.mod-close {
+		display: inline-block;
+	}
+}
+
+.graph-control-section {
+	border: 1px solid var(--window-border);
+    border-radius: var(--border-radius);
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	.tree-item-self {
+		background-color: var(--background-primary);
+		border-bottom: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+		padding: 4px 4px 4px 25px;
+		position: relative;
+		margin-bottom: 8px;
+		font-size: 14px;
+		font-variation-settings: "wght" 600;
+	}
+
+	&.is-collapsed .tree-item-self {
+		background-color: var(--tab-label-background-color);
+		margin-bottom: unset;
+	}
+
+	&:not(:last-child) .tree-item-children {
+		border-bottom: unset;
+		margin: unset;
+	}
+
+	.tree-item-children {
+		margin: unset;
+		padding: 5px 15px;
+	}
+
+	.setting-item {
+		padding: 5px 0px;
+
+		&.mod-search-setting .setting-item-control {
+			padding-top: unset;
+		}
+	}
+}
+
+// .theme-light .graph-control-section:not(:last-child) .tree-item-children {
+// 	border-bottom: 2px solid var(--background-secondary-alt);
+// }
+
+// .theme-dark .graph-control-section:not(:last-child) .tree-item-children {
+// 	border-bottom: 2px solid var(--background-primary);
+// }
+
+.theme-light .graph-control-section {
+	background-color: var(--tab-label-background-color);
+}
+
+.theme-dark .graph-control-section {
+	background-color: var(--background-secondary-alt);
 }
 
 .theme-light .graph-view.color-line {
@@ -58,14 +128,6 @@ div.graph-controls.is-close {
 
 .graph-view.color-text {
 	color: var(--text-normal);
-}
-
-.theme-light .graph-control-section:not(:last-child) .tree-item-children {
-	border-bottom: 2px solid var(--background-secondary-alt);
-}
-
-.theme-dark .graph-control-section:not(:last-child) .tree-item-children {
-	border-bottom: 2px solid var(--background-primary);
 }
 
 .tree-item.graph-control-section:not(.is-collapsed) .tree-item-icon.collapse-icon {
