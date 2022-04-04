@@ -15,20 +15,20 @@
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
 	border-top-left-radius: var(--border-radius-small);
 	border-top-right-radius: var(--border-radius-small);
-	border-top: 2px solid var(--table-border-color);
+	border-top: 1px solid var(--table-border-color);
 }
 
 .cm-s-obsidian .HyperMD-codeblock,
 .cm-s-obsidian div.HyperMD-codeblock {
-	border-left: 2px solid var(--table-border-color);
-	border-right: 2px solid var(--table-border-color);
+	border-left: 1px solid var(--table-border-color);
+	border-right: 1px solid var(--table-border-color);
 }
 
 .HyperMD-codeblock.HyperMD-codeblock-end,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
 	border-bottom-left-radius: var(--border-radius-small);
 	border-bottom-right-radius: var(--border-radius-small);
-	border-bottom: 2px solid var(--table-border-color);
+	border-bottom: 1px solid var(--table-border-color);
 }
 
 .CodeMirror-foldgutter-open::after {
@@ -106,6 +106,48 @@
 		color: var(--interactive-accent-hover);
 	}
 }
+
+.cm-s-obsidian span.cm-hashtag {
+	text-decoration: none;
+	color: var(--text-normal);
+
+	// &:hover {
+	// 	color: var(--interactive-accent-text);
+	// 	background-color: var(--background-primary);
+	// 	border-color: var(--interactive-accent-dark);
+	// 	transition: all ease 200ms;
+	// }
+}
+
+.cm-line .cm-hashtag-begin {
+	background-color: var(--tab-label-background-color);
+	border-top-left-radius: var(--border-radius-small);
+	border-bottom-left-radius: var(--border-radius-small);
+	padding-left: 5px;
+	border: 2px solid var(--window-border);
+	border-right: unset;
+}
+
+.cm-line .cm-hashtag-end {
+	background-color: var(--tab-label-background-color);
+	border-top-right-radius: var(--border-radius-small);
+	border-bottom-right-radius: var(--border-radius-small);
+	padding-right: 5px;
+	border: 2px solid var(--window-border);
+	border-left: unset;
+}
+
+.CodeMirror pre.CodeMirror-line,
+.markdown-source-view .cm-line,
+.cm-s-obsidian .cm-line {
+	line-height: 1.6em;
+}
+
+p {
+	margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
 /* #endregion */
 
 /* #region  [Editor] Edit LT */

@@ -24,7 +24,7 @@
 .markdown-source-view .markdown-embed,
 .markdown-source-view .file-embed {
 	border-radius: var(--border-radius-small);
-	border: var(--border-size) solid var(--table-border-color);
+	border: 1px solid var(--table-border-color);
 }
 
 .markdown-embed-link,
@@ -90,6 +90,30 @@ div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indi
 .markdown-rendered .internal-link.is-unresolved{
 	opacity: 0.75;
 }
+
+a.tag[href*="#"] {
+	color: var(--text-normal);
+	text-decoration: none;
+	border-radius: var(--border-radius-small);
+	border: 2px solid var(--window-border);
+	background-color: var(--tab-label-background-color);
+	padding: 0px 4px;
+	display: inline-flex;
+	align-items: center;
+	
+	&:hover {
+		color: var(--interactive-accent-text);
+		background-color: var(--background-primary);
+		border-color: var(--interactive-accent-dark);
+		transition: all ease 200ms;
+	}
+}
+
+.cm-s-obsidian .HyperMD-quote.HyperMD-quote-1:first-of-type {
+	border-top: 1px solid var(--window-border);
+}
+
+
 /* #endregion */
 
 /* #region  [Editor] Preview Checkbox */
@@ -151,10 +175,10 @@ input[type="checkbox"]:checked:before {
 button.copy-code-button {
 	top: 0;
 	right: 0;
-	margin: 3px;
-	padding: 4px;
+	margin: 4px;
+    padding: 3px;
 	border: var(--border-size) solid transparent;
-	color: var(--text-muted);
+	color: var(--text-normal);
 	background-color: var(--background-primary);
 	font-variation-settings: 'wght' 600;
 }
@@ -230,13 +254,13 @@ button.copy-code-button {
 /* #region  [Editor] Preview LT */
 .theme-light {
 	.markdown-preview-view blockquote {
-		border: 2px solid var(--table-border-color);
+		border: 1px solid var(--table-border-color);
 		background-color: var(--background-primary-alt);
 		border-left-width: 5px;
 	}
 
 	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-		border: 2px solid var(--table-border-color);
+		border: 1px solid var(--table-border-color);
 		background-color: var(--background-primary-alt);
 		border-left-width: 5px;
 		padding: 10px 20px !important;
@@ -266,7 +290,7 @@ button.copy-code-button {
 		color: var(--interactive-accent-text);
 		background: var(--background-primary-alt);
 		border-radius: var(--border-radius-small);
-		border: 2px solid var(--table-border-color);
+		border: 1px solid var(--table-border-color);
 	}
 
 	code[class*="language-"],
@@ -329,9 +353,17 @@ button.copy-code-button {
 
 .theme-dark {
 	.markdown-preview-view blockquote {
-		border: 2px solid var(--table-border-color);
+		border: 1px solid var(--table-border-color);
 		background-color: var(--background-secondary-alt);
 		border-left-width: 5px;
+	}
+
+	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+		border: 1px solid var(--table-border-color);
+		background-color: var(--background-primary-alt);
+		border-left-width: 5px;
+		padding: 10px 20px !important;
+		// margin: 16px 30px !important;
 	}
 
 	.markdown-preview-view hr {
@@ -353,7 +385,7 @@ button.copy-code-button {
 		color: var(--interactive-accent);
 		background: var(--background-secondary-alt);
 		border-radius: var(--border-radius-small);
-		border: 2px solid var(--table-border-color);
+		border: 1px solid var(--table-border-color);
 	}
 
 	code[class*="language-"],
