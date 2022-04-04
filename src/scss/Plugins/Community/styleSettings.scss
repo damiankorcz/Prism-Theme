@@ -46,13 +46,21 @@ div.style-settings-heading[data-level="0"] {
 	background-color: var(--background-secondary-alt);
 }
 
+div.style-settings-heading[data-level="1"] {
+	.setting-item-description {
+		padding-left: 10px;
+	}
+}
+
+div.style-settings-heading:not([data-level="0"]):not([data-level="1"]) {
+	.setting-item-description {
+		padding-left: 10px;
+	}
+}
 
 div.style-settings-heading {
+	padding: 8px 0px;
 	margin-bottom: 5px;
-	
-	&.is-collapsed {
-		padding-bottom: 0px;
-	}
 }
 
 div.style-settings-container {
@@ -64,7 +72,7 @@ div.style-settings-container {
 
 	&[data-level] {
 		border-left: var(--style-settings-vertical-lines-width) solid var(--style-settings-vertical-lines-color);
-		padding-left: 10px;
+		padding-left: 5px;
 		padding-bottom: 0px;
 		margin-left: 12px;
 	}
@@ -149,12 +157,6 @@ div.style-settings-heading {
 	}
 }
 
-.setting-item.style-settings-heading[data-id="graph-view"] {
-	.style-settings-collapse-indicator:after {
-		content: "🕸️";
-	}
-}
-
 .setting-item.style-settings-heading[data-id="user-interface"] {
 	.style-settings-collapse-indicator:after {
 		content: "👆";
@@ -236,8 +238,10 @@ div.style-settings-heading {
 
 .style-settings-heading[data-id="support-star-repo"],
 .style-settings-heading[data-id="support-submit-issue"],
-.style-settings-heading[data-id="support-donate"] {
+.style-settings-heading[data-id="support-donate"],
+.style-settings-heading[data-id="prism-wiki-link"] {
 	margin-bottom: 0px;
+	padding-bottom: 0px;
 
 	.setting-item-control,
 	.style-settings-collapse-indicator {
