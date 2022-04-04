@@ -123,8 +123,8 @@
 	font-weight: bold;
 }
 
-.setting-item {
-	padding: 10px 0;
+.setting-item:not(.style-settings-heading) {
+	padding: 10px 0 10px 15px;
 }
 
 .clickable-icon {
@@ -157,6 +157,7 @@
     background: var(--background-primary);
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow);
+	border-bottom: 1px solid var(--window-border);
 	text-transform: capitalize;
 	font-size: 15px;
 	font-weight: bold;
@@ -166,7 +167,6 @@
     height: fit-content;
     width: fit-content;
     min-width: -webkit-fill-available;
-    border: unset;
 }
 
 .modal-content.community-plugin {
@@ -174,12 +174,12 @@
 }
 
 .modal-close-button {
-	top: 7px;
-	right: 12px;
+	top: 8px;
+	right: 13px;
 }
 
 .modal-close-button:hover {
-	color: var(--interactive-accent-text);
+	color: var(--color-dark-red);
 }
 
 .spellchecker-dictionary-remove-button {
@@ -224,7 +224,7 @@
 
 .dropdown {
 	font-family: var(--font-family-ui);
-	border: 0px;
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 	background-color: var(--background-primary);
@@ -256,22 +256,67 @@
 	color: var(--text-normal);
 }
 
-/* Currently active option background */
-.theme-light .dropdown option:checked {
-	background-color: var(--background-primary);
-	color: var(--interactive-accent-text);
-}
-
 /* option background */
 .theme-dark .dropdown option {
 	background-color: var(--background-secondary);
 	color: var(--text-normal);
 }
 
-/* Currently active option background */
-.theme-dark .dropdown option:checked {
-	background-color: var(--background-primary);
-	color: var(--interactive-accent-text);
+select.dropdown {
+	option[value*="accent"]:not([value*="accent-style"]):not([value*="accent-color"]) {
+		color: var(--interactive-accent-text);
+		background-color: var(--interactive-accent);
+	}
+
+	option[value*="red"] {
+		color: var(--color-text-red);
+		background-color: var(--color-red);
+	}
+
+	option[value*="orange"] {
+		color: var(--color-text-orange);
+		background-color: var(--color-orange);
+	}
+
+	option[value*="yellow"] {
+		color: var(--color-text-yellow);
+		background-color: var(--color-yellow);
+	}
+	
+	option[value*="green"] {
+		color: var(--color-text-green);
+		background-color: var(--color-green);
+	}
+
+	option[value*="mint"] {
+		color: var(--color-text-mint);
+		background-color: var(--color-mint);
+	}
+
+	option[value*="aqua"] {
+		color: var(--color-text-aqua);
+		background-color: var(--color-aqua);
+	}
+
+	option[value*="blue"] {
+		color: var(--color-text-blue);
+		background-color: var(--color-blue);
+	}
+
+	option[value*="purple"] {
+		color: var(--color-text-purple);
+		background-color: var(--color-purple);
+	}
+
+	option[value*="pink"] {
+		color: var(--color-text-pink);
+		background-color: var(--color-pink);
+	}
+
+	option[value*="grey"] {
+		color: var(--color-text-grey);
+		background-color: var(--color-grey);
+	}
 }
 
 .checkbox-container {
@@ -279,6 +324,14 @@
 	background-color: var(--background-secondary-alt);
 	box-shadow: var(--drop-shadow);
 	border: 1px solid var(--window-border);
+}
+
+div.style-settings-container .checkbox-container {
+	background-color: var(--background-secondary);
+
+	&.is-enabled {
+		background-color: var(--interactive-accent);
+	}
 }
 
 .checkbox-container:after {
@@ -513,6 +566,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 .setting-item.setting-item-heading:not(.style-settings-heading) {
 	border-bottom: 1px solid var(--table-border-color);
 	padding: 10px 0px;
+	margin-bottom: 5px;
 }
 
 .community-theme .modal-button-container .mod-cta:last-of-type {

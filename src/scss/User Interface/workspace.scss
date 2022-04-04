@@ -51,7 +51,7 @@
 /* Background fill behind the Normal View Header */
 body .workspace-split.mod-root .workspace-leaf div.workspace-leaf-content {
 	background-color: var(--page-background-color);
-	border-radius: var(--border-radius);
+	border-radius: var(--border-radius) !important;
 }
 
 /* Background fill behind the Kanban View Header */
@@ -106,6 +106,8 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 .view-header {
 	background-color: var(--tab-label-background-color);
 	border: var(--border-size) solid transparent;
+	border-bottom: 1px solid var(--window-border);
+	margin-bottom: 1px;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 }
