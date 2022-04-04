@@ -2,27 +2,38 @@
 .markdown-preview-view {
 	h1 {
 		font-size: var(--h1-font-size);
+		margin: var(--h1-margin-size) 0;
 	}
 
 	h2 {
 		font-size: var(--h2-font-size);
+		margin: var(--h2-margin-size) 0;
 	}
 
 	h3 {
 		font-size: var(--h3-font-size);
+		margin: var(--h3-margin-size) 0;
 	}
 
 	h4 {
 		font-size: var(--h4-font-size);
+		margin: var(--h4-margin-size) 0;
 	}
 
 	h5 {
 		font-size: var(--h5-font-size);
+		margin: var(--h5-margin-size) 0;
 	}
 
 	h6 {
 		font-size: var(--h6-font-size);
+		margin: var(--h6-margin-size) 0;
 	}
+}
+
+.cm-s-obsidian .HyperMD-header,
+.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
+	line-height: 1.1em;
 }
 
 .cm-header- {
@@ -57,6 +68,32 @@
 	font-variation-settings: 'wght' 800;
 }
 
+.cm-s-obsidian.mod-cm6 .HyperMD-header- {
+	&1 {
+		font-size: var(--h1-font-size);
+	}
+
+	&2 {
+		font-size: var(--h2-font-size);
+	}
+
+	&3 {
+		font-size: var(--h3-font-size);
+	}
+
+	&4 {
+		font-size: var(--h4-font-size);
+	}
+
+	&5 {
+		font-size: var(--h5-font-size);
+	}
+
+	&6 {
+		font-size: var(--h6-font-size);
+	}
+}
+
 /* Headers (Legacy Edit Mode) */
 .HyperMD-header- {
 	&1 > span[role="presentation"],
@@ -72,7 +109,6 @@
 	&5.cm-line,
 	&6.cm-line {
 		display: block;
-		padding: 0px 4px;
 		font-weight: unset;
 		z-index: 1;
 	}
@@ -81,7 +117,6 @@
 /* Headers (Preview) */
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
 	position: relative;
-	padding: 0px 4px;
 	z-index: 1;
 }
 
