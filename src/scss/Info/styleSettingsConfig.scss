@@ -1437,6 +1437,12 @@ settings:
         level: 2
         collapsed: true
     -
+        id: mark-highlight-light-theme
+        title: Light Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
         id: light-mark-highlight-style
         title: Light Theme Mark Highlight Style
         type: class-select
@@ -1446,6 +1452,8 @@ settings:
             -
                 label: Text
                 value: pt-highlight-style-text-lt
+                label: None
+                value: pt-highlight-style-none-lt
             - 
                 label: Border
                 value: pt-highlight-style-border-lt
@@ -1456,6 +1464,25 @@ settings:
                 label: Border & Filled
                 value: pt-highlight-style-borderandfilled-lt
     -
+        id: light-mark-highlight-text-color-preset
+        title: Light Theme Mark Highlight Text Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-color-lt
+        options:
+            -
+                label: None
+                value: pt-highlight-text-none-lt
+            - 
+                label: Color
+                value: pt-highlight-text-color-lt
+    -
+        id: mark-highlight-dark-theme
+        title: Dark Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
         id: dark-mark-highlight-style
         title: Dark Theme Mark Highlight Style
         type: class-select
@@ -1465,6 +1492,8 @@ settings:
             -
                 label: Text
                 value: pt-highlight-style-text-dt
+                label: None
+                value: pt-highlight-style-none-dt
             - 
                 label: Border
                 value: pt-highlight-style-border-dt
@@ -1500,11 +1529,17 @@ settings:
         description: Select what type of background you would like in the Light Theme.
         default: pt-background-color-lt
         level: 2
+        id: dark-mark-highlight-text-color-preset
+        title: Dark Theme Mark Highlight Text Color Preset
         type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-color-dt
         options:
             -
                 label: Solid Color
                 value: pt-background-color-lt
+                label: None
+                value: pt-highlight-text-none-dt
             - 
                 label: Image
                 value: pt-background-image-lt
@@ -1516,6 +1551,8 @@ settings:
         format: hsl
         opacity: false
         default: '#E6E6E6'
+                label: Color
+                value: pt-highlight-text-color-dt
     -
         id: background-image-lt
         title: Light Theme Background Image
