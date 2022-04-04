@@ -14,6 +14,10 @@
 	min-height: fit-content !important;
 }
 
+.search-empty-state {
+	border: 1px solid var(--window-border);
+}
+
 .embedded-backlinks .backlink-pane {
 	padding: 68px 8px 8px 8px;
 	margin-top: -68px;
@@ -59,6 +63,7 @@
 	left: unset;
 	width: 100%;
 	padding: 5px 20px 5px 10px;
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	background: var(--background-primary);
 	box-shadow: var(--drop-shadow);
@@ -88,9 +93,10 @@
 
 .workspace-leaf-content[data-type="backlink"] .tree-item-self,
 .embedded-backlinks .tree-item-self {
-	border-radius: var(--border-radius);
 	color: var(--text-muted);
 	padding: 5px 5px 5px 25px;
+	border-radius: var(--border-radius);
+	border-bottom: 1px solid var(--window-border);
 	align-items: center;
 	box-shadow: var(--drop-shadow);
 }

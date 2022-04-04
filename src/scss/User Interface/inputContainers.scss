@@ -4,7 +4,7 @@ input[type="search"],
 input[type="email"],
 input[type="password"],
 input[type="number"] {
-	border: 0px;
+	border: 1px solid var(--window-border);
 	background-color: var(--background-primary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
@@ -14,6 +14,7 @@ input[type="number"] {
 	}
 }
 
+.modal,
 .mod-settings,
 .workspace-leaf-content[data-type="style-settings"] {
 	input[type="text"],
@@ -54,6 +55,11 @@ textarea:focus::placeholder {
 	background-color: var(--background-secondary-alt);
 	box-shadow: var(--drop-shadow);
 	border: 1px solid var(--window-border);
+}
+
+.theme-light div.style-settings-container input[type="range"],
+.theme-dark div.style-settings-container input[type="range"] {
+	background-color: var(--background-secondary);
 }
 
 input[type="range"]:hover {

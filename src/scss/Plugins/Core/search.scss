@@ -75,7 +75,7 @@
 		background: var(--background-primary);
 		box-shadow: var(--drop-shadow);
 		border-radius: var(--border-radius-small);
-		border: 1px solid var(--background-modifier-border);
+		border: 1px solid var(--window-border);
 
 		&:hover {
 			background: var(--background-primary);
@@ -99,14 +99,13 @@
 		border: 1px solid var(--window-border);
 
 		.tree-item-self {
-			border: unset;
+			border-bottom: 1px solid var(--window-border);
 			background: var(--tab-label-background-color);
 			border-radius: var(--border-radius);
 			padding: 5px 5px 5px 25px;
 
 			&.is-clickable:hover {
 				box-shadow: unset;
-				border: unset;
 				background: unset;
 				background: var(--tab-label-background-color);
 			}
