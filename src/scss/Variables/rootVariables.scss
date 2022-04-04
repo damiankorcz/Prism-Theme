@@ -257,8 +257,7 @@ body {
 
 .theme-light,
 .theme-dark {
-	/* Light Theme Base Colors */
-	--color-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
+	/* Base Colors */
 	--color-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened));
 	--color-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened));
 	--color-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
@@ -270,8 +269,7 @@ body {
 	--color-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
 	--color-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened));
 	
-	/* Light Theme Dark Colors */
-	--color-dark-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened2x));
+	/* Border Colors */
 	--color-dark-red: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x));
 	--color-dark-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x));
 	--color-dark-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x));
@@ -283,8 +281,7 @@ body {
 	--color-dark-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x));
 	--color-dark-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x));
 	
-	/* Light Theme Text Colors */
-	--color-text-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
+	/* Text Colors */
 	--color-text-red: hsl(var(--color-red-h), var(--color-red-s-desaturated-text), var(--color-red-l-darkened-text));
 	--color-text-orange: hsl(var(--color-orange-h), var(--color-orange-s-desaturated-text), var(--color-orange-l-darkened-text));
 	--color-text-yellow: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated-text), var(--color-yellow-l-darkened-text));
@@ -296,4 +293,18 @@ body {
 	--color-text-pink: hsl(var(--color-pink-h), var(--color-pink-s-desaturated-text), var(--color-pink-l-darkened-text));
 	--color-text-grey: hsl(var(--color-grey-h), var(--color-grey-s-desaturated-text), var(--color-grey-l-darkened-text));
 }
+
+.theme-light {
+	--color-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
+	--color-dark-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened2x));
+	--color-text-accent: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
+}
+
+.theme-dark {
+	--color-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l));
+	--color-dark-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x));
+	--color-text-accent: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text));
+}
+
+
 /* #endregion */
