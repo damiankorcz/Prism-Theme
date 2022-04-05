@@ -552,7 +552,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .community-plugin-search .search-input-clear-button {
-	top: 4px;
+	top: 3px;
 }
 
 .community-plugin-search .search-input-container {
@@ -632,6 +632,19 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	margin: 0px 15px 15px 15px;
 	border-radius: var(--border-radius);
 	border: 1px solid var(--window-border);
+
+	> .setting-item {
+		padding-left: unset;
+
+		.search-input-container {
+			margin-left: unset;
+			margin-right: 8px;
+
+			input[type=text] {
+				max-width: -webkit-fill-available;
+			}
+		}
+	}
 }
 
 .community-plugin-search-results {
@@ -661,12 +674,16 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 
 .community-plugin-name {
 	width: fit-content;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
 	max-width: 85%;
 	font-variation-settings: 'wght' 600;
 	
 	.flair.mod-pop {
-		margin-left: 4px;
+		display: inline-flex;
+		align-items: center;
+		margin-left: 5px;
+		height: 24px;
 	}
 }
 

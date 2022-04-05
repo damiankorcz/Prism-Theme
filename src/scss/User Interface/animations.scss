@@ -1,13 +1,15 @@
 /* #region  [UI] Animations */
 body:not(.pt-disable-animations) {
     @keyframes fontEnlargeHighlight {
-        from {
+        0% {
             font-variation-settings: "wght" 600;
         }
-    
-        to {
+        50% {
             color: var(--interactive-accent-hover);
             font-variation-settings: "wght" 800;
+        }
+        100% {
+            font-variation-settings: "wght" 600;
         }
     }
     
@@ -177,10 +179,9 @@ body:not(.pt-disable-animations) {
     .view-header-title:hover,
     .kanban-plugin__lane-header-wrapper p:hover,
     input:hover {
-        animation-duration: 0.15s;
+        animation-duration: 0.3s;
         animation-name: fontEnlargeHighlight;
-        animation-iteration-count: 4;
-        animation-direction: alternate;
+        animation-iteration-count: 2;
     }
     
     .horizontal-tab-nav-item:hover,
@@ -278,7 +279,8 @@ body:not(.pt-disable-animations) {
     .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
     .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
     .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg,
-    .callout.is-collapsed .callout-title:hover .callout-fold svg {
+    .callout.is-collapsed .callout-title:hover .callout-fold svg, 
+    .tree-item.graph-control-section .tree-item-self:hover .tree-item-icon.collapse-icon svg {
         animation-duration: 0.25s;
         animation-name: floatIconDownIndicator;
         animation-iteration-count: 2;
@@ -291,7 +293,9 @@ body:not(.pt-disable-animations) {
     .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
     .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
     .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg,
-    .callout:not(.is-collapsed) .callout-title:hover .callout-fold svg {
+    .callout:not(.is-collapsed) .callout-title:hover .callout-fold svg,
+    .tree-item.graph-control-section:not(.is-collapsed) .tree-item-self:hover .tree-item-icon.collapse-icon svg,
+    .workspace-leaf-content[data-type=dangling-links] .view-content details[open] summary::marker  {
         animation-duration: 0.25s;
         animation-name: floatIconRightIndicator;
         animation-iteration-count: 2;
@@ -343,7 +347,9 @@ body:not(.pt-disable-animations) {
     
     .modal button:hover,
     .graph-controls button:hover,
-    .search-result-file-match-destination-file:hover {
+    .search-result-file-match-destination-file:hover,
+    button.kanban-plugin__confirm-action-button:hover,
+    button.kanban-plugin__cancel-action-button:hover {
         animation-fill-mode: forwards;
         animation-duration: 0.15s;
         animation-name: iconEnlargeHold;

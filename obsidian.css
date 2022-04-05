@@ -3639,12 +3639,15 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 /* #endregion */
 /* #region  [UI] Animations */
 @keyframes fontEnlargeHighlight {
-  from {
+  0% {
     font-variation-settings: "wght" 600;
   }
-  to {
+  50% {
     color: var(--interactive-accent-hover);
     font-variation-settings: "wght" 800;
+  }
+  100% {
+    font-variation-settings: "wght" 600;
   }
 }
 @keyframes iconEnlargeIcon {
@@ -3798,10 +3801,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 body:not(.pt-disable-animations) .view-header-title:hover,
 body:not(.pt-disable-animations) .kanban-plugin__lane-header-wrapper p:hover,
 body:not(.pt-disable-animations) input:hover {
-  animation-duration: 0.15s;
+  animation-duration: 0.3s;
   animation-name: fontEnlargeHighlight;
-  animation-iteration-count: 4;
-  animation-direction: alternate;
+  animation-iteration-count: 2;
 }
 body:not(.pt-disable-animations) .horizontal-tab-nav-item:hover,
 body:not(.pt-disable-animations) .vertical-tab-nav-item:hover {
@@ -3883,7 +3885,8 @@ body:not(.pt-disable-animations) .backlink-pane .tree-item-self.is-collapsed:hov
 body:not(.pt-disable-animations) .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg,
-body:not(.pt-disable-animations) .callout.is-collapsed .callout-title:hover .callout-fold svg {
+body:not(.pt-disable-animations) .callout.is-collapsed .callout-title:hover .callout-fold svg,
+body:not(.pt-disable-animations) .tree-item.graph-control-section .tree-item-self:hover .tree-item-icon.collapse-icon svg {
   animation-duration: 0.25s;
   animation-name: floatIconDownIndicator;
   animation-iteration-count: 2;
@@ -3895,7 +3898,9 @@ body:not(.pt-disable-animations) .backlink-pane .tree-item-self:not(.is-collapse
 body:not(.pt-disable-animations) .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
 body:not(.pt-disable-animations) .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
 body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg,
-body:not(.pt-disable-animations) .callout:not(.is-collapsed) .callout-title:hover .callout-fold svg {
+body:not(.pt-disable-animations) .callout:not(.is-collapsed) .callout-title:hover .callout-fold svg,
+body:not(.pt-disable-animations) .tree-item.graph-control-section:not(.is-collapsed) .tree-item-self:hover .tree-item-icon.collapse-icon svg,
+body:not(.pt-disable-animations) .workspace-leaf-content[data-type=dangling-links] .view-content details[open] summary::marker {
   animation-duration: 0.25s;
   animation-name: floatIconRightIndicator;
   animation-iteration-count: 2;
@@ -3938,7 +3943,9 @@ body:not(.pt-disable-animations) .nav-folder-title[data-path="/"]:hover .nav-fol
 }
 body:not(.pt-disable-animations) .modal button:hover,
 body:not(.pt-disable-animations) .graph-controls button:hover,
-body:not(.pt-disable-animations) .search-result-file-match-destination-file:hover {
+body:not(.pt-disable-animations) .search-result-file-match-destination-file:hover,
+body:not(.pt-disable-animations) button.kanban-plugin__confirm-action-button:hover,
+body:not(.pt-disable-animations) button.kanban-plugin__cancel-action-button:hover {
   animation-fill-mode: forwards;
   animation-duration: 0.15s;
   animation-name: iconEnlargeHold;
@@ -4508,7 +4515,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .community-plugin-search .search-input-clear-button {
-  top: 4px;
+  top: 3px;
 }
 
 .community-plugin-search .search-input-container {
@@ -4589,6 +4596,16 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
   border-radius: var(--border-radius);
   border: 1px solid var(--window-border);
 }
+.community-plugin-search > .setting-item {
+  padding-left: unset;
+}
+.community-plugin-search > .setting-item .search-input-container {
+  margin-left: unset;
+  margin-right: 8px;
+}
+.community-plugin-search > .setting-item .search-input-container input[type=text] {
+  max-width: -webkit-fill-available;
+}
 
 .community-plugin-search-results {
   padding-right: 10px;
@@ -4617,12 +4634,16 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 
 .community-plugin-name {
   width: fit-content;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   max-width: 85%;
   font-variation-settings: "wght" 600;
 }
 .community-plugin-name .flair.mod-pop {
-  margin-left: 4px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 5px;
+  height: 24px;
 }
 
 .community-plugin-downloads {
@@ -7018,6 +7039,14 @@ div.graph-controls.is-close {
   color: var(--interactive-accent-text);
 }
 
+.tree-item.graph-control-section .tree-item-icon {
+  padding-inline-end: 8px;
+}
+
+.tree-item-icon.collapse-icon:after {
+  display: none;
+}
+
 /* #endregion */
 /* #region  [Plugin - Core] Graph LT */
 .theme-light .graph-view.color-fill {
@@ -8152,6 +8181,9 @@ body:not(.pt-disable-custom-icons) svg.alert-circle {
 body:not(.pt-disable-custom-icons) span:not(.community-theme-remove-button):hover svg.trash {
   background-color: var(--interactive-accent-hover);
 }
+body:not(.pt-disable-custom-icons) span.community-theme-remove-button svg.trash {
+  -webkit-mask-size: 19px;
+}
 body:not(.pt-disable-custom-icons) span.community-theme-remove-button:hover svg.trash {
   background-color: var(--color-dark-red);
 }
@@ -8269,6 +8301,9 @@ body:not(.pt-disable-custom-icons) svg.cross {
 body:not(.pt-disable-custom-icons) svg.vertical-three-dots {
   -webkit-mask-size: 23px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z'%3E%3C/path%3E%3C/svg%3E");
+}
+body:not(.pt-disable-custom-icons) .kanban-plugin__lane-settings-button svg.vertical-three-dots {
+  -webkit-mask-size: 20px;
 }
 body:not(.pt-disable-custom-icons) svg.left-arrow {
   -webkit-mask-size: 29px;
@@ -8570,7 +8605,7 @@ body:not(.pt-disable-custom-icons) svg.create-new {
 }
 body:not(.pt-disable-custom-icons) .kanban-plugin__lane-grip svg {
   -webkit-mask-size: 17px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' role='img' width='1em' height='1em' preserveAspectRatio='xMidYMid meet' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M16 19a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm-8 0a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm8-8a3 3 0 1 1 0-6a3 3 0 0 1 0 6Zm-8 0a3 3 0 1 1 0-6a3 3 0 0 1 0 6Z'/%3E%3C/svg%3E");
 }
 body:not(.pt-disable-custom-icons) svg.github-glyph {
   -webkit-mask-size: 17px;
@@ -9007,6 +9042,10 @@ div.kanban-plugin__lane-grip {
 div.kanban-plugin__lane-grip:hover {
   color: var(--interactive-accent-hover);
 }
+div.kanban-plugin__lane-items {
+  padding: unset;
+  margin: 8px;
+}
 div.kanban-plugin__board > div {
   padding: 15px;
 }
@@ -9028,8 +9067,17 @@ div.kanban-plugin__item-button-wrapper {
 div.kanban-plugin__item-button-wrapper button.kanban-plugin__new-item-button {
   color: var(--text-normal);
 }
+div.kanban-plugin__item-input-wrapper {
+  flex: 1;
+}
+div.kanban-plugin__item-content-wrapper {
+  background: unset;
+}
 div.kanban-plugin__item-title {
   overflow: visible;
+}
+div.kanban-plugin__item-title-wrapper {
+  background: unset;
 }
 div.kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
   box-shadow: var(--drop-shadow-popup);
@@ -9064,6 +9112,10 @@ div.kanban-plugin__lane-form-wrapper {
   color: var(--text-normal);
 }
 
+.theme-light,
+.theme-dark {
+  /* Kanban Item Counter */
+}
 .theme-light button.kanban-plugin__new-item-button:hover,
 .theme-dark button.kanban-plugin__new-item-button:hover {
   color: var(--interactive-accent-text);
@@ -9074,15 +9126,52 @@ div.kanban-plugin__lane-form-wrapper {
 .theme-dark button.kanban-plugin__confirm-action-button {
   border: var(--border-size) solid var(--color-dark-red);
   background-color: var(--color-red);
-  color: var(--highlight-text-dark);
+  color: var(--text-normal);
   font-variation-settings: "wght" 600;
+}
+.theme-light button.kanban-plugin__confirm-action-button:hover,
+.theme-dark button.kanban-plugin__confirm-action-button:hover {
+  color: var(--color-dark-red);
 }
 .theme-light button.kanban-plugin__cancel-action-button,
 .theme-dark button.kanban-plugin__cancel-action-button {
   border: var(--border-size) solid var(--color-dark-grey);
   background-color: var(--color-grey);
-  color: var(--highlight-text-dark);
+  color: var(--text-normal);
   font-variation-settings: "wght" 600;
+}
+.theme-light button.kanban-plugin__cancel-action-button:hover,
+.theme-dark button.kanban-plugin__cancel-action-button:hover {
+  color: var(--color-dark-grey);
+}
+.theme-light .kanban-plugin__lane-title,
+.theme-dark .kanban-plugin__lane-title {
+  display: flex;
+  align-items: flex-start;
+}
+.theme-light .kanban-plugin__lane-title-text,
+.theme-dark .kanban-plugin__lane-title-text {
+  display: inline-flex;
+  flex-grow: 1;
+}
+.theme-light div.kanban-plugin__markdown-preview-view > div > *,
+.theme-dark div.kanban-plugin__markdown-preview-view > div > * {
+  overflow-wrap: anywhere;
+}
+.theme-light .kanban-plugin__lane-title,
+.theme-dark .kanban-plugin__lane-title {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.theme-light div.kanban-plugin__lane-title-count,
+.theme-dark div.kanban-plugin__lane-title-count {
+  display: block;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-small);
+  line-height: 20px;
+  height: fit-content;
+  font-size: 0.9em;
+  padding: 0px 4px;
 }
 
 div.modal.kanban-plugin__board-settings-modal {
@@ -9096,6 +9185,19 @@ div.modal.kanban-plugin__board-settings-modal {
 div.modal.kanban-plugin__board-settings-modal .modal-content {
   padding: 0px 25px;
   margin: 40px 16px 10px 40px;
+}
+
+div.kanban-plugin__lane-items > div {
+  margin-top: 8px;
+}
+
+div.kanban-plugin__item-wrapper:first-child {
+  margin-top: unset;
+}
+
+div.kanban-plugin__scroll-container.kanban-plugin__vertical {
+  overflow-x: unset;
+  overflow-y: unset;
 }
 
 /* #endregion */
@@ -10258,19 +10360,23 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 
 /* #endregion */
 /* #region  [Plugin - Community] Jump To Date */
-.flatpickr-calendar.obsidian42-jump-to-date {
+.flatpickr-calendar.obsidian42-jump-to-date,
+.kanban-plugin__date-picker {
   background-color: var(--background-secondary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow-popup);
   border: 1px solid var(--window-border);
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-calendar.arrowTop:before {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-calendar.arrowTop:before,
+.kanban-plugin__date-picker .flatpickr-calendar.arrowTop:before {
   border-bottom-color: var(--background-primary);
 }
-.flatpickr-calendar.obsidian42-jump-to-date.open {
+.flatpickr-calendar.obsidian42-jump-to-date.open,
+.kanban-plugin__date-picker.open {
   z-index: 15;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months,
+.kanban-plugin__date-picker .flatpickr-months {
   margin: unset;
   align-items: center;
   background: var(--background-primary);
@@ -10282,86 +10388,111 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border: unset;
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-prev-month,
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-next-month {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-next-month,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-prev-month,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-next-month {
   fill: var(--text-normal);
   padding: 7px;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month {
   padding-top: unset;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months {
   font-weight: 600;
   text-align: center;
   color: var(--text-normal);
+  padding: unset;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month:hover {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month:hover,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month:hover {
   background-color: red;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month .numInputWrapper {
   width: 7ch;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .numInput.cur-year {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .numInput.cur-year,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month .numInputWrapper .numInput.cur-year {
   font-weight: 800;
   color: var(--interactive-accent-text);
   box-shadow: unset;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .arrowUp::after {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .arrowUp::after,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month .numInputWrapper .arrowUp::after {
   border-bottom-color: var(--text-normal);
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .arrowDown::after {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-months .flatpickr-current-month .numInputWrapper .arrowDown::after,
+.kanban-plugin__date-picker .flatpickr-months .flatpickr-current-month .numInputWrapper .arrowDown::after {
   border-top-color: var(--text-normal);
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer,
+.kanban-plugin__date-picker .flatpickr-innerContainer {
   margin: 6px 10px 10px 10px;
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-rContainer,
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-days,
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer,
+.kanban-plugin__date-picker .flatpickr-innerContainer .flatpickr-rContainer,
+.kanban-plugin__date-picker .flatpickr-innerContainer .flatpickr-days,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer {
   max-width: -webkit-fill-available;
   min-width: unset;
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day,
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay {
   border: unset;
   border-radius: var(--border-radius-small) !important;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day {
   font-variation-settings: "wght" 600;
   color: var(--text-normal);
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day:hover {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day:hover,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day:hover {
   background-color: var(--background-primary);
   border-radius: var(--border-radius-small);
   font-variation-settings: "wght" 600;
   transition: unset;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.today {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.today,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.today {
   font-variation-settings: "wght" 800;
   color: var(--interactive-accent-text);
-  font-size: 1.2em;
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.nextMonthDay {
   opacity: 0.4;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected {
   background: var(--interactive-accent);
   box-shadow: var(--drop-shadow);
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected:hover {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected:hover,
+.kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer span.flatpickr-day.selected:hover {
   background-color: var(--background-primary);
   border-radius: var(--border-radius-small);
   font-variation-settings: "wght" 600;
   transition: unset;
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-weekdays {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-weekdays,
+.kanban-plugin__date-picker .flatpickr-innerContainer .flatpickr-weekdays {
   border-bottom: 1px solid var(--table-border-color);
 }
-.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-weekdays span.flatpickr-weekday {
+.flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .flatpickr-weekdays span.flatpickr-weekday,
+.kanban-plugin__date-picker .flatpickr-innerContainer .flatpickr-weekdays span.flatpickr-weekday {
   color: var(--text-muted);
   font-size: 10px;
   letter-spacing: 1px;
@@ -12798,6 +12929,7 @@ community:
 - obsidian-dictionary-plugin
 - obsidian-icons-plugin
 - obsidian-jump-to-date-plugin
+- obsidian-hover-editor
 
 */
 /* #endregion */
