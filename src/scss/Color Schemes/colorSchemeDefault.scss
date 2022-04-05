@@ -2,55 +2,20 @@
 body.theme-light.pt-color-scheme-default-lt,
 body.theme-dark.pt-color-scheme-default-dt {
 	--color-red-h: 0;
-	--color-red-s: 100%;
-	--color-red-l: 87%;
-
 	--color-orange-h: 30;
-	--color-orange-s: 100%;
-	--color-orange-l: 85%;
-
 	--color-yellow-h: 45;
-	--color-yellow-s: 97%;
-	--color-yellow-l: 86%;
-
 	--color-green-h: 95;
-	--color-green-s: 100%;
-	--color-green-l: 85%;
-
 	--color-mint-h: 160;
-	--color-mint-s: 89%;
-	--color-mint-l: 86%;
-
 	--color-aqua-h: 185;
-	--color-aqua-s: 100%;
-	--color-aqua-l: 83%;
-
 	--color-blue-h: 217;
-	--color-blue-s: 100%;
-	--color-blue-l: 84%;
-
 	--color-purple-h: 257;
-	--color-purple-s: 100%;
-	--color-purple-l: 89%;
-
 	--color-pink-h: 300;
-	--color-pink-s: 100%;
-	--color-pink-l: 89%;
-
 	--color-grey-h: 0;
-	--color-grey-s: 0%;
-	--color-grey-l: 93%;
 }
 /* #endregion */
 
 /* #region  [Color Scheme - Default] Light Theme */
 .theme-light.pt-color-scheme-default-lt {
-	--highlight-default: var(--color-yellow);
-
-	--color-darken-lt: 15%;
-	--color-darken-text-lt: 50%;
-
-	/* Light Theme Color Adjustments */
 	--color-red-s-desaturated: 84%;
 	--color-orange-s-desaturated: 72%;
 	--color-yellow-s-desaturated: 74%;
@@ -62,7 +27,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-s-desaturated: 66%;
 	--color-grey-s-desaturated: 0%;
 
-	--color-accent-l-darkened: calc(var(--color-accent-lt-l) - var(--color-darken-lt));
 	--color-red-l-darkened: 88%;
 	--color-orange-l-darkened: 82%;
 	--color-yellow-l-darkened: 83%;
@@ -74,7 +38,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-l-darkened: 90%;
 	--color-grey-l-darkened: 90%;
 
-	--color-accent-l-darkened2x: calc(var(--color-accent-lt-l) - var(--color-darken-lt) * 2);
 	--color-red-l-darkened2x: 75%;
 	--color-orange-l-darkened2x: 60%;
 	--color-yellow-l-darkened2x: 49%;
@@ -86,7 +49,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-l-darkened2x: 73%;
 	--color-grey-l-darkened2x: 73%;
 
-	/* Light Theme Color Adjustments */
 	--color-red-s-desaturated-text: 70%;
 	--color-orange-s-desaturated-text: 88%;
 	--color-yellow-s-desaturated-text: 88%;
@@ -98,7 +60,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-s-desaturated-text: 70%;
 	--color-grey-s-desaturated-text: 0%;
 
-	--color-accent-l-darkened-text: calc(var(--color-accent-lt-l) - var(--color-darken-text-lt));
 	--color-red-l-darkened-text: 58%;
 	--color-orange-l-darkened-text: 41%;
 	--color-yellow-l-darkened-text: 35%;
@@ -115,7 +76,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--text-muted: hsl(0, 0%, 40%);
 	--text-faint: hsl(0, 0%, 50%);
 	--text-selection: var(--background-secondary-alt);
-	--text-error: var(--color-dark-red);
+	--text-error: var(--color-red-dark);
 
 	--text-highlight-bg: var(--interactive-accent-dark);
 
@@ -128,7 +89,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--background-secondary: hsl(0, 0%, 96.5%);
 	--background-secondary-blur: hsl(0, 0%, 96.5%, 0.75);
 	--background-secondary-alt: hsl(0, 0%, 86%);
-	--background-modifier-error: var(--color-dark-red);
+	--background-modifier-error: var(--color-red-dark);
 
 	--tab-label-background-color: hsl(0, 0%, 94.5%);
 	--page-background-color: var(--background-primary);
@@ -172,12 +133,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 
 /* #region  [Color Scheme - Default] Dark Theme */
 .theme-dark.pt-color-scheme-default-dt {
-	--highlight-default: var(--color-yellow);
-
-	--color-lighten-dt: 17%;
-	--color-lighten-text-dt: 20%;
-
-	/* Dark Theme Color Adjustments */
 	--color-red-s-desaturated: 48%;
 	--color-orange-s-desaturated: 56%;
 	--color-yellow-s-desaturated: 53%;
@@ -189,7 +144,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-s-desaturated: 38%;
 	--color-grey-s-desaturated: 0%;
 
-	--color-accent-l-darkened: calc(var(--color-accent-dt-l) - var(--color-lighten-dt));
 	--color-red-l-darkened: 27%;
 	--color-orange-l-darkened: 27%;
 	--color-yellow-l-darkened: 26%;
@@ -201,7 +155,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-l-darkened: 22%;
 	--color-grey-l-darkened: 28%;
 
-	--color-accent-l-darkened2x: calc(var(--color-accent-dt-l) - var(--color-lighten-dt) * 2);
 	--color-red-l-darkened2x: 48%;
 	--color-orange-l-darkened2x: 43%;
 	--color-yellow-l-darkened2x: 43%;
@@ -213,7 +166,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-l-darkened2x: 45%;
 	--color-grey-l-darkened2x: 49%;
 
-	/* Dark Theme Color Adjustments */
 	--color-red-s-desaturated-text: 78%;
 	--color-orange-s-desaturated-text: 72%;
 	--color-yellow-s-desaturated-text: 68%;
@@ -225,7 +177,6 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--color-pink-s-desaturated-text: 62%;
 	--color-grey-s-desaturated-text: 0%;
 
-	--color-accent-l-darkened-text: calc(var(--color-accent-dt-l) - var(--color-lighten-text-dt));
 	--color-red-l-darkened-text: 74%;
 	--color-orange-l-darkened-text: 67%;
 	--color-yellow-l-darkened-text: 62%;
@@ -242,7 +193,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--text-muted: hsl(0, 0%, 72%);
 	--text-faint: hsl(0, 0%, 52%);
 	--text-selection: var(--background-primary-alt);
-	--text-error: var(--color-dark-red);
+	--text-error: var(--color-red-dark);
 
 	--text-highlight-bg: var(--interactive-accent-dark);
 
@@ -255,7 +206,7 @@ body.theme-dark.pt-color-scheme-default-dt {
 	--background-secondary: hsl(0, 0%, 8%);
 	--background-secondary-blur: hsla(0, 0%, 8%, 0.75);
 	--background-secondary-alt: hsl(0, 0%, 7%);
-	--background-modifier-error: var(--color-dark-red);
+	--background-modifier-error: var(--color-red-dark);
 
 	--tab-label-background-color: hsl(0, 0%, 14%);
 	--page-background-color: var(--background-secondary);
