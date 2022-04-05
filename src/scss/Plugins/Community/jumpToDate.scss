@@ -1,5 +1,6 @@
 /* #region  [Plugin - Community] Jump To Date */
-.flatpickr-calendar.obsidian42-jump-to-date {
+.flatpickr-calendar.obsidian42-jump-to-date,
+.kanban-plugin__date-picker  {
     background-color: var(--background-secondary);
     border-radius: var(--border-radius);
     box-shadow: var(--drop-shadow-popup);
@@ -40,6 +41,7 @@
                 font-weight: 600;
                 text-align: center;
                 color: var(--text-normal);
+                padding: unset;
 
                 .flatpickr-monthDropdown-month:hover {
                     background-color: red;
@@ -98,7 +100,7 @@
                 &.today {
                     font-variation-settings: "wght" 800;
                     color: var(--interactive-accent-text);
-                    font-size: 1.2em;
+                    // font-size: 1.2em;
                 }
             }
             
@@ -134,4 +136,5 @@
 
     }
 }
+
 /* #endregion */

@@ -37,6 +37,11 @@ div.kanban-plugin__ {
 		&-grip:hover {
 			color: var(--interactive-accent-hover);
 		}
+
+		&-items {
+			padding: unset;
+			margin: 8px;
+		}
 	}
 
 	&board > div {
@@ -64,8 +69,20 @@ div.kanban-plugin__ {
 			}
 		}
 
+		&-input-wrapper {
+			flex: 1;
+		}
+
+		&-content-wrapper {
+			background: unset;
+		}
+
 		&-title {
 			overflow: visible;
+
+			&-wrapper {
+				background: unset;
+			}
 		}
 	}
 
@@ -125,15 +142,52 @@ div.kanban-plugin__ {
 	button.kanban-plugin__confirm-action-button {
 		border: var(--border-size) solid var(--color-dark-red);
 		background-color: var(--color-red);
-		color: var(--highlight-text-dark);
+		color: var(--text-normal);
 		font-variation-settings: 'wght' 600;
+
+		&:hover {
+			color: var(--color-dark-red);
+		}
 	}
 
 	button.kanban-plugin__cancel-action-button {
 		border: var(--border-size) solid var(--color-dark-grey);
 		background-color: var(--color-grey);
-		color: var(--highlight-text-dark);
+		color: var(--text-normal);
 		font-variation-settings: 'wght' 600;
+
+		&:hover {
+			color: var(--color-dark-grey);
+		}
+	}
+	
+	.kanban-plugin__lane-title {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.kanban-plugin__lane-title-text {
+		display: inline-flex;
+		flex-grow: 1;
+	}
+
+	div.kanban-plugin__markdown-preview-view>div>* {
+		overflow-wrap: anywhere;
+	}
+	.kanban-plugin__lane-title {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	/* Kanban Item Counter */
+	div.kanban-plugin__lane-title-count {
+		display: block;
+		background-color: var(--background-secondary);
+		border-radius: var(--border-radius-small);
+		line-height: 20px;
+		height: fit-content;
+		font-size: 0.9em;
+		padding: 0px 4px;
 	}
 }
 
@@ -150,6 +204,23 @@ div.modal.kanban-plugin__board-settings-modal {
 		margin: 40px 16px 10px 40px;
 	}
 }
+
+div.kanban-plugin__lane-items > div {
+    margin-top: 8px;
+}
+
+div.kanban-plugin__item-wrapper:first-child {
+	margin-top: unset;
+}
+
+div.kanban-plugin__scroll-container.kanban-plugin__vertical {
+	overflow-x: unset;
+	overflow-y: unset;
+}
+
+// .kanban-plugin__placeholder[data-axis=vertical] {
+// 	display: none;
+// }
 /* #endregion */
 
 /* #region  [Plugin - Community] Kanban Background Styles */
