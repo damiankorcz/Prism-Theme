@@ -1,18 +1,5 @@
 /* #region  [UI] Animations */
-body:not(.pt-disable-animations) {
-    @keyframes fontEnlargeHighlight {
-        0% {
-            font-variation-settings: "wght" 600;
-        }
-        50% {
-            color: var(--interactive-accent-hover);
-            font-variation-settings: "wght" 800;
-        }
-        100% {
-            font-variation-settings: "wght" 600;
-        }
-    }
-    
+body:not(.pt-disable-animations) {  
     @keyframes iconEnlargeIcon {
         0% {
             transform: translatey(0px);
@@ -174,14 +161,6 @@ body:not(.pt-disable-animations) {
         100% {
             transform: rotate(-90deg) translatey(0px);
         }
-    }
-    
-    .view-header-title:hover,
-    .kanban-plugin__lane-header-wrapper p:hover,
-    input:hover {
-        animation-duration: 0.3s;
-        animation-name: fontEnlargeHighlight;
-        animation-iteration-count: 2;
     }
     
     .horizontal-tab-nav-item:hover,

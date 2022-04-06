@@ -13,17 +13,16 @@
 	letter-spacing: 0.05em;
 }
 
-.suggestion-container .suggestion .suggestion-item {
-	display: flow-root;
-}
-
 .suggestion-content {
 	word-wrap: break-word;
 	line-height: 28px;
 	padding-right: 10px;
+	flex-grow: 1;
 }
 
 .suggestion-item {
+	display: flex;
+    align-items: center;
 	padding: 5px 10px;
 	/* margin-right: 8px; */
 
@@ -33,6 +32,8 @@
 		position: relative;
 		left: unset;
 		top: unset;
+		margin-left: 10px;
+		order: 5;
 	}
 
 	.suggestion-flair:first-child {
@@ -56,8 +57,8 @@
 	.suggestion-prefix {
 		border-radius: var(--border-radius-small);
 		background-color: var(--background-primary);
-		margin-right: 5px;
-		padding: 2px 5px;
+		margin-right: 8px;
+		padding: 0px 5px;
 		font-size: 12px;
 	}
 
