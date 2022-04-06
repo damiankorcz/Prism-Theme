@@ -1,73 +1,80 @@
 /* #region  [Plugin - Theme] Mark Highlight Color Presets */
+mark,
+.cm-highlight {
+	--mark-highlight-base: var(--interactive-accent);
+	--mark-highlight-dark: var(--interactive-accent-dark);
+	--mark-highlight-text: var(--interactive-accent-text);
+}
+
 mark {
 	&.red,
 	&.Red {
-		--highlight-default: var(--color-red-base);
-		--dark-highlight-default: var(--color-red-dark);
-		--text-highlight-default: var(--color-red-text);
+		--mark-highlight-base: var(--color-red-base);
+		--mark-highlight-dark: var(--color-red-dark);
+		--mark-highlight-text: var(--color-red-text);
 	}
 
 	&.orange,
 	&.Orange {
-		--highlight-default: var(--color-orange-base);
-		--dark-highlight-default: var(--color-orange-dark);
-		--text-highlight-default: var(--color-orange-text);
+		--mark-highlight-base: var(--color-orange-base);
+		--mark-highlight-dark: var(--color-orange-dark);
+		--mark-highlight-text: var(--color-orange-text);
 	}
 
 	&.yellow,
 	&.Yellow {
-		--highlight-default: var(--color-yellow-base);
-		--dark-highlight-default: var(--color-yellow-dark);
-		--text-highlight-default: var(--color-yellow-text);
+		--mark-highlight-base: var(--color-yellow-base);
+		--mark-highlight-dark: var(--color-yellow-dark);
+		--mark-highlight-text: var(--color-yellow-text);
 	}
 
 	&.green,
 	&.Green {
-		--highlight-default: var(--color-green-base);
-		--dark-highlight-default: var(--color-green-dark);
-		--text-highlight-default: var(--color-green-text);
+		--mark-highlight-base: var(--color-green-base);
+		--mark-highlight-dark: var(--color-green-dark);
+		--mark-highlight-text: var(--color-green-text);
 	}
 
 	&.mint,
 	&.Mint {
-		--highlight-default: var(--color-mint-base);
-		--dark-highlight-default: var(--color-mint-dark);
-		--text-highlight-default: var(--color-mint-text);
+		--mark-highlight-base: var(--color-mint-base);
+		--mark-highlight-dark: var(--color-mint-dark);
+		--mark-highlight-text: var(--color-mint-text);
 	}
 
 	&.aqua,
 	&.Aqua {
-		--highlight-default: var(--color-aqua-base);
-		--dark-highlight-default: var(--color-aqua-dark);
-		--text-highlight-default: var(--color-aqua-text);
+		--mark-highlight-base: var(--color-aqua-base);
+		--mark-highlight-dark: var(--color-aqua-dark);
+		--mark-highlight-text: var(--color-aqua-text);
 	}
 
 	&.blue,
 	&.Blue {
-		--highlight-default: var(--color-blue-base);
-		--dark-highlight-default: var(--color-blue-dark);
-		--text-highlight-default: var(--color-blue-text);
+		--mark-highlight-base: var(--color-blue-base);
+		--mark-highlight-dark: var(--color-blue-dark);
+		--mark-highlight-text: var(--color-blue-text);
 	}
 
 	&.purple,
 	&.Purple {
-		--highlight-default: var(--color-purple-base);
-		--dark-highlight-default: var(--color-purple-dark);
-		--text-highlight-default: var(--color-purple-text);
+		--mark-highlight-base: var(--color-purple-base);
+		--mark-highlight-dark: var(--color-purple-dark);
+		--mark-highlight-text: var(--color-purple-text);
 	}
 
 	&.pink,
 	&.Pink {
-		--highlight-default: var(--color-pink-base);
-		--dark-highlight-default: var(--color-pink-dark);
-		--text-highlight-default: var(--color-pink-text);
+		--mark-highlight-base: var(--color-pink-base);
+		--mark-highlight-dark: var(--color-pink-dark);
+		--mark-highlight-text: var(--color-pink-text);
 	}
 
 	&.grey,
 	&.Grey {
-		--highlight-default: var(--color-grey-base);
-		--dark-highlight-default: var(--color-grey-dark);
-		--text-highlight-default: var(--color-grey-text);
+		--mark-highlight-base: var(--color-grey-base);
+		--mark-highlight-dark: var(--color-grey-dark);
+		--mark-highlight-text: var(--color-grey-text);
 	}
 }
 /* #endregion */
@@ -75,7 +82,9 @@ mark {
 /* #region  [Plugin - Theme} Mark Highlight Styles */
 .theme-dark.pt-highlight-style-none-dt,
 .theme-light.pt-highlight-style-none-lt {
-	mark {
+	mark,
+	.cm-highlight {
+		font-size: 1em;
 		opacity: 1;
 		background-color: transparent;
 		margin: 0px 0px;
@@ -84,31 +93,35 @@ mark {
 
 .theme-dark.pt-highlight-style-border-dt,
 .theme-light.pt-highlight-style-border-lt {
-	mark {
+	mark,
+	.cm-highlight {
 		background-color: var(--background-primary);
-		border: var(--border-size) solid var(--dark-highlight-default);
+		border: var(--border-size) solid var(--mark-highlight-dark);
 		padding: 0px 5px;
 	}
 }
 
 .theme-dark.pt-highlight-style-filled-dt,
 .theme-light.pt-highlight-style-filled-lt {
-	mark {
-		background-color: var(--highlight-default);
+	mark,
+	.cm-highlight {
+		background-color: var(--mark-highlight-base);
 		padding: 2px 7px;
 	}
 }
 
 .theme-dark.pt-highlight-style-borderandfilled-dt,
 .theme-light.pt-highlight-style-borderandfilled-lt {
-	mark {
-		background-color: var(--highlight-default);
-		border: var(--border-size) solid var(--dark-highlight-default);
+	mark,
+	.cm-highlight {
+		background-color: var(--mark-highlight-base);
+		border: var(--border-size) solid var(--mark-highlight-dark);
 		padding: 0px 5px;
 	}
 }
 
-mark {
+mark,
+.cm-highlight {
 	font-variation-settings: 'wght' 600;
 	font-size: 0.875em;
 	border-radius: var(--border-radius-small);
@@ -118,15 +131,17 @@ mark {
 
 .theme-light.pt-highlight-text-none-lt,
 .theme-dark.pt-highlight-text-none-dt {
-	mark {
+	mark,
+	.cm-highlight {
 		color: var(--text-normal);
 	}
 }
 
 .theme-light.pt-highlight-text-color-lt,
 .theme-dark.pt-highlight-text-color-dt {
-	mark {
-		color: var(--text-highlight-default);
+	mark,
+	.cm-highlight {
+		color: var(--mark-highlight-text);
 	}
 }
 
