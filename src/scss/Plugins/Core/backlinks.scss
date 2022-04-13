@@ -60,6 +60,7 @@
 
 .workspace-leaf-content[data-type="backlink"] .search-result-file-match,
 .embedded-backlinks .search-result-file-match {
+	font-family: var(--font-text);
 	left: unset;
 	width: 100%;
 	padding: 5px 20px 5px 10px;
@@ -179,7 +180,6 @@
 .workspace-leaf-content[data-type="backlink"] .backlink-pane > .tree-item-self:not(:last-of-type),
 .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type) {
 	border: 1px solid var(--window-border);
-	background-color: var(--tab-label-background-color);
 	background-color: var(--background-tertiary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
@@ -188,7 +188,7 @@
 	z-index: var(--layer-cover);
 	margin-bottom: 8px;
 	font-size: 14px;
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 
 	&:hover {
 		color: var(--interactive-accent-text);
