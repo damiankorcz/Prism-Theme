@@ -1,248 +1,177 @@
 /* #region  [Color Scheme - Flower] Base Colors */
 body.theme-light.pt-color-scheme-pistachio-lt,
 body.theme-dark.pt-color-scheme-pine-dt {
-	--color-red-h: 355;
-	--color-orange-h: 21;
-	--color-yellow-h: 40;
-	--color-green-h: 110;
-	--color-mint-h: 151;
-	--color-aqua-h: 190;
-	--color-blue-h: 222;
-	--color-purple-h: 252;
-	--color-pink-h: 323;
-	--color-grey-h: 233;
+	--color-red-base-h: 355;
+	--color-orange-base-h: 21;
+	--color-yellow-base-h: 40;
+	--color-green-base-h: 110;
+	--color-mint-base-h: 151;
+	--color-aqua-base-h: 190;
+	--color-blue-base-h: 222;
+	--color-purple-base-h: 260;
+	--color-pink-base-h: 323;
+	--color-grey-base-h: 233;
 }
 /* #endregion */
 
 /* #region  [Color Scheme - Flower] Light Theme */
 .theme-light.pt-color-scheme-pistachio-lt {
-	--color-red-s-desaturated: 70%;
-	--color-orange-s-desaturated: 66%;
-	--color-yellow-s-desaturated: 70%;
-	--color-green-s-desaturated: 35%;
-	--color-mint-s-desaturated: 40%;
-	--color-aqua-s-desaturated: 31%;
-	--color-blue-s-desaturated: 27%;
-	--color-purple-s-desaturated: 38%;
-	--color-pink-s-desaturated: 42%;
-	--color-grey-s-desaturated: 5%;
+	--color-red-base-s: 70%;
+	--color-orange-base-s: 66%;
+	--color-yellow-base-s: 70%;
+	--color-green-base-s: 35%;
+	--color-mint-base-s: 40%;
+	--color-aqua-base-s: 31%;
+	--color-blue-base-s: 27%;
+	--color-purple-base-s: 38%;
+	--color-pink-base-s: 42%;
+	--color-grey-base-s: 5%;
 
-	--color-red-l-darkened: 83%;
-	--color-orange-l-darkened: 82%;
-	--color-yellow-l-darkened: 83%;
-	--color-green-l-darkened: 81%;
-	--color-mint-l-darkened: 82%;
-	--color-aqua-l-darkened: 85%;
-	--color-blue-l-darkened: 84%;
-	--color-purple-l-darkened: 82%;
-	--color-pink-l-darkened: 83%;
-	--color-grey-l-darkened: 82%;
+	--color-red-base-l: 83%;
+	--color-orange-base-l: 82%;
+	--color-yellow-base-l: 83%;
+	--color-green-base-l: 81%;
+	--color-mint-base-l: 82%;
+	--color-aqua-base-l: 85%;
+	--color-blue-base-l: 84%;
+	--color-purple-base-l: 82%;
+	--color-pink-base-l: 83%;
+	--color-grey-base-l: 82%;
 
-	--color-red-l-darkened2x: 74%;
-	--color-orange-l-darkened2x: 73%;
-	--color-yellow-l-darkened2x: 70%;
-	--color-green-l-darkened2x: 68%;
-	--color-mint-l-darkened2x: 67%;
-	--color-aqua-l-darkened2x: 72%;
-	--color-blue-l-darkened2x: 74%;
-	--color-purple-l-darkened2x: 73%;
-	--color-pink-l-darkened2x: 72%;
-	--color-grey-l-darkened2x: 68%;
+	--color-red-tint-l: 74%;
+	--color-orange-tint-l: 73%;
+	--color-yellow-tint-l: 70%;
+	--color-green-tint-l: 68%;
+	--color-mint-tint-l: 67%;
+	--color-aqua-tint-l: 72%;
+	--color-blue-tint-l: 74%;
+	--color-purple-tint-l: 73%;
+	--color-pink-tint-l: 72%;
+	--color-grey-tint-l: 68%;
 
-	--color-red-s-desaturated-text: 53%;
-	--color-orange-s-desaturated-text: 54%;
-	--color-yellow-s-desaturated-text: 55%;
-	--color-green-s-desaturated-text: 45%;
-	--color-mint-s-desaturated-text: 58%;
-	--color-aqua-s-desaturated-text: 50%;
-	--color-blue-s-desaturated-text: 30%;
-	--color-purple-s-desaturated-text: 36%;
-	--color-pink-s-desaturated-text: 42%;
-	--color-grey-s-desaturated-text: 5%;
+	--color-red-text-s: 53%;
+	--color-orange-text-s: 54%;
+	--color-yellow-text-s: 55%;
+	--color-green-text-s: 45%;
+	--color-mint-text-s: 58%;
+	--color-aqua-text-s: 50%;
+	--color-blue-text-s: 30%;
+	--color-purple-text-s: 36%;
+	--color-pink-text-s: 42%;
+	--color-grey-text-s: 5%;
 
-	--color-red-l-darkened-text: 55%;
-	--color-orange-l-darkened-text: 52%;
-	--color-yellow-l-darkened-text: 46%;
-	--color-green-l-darkened-text: 40%;
-	--color-mint-l-darkened-text: 38%;
-	--color-aqua-l-darkened-text: 40%;
-	--color-blue-l-darkened-text: 56%;
-	--color-purple-l-darkened-text: 51%;
-	--color-pink-l-darkened-text: 50%;
-	--color-grey-l-darkened-text: 47%;
+	--color-red-text-l: 55%;
+	--color-orange-text-l: 52%;
+	--color-yellow-text-l: 46%;
+	--color-green-text-l: 40%;
+	--color-mint-text-l: 38%;
+	--color-aqua-text-l: 40%;
+	--color-blue-text-l: 56%;
+	--color-purple-text-l: 51%;
+	--color-pink-text-l: 50%;
+	--color-grey-text-l: 47%;
 
-	/* Light Theme Main Obsidian Colors */
-	--text-normal: hsl(135, 32%, 20%);
-	--text-muted: hsl(135, 32%, 30%);
-	--text-faint: hsl(135, 32%, 40%);
-	--text-selection: var(--background-primary-alt);
-	--text-error: var(--color-red-dark);
+	--text-normal: hsl(135, 35%, 20%);
+	--text-muted: hsl(135, 35%, 30%);
+	--text-faint: hsl(135, 35%, 40%);
 
-	--text-highlight-bg: var(--interactive-accent-dark);
+	--background-primary: hsl(135, 35%, 95.5%);
+	--background-primary-alt: hsl(135, 35%, 93%);
+	--background-secondary: hsl(135, 35%, 90.5%);
+	--background-secondary-blur: hsla(135, 35%, 90.5%, 0.75);
+	--background-secondary-alt: hsl(135, 35%, 75%);
+	--background-tertiary: hsl(135, 35%, 93%);
 
-	--highlight-text-normal: hsl(135, 32%, 18%);
-	--highlight-text-dark: hsl(135, 32%, 18%);
+	--background-color-lt: hsl(135, 35%, 81%);
 
-	--background-primary: hsl(135, 32%, 95.5%);
-	--background-primary-alt: hsl(135, 32%, 93%);
-	--background-secondary: hsl(135, 32%, 91.5%);
-	--background-secondary-blur: hsla(135, 32%, 91.5%, 0.75);
-	--background-secondary-alt: hsl(135, 32%, 80%);
-	--background-modifier-error: var(--color-red-dark);
+	--vertical-lines-color-file-explorer: hsl(135, 35%, 84%);
+	--vertical-lines-color-outline: hsl(135, 35%, 84%);
+	--vertical-lines-color-style-settings: hsl(135, 35%, 84%);
 
-	--tab-label-background-color: hsl(135, 32%, 93%);
-	--page-background-color: var(--background-secondary);
+	--drop-shadow: hsla(135, 35%, 7%, 0.1) 0px 1px 2px 0px;
+	--drop-shadow-popup: hsla(135, 35%, 7%, 0.04) 0px 1px 2px, hsla(135, 35%, 7%, 0.04) 0px 2px 4px, hsla(135, 35%, 7%, 0.04) 0px 4px 8px, hsla(135, 35%, 7%, 0.04) 0px 8px 16px;
 
-	--background-color-lt: hsl(135, 32%, 81%);
-
-	--file-explorer-vertical-lines-color: hsl(135, 32%, 84%);
-	--style-settings-vertical-lines-color: hsl(135, 32%, 84%);
-	--outline-vertical-lines-color: hsl(135, 32%, 84%);
-
-	--window-border: var(--background-secondary-alt);
-	--drop-shadow: hsla(135, 32%, 7%, 0.1) 0px 1px 2px 0px;
-	--drop-shadow-popup: hsla(135, 32%, 7%, 0.04) 0px 1px 2px, hsla(135, 32%, 7%, 0.04) 0px 2px 4px, hsla(135, 32%, 7%, 0.04) 0px 4px 8px, hsla(135, 32%, 7%, 0.04) 0px 8px 16px;
-
-	--scroll-bar-thumb: hsl(135, 32%, 72%);
-
-	--table-border-color: var(--background-secondary-alt);
-	--background-modifier-border: var(--table-border-color);
-
-	/* Scrollbar Settings */
-	--scroll-button-background-color: var(--background-secondary);
-	--scroll-button-background-color-hover: var(--background-secondary-alt);
-
-	&.pt-disable-blur {
-		--background-secondary-blur: hsla(135, 32%, 88%, 1);
-	}
-
-	&.pt-highlight-text-light-lt {
-		--highlight-text-normal: hsl(135, 32%, 95%);
-	}
-
-	&.pt-highlight-text-accent-lt {
-		--highlight-text-normal: var(--interactive-accent-text);
-	}
-
-	&.pt-highlight-text-custom-lt {
-		--highlight-text-normal: var(--highlight-text-accent-custom-lt);
-	}
+	--scroll-bar-thumb: hsl(135, 35%, 72%);
 }
 /* #endregion */
 
 /* #region  [Color Scheme - Flower] Dark Theme */
 .theme-dark.pt-color-scheme-pine-dt {
-	--color-red-s-desaturated: 58%;
-	--color-orange-s-desaturated: 62%;
-	--color-yellow-s-desaturated: 70%;
-	--color-green-s-desaturated: 35%;
-	--color-mint-s-desaturated: 31%;
-	--color-aqua-s-desaturated: 38%;
-	--color-blue-s-desaturated: 30%;
-	--color-purple-s-desaturated: 40%;
-	--color-pink-s-desaturated: 46%;
-	--color-grey-s-desaturated: 2%;
+	--color-red-base-s: 58%;
+	--color-orange-base-s: 62%;
+	--color-yellow-base-s: 70%;
+	--color-green-base-s: 35%;
+	--color-mint-base-s: 31%;
+	--color-aqua-base-s: 38%;
+	--color-blue-base-s: 30%;
+	--color-purple-base-s: 40%;
+	--color-pink-base-s: 46%;
+	--color-grey-base-s: 2%;
 
-	--color-red-l-darkened: 21%;
-	--color-orange-l-darkened: 22%;
-	--color-yellow-l-darkened: 20%;
-	--color-green-l-darkened: 23%;
-	--color-mint-l-darkened: 25%;
-	--color-aqua-l-darkened: 20%;
-	--color-blue-l-darkened: 24%;
-	--color-purple-l-darkened: 22%;
-	--color-pink-l-darkened: 22%;
-	--color-grey-l-darkened: 23%;
+	--color-red-base-l: 21%;
+	--color-orange-base-l: 22%;
+	--color-yellow-base-l: 20%;
+	--color-green-base-l: 23%;
+	--color-mint-base-l: 25%;
+	--color-aqua-base-l: 20%;
+	--color-blue-base-l: 24%;
+	--color-purple-base-l: 22%;
+	--color-pink-base-l: 22%;
+	--color-grey-base-l: 23%;
 
-	--color-red-l-darkened2x: 40%;
-	--color-orange-l-darkened2x: 40%;
-	--color-yellow-l-darkened2x: 33%;
-	--color-green-l-darkened2x: 37%;
-	--color-mint-l-darkened2x: 38%;
-	--color-aqua-l-darkened2x: 35%;
-	--color-blue-l-darkened2x: 46%;
-	--color-purple-l-darkened2x: 47%;
-	--color-pink-l-darkened2x: 42%;
-	--color-grey-l-darkened2x: 42%;
+	--color-red-tint-l: 40%;
+	--color-orange-tint-l: 40%;
+	--color-yellow-tint-l: 33%;
+	--color-green-tint-l: 37%;
+	--color-mint-tint-l: 38%;
+	--color-aqua-tint-l: 35%;
+	--color-blue-tint-l: 46%;
+	--color-purple-tint-l: 47%;
+	--color-pink-tint-l: 42%;
+	--color-grey-tint-l: 42%;
 
-	--color-red-s-desaturated-text: 74%;
-	--color-orange-s-desaturated-text: 72%;
-	--color-yellow-s-desaturated-text: 70%;
-	--color-green-s-desaturated-text: 48%;
-	--color-mint-s-desaturated-text: 58%;
-	--color-aqua-s-desaturated-text: 50%;
-	--color-blue-s-desaturated-text: 70%;
-	--color-purple-s-desaturated-text: 65%;
-	--color-pink-s-desaturated-text: 67%;
-	--color-grey-s-desaturated-text: 2%;
+	--color-red-text-s: 74%;
+	--color-orange-text-s: 72%;
+	--color-yellow-text-s: 70%;
+	--color-green-text-s: 48%;
+	--color-mint-text-s: 58%;
+	--color-aqua-text-s: 50%;
+	--color-blue-text-s: 70%;
+	--color-purple-text-s: 65%;
+	--color-pink-text-s: 67%;
+	--color-grey-text-s: 2%;
 
-	--color-red-l-darkened-text: 70%;
-	--color-orange-l-darkened-text: 62%;
-	--color-yellow-l-darkened-text: 53%;
-	--color-green-l-darkened-text: 52%;
-	--color-mint-l-darkened-text: 52%;
-	--color-aqua-l-darkened-text: 53%;
-	--color-blue-l-darkened-text: 70%;
-	--color-purple-l-darkened-text: 73%;
-	--color-pink-l-darkened-text: 73%;
-	--color-grey-l-darkened-text: 71%;
+	--color-red-text-l: 70%;
+	--color-orange-text-l: 62%;
+	--color-yellow-text-l: 53%;
+	--color-green-text-l: 52%;
+	--color-mint-text-l: 52%;
+	--color-aqua-text-l: 53%;
+	--color-blue-text-l: 70%;
+	--color-purple-text-l: 73%;
+	--color-pink-text-l: 73%;
+	--color-grey-text-l: 71%;
 
-	/* Dark Theme Main Obsidian Colors */
-	--text-normal: hsl(135, 36%, 85%);
-	--text-muted: hsl(135, 36%, 75%);
-	--text-faint: hsl(135, 36%, 50%);
-	--text-selection: var(--background-primary-alt);
-	--text-error: var(--color-red-dark);
+	--text-normal: hsl(135, 35%, 85%);
+	--text-muted: hsl(135, 35%, 70%);
+	--text-faint: hsl(135, 35%, 60%);
 
-	--text-highlight-bg: var(--interactive-accent-dark);
+	--background-primary: hsl(135, 35%, 13%);
+	--background-primary-alt: hsl(135, 35%, 15%);
+	--background-secondary: hsl(135, 35%, 7.7%);
+	--background-secondary-blur: hsla(135, 35%, 7.7%, 0.75);
+	--background-secondary-alt: hsl(135, 35%, 6%);
+	--background-tertiary: hsl(135, 35%, 6.2%);
 
-	--highlight-text-normal: hsl(135, 36%, 10%);
-	--highlight-text-dark: hsl(135, 36%, 10%);
+	--background-color-dt: hsl(135, 35%, 6%);
 
-	--background-primary: hsl(135, 36%, 13%);
-	--background-primary-alt: hsl(135, 36%, 15%);
-	--background-secondary: hsl(135, 36%, 7.7%);
-	--background-secondary-blur: hsla(135, 36%, 7.7%, 0.75);
-	--background-secondary-alt: hsl(135, 36%, 6%);
-	--background-modifier-error: var(--color-red-dark);
-	
-	--tab-label-background-color: hsl(135, 36%, 6.5%);
-	--page-background-color: var(--background-secondary);
-	
-	--background-color-dt: hsl(135, 36%, 6.7%);
-	
-	--file-explorer-vertical-lines-color: hsl(135, 36%, 12%);
-	--style-settings-vertical-lines-color: hsl(135, 36%, 12%);
-	--outline-vertical-lines-color: hsl(135, 36%, 12%);
-	
-	// --window-border: red;
-	--window-border: var(--background-primary);
-	--drop-shadow: hsla(135, 36%, 7%, 0.1) 0px 1px 2px 0px;
-	--drop-shadow-popup: hsla(135, 36%, 7%, 0.1) 0px 1px 2px, hsla(135, 36%, 7%, 0.1) 0px 2px 4px, hsla(135, 36%, 7%, 0.1) 0px 4px 8px, hsla(135, 36%, 7%, 0.1) 0px 8px 16px;
-	
-	--scroll-bar-thumb: hsl(135, 36%, 18%);
-	
-	--table-border-color: hsl(135, 36%, 18%);
-	--background-modifier-border: var(--table-border-color);
+	--vertical-lines-color-file-explorer: hsl(135, 35%, 15%);
+	--vertical-lines-color-outline: hsl(135, 35%, 15%);
+	--vertical-lines-color-style-settings: hsl(135, 35%, 13%);
 
-	/* Scrollbar Settings */
-	--scroll-button-background-color: var(--background-secondary);
-	--scroll-button-background-color-hover: var(--background-secondary-alt);
+	--drop-shadow: hsla(135, 35%, 7%, 0.1) 0px 1px 2px 0px;
+	--drop-shadow-popup: hsla(135, 35%, 7%, 0.1) 0px 1px 2px, hsla(135, 35%, 7%, 0.1) 0px 2px 4px, hsla(135, 35%, 7%, 0.1) 0px 4px 8px, hsla(135, 35%, 7%, 0.1) 0px 8px 16px;
 
-	&.pt-disable-blur {
-		--background-secondary-blur: hsla(135, 36%, 7.7%, 1);
-	}
-
-	&.pt-highlight-text-light-dt {
-		--highlight-text-normal: hsl(135, 36%, 85%);
-	}
-
-	&.pt-highlight-text-accent-dt {
-		--highlight-text-normal: var(--interactive-accent-text);
-	}
-
-	&.pt-highlight-text-custom-dt {
-		--highlight-text-normal: var(--highlight-text-accent-custom-dt);
-	}
+	--scroll-bar-thumb: hsl(135, 35%, 18%);
 }
 /* #endregion */

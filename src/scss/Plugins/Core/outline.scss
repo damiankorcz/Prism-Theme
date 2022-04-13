@@ -17,6 +17,7 @@
 		font-variation-settings: 'wght' 600;
 		color: var(--text-normal);
 		padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
+		padding: 2px 2px 2px calc(8px - var(--vertical-lines-width-file-explorer));
 		line-height: 14px;
 	}
 
@@ -59,12 +60,12 @@
 	}
 
 	.tree-item-children {
-		margin: 0px 0px 0px calc(12px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
+		margin: 0px 0px 0px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
 		border-left: 2px solid transparent;
 	}
 
 	.tree-item-self {
-		padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
+		padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
 		border: var(--border-size) solid transparent;
 		border-radius: var(--border-radius-small);
 		white-space: nowrap;
@@ -83,12 +84,12 @@
 
 /* #region  [Plugin - Core] Outline Vertical Lines */
 .pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-children {
-	margin: 2px 0px 2px calc(12px - calc(var(--file-explorer-vertical-lines-width) / 2) + 1px);
-	border-left: var(--outline-vertical-lines-width) solid var(--outline-vertical-lines-color);
+	margin: 2px 0px 2px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
+	border-left: var(--vertical-lines-width-outline) solid var(--vertical-lines-color-outline);
 }
 
 .pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-self {
-	padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
+	padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
 	border: var(--border-size) solid transparent;
 }
 /* #endregion */
