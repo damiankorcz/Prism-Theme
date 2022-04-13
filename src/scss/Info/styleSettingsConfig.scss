@@ -25,7 +25,7 @@ settings:
         collapsed: true
     -
         id: color-schemes-lt
-        title: Light Theme Color Scheme
+        title: Color Scheme
         type: class-select
         allowEmpty: false
         default: pt-color-scheme-default-lt
@@ -44,7 +44,7 @@ settings:
                 value: pt-color-scheme-pistachio-lt
     -
         id: accent-style-lt
-        title: Light Theme Accent Style
+        title: Accent Style
         description: Adjusts the style used by the Accented elements in the UI.
         type: class-select
         allowEmpty: false
@@ -64,8 +64,8 @@ settings:
                 value: pt-accent-style-borderandfilled-lt
     -
         id: light-accent-color-preset
-        title: Light Theme Accent Color Preset
-        description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
+        title: Accent Color Preset
+        description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and tune the color in the Custom Accent Color Tuning section below.
         type: class-select
         allowEmpty: false
         default: pt-accent-color-purple-lt
@@ -522,7 +522,7 @@ settings:
         collapsed: true
     -
         id: graph-note-color-presets-lt
-        title: Light Theme Graph Note Color Presets
+        title: Graph Note Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-grey-lt
@@ -562,7 +562,7 @@ settings:
                 value: pt-graph-note-grey-lt
     -
         id: color-custom-graph-note-lt
-        title: Light Theme Graph Note Custom Color
+        title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -570,7 +570,7 @@ settings:
         default: '#C4C7CA'
     -
         id: graph-fill-opacity-lt
-        title: Light Theme Graph Note Opacity
+        title: Graph Note Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -585,7 +585,7 @@ settings:
         collapsed: true
     -
         id: graph-note-focused-color-presets-lt
-        title: Light Theme Graph Note Focused Color Presets
+        title: Graph Note Focused Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-focused-accent-lt
@@ -628,7 +628,7 @@ settings:
                 value: pt-graph-note-focused-grey-lt
     -
         id: color-custom-graph-note-focused-lt
-        title: Light Theme Graph Note Focused Custom Color
+        title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -636,7 +636,7 @@ settings:
         default: '#8670FF'
     -
         id: graph-fill-focused-opacity-lt
-        title: Light Theme Graph Note Focused Opacity
+        title: Graph Note Focused Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -651,7 +651,7 @@ settings:
         collapsed: true
     -
         id: graph-tag-color-presets-lt
-        title: Light Theme Graph Tag Color Presets
+        title: Graph Tag Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-tag-blue-lt
@@ -691,7 +691,7 @@ settings:
                 value: pt-graph-tag-grey-lt
     -
         id: color-custom-graph-tag-lt
-        title: Light Theme Graph Tag Custom Color
+        title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -699,7 +699,7 @@ settings:
         default: '#619EFF'
     -
         id: graph-tag-opacity-lt
-        title: Light Theme Graph Tag Opacity
+        title: Graph Tag Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -714,7 +714,7 @@ settings:
         collapsed: true
     -
         id: graph-attachment-color-presets-lt
-        title: Light Theme Graph Attachment Color Presets
+        title: Graph Attachment Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-attachment-yellow-lt
@@ -754,7 +754,7 @@ settings:
                 value: pt-graph-attachment-grey-lt
     -
         id: color-custom-graph-attachment-lt
-        title: Light Theme Graph Attachment Custom Color
+        title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -762,7 +762,7 @@ settings:
         default: '#FDDB6D'
     -
         id: graph-attachment-opacity-lt
-        title: Light Theme Graph Attachment Opacity
+        title: Graph Attachment Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -777,7 +777,7 @@ settings:
         collapsed: true
     -
         id: graph-unresolved-color-presets-lt
-        title: Light Theme Graph Unresolved Color Presets
+        title: Graph Unresolved Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-unresolved-red-lt
@@ -817,7 +817,7 @@ settings:
                 value: pt-graph-unresolved-grey-lt
     -
         id: color-custom-graph-unresolved-lt
-        title: Light Theme Graph Unresolved Custom Color
+        title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -825,7 +825,7 @@ settings:
         default: '#FF7070'
     -
         id: graph-unresolved-opacity-lt
-        title: Light Theme Graph Unresolved Opacity
+        title: Graph Unresolved Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -840,7 +840,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-color-presets-lt
-        title: Light Theme Graph Highlight Color Presets
+        title: Graph Highlight Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-accent-lt
@@ -883,7 +883,7 @@ settings:
                 value: pt-graph-highlight-grey-lt
     -
         id: color-custom-graph-highlight-lt
-        title: Light Theme Graph Highlight Custom Color
+        title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -891,7 +891,7 @@ settings:
         default: '#8670FF'
     -
         id: graph-highlight-opacity-lt
-        title: Light Theme Graph Highlight Opacity
+        title: Graph Highlight Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -906,7 +906,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-line-color-presets-lt
-        title: Light Theme Graph Highlight Line Color Presets
+        title: Graph Highlight Line Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-line-accent-lt
@@ -949,7 +949,7 @@ settings:
                 value: pt-graph-highlight-line-grey-lt
     -
         id: color-custom-graph-highlight-line-lt
-        title: Light Theme Graph Highlight Line Custom Color
+        title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -957,7 +957,7 @@ settings:
         default: '#8670FF'
     -
         id: graph-highlight-line-opacity-lt
-        title: Light Theme Graph Highlight Line Opacity
+        title: Graph Highlight Line Opacity
         type: variable-number-slider
         default: 0.4
         min: 0
@@ -978,7 +978,7 @@ settings:
         collapsed: true
     -
         id: graph-note-color-presets-dt
-        title: Dark Theme Graph Note Color Presets
+        title: Graph Note Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-grey-dt
@@ -1018,7 +1018,7 @@ settings:
                 value: pt-graph-note-grey-dt
     -
         id: color-custom-graph-note-dt
-        title: Dark Theme Graph Note Custom Color
+        title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Note Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1026,7 +1026,7 @@ settings:
         default: '#878787'
     -
         id: graph-fill-opacity-dt
-        title: Dark Theme Graph Note Opacity
+        title: Graph Note Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -1041,7 +1041,7 @@ settings:
         collapsed: true
     -
         id: graph-note-focused-color-presets-dt
-        title: Dark Theme Graph Note Focused Color Presets
+        title: Graph Note Focused Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-focused-accent-dt
@@ -1084,7 +1084,7 @@ settings:
                 value: pt-graph-note-focused-grey-dt
     -
         id: color-custom-graph-note-focused-dt
-        title: Dark Theme Graph Note Focused Custom Color
+        title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1092,7 +1092,7 @@ settings:
         default: '#4C3AB6'
     -
         id: graph-fill-focused-opacity-dt
-        title: Dark Theme Graph Note Focused Opacity
+        title: Graph Note Focused Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -1107,7 +1107,7 @@ settings:
         collapsed: true
     -
         id: graph-tag-color-presets-dt
-        title: Dark Theme Graph Tag Color Presets
+        title: Graph Tag Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-tag-blue-dt
@@ -1147,7 +1147,7 @@ settings:
                 value: pt-graph-tag-grey-dt
     -
         id: color-custom-graph-tag-dt
-        title: Dark Theme Graph Tag Custom Color
+        title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Tag Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1155,7 +1155,7 @@ settings:
         default: '#3663AB'
     -
         id: graph-tag-opacity-dt
-        title: Dark Theme Graph Tag Opacity
+        title: Graph Tag Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -1170,7 +1170,7 @@ settings:
         collapsed: true
     -
         id: graph-attachment-color-presets-dt
-        title: Dark Theme Graph Attachment Color Presets
+        title: Graph Attachment Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-attachment-yellow-dt
@@ -1210,7 +1210,7 @@ settings:
                 value: pt-graph-attachment-grey-dt
     -
         id: color-custom-graph-attachment-dt
-        title: Dark Theme Graph Attachment Custom Color
+        title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Attachment Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1218,7 +1218,7 @@ settings:
         default: '#AF943C'
     -
         id: graph-attachment-opacity-dt
-        title: Dark Theme Graph Attachment Opacity
+        title: Graph Attachment Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -1233,7 +1233,7 @@ settings:
         collapsed: true
     -
         id: graph-unresolved-color-presets-dt
-        title: Dark Theme Graph Unresolved Color Presets
+        title: Graph Unresolved Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-unresolved-red-dt
@@ -1273,7 +1273,7 @@ settings:
                 value: pt-graph-unresolved-grey-dt
     -
         id: color-custom-graph-unresolved-dt
-        title: Dark Theme Graph Unresolved Custom Color
+        title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1281,7 +1281,7 @@ settings:
         default: '#B63A3A'
     -
         id: graph-unresolved-opacity-dt
-        title: Dark Theme Graph Unresolved Opacity
+        title: Graph Unresolved Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -1296,7 +1296,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-color-presets-dt
-        title: Dark Theme Graph Highlight Color Presets
+        title: Graph Highlight Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-accent-dt
@@ -1339,7 +1339,7 @@ settings:
                 value: pt-graph-highlight-grey-dt
     -
         id: color-custom-graph-highlight-dt
-        title: Dark Theme Graph Highlight Custom Color
+        title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1347,7 +1347,7 @@ settings:
         default: '#4C3AB6'
     -
         id: graph-highlight-opacity-dt
-        title: Dark Theme Graph Highlight Opacity
+        title: Graph Highlight Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -1362,7 +1362,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-line-color-presets-dt
-        title: Dark Theme Graph Highlight Line Color Presets
+        title: Graph Highlight Line Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-line-accent-dt
@@ -1405,7 +1405,7 @@ settings:
                 value: pt-graph-highlight-line-grey-dt
     -
         id: color-custom-graph-highlight-line-dt
-        title: Dark Theme Graph Highlight Line Custom Color
+        title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -1413,7 +1413,7 @@ settings:
         default: '#4C3AB6'
     -
         id: graph-highlight-line-opacity-dt
-        title: Dark Theme Graph Highlight Line Opacity
+        title: Graph Highlight Line Opacity
         type: variable-number-slider
         default: 0.4
         min: 0
@@ -1426,37 +1426,6 @@ settings:
         type: heading
         level: 1
         collapsed: true
-    -
-        id: fonts
-        title: Fonts
-        description: Define the fonts used around Obsidian. Available embedded fonts - "Source Sans 3" , "Source Serif 4" and "Fira Code".
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: font-family-ui
-        title: Font Family (UI)
-        description: Font used in the UI. 
-        type: variable-text
-        default: Source Sans 3, sans-serif
-    - 
-        id: font-family-edit
-        title: Font Family (Edit Modes)
-        description: Font used in the Edit/Source pane view mode.
-        type: variable-text
-        default: Source Sans 3, sans-serif
-    -
-        id: font-family-preview
-        title: Font Family (Preview Modes)
-        description: Font used in the Preview/Reading pane view mode.
-        type: variable-text
-        default: Source Sans 3, sans-serif
-    -
-        id: font-family-code
-        title: Font Family (Code)
-        description: Font used in Code elements.
-        type: variable-text
-        default: Fira Code, monospace
     -
         id: header-styles
         title: Headers
@@ -1601,7 +1570,7 @@ settings:
         collapsed: true
     -
         id: light-mark-highlight-style
-        title: Light Theme Mark Highlight Style
+        title: Mark Highlight Style
         type: class-select
         allowEmpty: false
         default: pt-highlight-style-borderandfilled-lt
@@ -1620,7 +1589,7 @@ settings:
                 value: pt-highlight-style-borderandfilled-lt
     -
         id: light-mark-highlight-text-color-preset
-        title: Light Theme Mark Highlight Text Color Preset
+        title: Mark Highlight Text Color Preset
         type: class-select
         allowEmpty: false
         default: pt-highlight-text-color-lt
@@ -1639,7 +1608,7 @@ settings:
         collapsed: true
     -
         id: dark-mark-highlight-style
-        title: Dark Theme Mark Highlight Style
+        title: Mark Highlight Style
         type: class-select
         allowEmpty: false
         default: pt-highlight-style-borderandfilled-dt
@@ -1658,7 +1627,7 @@ settings:
                 value: pt-highlight-style-borderandfilled-dt
     -
         id: dark-mark-highlight-text-color-preset
-        title: Dark Theme Mark Highlight Text Color Preset
+        title: Mark Highlight Text Color Preset
         type: class-select
         allowEmpty: false
         default: pt-highlight-text-color-dt
@@ -1847,7 +1816,7 @@ settings:
         default: true
         type: class-toggle
     - 
-        id: file-explorer-vertical-lines-width
+        id: vertical-lines-width-file-explorer
         title: File Explorer Vertical Lines Width (px)
         type: variable-number-slider
         format: 'px'
@@ -1925,7 +1894,7 @@ settings:
         default: true
         type: class-toggle
     - 
-        id: outline-vertical-lines-width
+        id: vertical-lines-width-outline
         title: Outline Vertical Lines Width (px)
         type: variable-number-slider
         format: 'px'
@@ -1974,13 +1943,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-titlebar-lt
-        title: Light Theme Solid Titlebar Background
+        title: Solid Titlebar Background
         description: Changes the Light Theme Titlebar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: titlebar-preset-lt
-        title: Light Theme Titlebar Preset
+        title: Titlebar Preset
         description: Choose between Default and Custom colors for the Light Theme Titlebar.
         default: pt-titlebar-default-lt
         type: class-select
@@ -1993,7 +1962,7 @@ settings:
                 value: pt-titlebar-custom-lt
     -
         id: titlebar-background-color-lt
-        title: Light Theme Titlebar Background Color
+        title: Titlebar Background Color
         description: Make sure you selected 'Custom' in Light Theme Titlebar Preset for this to work.
         type: variable-color
         format: hsl
@@ -2001,7 +1970,7 @@ settings:
         default: '#EBECEF'
     -   
         id: titlebar-text-color-lt
-        title: Light Theme Titlebar Text/Icons Color
+        title: Titlebar Text/Icons Color
         description: Choose the color used for the Light Theme Titlebar Text/Icons.
         default: pt-titlebar-text-dark-lt
         type: class-select
@@ -2023,13 +1992,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-titlebar-dt
-        title: Dark Theme Solid Titlebar Background
+        title: Solid Titlebar Background
         description: Changes the Dark Theme Titlebar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: titlebar-preset-dt
-        title: Dark Theme Titlebar Preset
+        title: Titlebar Preset
         description: Choose between Default and Custom colors for the Dark Theme Titlebar.
         default: pt-titlebar-default-dt
         level: 2
@@ -2043,7 +2012,7 @@ settings:
                 value: pt-titlebar-custom-dt
     -
         id: titlebar-background-color-dt
-        title: Dark Theme Titlebar Background Color
+        title: Titlebar Background Color
         description: Make sure you selected 'Custom' in Dark Theme Titlebar Preset for this to work.
         type: variable-color
         format: hsl
@@ -2051,7 +2020,7 @@ settings:
         default: '#2B2B2B'
     -
         id: titlebar-text-color-dt
-        title: Dark Theme Titlebar Text/Icons Color
+        title: Titlebar Text/Icons Color
         description: Choose the color used for the Dark Theme Titlebar Text/Icons.
         default: pt-titlebar-text-light-dt
         type: class-select
@@ -2125,13 +2094,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-status-bar-lt
-        title: Light Theme Solid Status Bar Background
+        title: Solid Status Bar Background
         description: Changes the Light Theme Status Bar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: status-bar-preset-lt
-        title: Light Theme Status Bar Preset
+        title: Status Bar Preset
         description: Choose between Default and Custom colors for the Light Theme Status Bar.
         default: pt-status-bar-default-lt
         type: class-select
@@ -2144,7 +2113,7 @@ settings:
                 value: pt-status-bar-custom-lt
     -
         id: status-bar-background-color-lt
-        title: Light Theme Status Bar Background Color
+        title: Status Bar Background Color
         description: Make sure you selected 'Custom' in Light Theme Status Bar Preset for this to work.
         type: variable-color
         format: hsl
@@ -2152,7 +2121,7 @@ settings:
         default: '#EBECEF'
     -
         id: status-bar-text-color-lt
-        title: Light Theme Status Bar Text/Icons Color
+        title: Status Bar Text/Icons Color
         description: Choose the color used for the Light Theme Status Bar Text/Icons.
         default: pt-status-bar-text-dark-lt
         type: class-select
@@ -2174,13 +2143,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-status-bar-dt
-        title: Dark Theme Solid Status Bar Background
+        title: Solid Status Bar Background
         description: Changes the Dark Theme Status Bar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: status-bar-preset-dt
-        title: Dark Theme Status Bar Preset
+        title: Status Bar Preset
         description: Choose between Default and Custom colors for the Dark Theme Status Bar.
         default: pt-status-bar-default-dt
         level: 2
@@ -2194,7 +2163,7 @@ settings:
                 value: pt-status-bar-custom-dt
     -
         id: status-bar-background-color-dt
-        title: Dark Theme Status Bar Background Color
+        title: Status Bar Background Color
         description: Make sure you selected 'Custom' in Dark Theme Status Bar Preset for this to work.
         type: variable-color
         format: hsl
@@ -2202,7 +2171,7 @@ settings:
         default: '#2B2B2B'
     - 
         id: status-bar-text-color-dt
-        title: Dark Theme Status Bar Text/Icons Color
+        title: Status Bar Text/Icons Color
         description: Choose the color used for the Dark Theme Status Bar Text/Icons.
         default: pt-status-bar-text-light-dt
         type: class-select
@@ -2273,7 +2242,7 @@ settings:
         description: Change the Light Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-dots-plain-lt
+        default: pt-kanban-background-grid-plain-lt
         options:
             - 
                 label: Solid Color
@@ -2299,7 +2268,7 @@ settings:
         description: Change the Dark Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-dots-plain-dt
+        default: pt-kanban-background-grid-plain-dt
         options:
             - 
                 label: Solid Color

@@ -50,87 +50,17 @@
   font-display: swap;
 }
 /* #endregion */
-/*
-   ==========================================================================
-   Main Fonts
-   ==========================================================================
-*/
-/* #region [Font] UI */
-html,
-body,
-input[type=text],
-input[type=search],
-input[type=email],
-input[type=password],
-input[type=number],
-textarea,
-button,
-.setting-hotkey,
-.suggestion-hotkey,
-.view-header-title {
-  font-family: var(--font-family-ui);
-}
-
-/* #endregion */
-/* #region [Font] Edit */
-.workspace-leaf-content[data-mode=source],
-.markdown-source-view.mod-cm6 .cm-scroller,
-.CodeMirror,
-.cm-active .cm-line,
-.cm-s-obsidian .cm-formatting-hashtag {
-  font-family: var(--font-family-edit);
-}
-
-/* #endregion */
-/* #region [Font] Preview */
-.workspace-leaf-content[data-mode=preview] {
-  font-family: var(--font-family-preview);
-}
-
-.kanban-plugin .kanban-plugin__item p {
-  font-family: var(--font-family-preview) !important;
-}
-
-/* #endregion */
-/* #region [Font] Code */
-.cm-s-obsidian .HyperMD-table-row,
-.cm-s-obsidian .HyperMD-codeblock,
-.cm-s-obsidian span.cm-inline-code,
-.markdown-preview-view code,
-.markdown-source-view code,
-.HyperMD-codeblock,
-code {
-  font-family: var(--font-family-code) !important;
-}
-
-/* #endregion */
-/* #region  [Font] Link */
-a {
-  color: var(--interactive-accent-text);
-}
-a:hover {
-  color: var(--interactive-accent-hover);
-}
-
-/* #endregion */
 /* #region  [Variables] Root */
-body {
+:root {
   /* General Settings */
   --border-size: 2px;
   --blur-intensity: 8px;
-  --file-explorer-vertical-lines-width: 2px;
+  --vertical-lines-width-file-explorer: 2px;
   --style-settings-vertical-lines-width: 2px;
   /* Scrollbar Settings */
   --scroll-bar-border-radius: 0px;
   --scroll-button-border-radius: 0px;
   /* Style Settings Accessible Default Properties */
-  /* Fonts */
-  --default-font: "Source Sans 3", sans-serif;
-  --font-family-ui: "Signika", sans-serif;
-  --font-family-edit: "Source Sans 3", sans-serif;
-  --font-family-preview: "Source Sans 3", sans-serif;
-  --font-family-code: "Fira Code", monospace;
-  --font-monospace: "Fira Code", monospace;
   /* Graph View - Light Theme */
   --graph-fill-opacity-lt: 1;
   --graph-fill-focused-opacity-lt: 1;
@@ -168,8 +98,8 @@ body {
   /* Custom Vault Banner */
   --custom-vault-banner-icon-url: url(https://img.icons8.com/office/40/000000/book-shelf.png);
   /* Vertical Line Widths */
-  --file-explorer-vertical-lines-width: 2px;
-  --outline-vertical-lines-width: 2px;
+  --vertical-lines-width-file-explorer: 2px;
+  --vertical-lines-width-outline: 2px;
   /* Scrollbar */
   --scroll-bar-border-radius: 0px;
   --scroll-bar-size: 8px;
@@ -183,82 +113,7 @@ body {
   --h4-font-size: 1.4em;
   --h5-font-size: 1.2em;
   --h6-font-size: 1em;
-  /* Header Text */
-  --h1-text-opacity-lt: 100%;
-  --h2-text-opacity-lt: 100%;
-  --h3-text-opacity-lt: 100%;
-  --h4-text-opacity-lt: 100%;
-  --h5-text-opacity-lt: 100%;
-  --h6-text-opacity-lt: 100%;
-  --h1-text-opacity-dt: 100%;
-  --h2-text-opacity-dt: 100%;
-  --h3-text-opacity-dt: 100%;
-  --h4-text-opacity-dt: 100%;
-  --h5-text-opacity-dt: 100%;
-  --h6-text-opacity-dt: 100%;
-  /* Header Background */
-  --h1-background-opacity-lt: 100%;
-  --h2-background-opacity-lt: 100%;
-  --h3-background-opacity-lt: 100%;
-  --h4-background-opacity-lt: 100%;
-  --h5-background-opacity-lt: 100%;
-  --h6-background-opacity-lt: 100%;
-  --h1-background-opacity-dt: 100%;
-  --h2-background-opacity-dt: 100%;
-  --h3-background-opacity-dt: 100%;
-  --h4-background-opacity-dt: 100%;
-  --h5-background-opacity-dt: 100%;
-  --h6-background-opacity-dt: 100%;
-  /* Header Border */
-  --h1-border-opacity-lt: 100%;
-  --h2-border-opacity-lt: 100%;
-  --h3-border-opacity-lt: 100%;
-  --h4-border-opacity-lt: 100%;
-  --h5-border-opacity-lt: 100%;
-  --h6-border-opacity-lt: 100%;
-  --h1-border-opacity-dt: 100%;
-  --h2-border-opacity-dt: 100%;
-  --h3-border-opacity-dt: 100%;
-  --h4-border-opacity-dt: 100%;
-  --h5-border-opacity-dt: 100%;
-  --h6-border-opacity-dt: 100%;
-  --h1-border-width-lt: 2px;
-  --h2-border-width-lt: 2px;
-  --h3-border-width-lt: 2px;
-  --h4-border-width-lt: 2px;
-  --h5-border-width-lt: 2px;
-  --h6-border-width-lt: 2px;
-  --h1-border-width-dt: 2px;
-  --h2-border-width-dt: 2px;
-  --h3-border-width-dt: 2px;
-  --h4-border-width-dt: 2px;
-  --h5-border-width-dt: 2px;
-  --h6-border-width-dt: 2px;
-  /* Header Underline */
-  --h1-underline-thickness-lt: 4px;
-  --h2-underline-thickness-lt: 4px;
-  --h3-underline-thickness-lt: 4px;
-  --h4-underline-thickness-lt: 4px;
-  --h5-underline-thickness-lt: 4px;
-  --h6-underline-thickness-lt: 4px;
-  --h1-underline-thickness-dt: 4px;
-  --h2-underline-thickness-dt: 4px;
-  --h3-underline-thickness-dt: 4px;
-  --h4-underline-thickness-dt: 4px;
-  --h5-underline-thickness-dt: 4px;
-  --h6-underline-thickness-dt: 4px;
-  --h1-underline-opacity-lt: 100%;
-  --h2-underline-opacity-lt: 100%;
-  --h3-underline-opacity-lt: 100%;
-  --h4-underline-opacity-lt: 100%;
-  --h5-underline-opacity-lt: 100%;
-  --h6-underline-opacity-lt: 100%;
-  --h1-underline-opacity-dt: 100%;
-  --h2-underline-opacity-dt: 100%;
-  --h3-underline-opacity-dt: 100%;
-  --h4-underline-opacity-dt: 100%;
-  --h5-underline-opacity-dt: 100%;
-  --h6-underline-opacity-dt: 100%;
+  /* Shared Color Variables */
   --mark-highlight-base: var(--color-yellow-base);
   /* Accent Colors */
   --color-accent-lt: #c7bdff;
@@ -276,24 +131,6 @@ body {
   --color-custom-graph-unresolved-lt: #ff7070;
   --color-custom-graph-highlight-lt: #8670ff;
   --color-custom-graph-highlight-line-lt: #8670ff;
-  --h1-text-color-custom-lt: hsl(0, 0%, 20%);
-  --h2-text-color-custom-lt: hsl(0, 0%, 20%);
-  --h3-text-color-custom-lt: hsl(0, 0%, 20%);
-  --h4-text-color-custom-lt: hsl(0, 0%, 20%);
-  --h5-text-color-custom-lt: hsl(0, 0%, 20%);
-  --h6-text-color-custom-lt: hsl(0, 0%, 20%);
-  --h1-background-color-custom-lt: hsl(0, 0%, 20%);
-  --h2-background-color-custom-lt: hsl(0, 0%, 20%);
-  --h3-background-color-custom-lt: hsl(0, 0%, 20%);
-  --h4-background-color-custom-lt: hsl(0, 0%, 20%);
-  --h5-background-color-custom-lt: hsl(0, 0%, 20%);
-  --h6-background-color-custom-lt: hsl(0, 0%, 20%);
-  --h1-border-color-custom-lt: hsl(0, 0%, 20%);
-  --h2-border-color-custom-lt: hsl(0, 0%, 20%);
-  --h3-border-color-custom-lt: hsl(0, 0%, 20%);
-  --h4-border-color-custom-lt: hsl(0, 0%, 20%);
-  --h5-border-color-custom-lt: hsl(0, 0%, 20%);
-  --h6-border-color-custom-lt: hsl(0, 0%, 20%);
   /* Accent Colors */
   --color-accent-dt: #8c7fd7;
   /* Solid Titlebar Custom Colors */
@@ -310,917 +147,794 @@ body {
   --color-custom-graph-unresolved-dt: #b63a3a;
   --color-custom-graph-highlight-dt: #4c3ab6;
   --color-custom-graph-highlight-line-dt: #4c3ab6;
-  --h1-text-color-custom-dt: hsl(0, 0%, 85%);
-  --h2-text-color-custom-dt: hsl(0, 0%, 85%);
-  --h3-text-color-custom-dt: hsl(0, 0%, 85%);
-  --h4-text-color-custom-dt: hsl(0, 0%, 85%);
-  --h5-text-color-custom-dt: hsl(0, 0%, 85%);
-  --h6-text-color-custom-dt: hsl(0, 0%, 85%);
-  --h1-background-color-custom-dt: hsl(0, 0%, 85%);
-  --h2-background-color-custom-dt: hsl(0, 0%, 85%);
-  --h3-background-color-custom-dt: hsl(0, 0%, 85%);
-  --h4-background-color-custom-dt: hsl(0, 0%, 85%);
-  --h5-background-color-custom-dt: hsl(0, 0%, 85%);
-  --h6-background-color-custom-dt: hsl(0, 0%, 85%);
-  --h1-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-  --h2-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-  --h3-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-  --h4-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-  --h5-border-color-custom-dt: hsla(0, 0%, 20%, 1);
-  --h6-border-color-custom-dt: hsla(0, 0%, 20%, 1);
+}
+
+body {
+  /* Theme Font Overwrites */
+  --font-interface-theme: "Signika", sans-serif;
+  --font-text-theme: "Source Sans 3", sans-serif;
+  --font-monospace-theme: "Fira Code", monospace;
+}
+
+.theme-light {
+  --window-border: var(--background-secondary-alt);
+  --page-background-color: var(--background-primary);
+  --table-border-color: var(--background-secondary-alt);
+  --text-selection: var(--background-secondary);
+}
+.theme-light.pt-highlight-text-light-lt {
+  --highlight-text-normal: var(--background-primary);
+}
+.theme-light.pt-highlight-text-dark-lt {
+  --highlight-text-normal: var(--text-normal);
+}
+.theme-light.pt-highlight-text-accent-lt {
+  --highlight-text-normal: var(--interactive-accent-text);
+}
+.theme-light.pt-highlight-text-custom-lt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
+}
+
+.theme-dark {
+  --window-border: var(--background-primary);
+  --page-background-color: var(--background-secondary);
+  --table-border-color: var(--background-primary-alt);
+  --text-selection: var(--background-primary);
+}
+.theme-dark.pt-highlight-text-light-dt {
+  --highlight-text-normal: var(--text-normal);
+}
+.theme-dark.pt-highlight-text-dark-dt {
+  --highlight-text-normal: var(--background-primary);
+}
+.theme-dark.pt-highlight-text-accent-dt {
+  --highlight-text-normal: var(--interactive-accent-text);
+}
+.theme-dark.pt-highlight-text-custom-dt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 
 .theme-light,
 .theme-dark {
   /* Base Colors */
-  --color-red-base: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened));
-  --color-orange-base: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened));
-  --color-yellow-base: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened));
-  --color-green-base: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened));
-  --color-mint-base: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened));
-  --color-aqua-base: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened));
-  --color-blue-base: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened));
-  --color-purple-base: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened));
-  --color-pink-base: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened));
-  --color-grey-base: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened));
-  /* Border Colors */
-  --color-red-dark: hsl(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened2x));
-  --color-orange-dark: hsl(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened2x));
-  --color-yellow-dark: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened2x));
-  --color-green-dark: hsl(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened2x));
-  --color-mint-dark: hsl(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened2x));
-  --color-aqua-dark: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened2x));
-  --color-blue-dark: hsl(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened2x));
-  --color-purple-dark: hsl(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened2x));
-  --color-pink-dark: hsl(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened2x));
-  --color-grey-dark: hsl(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened2x));
+  --color-red-base: hsl(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-base-l));
+  --color-orange-base: hsl(var(--color-orange-base-h), var(--color-orange-base-s), var(--color-orange-base-l));
+  --color-yellow-base: hsl(var(--color-yellow-base-h), var(--color-yellow-base-s), var(--color-yellow-base-l));
+  --color-green-base: hsl(var(--color-green-base-h), var(--color-green-base-s), var(--color-green-base-l));
+  --color-mint-base: hsl(var(--color-mint-base-h), var(--color-mint-base-s), var(--color-mint-base-l));
+  --color-aqua-base: hsl(var(--color-aqua-base-h), var(--color-aqua-base-s), var(--color-aqua-base-l));
+  --color-blue-base: hsl(var(--color-blue-base-h), var(--color-blue-base-s), var(--color-blue-base-l));
+  --color-purple-base: hsl(var(--color-purple-base-h), var(--color-purple-base-s), var(--color-purple-base-l));
+  --color-pink-base: hsl(var(--color-pink-base-h), var(--color-pink-base-s), var(--color-pink-base-l));
+  --color-grey-base: hsl(var(--color-grey-base-h), var(--color-grey-base-s), var(--color-grey-base-l));
+  /* Tint Colors */
+  --color-red-dark: hsl(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-tint-l));
+  --color-orange-dark: hsl(var(--color-orange-base-h), var(--color-orange-base-s), var(--color-orange-tint-l));
+  --color-yellow-dark: hsl(var(--color-yellow-base-h), var(--color-yellow-base-s), var(--color-yellow-tint-l));
+  --color-green-dark: hsl(var(--color-green-base-h), var(--color-green-base-s), var(--color-green-tint-l));
+  --color-mint-dark: hsl(var(--color-mint-base-h), var(--color-mint-base-s), var(--color-mint-tint-l));
+  --color-aqua-dark: hsl(var(--color-aqua-base-h), var(--color-aqua-base-s), var(--color-aqua-tint-l));
+  --color-blue-dark: hsl(var(--color-blue-base-h), var(--color-blue-base-s), var(--color-blue-tint-l));
+  --color-purple-dark: hsl(var(--color-purple-base-h), var(--color-purple-base-s), var(--color-purple-tint-l));
+  --color-pink-dark: hsl(var(--color-pink-base-h), var(--color-pink-base-s), var(--color-pink-tint-l));
+  --color-grey-dark: hsl(var(--color-grey-base-h), var(--color-grey-base-s), var(--color-grey-tint-l));
   /* Text Colors */
-  --color-red-text: hsl(var(--color-red-h), var(--color-red-s-desaturated-text), var(--color-red-l-darkened-text));
-  --color-orange-text: hsl(var(--color-orange-h), var(--color-orange-s-desaturated-text), var(--color-orange-l-darkened-text));
-  --color-yellow-text: hsl(var(--color-yellow-h), var(--color-yellow-s-desaturated-text), var(--color-yellow-l-darkened-text));
-  --color-green-text: hsl(var(--color-green-h), var(--color-green-s-desaturated-text), var(--color-green-l-darkened-text));
-  --color-mint-text: hsl(var(--color-mint-h), var(--color-mint-s-desaturated-text), var(--color-mint-l-darkened-text));
-  --color-aqua-text: hsl(var(--color-aqua-h), var(--color-aqua-s-desaturated-text), var(--color-aqua-l-darkened-text));
-  --color-blue-text: hsl(var(--color-blue-h), var(--color-blue-s-desaturated-text), var(--color-blue-l-darkened-text));
-  --color-purple-text: hsl(var(--color-purple-h), var(--color-purple-s-desaturated-text), var(--color-purple-l-darkened-text));
-  --color-pink-text: hsl(var(--color-pink-h), var(--color-pink-s-desaturated-text), var(--color-pink-l-darkened-text));
-  --color-grey-text: hsl(var(--color-grey-h), var(--color-grey-s-desaturated-text), var(--color-grey-l-darkened-text));
+  --color-red-text: hsl(var(--color-red-base-h), var(--color-red-text-s), var(--color-red-text-l));
+  --color-orange-text: hsl(var(--color-orange-base-h), var(--color-orange-text-s), var(--color-orange-text-l));
+  --color-yellow-text: hsl(var(--color-yellow-base-h), var(--color-yellow-text-s), var(--color-yellow-text-l));
+  --color-green-text: hsl(var(--color-green-base-h), var(--color-green-text-s), var(--color-green-text-l));
+  --color-mint-text: hsl(var(--color-mint-base-h), var(--color-mint-text-s), var(--color-mint-text-l));
+  --color-aqua-text: hsl(var(--color-aqua-base-h), var(--color-aqua-text-s), var(--color-aqua-text-l));
+  --color-blue-text: hsl(var(--color-blue-base-h), var(--color-blue-text-s), var(--color-blue-text-l));
+  --color-purple-text: hsl(var(--color-purple-base-h), var(--color-purple-text-s), var(--color-purple-text-l));
+  --color-pink-text: hsl(var(--color-pink-base-h), var(--color-pink-text-s), var(--color-pink-text-l));
+  --color-grey-text: hsl(var(--color-grey-base-h), var(--color-grey-text-s), var(--color-grey-text-l));
+  --color-accent-base-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-base-lt));
+  --color-accent-dark-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-dark-lt));
+  --color-accent-text-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-text-lt));
+  /* Got this from @pseudometa. Thanks again! */
+  --hue-background-lt: linear-gradient(
+  	to right,
+  	hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(30 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(60 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(90 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(120 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(150 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(180 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(210 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(240 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(270 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(300 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(330 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+  	hsl(360 var(--color-accent-s-lt) var(--color-accent-l-base-lt))
+  );
+  --saturation-background-lt: linear-gradient(
+  	to right,
+  	hsl(var(--color-accent-h-lt), 0%, var(--color-accent-l-base-lt)),
+  	hsl(var(--color-accent-h-lt), 50%, var(--color-accent-l-base-lt)),
+  	hsl(var(--color-accent-h-lt), 100%, var(--color-accent-l-base-lt))
+  );
+  --lightness-background-lt: linear-gradient(
+  	to right,
+  	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 0%),
+  	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 50%),
+  	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 100%)
+  );
+  --color-accent-base-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-base-dt));
+  --color-accent-dark-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-dark-dt));
+  --color-accent-text-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-text-dt));
+  /* Got this from @pseudometa. Thanks again! */
+  --hue-background-dt: linear-gradient(
+  	to right,
+  	hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(30 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(60 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(90 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(120 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(150 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(180 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(210 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(240 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(270 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(300 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(330 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+  	hsl(360 var(--color-accent-s-dt) var(--color-accent-l-base-dt))
+  );
+  --saturation-background-dt: linear-gradient(
+  	to right,
+  	hsl(var(--color-accent-h-dt), 0%, var(--color-accent-l-base-dt)),
+  	hsl(var(--color-accent-h-dt), 50%, var(--color-accent-l-base-dt)),
+  	hsl(var(--color-accent-h-dt), 100%, var(--color-accent-l-base-dt))
+  );
+  --lightness-background-dt: linear-gradient(
+  	to right,
+  	hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 0%),
+  	hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 50%),
+  	hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 100%)
+  );
+  --text-error: var(--color-red-dark);
+  --background-modifier-error: var(--color-red-dark);
+  --background-modifier-border: var(--table-border-color);
+  --scroll-button-background-color: var(--background-secondary);
+  --highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
+  --highlight-text-accent-custom-dt: hsl(0, 0%, 0%);
 }
-
-.theme-light {
-  --color-accent-base: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
-  --color-accent-dark: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened2x));
-  --color-accent-text: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
-}
-
-.theme-dark {
-  --color-accent-base: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-dt-l));
-  --color-accent-dark: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened2x));
-  --color-accent-text: hsl(var(--color-accent-dt-h), var(--color-accent-dt-s), var(--color-accent-l-darkened-text));
+.theme-light.pt-disable-blur,
+.theme-dark.pt-disable-blur {
+  --background-secondary-blur: var(--background-secondary);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Default] Base Colors */
 body.theme-light.pt-color-scheme-default-lt,
 body.theme-dark.pt-color-scheme-default-dt {
-  --color-red-h: 0;
-  --color-orange-h: 30;
-  --color-yellow-h: 45;
-  --color-green-h: 95;
-  --color-mint-h: 160;
-  --color-aqua-h: 185;
-  --color-blue-h: 217;
-  --color-purple-h: 257;
-  --color-pink-h: 300;
-  --color-grey-h: 0;
+  --color-red-base-h: 0;
+  --color-orange-base-h: 30;
+  --color-yellow-base-h: 45;
+  --color-green-base-h: 95;
+  --color-mint-base-h: 160;
+  --color-aqua-base-h: 185;
+  --color-blue-base-h: 217;
+  --color-purple-base-h: 257;
+  --color-pink-base-h: 300;
+  --color-grey-base-h: 0;
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Default] Light Theme */
 .theme-light.pt-color-scheme-default-lt {
-  --color-red-s-desaturated: 84%;
-  --color-orange-s-desaturated: 72%;
-  --color-yellow-s-desaturated: 74%;
-  --color-green-s-desaturated: 52%;
-  --color-mint-s-desaturated: 57%;
-  --color-aqua-s-desaturated: 67%;
-  --color-blue-s-desaturated: 66%;
-  --color-purple-s-desaturated: 82%;
-  --color-pink-s-desaturated: 66%;
-  --color-grey-s-desaturated: 0%;
-  --color-red-l-darkened: 88%;
-  --color-orange-l-darkened: 82%;
-  --color-yellow-l-darkened: 83%;
-  --color-green-l-darkened: 83%;
-  --color-mint-l-darkened: 83%;
-  --color-aqua-l-darkened: 82%;
-  --color-blue-l-darkened: 86%;
-  --color-purple-l-darkened: 91%;
-  --color-pink-l-darkened: 90%;
-  --color-grey-l-darkened: 90%;
-  --color-red-l-darkened2x: 75%;
-  --color-orange-l-darkened2x: 60%;
-  --color-yellow-l-darkened2x: 49%;
-  --color-green-l-darkened2x: 57%;
-  --color-mint-l-darkened2x: 60%;
-  --color-aqua-l-darkened2x: 58%;
-  --color-blue-l-darkened2x: 72%;
-  --color-purple-l-darkened2x: 78%;
-  --color-pink-l-darkened2x: 73%;
-  --color-grey-l-darkened2x: 73%;
-  --color-red-s-desaturated-text: 70%;
-  --color-orange-s-desaturated-text: 88%;
-  --color-yellow-s-desaturated-text: 88%;
-  --color-green-s-desaturated-text: 75%;
-  --color-mint-s-desaturated-text: 88%;
-  --color-aqua-s-desaturated-text: 75%;
-  --color-blue-s-desaturated-text: 70%;
-  --color-purple-s-desaturated-text: 80%;
-  --color-pink-s-desaturated-text: 70%;
-  --color-grey-s-desaturated-text: 0%;
-  --color-red-l-darkened-text: 58%;
-  --color-orange-l-darkened-text: 41%;
-  --color-yellow-l-darkened-text: 35%;
-  --color-green-l-darkened-text: 34%;
-  --color-mint-l-darkened-text: 32%;
-  --color-aqua-l-darkened-text: 37%;
-  --color-blue-l-darkened-text: 53%;
-  --color-purple-l-darkened-text: 61%;
-  --color-pink-l-darkened-text: 47%;
-  --color-grey-l-darkened-text: 48%;
-  /* Light Theme Main Obsidian Colors */
-  --text-normal: hsl(0, 0%, 20%);
+  --color-red-base-s: 84%;
+  --color-orange-base-s: 72%;
+  --color-yellow-base-s: 74%;
+  --color-green-base-s: 52%;
+  --color-mint-base-s: 57%;
+  --color-aqua-base-s: 67%;
+  --color-blue-base-s: 66%;
+  --color-purple-base-s: 82%;
+  --color-pink-base-s: 66%;
+  --color-grey-base-s: 0%;
+  --color-red-base-l: 88%;
+  --color-orange-base-l: 82%;
+  --color-yellow-base-l: 83%;
+  --color-green-base-l: 83%;
+  --color-mint-base-l: 83%;
+  --color-aqua-base-l: 82%;
+  --color-blue-base-l: 86%;
+  --color-purple-base-l: 91%;
+  --color-pink-base-l: 90%;
+  --color-grey-base-l: 85%;
+  --color-red-tint-l: 75%;
+  --color-orange-tint-l: 60%;
+  --color-yellow-tint-l: 49%;
+  --color-green-tint-l: 57%;
+  --color-mint-tint-l: 60%;
+  --color-aqua-tint-l: 58%;
+  --color-blue-tint-l: 72%;
+  --color-purple-tint-l: 78%;
+  --color-pink-tint-l: 73%;
+  --color-grey-tint-l: 68%;
+  --color-red-text-s: 70%;
+  --color-orange-text-s: 88%;
+  --color-yellow-text-s: 88%;
+  --color-green-text-s: 75%;
+  --color-mint-text-s: 88%;
+  --color-aqua-text-s: 75%;
+  --color-blue-text-s: 70%;
+  --color-purple-text-s: 80%;
+  --color-pink-text-s: 70%;
+  --color-grey-text-s: 0%;
+  --color-red-text-l: 58%;
+  --color-orange-text-l: 41%;
+  --color-yellow-text-l: 35%;
+  --color-green-text-l: 34%;
+  --color-mint-text-l: 32%;
+  --color-aqua-text-l: 37%;
+  --color-blue-text-l: 53%;
+  --color-purple-text-l: 61%;
+  --color-pink-text-l: 47%;
+  --color-grey-text-l: 42%;
+  --text-normal: hsl(0, 0%, 25%);
   --text-muted: hsl(0, 0%, 40%);
   --text-faint: hsl(0, 0%, 50%);
-  --text-selection: var(--background-secondary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(0, 0%, 20%);
-  --highlight-text-dark: hsl(0, 0%, 20%);
-  --highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
   --background-primary: hsl(0, 0%, 100%);
   --background-primary-alt: hsl(0, 0%, 97%);
-  --background-secondary: hsl(0, 0%, 96.5%);
-  --background-secondary-blur: hsl(0, 0%, 96.5%, 0.75);
-  --background-secondary-alt: hsl(0, 0%, 86%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(0, 0%, 94.5%);
-  --page-background-color: var(--background-primary);
+  --background-secondary: hsl(0, 0%, 94.5%);
+  --background-secondary-blur: hsl(0, 0%, 94.5%, 0.75);
+  --background-secondary-alt: hsl(0, 0%, 83%);
+  --background-tertiary: hsl(0, 0%, 96.5%);
   --background-color-lt: hsl(0, 0%, 88%);
-  --file-explorer-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
-  --style-settings-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
-  --outline-vertical-lines-color: hsla(0, 0%, 60%, 0.3);
-  --window-border: var(--background-secondary-alt);
+  --vertical-lines-color-file-explorer: hsla(0, 0%, 60%, 0.3);
+  --vertical-lines-color-outline: hsla(0, 0%, 60%, 0.3);
+  --vertical-lines-color-style-settings: hsla(0, 0%, 50%, 0.3);
   --drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-popup: rgba(0, 0, 0, 0.018) 0px 1px 2px, rgba(0, 0, 0, 0.018) 0px 2px 4px, rgba(0, 0, 0, 0.018) 0px 4px 8px, rgba(0, 0, 0, 0.09) 0px 8px 12px;
+  --drop-shadow-popup: hsla(0, 0%, 0%, 0.01) 0px 1px 2px, hsla(0, 0%, 0%, 0.01) 0px 2px 4px, hsla(0, 0%, 0%, 0.01) 0px 4px 8px, hsla(0, 0%, 0%, 0.01) 0px 8px 16px;
   --scroll-bar-thumb: hsla(0, 0%, 83%, 1);
-  --table-border-color: var(--background-secondary-alt);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-light.pt-color-scheme-default-lt.pt-disable-blur {
-  --background-secondary-blur: hsl(220, 13%, 95%, 1);
-}
-.theme-light.pt-color-scheme-default-lt.pt-highlight-text-light-lt {
-  --highlight-text-normal: hsl(0, 0%, 100%);
-}
-.theme-light.pt-color-scheme-default-lt.pt-highlight-text-accent-lt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-light.pt-color-scheme-default-lt.pt-highlight-text-custom-lt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Default] Dark Theme */
 .theme-dark.pt-color-scheme-default-dt {
-  --color-red-s-desaturated: 48%;
-  --color-orange-s-desaturated: 56%;
-  --color-yellow-s-desaturated: 53%;
-  --color-green-s-desaturated: 38%;
-  --color-mint-s-desaturated: 38%;
-  --color-aqua-s-desaturated: 38%;
-  --color-blue-s-desaturated: 41%;
-  --color-purple-s-desaturated: 38%;
-  --color-pink-s-desaturated: 38%;
-  --color-grey-s-desaturated: 0%;
-  --color-red-l-darkened: 27%;
-  --color-orange-l-darkened: 27%;
-  --color-yellow-l-darkened: 26%;
-  --color-green-l-darkened: 25%;
-  --color-mint-l-darkened: 25%;
-  --color-aqua-l-darkened: 25%;
-  --color-blue-l-darkened: 27%;
-  --color-purple-l-darkened: 25%;
-  --color-pink-l-darkened: 22%;
-  --color-grey-l-darkened: 28%;
-  --color-red-l-darkened2x: 48%;
-  --color-orange-l-darkened2x: 43%;
-  --color-yellow-l-darkened2x: 43%;
-  --color-green-l-darkened2x: 42%;
-  --color-mint-l-darkened2x: 43%;
-  --color-aqua-l-darkened2x: 44%;
-  --color-blue-l-darkened2x: 47%;
-  --color-purple-l-darkened2x: 51%;
-  --color-pink-l-darkened2x: 45%;
-  --color-grey-l-darkened2x: 49%;
-  --color-red-s-desaturated-text: 78%;
-  --color-orange-s-desaturated-text: 72%;
-  --color-yellow-s-desaturated-text: 68%;
-  --color-green-s-desaturated-text: 52%;
-  --color-mint-s-desaturated-text: 64%;
-  --color-aqua-s-desaturated-text: 62%;
-  --color-blue-s-desaturated-text: 64%;
-  --color-purple-s-desaturated-text: 64%;
-  --color-pink-s-desaturated-text: 62%;
-  --color-grey-s-desaturated-text: 0%;
-  --color-red-l-darkened-text: 74%;
-  --color-orange-l-darkened-text: 67%;
-  --color-yellow-l-darkened-text: 62%;
-  --color-green-l-darkened-text: 56%;
-  --color-mint-l-darkened-text: 59%;
-  --color-aqua-l-darkened-text: 60%;
-  --color-blue-l-darkened-text: 71%;
-  --color-purple-l-darkened-text: 73%;
-  --color-pink-l-darkened-text: 71%;
-  --color-grey-l-darkened-text: 70%;
-  /* Dark Theme Main Obsidian Colors */
+  --color-red-base-s: 48%;
+  --color-orange-base-s: 56%;
+  --color-yellow-base-s: 53%;
+  --color-green-base-s: 38%;
+  --color-mint-base-s: 38%;
+  --color-aqua-base-s: 38%;
+  --color-blue-base-s: 41%;
+  --color-purple-base-s: 38%;
+  --color-pink-base-s: 38%;
+  --color-grey-base-s: 0%;
+  --color-red-base-l: 24%;
+  --color-orange-base-l: 24%;
+  --color-yellow-base-l: 23%;
+  --color-green-base-l: 22%;
+  --color-mint-base-l: 22%;
+  --color-aqua-base-l: 22%;
+  --color-blue-base-l: 24%;
+  --color-purple-base-l: 22%;
+  --color-pink-base-l: 19%;
+  --color-grey-base-l: 25%;
+  --color-red-tint-l: 45%;
+  --color-orange-tint-l: 40%;
+  --color-yellow-tint-l: 40%;
+  --color-green-tint-l: 39%;
+  --color-mint-tint-l: 40%;
+  --color-aqua-tint-l: 41%;
+  --color-blue-tint-l: 44%;
+  --color-purple-tint-l: 48%;
+  --color-pink-tint-l: 42%;
+  --color-grey-tint-l: 46%;
+  --color-red-text-s: 78%;
+  --color-orange-text-s: 72%;
+  --color-yellow-text-s: 68%;
+  --color-green-text-s: 52%;
+  --color-mint-text-s: 64%;
+  --color-aqua-text-s: 62%;
+  --color-blue-text-s: 64%;
+  --color-purple-text-s: 64%;
+  --color-pink-text-s: 62%;
+  --color-grey-text-s: 0%;
+  --color-red-text-l: 71%;
+  --color-orange-text-l: 64%;
+  --color-yellow-text-l: 59%;
+  --color-green-text-l: 53%;
+  --color-mint-text-l: 56%;
+  --color-aqua-text-l: 57%;
+  --color-blue-text-l: 68%;
+  --color-purple-text-l: 70%;
+  --color-pink-text-l: 68%;
+  --color-grey-text-l: 67%;
   --text-normal: hsl(0, 0%, 83%);
   --text-muted: hsl(0, 0%, 72%);
   --text-faint: hsl(0, 0%, 52%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(0, 0%, 8%);
-  --highlight-text-dark: hsl(0, 0%, 8%);
-  --highlight-text-accent-custom-dt: hsl(0, 0%, 100%);
   --background-primary: hsl(0, 0%, 15%);
   --background-primary-alt: hsl(0, 0%, 22%);
   --background-secondary: hsl(0, 0%, 8%);
   --background-secondary-blur: hsla(0, 0%, 8%, 0.75);
-  --background-secondary-alt: hsl(0, 0%, 7%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(0, 0%, 7.5%);
-  --page-background-color: var(--background-secondary);
+  --background-secondary-alt: hsl(0, 0%, 5.5%);
+  --background-tertiary: hsl(0, 0%, 7.5%);
   --background-color-dt: hsl(0, 0%, 5%);
-  --file-explorer-vertical-lines-color: hsl(0, 0%, 20%);
-  --style-settings-vertical-lines-color: hsl(0, 0%, 20%);
-  --outline-vertical-lines-color: hsl(0, 0%, 20%);
-  --window-border: var(--background-primary);
+  --vertical-lines-color-file-explorer: hsl(0, 0%, 18%);
+  --vertical-lines-color-outline: hsl(0, 0%, 18%);
+  --vertical-lines-color-style-settings: hsl(0, 0%, 16%);
   --drop-shadow: hsla(0, 0%, 0%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-popup: rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.05) 0px 2px 4px, rgba(0, 0, 0, 0.05) 0px 4px 8px, rgba(0, 0, 0, 0.05) 0px 8px 16px, rgba(0, 0, 0, 0.05) 0px 16px 32px,
-  	rgba(0, 0, 0, 0.05) 0px 32px 64px;
+  --drop-shadow-popup: hsla(0, 0%, 0%, 0.05) 0px 1px 2px, hsla(0, 0%, 0%, 0.05) 0px 2px 4px, hsla(0, 0%, 0%, 0.05) 0px 4px 8px, hsla(0, 0%, 0%, 0.05) 0px 8px 16px;
   --scroll-bar-thumb: hsl(0, 0%, 22%);
-  --table-border-color: var(--background-primary-alt);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-dark.pt-color-scheme-default-dt.pt-disable-blur {
-  --background-secondary-blur: hsla(0, 0%, 9%, 1);
-}
-.theme-dark.pt-color-scheme-default-dt.pt-highlight-text-light-dt {
-  --highlight-text-normal: hsl(0, 0%, 90%);
-}
-.theme-dark.pt-color-scheme-default-dt.pt-highlight-text-accent-dt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-dark.pt-color-scheme-default-dt.pt-highlight-text-custom-dt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Coffee] Base Colors */
 body.theme-light.pt-color-scheme-latte-lt,
 body.theme-dark.pt-color-scheme-mocha-dt {
-  --color-red-h: 352;
-  --color-orange-h: 18;
-  --color-yellow-h: 35;
-  --color-green-h: 121;
-  --color-mint-h: 149;
-  --color-aqua-h: 180;
-  --color-blue-h: 235;
-  --color-purple-h: 275;
-  --color-pink-h: 325;
-  --color-grey-h: 356;
+  --color-red-base-h: 352;
+  --color-orange-base-h: 18;
+  --color-yellow-base-h: 35;
+  --color-green-base-h: 121;
+  --color-mint-base-h: 149;
+  --color-aqua-base-h: 180;
+  --color-blue-base-h: 235;
+  --color-purple-base-h: 275;
+  --color-pink-base-h: 325;
+  --color-grey-base-h: 356;
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Coffee] Light Theme */
 .theme-light.pt-color-scheme-latte-lt {
-  --color-red-s-desaturated: 70%;
-  --color-orange-s-desaturated: 66%;
-  --color-yellow-s-desaturated: 70%;
-  --color-green-s-desaturated: 37%;
-  --color-mint-s-desaturated: 33%;
-  --color-aqua-s-desaturated: 31%;
-  --color-blue-s-desaturated: 27%;
-  --color-purple-s-desaturated: 38%;
-  --color-pink-s-desaturated: 42%;
-  --color-grey-s-desaturated: 5%;
-  --color-red-l-darkened: 83%;
-  --color-orange-l-darkened: 82%;
-  --color-yellow-l-darkened: 83%;
-  --color-green-l-darkened: 81%;
-  --color-mint-l-darkened: 84%;
-  --color-aqua-l-darkened: 81%;
-  --color-blue-l-darkened: 84%;
-  --color-purple-l-darkened: 82%;
-  --color-pink-l-darkened: 83%;
-  --color-grey-l-darkened: 82%;
-  --color-red-l-darkened2x: 71%;
-  --color-orange-l-darkened2x: 70%;
-  --color-yellow-l-darkened2x: 65%;
-  --color-green-l-darkened2x: 65%;
-  --color-mint-l-darkened2x: 67%;
-  --color-aqua-l-darkened2x: 64%;
-  --color-blue-l-darkened2x: 71%;
-  --color-purple-l-darkened2x: 70%;
-  --color-pink-l-darkened2x: 69%;
-  --color-grey-l-darkened2x: 65%;
-  --color-red-s-desaturated-text: 53%;
-  --color-orange-s-desaturated-text: 54%;
-  --color-yellow-s-desaturated-text: 55%;
-  --color-green-s-desaturated-text: 45%;
-  --color-mint-s-desaturated-text: 65%;
-  --color-aqua-s-desaturated-text: 50%;
-  --color-blue-s-desaturated-text: 30%;
-  --color-purple-s-desaturated-text: 36%;
-  --color-pink-s-desaturated-text: 42%;
-  --color-grey-s-desaturated-text: 5%;
-  --color-red-l-darkened-text: 55%;
-  --color-orange-l-darkened-text: 52%;
-  --color-yellow-l-darkened-text: 46%;
-  --color-green-l-darkened-text: 43%;
-  --color-mint-l-darkened-text: 40%;
-  --color-aqua-l-darkened-text: 40%;
-  --color-blue-l-darkened-text: 56%;
-  --color-purple-l-darkened-text: 52%;
-  --color-pink-l-darkened-text: 50%;
-  --color-grey-l-darkened-text: 47%;
-  /* Light Theme Main Obsidian Colors */
+  --color-red-base-s: 70%;
+  --color-orange-base-s: 66%;
+  --color-yellow-base-s: 70%;
+  --color-green-base-s: 37%;
+  --color-mint-base-s: 33%;
+  --color-aqua-base-s: 31%;
+  --color-blue-base-s: 27%;
+  --color-purple-base-s: 38%;
+  --color-pink-base-s: 42%;
+  --color-grey-base-s: 5%;
+  --color-red-base-l: 83%;
+  --color-orange-base-l: 82%;
+  --color-yellow-base-l: 83%;
+  --color-green-base-l: 81%;
+  --color-mint-base-l: 84%;
+  --color-aqua-base-l: 81%;
+  --color-blue-base-l: 84%;
+  --color-purple-base-l: 82%;
+  --color-pink-base-l: 83%;
+  --color-grey-base-l: 82%;
+  --color-red-tint-l: 71%;
+  --color-orange-tint-l: 70%;
+  --color-yellow-tint-l: 65%;
+  --color-green-tint-l: 65%;
+  --color-mint-tint-l: 67%;
+  --color-aqua-tint-l: 64%;
+  --color-blue-tint-l: 71%;
+  --color-purple-tint-l: 70%;
+  --color-pink-tint-l: 69%;
+  --color-grey-tint-l: 65%;
+  --color-red-text-s: 53%;
+  --color-orange-text-s: 54%;
+  --color-yellow-text-s: 55%;
+  --color-green-text-s: 45%;
+  --color-mint-text-s: 65%;
+  --color-aqua-text-s: 50%;
+  --color-blue-text-s: 30%;
+  --color-purple-text-s: 36%;
+  --color-pink-text-s: 42%;
+  --color-grey-text-s: 5%;
+  --color-red-text-l: 55%;
+  --color-orange-text-l: 52%;
+  --color-yellow-text-l: 46%;
+  --color-green-text-l: 43%;
+  --color-mint-text-l: 40%;
+  --color-aqua-text-l: 40%;
+  --color-blue-text-l: 56%;
+  --color-purple-text-l: 52%;
+  --color-pink-text-l: 50%;
+  --color-grey-text-l: 47%;
   --text-normal: hsl(28, 32%, 18%);
   --text-muted: hsl(28, 32%, 35%);
   --text-faint: hsl(28, 32%, 50%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(28, 32%, 18%);
-  --highlight-text-dark: hsl(28, 32%, 18%);
   --background-primary: hsl(28, 32%, 95%);
   --background-primary-alt: hsl(28, 32%, 93%);
   --background-secondary: hsl(28, 32%, 90%);
   --background-secondary-blur: hsla(28, 32%, 90%, 0.75);
-  --background-secondary-alt: hsl(28, 32%, 79%);
-  --background-modifier-border: hsl(28, 32%, 90%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(28, 32%, 91.8%);
-  --page-background-color: var(--background-secondary);
+  --background-secondary-alt: hsl(28, 32%, 78%);
+  --background-tertiary: hsl(28, 32%, 91.8%);
   --background-color-lt: hsl(28, 32%, 83.8%);
-  --file-explorer-vertical-lines-color: hsl(28, 32%, 84%);
-  --style-settings-vertical-lines-color: hsl(28, 32%, 84%);
-  --outline-vertical-lines-color: hsl(28, 32%, 84%);
-  --window-border: var(--background-secondary-alt);
+  --vertical-lines-color-file-explorer: hsl(28, 32%, 80%);
+  --vertical-lines-color-outline: hsl(28, 32%, 80%);
+  --vertical-lines-color-style-settings: hsl(28, 32%, 78%);
   --drop-shadow: hsla(28, 32%, 7%, 0.1) 0px 1px 2px 0px;
   --drop-shadow-popup: hsla(28, 32%, 7%, 0.04) 0px 1px 2px, hsla(28, 32%, 7%, 0.04) 0px 2px 4px, hsla(28, 32%, 7%, 0.04) 0px 4px 8px, hsla(28, 32%, 7%, 0.04) 0px 8px 16px;
   --scroll-bar-thumb: hsl(28, 32%, 80%);
-  --table-border-color: var(--background-secondary-alt);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-light.pt-color-scheme-latte-lt.pt-disable-blur {
-  --background-secondary-blur: hsla(28, 32%, 88%, 1);
-}
-.theme-light.pt-color-scheme-latte-lt.pt-highlight-text-light-lt {
-  --highlight-text-normal: hsl(28, 32%, 95%);
-}
-.theme-light.pt-color-scheme-latte-lt.pt-highlight-text-accent-lt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-light.pt-color-scheme-latte-lt.pt-highlight-text-custom-lt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Coffee] Dark Theme */
 .theme-dark.pt-color-scheme-mocha-dt {
-  --color-red-s-desaturated: 62%;
-  --color-orange-s-desaturated: 60%;
-  --color-yellow-s-desaturated: 76%;
-  --color-green-s-desaturated: 25%;
-  --color-mint-s-desaturated: 30%;
-  --color-aqua-s-desaturated: 35%;
-  --color-blue-s-desaturated: 30%;
-  --color-purple-s-desaturated: 30%;
-  --color-pink-s-desaturated: 39%;
-  --color-grey-s-desaturated: 5%;
-  --color-red-l-darkened: 18%;
-  --color-orange-l-darkened: 20%;
-  --color-yellow-l-darkened: 16%;
-  --color-green-l-darkened: 20%;
-  --color-mint-l-darkened: 22%;
-  --color-aqua-l-darkened: 17%;
-  --color-blue-l-darkened: 21%;
-  --color-purple-l-darkened: 19%;
-  --color-pink-l-darkened: 19%;
-  --color-grey-l-darkened: 20%;
-  --color-red-l-darkened2x: 31%;
-  --color-orange-l-darkened2x: 33%;
-  --color-yellow-l-darkened2x: 28%;
-  --color-green-l-darkened2x: 34%;
-  --color-mint-l-darkened2x: 35%;
-  --color-aqua-l-darkened2x: 30%;
-  --color-blue-l-darkened2x: 40%;
-  --color-purple-l-darkened2x: 36%;
-  --color-pink-l-darkened2x: 33%;
-  --color-grey-l-darkened2x: 34%;
-  --color-red-s-desaturated-text: 72%;
-  --color-orange-s-desaturated-text: 75%;
-  --color-yellow-s-desaturated-text: 65%;
-  --color-green-s-desaturated-text: 44%;
-  --color-mint-s-desaturated-text: 52%;
-  --color-aqua-s-desaturated-text: 46%;
-  --color-blue-s-desaturated-text: 60%;
-  --color-purple-s-desaturated-text: 60%;
-  --color-pink-s-desaturated-text: 62%;
-  --color-grey-s-desaturated-text: 5%;
-  --color-red-l-darkened-text: 66%;
-  --color-orange-l-darkened-text: 64%;
-  --color-yellow-l-darkened-text: 56%;
-  --color-green-l-darkened-text: 55%;
-  --color-mint-l-darkened-text: 55%;
-  --color-aqua-l-darkened-text: 48%;
-  --color-blue-l-darkened-text: 75%;
-  --color-purple-l-darkened-text: 69%;
-  --color-pink-l-darkened-text: 68%;
-  --color-grey-l-darkened-text: 69%;
-  /* Dark Theme Main Obsidian Colors */
-  --text-normal: hsl(28, 32%, 82%);
-  --text-muted: hsl(28, 32%, 66%);
-  --text-faint: hsl(28, 32%, 55%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(28, 32%, 8%);
-  --highlight-text-dark: hsl(28, 32%, 8%);
+  --color-red-base-s: 62%;
+  --color-orange-base-s: 60%;
+  --color-yellow-base-s: 76%;
+  --color-green-base-s: 25%;
+  --color-mint-base-s: 30%;
+  --color-aqua-base-s: 35%;
+  --color-blue-base-s: 30%;
+  --color-purple-base-s: 30%;
+  --color-pink-base-s: 39%;
+  --color-grey-base-s: 5%;
+  --color-red-base-l: 18%;
+  --color-orange-base-l: 20%;
+  --color-yellow-base-l: 16%;
+  --color-green-base-l: 20%;
+  --color-mint-base-l: 22%;
+  --color-aqua-base-l: 17%;
+  --color-blue-base-l: 21%;
+  --color-purple-base-l: 19%;
+  --color-pink-base-l: 19%;
+  --color-grey-base-l: 20%;
+  --color-red-tint-l: 31%;
+  --color-orange-tint-l: 33%;
+  --color-yellow-tint-l: 28%;
+  --color-green-tint-l: 34%;
+  --color-mint-tint-l: 35%;
+  --color-aqua-tint-l: 30%;
+  --color-blue-tint-l: 40%;
+  --color-purple-tint-l: 36%;
+  --color-pink-tint-l: 33%;
+  --color-grey-tint-l: 34%;
+  --color-red-text-s: 72%;
+  --color-orange-text-s: 75%;
+  --color-yellow-text-s: 65%;
+  --color-green-text-s: 44%;
+  --color-mint-text-s: 52%;
+  --color-aqua-text-s: 46%;
+  --color-blue-text-s: 60%;
+  --color-purple-text-s: 60%;
+  --color-pink-text-s: 62%;
+  --color-grey-text-s: 5%;
+  --color-red-text-l: 66%;
+  --color-orange-text-l: 64%;
+  --color-yellow-text-l: 56%;
+  --color-green-text-l: 55%;
+  --color-mint-text-l: 55%;
+  --color-aqua-text-l: 48%;
+  --color-blue-text-l: 75%;
+  --color-purple-text-l: 69%;
+  --color-pink-text-l: 68%;
+  --color-grey-text-l: 69%;
+  --text-normal: hsl(28, 32%, 85%);
+  --text-muted: hsl(28, 32%, 70%);
+  --text-faint: hsl(28, 32%, 60%);
   --background-primary: hsl(28, 32%, 14%);
   --background-primary-alt: hsl(28, 32%, 18%);
   --background-secondary: hsl(28, 32%, 9.2%);
-  --background-secondary-blur: hsla(28, 32%, 7.2%, 0.75);
-  --background-secondary-alt: hsl(28, 32%, 7.5%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(28, 32%, 8.2%);
-  --page-background-color: var(--background-secondary);
+  --background-secondary-blur: hsla(28, 32%, 9.2%, 0.75);
+  --background-secondary-alt: hsl(28, 32%, 6.8%);
+  --background-tertiary: hsl(28, 32%, 7.2%);
   --background-color-dt: hsl(28, 32%, 6.2%);
-  --file-explorer-vertical-lines-color: hsl(28, 32%, 16%);
-  --style-settings-vertical-lines-color: hsl(28, 32%, 16%);
-  --outline-vertical-lines-color: hsl(28, 32%, 16%);
-  --window-border: var(--background-primary);
+  --vertical-lines-color-file-explorer: hsl(28, 32%, 18%);
+  --vertical-lines-color-outline: hsl(28, 32%, 18%);
+  --vertical-lines-color-style-settings: hsl(28, 32%, 14%);
   --drop-shadow: hsla(28, 32%, 7%, 0.5) 0px 1px 2px 0px;
   --drop-shadow-popup: hsla(28, 32%, 7%, 0.5) 0px 1px 2px, hsla(28, 32%, 7%, 0.5) 0px 2px 4px, hsla(28, 32%, 7%, 0.5) 0px 4px 8px, hsla(28, 32%, 7%, 0.5) 0px 8px 16px;
   --scroll-bar-thumb: hsl(28, 32%, 20%);
-  --table-border-color: hsl(28, 32%, 25%);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-dark.pt-color-scheme-mocha-dt.pt-disable-blur {
-  --background-secondary-blur: hsla(28, 32%, 7.2%, 1);
-}
-.theme-dark.pt-color-scheme-mocha-dt.pt-highlight-text-light-dt {
-  --highlight-text-normal: hsl(28, 32%, 85%);
-}
-.theme-dark.pt-color-scheme-mocha-dt.pt-highlight-text-accent-dt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-dark.pt-color-scheme-mocha-dt.pt-highlight-text-custom-dt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Flower] Base Colors */
 body.theme-light.pt-color-scheme-periwinkle-lt,
 body.theme-dark.pt-color-scheme-indigo-dt {
-  --color-red-h: 345;
-  --color-orange-h: 12;
-  --color-yellow-h: 36;
-  --color-green-h: 121;
-  --color-mint-h: 149;
-  --color-aqua-h: 180;
-  --color-blue-h: 232;
-  --color-purple-h: 255;
-  --color-pink-h: 303;
-  --color-grey-h: 233;
+  --color-red-base-h: 345;
+  --color-orange-base-h: 12;
+  --color-yellow-base-h: 36;
+  --color-green-base-h: 121;
+  --color-mint-base-h: 149;
+  --color-aqua-base-h: 180;
+  --color-blue-base-h: 232;
+  --color-purple-base-h: 255;
+  --color-pink-base-h: 303;
+  --color-grey-base-h: 233;
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Flower] Light Theme */
 .theme-light.pt-color-scheme-periwinkle-lt {
-  --color-red-s-desaturated: 70%;
-  --color-orange-s-desaturated: 66%;
-  --color-yellow-s-desaturated: 70%;
-  --color-green-s-desaturated: 35%;
-  --color-mint-s-desaturated: 40%;
-  --color-aqua-s-desaturated: 31%;
-  --color-blue-s-desaturated: 27%;
-  --color-purple-s-desaturated: 38%;
-  --color-pink-s-desaturated: 42%;
-  --color-grey-s-desaturated: 5%;
-  --color-red-l-darkened: 83%;
-  --color-orange-l-darkened: 82%;
-  --color-yellow-l-darkened: 83%;
-  --color-green-l-darkened: 81%;
-  --color-mint-l-darkened: 82%;
-  --color-aqua-l-darkened: 85%;
-  --color-blue-l-darkened: 84%;
-  --color-purple-l-darkened: 82%;
-  --color-pink-l-darkened: 83%;
-  --color-grey-l-darkened: 82%;
-  --color-red-l-darkened2x: 74%;
-  --color-orange-l-darkened2x: 73%;
-  --color-yellow-l-darkened2x: 70%;
-  --color-green-l-darkened2x: 68%;
-  --color-mint-l-darkened2x: 67%;
-  --color-aqua-l-darkened2x: 72%;
-  --color-blue-l-darkened2x: 74%;
-  --color-purple-l-darkened2x: 73%;
-  --color-pink-l-darkened2x: 72%;
-  --color-grey-l-darkened2x: 68%;
-  /* Light Theme Color Adjustments */
-  --color-red-s-desaturated-text: 53%;
-  --color-orange-s-desaturated-text: 54%;
-  --color-yellow-s-desaturated-text: 55%;
-  --color-green-s-desaturated-text: 45%;
-  --color-mint-s-desaturated-text: 58%;
-  --color-aqua-s-desaturated-text: 50%;
-  --color-blue-s-desaturated-text: 30%;
-  --color-purple-s-desaturated-text: 36%;
-  --color-pink-s-desaturated-text: 42%;
-  --color-grey-s-desaturated-text: 5%;
-  --color-red-l-darkened-text: 55%;
-  --color-orange-l-darkened-text: 52%;
-  --color-yellow-l-darkened-text: 46%;
-  --color-green-l-darkened-text: 40%;
-  --color-mint-l-darkened-text: 38%;
-  --color-aqua-l-darkened-text: 40%;
-  --color-blue-l-darkened-text: 56%;
-  --color-purple-l-darkened-text: 51%;
-  --color-pink-l-darkened-text: 50%;
-  --color-grey-l-darkened-text: 47%;
-  /* Light Theme Main Obsidian Colors */
+  --color-red-base-s: 70%;
+  --color-orange-base-s: 66%;
+  --color-yellow-base-s: 70%;
+  --color-green-base-s: 35%;
+  --color-mint-base-s: 40%;
+  --color-aqua-base-s: 31%;
+  --color-blue-base-s: 34%;
+  --color-purple-base-s: 38%;
+  --color-pink-base-s: 42%;
+  --color-grey-base-s: 5%;
+  --color-red-base-l: 83%;
+  --color-orange-base-l: 82%;
+  --color-yellow-base-l: 83%;
+  --color-green-base-l: 81%;
+  --color-mint-base-l: 82%;
+  --color-aqua-base-l: 82%;
+  --color-blue-base-l: 84%;
+  --color-purple-base-l: 82%;
+  --color-pink-base-l: 83%;
+  --color-grey-base-l: 82%;
+  --color-red-tint-l: 74%;
+  --color-orange-tint-l: 73%;
+  --color-yellow-tint-l: 70%;
+  --color-green-tint-l: 68%;
+  --color-mint-tint-l: 67%;
+  --color-aqua-tint-l: 69%;
+  --color-blue-tint-l: 74%;
+  --color-purple-tint-l: 73%;
+  --color-pink-tint-l: 72%;
+  --color-grey-tint-l: 68%;
+  --color-red-text-s: 53%;
+  --color-orange-text-s: 54%;
+  --color-yellow-text-s: 55%;
+  --color-green-text-s: 45%;
+  --color-mint-text-s: 58%;
+  --color-aqua-text-s: 50%;
+  --color-blue-text-s: 35%;
+  --color-purple-text-s: 36%;
+  --color-pink-text-s: 42%;
+  --color-grey-text-s: 5%;
+  --color-red-text-l: 55%;
+  --color-orange-text-l: 52%;
+  --color-yellow-text-l: 46%;
+  --color-green-text-l: 40%;
+  --color-mint-text-l: 38%;
+  --color-aqua-text-l: 40%;
+  --color-blue-text-l: 56%;
+  --color-purple-text-l: 51%;
+  --color-pink-text-l: 50%;
+  --color-grey-text-l: 47%;
   --text-normal: hsl(225, 35%, 30%);
   --text-muted: hsl(225, 35%, 40%);
   --text-faint: hsl(225, 35%, 50%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(225, 35%, 18%);
-  --highlight-text-dark: hsl(225, 35%, 18%);
   --background-primary: hsl(225, 35%, 95%);
   --background-primary-alt: hsl(225, 35%, 93%);
   --background-secondary: hsl(225, 35%, 90%);
   --background-secondary-blur: hsla(225, 35%, 90%, 0.75);
-  --background-secondary-alt: hsl(225, 35%, 80%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(225, 35%, 91.8%);
-  --page-background-color: var(--background-secondary);
+  --background-secondary-alt: hsl(225, 35%, 79%);
+  --background-tertiary: hsl(225, 35%, 91.8%);
   --background-color-lt: hsl(225, 35%, 83.8%);
-  --file-explorer-vertical-lines-color: hsl(225, 35%, 84%);
-  --style-settings-vertical-lines-color: hsl(225, 35%, 84%);
-  --outline-vertical-lines-color: hsl(225, 35%, 84%);
-  --window-border: var(--background-secondary-alt);
+  --vertical-lines-color-file-explorer: hsl(225, 35%, 82%);
+  --vertical-lines-color-outline: hsl(225, 35%, 82%);
+  --vertical-lines-color-style-settings: hsl(225, 35%, 80%);
   --drop-shadow: hsla(225, 35%, 7%, 0.1) 0px 1px 2px 0px;
   --drop-shadow-popup: hsla(225, 35%, 7%, 0.04) 0px 1px 2px, hsla(225, 35%, 7%, 0.04) 0px 2px 4px, hsla(225, 35%, 7%, 0.04) 0px 4px 8px, hsla(225, 35%, 7%, 0.04) 0px 8px 16px;
   --scroll-bar-thumb: hsl(225, 35%, 80%);
-  --table-border-color: var(--background-secondary-alt);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-light.pt-color-scheme-periwinkle-lt.pt-disable-blur {
-  --background-secondary-blur: hsla(225, 35%, 88%, 1);
-}
-.theme-light.pt-color-scheme-periwinkle-lt.pt-highlight-text-light-lt {
-  --highlight-text-normal: hsl(225, 35%, 95%);
-}
-.theme-light.pt-color-scheme-periwinkle-lt.pt-highlight-text-accent-lt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-light.pt-color-scheme-periwinkle-lt.pt-highlight-text-custom-lt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Flower] Dark Theme */
 .theme-dark.pt-color-scheme-indigo-dt {
-  --color-red-s-desaturated: 65%;
-  --color-orange-s-desaturated: 62%;
-  --color-yellow-s-desaturated: 69%;
-  --color-green-s-desaturated: 28%;
-  --color-mint-s-desaturated: 33%;
-  --color-aqua-s-desaturated: 38%;
-  --color-blue-s-desaturated: 31%;
-  --color-purple-s-desaturated: 36%;
-  --color-pink-s-desaturated: 41%;
-  --color-grey-s-desaturated: 5%;
-  --color-red-l-darkened: 21%;
-  --color-orange-l-darkened: 23%;
-  --color-yellow-l-darkened: 19%;
-  --color-green-l-darkened: 23%;
-  --color-mint-l-darkened: 25%;
-  --color-aqua-l-darkened: 20%;
-  --color-blue-l-darkened: 24%;
-  --color-purple-l-darkened: 22%;
-  --color-pink-l-darkened: 22%;
-  --color-grey-l-darkened: 23%;
-  --color-red-l-darkened2x: 36%;
-  --color-orange-l-darkened2x: 40%;
-  --color-yellow-l-darkened2x: 32%;
-  --color-green-l-darkened2x: 36%;
-  --color-mint-l-darkened2x: 37%;
-  --color-aqua-l-darkened2x: 33%;
-  --color-blue-l-darkened2x: 45%;
-  --color-purple-l-darkened2x: 45%;
-  --color-pink-l-darkened2x: 40%;
-  --color-grey-l-darkened2x: 40%;
-  --color-red-s-desaturated-text: 77%;
-  --color-orange-s-desaturated-text: 78%;
-  --color-yellow-s-desaturated-text: 65%;
-  --color-green-s-desaturated-text: 43%;
-  --color-mint-s-desaturated-text: 60%;
-  --color-aqua-s-desaturated-text: 45%;
-  --color-blue-s-desaturated-text: 74%;
-  --color-purple-s-desaturated-text: 60%;
-  --color-pink-s-desaturated-text: 62%;
-  --color-grey-s-desaturated-text: 5%;
-  --color-red-l-darkened-text: 70%;
-  --color-orange-l-darkened-text: 69%;
-  --color-yellow-l-darkened-text: 61%;
-  --color-green-l-darkened-text: 59%;
-  --color-mint-l-darkened-text: 57%;
-  --color-aqua-l-darkened-text: 49%;
-  --color-blue-l-darkened-text: 73%;
-  --color-purple-l-darkened-text: 71%;
-  --color-pink-l-darkened-text: 68%;
-  --color-grey-l-darkened-text: 69%;
-  /* Dark Theme Main Obsidian Colors */
-  --text-normal: hsl(245, 30%, 82%);
-  --text-muted: hsl(245, 30%, 66%);
-  --text-faint: hsl(245, 30%, 55%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(245, 30%, 10%);
-  --highlight-text-dark: hsl(245, 30%, 10);
+  --color-red-base-s: 65%;
+  --color-orange-base-s: 62%;
+  --color-yellow-base-s: 69%;
+  --color-green-base-s: 28%;
+  --color-mint-base-s: 33%;
+  --color-aqua-base-s: 38%;
+  --color-blue-base-s: 31%;
+  --color-purple-base-s: 36%;
+  --color-pink-base-s: 41%;
+  --color-grey-base-s: 5%;
+  --color-red-base-l: 21%;
+  --color-orange-base-l: 23%;
+  --color-yellow-base-l: 19%;
+  --color-green-base-l: 23%;
+  --color-mint-base-l: 25%;
+  --color-aqua-base-l: 20%;
+  --color-blue-base-l: 24%;
+  --color-purple-base-l: 22%;
+  --color-pink-base-l: 22%;
+  --color-grey-base-l: 23%;
+  --color-red-tint-l: 36%;
+  --color-orange-tint-l: 40%;
+  --color-yellow-tint-l: 32%;
+  --color-green-tint-l: 36%;
+  --color-mint-tint-l: 37%;
+  --color-aqua-tint-l: 33%;
+  --color-blue-tint-l: 45%;
+  --color-purple-tint-l: 45%;
+  --color-pink-tint-l: 40%;
+  --color-grey-tint-l: 40%;
+  --color-red-text-s: 77%;
+  --color-orange-text-s: 78%;
+  --color-yellow-text-s: 65%;
+  --color-green-text-s: 43%;
+  --color-mint-text-s: 60%;
+  --color-aqua-text-s: 45%;
+  --color-blue-text-s: 74%;
+  --color-purple-text-s: 60%;
+  --color-pink-text-s: 62%;
+  --color-grey-text-s: 5%;
+  --color-red-text-l: 70%;
+  --color-orange-text-l: 69%;
+  --color-yellow-text-l: 61%;
+  --color-green-text-l: 59%;
+  --color-mint-text-l: 57%;
+  --color-aqua-text-l: 49%;
+  --color-blue-text-l: 73%;
+  --color-purple-text-l: 71%;
+  --color-pink-text-l: 68%;
+  --color-grey-text-l: 69%;
+  --text-normal: hsl(245, 30%, 85%);
+  --text-muted: hsl(245, 30%, 75%);
+  --text-faint: hsl(245, 30%, 65%);
   --background-primary: hsl(245, 30%, 18%);
   --background-primary-alt: hsl(245, 30%, 20%);
   --background-secondary: hsl(245, 30%, 11.2%);
   --background-secondary-blur: hsla(245, 30%, 11.2%, 0.75);
-  --background-secondary-alt: hsl(245, 30%, 9.5%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(245, 30%, 9%);
-  --page-background-color: var(--background-secondary);
+  --background-secondary-alt: hsl(245, 30%, 8.5%);
+  --background-tertiary: hsl(245, 30%, 9%);
   --background-color-dt: hsl(245, 30%, 8%);
-  --file-explorer-vertical-lines-color: hsl(245, 30%, 18%);
-  --style-settings-vertical-lines-color: hsl(245, 30%, 18%);
-  --outline-vertical-lines-color: hsl(245, 30%, 16%);
-  --window-border: var(--background-primary);
+  --vertical-lines-color-file-explorer: hsl(245, 30%, 22%);
+  --vertical-lines-color-outline: hsl(245, 30%, 22%);
+  --vertical-lines-color-style-settings: hsl(245, 30%, 19%);
   --drop-shadow: hsla(245, 30%, 7%, 0.1) 0px 1px 2px 0px;
   --drop-shadow-popup: hsla(245, 30%, 7%, 0.1) 0px 1px 2px, hsla(245, 30%, 7%, 0.1) 0px 2px 4px, hsla(245, 30%, 7%, 0.1) 0px 4px 8px, hsla(245, 30%, 7%, 0.1) 0px 8px 16px;
   --scroll-bar-thumb: hsl(245, 30%, 24%);
-  --table-border-color: hsl(245, 30%, 27%);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-dark.pt-color-scheme-indigo-dt.pt-disable-blur {
-  --background-secondary-blur: hsla(245, 30%, 11.2%, 1);
-}
-.theme-dark.pt-color-scheme-indigo-dt.pt-highlight-text-light-dt {
-  --highlight-text-normal: hsl(245, 30%, 82%);
-}
-.theme-dark.pt-color-scheme-indigo-dt.pt-highlight-text-accent-dt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-dark.pt-color-scheme-indigo-dt.pt-highlight-text-custom-dt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Flower] Base Colors */
 body.theme-light.pt-color-scheme-pistachio-lt,
 body.theme-dark.pt-color-scheme-pine-dt {
-  --color-red-h: 355;
-  --color-orange-h: 21;
-  --color-yellow-h: 40;
-  --color-green-h: 110;
-  --color-mint-h: 151;
-  --color-aqua-h: 190;
-  --color-blue-h: 222;
-  --color-purple-h: 252;
-  --color-pink-h: 323;
-  --color-grey-h: 233;
+  --color-red-base-h: 355;
+  --color-orange-base-h: 21;
+  --color-yellow-base-h: 40;
+  --color-green-base-h: 110;
+  --color-mint-base-h: 151;
+  --color-aqua-base-h: 190;
+  --color-blue-base-h: 222;
+  --color-purple-base-h: 260;
+  --color-pink-base-h: 323;
+  --color-grey-base-h: 233;
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Flower] Light Theme */
 .theme-light.pt-color-scheme-pistachio-lt {
-  --color-red-s-desaturated: 70%;
-  --color-orange-s-desaturated: 66%;
-  --color-yellow-s-desaturated: 70%;
-  --color-green-s-desaturated: 35%;
-  --color-mint-s-desaturated: 40%;
-  --color-aqua-s-desaturated: 31%;
-  --color-blue-s-desaturated: 27%;
-  --color-purple-s-desaturated: 38%;
-  --color-pink-s-desaturated: 42%;
-  --color-grey-s-desaturated: 5%;
-  --color-red-l-darkened: 83%;
-  --color-orange-l-darkened: 82%;
-  --color-yellow-l-darkened: 83%;
-  --color-green-l-darkened: 81%;
-  --color-mint-l-darkened: 82%;
-  --color-aqua-l-darkened: 85%;
-  --color-blue-l-darkened: 84%;
-  --color-purple-l-darkened: 82%;
-  --color-pink-l-darkened: 83%;
-  --color-grey-l-darkened: 82%;
-  --color-red-l-darkened2x: 74%;
-  --color-orange-l-darkened2x: 73%;
-  --color-yellow-l-darkened2x: 70%;
-  --color-green-l-darkened2x: 68%;
-  --color-mint-l-darkened2x: 67%;
-  --color-aqua-l-darkened2x: 72%;
-  --color-blue-l-darkened2x: 74%;
-  --color-purple-l-darkened2x: 73%;
-  --color-pink-l-darkened2x: 72%;
-  --color-grey-l-darkened2x: 68%;
-  --color-red-s-desaturated-text: 53%;
-  --color-orange-s-desaturated-text: 54%;
-  --color-yellow-s-desaturated-text: 55%;
-  --color-green-s-desaturated-text: 45%;
-  --color-mint-s-desaturated-text: 58%;
-  --color-aqua-s-desaturated-text: 50%;
-  --color-blue-s-desaturated-text: 30%;
-  --color-purple-s-desaturated-text: 36%;
-  --color-pink-s-desaturated-text: 42%;
-  --color-grey-s-desaturated-text: 5%;
-  --color-red-l-darkened-text: 55%;
-  --color-orange-l-darkened-text: 52%;
-  --color-yellow-l-darkened-text: 46%;
-  --color-green-l-darkened-text: 40%;
-  --color-mint-l-darkened-text: 38%;
-  --color-aqua-l-darkened-text: 40%;
-  --color-blue-l-darkened-text: 56%;
-  --color-purple-l-darkened-text: 51%;
-  --color-pink-l-darkened-text: 50%;
-  --color-grey-l-darkened-text: 47%;
-  /* Light Theme Main Obsidian Colors */
-  --text-normal: hsl(135, 32%, 20%);
-  --text-muted: hsl(135, 32%, 30%);
-  --text-faint: hsl(135, 32%, 40%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(135, 32%, 18%);
-  --highlight-text-dark: hsl(135, 32%, 18%);
-  --background-primary: hsl(135, 32%, 95.5%);
-  --background-primary-alt: hsl(135, 32%, 93%);
-  --background-secondary: hsl(135, 32%, 91.5%);
-  --background-secondary-blur: hsla(135, 32%, 91.5%, 0.75);
-  --background-secondary-alt: hsl(135, 32%, 80%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(135, 32%, 93%);
-  --page-background-color: var(--background-secondary);
-  --background-color-lt: hsl(135, 32%, 81%);
-  --file-explorer-vertical-lines-color: hsl(135, 32%, 84%);
-  --style-settings-vertical-lines-color: hsl(135, 32%, 84%);
-  --outline-vertical-lines-color: hsl(135, 32%, 84%);
-  --window-border: var(--background-secondary-alt);
-  --drop-shadow: hsla(135, 32%, 7%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-popup: hsla(135, 32%, 7%, 0.04) 0px 1px 2px, hsla(135, 32%, 7%, 0.04) 0px 2px 4px, hsla(135, 32%, 7%, 0.04) 0px 4px 8px, hsla(135, 32%, 7%, 0.04) 0px 8px 16px;
-  --scroll-bar-thumb: hsl(135, 32%, 72%);
-  --table-border-color: var(--background-secondary-alt);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-light.pt-color-scheme-pistachio-lt.pt-disable-blur {
-  --background-secondary-blur: hsla(135, 32%, 88%, 1);
-}
-.theme-light.pt-color-scheme-pistachio-lt.pt-highlight-text-light-lt {
-  --highlight-text-normal: hsl(135, 32%, 95%);
-}
-.theme-light.pt-color-scheme-pistachio-lt.pt-highlight-text-accent-lt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-light.pt-color-scheme-pistachio-lt.pt-highlight-text-custom-lt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
+  --color-red-base-s: 70%;
+  --color-orange-base-s: 66%;
+  --color-yellow-base-s: 70%;
+  --color-green-base-s: 35%;
+  --color-mint-base-s: 40%;
+  --color-aqua-base-s: 31%;
+  --color-blue-base-s: 27%;
+  --color-purple-base-s: 38%;
+  --color-pink-base-s: 42%;
+  --color-grey-base-s: 5%;
+  --color-red-base-l: 83%;
+  --color-orange-base-l: 82%;
+  --color-yellow-base-l: 83%;
+  --color-green-base-l: 81%;
+  --color-mint-base-l: 82%;
+  --color-aqua-base-l: 85%;
+  --color-blue-base-l: 84%;
+  --color-purple-base-l: 82%;
+  --color-pink-base-l: 83%;
+  --color-grey-base-l: 82%;
+  --color-red-tint-l: 74%;
+  --color-orange-tint-l: 73%;
+  --color-yellow-tint-l: 70%;
+  --color-green-tint-l: 68%;
+  --color-mint-tint-l: 67%;
+  --color-aqua-tint-l: 72%;
+  --color-blue-tint-l: 74%;
+  --color-purple-tint-l: 73%;
+  --color-pink-tint-l: 72%;
+  --color-grey-tint-l: 68%;
+  --color-red-text-s: 53%;
+  --color-orange-text-s: 54%;
+  --color-yellow-text-s: 55%;
+  --color-green-text-s: 45%;
+  --color-mint-text-s: 58%;
+  --color-aqua-text-s: 50%;
+  --color-blue-text-s: 30%;
+  --color-purple-text-s: 36%;
+  --color-pink-text-s: 42%;
+  --color-grey-text-s: 5%;
+  --color-red-text-l: 55%;
+  --color-orange-text-l: 52%;
+  --color-yellow-text-l: 46%;
+  --color-green-text-l: 40%;
+  --color-mint-text-l: 38%;
+  --color-aqua-text-l: 40%;
+  --color-blue-text-l: 56%;
+  --color-purple-text-l: 51%;
+  --color-pink-text-l: 50%;
+  --color-grey-text-l: 47%;
+  --text-normal: hsl(135, 35%, 20%);
+  --text-muted: hsl(135, 35%, 30%);
+  --text-faint: hsl(135, 35%, 40%);
+  --background-primary: hsl(135, 35%, 95.5%);
+  --background-primary-alt: hsl(135, 35%, 93%);
+  --background-secondary: hsl(135, 35%, 90.5%);
+  --background-secondary-blur: hsla(135, 35%, 90.5%, 0.75);
+  --background-secondary-alt: hsl(135, 35%, 75%);
+  --background-tertiary: hsl(135, 35%, 93%);
+  --background-color-lt: hsl(135, 35%, 81%);
+  --vertical-lines-color-file-explorer: hsl(135, 35%, 84%);
+  --vertical-lines-color-outline: hsl(135, 35%, 84%);
+  --vertical-lines-color-style-settings: hsl(135, 35%, 84%);
+  --drop-shadow: hsla(135, 35%, 7%, 0.1) 0px 1px 2px 0px;
+  --drop-shadow-popup: hsla(135, 35%, 7%, 0.04) 0px 1px 2px, hsla(135, 35%, 7%, 0.04) 0px 2px 4px, hsla(135, 35%, 7%, 0.04) 0px 4px 8px, hsla(135, 35%, 7%, 0.04) 0px 8px 16px;
+  --scroll-bar-thumb: hsl(135, 35%, 72%);
 }
 
 /* #endregion */
 /* #region  [Color Scheme - Flower] Dark Theme */
 .theme-dark.pt-color-scheme-pine-dt {
-  --color-red-s-desaturated: 58%;
-  --color-orange-s-desaturated: 62%;
-  --color-yellow-s-desaturated: 70%;
-  --color-green-s-desaturated: 35%;
-  --color-mint-s-desaturated: 31%;
-  --color-aqua-s-desaturated: 38%;
-  --color-blue-s-desaturated: 30%;
-  --color-purple-s-desaturated: 40%;
-  --color-pink-s-desaturated: 46%;
-  --color-grey-s-desaturated: 2%;
-  --color-red-l-darkened: 21%;
-  --color-orange-l-darkened: 22%;
-  --color-yellow-l-darkened: 20%;
-  --color-green-l-darkened: 23%;
-  --color-mint-l-darkened: 25%;
-  --color-aqua-l-darkened: 20%;
-  --color-blue-l-darkened: 24%;
-  --color-purple-l-darkened: 22%;
-  --color-pink-l-darkened: 22%;
-  --color-grey-l-darkened: 23%;
-  --color-red-l-darkened2x: 40%;
-  --color-orange-l-darkened2x: 40%;
-  --color-yellow-l-darkened2x: 33%;
-  --color-green-l-darkened2x: 37%;
-  --color-mint-l-darkened2x: 38%;
-  --color-aqua-l-darkened2x: 35%;
-  --color-blue-l-darkened2x: 46%;
-  --color-purple-l-darkened2x: 47%;
-  --color-pink-l-darkened2x: 42%;
-  --color-grey-l-darkened2x: 42%;
-  --color-red-s-desaturated-text: 74%;
-  --color-orange-s-desaturated-text: 72%;
-  --color-yellow-s-desaturated-text: 70%;
-  --color-green-s-desaturated-text: 48%;
-  --color-mint-s-desaturated-text: 58%;
-  --color-aqua-s-desaturated-text: 50%;
-  --color-blue-s-desaturated-text: 70%;
-  --color-purple-s-desaturated-text: 65%;
-  --color-pink-s-desaturated-text: 67%;
-  --color-grey-s-desaturated-text: 2%;
-  --color-red-l-darkened-text: 70%;
-  --color-orange-l-darkened-text: 62%;
-  --color-yellow-l-darkened-text: 53%;
-  --color-green-l-darkened-text: 52%;
-  --color-mint-l-darkened-text: 52%;
-  --color-aqua-l-darkened-text: 53%;
-  --color-blue-l-darkened-text: 70%;
-  --color-purple-l-darkened-text: 73%;
-  --color-pink-l-darkened-text: 73%;
-  --color-grey-l-darkened-text: 71%;
-  /* Dark Theme Main Obsidian Colors */
-  --text-normal: hsl(135, 36%, 85%);
-  --text-muted: hsl(135, 36%, 75%);
-  --text-faint: hsl(135, 36%, 50%);
-  --text-selection: var(--background-primary-alt);
-  --text-error: var(--color-red-dark);
-  --text-highlight-bg: var(--interactive-accent-dark);
-  --highlight-text-normal: hsl(135, 36%, 10%);
-  --highlight-text-dark: hsl(135, 36%, 10%);
-  --background-primary: hsl(135, 36%, 13%);
-  --background-primary-alt: hsl(135, 36%, 15%);
-  --background-secondary: hsl(135, 36%, 7.7%);
-  --background-secondary-blur: hsla(135, 36%, 7.7%, 0.75);
-  --background-secondary-alt: hsl(135, 36%, 6%);
-  --background-modifier-error: var(--color-red-dark);
-  --tab-label-background-color: hsl(135, 36%, 6.5%);
-  --page-background-color: var(--background-secondary);
-  --background-color-dt: hsl(135, 36%, 6.7%);
-  --file-explorer-vertical-lines-color: hsl(135, 36%, 12%);
-  --style-settings-vertical-lines-color: hsl(135, 36%, 12%);
-  --outline-vertical-lines-color: hsl(135, 36%, 12%);
-  --window-border: var(--background-primary);
-  --drop-shadow: hsla(135, 36%, 7%, 0.1) 0px 1px 2px 0px;
-  --drop-shadow-popup: hsla(135, 36%, 7%, 0.1) 0px 1px 2px, hsla(135, 36%, 7%, 0.1) 0px 2px 4px, hsla(135, 36%, 7%, 0.1) 0px 4px 8px, hsla(135, 36%, 7%, 0.1) 0px 8px 16px;
-  --scroll-bar-thumb: hsl(135, 36%, 18%);
-  --table-border-color: hsl(135, 36%, 18%);
-  --background-modifier-border: var(--table-border-color);
-  /* Scrollbar Settings */
-  --scroll-button-background-color: var(--background-secondary);
-  --scroll-button-background-color-hover: var(--background-secondary-alt);
-}
-.theme-dark.pt-color-scheme-pine-dt.pt-disable-blur {
-  --background-secondary-blur: hsla(135, 36%, 7.7%, 1);
-}
-.theme-dark.pt-color-scheme-pine-dt.pt-highlight-text-light-dt {
-  --highlight-text-normal: hsl(135, 36%, 85%);
-}
-.theme-dark.pt-color-scheme-pine-dt.pt-highlight-text-accent-dt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-dark.pt-color-scheme-pine-dt.pt-highlight-text-custom-dt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
+  --color-red-base-s: 58%;
+  --color-orange-base-s: 62%;
+  --color-yellow-base-s: 70%;
+  --color-green-base-s: 35%;
+  --color-mint-base-s: 31%;
+  --color-aqua-base-s: 38%;
+  --color-blue-base-s: 30%;
+  --color-purple-base-s: 40%;
+  --color-pink-base-s: 46%;
+  --color-grey-base-s: 2%;
+  --color-red-base-l: 21%;
+  --color-orange-base-l: 22%;
+  --color-yellow-base-l: 20%;
+  --color-green-base-l: 23%;
+  --color-mint-base-l: 25%;
+  --color-aqua-base-l: 20%;
+  --color-blue-base-l: 24%;
+  --color-purple-base-l: 22%;
+  --color-pink-base-l: 22%;
+  --color-grey-base-l: 23%;
+  --color-red-tint-l: 40%;
+  --color-orange-tint-l: 40%;
+  --color-yellow-tint-l: 33%;
+  --color-green-tint-l: 37%;
+  --color-mint-tint-l: 38%;
+  --color-aqua-tint-l: 35%;
+  --color-blue-tint-l: 46%;
+  --color-purple-tint-l: 47%;
+  --color-pink-tint-l: 42%;
+  --color-grey-tint-l: 42%;
+  --color-red-text-s: 74%;
+  --color-orange-text-s: 72%;
+  --color-yellow-text-s: 70%;
+  --color-green-text-s: 48%;
+  --color-mint-text-s: 58%;
+  --color-aqua-text-s: 50%;
+  --color-blue-text-s: 70%;
+  --color-purple-text-s: 65%;
+  --color-pink-text-s: 67%;
+  --color-grey-text-s: 2%;
+  --color-red-text-l: 70%;
+  --color-orange-text-l: 62%;
+  --color-yellow-text-l: 53%;
+  --color-green-text-l: 52%;
+  --color-mint-text-l: 52%;
+  --color-aqua-text-l: 53%;
+  --color-blue-text-l: 70%;
+  --color-purple-text-l: 73%;
+  --color-pink-text-l: 73%;
+  --color-grey-text-l: 71%;
+  --text-normal: hsl(135, 35%, 85%);
+  --text-muted: hsl(135, 35%, 70%);
+  --text-faint: hsl(135, 35%, 60%);
+  --background-primary: hsl(135, 35%, 13%);
+  --background-primary-alt: hsl(135, 35%, 15%);
+  --background-secondary: hsl(135, 35%, 7.7%);
+  --background-secondary-blur: hsla(135, 35%, 7.7%, 0.75);
+  --background-secondary-alt: hsl(135, 35%, 6%);
+  --background-tertiary: hsl(135, 35%, 6.2%);
+  --background-color-dt: hsl(135, 35%, 6%);
+  --vertical-lines-color-file-explorer: hsl(135, 35%, 15%);
+  --vertical-lines-color-outline: hsl(135, 35%, 15%);
+  --vertical-lines-color-style-settings: hsl(135, 35%, 13%);
+  --drop-shadow: hsla(135, 35%, 7%, 0.1) 0px 1px 2px 0px;
+  --drop-shadow-popup: hsla(135, 35%, 7%, 0.1) 0px 1px 2px, hsla(135, 35%, 7%, 0.1) 0px 2px 4px, hsla(135, 35%, 7%, 0.1) 0px 4px 8px, hsla(135, 35%, 7%, 0.1) 0px 8px 16px;
+  --scroll-bar-thumb: hsl(135, 35%, 18%);
 }
 
 /* #endregion */
@@ -1379,6 +1093,10 @@ button.copy-code-button {
   border-radius: var(--border-radius-small);
 }
 
+.setting-hotkey {
+  font-family: var(--font-interface);
+}
+
 .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
 .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
   font-variation-settings: "wght" 600;
@@ -1389,13 +1107,13 @@ button.copy-code-button {
 /* #endregion */
 /* #region  [Accent Color Presets] Light Theme */
 .theme-light.pt-accent-color-custom-lt {
-  --text-accent: var(--color-accent-dark);
-  --text-accent-hover: var(--color-accent-dark);
-  --interactive-accent: var(--color-accent-base);
-  --interactive-accent-dark: var(--color-accent-dark);
-  --interactive-accent-text: var(--color-accent-text);
-  --interactive-accent-hover: var(--color-accent-dark);
-  --text-highlight-accent: var(--color-accent-base);
+  --text-accent: var(--color-accent-dark-lt);
+  --text-accent-hover: var(--color-accent-dark-lt);
+  --interactive-accent: var(--color-accent-base-lt);
+  --interactive-accent-dark: var(--color-accent-dark-lt);
+  --interactive-accent-text: var(--color-accent-text-lt);
+  --interactive-accent-hover: var(--color-accent-dark-lt);
+  --text-highlight-accent: var(--color-accent-base-lt);
 }
 .theme-light.pt-accent-color-red-lt {
   --text-accent: var(--color-red-dark);
@@ -1491,13 +1209,13 @@ button.copy-code-button {
 /* #endregion */
 /* #region  [Accent Color Presets] Dark Theme */
 .theme-dark.pt-accent-color-custom-dt {
-  --text-accent: var(--color-accent-base);
-  --text-accent-hover: var(--color-accent-dark);
-  --interactive-accent: var(--color-accent-base);
-  --interactive-accent-dark: var(--color-accent-dark);
-  --interactive-accent-text: var(--color-accent-text);
-  --interactive-accent-hover: var(--color-accent-dark);
-  --text-highlight-accent: var(--color-accent-dark);
+  --text-accent: var(--color-accent-base-dt);
+  --text-accent-hover: var(--color-accent-dark-dt);
+  --interactive-accent: var(--color-accent-base-dt);
+  --interactive-accent-dark: var(--color-accent-dark-dt);
+  --interactive-accent-text: var(--color-accent-text-dt);
+  --interactive-accent-hover: var(--color-accent-dark-dt);
+  --text-highlight-accent: var(--color-accent-dark-dt);
 }
 .theme-dark.pt-accent-color-red-dt {
   --text-accent: var(--color-red-base);
@@ -2534,7 +2252,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   width: fit-content;
   padding: 0px 10px;
   color: var(--text-muted);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   box-shadow: var(--drop-shadow);
@@ -2544,7 +2262,7 @@ body.pt-titlebar-hide-text .titlebar-text {
 .pt-default-titlebar .titlebar-button-container.mod-left {
   height: -webkit-fill-available;
   margin-top: 4px;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   box-shadow: var(--drop-shadow);
@@ -2561,7 +2279,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   stroke-width: 2px;
 }
 .pt-default-titlebar .titlebar-button-container.mod-right {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   box-shadow: var(--drop-shadow);
@@ -2596,7 +2314,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   left: 48px !important;
   height: 22px;
   margin-top: 4px;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   box-shadow: var(--drop-shadow);
@@ -2632,7 +2350,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .pt-windows-titlebar .titlebar-button-container.mod-right {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   height: 30px;
@@ -2685,7 +2403,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   width: fit-content;
   padding: 0px 10px;
   color: var(--text-muted);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   box-shadow: var(--drop-shadow);
@@ -2701,7 +2419,7 @@ body.pt-solid-titlebar-dt.theme-dark.pt-titlebar-custom-dt div.titlebar {
   border-bottom: 1px solid var(--window-border);
 }
 body.pt-solid-titlebar-dt.theme-dark.pt-titlebar-default-dt div.titlebar {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   box-shadow: var(--drop-shadow);
   border-bottom: 1px solid var(--window-border);
 }
@@ -2722,7 +2440,7 @@ body.pt-solid-titlebar-lt.theme-light.pt-titlebar-custom-lt div.titlebar {
   box-shadow: var(--drop-shadow);
 }
 body.pt-solid-titlebar-lt.theme-light.pt-titlebar-default-lt div.titlebar {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   box-shadow: var(--drop-shadow);
 }
 body.pt-solid-titlebar-lt.theme-light div.titlebar-text,
@@ -2741,7 +2459,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .theme-light.pt-titlebar-default-lt div.titlebar-text,
 .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
 .theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right, .theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   box-shadow: var(--drop-shadow);
 }
 .theme-light.pt-titlebar-custom-lt div.titlebar-text,
@@ -2826,7 +2544,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   border-radius: var(--border-radius-small);
   border: 1px solid var(--window-border);
   width: fit-content;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   box-shadow: var(--drop-shadow);
   overflow: hidden;
 }
@@ -3025,7 +2743,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
 :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
-  background: var(--tab-label-background-color);
+  background: var(--background-tertiary);
 }
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
@@ -3113,7 +2831,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 /* Tab label background */
 .workspace-tab-container-inner {
   min-height: 36px;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   flex-wrap: wrap;
@@ -3268,7 +2986,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 /* #endregion */
 /* #region  [Nav Header] Buttons */
 .embedded-backlinks .nav-buttons-container {
-  border: 1px solid var(--tab-label-background-color);
+  border: 1px solid var(--background-tertiary);
   box-shadow: var(--drop-shadow);
   background-color: var(--background-secondary-blur);
   backdrop-filter: blur(var(--blur-intensity));
@@ -3285,7 +3003,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   border: 1px solid var(--window-border);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
@@ -4049,7 +3767,7 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
 }
 
 .dropdown {
-  font-family: var(--font-family-ui);
+  font-family: var(--font-interface);
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
@@ -4139,12 +3857,8 @@ select.dropdown option[value*=grey] {
   box-shadow: var(--drop-shadow);
   border: 1px solid var(--window-border);
 }
-
-div.style-settings-container .checkbox-container {
-  background-color: var(--background-secondary);
-}
-div.style-settings-container .checkbox-container.is-enabled {
-  background-color: var(--interactive-accent);
+.checkbox-container.is-enabled {
+  background-color: var(--interactive-accent-hover);
 }
 
 .checkbox-container:after {
@@ -4193,11 +3907,11 @@ div.style-settings-container .checkbox-container.is-enabled {
 }
 
 .checkbox-container.is-enabled:hover {
-  background-color: var(--interactive-accent-hover);
+  background-color: var(--interactive-accent);
 }
 
 .checkbox-container:not(.is-enabled):hover {
-  background-color: var(--interactive-accent);
+  background-color: var(--interactive-accent-dark);
 }
 
 .checkbox-container.is-enabled:after {
@@ -4284,7 +3998,7 @@ img.community-theme-lightbox {
   max-width: 240px;
   border: 1px solid var(--window-border);
   box-shadow: var(--drop-shadow);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
 }
 
 .community-theme,
@@ -4615,12 +4329,16 @@ input[type=range]:hover {
   background-color: var(--interactive-accent);
 }
 
+input.slider {
+  height: 0.5em;
+}
+
 .theme-light .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 5px solid var(--background-primary);
   height: 14px;
   width: 14px;
   margin-top: -1px;
+  border: 5px solid var(--background-primary);
   border-radius: var(--border-radius-small);
   background-color: var(--highlight-text-dark);
   box-shadow: var(--drop-shadow);
@@ -4628,10 +4346,10 @@ input[type=range]:hover {
 
 .theme-dark .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 5px solid var(--color-grey-base);
   height: 14px;
   width: 14px;
   margin-top: -1px;
+  border: 5px solid var(--color-grey-base);
   border-radius: var(--border-radius-small);
   background-color: var(--text-normal);
   box-shadow: var(--drop-shadow);
@@ -4909,7 +4627,7 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 .view-header {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border: var(--border-size) solid transparent;
   border-bottom: 1px solid var(--window-border);
   margin-bottom: 1px;
@@ -4930,7 +4648,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header svg {
 }
 
 body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border: var(--border-size) solid transparent;
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
@@ -4956,7 +4674,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 
 /* Matches the gradient next to the right hand buttons in the View Header with the background */
 .view-header-title-container:after {
-  background: linear-gradient(to right, transparent, var(--tab-label-background-color));
+  background: linear-gradient(to right, transparent, var(--background-tertiary));
   transition: background ease 200ms;
   transition-delay: 200ms;
 }
@@ -5070,7 +4788,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   padding: 9px;
   border: var(--border-size) solid transparent;
   color: var(--text-muted);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   stroke-width: 2px;
@@ -5096,7 +4814,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .workspace-ribbon .side-dock-actions {
   margin-top: calc(var(--window-gap) / 2);
   margin-bottom: auto;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   border: 1px solid var(--window-border);
@@ -5104,7 +4822,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 
 .workspace-ribbon .side-dock-settings {
   margin-top: 10px;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   border: 1px solid var(--window-border);
@@ -5210,7 +4928,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   color: var(--interactive-accent-text);
   border-radius: var(--border-radius-small);
   background-color: var(--background-primary);
-  border: var(--border-size) solid var(--background-primary);
   font-variation-settings: "wght" 600;
 }
 
@@ -5237,7 +4954,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 .nav-file-title,
 .nav-folder-title {
-  padding: 1px 5px 1px calc(var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  padding: 1px 5px 1px calc(var(--vertical-lines-width-file-explorer) / 2 + 1px);
 }
 
 .nav-folder-title-content {
@@ -5280,6 +4997,40 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /* Horizontally centers the collapse icon in it's parent in the File Tree */
 .collapse-icon {
   justify-content: center;
+}
+
+/* #endregion */
+/* #region  [User Interface] Document Search */
+.document-search-container {
+  border-radius: var(--border-radius);
+  border-top: 1px solid var(--window-border);
+  padding: 4px;
+}
+.theme-light .document-search-container {
+  background-color: var(--background-tertiary);
+}
+.theme-dark .document-search-container {
+  background-color: var(--background-secondary-alt);
+}
+.document-search-container .document-search-input,
+.document-search-container .document-search-input:focus {
+  background-color: var(--background-primary);
+  border: 1px solid var(--window-border);
+}
+.document-search-container .document-search-input.mod-no-match,
+.document-search-container .document-search-input:focus.mod-no-match {
+  background-color: var(--color-red-base);
+  border: 1px solid var(--color-red-dark);
+}
+.document-search-container .document-search-close-button {
+  top: 5px;
+  margin: 0px 4px;
+}
+.document-search-container .document-search-button {
+  background-color: var(--color-grey-base);
+}
+.document-search-container .document-search-button:hover {
+  color: var(--color-grey-dark);
 }
 
 /* #endregion */
@@ -5372,11 +5123,6 @@ div.notice-container div.notice {
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow-popup);
   padding: 2px;
-}
-
-.suggestion-container .suggestion-prefix,
-.suggestion-item .suggestion-prefix {
-  font-variation-settings: "wght" 600;
 }
 
 .suggestion-item.is-selected {
@@ -5544,7 +5290,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=note] .callout-content {
   border-color: var(--color-grey-dark);
-  background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), 0.1);
+  background-color: hsla(var(--color-grey-base-h), var(--color-grey-base-s), var(--color-grey-base-l), 0.1);
 }
 .callout[data-callout=abstract] .callout-title, .callout[data-callout=summary] .callout-title, .callout[data-callout=tldr] .callout-title {
   background-color: var(--color-aqua-base);
@@ -5556,7 +5302,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=abstract] .callout-content, .callout[data-callout=summary] .callout-content, .callout[data-callout=tldr] .callout-content {
   border-color: var(--color-aqua-dark);
-  background-color: hsla(var(--color-aqua-h), var(--color-aqua-s-desaturated), var(--color-aqua-l-darkened), 0.1);
+  background-color: hsla(var(--color-aqua-base-h), var(--color-aqua-base-s), var(--color-aqua-base-l), 0.1);
 }
 .callout[data-callout=info] .callout-title, .callout[data-callout=todo] .callout-title {
   background-color: var(--color-blue-base);
@@ -5568,7 +5314,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=info] .callout-content, .callout[data-callout=todo] .callout-content {
   border-color: var(--color-blue-dark);
-  background-color: hsla(var(--color-blue-h), var(--color-blue-s-desaturated), var(--color-blue-l-darkened), 0.1);
+  background-color: hsla(var(--color-blue-base-h), var(--color-blue-base-s), var(--color-blue-base-l), 0.1);
 }
 .callout[data-callout=tip] .callout-title, .callout[data-callout=hint] .callout-title, .callout[data-callout=important] .callout-title {
   background-color: var(--color-mint-base);
@@ -5580,7 +5326,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=tip] .callout-content, .callout[data-callout=hint] .callout-content, .callout[data-callout=important] .callout-content {
   border-color: var(--color-mint-dark);
-  background-color: hsla(var(--color-mint-h), var(--color-mint-s-desaturated), var(--color-mint-l-darkened), 0.1);
+  background-color: hsla(var(--color-mint-base-h), var(--color-mint-base-s), var(--color-mint-base-l), 0.1);
 }
 .callout[data-callout=success] .callout-title, .callout[data-callout=check] .callout-title, .callout[data-callout=done] .callout-title {
   background-color: var(--color-green-base);
@@ -5592,7 +5338,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=success] .callout-content, .callout[data-callout=check] .callout-content, .callout[data-callout=done] .callout-content {
   border-color: var(--color-green-dark);
-  background-color: hsla(var(--color-green-h), var(--color-green-s-desaturated), var(--color-green-l-darkened), 0.1);
+  background-color: hsla(var(--color-green-base-h), var(--color-green-base-s), var(--color-green-base-l), 0.1);
 }
 .callout[data-callout=question] .callout-title, .callout[data-callout=help] .callout-title, .callout[data-callout=faq] .callout-title {
   background-color: var(--color-yellow-base);
@@ -5604,7 +5350,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=question] .callout-content, .callout[data-callout=help] .callout-content, .callout[data-callout=faq] .callout-content {
   border-color: var(--color-yellow-dark);
-  background-color: hsla(var(--color-yellow-h), var(--color-yellow-s-desaturated), var(--color-yellow-l-darkened), 0.1);
+  background-color: hsla(var(--color-yellow-base-h), var(--color-yellow-base-s), var(--color-yellow-base-l), 0.1);
 }
 .callout[data-callout=warning] .callout-title, .callout[data-callout=caution] .callout-title, .callout[data-callout=attention] .callout-title {
   background-color: var(--color-orange-base);
@@ -5616,7 +5362,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=warning] .callout-content, .callout[data-callout=caution] .callout-content, .callout[data-callout=attention] .callout-content {
   border-color: var(--color-orange-dark);
-  background-color: hsla(var(--color-orange-h), var(--color-orange-s-desaturated), var(--color-orange-l-darkened), 0.1);
+  background-color: hsla(var(--color-orange-base-h), var(--color-orange-base-s), var(--color-orange-base-l), 0.1);
 }
 .callout[data-callout=failure] .callout-title, .callout[data-callout=fail] .callout-title, .callout[data-callout=missing] .callout-title {
   background-color: var(--color-red-base);
@@ -5628,7 +5374,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=failure] .callout-content, .callout[data-callout=fail] .callout-content, .callout[data-callout=missing] .callout-content {
   border-color: var(--color-red-dark);
-  background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), 0.1);
+  background-color: hsla(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-base-l), 0.1);
 }
 .callout[data-callout=danger] .callout-title, .callout[data-callout=error] .callout-title {
   background-color: var(--color-red-base);
@@ -5640,7 +5386,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=danger] .callout-content, .callout[data-callout=error] .callout-content {
   border-color: var(--color-red-dark);
-  background-color: hsla(var(--color-red-h), var(--color-red-s-desaturated), var(--color-red-l-darkened), 0.1);
+  background-color: hsla(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-base-l), 0.1);
 }
 .callout[data-callout=bug] .callout-title {
   background-color: var(--color-pink-base);
@@ -5652,7 +5398,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=bug] .callout-content {
   border-color: var(--color-pink-dark);
-  background-color: hsla(var(--color-pink-h), var(--color-pink-s-desaturated), var(--color-pink-l-darkened), 0.1);
+  background-color: hsla(var(--color-pink-base-h), var(--color-pink-base-s), var(--color-pink-base-l), 0.1);
 }
 .callout[data-callout=example] .callout-title {
   background-color: var(--color-purple-base);
@@ -5664,7 +5410,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=example] .callout-content {
   border-color: var(--color-purple-dark);
-  background-color: hsla(var(--color-purple-h), var(--color-purple-s-desaturated), var(--color-purple-l-darkened), 0.1);
+  background-color: hsla(var(--color-purple-base-h), var(--color-purple-base-s), var(--color-purple-base-l), 0.1);
 }
 .callout[data-callout=quote] .callout-title, .callout[data-callout=cite] .callout-title {
   background-color: var(--color-grey-base);
@@ -5676,7 +5422,7 @@ div.notice-container div.notice {
 }
 .callout[data-callout=quote] .callout-content, .callout[data-callout=cite] .callout-content {
   border-color: var(--color-grey-dark);
-  background-color: hsla(var(--color-grey-h), var(--color-grey-s-desaturated), var(--color-grey-l-darkened), 0.1);
+  background-color: hsla(var(--color-grey-base-h), var(--color-grey-base-s), var(--color-grey-base-l), 0.1);
 }
 
 /* #endregion */
@@ -5685,6 +5431,15 @@ div.notice-container div.notice {
   Editor
   ==========================================================================
 */
+/* #region  [Editor] Hyperlink */
+a {
+  color: var(--interactive-accent-text);
+}
+a:hover {
+  color: var(--interactive-accent-hover);
+}
+
+/* #endregion */
 /* #region  [Editor] Edit Base */
 .cm-s-obsidian span.cm-builtin,
 .cm-s-obsidian span.cm-hr {
@@ -5789,10 +5544,12 @@ div.notice-container div.notice {
 .cm-s-obsidian span.cm-hashtag {
   text-decoration: none;
   color: var(--text-normal);
+  font-family: var(--font-text);
+  font-variation-settings: "wght" 600;
 }
 
 .cm-line .cm-hashtag-begin {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-top-left-radius: var(--border-radius-small);
   border-bottom-left-radius: var(--border-radius-small);
   padding-left: 5px;
@@ -5801,7 +5558,7 @@ div.notice-container div.notice {
 }
 
 .cm-line .cm-hashtag-end {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
   padding-right: 5px;
@@ -5818,18 +5575,6 @@ div.notice-container div.notice {
 p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
-}
-
-.document-search-container {
-  border-radius: var(--border-radius);
-  background-color: var(--background-secondary-alt);
-  border-top: 1px solid var(--window-border);
-}
-.document-search-container .document-search-button {
-  background-color: var(--color-grey-base);
-}
-.document-search-container .document-search-button:hover {
-  color: var(--color-grey-dark);
 }
 
 /* #endregion */
@@ -5851,6 +5596,7 @@ p {
 .theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--color-red-text);
   background-color: var(--background-primary-alt);
+  border-radius: var(--border-radius-small);
 }
 .theme-light .cm-s-obsidian span.cm-footref,
 .theme-light .cm-s-obsidian span.cm-blockid,
@@ -5885,6 +5631,7 @@ p {
 .theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
   color: var(--color-red-text);
   background-color: var(--background-secondary-alt);
+  border-radius: var(--border-radius-small);
 }
 .theme-dark .cm-s-obsidian span.cm-footref,
 .theme-dark .cm-s-obsidian span.cm-blockid,
@@ -5999,10 +5746,11 @@ a.tag[href*="#"] {
   text-decoration: none;
   border-radius: var(--border-radius-small);
   border: 2px solid var(--window-border);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   padding: 0px 4px;
   display: inline-flex;
   align-items: center;
+  vertical-align: bottom;
 }
 a.tag[href*="#"]:hover {
   color: var(--interactive-accent-text);
@@ -6365,13 +6113,15 @@ button.copy-code-button {
 }
 
 /* #region  [Editor] Text Selection */
-.theme-light body ::selection,
+.theme-light ::selection,
+.theme-light .markdown-source-view.mod-cm6 .cm-selection,
 .theme-light div.view-header-title::selection {
   background-color: var(--text-selection);
   color: var(--highlight-text-dark);
 }
 
-.theme-dark body ::selection,
+.theme-dark ::selection,
+.theme-dark .markdown-source-view.mod-cm6 .cm-selection,
 .theme-dark div.view-header-title::selection {
   background-color: var(--text-selection);
   color: var(--text-normal);
@@ -6392,7 +6142,7 @@ h6::selection {
 .cm-s-obsidian span.obsidian-search-match-highlight {
   border-radius: var(--border-radius-small);
   background-color: var(--interactive-accent);
-  color: var(--highlight-text-dark);
+  color: var(--text-normal);
 }
 
 /* #endregion */
@@ -6493,6 +6243,7 @@ h6::selection {
 
 .workspace-leaf-content[data-type=backlink] .search-result-file-match,
 .embedded-backlinks .search-result-file-match {
+  font-family: var(--font-text);
   left: unset;
   width: 100%;
   padding: 5px 20px 5px 10px;
@@ -6611,7 +6362,7 @@ h6::selection {
 .workspace-leaf-content[data-type=backlink] .backlink-pane > .tree-item-self:not(:last-of-type),
 .embedded-backlinks .backlink-pane > .tree-item-self:not(:last-of-type) {
   border: 1px solid var(--window-border);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 25px;
@@ -6673,10 +6424,8 @@ input.prompt-input {
   margin-bottom: 10px;
 }
 
-.suggestion-hotkey {
-  background-color: var(--background-primary);
-  border-radius: var(--border-radius-small);
-  font-variation-settings: "wght" 600;
+.prompt-results {
+  padding: 0px 10px 0px 0px;
 }
 
 .modal-container .prompt {
@@ -6687,18 +6436,21 @@ input.prompt-input {
   -webkit-backdrop-filter: blur(var(--blur-intensity));
 }
 
-.prompt-results {
-  padding: 0px 10px 0px 0px;
+.suggestion-hotkey {
+  background-color: var(--background-primary);
+  border-radius: var(--border-radius-small);
+  font-variation-settings: "wght" 600;
+  font-family: var(--font-interface);
 }
 
+.modal-container .prompt .prompt-results::-webkit-scrollbar-track {
+  border-radius: var(--border-radius-small);
+}
 .theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-  background-color: var(--background-color-lt);
-  border-radius: var(--border-radius-small);
+  background-color: var(--background-primary);
 }
-
 .theme-dark .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-  background-color: var(--background-color-dt);
-  border-radius: var(--border-radius-small);
+  background-color: var(--background-secondary-alt);
 }
 
 /* #endregion */
@@ -6708,14 +6460,16 @@ input.prompt-input {
   border-left: unset;
   padding: 0px 8px 8px 8px;
 }
-
 .workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
-  margin: 0px 0px 0px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  margin: 0px 0px 0px calc(12px - var(--vertical-lines-width-file-explorer) / 2 + 1px);
   padding-left: unset;
 }
-
 .workspace-leaf-content[data-type=file-explorer] .nav-file-title-content {
-  padding: 1px 2px 1px calc(8px - var(--file-explorer-vertical-lines-width));
+  padding: 1px 2px 1px calc(8px - var(--vertical-lines-width-file-explorer));
+}
+.workspace-leaf-content[data-type=file-explorer] .search-input-container {
+  margin: unset;
+  padding: 0px 0px 10px 0px;
 }
 
 .nav-file:not(.mod-root),
@@ -6727,25 +6481,18 @@ input.prompt-input {
   margin-left: unset;
 }
 
-.workspace-leaf-content[data-type=file-explorer] .search-input-container {
-  margin: unset;
-  padding: 0px 0px 10px 0px;
-}
-
 /* #region  [Plugin - Core] File Explorer Vertical Lines */
 .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) .nav-folder-children {
-  margin: 2px 0px 2px calc(10px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  margin: 2px 0px 2px calc(10px - var(--vertical-lines-width-file-explorer) / 2 + 1px);
   padding-left: unset;
 }
-
 .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > div.nav-folder-children {
   margin-left: unset;
   border-left: unset;
   padding: 0px 8px 8px 8px;
 }
-
 .pt-file-explorer-vertical-lines .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root .nav-folder-children {
-  border-left: var(--file-explorer-vertical-lines-width) solid var(--file-explorer-vertical-lines-color);
+  border-left: var(--vertical-lines-width-file-explorer) solid var(--vertical-lines-color-file-explorer);
 }
 
 /* #endregion */
@@ -6816,7 +6563,7 @@ div.graph-controls.is-close {
   font-variation-settings: "wght" 600;
 }
 .graph-control-section.is-collapsed .tree-item-self {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   margin-bottom: unset;
 }
 .graph-control-section:not(:last-child) .tree-item-children {
@@ -6835,7 +6582,7 @@ div.graph-controls.is-close {
 }
 
 .theme-light .graph-control-section {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
 }
 
 .theme-dark .graph-control-section {
@@ -7083,7 +6830,7 @@ div.graph-controls.is-close {
 }
 .workspace-leaf-content[data-type=outgoing-link] .outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type) {
   border: 1px solid var(--window-border);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 25px;
@@ -7139,6 +6886,7 @@ div.graph-controls.is-close {
   margin-bottom: 8px;
 }
 .workspace-leaf-content[data-type=outgoing-link] .search-result-file-match {
+  font-family: var(--font-text);
   left: unset;
   width: 100%;
   padding: 5px 20px 5px 10px;
@@ -7190,7 +6938,7 @@ div.graph-controls.is-close {
 .workspace-leaf-content[data-type=outline] .tree-item-inner {
   font-variation-settings: "wght" 600;
   color: var(--text-normal);
-  padding: 2px 2px 2px calc(8px - var(--file-explorer-vertical-lines-width));
+  padding: 2px 2px 2px calc(8px - var(--vertical-lines-width-file-explorer));
   line-height: 14px;
 }
 .workspace-leaf-content[data-type=outline] .tree-item-self.is-clickable:hover {
@@ -7225,11 +6973,11 @@ div.graph-controls.is-close {
   display: none;
 }
 .workspace-leaf-content[data-type=outline] .tree-item-children {
-  margin: 0px 0px 0px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
+  margin: 0px 0px 0px calc(12px - var(--vertical-lines-width-file-explorer) / 2 + 1px);
   border-left: 2px solid transparent;
 }
 .workspace-leaf-content[data-type=outline] .tree-item-self {
-  padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
+  padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
   border: var(--border-size) solid transparent;
   border-radius: var(--border-radius-small);
   white-space: nowrap;
@@ -7245,12 +6993,12 @@ div.graph-controls.is-close {
 /* #endregion */
 /* #region  [Plugin - Core] Outline Vertical Lines */
 .pt-outline-vertical-lines .workspace-leaf-content[data-type=outline] .tree-item-children {
-  margin: 2px 0px 2px calc(12px - var(--file-explorer-vertical-lines-width) / 2 + 1px);
-  border-left: var(--outline-vertical-lines-width) solid var(--outline-vertical-lines-color);
+  margin: 2px 0px 2px calc(12px - var(--vertical-lines-width-file-explorer) / 2 + 1px);
+  border-left: var(--vertical-lines-width-outline) solid var(--vertical-lines-color-outline);
 }
 
 .pt-outline-vertical-lines .workspace-leaf-content[data-type=outline] .tree-item-self {
-  padding: 2px 5px 2px calc(var(--outline-vertical-lines-width) / 2);
+  padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
   border: var(--border-size) solid transparent;
 }
 
@@ -7315,6 +7063,7 @@ div.graph-controls.is-close {
   box-sizing: border-box;
 }
 .workspace-leaf-content[data-type=search] .search-result-file-match {
+  font-family: var(--font-text);
   width: 100%;
   padding: 5px 20px 5px 10px;
   border-radius: var(--border-radius-small);
@@ -7345,21 +7094,21 @@ div.graph-controls.is-close {
 }
 .workspace-leaf-content[data-type=search] .search-result .tree-item-self {
   border-bottom: 1px solid var(--window-border);
-  background: var(--tab-label-background-color);
+  background: var(--background-tertiary);
   border-radius: var(--border-radius);
   padding: 5px 5px 5px 25px;
 }
 .workspace-leaf-content[data-type=search] .search-result .tree-item-self.is-clickable:hover {
   box-shadow: unset;
   background: unset;
-  background: var(--tab-label-background-color);
+  background: var(--background-tertiary);
 }
 .workspace-leaf-content[data-type=search] .search-info-container {
   font-size: 14px;
   font-variation-settings: "wght" 600;
   height: fit-content;
   width: fit-content;
-  background: var(--tab-label-background-color);
+  background: var(--background-tertiary);
   border-radius: var(--border-radius-small);
   box-shadow: var(--drop-shadow);
   padding: 0px 10px;
@@ -7402,13 +7151,21 @@ div.graph-controls.is-close {
   padding: 8px;
   border: 1px solid var(--table-border-color);
 }
+.suggestion-container kbd {
+  letter-spacing: 0.05em;
+}
+.suggestion-container .suggestion::-webkit-scrollbar-track {
+  border-radius: var(--border-radius-small);
+}
+.theme-light .suggestion-container .suggestion::-webkit-scrollbar-track {
+  background-color: var(--background-primary);
+}
+.theme-dark .suggestion-container .suggestion::-webkit-scrollbar-track {
+  background-color: var(--background-secondary-alt);
+}
 
 .suggestion {
   padding-right: 8px;
-}
-
-.suggestion-container kbd {
-  letter-spacing: 0.05em;
 }
 
 .suggestion-content {
@@ -7419,10 +7176,8 @@ div.graph-controls.is-close {
 }
 
 .suggestion-item {
-  display: flex;
   align-items: center;
   padding: 5px 10px;
-  /* margin-right: 8px; */
 }
 .suggestion-item .suggestion-flair {
   color: var(--interactive-accent-text);
@@ -7430,12 +7185,12 @@ div.graph-controls.is-close {
   position: relative;
   left: unset;
   top: unset;
-  margin-left: 10px;
   order: 5;
 }
-.suggestion-item .suggestion-flair:first-child {
-  padding: 0px 5px;
+.suggestion-item .suggestion-flair[aria-label] {
   margin-right: 8px;
+}
+.suggestion-item .suggestion-flair:first-child {
   font-variation-settings: "wght" 600;
   font-size: 0.75rem;
   background-color: var(--background-primary);
@@ -7453,7 +7208,7 @@ div.graph-controls.is-close {
   background-color: var(--background-primary);
   margin-right: 8px;
   padding: 0px 5px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .suggestion-item:hover .suggestion-prefix, .suggestion-item.is-selected .suggestion-prefix {
   background-color: var(--background-secondary);
@@ -7479,14 +7234,14 @@ div.graph-controls.is-close {
 }
 .workspace-leaf-content[data-type=starred] .nav-file-icon {
   margin: unset;
-  padding: 0px 10px;
+  padding: 0px 8px;
 }
 .workspace-leaf-content[data-type=starred] .nav-file-title {
   border-radius: var(--border-radius-small);
-  border: var(--border-size) solid transparent;
+  border: 1px solid var(--window-border);
   color: var(--text-normal);
   width: 100%;
-  padding: 0px;
+  padding: 2px 0px;
   background: var(--background-primary);
   box-shadow: var(--drop-shadow);
 }
@@ -7507,6 +7262,7 @@ div.graph-controls.is-close {
   padding: 0px 5px 0px 10px;
   background: var(--background-primary);
   box-shadow: var(--drop-shadow);
+  align-items: center;
 }
 .workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-inner {
   padding-right: 5px;
@@ -7608,12 +7364,6 @@ div.graph-controls.is-close {
 }
 .cm-header-6 {
   font-size: var(--h6-font-size);
-}
-
-.cm-s-obsidian .cm-header,
-.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-  font-weight: unset;
-  font-variation-settings: "wght" 800;
 }
 
 .cm-s-obsidian.mod-cm6 .HyperMD-header-1 {
@@ -8107,6 +7857,9 @@ body:not(.pt-disable-custom-icons) svg.document {
   -webkit-mask-size: 21px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M19.937 8.68c-.011-.032-.02-.063-.033-.094a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.99.99 0 0 0-.05-.258zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z'%3E%3C/path%3E%3C/svg%3E");
 }
+body:not(.pt-disable-custom-icons) .nav-file-icon svg.document {
+  -webkit-mask-size: 18px;
+}
 body:not(.pt-disable-custom-icons) svg.hashtag {
   -webkit-mask-size: 19px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M16.018 3.815 15.232 8h-4.966l.716-3.815-1.964-.37L8.232 8H4v2h3.857l-.751 4H3v2h3.731l-.714 3.805 1.965.369L8.766 16h4.966l-.714 3.805 1.965.369.783-4.174H20v-2h-3.859l.751-4H21V8h-3.733l.716-3.815-1.965-.37zM14.106 14H9.141l.751-4h4.966l-.752 4z'%3E%3C/path%3E%3C/svg%3E");
@@ -8489,7 +8242,7 @@ body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-icon svg {
 }
 body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-icon svg {
   -webkit-mask-size: 21px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M4.035 15.479A3.976 3.976 0 0 0 4 16c0 2.378 2.138 4.284 4.521 3.964C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.036C17.857 20.284 20 18.378 20 16c0-.173-.012-.347-.035-.521C21.198 14.786 22 13.465 22 12s-.802-2.786-2.035-3.479C19.988 8.347 20 8.173 20 8c0-2.378-2.143-4.288-4.521-3.964C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.036C6.138 3.712 4 5.622 4 8c0 .173.012.347.035.521C2.802 9.214 2 10.535 2 12s.802 2.786 2.035 3.479zm1.442-5.403 1.102-.293-.434-1.053A1.932 1.932 0 0 1 6 8c0-1.103.897-2 2-2 .247 0 .499.05.73.145l1.054.434.293-1.102a1.99 1.99 0 0 1 3.846 0l.293 1.102 1.054-.434C15.501 6.05 15.753 6 16 6c1.103 0 2 .897 2 2 0 .247-.05.5-.145.73l-.434 1.053 1.102.293a1.993 1.993 0 0 1 0 3.848l-1.102.293.434 1.053c.095.23.145.483.145.73 0 1.103-.897 2-2 2-.247 0-.499-.05-.73-.145l-1.054-.434-.293 1.102a1.99 1.99 0 0 1-3.846 0l-.293-1.102-1.054.434A1.935 1.935 0 0 1 8 18c-1.103 0-2-.897-2-2 0-.247.05-.5.145-.73l.434-1.053-1.102-.293a1.993 1.993 0 0 1 0-3.848z'%3E%3C/path%3E%3Cpath d='m15.742 10.71-1.408-1.42-3.331 3.299-1.296-1.296-1.414 1.414 2.704 2.704z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m10.933 13.519-2.226-2.226-1.414 1.414 3.774 3.774 5.702-6.84-1.538-1.282z'%3E%3C/path%3E%3Cpath d='M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z'%3E%3C/path%3E%3C/svg%3E");
 }
 body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-icon svg {
   -webkit-mask-size: 21px;
@@ -8517,7 +8270,7 @@ body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-icon svg
 }
 body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-icon svg {
   -webkit-mask-size: 21px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2c-4.963 0-9 4.038-9 9v8h.051c.245 1.691 1.69 3 3.449 3 1.174 0 2.074-.417 2.672-1.174a3.99 3.99 0 0 0 5.668-.014c.601.762 1.504 1.188 2.66 1.188 1.93 0 3.5-1.57 3.5-3.5V11c0-4.962-4.037-9-9-9zm7 16.5c0 .827-.673 1.5-1.5 1.5-.449 0-1.5 0-1.5-2v-1h-2v1c0 1.103-.897 2-2 2s-2-.897-2-2v-1H8v1c0 1.845-.774 2-1.5 2-.827 0-1.5-.673-1.5-1.5V11c0-3.86 3.141-7 7-7s7 3.14 7 7v7.5z'%3E%3C/path%3E%3Ccircle cx='9' cy='10' r='2'%3E%3C/circle%3E%3Ccircle cx='15' cy='10' r='2'%3E%3C/circle%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z'%3E%3C/path%3E%3Cpath d='M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z'%3E%3C/path%3E%3C/svg%3E");
 }
 body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-icon svg {
   -webkit-mask-size: 21px;
@@ -8774,7 +8527,7 @@ mark.grey, mark.Grey {
   font-size: 1em;
   opacity: 1;
   background-color: transparent;
-  margin: 0px 0px;
+  padding: 0px;
 }
 
 .theme-dark.pt-highlight-style-border-dt mark,
@@ -8783,7 +8536,7 @@ mark.grey, mark.Grey {
 .theme-light.pt-highlight-style-border-lt .cm-highlight {
   background-color: var(--background-primary);
   border: var(--border-size) solid var(--mark-highlight-dark);
-  padding: 0px 5px;
+  padding: 0px 4px;
 }
 
 .theme-dark.pt-highlight-style-filled-dt mark,
@@ -8791,7 +8544,7 @@ mark.grey, mark.Grey {
 .theme-light.pt-highlight-style-filled-lt mark,
 .theme-light.pt-highlight-style-filled-lt .cm-highlight {
   background-color: var(--mark-highlight-base);
-  padding: 2px 7px;
+  padding: 0px 4px;
 }
 
 .theme-dark.pt-highlight-style-borderandfilled-dt mark,
@@ -8800,7 +8553,7 @@ mark.grey, mark.Grey {
 .theme-light.pt-highlight-style-borderandfilled-lt .cm-highlight {
   background-color: var(--mark-highlight-base);
   border: var(--border-size) solid var(--mark-highlight-dark);
-  padding: 0px 5px;
+  padding: 0px 4px;
 }
 
 mark,
@@ -8875,7 +8628,7 @@ div.kanban-plugin__lane button.kanban-plugin__lane-settings-button:hover {
   color: var(--interactive-accent-hover);
 }
 div.kanban-plugin__lane-wrapper {
-  margin-right: 16px;
+  margin-right: 15px;
 }
 div.kanban-plugin__lane-title {
   cursor: text;
@@ -8897,23 +8650,29 @@ div.kanban-plugin__lane-grip:hover {
 }
 div.kanban-plugin__lane-items {
   padding: unset;
-  margin: 8px;
+  margin: unset;
 }
 div.kanban-plugin__board > div {
   padding: 15px;
 }
 div.kanban-plugin__item {
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
+  margin: 0px 8px;
+}
+.theme-light div.kanban-plugin__item {
+  background-color: var(--background-primary);
+}
+.theme-dark div.kanban-plugin__item {
+  background-color: var(--background-secondary-alt);
 }
 div.kanban-plugin__item button.kanban-plugin__item-prefix-button:hover,
 div.kanban-plugin__item button.kanban-plugin__item-postfix-button:hover {
   color: var(--interactive-accent-hover);
 }
 div.kanban-plugin__item-button-wrapper {
-  background: var(--tab-label-background-color);
+  background: var(--background-tertiary);
   border-radius: var(--border-radius);
   border-top-color: var(--window-border);
 }
@@ -8931,6 +8690,7 @@ div.kanban-plugin__item-title {
 }
 div.kanban-plugin__item-title-wrapper {
   background: unset;
+  font-family: var(--font-text);
 }
 div.kanban-plugin__drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
   box-shadow: var(--drop-shadow-popup);
@@ -9044,13 +8804,16 @@ div.kanban-plugin__lane-items > div {
   margin-top: 8px;
 }
 
-div.kanban-plugin__item-wrapper:first-child {
-  margin-top: unset;
+div.kanban-plugin__scroll-container.kanban-plugin__vertical {
+  overflow-x: visible;
+  overflow-y: auto;
 }
 
-div.kanban-plugin__scroll-container.kanban-plugin__vertical {
-  overflow-x: unset;
-  overflow-y: unset;
+div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
+  margin: 8px;
+  border-radius: var(--border-radius-small);
+  width: -webkit-fill-available;
+  border-color: var(--window-border);
 }
 
 /* #endregion */
@@ -9066,37 +8829,42 @@ div.kanban-plugin__scroll-container.kanban-plugin__vertical {
   background-color: unset;
 }
 
-.theme-light.pt-kanban-background-dots-plain-lt .kanban-plugin__board,
+.theme-light.pt-kanban-background-dots-plain-lt .kanban-plugin__board {
+  background-size: 7px 7px;
+  background-attachment: local;
+  background-image: radial-gradient(circle, var(--background-color-lt) 1px, rgba(0, 0, 0, 0) 1px);
+}
+
 .theme-dark.pt-kanban-background-dots-plain-dt .kanban-plugin__board {
-  background-size: 8px 8px;
+  background-size: 7px 7px;
   background-attachment: local;
   background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
 .theme-light.pt-kanban-background-dots-accent-lt .kanban-plugin__board,
 .theme-dark.pt-kanban-background-dots-accent-dt .kanban-plugin__board {
-  background-size: 8px 8px;
+  background-size: 7px 7px;
   background-attachment: local;
   background-image: radial-gradient(circle, var(--interactive-accent) 1px, rgba(0, 0, 0, 0) 1px);
 }
 
-.theme-light.pt-kanban-background-grid-plain-lt .kanban-plugin__board,
+.theme-light.pt-kanban-background-grid-plain-lt .kanban-plugin__board {
+  background-size: 7px 7px;
+  background-attachment: local;
+  background-image: linear-gradient(to right, var(--background-color-lt) 1px, transparent 1px), linear-gradient(to bottom, var(--background-color-lt) 1px, transparent 1px);
+}
+
 .theme-dark.pt-kanban-background-grid-plain-dt .kanban-plugin__board {
-  background-size: 8px 8px;
+  background-size: 7px 7px;
   background-attachment: local;
   background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
 }
 
 .theme-light.pt-kanban-background-grid-accent-lt .kanban-plugin__board,
 .theme-dark.pt-kanban-background-grid-accent-dt .kanban-plugin__board {
-  background-size: 8px 8px;
+  background-size: 7px 7px;
   background-attachment: local;
   background-image: linear-gradient(to right, var(--interactive-accent) 1px, transparent 1px), linear-gradient(to bottom, var(--interactive-accent) 1px, transparent 1px);
-}
-
-div.kanban-plugin__lane-title {
-  font-weight: unset;
-  font-variation-settings: "wght" 800;
 }
 
 /* #endregion */
@@ -9181,11 +8949,11 @@ div.style-settings-heading[data-level="0"].is-collapsed {
 }
 
 .theme-dark div.style-settings-heading[data-level="0"].is-collapsed {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
 }
 
 .theme-light div.style-settings-heading[data-level="0"] + .style-settings-container {
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
 }
 
 .theme-dark div.style-settings-heading[data-level="0"] + .style-settings-container {
@@ -9212,14 +8980,14 @@ div.style-settings-container[data-level="0"] {
   margin-left: 4px;
 }
 div.style-settings-container[data-level] {
-  border-left: var(--style-settings-vertical-lines-width) solid var(--style-settings-vertical-lines-color);
+  border-left: var(--style-settings-vertical-lines-width) solid var(--vertical-lines-color-style-settings);
   padding-left: 5px;
   padding-bottom: 0px;
   margin-left: 12px;
 }
 
 .vertical-tab-content > .setting-item.setting-item-heading.style-settings-heading {
-  border-bottom: 1px solid var(--style-settings-vertical-lines-color);
+  border-bottom: 1px solid var(--vertical-lines-color-style-settings);
 }
 .setting-item.setting-item-heading.style-settings-heading .setting-item-name {
   width: fit-content;
@@ -9442,6 +9210,85 @@ div.style-settings-heading {
   background-color: var(--background-secondary);
 }
 
+/* Got this from @pseudometa. Thanks again! */
+.style-settings-container .setting-item {
+  /* Light Theme */
+  /* Dark Theme */
+}
+.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) .setting-item-control::before {
+  content: " ";
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid var(--window-border);
+  border-radius: var(--border-radius-small);
+  margin-right: 8px;
+}
+.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider {
+  height: 1.5em;
+  width: 150px;
+}
+.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.75em;
+  width: 4px;
+  margin-top: -0.45em;
+  border: 1px solid var(--window-border);
+}
+.theme-light .style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
+  background-color: var(--background-primary);
+}
+.theme-dark .style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
+  background-color: var(--text-normal);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-h-lt]) input.slider {
+  background: var(--hue-background-lt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-h-lt]) .setting-item-control::before {
+  background-color: var(--color-accent-base-lt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-s-lt]) input.slider {
+  background: var(--saturation-background-lt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-s-lt]) .setting-item-control::before {
+  background-color: var(--color-accent-base-lt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-l-base-lt], [data-id^=color-accent-l-dark-lt], [data-id^=color-accent-l-text-lt]) input.slider {
+  background: var(--lightness-background-lt);
+}
+.style-settings-container .setting-item[data-id^=color-accent-l-base-lt] .setting-item-control::before {
+  background-color: var(--color-accent-base-lt);
+}
+.style-settings-container .setting-item[data-id^=color-accent-l-dark-lt] .setting-item-control::before {
+  background-color: var(--color-accent-dark-lt);
+}
+.style-settings-container .setting-item[data-id^=color-accent-l-text-lt] .setting-item-control::before {
+  background-color: var(--color-accent-text-lt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-h-dt]) input.slider {
+  background: var(--hue-background-dt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-h-dt]) .setting-item-control::before {
+  background-color: var(--color-accent-base-dt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-s-dt]) input.slider {
+  background: var(--saturation-background-dt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-s-dt]) .setting-item-control::before {
+  background-color: var(--color-accent-base-dt);
+}
+.style-settings-container .setting-item:is([data-id^=color-accent-l-base-dt], [data-id^=color-accent-l-dark-dt], [data-id^=color-accent-l-text-dt]) input.slider {
+  background: var(--lightness-background-dt);
+}
+.style-settings-container .setting-item[data-id^=color-accent-l-base-dt] .setting-item-control::before {
+  background-color: var(--color-accent-base-dt);
+}
+.style-settings-container .setting-item[data-id^=color-accent-l-dark-dt] .setting-item-control::before {
+  background-color: var(--color-accent-dark-dt);
+}
+.style-settings-container .setting-item[data-id^=color-accent-l-text-dt] .setting-item-control::before {
+  background-color: var(--color-accent-text-dt);
+}
+
 /* #endregion */
 /* #region  [Plugin - Community] Dangling Links */
 .workspace-leaf-content[data-type=dangling-links] .view-content {
@@ -9468,7 +9315,7 @@ div.style-settings-heading {
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details summary {
   border-bottom-color: transparent;
   border: none;
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
   padding: 5px 5px 5px 15px;
@@ -9491,6 +9338,8 @@ div.style-settings-heading {
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul {
   margin: 8px;
   padding-inline-start: 0px;
+  font-family: var(--font-text);
+  font-size: 14px;
 }
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li {
   border-radius: var(--border-radius-small);
@@ -9522,18 +9371,14 @@ div.style-settings-heading {
 
 /* #endregion */
 /* #region  [Plugin - Community] Sliding Panes */
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+  box-shadow: none;
+}
 body.plugin-sliding-panes .workspace > .mod-root {
   margin-right: calc(var(--window-gap) / 2);
 }
-
-.theme-light.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
-.theme-dark.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
-  box-shadow: none;
-}
-
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
-  background: linear-gradient(to bottom, transparent, var(--tab-label-background-color));
+body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div.view-header-title-container::after, body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div.view-header-title-container::before {
+  background: linear-gradient(to bottom, transparent, var(--background-tertiary));
 }
 
 .theme-light.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > div.view-header {
@@ -9547,9 +9392,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 /* #endregion */
 /* #region  [Plugin - Community] cMenu */
 div#cMenuModalBar {
-  border: 1px solid var(--tab-label-background-color);
+  border: 1px solid var(--background-tertiary);
   border-radius: var(--border-radius);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   box-shadow: var(--drop-shadow);
 }
 div#cMenuModalBar .cMenuCommandItem {
@@ -9605,14 +9450,14 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container td.svelte-egt0yd {
   border-right: 1px solid var(--table-border-color);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8 {
   border-bottom: 1px solid var(--table-border-color);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8:first-of-type {
   border-right: 1px solid var(--table-border-color);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container div.today {
   font-variation-settings: "wght" 600;
@@ -9740,7 +9585,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   left: 9px;
 }
 .workspace-leaf-content[data-type=map] .leaflet-bar a {
-  border-bottom: 1px solid var(--tab-label-background-color);
+  border-bottom: 1px solid var(--background-tertiary);
 }
 .workspace-leaf-content[data-type=map] .lbl-toggle {
   font-variation-settings: "wght" 600;
@@ -9751,15 +9596,15 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   font-variation-settings: "wght" 600;
   border-radius: var(--border-radius-small);
   color: var(--text-muted);
-  background-color: var(--tab-label-background-color);
+  background-color: var(--background-tertiary);
   box-shadow: var(--drop-shadow);
-  border: 1px solid var(--tab-label-background-color);
+  border: 1px solid var(--background-tertiary);
 }
 .workspace-leaf-content[data-type=map] .leaflet-control-geosearch form {
   height: -webkit-fill-available;
   background-color: var(--background-primary);
   border-radius: var(--border-radius-small);
-  border: 1px solid var(--tab-label-background-color);
+  border: 1px solid var(--background-tertiary);
   padding: unset;
   right: 38px;
   box-shadow: var(--drop-shadow);
@@ -9839,7 +9684,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border: unset;
 }
 .modal#emoji-modal .emoji-mart {
-  font-family: var(--font-family-ui);
+  font-family: var(--font-interface);
   font-size: 14px;
   border: unset;
   background: unset;
@@ -10001,7 +9846,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   background-color: var(--background-primary) !important;
 }
 .date-time-chooser-popup .reminder-time.svelte-gzdxib {
-  font-family: var(--font-family-ui);
+  font-family: var(--font-interface);
   color: var(--text-normal);
 }
 .date-time-chooser-popup .reminder-markdown {
@@ -10411,7 +10256,7 @@ settings:
         collapsed: true
     -
         id: color-schemes-lt
-        title: Light Theme Color Scheme
+        title: Color Scheme
         type: class-select
         allowEmpty: false
         default: pt-color-scheme-default-lt
@@ -10430,7 +10275,7 @@ settings:
                 value: pt-color-scheme-pistachio-lt
     -
         id: accent-style-lt
-        title: Light Theme Accent Style
+        title: Accent Style
         description: Adjusts the style used by the Accented elements in the UI.
         type: class-select
         allowEmpty: false
@@ -10450,8 +10295,8 @@ settings:
                 value: pt-accent-style-borderandfilled-lt
     -
         id: light-accent-color-preset
-        title: Light Theme Accent Color Preset
-        description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
+        title: Accent Color Preset
+        description: Changes the Light Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and tune the color in the Custom Accent Color Tuning section below.
         type: class-select
         allowEmpty: false
         default: pt-accent-color-purple-lt
@@ -10490,16 +10335,8 @@ settings:
                 label: Grey
                 value: pt-accent-color-grey-lt
     -
-        id: color-accent-lt
-        title: Light Theme Custom Accent Color
-        description: Make sure you selected 'Custom' in Light Theme Accent Color Preset for this to work.
-        type: variable-color
-        format: hsl-split
-        opacity: false
-        default: '#C7BDFF'
-    -
         id: highlight-text-accent-lt
-        title: Light Theme Accent Text Color Preset
+        title: Accent Text Color Preset
         description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
@@ -10519,12 +10356,68 @@ settings:
                 value: pt-highlight-text-accent-lt
     -
         id: highlight-text-accent-custom-lt
-        title: Light Theme Custom Accent Text Color
+        title: Custom Accent Text Color
         description: Make sure you selected 'Custom' in Light Theme Accent Text Color for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#FFFFFF'
+    -
+        id: color-accent-custom-lt
+        title: Custom Accent Color Tuning
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work. The default Lightness values should net good results for most Hues. Tweak them to your preference.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: color-accent-h-lt
+        title: Custom Accent Base Color Hue
+        description: Changes the the Hue of the Base color.
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 360
+        step: 1
+    -
+        id: color-accent-s-lt
+        title: Custom Accent Base Color Saturation
+        description: Changes the Saturation of the Base Color.
+        type: variable-number-slider
+        format: '%'
+        default: 60
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-base-lt
+        title: Custom Accent Base Color Lightness
+        description: Base Color Lightness should ideally be the lighteest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 82
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-dark-lt
+        title: Custom Accent Secondary Color Lightness
+        description: Secondary Color Lightness should ideally be between Base and Text.
+        type: variable-number-slider
+        format: '%'
+        default: 67
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-text-lt
+        title: Custom Accent Text Color Lightness
+        description: Text Color Lightness should ideally be the darkest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 42
+        min: 0
+        max: 100
+        step: 1
     -
         id: accent-colors-styles-dt
         title: Dark Theme
@@ -10533,7 +10426,7 @@ settings:
         collapsed: true
     -
         id: color-schemes-dt
-        title: Dark Theme Color Scheme
+        title: Color Scheme
         type: class-select
         allowEmpty: false
         default: pt-color-scheme-default-dt
@@ -10552,7 +10445,7 @@ settings:
                 value: pt-color-scheme-pine-dt
     -
         id: accent-style-dt
-        title: Dark Theme Accent Style
+        title: Accent Style
         description: Adjusts the style used by the Accented elements in the UI.
         type: class-select
         allowEmpty: false
@@ -10572,8 +10465,8 @@ settings:
                 value: pt-accent-style-borderandfilled-dt
     -
         id: dark-accent-color-preset
-        title: Dark Theme Accent Color Preset
-        description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
+        title: Accent Color Preset
+        description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and tune the color in the Custom Accent Color Tuning section below.
         type: class-select
         allowEmpty: false
         default: pt-accent-color-purple-dt
@@ -10612,16 +10505,8 @@ settings:
                 label: Grey
                 value: pt-accent-color-grey-dt
     -
-        id: color-accent-dt
-        title: Dark Theme Custom Accent Color
-        description: Make sure you selected 'Custom' in Accent Color Preset for this to work.
-        type: variable-color
-        format: hsl-split
-        opacity: false
-        default: '#8C7FD7'
-    -
         id: highlight-text-accent-dt
-        title: Dark Theme Accent Text Color Preset
+        title: Accent Text Color Preset
         description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
@@ -10641,12 +10526,68 @@ settings:
                 value: pt-highlight-text-accent-dt
     -
         id: highlight-text-accent-custom-dt
-        title: Dark Theme Custom Accent Text Color
+        title: Custom Accent Text Color
         description: Make sure you selected 'Custom' in Dark Theme Accent Text Color for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#FFFFFF'
+    -
+        id: color-accent-custom-dt
+        title: Custom Accent Color Tuning
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work. The default Lightness values should net good results for most Hues. Tweak them to your preference.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: color-accent-h-dt
+        title: Custom Accent Base Color Hue
+        description: Changes the the Hue of the Base color.
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 360
+        step: 1
+    -
+        id: color-accent-s-dt
+        title: Custom Accent Base Color Saturation
+        description: Changes the Saturation of the Base Color.
+        type: variable-number-slider
+        format: '%'
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-base-dt
+        title: Custom Accent Base Color Lightness
+        description: Base Color Lightness should ideally be the darkest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 20
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-dark-dt
+        title: Custom Accent Secondary Color Lightness
+        description: Secondary Color Lightness should ideally be between Base and Text.
+        type: variable-number-slider
+        format: '%'
+        default: 40
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-text-dt
+        title: Custom Accent Text Color Lightness
+        description: Text Color Lightness should ideally be the lightest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 65
+        min: 0
+        max: 100
+        step: 1
     -
         id: background-options
         title: Background Options
@@ -10662,7 +10603,7 @@ settings:
         collapsed: true
     -
         id: background-type-lt
-        title: Light Theme Background Type
+        title: Background Type
         description: Select what type of background you would like in the Light Theme.
         default: pt-background-color-lt
         level: 2
@@ -10676,7 +10617,7 @@ settings:
                 value: pt-background-image-lt
     -
         id: background-color-lt
-        title: Light Theme Background Solid Color
+        title: Background Solid Color
         description: Make sure you selected 'Solid Color' in Light Theme Background Type for this to work.
         type: variable-color
         format: hsl
@@ -10684,13 +10625,13 @@ settings:
         default: '#E6E6E6'
     -
         id: background-image-lt
-        title: Light Theme Background Image
+        title: Background Image
         description: Customise the Background Image for the Light Theme. Insert the link to an image between the brackets in the url(). Make sure you selected 'Image' in Light Theme Background Type for this to work.
         type: variable-text
         default: url()
     -
         id: background-blur-lt
-        title: Light Theme Background Blur (px)
+        title: Background Blur (px)
         description: Select the amount of blur applied to the Light Theme Background Image.
         type: variable-number-slider
         format: px
@@ -10700,25 +10641,25 @@ settings:
         step: 1
     -
         id: background-repeat-lt
-        title: Light Theme Background Repeat
+        title: Background Repeat
         description: Define if the Light Theme Background Image should repeat (tile).
         type: variable-text
         default: no-repeat
     -
         id: background-attachment-lt
-        title: Light Theme Background Attachment
+        title: Background Attachment
         description: Define whether the Light Theme Background Image's position is fixed within the viewport, or scrolls with its containing block.
         type: variable-text
         default: fixed
     -
         id: background-position-lt
-        title: Light Theme Background Position
+        title: Background Position
         description: Define the initial position for the Light Theme Background Image.
         type: variable-text
         default: center
     -
         id: background-size-lt
-        title: Light Theme Background Size
+        title: Background Size
         description: Define the size of the Light Theme Background Image. The image can be left to its natural size, stretched, or constrained to fit the available space.
         type: variable-text
         default: cover
@@ -10730,7 +10671,7 @@ settings:
         collapsed: true
     -
         id: background-type-dt
-        title: Dark Theme Background Type
+        title: Background Type
         description: Select what type of background you would like in the Dark Theme.
         default: pt-background-color-dt
         level: 2
@@ -10744,7 +10685,7 @@ settings:
                 value: pt-background-image-dt
     -
         id: background-color-dt
-        title: Dark Theme Background Solid Color
+        title: Background Solid Color
         description: Make sure you selected 'Solid Color' in Dark Theme Background Type for this to work.
         type: variable-color
         format: hsl
@@ -10752,13 +10693,13 @@ settings:
         default: '#1A1A1A'
     -
         id: background-image-dt
-        title: Dark Theme Background Image
+        title: Background Image
         description: Customise the Background Image for the Dark Theme. Insert the link to an image between the brackets in the url().Make sure you selected 'Image' in Dark Theme Background Type for this to work.
         type: variable-text
         default: url()
     -   
         id: background-blur-dt
-        title: Dark Theme Background Blur (px)
+        title: Background Blur (px)
         description: Select the amount of blur applied to the Dark Theme Background Image.
         type: variable-number-slider
         format: px
@@ -10768,25 +10709,25 @@ settings:
         step: 1
     -
         id: background-repeat-dt
-        title: Dark Theme Background Repeat
+        title: Background Repeat
         description: Define if the Dark Theme Background Image should repeat (tile).
         type: variable-text
         default: no-repeat
     -
         id: background-attachment-dt
-        title: Dark Theme Background Attachment
+        title: Background Attachment
         description: Define whether the Dark Theme Background Image's position is fixed within the viewport, or scrolls with its containing block.
         type: variable-text
         default: fixed
     -
         id: background-position-dt
-        title: Dark Theme Background Position
+        title: Background Position
         description: Define the initial position for the Dark Theme Background Image.
         type: variable-text
         default: center
     -
         id: background-size-dt
-        title: Dark Theme Background Size
+        title: ackground Size
         description: Define the size of the Dark Theme Background Image. The image can be left to its natural size, stretched, or constrained to fit the available space.
         type: variable-text
         default: cover
@@ -10812,7 +10753,7 @@ settings:
         collapsed: true
     -
         id: graph-note-color-presets-lt
-        title: Light Theme Graph Note Color Presets
+        title: Graph Note Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-grey-lt
@@ -10852,7 +10793,7 @@ settings:
                 value: pt-graph-note-grey-lt
     -
         id: color-custom-graph-note-lt
-        title: Light Theme Graph Note Custom Color
+        title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -10860,7 +10801,7 @@ settings:
         default: '#C4C7CA'
     -
         id: graph-fill-opacity-lt
-        title: Light Theme Graph Note Opacity
+        title: Graph Note Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -10875,7 +10816,7 @@ settings:
         collapsed: true
     -
         id: graph-note-focused-color-presets-lt
-        title: Light Theme Graph Note Focused Color Presets
+        title: Graph Note Focused Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-focused-accent-lt
@@ -10918,7 +10859,7 @@ settings:
                 value: pt-graph-note-focused-grey-lt
     -
         id: color-custom-graph-note-focused-lt
-        title: Light Theme Graph Note Focused Custom Color
+        title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -10926,7 +10867,7 @@ settings:
         default: '#8670FF'
     -
         id: graph-fill-focused-opacity-lt
-        title: Light Theme Graph Note Focused Opacity
+        title: Graph Note Focused Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -10941,7 +10882,7 @@ settings:
         collapsed: true
     -
         id: graph-tag-color-presets-lt
-        title: Light Theme Graph Tag Color Presets
+        title: Graph Tag Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-tag-blue-lt
@@ -10981,7 +10922,7 @@ settings:
                 value: pt-graph-tag-grey-lt
     -
         id: color-custom-graph-tag-lt
-        title: Light Theme Graph Tag Custom Color
+        title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -10989,7 +10930,7 @@ settings:
         default: '#619EFF'
     -
         id: graph-tag-opacity-lt
-        title: Light Theme Graph Tag Opacity
+        title: Graph Tag Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11004,7 +10945,7 @@ settings:
         collapsed: true
     -
         id: graph-attachment-color-presets-lt
-        title: Light Theme Graph Attachment Color Presets
+        title: Graph Attachment Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-attachment-yellow-lt
@@ -11044,7 +10985,7 @@ settings:
                 value: pt-graph-attachment-grey-lt
     -
         id: color-custom-graph-attachment-lt
-        title: Light Theme Graph Attachment Custom Color
+        title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11052,7 +10993,7 @@ settings:
         default: '#FDDB6D'
     -
         id: graph-attachment-opacity-lt
-        title: Light Theme Graph Attachment Opacity
+        title: Graph Attachment Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11067,7 +11008,7 @@ settings:
         collapsed: true
     -
         id: graph-unresolved-color-presets-lt
-        title: Light Theme Graph Unresolved Color Presets
+        title: Graph Unresolved Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-unresolved-red-lt
@@ -11107,7 +11048,7 @@ settings:
                 value: pt-graph-unresolved-grey-lt
     -
         id: color-custom-graph-unresolved-lt
-        title: Light Theme Graph Unresolved Custom Color
+        title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11115,7 +11056,7 @@ settings:
         default: '#FF7070'
     -
         id: graph-unresolved-opacity-lt
-        title: Light Theme Graph Unresolved Opacity
+        title: Graph Unresolved Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11130,7 +11071,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-color-presets-lt
-        title: Light Theme Graph Highlight Color Presets
+        title: Graph Highlight Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-accent-lt
@@ -11173,7 +11114,7 @@ settings:
                 value: pt-graph-highlight-grey-lt
     -
         id: color-custom-graph-highlight-lt
-        title: Light Theme Graph Highlight Custom Color
+        title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11181,7 +11122,7 @@ settings:
         default: '#8670FF'
     -
         id: graph-highlight-opacity-lt
-        title: Light Theme Graph Highlight Opacity
+        title: Graph Highlight Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11196,7 +11137,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-line-color-presets-lt
-        title: Light Theme Graph Highlight Line Color Presets
+        title: Graph Highlight Line Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-line-accent-lt
@@ -11239,7 +11180,7 @@ settings:
                 value: pt-graph-highlight-line-grey-lt
     -
         id: color-custom-graph-highlight-line-lt
-        title: Light Theme Graph Highlight Line Custom Color
+        title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11247,7 +11188,7 @@ settings:
         default: '#8670FF'
     -
         id: graph-highlight-line-opacity-lt
-        title: Light Theme Graph Highlight Line Opacity
+        title: Graph Highlight Line Opacity
         type: variable-number-slider
         default: 0.4
         min: 0
@@ -11268,7 +11209,7 @@ settings:
         collapsed: true
     -
         id: graph-note-color-presets-dt
-        title: Dark Theme Graph Note Color Presets
+        title: Graph Note Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-grey-dt
@@ -11308,7 +11249,7 @@ settings:
                 value: pt-graph-note-grey-dt
     -
         id: color-custom-graph-note-dt
-        title: Dark Theme Graph Note Custom Color
+        title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Note Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11316,7 +11257,7 @@ settings:
         default: '#878787'
     -
         id: graph-fill-opacity-dt
-        title: Dark Theme Graph Note Opacity
+        title: Graph Note Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11331,7 +11272,7 @@ settings:
         collapsed: true
     -
         id: graph-note-focused-color-presets-dt
-        title: Dark Theme Graph Note Focused Color Presets
+        title: Graph Note Focused Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-note-focused-accent-dt
@@ -11374,7 +11315,7 @@ settings:
                 value: pt-graph-note-focused-grey-dt
     -
         id: color-custom-graph-note-focused-dt
-        title: Dark Theme Graph Note Focused Custom Color
+        title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11382,7 +11323,7 @@ settings:
         default: '#4C3AB6'
     -
         id: graph-fill-focused-opacity-dt
-        title: Dark Theme Graph Note Focused Opacity
+        title: Graph Note Focused Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11397,7 +11338,7 @@ settings:
         collapsed: true
     -
         id: graph-tag-color-presets-dt
-        title: Dark Theme Graph Tag Color Presets
+        title: Graph Tag Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-tag-blue-dt
@@ -11437,7 +11378,7 @@ settings:
                 value: pt-graph-tag-grey-dt
     -
         id: color-custom-graph-tag-dt
-        title: Dark Theme Graph Tag Custom Color
+        title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Tag Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11445,7 +11386,7 @@ settings:
         default: '#3663AB'
     -
         id: graph-tag-opacity-dt
-        title: Dark Theme Graph Tag Opacity
+        title: Graph Tag Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11460,7 +11401,7 @@ settings:
         collapsed: true
     -
         id: graph-attachment-color-presets-dt
-        title: Dark Theme Graph Attachment Color Presets
+        title: Graph Attachment Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-attachment-yellow-dt
@@ -11500,7 +11441,7 @@ settings:
                 value: pt-graph-attachment-grey-dt
     -
         id: color-custom-graph-attachment-dt
-        title: Dark Theme Graph Attachment Custom Color
+        title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Attachment Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11508,7 +11449,7 @@ settings:
         default: '#AF943C'
     -
         id: graph-attachment-opacity-dt
-        title: Dark Theme Graph Attachment Opacity
+        title: Graph Attachment Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11523,7 +11464,7 @@ settings:
         collapsed: true
     -
         id: graph-unresolved-color-presets-dt
-        title: Dark Theme Graph Unresolved Color Presets
+        title: Graph Unresolved Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-unresolved-red-dt
@@ -11563,7 +11504,7 @@ settings:
                 value: pt-graph-unresolved-grey-dt
     -
         id: color-custom-graph-unresolved-dt
-        title: Dark Theme Graph Unresolved Custom Color
+        title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11571,7 +11512,7 @@ settings:
         default: '#B63A3A'
     -
         id: graph-unresolved-opacity-dt
-        title: Dark Theme Graph Unresolved Opacity
+        title: Graph Unresolved Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11586,7 +11527,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-color-presets-dt
-        title: Dark Theme Graph Highlight Color Presets
+        title: Graph Highlight Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-accent-dt
@@ -11629,7 +11570,7 @@ settings:
                 value: pt-graph-highlight-grey-dt
     -
         id: color-custom-graph-highlight-dt
-        title: Dark Theme Graph Highlight Custom Color
+        title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11637,7 +11578,7 @@ settings:
         default: '#4C3AB6'
     -
         id: graph-highlight-opacity-dt
-        title: Dark Theme Graph Highlight Opacity
+        title: Graph Highlight Opacity
         type: variable-number-slider
         default: 1
         min: 0
@@ -11652,7 +11593,7 @@ settings:
         collapsed: true
     -
         id: graph-highlight-line-color-presets-dt
-        title: Dark Theme Graph Highlight Line Color Presets
+        title: Graph Highlight Line Color Presets
         type: class-select
         allowEmpty: false
         default: pt-graph-highlight-line-accent-dt
@@ -11695,7 +11636,7 @@ settings:
                 value: pt-graph-highlight-line-grey-dt
     -
         id: color-custom-graph-highlight-line-dt
-        title: Dark Theme Graph Highlight Line Custom Color
+        title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
         type: variable-color
         format: hsl
@@ -11703,7 +11644,7 @@ settings:
         default: '#4C3AB6'
     -
         id: graph-highlight-line-opacity-dt
-        title: Dark Theme Graph Highlight Line Opacity
+        title: Graph Highlight Line Opacity
         type: variable-number-slider
         default: 0.4
         min: 0
@@ -11716,37 +11657,6 @@ settings:
         type: heading
         level: 1
         collapsed: true
-    -
-        id: fonts
-        title: Fonts
-        description: Define the fonts used around Obsidian. Available embedded fonts - "Source Sans 3" , "Source Serif 4" and "Fira Code".
-        type: heading
-        level: 2
-        collapsed: true
-    - 
-        id: font-family-ui
-        title: Font Family (UI)
-        description: Font used in the UI. 
-        type: variable-text
-        default: Source Sans 3, sans-serif
-    - 
-        id: font-family-edit
-        title: Font Family (Edit Modes)
-        description: Font used in the Edit/Source pane view mode.
-        type: variable-text
-        default: Source Sans 3, sans-serif
-    -
-        id: font-family-preview
-        title: Font Family (Preview Modes)
-        description: Font used in the Preview/Reading pane view mode.
-        type: variable-text
-        default: Source Sans 3, sans-serif
-    -
-        id: font-family-code
-        title: Font Family (Code)
-        description: Font used in Code elements.
-        type: variable-text
-        default: Fira Code, monospace
     -
         id: header-styles
         title: Headers
@@ -11891,7 +11801,7 @@ settings:
         collapsed: true
     -
         id: light-mark-highlight-style
-        title: Light Theme Mark Highlight Style
+        title: Mark Highlight Style
         type: class-select
         allowEmpty: false
         default: pt-highlight-style-borderandfilled-lt
@@ -11910,7 +11820,7 @@ settings:
                 value: pt-highlight-style-borderandfilled-lt
     -
         id: light-mark-highlight-text-color-preset
-        title: Light Theme Mark Highlight Text Color Preset
+        title: Mark Highlight Text Color Preset
         type: class-select
         allowEmpty: false
         default: pt-highlight-text-color-lt
@@ -11929,7 +11839,7 @@ settings:
         collapsed: true
     -
         id: dark-mark-highlight-style
-        title: Dark Theme Mark Highlight Style
+        title: Mark Highlight Style
         type: class-select
         allowEmpty: false
         default: pt-highlight-style-borderandfilled-dt
@@ -11948,7 +11858,7 @@ settings:
                 value: pt-highlight-style-borderandfilled-dt
     -
         id: dark-mark-highlight-text-color-preset
-        title: Dark Theme Mark Highlight Text Color Preset
+        title: Mark Highlight Text Color Preset
         type: class-select
         allowEmpty: false
         default: pt-highlight-text-color-dt
@@ -12137,7 +12047,7 @@ settings:
         default: true
         type: class-toggle
     - 
-        id: file-explorer-vertical-lines-width
+        id: vertical-lines-width-file-explorer
         title: File Explorer Vertical Lines Width (px)
         type: variable-number-slider
         format: 'px'
@@ -12215,7 +12125,7 @@ settings:
         default: true
         type: class-toggle
     - 
-        id: outline-vertical-lines-width
+        id: vertical-lines-width-outline
         title: Outline Vertical Lines Width (px)
         type: variable-number-slider
         format: 'px'
@@ -12264,13 +12174,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-titlebar-lt
-        title: Light Theme Solid Titlebar Background
+        title: Solid Titlebar Background
         description: Changes the Light Theme Titlebar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: titlebar-preset-lt
-        title: Light Theme Titlebar Preset
+        title: Titlebar Preset
         description: Choose between Default and Custom colors for the Light Theme Titlebar.
         default: pt-titlebar-default-lt
         type: class-select
@@ -12283,7 +12193,7 @@ settings:
                 value: pt-titlebar-custom-lt
     -
         id: titlebar-background-color-lt
-        title: Light Theme Titlebar Background Color
+        title: Titlebar Background Color
         description: Make sure you selected 'Custom' in Light Theme Titlebar Preset for this to work.
         type: variable-color
         format: hsl
@@ -12291,7 +12201,7 @@ settings:
         default: '#EBECEF'
     -   
         id: titlebar-text-color-lt
-        title: Light Theme Titlebar Text/Icons Color
+        title: Titlebar Text/Icons Color
         description: Choose the color used for the Light Theme Titlebar Text/Icons.
         default: pt-titlebar-text-dark-lt
         type: class-select
@@ -12313,13 +12223,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-titlebar-dt
-        title: Dark Theme Solid Titlebar Background
+        title: Solid Titlebar Background
         description: Changes the Dark Theme Titlebar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: titlebar-preset-dt
-        title: Dark Theme Titlebar Preset
+        title: Titlebar Preset
         description: Choose between Default and Custom colors for the Dark Theme Titlebar.
         default: pt-titlebar-default-dt
         level: 2
@@ -12333,7 +12243,7 @@ settings:
                 value: pt-titlebar-custom-dt
     -
         id: titlebar-background-color-dt
-        title: Dark Theme Titlebar Background Color
+        title: Titlebar Background Color
         description: Make sure you selected 'Custom' in Dark Theme Titlebar Preset for this to work.
         type: variable-color
         format: hsl
@@ -12341,7 +12251,7 @@ settings:
         default: '#2B2B2B'
     -
         id: titlebar-text-color-dt
-        title: Dark Theme Titlebar Text/Icons Color
+        title: Titlebar Text/Icons Color
         description: Choose the color used for the Dark Theme Titlebar Text/Icons.
         default: pt-titlebar-text-light-dt
         type: class-select
@@ -12415,13 +12325,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-status-bar-lt
-        title: Light Theme Solid Status Bar Background
+        title: Solid Status Bar Background
         description: Changes the Light Theme Status Bar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: status-bar-preset-lt
-        title: Light Theme Status Bar Preset
+        title: Status Bar Preset
         description: Choose between Default and Custom colors for the Light Theme Status Bar.
         default: pt-status-bar-default-lt
         type: class-select
@@ -12434,7 +12344,7 @@ settings:
                 value: pt-status-bar-custom-lt
     -
         id: status-bar-background-color-lt
-        title: Light Theme Status Bar Background Color
+        title: Status Bar Background Color
         description: Make sure you selected 'Custom' in Light Theme Status Bar Preset for this to work.
         type: variable-color
         format: hsl
@@ -12442,7 +12352,7 @@ settings:
         default: '#EBECEF'
     -
         id: status-bar-text-color-lt
-        title: Light Theme Status Bar Text/Icons Color
+        title: Status Bar Text/Icons Color
         description: Choose the color used for the Light Theme Status Bar Text/Icons.
         default: pt-status-bar-text-dark-lt
         type: class-select
@@ -12464,13 +12374,13 @@ settings:
         collapsed: true
     -
         id: pt-solid-status-bar-dt
-        title: Dark Theme Solid Status Bar Background
+        title: Solid Status Bar Background
         description: Changes the Dark Theme Status Bar Background to a solid app wide bar container instead of separated containers.
         type: class-toggle
         default: false
     -
         id: status-bar-preset-dt
-        title: Dark Theme Status Bar Preset
+        title: Status Bar Preset
         description: Choose between Default and Custom colors for the Dark Theme Status Bar.
         default: pt-status-bar-default-dt
         level: 2
@@ -12484,7 +12394,7 @@ settings:
                 value: pt-status-bar-custom-dt
     -
         id: status-bar-background-color-dt
-        title: Dark Theme Status Bar Background Color
+        title: Status Bar Background Color
         description: Make sure you selected 'Custom' in Dark Theme Status Bar Preset for this to work.
         type: variable-color
         format: hsl
@@ -12492,7 +12402,7 @@ settings:
         default: '#2B2B2B'
     - 
         id: status-bar-text-color-dt
-        title: Dark Theme Status Bar Text/Icons Color
+        title: Status Bar Text/Icons Color
         description: Choose the color used for the Dark Theme Status Bar Text/Icons.
         default: pt-status-bar-text-light-dt
         type: class-select
@@ -12563,7 +12473,7 @@ settings:
         description: Change the Light Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-dots-plain-lt
+        default: pt-kanban-background-grid-plain-lt
         options:
             - 
                 label: Solid Color
@@ -12589,7 +12499,7 @@ settings:
         description: Change the Dark Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-dots-plain-dt
+        default: pt-kanban-background-grid-plain-dt
         options:
             - 
                 label: Solid Color
