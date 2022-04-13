@@ -1,169 +1,161 @@
 /* #region  [Plugin - Community] Map View */
 .workspace-leaf-content[data-type="map"] {
-    .view-content {
-        position: relative;
-    }
+	.view-content {
+		position: relative;
+	}
 
-    .leaflet-container {
-        background: var(--background-secondary-alt);
-    }
+	.leaflet-container {
+		background: var(--background-secondary-alt);
+	}
 
-    .leaflet-container .leaflet-control-attribution {
-        background: var(--background-secondary);
-        color: var(--text-muted);
-    }
+	.leaflet-container .leaflet-control-attribution {
+		background: var(--background-secondary);
+		color: var(--text-muted);
+	}
 
-    .leaflet-control-zoom-in,
-    .leaflet-control-zoom-out {
-        background-color: unset;
-        color: var(--text-muted);
+	.leaflet-control-zoom-in,
+	.leaflet-control-zoom-out {
+		background-color: unset;
+		color: var(--text-muted);
 
-        &:hover {
-            color: var(--interactive-accent-hover);
-        }
-    }
+		&:hover {
+			color: var(--interactive-accent-hover);
+		}
+	}
 
-    .leaflet-bar-part.leaflet-bar-part-single {
-        &::before,
-        &::after {
-            background-color: unset;
-            border-color: var(--text-muted);
-        }
+	.leaflet-bar-part.leaflet-bar-part-single {
+		&::before,
+		&::after {
+			background-color: unset;
+			border-color: var(--text-muted);
+		}
 
-        &:hover {
-            &::before,
-            &::after {
-                border-color: var(--interactive-accent-hover);
-            }
-        }
+		&:hover {
+			&::before,
+			&::after {
+				border-color: var(--interactive-accent-hover);
+			}
+		}
 
-        &::before {
-            top: 17px;
-            left: 15px;
-        }
+		&::before {
+			top: 17px;
+			left: 15px;
+		}
 
-        &::after {
-            top: 9px;
-            left: 9px;
-        }
-    }
+		&::after {
+			top: 9px;
+			left: 9px;
+		}
+	}
 
-    .leaflet-bar a {
-        border-bottom: 1px solid var(--tab-label-background-color);
-    } 
-
-    .lbl-toggle {
-        font-variation-settings: 'wght' 600;
-    }
-
-    .leaflet-touch .leaflet-control-layers,
-    .leaflet-touch .leaflet-bar,
-    .leaflet-bar-part.leaflet-bar-part-single {
-        font-variation-settings: 'wght' 600;
-        border-radius: var(--border-radius-small);
-        color: var(--text-muted);
-        background-color: var(--tab-label-background-color);
-        box-shadow: var(--drop-shadow);
-        border: 1px solid var(--tab-label-background-color);
-    }
-
-    .leaflet-control-geosearch form {
-        height: -webkit-fill-available;
-        background-color: var(--background-primary);
-        border-radius: var(--border-radius-small);
-        border: 1px solid var(--tab-label-background-color);
-        padding: unset;
-        right: 38px;
-        box-shadow: var(--drop-shadow);
-    }
-
-    .leaflet-control-geosearch a.reset {
-        background-color: transparent;
-        line-height: unset;
-        height: -webkit-fill-available;
-        font-size: 19px;
-        content: '\D7';
-        color: var(--text-muted);
-        border-bottom: unset;
-
-        &:hover {
-            color: var(--interactive-accent-hover);
-        }
-    }
-
-    .leaflet-control-geosearch form input {
-        height: -webkit-fill-available;
-        padding: 0px 30px 0px 0px;
-        font-size: 14px;
-    }
-
-    .leaflet-geosearch-button.active .leaflet-bar-part {
-        width: 30px;
-    }
-
-    .leaflet-control-geosearch .results.active {
-        background-color: var(--background-secondary);
-        border-top: unset;
-        border: 1px solid var(--background-secondary);
-        border-radius: var(--border-radius-small);
-        background-color: var(--background-secondary-blur);
-        backdrop-filter: blur(var(--blur-intensity));
-        -webkit-backdrop-filter: blur(var(--blur-intensity));
-        box-shadow: var(--drop-shadow);
-        color: var(--text-normal);
-        margin-top: 8px;
-    }
-    
-    .leaflet-control-geosearch .results > .active,
-    .leaflet-control-geosearch .results > :hover {
-        background-color: var(--background-primary);
-        color: var(--interactive-accent-text);
-        border: 1px solid var(--background-primary);
-    }
-
-    .leaflet-touch .leaflet-control-geosearch .results.active:after {
-        border-left: unset;
-    }
-
-    .graph-control-content {
-        > *:not(:last-child) {
-            display: inline-block;
-            margin-bottom: 8px; 
-            margin-right: 8px;
-        } 
-    }
-
-    .leaflet-popup-content-wrapper,
-    .leaflet-popup-tip {
-        background-color: var(--background-secondary);
-        color: var(--text-normal);
-        box-shadow: var(--drop-shadow);
-        border-radius: var(--border-radius);
-    }
-
-    .leaflet-container a.leaflet-popup-close-button {
-        color: var(--text-muted);
-
-        &:hover {
-            color: var(--interactive-accent-hover);
-        }
-    }
-
-    .geosearch.leaflet-bar.leaflet-control.leaflet-control-geosearch.leaflet-geosearch-button.active .leaflet-bar-part.leaflet-bar-part-single {
-        background-color: var(--background-primary);
-        
-        &::before,
-        &::after {
-            border-color: var(--interactive-accent-text);
-        }
-    }
-}   
-/* #endregion */	.leaflet-bar a {
+	.leaflet-bar a {
 		border-bottom: 1px solid var(--background-tertiary);
 	}
+
+	.lbl-toggle {
+		font-variation-settings: "wght" 600;
+	}
+
+	.leaflet-touch .leaflet-control-layers,
+	.leaflet-touch .leaflet-bar,
+	.leaflet-bar-part.leaflet-bar-part-single {
+		font-variation-settings: "wght" 600;
+		border-radius: var(--border-radius-small);
+		color: var(--text-muted);
 		background-color: var(--background-tertiary);
 		box-shadow: var(--drop-shadow);
 		border: 1px solid var(--background-tertiary);
 	}
+
+	.leaflet-control-geosearch form {
+		height: -webkit-fill-available;
+		background-color: var(--background-primary);
+		border-radius: var(--border-radius-small);
 		border: 1px solid var(--background-tertiary);
 		padding: unset;
+		right: 38px;
+		box-shadow: var(--drop-shadow);
+	}
+
+	.leaflet-control-geosearch a.reset {
+		background-color: transparent;
+		line-height: unset;
+		height: -webkit-fill-available;
+		font-size: 19px;
+		content: "\D7";
+		color: var(--text-muted);
+		border-bottom: unset;
+
+		&:hover {
+			color: var(--interactive-accent-hover);
+		}
+	}
+
+	.leaflet-control-geosearch form input {
+		height: -webkit-fill-available;
+		padding: 0px 30px 0px 0px;
+		font-size: 14px;
+	}
+
+	.leaflet-geosearch-button.active .leaflet-bar-part {
+		width: 30px;
+	}
+
+	.leaflet-control-geosearch .results.active {
+		background-color: var(--background-secondary);
+		border-top: unset;
+		border: 1px solid var(--background-secondary);
+		border-radius: var(--border-radius-small);
+		background-color: var(--background-secondary-blur);
+		backdrop-filter: blur(var(--blur-intensity));
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		box-shadow: var(--drop-shadow);
+		color: var(--text-normal);
+		margin-top: 8px;
+	}
+
+	.leaflet-control-geosearch .results > .active,
+	.leaflet-control-geosearch .results > :hover {
+		background-color: var(--background-primary);
+		color: var(--interactive-accent-text);
+		border: 1px solid var(--background-primary);
+	}
+
+	.leaflet-touch .leaflet-control-geosearch .results.active:after {
+		border-left: unset;
+	}
+
+	.graph-control-content {
+		> *:not(:last-child) {
+			display: inline-block;
+			margin-bottom: 8px;
+			margin-right: 8px;
+		}
+	}
+
+	.leaflet-popup-content-wrapper,
+	.leaflet-popup-tip {
+		background-color: var(--background-secondary);
+		color: var(--text-normal);
+		box-shadow: var(--drop-shadow);
+		border-radius: var(--border-radius);
+	}
+
+	.leaflet-container a.leaflet-popup-close-button {
+		color: var(--text-muted);
+
+		&:hover {
+			color: var(--interactive-accent-hover);
+		}
+	}
+
+	.geosearch.leaflet-bar.leaflet-control.leaflet-control-geosearch.leaflet-geosearch-button.active .leaflet-bar-part.leaflet-bar-part-single {
+		background-color: var(--background-primary);
+
+		&::before,
+		&::after {
+			border-color: var(--interactive-accent-text);
+		}
+	}
+}
+/* #endregion */

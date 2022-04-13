@@ -11,10 +11,8 @@ input.prompt-input {
 	margin-bottom: 10px;
 }
 
-.suggestion-hotkey {
-	background-color: var(--background-primary);
-	border-radius: var(--border-radius-small);
-	font-variation-settings: 'wght' 600;
+.prompt-results {
+	padding: 0px 10px 0px 0px;
 }
 
 .modal-container .prompt {
@@ -23,22 +21,24 @@ input.prompt-input {
 	background-color: var(--background-secondary-blur);
 	backdrop-filter: blur(var(--blur-intensity));
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
-}
+}	
 
-.prompt-results {
-	padding: 0px 10px 0px 0px;
-}
-
-.theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-	background-color: var(--background-color-lt);
+.suggestion-hotkey {
+	background-color: var(--background-primary);
 	border-radius: var(--border-radius-small);
-}
 	font-variation-settings: "wght" 600;
 	font-family: var(--font-interface);
 }	
 
-.theme-dark .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-	background-color: var(--background-color-dt);
+.modal-container .prompt .prompt-results::-webkit-scrollbar-track {
 	border-radius: var(--border-radius-small);
+
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+	
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
 }
 /* #endregion */

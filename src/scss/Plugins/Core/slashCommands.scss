@@ -3,14 +3,25 @@
 	max-width: 700px;
 	padding: 8px;
 	border: 1px solid var(--table-border-color);
+	
+	kbd {
+		letter-spacing: 0.05em;
+	}
+	
+	.suggestion::-webkit-scrollbar-track {
+		border-radius: var(--border-radius-small);
+	
+		.theme-light & {
+			background-color: var(--background-primary);
+		}
+		
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
+	}
 }
-
 .suggestion {
 	padding-right: 8px;
-}
-
-.suggestion-container kbd {
-	letter-spacing: 0.05em;
 }
 
 .suggestion-content {
@@ -21,10 +32,8 @@
 }
 
 .suggestion-item {
-	display: flex;
-    align-items: center;
+	align-items: center;
 	padding: 5px 10px;
-	/* margin-right: 8px; */
 
 	.suggestion-flair {
 		color: var(--interactive-accent-text);
@@ -32,17 +41,18 @@
 		position: relative;
 		left: unset;
 		top: unset;
-		margin-left: 10px;
 		order: 5;
-	}
 
-	.suggestion-flair:first-child {
-		padding: 0px 5px;
-		margin-right: 8px;
-		font-variation-settings: "wght" 600;
-		font-size: 0.75rem;
-		background-color: var(--background-primary);
-		border-radius: var(--border-radius-small);
+		&[aria-label] {
+			margin-right: 8px;
+		}
+
+		&:first-child {
+			font-variation-settings: "wght" 600;
+			font-size: 0.75rem;
+			background-color: var(--background-primary);
+			border-radius: var(--border-radius-small);
+		}
 	}
 
 	&:hover .suggestion-flair:first-child {
@@ -59,7 +69,7 @@
 		background-color: var(--background-primary);
 		margin-right: 8px;
 		padding: 0px 5px;
-		font-size: 12px;
+		font-size: 14px;
 	}
 
 	&:hover .suggestion-prefix,

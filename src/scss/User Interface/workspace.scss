@@ -22,7 +22,6 @@
 }
 
 .view-action svg {
-	// width: 26px;
 	margin: 0px 2px;
 }
 
@@ -90,7 +89,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border-radius: var(--border-radius);
 	border: var(--border-size) solid var(--color-red-dark);
 	background-color: var(--color-red-base);
-	font-variation-settings: 'wght' 600;
 	font-variation-settings: "wght" 600;
 	text-align: center;
 }
@@ -105,7 +103,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 .view-header {
-	background-color: var(--tab-label-background-color);
 	background-color: var(--background-tertiary);
 	border: var(--border-size) solid transparent;
 	border-bottom: 1px solid var(--window-border);
@@ -119,7 +116,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 	border: var(--border-size) solid transparent;
 	height: 1px;
 	transition-delay: 600ms;
-	
+
 	svg {
 		transition: opacity 200ms;
 		transition-delay: 600ms;
@@ -128,7 +125,6 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 }
 
 body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
-	background-color: var(--tab-label-background-color);
 	background-color: var(--background-tertiary);
 	border: var(--border-size) solid transparent;
 	border-radius: var(--border-radius);
@@ -154,10 +150,8 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 	background-color: transparent;
 }
 
-
 /* Matches the gradient next to the right hand buttons in the View Header with the background */
 .view-header-title-container:after {
-	background: linear-gradient(to right, transparent, var(--tab-label-background-color));
 	background: linear-gradient(to right, transparent, var(--background-tertiary));
 	transition: background ease 200ms;
 	transition-delay: 200ms;

@@ -25,7 +25,7 @@
 			summary {
 				border-bottom-color: transparent;
 				border: none;
-				background-color: var(--tab-label-background-color);
+				background-color: var(--background-tertiary);
 				border-radius: var(--border-radius);
 				box-shadow: var(--drop-shadow);
 				padding: 5px 5px 5px 15px;
@@ -33,13 +33,12 @@
 				z-index: var(--layer-cover);
 				margin-bottom: 8px;
 				font-size: 14px;
-				font-variation-settings: 'wght' 600;
 				font-variation-settings: "wght" 600;
 
 				&:hover {
 					background-color: var(--background-primary);
 					color: var(--interactive-accent-text);
-					
+
 					&::marker {
 						color: var(--interactive-accent-hover);
 					}
@@ -53,6 +52,8 @@
 			ul {
 				margin: 8px;
 				padding-inline-start: 0px;
+				font-family: var(--font-text);
+				font-size: 14px;
 
 				li {
 					border-radius: var(--border-radius-small);
@@ -72,7 +73,6 @@
 					}
 
 					a {
-						font-variation-settings: 'wght' 600;
 						font-variation-settings: "wght" 600;
 					}
 				}

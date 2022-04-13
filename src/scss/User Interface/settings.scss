@@ -99,9 +99,9 @@
 .modal.mod-settings .vertical-tab-header-group {
 	padding: 0px;
 	border-radius: var(--border-radius);
-    border: 1px solid var(--window-border);
-    background-color: var(--background-secondary);
-    box-shadow: var(--drop-shadow);
+	border: 1px solid var(--window-border);
+	background-color: var(--background-secondary);
+	box-shadow: var(--drop-shadow);
 }
 
 .modal.mod-settings .vertical-tab-header-group .vertical-tab-header-group-items {
@@ -154,19 +154,19 @@
 
 .vertical-tab-header-group-title {
 	color: var(--text-normal);
-    background: var(--background-primary);
-    border-radius: var(--border-radius);
-    box-shadow: var(--drop-shadow);
+	background: var(--background-primary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
 	border-bottom: 1px solid var(--window-border);
 	text-transform: capitalize;
 	font-size: 15px;
 	font-weight: bold;
 	padding: 8px;
 	margin: unset;
-    text-align: center;
-    height: fit-content;
-    width: fit-content;
-    min-width: -webkit-fill-available;
+	text-align: center;
+	height: fit-content;
+	width: fit-content;
+	min-width: -webkit-fill-available;
 }
 
 .modal-content.community-plugin {
@@ -212,7 +212,7 @@
 
 .horizontal-tab-nav-item.is-active,
 .vertical-tab-nav-item.is-active {
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	background-color: transparent;
 	border-radius: var(--border-radius);
 	border: var(--border-size) solid transparent;
@@ -223,7 +223,7 @@
 }
 
 .dropdown {
-	font-family: var(--font-family-ui);
+	font-family: var(--font-interface);
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
@@ -282,7 +282,7 @@ select.dropdown {
 		color: var(--color-yellow-text);
 		background-color: var(--color-yellow-base);
 	}
-	
+
 	option[value*="green"] {
 		color: var(--color-green-text);
 		background-color: var(--color-green-base);
@@ -324,13 +324,9 @@ select.dropdown {
 	background-color: var(--background-secondary-alt);
 	box-shadow: var(--drop-shadow);
 	border: 1px solid var(--window-border);
-}
-
-div.style-settings-container .checkbox-container {
-	background-color: var(--background-secondary);
 
 	&.is-enabled {
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-hover);
 	}
 }
 
@@ -351,7 +347,7 @@ div.style-settings-container .checkbox-container {
 	background-color: var(--background-primary);
 	content: "ON";
 	font-size: 10px;
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	color: var(--highlight-text-dark);
 }
 
@@ -359,7 +355,7 @@ div.style-settings-container .checkbox-container {
 	background-color: var(--background-primary);
 	content: "OFF";
 	font-size: 10px;
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	color: var(--highlight-text-dark);
 }
 
@@ -367,7 +363,7 @@ div.style-settings-container .checkbox-container {
 	background-color: var(--background-primary);
 	content: "ON";
 	font-size: 10px;
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	color: var(--text-normal);
 }
 
@@ -375,16 +371,16 @@ div.style-settings-container .checkbox-container {
 	background-color: var(--background-primary);
 	content: "OFF";
 	font-size: 10px;
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	color: var(--text-normal);
 }
 
 .checkbox-container.is-enabled:hover {
-	background-color: var(--interactive-accent-hover);
+	background-color: var(--interactive-accent);
 }
 
 .checkbox-container:not(.is-enabled):hover {
-	background-color: var(--interactive-accent);
+	background-color: var(--interactive-accent-dark);
 }
 
 .checkbox-container.is-enabled:after {
@@ -503,7 +499,7 @@ img.community-theme-lightbox {
 
 .mod-community-theme .modal-content .modal-title {
 	font-size: 16px;
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	background: var(--background-primary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
@@ -547,7 +543,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	border-radius: var(--border-radius);
 	border: var(--border-size) solid var(--color-red-dark);
 	background-color: var(--color-red-base);
-	font-variation-settings: 'wght' 600;
+	font-variation-settings: "wght" 600;
 	text-align: center;
 }
 
@@ -640,7 +636,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 			margin-left: unset;
 			margin-right: 8px;
 
-			input[type=text] {
+			input[type="text"] {
 				max-width: -webkit-fill-available;
 			}
 		}
@@ -677,8 +673,8 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	display: inline-flex;
 	align-items: center;
 	max-width: 85%;
-	font-variation-settings: 'wght' 600;
-	
+	font-variation-settings: "wght" 600;
+
 	.flair.mod-pop {
 		display: inline-flex;
 		align-items: center;

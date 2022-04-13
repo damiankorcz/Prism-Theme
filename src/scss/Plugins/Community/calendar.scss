@@ -1,144 +1,141 @@
 /* #region  [Plugin - Community] Calendar */
 .workspace-leaf-content[data-type="calendar"] {
-    .view-content {
-        padding: unset;
-    }
+	.view-content {
+		padding: unset;
+	}
 
-    #calendar-container {
-        background-color: var(--background-secondary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: unset;
-        display: flex;
-        position: relative;
-        flex-wrap: wrap;
-        border: 1px solid var(--window-border);
-        
-        .nav {
-            margin: unset;
-            align-items: center;
-            background: var(--background-primary);
-            border-radius: var(--border-radius);
-            box-shadow: var(--drop-shadow);
-            padding: 10px;
-            height: fit-content;
-            width: fit-content;
-            min-width: -webkit-fill-available;
-            border: unset;
-        }
+	#calendar-container {
+		background-color: var(--background-secondary);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+		padding: unset;
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		border: 1px solid var(--window-border);
 
-        table.calendar {
-            margin: 6px 10px 10px 10px;
-            width: -webkit-fill-available;
-        }
+		.nav {
+			margin: unset;
+			align-items: center;
+			background: var(--background-primary);
+			border-radius: var(--border-radius);
+			box-shadow: var(--drop-shadow);
+			padding: 10px;
+			height: fit-content;
+			width: fit-content;
+			min-width: -webkit-fill-available;
+			border: unset;
+		}
 
-        thead tr:first-of-type th:first-child {
-            border-top-left-radius: var(--border-radius);
-        }
+		table.calendar {
+			margin: 6px 10px 10px 10px;
+			width: -webkit-fill-available;
+		}
 
-        tbody tr:last-of-type td:first-child {
-            border-bottom-left-radius: var(--border-radius);
-        }
+		thead tr:first-of-type th:first-child {
+			border-top-left-radius: var(--border-radius);
+		}
 
-        td.svelte-egt0yd {
-            border-right: 1px solid var(--table-border-color);
-            background-color: var(--tab-label-background-color);
-        }
+		tbody tr:last-of-type td:first-child {
+			border-bottom-left-radius: var(--border-radius);
+		}
 
-        th.svelte-pcimu8 {
-            border-bottom: 1px solid var(--table-border-color);
-
-            &:first-of-type {
-                border-right: 1px solid var(--table-border-color);
-                background-color: var(--tab-label-background-color);
-            }
-        }
-
-        div.today {
-            font-variation-settings: 'wght' 600;
-            font-size: 1em;
-            color: var(--interactive-accent-text);
-        }
-
-        .day,
-        .week-num {
-            border-radius: var(--border-radius-small);
-            font-variation-settings: 'wght' 600;
-            transition: unset;
-            color: var(--text-normal);
-    
-            &:hover {
-                background-color: var(--background-primary);
-            }
-
-            &.has-note.active {
-                color: var(--highlight-text-normal);
-                font-variation-settings: 'wght' 600;
-                font-size: 0.9em;
-                box-shadow: var(--drop-shadow);
-
-                .dot {
-                    fill: var(--highlight-text-normal);
-                }
-
-                .hollow.task {
-                    stroke: var(--highlight-text-normal);
-                }
-
-                &:hover {
-                    color: var(--text-normal);
-
-                    .dot {
-                        fill: var(--interactive-accent-text);
-                    }
-
-                    .hollow.task {
-                        stroke: var(--interactive-accent-text);
-                    }
-                }
-            }
-        }
-
-        .week-num {
-            font-size: 0.7em;
-        }
-
-        .year {
-            color: var(--interactive-accent-text);
-        }
-
-        .adjacent-month {
-            opacity: 0.4;
-        }
-
-        .dot.filled {
-            fill: var(--interactive-accent-text);
-        }
-
-        .hollow.task {
-            stroke: var(--interactive-accent-text);
-            stroke-width: 1.5px;
-        }
-
-        .arrow {
-            color: var(--text-normal);
-
-            &:hover svg {
-                color: var(--interactive-accent-hover);
-            }
-        }
-        
-        .reset-button {
-            color: var(--text-normal);
-            margin: unset;
-
-            &:hover {
-                color: var(--interactive-accent-hover);
-            }
-        }
-    }
+		td.svelte-egt0yd {
+			border-right: 1px solid var(--table-border-color);
 			background-color: var(--background-tertiary);
+		}
+
+		th.svelte-pcimu8 {
+			border-bottom: 1px solid var(--table-border-color);
+
+			&:first-of-type {
+				border-right: 1px solid var(--table-border-color);
 				background-color: var(--background-tertiary);
 			}
+		}
+
+		div.today {
+			font-variation-settings: "wght" 600;
+			font-size: 1em;
+			color: var(--interactive-accent-text);
+		}
+
+		.day,
+		.week-num {
+			border-radius: var(--border-radius-small);
+			font-variation-settings: "wght" 600;
+			transition: unset;
+			color: var(--text-normal);
+
+			&:hover {
+				background-color: var(--background-primary);
+			}
+
+			&.has-note.active {
+				color: var(--highlight-text-normal);
+				font-variation-settings: "wght" 600;
+				font-size: 0.9em;
+				box-shadow: var(--drop-shadow);
+
+				.dot {
+					fill: var(--highlight-text-normal);
+				}
+
+				.hollow.task {
+					stroke: var(--highlight-text-normal);
+				}
+
+				&:hover {
+					color: var(--text-normal);
+
+					.dot {
+						fill: var(--interactive-accent-text);
+					}
+
+					.hollow.task {
+						stroke: var(--interactive-accent-text);
+					}
+				}
+			}
+		}
+
+		.week-num {
+			font-size: 0.7em;
+		}
+
+		.year {
+			color: var(--interactive-accent-text);
+		}
+
+		.adjacent-month {
+			opacity: 0.4;
+		}
+
+		.dot.filled {
+			fill: var(--interactive-accent-text);
+		}
+
+		.hollow.task {
+			stroke: var(--interactive-accent-text);
+			stroke-width: 1.5px;
+		}
+
+		.arrow {
+			color: var(--text-normal);
+
+			&:hover svg {
+				color: var(--interactive-accent-hover);
+			}
+		}
+
+		.reset-button {
+			color: var(--text-normal);
+			margin: unset;
+
+			&:hover {
+				color: var(--interactive-accent-hover);
+			}
+		}
+	}
 }
 /* #endregion */

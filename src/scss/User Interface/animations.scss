@@ -1,366 +1,361 @@
 /* #region  [UI] Animations */
-body:not(.pt-disable-animations) {  
-    @keyframes iconEnlargeIcon {
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: scale(1.128);
-            stroke-width: 3px;
-            // filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
-        }
-        100% {
-            transform: translatey(0px);
-        }
-    }
+body:not(.pt-disable-animations) {
+	@keyframes iconEnlargeIcon {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: scale(1.128);
+			stroke-width: 3px;
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
 
-        
-    @keyframes iconEnlargeText {
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: scale(1.058);
-            stroke-width: 3px;
-            // filter: drop-shadow(0px 5px 2px rgba(0, 0, 0, 0.1));
-        }
-        100% {
-            transform: translatey(0px);
-        }
-    }
-    
-    @keyframes iconEnlargeHold {
-        0% {
-            transform: translatey(0px);
-        }
-        100% {
-            transform: scale(1.028);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-    }
+	@keyframes iconEnlargeText {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: scale(1.058);
+			stroke-width: 3px;
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
 
-    @keyframes iconEnlargeHoldDropdown {
-        0% {
-            transform: translatey(0px);
-        }
-        25% {
-            background-position-y: 70%;
-            transform: scale(1.028);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-        50% {
-            background-position-y: 60%;
-            transform: scale(1.028);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-        75% {
-            background-position-y: 70%;
-            transform: scale(1.028);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-        100% {
-            background-position-y: 60%;
-            transform: scale(1.028);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-        }
-    }
-        
-    @keyframes iconEnlargeHoldBold {
-        0% {
-            transform: translatey(0px);
-        }
-        100% {
-            transform: scale(1.028);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            font-variation-settings: "wght" 500;
-        }
-    }
-    
-    @keyframes floatIconUp {
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: translatey(-3px);
-        }
-        100% {
-            transform: translatey(0px);
-        }
-    }
-    
-    @keyframes floatIconDown {
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: translatey(3px);
-        }
-        100% {
-            transform: translatey(0px);
-        }
-    }
-    
-    @keyframes floatIconRight {
-        0% {
-            transform: translatex(0px);
-        }
-        50% {
-            transform: translatex(-3px);
-            filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
-        }
-        100% {
-            transform: translatex(0px);
-        }
-    }
+	@keyframes iconEnlargeHold {
+		0% {
+			transform: translatey(0px);
+		}
+		100% {
+			transform: scale(1.028);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		}
+	}
 
-    @keyframes floatIconRightCheckbox {
-        0% {
-            transform: translatex(20px);
-        }
-        50% {
-            transform: translatex(17px);
-            filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
-        }
-        100% {
-            transform: translatex(20px);
-        }
-    }
-    
-    @keyframes floatIconLeft {
-        0% {
-            transform: translatex(0px);
-        }
-        50% {
-            transform: translatex(3px);
-            filter: drop-shadow(-5px 0px 2px rgba(0, 0, 0, 0.1));
-        }
-        100% {
-            transform: translatex(0px);
-        }
-    }
+	@keyframes iconEnlargeHoldDropdown {
+		0% {
+			transform: translatey(0px);
+		}
+		25% {
+			background-position-y: 70%;
+			transform: scale(1.028);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		}
+		50% {
+			background-position-y: 60%;
+			transform: scale(1.028);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		}
+		75% {
+			background-position-y: 70%;
+			transform: scale(1.028);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		}
+		100% {
+			background-position-y: 60%;
+			transform: scale(1.028);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		}
+	}
 
-    @keyframes floatIconDownIndicator {
-        0% {
-            transform: translatey(0px);
-        }
-        50% {
-            transform: translatey(2px);
-        }
-        100% {
-            transform: translatey(0px);
-        }
-    }
+	@keyframes iconEnlargeHoldBold {
+		0% {
+			transform: translatey(0px);
+		}
+		100% {
+			transform: scale(1.028);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+			font-variation-settings: "wght" 500;
+		}
+	}
 
-    @keyframes floatIconRightIndicator {
-        0% {
-            transform: rotate(-90deg) translatey(0px);
-        }
-        50% {
-            transform: rotate(-90deg) translatey(2px);
-        }
-        100% {
-            transform: rotate(-90deg) translatey(0px);
-        }
-    }
-    
-    .horizontal-tab-nav-item:hover,
-    .vertical-tab-nav-item:hover {
-        animation-fill-mode: forwards;
-        animation-duration: 0.15s;
-        animation-name: iconEnlargeHoldBold;
-        animation-iteration-count: 1;
-    }
-    
-    .workspace-ribbon-collapse-btn[aria-label-position="right"]:hover svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconRight;
-        animation-iteration-count: 2;
-    }
-    
-    .workspace-ribbon-collapse-btn[aria-label-position="left"]:hover svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconLeft;
-        animation-iteration-count: 2;
-    }
-    
-    .setting-add-hotkey-button:hover svg,
-    .clickable-icon:hover svg,
-    .view-action:hover svg,
-    .view-header-icon:hover svg,
-    .nav-action-button:hover svg,
-    .side-dock-ribbon-action:hover svg,
-    .workspace-tab-header:hover svg,
-    .graph-controls-button:hover svg,
-    .kanban-plugin__lane-settings-button:hover svg,
-    .kanban-plugin__item-postfix-button:hover svg,
-    .modal-close-button:hover {
-        animation-duration: 0.25s;
-        animation-name: iconEnlargeIcon;
-        animation-iteration-count: 2;
-    }
-    
-    .workspace-leaf-content[data-type="calendar"] {
-        .arrow:not(.right):hover svg {
-            animation-duration: 0.25s;
-            animation-name: floatIconRight;
-            animation-iteration-count: 2;
-        }
-    
-        .arrow.right:hover svg {
-            animation-duration: 0.25s;
-            animation-name: floatIconRight;
-            animation-iteration-count: 2;
-        }
-    
-        .reset-button:hover {
-            animation-duration: 0.25s;
-            animation-name: iconEnlargeText;
-            animation-iteration-count: 2;
+	@keyframes floatIconUp {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(-3px);
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
 
-        }
-    
-        .day:hover {
-            animation-fill-mode: forwards;
-            animation-duration: 0.15s;
-            animation-name: iconEnlargeHoldBold;
-            animation-iteration-count: 1;
-        }
-    }
-    
-    .flatpickr-prev-month:hover svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconRight;
-        animation-iteration-count: 2;
-    }
+	@keyframes floatIconDown {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(3px);
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
 
-    .flatpickr-next-month:hover svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconLeft;
-        animation-iteration-count: 2;
-    } 
+	@keyframes floatIconRight {
+		0% {
+			transform: translatex(0px);
+		}
+		50% {
+			transform: translatex(-3px);
+			filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
+		}
+		100% {
+			transform: translatex(0px);
+		}
+	}
 
-    .side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconUp;
-        animation-iteration-count: 2;
-    }
-    
-    .side-dock-ribbon-action.separator.is-collapsed:hover svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconDown;
-        animation-iteration-count: 2;
-    }
+	@keyframes floatIconRightCheckbox {
+		0% {
+			transform: translatex(20px);
+		}
+		50% {
+			transform: translatex(17px);
+			filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
+		}
+		100% {
+			transform: translatex(20px);
+		}
+	}
 
-    .style-settings-heading.is-collapsed:hover .style-settings-collapse-indicator svg,
-    .nav-files-container .nav-folder.is-collapsed > .nav-folder-title:hover .nav-folder-collapse-indicator svg,
-    .outgoing-link-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
-    .backlink-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
-    .search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
-    .outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
-    .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener:not(.open):hover svg,
-    .callout.is-collapsed .callout-title:hover .callout-fold svg, 
-    .tree-item.graph-control-section .tree-item-self:hover .tree-item-icon.collapse-icon svg {
-        animation-duration: 0.25s;
-        animation-name: floatIconDownIndicator;
-        animation-iteration-count: 2;
-    }
+	@keyframes floatIconLeft {
+		0% {
+			transform: translatex(0px);
+		}
+		50% {
+			transform: translatex(3px);
+			filter: drop-shadow(-5px 0px 2px rgba(0, 0, 0, 0.1));
+		}
+		100% {
+			transform: translatex(0px);
+		}
+	}
 
-    .style-settings-heading:not(.is-collapsed):hover .style-settings-collapse-indicator svg,
-    .nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title:hover > .nav-folder-collapse-indicator.collapse-icon svg,
-    .outgoing-link-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
-    .backlink-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
-    .search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
-    .outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
-    .workspace-leaf-content[data-type=dictionary-view] .contents .main .opener.open:hover svg,
-    .callout:not(.is-collapsed) .callout-title:hover .callout-fold svg,
-    .tree-item.graph-control-section:not(.is-collapsed) .tree-item-self:hover .tree-item-icon.collapse-icon svg,
-    .workspace-leaf-content[data-type=dangling-links] .view-content details[open] summary::marker  {
-        animation-duration: 0.25s;
-        animation-name: floatIconRightIndicator;
-        animation-iteration-count: 2;
-    }
-    
-    .titlebar-button {
-        &.mod-back:hover svg {
-            animation-duration: 0.25s;
-            animation-name: floatIconRight;
-            animation-iteration-count: 2;
-        }
-    
-        &.mod-forward:hover svg {
-            animation-duration: 0.25s;
-            animation-name: floatIconLeft;
-            animation-iteration-count: 2;
-        }
-    }
-    
-    //.suggestion-item.is-selected:hover
-    .nav-file-title:hover,
-    .nav-folder-title:not([data-path="/"]):hover,
-    .tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"], [aria-label="Click to expand"]):hover,
-    .community-theme:hover,
-    .community-plugin-item:hover,
-    .search-result-file-match:hover,
-    .kanban-plugin__item:hover,
-    .kanban-plugin__new-item-button:hover,
-    .workspace-leaf-content[data-type="dangling-links"] li:hover,
-    div#quick-explorer .explorable:hover,
-    .setting-item-control input.slider:hover {
-        overflow: visible;
-        animation-fill-mode: forwards;
-        animation-duration: 0.15s;
-        animation-name: iconEnlargeHold;
-        animation-iteration-count: 1;
-    }
+	@keyframes floatIconDownIndicator {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(2px);
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
 
-    .graph-control-section .tree-item-self:hover {
-        animation: unset;
-    }
-    
-    .nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
-        animation-duration: 1s;
-        animation-name: iconEnlargeIcon;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-    
-    .modal button:hover,
-    .graph-controls button:hover,
-    .search-result-file-match-destination-file:hover,
-    button.kanban-plugin__confirm-action-button:hover,
-    button.kanban-plugin__cancel-action-button:hover {
-        animation-fill-mode: forwards;
-        animation-duration: 0.15s;
-        animation-name: iconEnlargeHold;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-    }
-    
-    .checkbox-container.is-enabled:hover:after {
-        animation-duration: 0.3s;
-        animation-name: floatIconRightCheckbox;
-        animation-iteration-count: 2;
-    }
-    
-    .checkbox-container:not(.is-enabled):hover:after {
-        animation-duration: 0.3s;
-        animation-name: floatIconLeft;
-        animation-iteration-count: 2;
-    }
+	@keyframes floatIconRightIndicator {
+		0% {
+			transform: rotate(-90deg) translatey(0px);
+		}
+		50% {
+			transform: rotate(-90deg) translatey(2px);
+		}
+		100% {
+			transform: rotate(-90deg) translatey(0px);
+		}
+	}
 
-    .dropdown:hover {
-        animation-fill-mode: forwards;
-        animation-duration: 0.6s;
-        animation-name: iconEnlargeHoldDropdown;
-        animation-iteration-count: 1;
-        animation-direction: alternate;
-    }
+	.horizontal-tab-nav-item:hover,
+	.vertical-tab-nav-item:hover {
+		animation-fill-mode: forwards;
+		animation-duration: 0.15s;
+		animation-name: iconEnlargeHoldBold;
+		animation-iteration-count: 1;
+	}
 
-    .workspace-tab-header,
-    .view-header,
-    .nav-file-title:not([data-path="/"]),
-    .nav-folder-title:not([data-path="/"]) {
-        transition: all ease 200ms;
-    }
+	.workspace-ribbon-collapse-btn[aria-label-position="right"]:hover svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconRight;
+		animation-iteration-count: 2;
+	}
+
+	.workspace-ribbon-collapse-btn[aria-label-position="left"]:hover svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconLeft;
+		animation-iteration-count: 2;
+	}
+
+	.setting-add-hotkey-button:hover svg,
+	.clickable-icon:hover svg,
+	.view-action:hover svg,
+	.view-header-icon:hover svg,
+	.nav-action-button:hover svg,
+	.side-dock-ribbon-action:hover svg,
+	.workspace-tab-header:hover svg,
+	.graph-controls-button:hover svg,
+	.kanban-plugin__lane-settings-button:hover svg,
+	.kanban-plugin__item-postfix-button:hover svg,
+	.modal-close-button:hover {
+		animation-duration: 0.25s;
+		animation-name: iconEnlargeIcon;
+		animation-iteration-count: 2;
+	}
+
+	.workspace-leaf-content[data-type="calendar"] {
+		.arrow:not(.right):hover svg {
+			animation-duration: 0.25s;
+			animation-name: floatIconRight;
+			animation-iteration-count: 2;
+		}
+
+		.arrow.right:hover svg {
+			animation-duration: 0.25s;
+			animation-name: floatIconRight;
+			animation-iteration-count: 2;
+		}
+
+		.reset-button:hover {
+			animation-duration: 0.25s;
+			animation-name: iconEnlargeText;
+			animation-iteration-count: 2;
+		}
+
+		.day:hover {
+			animation-fill-mode: forwards;
+			animation-duration: 0.15s;
+			animation-name: iconEnlargeHoldBold;
+			animation-iteration-count: 1;
+		}
+	}
+
+	.flatpickr-prev-month:hover svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconRight;
+		animation-iteration-count: 2;
+	}
+
+	.flatpickr-next-month:hover svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconLeft;
+		animation-iteration-count: 2;
+	}
+
+	.side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconUp;
+		animation-iteration-count: 2;
+	}
+
+	.side-dock-ribbon-action.separator.is-collapsed:hover svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconDown;
+		animation-iteration-count: 2;
+	}
+
+	.style-settings-heading.is-collapsed:hover .style-settings-collapse-indicator svg,
+	.nav-files-container .nav-folder.is-collapsed > .nav-folder-title:hover .nav-folder-collapse-indicator svg,
+	.outgoing-link-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
+	.backlink-pane .tree-item-self.is-collapsed:hover > .collapse-icon svg,
+	.search-result-container .tree-item.is-collapsed .tree-item-self:hover > .collapse-icon svg,
+	.outline .tree-item.is-collapsed > .tree-item-self:hover > .collapse-icon > svg,
+	.workspace-leaf-content[data-type="dictionary-view"] .contents .main .opener:not(.open):hover svg,
+	.callout.is-collapsed .callout-title:hover .callout-fold svg,
+	.tree-item.graph-control-section .tree-item-self:hover .tree-item-icon.collapse-icon svg {
+		animation-duration: 0.25s;
+		animation-name: floatIconDownIndicator;
+		animation-iteration-count: 2;
+	}
+
+	.style-settings-heading:not(.is-collapsed):hover .style-settings-collapse-indicator svg,
+	.nav-files-container .nav-folder:not(.is-collapsed) > .nav-folder-title:hover > .nav-folder-collapse-indicator.collapse-icon svg,
+	.outgoing-link-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
+	.backlink-pane .tree-item-self:not(.is-collapsed):hover > .collapse-icon svg,
+	.search-result-container .tree-item:not(.is-collapsed) .tree-item-self:hover > .collapse-icon svg,
+	.outline .tree-item:not(.is-collapsed) > .tree-item-self:hover > .collapse-icon > svg,
+	.workspace-leaf-content[data-type="dictionary-view"] .contents .main .opener.open:hover svg,
+	.callout:not(.is-collapsed) .callout-title:hover .callout-fold svg,
+	.tree-item.graph-control-section:not(.is-collapsed) .tree-item-self:hover .tree-item-icon.collapse-icon svg,
+	.workspace-leaf-content[data-type="dangling-links"] .view-content details[open] summary::marker {
+		animation-duration: 0.25s;
+		animation-name: floatIconRightIndicator;
+		animation-iteration-count: 2;
+	}
+
+	.titlebar-button {
+		&.mod-back:hover svg {
+			animation-duration: 0.25s;
+			animation-name: floatIconRight;
+			animation-iteration-count: 2;
+		}
+
+		&.mod-forward:hover svg {
+			animation-duration: 0.25s;
+			animation-name: floatIconLeft;
+			animation-iteration-count: 2;
+		}
+	}
+
+	.nav-file-title:hover,
+	.nav-folder-title:not([data-path="/"]):hover,
+	.tree-item-self:not(.search-result-file-title, [aria-label="Click to collapse"], [aria-label="Click to expand"]):hover,
+	.community-theme:hover,
+	.community-plugin-item:hover,
+	.search-result-file-match:hover,
+	.kanban-plugin__item:hover,
+	.kanban-plugin__new-item-button:hover,
+	.workspace-leaf-content[data-type="dangling-links"] li:hover,
+	div#quick-explorer .explorable:hover,
+	.setting-item-control input.slider:hover {
+		overflow: visible;
+		animation-fill-mode: forwards;
+		animation-duration: 0.15s;
+		animation-name: iconEnlargeHold;
+		animation-iteration-count: 1;
+	}
+
+	.graph-control-section .tree-item-self:hover {
+		animation: unset;
+	}
+
+	.nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
+		animation-duration: 1s;
+		animation-name: iconEnlargeIcon;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+
+	.modal button:hover,
+	.graph-controls button:hover,
+	.search-result-file-match-destination-file:hover,
+	button.kanban-plugin__confirm-action-button:hover,
+	button.kanban-plugin__cancel-action-button:hover {
+		animation-fill-mode: forwards;
+		animation-duration: 0.15s;
+		animation-name: iconEnlargeHold;
+		animation-iteration-count: 1;
+		animation-direction: alternate;
+	}
+
+	.checkbox-container.is-enabled:hover:after {
+		animation-duration: 0.3s;
+		animation-name: floatIconRightCheckbox;
+		animation-iteration-count: 2;
+	}
+
+	.checkbox-container:not(.is-enabled):hover:after {
+		animation-duration: 0.3s;
+		animation-name: floatIconLeft;
+		animation-iteration-count: 2;
+	}
+
+	.dropdown:hover {
+		animation-fill-mode: forwards;
+		animation-duration: 0.6s;
+		animation-name: iconEnlargeHoldDropdown;
+		animation-iteration-count: 1;
+		animation-direction: alternate;
+	}
+
+	.workspace-tab-header,
+	.view-header,
+	.nav-file-title:not([data-path="/"]),
+	.nav-folder-title:not([data-path="/"]) {
+		transition: all ease 200ms;
+	}
 }
 /* #endregion */

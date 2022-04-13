@@ -1,14 +1,20 @@
 /* #region  [Editor] Text Selection */
-.theme-light body ::selection,
-.theme-light div.view-header-title::selection {
-	background-color: var(--text-selection);
-	color: var(--highlight-text-dark);
+.theme-light {
+	::selection,
+	.markdown-source-view.mod-cm6 .cm-selection,
+	div.view-header-title::selection {
+		background-color: var(--text-selection);
+		color: var(--highlight-text-dark);
+	}
 }
 
-.theme-dark body ::selection,
-.theme-dark div.view-header-title::selection {
-	background-color: var(--text-selection);
-	color: var(--text-normal);
+.theme-dark {
+	::selection,
+	.markdown-source-view.mod-cm6 .cm-selection,
+	div.view-header-title::selection {
+		background-color: var(--text-selection);
+		color: var(--text-normal);
+	}
 }
 
 mark::selection,
@@ -26,7 +32,6 @@ h6::selection {
 .cm-s-obsidian span.obsidian-search-match-highlight {
 	border-radius: var(--border-radius-small);
 	background-color: var(--interactive-accent);
-	color: var(--highlight-text-dark);
 	color: var(--text-normal);
 }
 /* #endregion */

@@ -1,112 +1,110 @@
 /* #region  [Plugin - Community] Reminder */
 .date-time-chooser-popup {
-    z-index: var(--layer-popover);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--table-border-color);
-    background: var(--background-secondary-blur);
-    backdrop-filter: blur(var(--blur-intensity));
-    -webkit-backdrop-filter: blur(var(--blur-intensity));
-    box-shadow: var(--drop-shadow-popup);
-    .reminder-calendar.svelte-18sic8s .year-month.svelte-18sic8s {
-        margin: unset;
-        align-items: center;
-        background: var(--background-primary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--drop-shadow);
-        padding: 5px;
-    }
+	z-index: var(--layer-popover);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--table-border-color);
+	background: var(--background-secondary-blur);
+	backdrop-filter: blur(var(--blur-intensity));
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	box-shadow: var(--drop-shadow-popup);
+	.reminder-calendar.svelte-18sic8s .year-month.svelte-18sic8s {
+		margin: unset;
+		align-items: center;
+		background: var(--background-primary);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+		padding: 5px;
+	}
 
+	.reminder-calendar.svelte-18sic8s.svelte-18sic8s {
+		padding: unset;
+	}
 
-    .reminder-calendar.svelte-18sic8s.svelte-18sic8s {
-        padding: unset;
-    }
+	.reminder-calendar.svelte-18sic8s table {
+		margin: 0 8px;
+	}
 
-    .reminder-calendar.svelte-18sic8s table {
-        margin: 0 8px;
-    }
+	.reminder-calendar.svelte-18sic8s th.svelte-18sic8s {
+		font-size: 0.6rem;
+	}
 
-    .reminder-calendar.svelte-18sic8s th.svelte-18sic8s {
-        font-size: 0.6rem;
-    }
+	.dtchooser.svelte-fjfxbq {
+		background-color: unset;
+	}
 
-    .dtchooser.svelte-fjfxbq {
-        background-color: unset;
-    }
+	.dtchooser-divider {
+		border-top: 1px solid var(--table-border-color);
+	}
 
-    .dtchooser-divider {
-        border-top: 1px solid var(--table-border-color);
-    }
+	.reminder-calendar.svelte-18sic8s .month.svelte-18sic8s {
+		color: var(--text-normal);
+		font-weight: 500;
+	}
 
-    .reminder-calendar.svelte-18sic8s .month.svelte-18sic8s {
-        color: var(--text-normal);
-        font-weight: 500;
-    }
+	.reminder-calendar.svelte-18sic8s .year.svelte-18sic8s {
+		color: var(--interactive-accent-dark);
+	}
 
-    .reminder-calendar.svelte-18sic8s .year.svelte-18sic8s {
-        color: var(--interactive-accent-dark);
-    }
+	.reminder-calendar.svelte-18sic8s .month-nav.svelte-18sic8s {
+		margin: 0px 5px;
+		padding: 0px 5px;
+		color: var(--text-normal);
+	}
 
-    .reminder-calendar.svelte-18sic8s .month-nav.svelte-18sic8s {
-        margin: 0px 5px;
-        padding: 0px 5px;
-        color: var(--text-normal);
-    }
+	.reminder-calendar.svelte-18sic8s .is-holiday.svelte-18sic8s:not(.other-month) {
+		color: var(--text-normal);
+	}
 
-    .reminder-calendar.svelte-18sic8s .is-holiday.svelte-18sic8s:not(.other-month) {
-        color: var(--text-normal);
-    }
+	.reminder-calendar.svelte-18sic8s .is-past.svelte-18sic8s:not(.other-month) {
+		color: var(--text-normal);
+	}
 
-    .reminder-calendar.svelte-18sic8s .is-past.svelte-18sic8s:not(.other-month) {
-        color: var(--text-normal);
-    }
+	.calendar-date {
+		font-size: 0.8em;
+		font-variation-settings: "wght" 600;
+		border-radius: var(--border-radius-small);
 
-    .calendar-date {
-        font-size: 0.8em;
-        font-variation-settings: 'wght' 600;
-        border-radius: var(--border-radius-small);
+		&:hover {
+			background-color: var(--background-primary) !important;
+		}
+	}
 
-        
-        &:hover {
-            background-color: var(--background-primary) !important;
-        }
-    }
+	.reminder-calendar.svelte-18sic8s .is-selected.svelte-18sic8s {
+		background-color: unset !important;
+		color: var(--interactive-accent-text) !important;
+		font-size: 1em;
+		font-variation-settings: "wght" 600;
 
-    .reminder-calendar.svelte-18sic8s .is-selected.svelte-18sic8s {
-        background-color: unset  !important;
-        color: var(--interactive-accent-text) !important;
-        font-size: 1em;
-        font-variation-settings: 'wght' 600;
+		&:hover {
+			background-color: var(--background-primary) !important;
+		}
+	}
 
-        &:hover {
-            background-color: var(--background-primary) !important;
-        }
-    }
+	.reminder-time.svelte-gzdxib {
+		font-family: var(--font-interface);
+		color: var(--text-normal);
+	}
 
-    .reminder-time.svelte-gzdxib {
-        font-family: var(--font-family-ui);
-        color: var(--text-normal);
-    }
+	.reminder-markdown {
+		color: var(--text-normal);
+	}
 
-    .reminder-markdown {
-        color: var(--text-normal);
-    }
+	.reminder-file.svelte-gzdxib {
+		color: var(--text-muted);
+	}
 
-    .reminder-file.svelte-gzdxib {
-        color: var(--text-muted);
-    }
+	.reminder-list-item.svelte-gzdxib {
+		border-radius: var(--border-radius-small);
+		padding: 3px 8px;
+		font-variation-settings: "wght" 600;
 
-    .reminder-list-item.svelte-gzdxib {
-        border-radius: var(--border-radius-small);
-        padding: 3px 8px;
-        font-variation-settings: 'wght' 600;
+		&:hover {
+			background-color: var(--background-primary);
+		}
+	}
 
-        &:hover {
-            background-color: var(--background-primary);
-        }
-    }
-
-    .reminder-group.svelte-gzdxib {
-        margin-bottom: unset;
-    }
+	.reminder-group.svelte-gzdxib {
+		margin-bottom: unset;
+	}
 }
 /* #endregion */

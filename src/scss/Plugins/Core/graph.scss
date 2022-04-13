@@ -23,7 +23,7 @@ div.graph-controls.is-close {
 	box-shadow: var(--drop-shadow);
 	position: absolute;
 	margin-top: unset;
-    top: 8px;
+	top: 8px;
 	left: 8px;
 }
 
@@ -41,7 +41,6 @@ div.graph-controls.is-close {
 
 .graph-controls:not(.is-close) {
 	padding: 30px 8px 8px 8px;
-	// min-width: 240px;
 
 	.graph-controls-button.mod-reset,
 	.graph-controls-button.mod-close {
@@ -51,7 +50,7 @@ div.graph-controls.is-close {
 
 .graph-control-section {
 	border: 1px solid var(--window-border);
-    border-radius: var(--border-radius);
+	border-radius: var(--border-radius);
 
 	&:not(:last-child) {
 		margin-bottom: 8px;
@@ -70,7 +69,6 @@ div.graph-controls.is-close {
 	}
 
 	&.is-collapsed .tree-item-self {
-		background-color: var(--tab-label-background-color);
 		background-color: var(--background-tertiary);
 		margin-bottom: unset;
 	}
@@ -94,16 +92,7 @@ div.graph-controls.is-close {
 	}
 }
 
-// .theme-light .graph-control-section:not(:last-child) .tree-item-children {
-// 	border-bottom: 2px solid var(--background-secondary-alt);
-// }
-
-// .theme-dark .graph-control-section:not(:last-child) .tree-item-children {
-// 	border-bottom: 2px solid var(--background-primary);
-// }
-
 .theme-light .graph-control-section {
-	background-color: var(--tab-label-background-color);
 	background-color: var(--background-tertiary);
 }
 

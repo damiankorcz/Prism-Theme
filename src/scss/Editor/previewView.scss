@@ -87,7 +87,7 @@ div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indi
 	border-top: 2px solid var(--table-border-color);
 }
 
-.markdown-rendered .internal-link.is-unresolved{
+.markdown-rendered .internal-link.is-unresolved {
 	opacity: 0.75;
 }
 
@@ -96,12 +96,12 @@ a.tag[href*="#"] {
 	text-decoration: none;
 	border-radius: var(--border-radius-small);
 	border: 2px solid var(--window-border);
-	background-color: var(--tab-label-background-color);
 	background-color: var(--background-tertiary);
 	padding: 0px 4px;
-	display: inline-flex;
+    display: inline-flex;
 	align-items: center;
-	
+    vertical-align: bottom;
+
 	&:hover {
 		color: var(--interactive-accent-text);
 		background-color: var(--background-primary);
@@ -113,7 +113,6 @@ a.tag[href*="#"] {
 .cm-s-obsidian .HyperMD-quote.HyperMD-quote-1:first-of-type {
 	border-top: 1px solid var(--window-border);
 }
-
 
 /* #endregion */
 
@@ -171,17 +170,15 @@ input[type="checkbox"]:checked:before {
 	filter: invert(1);
 }
 
-
 /* Copy Button in the Code blocks */
 button.copy-code-button {
 	top: 0;
 	right: 0;
 	margin: 4px;
-    padding: 3px;
+	padding: 3px;
 	border: var(--border-size) solid transparent;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
-	font-variation-settings: 'wght' 600;
 	font-variation-settings: "wght" 600;
 }
 /* #endregion */
@@ -365,7 +362,6 @@ button.copy-code-button {
 		background-color: var(--background-primary-alt);
 		border-left-width: 5px;
 		padding: 10px 20px !important;
-		// margin: 16px 30px !important;
 	}
 
 	.markdown-preview-view hr {

@@ -1,15 +1,19 @@
 /* #region  [Plugin - Community] Sliding Panes */
-body.plugin-sliding-panes .workspace > .mod-root {
-    margin-right: calc(var(--window-gap) / 2);
-}
-.theme-light.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf,
-.theme-dark.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
-	box-shadow: none;
-}
+body {
+	&.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf  {
+		box-shadow: none;
+	}
 
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div.view-header-title-container:after,
-body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > .view-header-title-container:before {
-	background: linear-gradient(to bottom, transparent, var(--tab-label-background-color));
+	&.plugin-sliding-panes .workspace > .mod-root {
+		margin-right: calc(var(--window-gap) / 2);
+	}
+	
+	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header > div.view-header-title-container {
+		&::after,
+		&::before {
+			background: linear-gradient(to bottom, transparent, var(--background-tertiary));
+		}
+	}
 }
 
 .theme-light.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > div.view-header {
