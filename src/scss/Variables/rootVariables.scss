@@ -300,6 +300,83 @@ body {
 	--color-accent-base: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-lt-l));
 	--color-accent-dark: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened2x));
 	--color-accent-text: hsl(var(--color-accent-lt-h), var(--color-accent-lt-s), var(--color-accent-l-darkened-text));
+	--color-accent-base-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-base-lt));
+	--color-accent-dark-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-dark-lt));
+	--color-accent-text-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-text-lt));
+
+	/* Got this from @pseudometa. Thanks again! */
+	--hue-background-lt:
+	linear-gradient(
+		to right,
+		hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(30 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(60 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(90 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(120 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(150 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(180 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(210 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(240 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(270 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(300 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(330 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+		hsl(360 var(--color-accent-s-lt) var(--color-accent-l-base-lt))
+	);
+
+	--saturation-background-lt:
+	linear-gradient(
+		to right,
+		hsl(var(--color-accent-h-lt), 0%, var(--color-accent-l-base-lt)),
+		hsl(var(--color-accent-h-lt), 50%, var(--color-accent-l-base-lt)),
+		hsl(var(--color-accent-h-lt), 100%, var(--color-accent-l-base-lt))
+	); 
+
+	--lightness-background-lt:
+	linear-gradient(
+		to right,
+		hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 0%),
+		hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 50%),
+		hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 100%)
+	); 	
+
+	--color-accent-base-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-base-dt));
+	--color-accent-dark-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-dark-dt));
+	--color-accent-text-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-text-dt));
+
+	/* Got this from @pseudometa. Thanks again! */
+	--hue-background-dt:
+	linear-gradient(
+		to right,
+		hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(30 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(60 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(90 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(120 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(150 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(180 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(210 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(240 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(270 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(300 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(330 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+		hsl(360 var(--color-accent-s-dt) var(--color-accent-l-base-dt))
+	);
+
+	--saturation-background-dt:
+	linear-gradient(
+		to right,
+		hsl(var(--color-accent-h-dt), 0%, var(--color-accent-l-base-dt)),
+		hsl(var(--color-accent-h-dt), 50%, var(--color-accent-l-base-dt)),
+		hsl(var(--color-accent-h-dt), 100%, var(--color-accent-l-base-dt))
+	); 
+
+	--lightness-background-dt:
+	linear-gradient(
+		to right,
+		hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 0%),
+		hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 50%),
+		hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 100%)
+	); 	
 }
 
 .theme-dark {

@@ -104,16 +104,8 @@ settings:
                 label: Grey
                 value: pt-accent-color-grey-lt
     -
-        id: color-accent-lt
-        title: Light Theme Custom Accent Color
-        description: Make sure you selected 'Custom' in Light Theme Accent Color Preset for this to work.
-        type: variable-color
-        format: hsl-split
-        opacity: false
-        default: '#C7BDFF'
-    -
         id: highlight-text-accent-lt
-        title: Light Theme Accent Text Color Preset
+        title: Accent Text Color Preset
         description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
@@ -133,12 +125,68 @@ settings:
                 value: pt-highlight-text-accent-lt
     -
         id: highlight-text-accent-custom-lt
-        title: Light Theme Custom Accent Text Color
+        title: Custom Accent Text Color
         description: Make sure you selected 'Custom' in Light Theme Accent Text Color for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#FFFFFF'
+    -
+        id: color-accent-custom-lt
+        title: Custom Accent Color Tuning
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work. The default Lightness values should net good results for most Hues. Tweak them to your preference.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: color-accent-h-lt
+        title: Custom Accent Base Color Hue
+        description: Changes the the Hue of the Base color.
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 360
+        step: 1
+    -
+        id: color-accent-s-lt
+        title: Custom Accent Base Color Saturation
+        description: Changes the Saturation of the Base Color.
+        type: variable-number-slider
+        format: '%'
+        default: 60
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-base-lt
+        title: Custom Accent Base Color Lightness
+        description: Base Color Lightness should ideally be the lighteest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 82
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-dark-lt
+        title: Custom Accent Secondary Color Lightness
+        description: Secondary Color Lightness should ideally be between Base and Text.
+        type: variable-number-slider
+        format: '%'
+        default: 67
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-text-lt
+        title: Custom Accent Text Color Lightness
+        description: Text Color Lightness should ideally be the darkest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 42
+        min: 0
+        max: 100
+        step: 1
     -
         id: accent-colors-styles-dt
         title: Dark Theme
@@ -147,7 +195,7 @@ settings:
         collapsed: true
     -
         id: color-schemes-dt
-        title: Dark Theme Color Scheme
+        title: Color Scheme
         type: class-select
         allowEmpty: false
         default: pt-color-scheme-default-dt
@@ -166,7 +214,7 @@ settings:
                 value: pt-color-scheme-pine-dt
     -
         id: accent-style-dt
-        title: Dark Theme Accent Style
+        title: Accent Style
         description: Adjusts the style used by the Accented elements in the UI.
         type: class-select
         allowEmpty: false
@@ -186,8 +234,8 @@ settings:
                 value: pt-accent-style-borderandfilled-dt
     -
         id: dark-accent-color-preset
-        title: Dark Theme Accent Color Preset
-        description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and select your colour in the color picker below.
+        title: Accent Color Preset
+        description: Changes the Dark Theme Accent Color around the entire UI. Select from present colors or choose 'Custom' and tune the color in the Custom Accent Color Tuning section below.
         type: class-select
         allowEmpty: false
         default: pt-accent-color-purple-dt
@@ -226,16 +274,8 @@ settings:
                 label: Grey
                 value: pt-accent-color-grey-dt
     -
-        id: color-accent-dt
-        title: Dark Theme Custom Accent Color
-        description: Make sure you selected 'Custom' in Accent Color Preset for this to work.
-        type: variable-color
-        format: hsl-split
-        opacity: false
-        default: '#8C7FD7'
-    -
         id: highlight-text-accent-dt
-        title: Dark Theme Accent Text Color Preset
+        title: Accent Text Color Preset
         description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
@@ -255,12 +295,68 @@ settings:
                 value: pt-highlight-text-accent-dt
     -
         id: highlight-text-accent-custom-dt
-        title: Dark Theme Custom Accent Text Color
+        title: Custom Accent Text Color
         description: Make sure you selected 'Custom' in Dark Theme Accent Text Color for this to work.
         type: variable-color
         format: hsl
         opacity: false
         default: '#FFFFFF'
+    -
+        id: color-accent-custom-dt
+        title: Custom Accent Color Tuning
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work. The default Lightness values should net good results for most Hues. Tweak them to your preference.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: color-accent-h-dt
+        title: Custom Accent Base Color Hue
+        description: Changes the the Hue of the Base color.
+        type: variable-number-slider
+        default: 0
+        min: 0
+        max: 360
+        step: 1
+    -
+        id: color-accent-s-dt
+        title: Custom Accent Base Color Saturation
+        description: Changes the Saturation of the Base Color.
+        type: variable-number-slider
+        format: '%'
+        default: 50
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-base-dt
+        title: Custom Accent Base Color Lightness
+        description: Base Color Lightness should ideally be the darkest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 20
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-dark-dt
+        title: Custom Accent Secondary Color Lightness
+        description: Secondary Color Lightness should ideally be between Base and Text.
+        type: variable-number-slider
+        format: '%'
+        default: 40
+        min: 0
+        max: 100
+        step: 1
+    -
+        id: color-accent-l-text-dt
+        title: Custom Accent Text Color Lightness
+        description: Text Color Lightness should ideally be the lightest of the 3.
+        type: variable-number-slider
+        format: '%'
+        default: 65
+        min: 0
+        max: 100
+        step: 1
     -
         id: background-options
         title: Background Options
@@ -276,7 +372,7 @@ settings:
         collapsed: true
     -
         id: background-type-lt
-        title: Light Theme Background Type
+        title: Background Type
         description: Select what type of background you would like in the Light Theme.
         default: pt-background-color-lt
         level: 2
@@ -290,7 +386,7 @@ settings:
                 value: pt-background-image-lt
     -
         id: background-color-lt
-        title: Light Theme Background Solid Color
+        title: Background Solid Color
         description: Make sure you selected 'Solid Color' in Light Theme Background Type for this to work.
         type: variable-color
         format: hsl
@@ -298,13 +394,13 @@ settings:
         default: '#E6E6E6'
     -
         id: background-image-lt
-        title: Light Theme Background Image
+        title: Background Image
         description: Customise the Background Image for the Light Theme. Insert the link to an image between the brackets in the url(). Make sure you selected 'Image' in Light Theme Background Type for this to work.
         type: variable-text
         default: url()
     -
         id: background-blur-lt
-        title: Light Theme Background Blur (px)
+        title: Background Blur (px)
         description: Select the amount of blur applied to the Light Theme Background Image.
         type: variable-number-slider
         format: px
@@ -314,25 +410,25 @@ settings:
         step: 1
     -
         id: background-repeat-lt
-        title: Light Theme Background Repeat
+        title: Background Repeat
         description: Define if the Light Theme Background Image should repeat (tile).
         type: variable-text
         default: no-repeat
     -
         id: background-attachment-lt
-        title: Light Theme Background Attachment
+        title: Background Attachment
         description: Define whether the Light Theme Background Image's position is fixed within the viewport, or scrolls with its containing block.
         type: variable-text
         default: fixed
     -
         id: background-position-lt
-        title: Light Theme Background Position
+        title: Background Position
         description: Define the initial position for the Light Theme Background Image.
         type: variable-text
         default: center
     -
         id: background-size-lt
-        title: Light Theme Background Size
+        title: Background Size
         description: Define the size of the Light Theme Background Image. The image can be left to its natural size, stretched, or constrained to fit the available space.
         type: variable-text
         default: cover
@@ -344,7 +440,7 @@ settings:
         collapsed: true
     -
         id: background-type-dt
-        title: Dark Theme Background Type
+        title: Background Type
         description: Select what type of background you would like in the Dark Theme.
         default: pt-background-color-dt
         level: 2
@@ -358,7 +454,7 @@ settings:
                 value: pt-background-image-dt
     -
         id: background-color-dt
-        title: Dark Theme Background Solid Color
+        title: Background Solid Color
         description: Make sure you selected 'Solid Color' in Dark Theme Background Type for this to work.
         type: variable-color
         format: hsl
@@ -366,13 +462,13 @@ settings:
         default: '#1A1A1A'
     -
         id: background-image-dt
-        title: Dark Theme Background Image
+        title: Background Image
         description: Customise the Background Image for the Dark Theme. Insert the link to an image between the brackets in the url().Make sure you selected 'Image' in Dark Theme Background Type for this to work.
         type: variable-text
         default: url()
     -   
         id: background-blur-dt
-        title: Dark Theme Background Blur (px)
+        title: Background Blur (px)
         description: Select the amount of blur applied to the Dark Theme Background Image.
         type: variable-number-slider
         format: px
@@ -382,25 +478,25 @@ settings:
         step: 1
     -
         id: background-repeat-dt
-        title: Dark Theme Background Repeat
+        title: Background Repeat
         description: Define if the Dark Theme Background Image should repeat (tile).
         type: variable-text
         default: no-repeat
     -
         id: background-attachment-dt
-        title: Dark Theme Background Attachment
+        title: Background Attachment
         description: Define whether the Dark Theme Background Image's position is fixed within the viewport, or scrolls with its containing block.
         type: variable-text
         default: fixed
     -
         id: background-position-dt
-        title: Dark Theme Background Position
+        title: Background Position
         description: Define the initial position for the Dark Theme Background Image.
         type: variable-text
         default: center
     -
         id: background-size-dt
-        title: Dark Theme Background Size
+        title: ackground Size
         description: Define the size of the Dark Theme Background Image. The image can be left to its natural size, stretched, or constrained to fit the available space.
         type: variable-text
         default: cover

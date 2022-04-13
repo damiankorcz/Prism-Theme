@@ -332,4 +332,117 @@ div.style-settings-heading {
 	background-color: var(--background-secondary);
 }
 
+/* Got this from @pseudometa. Thanks again! */
+.style-settings-container .setting-item {
+	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-dark-"], [data-id*="color-accent-l-text-"]) {
+		.setting-item-control::before {
+			content: " ";
+			width: 1.5em;
+			height: 1.5em;
+			border: 1px solid var(--window-border);
+			border-radius: var(--border-radius-small);
+			margin-right: 8px;
+		}
+
+		input.slider {
+			height: 1.5em;
+			width: 150px;
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				height: 1.75em;
+				width: 4px;
+				margin-top: -0.45em;
+				border: 1px solid var(--window-border);
+			}
+		}
+
+		.theme-light & {
+			input.slider::-webkit-slider-thumb {
+				background-color: var(--background-primary);
+			}
+		}
+
+		.theme-dark & {
+			input.slider::-webkit-slider-thumb {
+				background-color: var(--text-normal);
+			}
+		}
+	}
+
+	/* Light Theme */
+	&:is([data-id^="color-accent-h-lt"]) {
+		input.slider {
+			background: var(--hue-background-lt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-lt);
+		}
+	}
+
+	&:is([data-id^="color-accent-s-lt"]) {
+		input.slider {
+			background: var(--saturation-background-lt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-lt);
+		}
+	}
+
+	&:is([data-id^="color-accent-l-base-lt"], [data-id^="color-accent-l-dark-lt"], [data-id^="color-accent-l-text-lt"]) input.slider {
+		background: var(--lightness-background-lt);
+	}
+
+	&[data-id^="color-accent-l-base-lt"] .setting-item-control::before {
+		background-color: var(--color-accent-base-lt);
+	}
+
+	&[data-id^="color-accent-l-dark-lt"] .setting-item-control::before {
+		background-color: var(--color-accent-dark-lt);
+	}
+
+	&[data-id^="color-accent-l-text-lt"] .setting-item-control::before {
+		background-color: var(--color-accent-text-lt);
+	}
+
+	/* Dark Theme */
+	&:is([data-id^="color-accent-h-dt"]) {
+		input.slider {
+			background: var(--hue-background-dt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-dt);
+		}
+	}
+
+	&:is([data-id^="color-accent-s-dt"]) {
+		input.slider {
+			background: var(--saturation-background-dt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-dt);
+		}
+	}
+
+	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-dark-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
+		background: var(--lightness-background-dt);
+	}
+
+	&[data-id^="color-accent-l-base-dt"] .setting-item-control::before {
+		background-color: var(--color-accent-base-dt);
+	}
+
+	&[data-id^="color-accent-l-dark-dt"] .setting-item-control::before {
+		background-color: var(--color-accent-dark-dt);
+	}
+
+	&[data-id^="color-accent-l-text-dt"] .setting-item-control::before {
+		background-color: var(--color-accent-text-dt);
+	}
+}
+
 /* #endregion */
