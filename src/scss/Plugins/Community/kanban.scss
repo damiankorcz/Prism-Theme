@@ -53,14 +53,7 @@ div.kanban-plugin__ {
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
 		margin: 0px 8px;
-
-		.theme-light & {
-			background-color: var(--background-primary);
-		}
-
-		.theme-dark & {
-			background-color: var(--background-secondary-alt);
-		}
+		background-color: var(--background-primary);
 
 		button.kanban-plugin__item-prefix-button:hover,
 		button.kanban-plugin__item-postfix-button:hover {
@@ -196,6 +189,7 @@ div.kanban-plugin__ {
 	/* Kanban Item Counter */
 	div.kanban-plugin__lane-title-count {
 		display: block;
+		color: var(--text-normal);
 		background-color: var(--background-secondary);
 		border-radius: var(--border-radius-small);
 		line-height: 20px;

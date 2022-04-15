@@ -11,12 +11,14 @@
 	border-color: var(--table-border-color);
 }
 
-.theme-light .markdown-preview-view table {
-	background-color: var(--background-primary-alt);
-}
+.markdown-preview-view table {
+	.theme-light & {
+		background-color: var(--background-primary-alt);
+	}
 
-.theme-dark .markdown-preview-view table {
-	background-color: var(--background-secondary-alt);
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
 }
 
 .markdown-embed,
@@ -98,14 +100,13 @@ a.tag[href*="#"] {
 	border: 2px solid var(--window-border);
 	background-color: var(--background-tertiary);
 	padding: 0px 4px;
-    display: inline-flex;
+	display: inline-flex;
 	align-items: center;
-    vertical-align: bottom;
+	vertical-align: bottom;
 
 	&:hover {
 		color: var(--interactive-accent-text);
 		background-color: var(--background-primary);
-		border-color: var(--interactive-accent-dark);
 		border-color: var(--interactive-accent-tint);
 		transition: all ease 200ms;
 	}
@@ -115,54 +116,40 @@ a.tag[href*="#"] {
 	border-top: 1px solid var(--window-border);
 }
 
+.markdown-preview-view code,
+.markdown-preview-view kbd {
+	font-family: var(--font-monospace);
+}
 /* #endregion */
 
 /* #region  [Editor] Preview Checkbox */
-/* Removing default look of the Checkbox */
 input[type="checkbox"],
 .markdown-preview-view .task-list-item-checkbox {
 	appearance: unset;
 	filter: none;
 	border-radius: var(--border-radius-small);
 	top: 5px;
-}
 
-input[type="checkbox"]:hover,
-.markdown-preview-view input.task-list-item-checkbox:hover,
-.markdown-source-view.mod-cm6 .task-list-item-checkbox:hover {
-	border-color: var(--interactive-accent-dark);
-}
+	.theme-light & {
+		background-color: var(--background-primary-alt);
+		border: var(--border-size) solid var(--background-secondary-alt);
+	}
 
-/* Light Theme Unchecked Checkbox */
-.theme-light input[type="checkbox"],
-.theme-light .markdown-preview-view .task-list-item-checkbox {
-	background-color: var(--background-primary-alt);
-	border: var(--border-size) solid var(--background-secondary-alt);
-}
+	.theme-dark & {
+		background-color: var(--background-primary);
+		border: var(--border-size) solid var(--background-primary-alt);
+	}
 
-/* Dark Theme Unchecked Checkbox */
-.theme-dark input[type="checkbox"],
-.theme-dark .markdown-preview-view .task-list-item-checkbox {
-	background-color: var(--background-primary);
-	border: var(--border-size) solid var(--background-primary-alt);
-}
 	&:hover {
 		border-color: var(--interactive-accent-tint);
 	}
 
-/* Checked checkbox */
-.theme-light input[type="checkbox"]:checked,
-.theme-dark input[type="checkbox"]:checked {
-	background: var(--interactive-accent);
-	border: var(--border-size) solid var(--interactive-accent-dark);
-	box-shadow: none;
 	&:checked {
 		background: var(--interactive-accent-base);
 		border: var(--border-size) solid var(--interactive-accent-tint);
 		box-shadow: none;
 	}
 }
-
 /* Checkbox Check icon setup */
 input[type="checkbox"]:checked:before {
 	display: block;
@@ -173,21 +160,26 @@ input[type="checkbox"]:checked:before {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 100%;
-}
 
-.theme-dark input[type="checkbox"]:checked:before {
-	filter: invert(1);
+	.theme-dark & {
+		filter: invert(1);
+	}
 }
 
 /* Copy Button in the Code blocks */
-button.copy-code-button {
+button.copy-code-button,
+.markdown-rendered button.copy-code-button {
 	top: 0;
 	right: 0;
-	margin: 4px;
-	padding: 3px;
+	margin: 3px;
+	padding: 2px;
 	border: var(--border-size) solid transparent;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
+	font-variation-settings: "wght" 600;
+}
+
+.code-block-flair {
 	font-variation-settings: "wght" 600;
 }
 /* #endregion */
@@ -198,65 +190,64 @@ button.copy-code-button {
 	border-radius: var(--border-radius-small);
 	border: 1px solid var(--table-border-color);
 	padding: 0px;
+
+	.theme-light & {
+		background-color: var(--background-primary-alt);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary);
+	}
+
+	&.is-collapsed .frontmatter-container-header {
+		margin: 0px;
+	}
+
+	.frontmatter-container-header {
+		border-bottom: 1px solid var(--table-border-color);
+		border-radius: var(--border-radius-small);
+		padding: 8px 8px 8px 12px;
+		margin: 0px;
+	}
+
+	.frontmatter-section {
+		margin: 0px;
+		padding: 4px 12px;
+	}
+
+	.frontmatter-section-label {
+		display: flex;
+		color: var(--text-normal);
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.tag,
+	.frontmatter-alias {
+		border-radius: var(--border-radius-small);
+		color: var(--text-normal);
+		font-size: 0.9em;
+		padding: 2px 8px;
+		margin: 2px 4px;
+		line-height: 19px;
+		border: unset;
+
+		.theme-light & {
+			background-color: var(--background-secondary-alt);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-primary);
+		}
+	}
+
+	.frontmatter-alias-icon {
+		color: var(--text-faint);
+	}
 }
 
-.theme-light .frontmatter-container {
-	background-color: var(--background-primary-alt);
-}
-
-.theme-dark .frontmatter-container {
-	background-color: var(--background-secondary);
-}
-
-.frontmatter-container .frontmatter-container-header {
-	border-bottom: 1px solid var(--table-border-color);
-	border-radius: var(--border-radius-small);
-	padding: 8px 8px 8px 12px;
-	margin: 0px;
-}
-
-.frontmatter-container.is-collapsed .frontmatter-container-header {
-	margin: 0px;
-}
-
-.frontmatter-container .frontmatter-section {
-	margin: 0px;
-	padding: 4px 12px;
-}
-
-.frontmatter-container .frontmatter-section-label {
-	display: flex;
-	color: var(--text-normal);
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
-	text-align: center;
-}
-
-.frontmatter-container .frontmatter-alias-icon {
-	color: var(--text-faint);
-}
-
-.frontmatter-container .tag,
-.frontmatter-container .frontmatter-alias {
-	border-radius: var(--border-radius-small);
-	color: var(--text-normal);
-	font-size: 0.9em;
-	padding: 2px 8px;
-	margin: 2px 4px;
-	line-height: 19px;
-	border: unset;
-}
-
-.theme-light .frontmatter-container .tag,
-.theme-light .frontmatter-container .frontmatter-alias {
-	background-color: var(--background-secondary-alt);
-}
-
-.theme-dark .frontmatter-container .tag,
-.theme-dark .frontmatter-container .frontmatter-alias {
-	background-color: var(--background-primary);
-}
 /* #endregion */
 
 /* #region  [Editor] Preview LT */
@@ -272,7 +263,7 @@ button.copy-code-button {
 		background-color: var(--background-primary-alt);
 		border-left-width: 5px;
 		padding: 10px 20px !important;
-		margin: 16px 30px !important;
+		margin: 0px 30px !important;
 	}
 
 	.markdown-preview-view hr {
@@ -311,54 +302,12 @@ button.copy-code-button {
 	.token.url,
 	.language-css .token.string,
 	.style .token.string {
-		color: var(--color-orange-text);
 		background-color: var(--background-primary-alt);
 	}
-
-	.token.atrule,
-	.token.attr-value,
-	.token.keyword {
-		color: var(--color-blue-text);
-	}
-
-	.token.selector,
-	.token.attr-name,
-	.token.string,
-	.token.char,
-	.token.builtin,
-	.token.inserted {
-		color: var(--color-green-text);
-	}
-
-	.token.punctuation {
-		color: var(--color-grey-text);
-	}
-
-	.token.property,
-	.token.tag,
-	.token.boolean,
-	.token.number,
-	.token.constant,
-	.token.symbol,
-	.token.deleted {
-		color: var(--color-pink-text);
-	}
-
-	.token.regex,
-	.token.important {
-		color: var(--color-orange-text);
-	}
-
-	.token.function,
-	.token.class-name {
-		color: var(--color-red-text);
-	}
 }
-
 /* #endregion */
 
 /* #region  [Editor] Preview DT */
-
 .theme-dark {
 	.markdown-preview-view blockquote {
 		border: 1px solid var(--table-border-color);
@@ -368,9 +317,10 @@ button.copy-code-button {
 
 	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
 		border: 1px solid var(--table-border-color);
-		background-color: var(--background-primary-alt);
+		background-color: var(--background-secondary-alt);
 		border-left-width: 5px;
 		padding: 10px 20px !important;
+		margin: 0px 30px !important;
 	}
 
 	.markdown-preview-view hr {
@@ -389,7 +339,6 @@ button.copy-code-button {
 	:not(pre) > code[class*="language-"],
 	pre[class*="language-"],
 	.markdown-preview-view .file-embed {
-		color: var(--interactive-accent);
 		color: var(--interactive-accent-base);
 		background: var(--background-secondary-alt);
 		border-radius: var(--border-radius-small);
@@ -406,8 +355,33 @@ button.copy-code-button {
 	.token.url,
 	.language-css .token.string,
 	.style .token.string {
-		color: var(--color-orange-text);
 		background-color: var(--background-secondary-alt);
+	}
+}
+/* #endregion */
+
+/* #region [Editor] Syntax Highlighting */
+.theme-light,
+.theme-dark {
+	.token.property,
+	.token.tag,
+	.token.boolean,
+	.token.number,
+	.token.constant,
+	.token.symbol,
+	.token.deleted,
+	.cm-tag {
+		color: var(--color-pink-text);
+	}
+
+	.token.selector,
+	.token.attr-name,
+	.token.string,
+	.token.char,
+	.token.builtin,
+	.token.inserted,
+	.cm-attribute {
+		color: var(--color-green-text);
 	}
 
 	.token.atrule,
@@ -416,27 +390,20 @@ button.copy-code-button {
 		color: var(--color-blue-text);
 	}
 
-	.token.selector,
-	.token.attr-name,
-	.token.string,
-	.token.char,
-	.token.builtin,
-	.token.inserted {
-		color: var(--color-green-text);
+	.token.operator,
+	.token.entity,
+	.token.url,
+	.language-css .token.string,
+	.style .token.string,
+	.cm-operator,
+	.cm-string,
+	.cm-string-2,
+	.cm-link {
+		color: var(--color-orange-text);
 	}
 
 	.token.punctuation {
 		color: var(--color-grey-text);
-	}
-
-	.token.property,
-	.token.tag,
-	.token.boolean,
-	.token.number,
-	.token.constant,
-	.token.symbol,
-	.token.deleted {
-		color: var(--color-pink-text);
 	}
 
 	.token.regex,
@@ -449,59 +416,4 @@ button.copy-code-button {
 		color: var(--color-yellow-text);
 	}
 }
-
 /* #endregion */
-
-.theme-light .token.property,
-.theme-light .token.tag,
-.theme-light .token.constant,
-.theme-light .token.symbol,
-.theme-light .token.deleted,
-.theme-light .cm-tag,
-.theme-dark .token.property,
-.theme-dark .token.tag,
-.theme-dark .token.constant,
-.theme-dark .token.symbol,
-.theme-dark .token.deleted,
-.theme-dark .cm-tag {
-	color: var(--color-pink-text);
-}
-
-.theme-light .token.selector,
-.theme-light .token.attr-name,
-.theme-light .token.string,
-.theme-light .token.char,
-.theme-light .token.builtin,
-.theme-light .token.inserted,
-.theme-light .cm-attribute,
-.theme-dark .token.selector,
-.theme-dark .token.attr-name,
-.theme-dark .token.string,
-.theme-dark .token.char,
-.theme-dark .token.builtin,
-.theme-dark .token.inserted,
-.theme-dark .cm-attribute {
-	color: var(--color-green-text);
-}
-
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string,
-.theme-light .cm-operator,
-.theme-light .cm-string,
-.theme-light .cm-string-2,
-.theme-light .cm-link,
-.theme-dark .token.operator,
-.theme-dark .token.entity,
-.theme-dark .token.url,
-.theme-dark .language-css .token.string,
-.theme-dark .style .token.string,
-.theme-dark .cm-operator,
-.theme-dark .cm-string,
-.theme-dark .cm-string-2,
-.theme-dark .cm-link {
-	color: var(--color-orange-text);
-	background: none;
-}
