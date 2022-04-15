@@ -95,6 +95,11 @@ div.kanban-plugin__ {
 		}
 	}
 
+	&grow-wrap>textarea,
+	&grow-wrap:after {
+		border: 1px solid var(--interactive-accent-tint);
+	}
+
 	&drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
 		box-shadow: var(--drop-shadow-popup);
 	}
@@ -110,7 +115,7 @@ div.kanban-plugin__ {
 		}
 
 		.flatpickr-day.today {
-			border: var(--border-size) solid var(--interactive-accent-dark);
+			border: var(--border-size) solid var(--interactive-accent-tint);
 			background-color: var(--background-primary);
 		}
 
@@ -124,12 +129,12 @@ div.kanban-plugin__ {
 	}
 
 	&lane-form-wrapper {
-		border: 2px solid var(--interactive-accent);
+		border: 2px solid var(--interactive-accent-base);
 	}
 
 	.theme-light &action-confirm-wrapper,
 	.theme-dark &action-confirm-wrapper {
-		border: var(--border-size) solid var(--color-red-dark);
+		border: var(--border-size) solid var(--color-red-tint);
 		background-color: var(--background-primary);
 		box-shadow: var(--drop-shadow);
 	}
@@ -149,24 +154,24 @@ div.kanban-plugin__ {
 	}
 
 	button.kanban-plugin__confirm-action-button {
-		border: var(--border-size) solid var(--color-red-dark);
+		border: var(--border-size) solid var(--color-red-tint);
 		background-color: var(--color-red-base);
 		color: var(--text-normal);
 		font-variation-settings: "wght" 600;
 
 		&:hover {
-			color: var(--color-red-dark);
+			color: var(--color-red-tint);
 		}
 	}
 
 	button.kanban-plugin__cancel-action-button {
-		border: var(--border-size) solid var(--color-grey-dark);
+		border: var(--border-size) solid var(--color-grey-tint);
 		background-color: var(--color-grey-base);
 		color: var(--text-normal);
 		font-variation-settings: "wght" 600;
 
 		&:hover {
-			color: var(--color-grey-dark);
+			color: var(--color-grey-tint);
 		}
 	}
 
@@ -269,7 +274,7 @@ div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
 	.kanban-plugin__board {
 		background-size: 7px 7px;
 		background-attachment: local;
-		background-image: radial-gradient(circle, var(--interactive-accent) 1px, rgba(0, 0, 0, 0) 1px);
+		background-image: radial-gradient(circle, var(--interactive-accent-base) 1px, rgba(0, 0, 0, 0) 1px);
 	}
 }
 
@@ -294,7 +299,7 @@ div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
 	.kanban-plugin__board {
 		background-size: 7px 7px;
 		background-attachment: local;
-		background-image: linear-gradient(to right, var(--interactive-accent) 1px, transparent 1px), linear-gradient(to bottom, var(--interactive-accent) 1px, transparent 1px);
+		background-image: linear-gradient(to right, var(--interactive-accent-base) 1px, transparent 1px), linear-gradient(to bottom, var(--interactive-accent-base) 1px, transparent 1px);
 	}
 }
 

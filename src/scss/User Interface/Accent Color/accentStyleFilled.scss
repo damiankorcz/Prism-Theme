@@ -3,12 +3,12 @@
 .theme-light.pt-accent-style-filled-lt {
 	.workspace-leaf.mod-active .view-header,
 	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
 	.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
@@ -24,31 +24,31 @@
 
 	.workspace-tab-header.is-active {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
 	.nav-action-button.is-active {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
 	.vertical-tab-nav-item.is-active {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
 	.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
 	.suggestion-hotkey {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
 
@@ -56,12 +56,12 @@
 	.workspace-split.mod-root .workspace-leaf.mod-active .view-header-title-container:after,
 	.workspace-leaf.mod-active .view-header-title-container:after,
 	.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
-		background: linear-gradient(to right, transparent, var(--interactive-accent));
+		background: linear-gradient(to right, transparent, var(--interactive-accent-base));
 	}
 
 	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
 	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
-		background: linear-gradient(to bottom, transparent, var(--interactive-accent));
+		background: linear-gradient(to bottom, transparent, var(--interactive-accent-base));
 	}
 
 	.search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -70,14 +70,14 @@
 	.outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-flair,
 	.nav-file-title:hover .nav-file-tag {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
-		border-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
+		border-color: var(--interactive-accent-base);
 	}
 
 	.search-result-hover-button.mod-top:hover,
 	.search-result-hover-button.mod-bottom:hover {
-		background-color: var(--interactive-accent);
-		border-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
+		border-color: var(--interactive-accent-base);
 	}
 
 	.workspace-leaf-content[data-type="outgoing-link"] .search-result-file-match-destination-file {
@@ -87,7 +87,7 @@
 
 		&:hover {
 			color: var(--interactive-accent-hover);
-			background-color: var(--interactive-accent);
+			background-color: var(--interactive-accent-base);
 		}
 	}
 
@@ -97,16 +97,16 @@
 		border-color: var(--color-grey-base);
 
 		&:hover {
-			background-color: var(--interactive-accent);
-			border-color: var(--interactive-accent);
+			background-color: var(--interactive-accent-base);
+			border-color: var(--interactive-accent-base);
 		}
 	}
 
 	.community-theme {
 		&.is-selected {
 			color: var(--highlight-text-normal);
-			background-color: var(--interactive-accent);
-			border-color: var(--interactive-accent);
+			background-color: var(--interactive-accent-base);
+			border-color: var(--interactive-accent-base);
 		}
 
 		&:hover .community-theme-remove-button {
@@ -115,18 +115,18 @@
 			border-color: transparent;
 
 			&:hover {
-				color: var(--color-red-dark);
+				color: var(--color-red-tint);
 			}
 		}
 	}
 
 	button.mod-cta {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 
 		&:hover {
-			color: var(--interactive-accent-dark);
+			color: var(--interactive-accent-tint);
 		}
 	}
 
@@ -136,7 +136,7 @@
 		border-color: transparent;
 
 		&:hover {
-			color: var(--color-red-dark);
+			color: var(--color-red-tint);
 		}
 	}
 
@@ -147,7 +147,7 @@
 		border-color: var(--color-grey-base);
 
 		&:hover {
-			color: var(--color-grey-dark);
+			color: var(--color-grey-tint);
 		}
 	}
 
@@ -179,14 +179,14 @@
 		border-color: transparent;
 
 		&:hover {
-			color: var(--color-grey-dark);
+			color: var(--color-grey-tint);
 		}
 	}
 
 	.workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
 	.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
 		color: var(--highlight-text-normal);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 
 		&:hover {

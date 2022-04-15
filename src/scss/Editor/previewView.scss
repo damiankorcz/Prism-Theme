@@ -106,6 +106,7 @@ a.tag[href*="#"] {
 		color: var(--interactive-accent-text);
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-dark);
+		border-color: var(--interactive-accent-tint);
 		transition: all ease 200ms;
 	}
 }
@@ -145,6 +146,9 @@ input[type="checkbox"]:hover,
 	background-color: var(--background-primary);
 	border: var(--border-size) solid var(--background-primary-alt);
 }
+	&:hover {
+		border-color: var(--interactive-accent-tint);
+	}
 
 /* Checked checkbox */
 .theme-light input[type="checkbox"]:checked,
@@ -152,6 +156,11 @@ input[type="checkbox"]:hover,
 	background: var(--interactive-accent);
 	border: var(--border-size) solid var(--interactive-accent-dark);
 	box-shadow: none;
+	&:checked {
+		background: var(--interactive-accent-base);
+		border: var(--border-size) solid var(--interactive-accent-tint);
+		box-shadow: none;
+	}
 }
 
 /* Checkbox Check icon setup */
@@ -381,6 +390,7 @@ button.copy-code-button {
 	pre[class*="language-"],
 	.markdown-preview-view .file-embed {
 		color: var(--interactive-accent);
+		color: var(--interactive-accent-base);
 		background: var(--background-secondary-alt);
 		border-radius: var(--border-radius-small);
 		border: 1px solid var(--table-border-color);

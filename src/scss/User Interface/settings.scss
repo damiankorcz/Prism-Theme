@@ -179,7 +179,7 @@
 }
 
 .modal-close-button:hover {
-	color: var(--color-red-dark);
+	color: var(--color-red-tint);
 }
 
 .spellchecker-dictionary-remove-button {
@@ -265,7 +265,7 @@
 select.dropdown {
 	option[value*="accent"]:not([value*="accent-style"]):not([value*="accent-color"]) {
 		color: var(--interactive-accent-text);
-		background-color: var(--interactive-accent);
+		background-color: var(--interactive-accent-base);
 	}
 
 	option[value*="red"] {
@@ -376,11 +376,11 @@ select.dropdown {
 }
 
 .checkbox-container.is-enabled:hover {
-	background-color: var(--interactive-accent);
+	background-color: var(--interactive-accent-base);
 }
 
 .checkbox-container:not(.is-enabled):hover {
-	background-color: var(--interactive-accent-dark);
+	background-color: var(--interactive-accent-tint);
 }
 
 .checkbox-container.is-enabled:after {
@@ -541,7 +541,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	content: "'Style Settings' Plugin is required for Prism to function correctly!";
 	padding: 10px;
 	border-radius: var(--border-radius);
-	border: var(--border-size) solid var(--color-red-dark);
+	border: var(--border-size) solid var(--color-red-tint);
 	background-color: var(--color-red-base);
 	font-variation-settings: "wght" 600;
 	text-align: center;
