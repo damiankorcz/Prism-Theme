@@ -31,12 +31,12 @@
 
 /* #endregion */
 
-/* #region  [UI] Window Gaps */
+// #region  [UI] Window Gaps
 .workspace-split.mod-horizontal .workspace-tabs {
 	padding: calc(var(--window-gap) / 2);
 }
 
-/* Allows the <hr> used for the resize handle to be visible outside the div it's in */
+// Allows the <hr> used for the resize handle to be visible outside the div it's in
 .workspace-split.mod-vertical {
 	overflow: visible;
 }
@@ -47,13 +47,13 @@
 	box-shadow: var(--drop-shadow);
 }
 
-/* Background fill behind the Normal View Header */
+// Background fill behind the Normal View Header
 body .workspace-split.mod-root .workspace-leaf div.workspace-leaf-content {
 	background-color: var(--page-background-color);
 	border-radius: var(--border-radius) !important;
 }
 
-/* Background fill behind the Kanban View Header */
+// Background fill behind the Kanban View Header
 .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
 	background-color: var(--background-secondary-alt);
 }
@@ -79,7 +79,7 @@ body .workspace-split.mod-root .workspace-leaf div.workspace-leaf-content {
 	border-radius: 0;
 }
 
-/* Warning prompt to install Style Settings */
+// Warning prompt to install Style Settings
 body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	height: fit-content;
 	width: -webkit-fill-avaliable;
@@ -150,7 +150,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 	background-color: transparent;
 }
 
-/* Matches the gradient next to the right hand buttons in the View Header with the background */
+// Matches the gradient next to the right hand buttons in the View Header with the background
 .view-header-title-container:after {
 	background: linear-gradient(to right, transparent, var(--background-tertiary));
 	transition: background ease 200ms;
@@ -166,12 +166,12 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 /* #endregion */
 
 /* #region  [UI] Resize Handles */
-/* Allows for the resize handles to be fully visible even though they stick out of the parent */
+// Allows for the resize handles to be fully visible even though they stick out of the parent
 .workspace-split .workspace-tabs:not(:last-child) {
 	overflow: visible;
 }
 
-/* Resize Handle between Sidebar Workspace Leafs */
+// Resize Handle between Sidebar Workspace Leafs
 .workspace-split.mod-horizontal.mod-left-split > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-horizontal.mod-right-split > * > .workspace-leaf-resize-handle {
 	background-color: transparent;
@@ -206,7 +206,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 	box-shadow: var(--drop-shadow);
 }
 
-/* Resize Handles at the Right Side of the workspace */
+// Resize Handles at the Right Side of the workspace
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
 	border-radius: var(--border-radius-small);
 	width: var(--window-gap);
@@ -216,7 +216,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 	background-color: transparent;
 }
 
-/* Resize Handles at the Left Side of the workspace */
+// Resize Handles at the Left Side of the workspace
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
 	border-radius: var(--border-radius-small);
 	width: var(--window-gap);
@@ -226,7 +226,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 	background-color: transparent;
 }
 
-/* Resize Handles Hover and Active use Accent Color */
+// Resize Handles Hover and Active use Accent Color
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:hover,

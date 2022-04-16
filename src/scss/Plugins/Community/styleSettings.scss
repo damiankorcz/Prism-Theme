@@ -107,7 +107,7 @@ div.style-settings-container {
 div.workspace-leaf-content[data-type="style-settings"] {
 	background-color: var(--background-secondary) !important;
 
-	/* Style Settings open as a note */
+	// Style Settings open as a note
 	.view-content {
 		padding: 20px 35px;
 		background-color: var(--background-secondary);
@@ -332,7 +332,6 @@ div.style-settings-heading {
 	background-color: var(--background-secondary);
 }
 
-/* Got this from @pseudometa. Thanks again! */
 .style-settings-container .setting-item {
 	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-dark-"], [data-id*="color-accent-l-text-"]) {
 		.setting-item-control::before {
@@ -370,7 +369,6 @@ div.style-settings-heading {
 		}
 	}
 
-	/* Light Theme */
 	&:is([data-id^="color-accent-h-lt"]) {
 		input.slider {
 			background: var(--hue-background-lt);
@@ -407,7 +405,6 @@ div.style-settings-heading {
 		background-color: var(--color-accent-text-lt);
 	}
 
-	/* Dark Theme */
 	&:is([data-id^="color-accent-h-dt"]) {
 		input.slider {
 			background: var(--hue-background-dt);
@@ -444,5 +441,4 @@ div.style-settings-heading {
 		background-color: var(--color-accent-text-dt);
 	}
 }
-
 /* #endregion */

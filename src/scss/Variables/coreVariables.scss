@@ -1,18 +1,18 @@
 /* #region  [Variables] Root */
 :root {
-	/* General Settings */
+	// General Settings 
 	--border-size: 2px;
 	--blur-intensity: 8px;
 
 	--vertical-lines-width-file-explorer: 2px;
 	--style-settings-vertical-lines-width: 2px;
 
-	/* Scrollbar Settings */
+	// Scrollbar Settings
 	--scroll-bar-border-radius: 0px;
 	--scroll-button-border-radius: 0px;
 
-	/* Style Settings Accessible Default Properties */
-	/* Graph View - Light Theme */
+	// Style Settings Accessible Default Properties
+	// Graph View - Light Theme
 	--graph-fill-opacity-lt: 1;
 	--graph-fill-focused-opacity-lt: 1;
 	--graph-tag-opacity-lt: 1;
@@ -21,7 +21,7 @@
 	--graph-highlight-opacity-lt: 1;
 	--graph-highlight-line-opacity-lt: 0.4;
 
-	/* Graph View - Dark Theme */
+	// Graph View - Dark Theme
 	--graph-fill-opacity-dt: 1;
 	--graph-fill-focused-opacity-dt: 1;
 	--graph-tag-opacity-dt: 1;
@@ -30,12 +30,12 @@
 	--graph-highlight-opacity-dt: 1;
 	--graph-highlight-line-opacity-dt: 0.4;
 
-	/* Window Adjustments */
+	// Window Adjustments
 	--window-gap: 10px;
 	--border-radius: 8px;
 	--border-radius-small: 4px;
 
-	/* Background Options - Light Theme */
+	// Background Options - Light Theme
 	--background-image-lt: url();
 	--background-blur-lt: 0;
 	--background-repeat-lt: no-repeat;
@@ -43,7 +43,7 @@
 	--background-position-lt: center;
 	--background-size-lt: cover;
 
-	/* Background Options - Dark Theme */
+	// Background Options - Dark Theme
 	--background-image-dt: url();
 	--background-blur-dt: 0;
 	--background-repeat-dt: no-repeat;
@@ -51,19 +51,19 @@
 	--background-position-dt: center;
 	--background-size-dt: cover;
 
-	/* Custom Vault Banner */
+	// Custom Vault Banner
 	--custom-vault-banner-icon-url: url(https://img.icons8.com/office/40/000000/book-shelf.png);
 
-	/* Vertical Line Widths */
+	// Vertical Line Widths
 	--vertical-lines-width-file-explorer: 2px;
 	--vertical-lines-width-outline: 2px;
 
-	/* Scrollbar */
+	// Scrollbar
 	--scroll-bar-border-radius: 0px;
-	--scroll-bar-size: 8px; /* The width of the scrollbar */
-	--scroll-bar-size-hover: 15px; /* The width of the scrollbar when hovering over the window content */
+	--scroll-bar-size: 8px; // The width of the scrollbar
+	--scroll-bar-size-hover: 15px; // The width of the scrollbar when hovering over the window content
 
-	/* Header Font Size */
+	// Header Font Size
 	--h1-font-size: 2em;
 	--h2-font-size: 1.8em;
 	--h3-font-size: 1.6em;
@@ -71,23 +71,23 @@
 	--h5-font-size: 1.2em;
 	--h6-font-size: 1em;
 
-	/* Shared Color Variables */
+	// Shared Color Variables
 	--mark-highlight-base: var(--color-yellow-base);
 
 	// Light Theme Style Settings Defaults
-	/* Accent Colors */
+	// Accent Colors
 	--color-accent-lt: #c7bdff;
 
-	/* Solid Titlebar Custom Colors */
+	// Solid Titlebar Custom Colors
 	--titlebar-background-color-lt: #ebecef;
 
-	/* Solid Status Bar Custom Colors */
+	// Solid Status Bar Custom Colors
 	--status-bar-background-color-lt: #ebecef;
 
-	/* Background Options - Light Theme */
+	// Background Options - Light Theme
 	--background-color-lt: #e6e6e6;
 
-	/* Graph View - Light Theme */
+	// Graph View - Light Theme 
 	--color-custom-graph-note-lt: #c4c7ca;
 	--color-custom-graph-note-focused-lt: #8670ff;
 	--color-custom-graph-tag-lt: #619eff;
@@ -97,19 +97,19 @@
 	--color-custom-graph-highlight-line-lt: #8670ff;
 
 	// Dark Theme Style Settings Defaults
-	/* Accent Colors */
+	// Accent Colors
 	--color-accent-dt: #8c7fd7;
 
-	/* Solid Titlebar Custom Colors */
+	// Solid Titlebar Custom Colors
 	--titlebar-background-color-dt: #2b2b2b;
 
-	/* Solid Status Bar Custom Colors */
+	// Solid Status Bar Custom Colors
 	--status-bar-background-color-dt: #2b2b2b;
 
-	/* Background Options - Dark Theme */
+	// Background Options - Dark Theme
 	--background-color-dt: #0d0d0d;
 
-	/* Graph View - Dark Theme */
+	// Graph View - Dark Theme
 	--color-custom-graph-note-dt: #878787;
 	--color-custom-graph-note-focused-dt: #4c3ab6;
 	--color-custom-graph-tag-dt: #3663ab;
@@ -120,7 +120,7 @@
 }
 
 body {
-	/* Theme Font Overwrites */
+	// Theme Font Overwrites
 	// --default-font: var(--font-text);
 	--font-interface-theme: "Source Sans 3", sans-serif;
 	--font-text-theme: "Source Sans 3", sans-serif;
@@ -175,7 +175,7 @@ body {
 
 .theme-light,
 .theme-dark {
-	/* Base Colors */
+	// Base Colors
 	--color-red-base: hsl(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-base-l));
 	--color-orange-base: hsl(var(--color-orange-base-h), var(--color-orange-base-s), var(--color-orange-base-l));
 	--color-yellow-base: hsl(var(--color-yellow-base-h), var(--color-yellow-base-s), var(--color-yellow-base-l));
@@ -187,7 +187,7 @@ body {
 	--color-pink-base: hsl(var(--color-pink-base-h), var(--color-pink-base-s), var(--color-pink-base-l));
 	--color-grey-base: hsl(var(--color-grey-base-h), var(--color-grey-base-s), var(--color-grey-base-l));
 
-	/* Tint Colors */
+	// Tint Colors
 	--color-red-tint: hsl(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-tint-l));
 	--color-orange-tint: hsl(var(--color-orange-base-h), var(--color-orange-base-s), var(--color-orange-tint-l));
 	--color-yellow-tint: hsl(var(--color-yellow-base-h), var(--color-yellow-base-s), var(--color-yellow-tint-l));
@@ -199,7 +199,7 @@ body {
 	--color-pink-tint: hsl(var(--color-pink-base-h), var(--color-pink-base-s), var(--color-pink-tint-l));
 	--color-grey-tint: hsl(var(--color-grey-base-h), var(--color-grey-base-s), var(--color-grey-tint-l));
 
-	/* Text Colors */
+	// Text Colors
 	--color-red-text: hsl(var(--color-red-base-h), var(--color-red-text-s), var(--color-red-text-l));
 	--color-orange-text: hsl(var(--color-orange-base-h), var(--color-orange-text-s), var(--color-orange-text-l));
 	--color-yellow-text: hsl(var(--color-yellow-base-h), var(--color-yellow-text-s), var(--color-yellow-text-l));
@@ -215,7 +215,6 @@ body {
 	--color-accent-tint-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-dark-lt));
 	--color-accent-text-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-text-lt));
 
-	/* Got this from @pseudometa. Thanks again! */
 	--hue-background-lt: linear-gradient(
 		to right,
 		hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
@@ -251,7 +250,6 @@ body {
 	--color-accent-tint-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-dark-dt));
 	--color-accent-text-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-text-dt));
 
-	/* Got this from @pseudometa. Thanks again! */
 	--hue-background-dt: linear-gradient(
 		to right,
 		hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),

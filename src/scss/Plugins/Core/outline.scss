@@ -1,4 +1,4 @@
-/* #region  [Plugin - Core] Outline Base */
+/* #region  [Plugin - Core] Outline */
 .workspace-leaf-content[data-type="outline"] {
 	.outline {
 		border: 1px solid var(--window-border);
@@ -78,17 +78,17 @@
 	.outline > .tree-item > .tree-item-children {
 		margin-left: 10px;
 	}
-}
-/* #endregion */
 
-/* #region  [Plugin - Core] Outline Vertical Lines */
-.pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-children {
-	margin: 2px 0px 2px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
-	border-left: var(--vertical-lines-width-outline) solid var(--vertical-lines-color-outline);
-}
-
-.pt-outline-vertical-lines .workspace-leaf-content[data-type="outline"] .tree-item-self {
-	padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
-	border: var(--border-size) solid transparent;
+	.pt-outline-vertical-lines & {
+		.tree-item-self {
+			padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
+			border: var(--border-size) solid transparent;
+		}
+	
+		.tree-item-children {
+			margin: 2px 0px 2px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
+			border-left: var(--vertical-lines-width-outline) solid var(--vertical-lines-color-outline);
+		}
+	} 
 }
 /* #endregion */
