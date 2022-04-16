@@ -47,6 +47,17 @@ module.exports = function(grunt) {
             }
         },
 
+        removeemptylines: {
+            main: {
+                options: {
+                    regex: /(?:[ |\t]*\/\*\s?remove-empty-lines-start\s?\*\/)\n?([\s\S]+?)(?:[ |\t]*\/\*\s?remove-empty-lines-end\s?\*\/)/g
+                },
+                files: {
+                  'obsidian.css': ['obsidian.css']
+                }
+            }
+        },
+
         /* Runs a task which copies and renames the final theme file from the project folder to the Vault's Theme folder. */
         copy: {
             main: { 
@@ -72,7 +83,7 @@ module.exports = function(grunt) {
         watch: {
             main: {
                 files: ['src/scss/**/*.scss'], // Watched files
-                tasks: ['env:main','sass:main','copy:main'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
+                tasks: ['env:main','sass:main','removeemptylines:main','copy:main'] // Runs the following tasks in the specified order when there is a change detected to the Watched files.
             },
             snippetMHS: {
                 files: ['src/snippets/Prism Mark Highlight System/*.scss'], // Watched files
@@ -94,6 +105,9 @@ module.exports = function(grunt) {
 
     /* Load the plugin that provides the "watch" task. */
     grunt.loadNpmTasks('grunt-contrib-watch');
+
+    /* Load the plugin that provides the "remove-empty-lines" task. */
+    grunt.loadNpmTasks('grunt-remove-empty-lines');
 
     /* Creates a task called 'loadconstmain' which loads in the constant containing the path to your Vault's Theme folder. */
     grunt.registerTask('loadconstmain', 'Load constants', function() {
