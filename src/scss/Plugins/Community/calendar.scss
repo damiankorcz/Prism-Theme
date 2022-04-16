@@ -5,31 +5,31 @@
 	}
 
 	#calendar-container {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		padding: unset;
 		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		padding: unset;
-		display: flex;
-		position: relative;
-		flex-wrap: wrap;
-		border: 1px solid var(--window-border);
 
 		.nav {
-			margin: unset;
 			align-items: center;
-			background: var(--background-primary);
-			border-radius: var(--border-radius);
-			box-shadow: var(--drop-shadow);
-			padding: 10px;
-			height: fit-content;
 			width: fit-content;
 			min-width: -webkit-fill-available;
+			height: fit-content;
+			padding: 10px;
+			margin: unset;
+			background: var(--background-primary);
 			border: unset;
+			border-radius: var(--border-radius);
+			box-shadow: var(--drop-shadow);
 		}
 
 		table.calendar {
-			margin: 6px 10px 10px 10px;
 			width: -webkit-fill-available;
+			margin: 6px 10px 10px;
 		}
 
 		thead tr:first-of-type th:first-child {
@@ -41,40 +41,40 @@
 		}
 
 		td.svelte-egt0yd {
-			border-right: 1px solid var(--table-border-color);
 			background-color: var(--background-tertiary);
+			border-right: 1px solid var(--table-border-color);
 		}
 
 		th.svelte-pcimu8 {
 			border-bottom: 1px solid var(--table-border-color);
 
 			&:first-of-type {
-				border-right: 1px solid var(--table-border-color);
 				background-color: var(--background-tertiary);
+				border-right: 1px solid var(--table-border-color);
 			}
 		}
 
 		div.today {
-			font-variation-settings: "wght" 600;
 			font-size: 1em;
+			font-variation-settings: "wght" 600;
 			color: var(--interactive-accent-text);
 		}
 
 		.day,
 		.week-num {
-			border-radius: var(--border-radius-small);
 			font-variation-settings: "wght" 600;
-			transition: unset;
 			color: var(--text-normal);
+			border-radius: var(--border-radius-small);
+			transition: unset;
 
 			&:hover {
 				background-color: var(--background-primary);
 			}
 
 			&.has-note.active {
-				color: var(--highlight-text-normal);
-				font-variation-settings: "wght" 600;
 				font-size: 0.9em;
+				font-variation-settings: "wght" 600;
+				color: var(--highlight-text-normal);
 				box-shadow: var(--drop-shadow);
 
 				.dot {
@@ -129,8 +129,8 @@
 		}
 
 		.reset-button {
-			color: var(--text-normal);
 			margin: unset;
+			color: var(--text-normal);
 
 			&:hover {
 				color: var(--interactive-accent-hover);

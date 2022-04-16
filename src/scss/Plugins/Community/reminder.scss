@@ -1,19 +1,19 @@
 /* #region  [Plugin - Community] Reminder */
 .date-time-chooser-popup {
 	z-index: var(--layer-popover);
-	border-radius: var(--border-radius);
-	border: 1px solid var(--table-border-color);
 	background: var(--background-secondary-blur);
-	backdrop-filter: blur(var(--blur-intensity));
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	border: 1px solid var(--table-border-color);
+	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
 	.reminder-calendar.svelte-18sic8s .year-month.svelte-18sic8s {
-		margin: unset;
 		align-items: center;
+		padding: 5px;
+		margin: unset;
 		background: var(--background-primary);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		padding: 5px;
 	}
 
 	.reminder-calendar.svelte-18sic8s.svelte-18sic8s {
@@ -37,8 +37,8 @@
 	}
 
 	.reminder-calendar.svelte-18sic8s .month.svelte-18sic8s {
-		color: var(--text-normal);
 		font-weight: 500;
+		color: var(--text-normal);
 	}
 
 	.reminder-calendar.svelte-18sic8s .year.svelte-18sic8s {
@@ -46,8 +46,8 @@
 	}
 
 	.reminder-calendar.svelte-18sic8s .month-nav.svelte-18sic8s {
-		margin: 0px 5px;
-		padding: 0px 5px;
+		padding: 0 5px;
+		margin: 0 5px;
 		color: var(--text-normal);
 	}
 
@@ -70,10 +70,10 @@
 	}
 
 	.reminder-calendar.svelte-18sic8s .is-selected.svelte-18sic8s {
-		background-color: unset !important;
-		color: var(--interactive-accent-text) !important;
 		font-size: 1em;
 		font-variation-settings: "wght" 600;
+		color: var(--interactive-accent-text) !important;
+		background-color: unset !important;
 
 		&:hover {
 			background-color: var(--background-primary) !important;
@@ -94,9 +94,9 @@
 	}
 
 	.reminder-list-item.svelte-gzdxib {
-		border-radius: var(--border-radius-small);
 		padding: 3px 8px;
 		font-variation-settings: "wght" 600;
+		border-radius: var(--border-radius-small);
 
 		&:hover {
 			background-color: var(--background-primary);

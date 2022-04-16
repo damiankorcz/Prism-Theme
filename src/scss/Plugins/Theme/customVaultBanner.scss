@@ -2,21 +2,21 @@
 .pt-custom-vault-banner {
 	.nav-folder-title[data-path="/"] {
 		align-items: center;
-		height: fit-content;
 		width: fit-content;
+		min-width: -webkit-fill-available;
+		height: fit-content;
+		padding: 0 10px;
+		margin: 0 0 8px;
 		line-height: 16px;
 		background: var(--background-primary);
+		border-bottom: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		padding: 0px 10px;
-		margin: 0px 0px 8px 0px;
-		min-width: -webkit-fill-available;
-		border-bottom: 1px solid var(--window-border);
 
 		&:hover {
+			background-color: var(--background-primary);
 			border: unset;
 			border-bottom: 1px solid var(--window-border);
-			background-color: var(--background-primary);
 		}
 	}
 
@@ -34,24 +34,24 @@
 
 	.nav-folder-title[data-path="/"] {
 		.nav-folder-title-content {
-			height: fit-content;
 			width: fit-content;
-			color: var(--text-normal);
-			border-radius: var(--border-radius);
-			white-space: normal;
 			width: auto;
+			height: fit-content;
+			color: var(--text-normal);
+			white-space: normal;
+			border-radius: var(--border-radius);
 		}
 
 		.nav-folder-collapse-indicator {
 			display: block;
-			height: 32px;
 			width: 32px;
+			height: 32px;
 			margin: 8px;
-			border-radius: unset;
 			background-image: var(--custom-vault-banner-icon-url);
 			background-repeat: no-repeat;
-			background-size: contain;
 			background-position: center;
+			background-size: contain;
+			border-radius: unset;
 		}
 	}
 

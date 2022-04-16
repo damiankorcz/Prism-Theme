@@ -1,22 +1,22 @@
 /* #region  [Plugin - Core] Tags */
 .workspace-leaf-content[data-type="tag"] {
 	.tree-item-self {
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--window-border);
-		color: var(--text-normal);
-		width: 100%;
-		padding: 0px 8px 0px 8px;
-		background: var(--background-primary);
-		box-shadow: var(--drop-shadow);
 		align-items: center;
+		width: 100%;
+		padding: 0 8px;
+		color: var(--text-normal);
+		background: var(--background-primary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 
 		.tree-item-inner {
 			padding-right: 5px;
 		}
 
 		.tree-item-icon {
-			margin-left: -12px;
 			padding: 8px 10px;
+			margin-left: -12px;
 			color: var(--text-muted);
 
 			&::after {
@@ -25,9 +25,9 @@
 		}
 
 		&.is-clickable:hover {
+			font-variation-settings: "wght" 600;
 			color: var(--interactive-accent-text);
 			background-color: var(--background-primary);
-			font-variation-settings: "wght" 600;
 			box-shadow: var(--drop-shadow);
 		}
 	}
@@ -58,15 +58,15 @@
 	}
 
 	.tag-container {
-		padding: 0px 10px 0px 0px;
+		padding: 0 10px 0 0;
 
 		> div:first-of-type {
 			padding: 8px;
-			border: none;
 			background-color: var(--background-secondary);
+			border: none;
+			border: 1px solid var(--window-border);
 			border-radius: var(--border-radius);
 			box-shadow: var(--drop-shadow);
-			border: 1px solid var(--window-border);
 		}
 	}
 

@@ -1,7 +1,7 @@
 /* #region  [Plugin - Core] Outgoing Links */
 .workspace-leaf-content[data-type="outgoing-link"] {
 	.outgoing-link-pane {
-		padding: 0px 10px 0px 0px;
+		padding: 0 10px 0 0;
 	}
 
 	.outgoing-link-pane.node-insert-event .tree-item-self:not(.is-collapsed):not(.outgoing-link-item) {
@@ -22,9 +22,9 @@
 	}
 
 	.tree-item-self {
+		padding: 5px 5px 5px 25px;
 		border: unset;
 		border-radius: var(--border-radius);
-		padding: 5px 5px 5px 25px;
 	}
 
 	.tree-item-self.is-clickable.is-collapsed .collapse-icon {
@@ -40,22 +40,22 @@
 	}
 
 	.outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type) {
-		border: 1px solid var(--window-border);
-		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
-		padding: 5px 8px 5px 25px;
 		position: relative;
 		z-index: var(--layer-popover);
+		padding: 5px 8px 5px 25px;
 		margin-bottom: 8px;
 		font-size: 14px;
 		font-variation-settings: "wght" 600;
+		background-color: var(--background-tertiary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
 	}
 
 	.outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type).is-collapsed:hover,
 	.outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed):hover {
-		background-color: var(--background-primary);
 		color: var(--interactive-accent-text);
+		background-color: var(--background-primary);
 	}
 
 	.outgoing-link-pane.node-insert-event > .tree-item-self:not(:last-of-type):not(.is-collapsed) {
@@ -63,26 +63,26 @@
 	}
 
 	.search-result:last-child .search-result-file-matches {
-		border: 1px solid var(--window-border);
+		padding: 30px 8px 8px;
 		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		padding: 30px 8px 8px 8px;
 	}
 
 	.search-result-container {
-		margin-bottom: 8px;
-		margin-top: -30px;
 		padding: unset;
+		margin-top: -30px;
+		margin-bottom: 8px;
 	}
 
 	.tree-item-self.outgoing-link-item {
 		padding: 5px 10px 5px 25px;
-		margin: 0px;
+		margin: 0;
 		font-size: 0.875rem;
+		background: var(--background-primary);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
-		background: var(--background-primary);
 		box-shadow: var(--drop-shadow);
 	}
 
@@ -95,8 +95,8 @@
 	}
 
 	.tree-item-inner-subtext {
-		color: var(--text-muted);
 		font-weight: 400;
+		color: var(--text-muted);
 	}
 
 	.outgoing-link-pane.node-insert-event .tree-item-self:hover .tree-item-inner-subtext {
@@ -108,31 +108,31 @@
 	}
 
 	.search-result-file-match {
-		font-family: var(--font-text);
 		left: unset;
 		width: 100%;
 		padding: 5px 20px 5px 10px;
-		border: 1px solid var(--window-border);
+		font-family: var(--font-text);
 		background: var(--background-primary);
-		box-shadow: var(--drop-shadow);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
 	}
 
 	.search-result-file-match:hover {
 		color: var(--text-normal);
 	}
 
-	.search-result-file-match:after {
+	.search-result-file-match::after {
 		display: none;
 	}
 
 	.outgoing-link-pane > .search-result-container:not(:last-of-type) {
-		border: 1px solid var(--window-border);
+		min-height: unset !important;
+		padding: 30px 8px 8px;
 		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		padding: 30px 8px 8px 8px;
-		min-height: unset !important;
 	}
 
 	.outgoing-link-pane .search-result-container:not(:last-of-type) > div:first-child {
@@ -143,12 +143,12 @@
 		padding: 8px 10px;
 	}
 
-	.tree-item-self .tree-item-icon:after {
+	.tree-item-self .tree-item-icon::after {
 		display: none;
 	}
 
 	.search-results-children {
-		padding-bottom: 0px;
+		padding-bottom: 0;
 	}
 }
 /* #endregion */

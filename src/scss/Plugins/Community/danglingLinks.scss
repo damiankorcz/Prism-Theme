@@ -1,20 +1,20 @@
 /* #region  [Plugin - Community] Dangling Links */
 .workspace-leaf-content[data-type="dangling-links"] .view-content {
-	padding: 0px 10px 0px 0px;
+	padding: 0 10px 0 0;
 
 	.container {
-		width: 100%;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 
 		h3:first-of-type {
 			display: none;
 		}
 
 		details {
-			border: 1px solid var(--window-border);
 			background-color: var(--background-secondary);
+			border: 1px solid var(--window-border);
 			border-radius: var(--border-radius);
 			box-shadow: var(--drop-shadow);
 
@@ -23,21 +23,21 @@
 			}
 
 			summary {
-				border-bottom-color: transparent;
-				border: none;
-				background-color: var(--background-tertiary);
-				border-radius: var(--border-radius);
-				box-shadow: var(--drop-shadow);
-				padding: 5px 5px 5px 15px;
 				position: relative;
 				z-index: var(--layer-cover);
+				padding: 5px 5px 5px 15px;
 				margin-bottom: 8px;
 				font-size: 14px;
 				font-variation-settings: "wght" 600;
+				background-color: var(--background-tertiary);
+				border: none;
+				border-bottom-color: transparent;
+				border-radius: var(--border-radius);
+				box-shadow: var(--drop-shadow);
 
 				&:hover {
-					background-color: var(--background-primary);
 					color: var(--interactive-accent-text);
+					background-color: var(--background-primary);
 
 					&::marker {
 						color: var(--interactive-accent-hover);
@@ -50,18 +50,18 @@
 			}
 
 			ul {
+				padding-inline-start: 0;
 				margin: 8px;
-				padding-inline-start: 0px;
 				font-family: var(--font-text);
 				font-size: 14px;
 
 				li {
-					border-radius: var(--border-radius-small);
-					border: 1px solid var(--window-border);
-					color: var(--text-normal);
 					width: 100%;
 					padding: 2px 5px 2px 10px;
+					color: var(--text-normal);
 					background: var(--background-primary);
+					border: 1px solid var(--window-border);
+					border-radius: var(--border-radius-small);
 					box-shadow: var(--drop-shadow);
 
 					&:not(:last-child) {

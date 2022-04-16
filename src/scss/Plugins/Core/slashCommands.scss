@@ -3,18 +3,18 @@
 	max-width: 700px;
 	padding: 8px;
 	border: 1px solid var(--table-border-color);
-	
+
 	kbd {
 		letter-spacing: 0.05em;
 	}
-	
+
 	.suggestion::-webkit-scrollbar-track {
 		border-radius: var(--border-radius-small);
-	
+
 		.theme-light & {
 			background-color: var(--background-primary);
 		}
-		
+
 		.theme-dark & {
 			background-color: var(--background-secondary-alt);
 		}
@@ -26,10 +26,10 @@
 }
 
 .suggestion-content {
-	word-wrap: break-word;
-	line-height: 28px;
-	padding-right: 10px;
 	flex-grow: 1;
+	padding-right: 10px;
+	line-height: 28px;
+	word-wrap: break-word;
 }
 
 .suggestion-item {
@@ -37,20 +37,20 @@
 	padding: 5px 10px;
 
 	.suggestion-flair {
-		color: var(--interactive-accent-text);
-		display: inline-flex;
 		position: relative;
-		left: unset;
 		top: unset;
+		left: unset;
+		display: inline-flex;
 		order: 5;
+		color: var(--interactive-accent-text);
 
 		&[aria-label] {
 			margin-right: 8px;
 		}
 
 		&:first-child {
-			font-variation-settings: "wght" 600;
 			font-size: 0.75rem;
+			font-variation-settings: "wght" 600;
 			background-color: var(--background-primary);
 			border-radius: var(--border-radius-small);
 		}
@@ -61,17 +61,17 @@
 	}
 
 	.suggestion-flair svg {
-		margin: 0 auto;
 		display: block;
+		margin: 0 auto;
 	}
 
 	.suggestion-prefix {
+		padding: 0 5px;
+		margin-right: 8px;
+		font-size: 14px;
+		background-color: var(--background-primary);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
-		background-color: var(--background-primary);
-		margin-right: 8px;
-		padding: 0px 5px;
-		font-size: 14px;
 	}
 
 	&:hover .suggestion-prefix,

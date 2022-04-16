@@ -1,27 +1,27 @@
 /* #region [Accent Style] Base */
 .modal button:not(.mod-cta):not(.mod-warning) {
 	display: inline-flex;
-	justify-content: center;
-	align-content: center;
 	flex-direction: column;
+	align-content: center;
+	justify-content: center;
 }
 
 .community-theme-remove-button {
-	margin: unset;
-	right: 6px;
 	top: 6px;
+	right: 6px;
+	margin: unset;
 }
 
 .search-result-file-match-replace-button {
 	position: relative;
-	display: flex;
-	margin: 6px 0px 5px 0px;
-	right: unset;
 	top: unset;
+	right: unset;
+	display: flex;
+	margin: 6px 0 5px;
 }
 
 .search-result-file-match-destination-file {
-	margin: 0px 0px 5px 0px;
+	margin: 0 0 5px;
 }
 
 .theme-dark.pt-accent-style-borderandfilled-dt button.mod-cta:hover,
@@ -56,14 +56,14 @@
 }
 
 .workspace-tab-header.is-active {
-	stroke-width: 2px;
 	border: var(--border-size) solid;
+	stroke-width: 2px;
 }
 
 .nav-action-button.is-active {
-	stroke-width: 2px;
 	border: var(--border-size) solid;
 	box-shadow: var(--drop-shadow);
+	stroke-width: 2px;
 
 	&:hover svg {
 		color: var(--interactive-accent-hover);
@@ -79,8 +79,8 @@
 }
 
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active {
-	border-radius: var(--border-radius-small);
 	border: var(--border-size) solid;
+	border-radius: var(--border-radius-small);
 	box-shadow: var(--drop-shadow);
 
 	&:hover {
@@ -113,8 +113,8 @@
 .workspace-leaf-content[data-type="outgoing-link"] .search-result-file-match-destination-file,
 .workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button,
 .embedded-backlinks .search-result-file-match-replace-button {
-	color: var(--text-normal);
 	font-variation-settings: "wght" 600;
+	color: var(--text-normal);
 	border: var(--border-size) solid;
 	border-radius: var(--border-radius-small);
 	box-shadow: var(--drop-shadow);
@@ -137,13 +137,13 @@
 	}
 
 	&:hover span.community-theme-remove-button {
-		font-variation-settings: "wght" 600;
-		border: var(--border-size) solid;
-		border-radius: var(--border-radius-small);
-		padding: 5px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 5px;
+		font-variation-settings: "wght" 600;
+		border: var(--border-size) solid;
+		border-radius: var(--border-radius-small);
 	}
 }
 

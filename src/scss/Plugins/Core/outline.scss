@@ -1,23 +1,23 @@
 /* #region  [Plugin - Core] Outline */
 .workspace-leaf-content[data-type="outline"] {
 	.outline {
-		border: 1px solid var(--window-border);
-		background-color: var(--background-secondary);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
 		padding: 8px;
 		margin-bottom: 5px;
+		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
 	}
 
 	.view-content {
-		padding: 0px 10px 0px 0px;
+		padding: 0 10px 0 0;
 	}
 
 	.tree-item-inner {
-		font-variation-settings: "wght" 600;
-		color: var(--text-normal);
 		padding: 2px 2px 2px calc(8px - var(--vertical-lines-width-file-explorer));
+		font-variation-settings: "wght" 600;
 		line-height: 14px;
+		color: var(--text-normal);
 	}
 
 	.tree-item-self.is-clickable:hover {
@@ -43,32 +43,32 @@
 	}
 
 	.tree-item-self .tree-item-icon {
+		z-index: var(--layer-popover);
+		align-items: center;
+		justify-content: center;
+		width: 16px;
+		height: 16px;
+		padding: unset;
 		padding-left: 20px;
 		margin-right: -2px;
 		margin-left: unset;
-		padding: unset;
-		width: 16px;
-		height: 16px;
-		justify-content: center;
-		align-items: center;
-		z-index: var(--layer-popover);
 	}
 
-	.tree-item-self .tree-item-icon:after {
+	.tree-item-self .tree-item-icon::after {
 		display: none;
 	}
 
 	.tree-item-children {
-		margin: 0px 0px 0px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
+		margin: 0 0 0 calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
 		border-left: 2px solid transparent;
 	}
 
 	.tree-item-self {
+		min-width: 100%;
 		padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
+		white-space: nowrap;
 		border: var(--border-size) solid transparent;
 		border-radius: var(--border-radius-small);
-		white-space: nowrap;
-		min-width: 100%;
 	}
 
 	.tree-item-children > .tree-item > .tree-item-self {
@@ -84,11 +84,11 @@
 			padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
 			border: var(--border-size) solid transparent;
 		}
-	
+
 		.tree-item-children {
-			margin: 2px 0px 2px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
+			margin: 2px 0 2px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
 			border-left: var(--vertical-lines-width-outline) solid var(--vertical-lines-color-outline);
 		}
-	} 
+	}
 }
 /* #endregion */

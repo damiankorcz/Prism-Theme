@@ -12,14 +12,14 @@ a {
 .cm-s-obsidian span.cm-builtin,
 .cm-s-obsidian span.cm-hr {
 	color: var(--table-border-color);
-	font-variation-settings: "wght" 600;
+	font-variation-settings: 'wght' 600;
 }
 
 .HyperMD-codeblock.HyperMD-codeblock-begin,
 .cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+	border-top: 1px solid var(--table-border-color);
 	border-top-left-radius: var(--border-radius-small);
 	border-top-right-radius: var(--border-radius-small);
-	border-top: 1px solid var(--table-border-color);
 }
 
 .cm-s-obsidian .HyperMD-codeblock,
@@ -30,9 +30,9 @@ a {
 
 .HyperMD-codeblock.HyperMD-codeblock-end,
 .cm-s-obsidian div.HyperMD-codeblock-end-bg {
+	border-bottom: 1px solid var(--table-border-color);
 	border-bottom-left-radius: var(--border-radius-small);
 	border-bottom-right-radius: var(--border-radius-small);
-	border-bottom: 1px solid var(--table-border-color);
 }
 
 .CodeMirror-foldgutter-open::after {
@@ -57,11 +57,11 @@ a {
 
 // Centers vertically the gutter elements (line number and collapse icon) with the text next to it
 .CodeMirror-gutter-wrapper {
-	display: flex;
 	align-content: center;
 	align-items: center;
-	width: -webkit-fill-available;
+	display: flex;
 	height: -webkit-fill-available;
+	width: -webkit-fill-available;
 }
 
 .markdown-source-view.mod-cm6 .is-unresolved {
@@ -70,8 +70,8 @@ a {
 
 // Gutter adjustment for New Editor modes
 .markdown-source-view.mod-cm6 .cm-gutters {
-	padding-right: unset;
 	margin-right: 5px;
+	padding-right: unset;
 }
 
 .markdown-source-view.mod-cm6 .cm-fold-indicator:not(.is-collapsed) .collapse-indicator {
@@ -87,9 +87,9 @@ a {
 }
 
 .cm-gutter div.cm-gutterElement {
-	display: flex;
 	align-content: center;
 	align-items: center;
+	display: flex;
 	justify-content: flex-end;
 	min-width: -webkit-fill-available;
 }
@@ -104,20 +104,20 @@ a {
 
 .cm-line .cm-hashtag-begin {
 	background-color: var(--background-tertiary);
-	border-top-left-radius: var(--border-radius-small);
-	border-bottom-left-radius: var(--border-radius-small);
-	padding-left: 5px;
 	border: 2px solid var(--window-border);
+	border-bottom-left-radius: var(--border-radius-small);
 	border-right: unset;
+	border-top-left-radius: var(--border-radius-small);
+	padding-left: 5px;
 }
 
 .cm-line .cm-hashtag-end {
 	background-color: var(--background-tertiary);
-	border-top-right-radius: var(--border-radius-small);
-	border-bottom-right-radius: var(--border-radius-small);
-	padding-right: 5px;
 	border: 2px solid var(--window-border);
+	border-bottom-right-radius: var(--border-radius-small);
 	border-left: unset;
+	border-top-right-radius: var(--border-radius-small);
+	padding-right: 5px;
 }
 
 .cm-s-obsidian span.cm-url {
@@ -129,10 +129,10 @@ a {
 }
 
 .cm-s-obsidian span.cm-hashtag {
-	text-decoration: none;
 	color: var(--text-normal);
 	font-family: var(--font-text);
-	font-variation-settings: "wght" 600;
+	font-variation-settings: 'wght' 600;
+	text-decoration: none;
 }
 
 .CodeMirror pre.CodeMirror-line,
@@ -142,8 +142,8 @@ a {
 }
 
 p {
-	margin-block-start: 0.5em;
 	margin-block-end: 0.5em;
+	margin-block-start: 0.5em;
 }
 /* #endregion */
 
@@ -169,9 +169,9 @@ p {
 
 		span.cm-inline-code,
 		span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-			color: var(--color-red-text);
 			background-color: var(--background-primary-alt);
 			border-radius: var(--border-radius-small);
+			color: var(--color-red-text);
 		}
 
 		span.cm-footref,
@@ -237,9 +237,9 @@ p {
 
 		span.cm-inline-code,
 		span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-			color: var(--color-red-text);
 			background-color: var(--background-secondary-alt);
 			border-radius: var(--border-radius-small);
+			color: var(--color-red-text);
 		}
 
 		span.cm-footref,

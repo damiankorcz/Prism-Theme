@@ -1,12 +1,12 @@
 /* #region  [Titlebar] Base */
 .titlebar {
-	background-color: transparent;
 	height: 22px !important;
+	background-color: transparent;
 }
 
 .titlebar-inner {
-	color: var(--text-normal);
 	font-variation-settings: "wght" 600;
+	color: var(--text-normal);
 }
 
 .titlebar-button-container.mod-left .titlebar-button {
@@ -18,18 +18,18 @@
 	display: flex;
 	align-items: center;
 	height: -webkit-fill-available;
-	color: var(--interactive-accent-text);
+	padding-right: 8px;
+	padding-left: 8px;
 	font-variation-settings: "wght" 600;
 	line-height: initial;
-	padding-left: 8px;
-	padding-right: 8px;
+	color: var(--interactive-accent-text);
 }
 
 // Pane Relief
 .titlebar-button-container {
+	position: absolute;
 	display: flex;
 	flex-flow: row;
-	position: absolute;
 	align-items: center;
 }
 
@@ -62,22 +62,22 @@ body.pt-titlebar-hide-text .titlebar-text {
 .pt-default-titlebar {
 	.titlebar-text {
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		width: fit-content;
 		height: 18px;
+		padding: 0 10px;
+		margin: 2px auto 0;
 		font-size: 13px;
 		font-weight: normal;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		flex-direction: column;
-		margin: 2px auto 0px auto;
-		width: fit-content;
-		padding: 0px 10px;
 		color: var(--text-muted);
-		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--window-border);
-		box-shadow: var(--drop-shadow);
 		letter-spacing: unset;
+		background-color: var(--background-tertiary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 		opacity: 1;
 	}
 
@@ -85,14 +85,14 @@ body.pt-titlebar-hide-text .titlebar-text {
 		height: -webkit-fill-available;
 		margin-top: 4px;
 		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius-small);
 		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 
 		svg {
-			width: 18px;
 			display: flex;
 			align-items: center;
+			width: 18px;
 			height: -webkit-fill-available;
 		}
 
@@ -104,11 +104,11 @@ body.pt-titlebar-hide-text .titlebar-text {
 	}
 
 	.titlebar-button-container.mod-right {
-		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--window-border);
-		box-shadow: var(--drop-shadow);
 		height: 24px;
+		background-color: var(--background-tertiary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 	}
 
 	.mod-minimize:hover,
@@ -136,40 +136,40 @@ body.pt-titlebar-hide-text .titlebar-text {
 	}
 
 	.titlebar-button-container {
-		top: 0px;
+		top: 0;
 	}
 
 	div.titlebar-button-container.mod-left {
-		top: 0px;
+		top: 0;
 		left: 48px !important;
 		height: 22px;
 		margin-top: 4px;
 		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius-small);
 		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 
 		svg {
-			width: 17px;
 			display: flex;
 			align-items: center;
+			width: 17px;
 			height: -webkit-fill-available;
 		}
 
 		.mod-back,
 		.mod-forward {
-			padding: 0px 10px;
-			margin: 0px;
 			height: 22px;
+			padding: 0 10px;
+			margin: 0;
 		}
 	}
 
 	// Adds the Obsidian 'favicon' to the top left of the Titlebar
 	.titlebar-left {
 		position: relative;
+		left: 5px;
 		width: 35px;
 		height: 100%;
-		left: 5px;
 		background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyI+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQyIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjU4NzMsMCwwLDEsLTI5LjM2NTEsMCkiPgogICAgICAgIDxyZWN0IHg9IjE4LjUiIHk9IjAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJmaWxsOm5vbmU7Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC42MywwLDAsMSwyOS41OTk4LC0wLjI1NjU0MSkiPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDQuNjEsMEwxMi45MSwxNy41MkwwLDQ1LjQ1TDE5LjU3LDkwLjQ3TDQ3LjM1LDEwMEw1Mi40NCw4OS44TDYzLDI2LjM5TDQ0LjYxLDBaIiBzdHlsZT0iZmlsbDpyZ2IoNTIsMzIsMTQwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNjMsMjYuMzlMNDMuNDQsMTQuNDFMMTYuNDMsMzUuN0w0Ny4zNSwxMDBMNTIuNDQsODkuOEw2MywyNi4zOVoiIHN0eWxlPSJmaWxsOnVybCgjX0xpbmVhcjEpO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMC44ODEyMTYsMC4yNTY1NDEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02MywyNi4zOUw0NC42MSwwTDQzLjQ0LDE0LjQxTDYzLDI2LjM5WiIgc3R5bGU9ImZpbGw6cmdiKDE3NSwxNTksMjQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDMuNDQsMTQuNDFMNDQuNjEsMEwxMi45MSwxNy41MkwxNi40MywzNS43TDQzLjQ0LDE0LjQxWiIgc3R5bGU9ImZpbGw6cmdiKDc0LDU1LDE2MCk7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLjg4MTIxNiwwLjI1NjU0MSkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjQzLDM1LjdMMTkuNTcsOTAuNDdMNDcuMzUsMTAwTDE2LjQzLDM1LjdaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNTUsMTYwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgtMzEuNTksLTc1LjQ5LDc1LjQ5LC0zMS41OSw2MC40NCw4MC41NikiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDEwOCw4NiwyMDQpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMTUxLDEzMywyMjkpO3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==");
 		background-repeat: no-repeat;
 		background-position: 50%;
@@ -179,29 +179,29 @@ body.pt-titlebar-hide-text .titlebar-text {
 	&.theme-light .titlebar-button-container.mod-right {
 		.mod-minimize:hover,
 		.mod-maximize:hover {
-			background-color: rgba(0, 0, 0, 0.1);
+			background-color: rgb(0 0 0 / 10%);
 		}
 	}
 
 	&.theme-dark .titlebar-button-container.mod-right {
 		.mod-minimize:hover,
 		.mod-maximize:hover {
-			background-color: rgba(255, 255, 255, 0.1);
+			background-color: rgb(255 255 255 / 10%);
 		}
 	}
 
 	.titlebar-button-container.mod-right {
-		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--window-border);
 		height: 30px;
+		background-color: var(--background-tertiary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 
 		.mod-minimize,
 		.mod-maximize,
 		.mod-close {
-			padding: 1px 17px 0px 17px;
 			height: 30px;
+			padding: 1px 17px 0;
 			transition: 150ms;
 
 			&:hover {
@@ -210,48 +210,48 @@ body.pt-titlebar-hide-text .titlebar-text {
 			}
 
 			svg {
-				color: var(--text-normal);
-				shape-rendering: geometricPrecision;
-				height: 12px;
 				width: 12px;
+				height: 12px;
+				color: var(--text-normal);
+				shape-rendering: geometricprecision;
 			}
 		}
 
 		.mod-close:hover {
-			background-color: #e81123;
+			background-color: hsl(355 86% 49%);
 
 			svg {
-				color: #ffffff;
+				color: hsl(0 0% 100%);
 			}
 		}
 
 		.mod-back svg,
 		.mod-forward svg {
-			color: var(--text-normal);
-			height: 20px;
 			width: 20px;
+			height: 20px;
+			color: var(--text-normal);
 		}
 	}
 
 	.titlebar-text {
-		left: 0px;
-		right: 0px;
+		right: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		width: fit-content;
 		height: 22px;
+		padding: 0 10px;
+		margin: 4px auto 0;
 		font-size: 14px;
 		font-weight: normal;
-		display: flex;
-		justify-content: center;
-		align-content: center;
-		flex-direction: column;
-		margin: 4px auto 0px auto;
-		width: fit-content;
-		padding: 0px 10px;
 		color: var(--text-muted);
-		background-color: var(--background-tertiary);
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--window-border);
-		box-shadow: var(--drop-shadow);
 		letter-spacing: unset;
+		background-color: var(--background-tertiary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 		opacity: 1;
 	}
 }
@@ -263,21 +263,21 @@ body.pt-solid-titlebar- {
 	&dt.theme-dark {
 		&.pt-titlebar-custom-dt div.titlebar {
 			background-color: var(--titlebar-background-color-dt);
-			box-shadow: var(--drop-shadow);
 			border-bottom: 1px solid var(--window-border);
+			box-shadow: var(--drop-shadow);
 		}
 
 		&.pt-titlebar-default-dt div.titlebar {
 			background-color: var(--background-tertiary);
-			box-shadow: var(--drop-shadow);
 			border-bottom: 1px solid var(--window-border);
+			box-shadow: var(--drop-shadow);
 		}
 		div.titlebar-text,
 		div.titlebar-button-container.mod-left,
 		div.titlebar-button-container.mod-right {
 			background-color: transparent;
-			box-shadow: unset;
 			border: unset;
+			box-shadow: unset;
 		}
 
 		.titlebar-button-container.mod-right div.titlebar-button.mod-minimize,
@@ -304,8 +304,8 @@ body.pt-solid-titlebar- {
 		div.titlebar-button-container.mod-left,
 		div.titlebar-button-container.mod-right {
 			background-color: transparent;
-			box-shadow: unset;
 			border: unset;
+			box-shadow: unset;
 		}
 
 		.titlebar-button-container.mod-right div.titlebar-button.mod-minimize,

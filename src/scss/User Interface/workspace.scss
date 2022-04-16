@@ -6,23 +6,23 @@
 }
 
 .view-header-title {
-	white-space: pre;
-	word-wrap: normal;
 	line-height: 32px;
+	word-wrap: normal;
+	white-space: pre;
 }
 
 .view-action {
-	margin: 0;
-	cursor: pointer;
-	color: var(--text-muted);
 	position: relative;
 	top: 0;
 	display: flex;
 	align-items: center;
+	margin: 0;
+	color: var(--text-muted);
+	cursor: pointer;
 }
 
 .view-action svg {
-	margin: 0px 2px;
+	margin: 0 2px;
 }
 
 .view-action:not(:last-child) {
@@ -36,7 +36,7 @@
 	padding: calc(var(--window-gap) / 2);
 }
 
-// Allows the <hr> used for the resize handle to be visible outside the div it's in
+// Allows the <hr> used for the resize handle to be visible outside the div holding in
 .workspace-split.mod-vertical {
 	overflow: visible;
 }
@@ -74,23 +74,23 @@ body .workspace-split.mod-root .workspace-leaf div.workspace-leaf-content {
 
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+	border-radius: 0;
 	border-top-left-radius: unset;
 	border-top-right-radius: unset;
-	border-radius: 0;
 }
 
 // Warning prompt to install Style Settings
 body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
-	height: fit-content;
-	width: -webkit-fill-avaliable;
 	display: block;
-	content: "'Style Settings' Plugin is required for Prism to function correctly!";
+	width: -webkit-fill-avaliable;
+	height: fit-content;
 	padding: 10px;
-	border-radius: var(--border-radius);
-	border: var(--border-size) solid var(--color-red-tint);
-	background-color: var(--color-red-base);
 	font-variation-settings: "wght" 600;
 	text-align: center;
+	content: "Style Settings Plugin is required for Prism to function correctly!";
+	background-color: var(--color-red-base);
+	border: var(--border-size) solid var(--color-red-tint);
+	border-radius: var(--border-radius);
 }
 
 .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed.is-hidden {
@@ -103,49 +103,49 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 .view-header {
+	margin-bottom: 1px;
 	background-color: var(--background-tertiary);
 	border: var(--border-size) solid transparent;
 	border-bottom: 1px solid var(--window-border);
-	margin-bottom: 1px;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 }
 
 body.pt-hide-view-header div.workspace-leaf-content div.view-header {
-	box-shadow: unset;
-	border: var(--border-size) solid transparent;
 	height: 1px;
+	border: var(--border-size) solid transparent;
+	box-shadow: unset;
 	transition-delay: 600ms;
 
 	svg {
+		opacity: 0;
 		transition: opacity 200ms;
 		transition-delay: 600ms;
-		opacity: 0;
 	}
 }
 
 body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
+	height: 36px;
 	background-color: var(--background-tertiary);
 	border: var(--border-size) solid transparent;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	height: 36px;
 	transition: all ease 200ms;
 
 	svg {
+		display: unset;
+		opacity: 1;
 		transition: opacity 200ms;
 		transition-delay: 200ms;
-		opacity: 1;
-		display: unset;
 	}
 }
 
-.view-header:after {
+.view-header::after {
 	position: absolute;
-	z-index: -10;
 	top: 0;
-	height: 20px;
+	z-index: -10;
 	width: 100%;
+	height: 20px;
 	content: " ";
 	background-color: transparent;
 }
@@ -178,12 +178,12 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 }
 
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
-	width: var(--window-gap);
-	height: calc(100% - var(--window-gap));
 	top: calc(var(--window-gap) / 2);
 	right: calc(-1 * var(--window-gap) / 2);
-	border-radius: var(--border-radius-small);
+	width: var(--window-gap);
+	height: calc(100% - var(--window-gap));
 	background-color: transparent;
+	border-radius: var(--border-radius-small);
 }
 
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:hover,
@@ -192,12 +192,12 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 }
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-	height: var(--window-gap);
-	width: calc(100% - var(--window-gap));
-	left: calc(var(--window-gap) / 2);
 	bottom: calc(-1 * var(--window-gap) / 2);
-	border-radius: var(--border-radius-small);
+	left: calc(var(--window-gap) / 2);
+	width: calc(100% - var(--window-gap));
+	height: var(--window-gap);
 	background-color: transparent;
+	border-radius: var(--border-radius-small);
 }
 
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:hover,
@@ -208,22 +208,22 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 
 // Resize Handles at the Right Side of the workspace
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-	border-radius: var(--border-radius-small);
-	width: var(--window-gap);
-	height: calc(100% - var(--window-gap));
 	top: calc(var(--window-gap) / 2);
 	left: calc(-1 * var(--window-gap) / 2);
+	width: var(--window-gap);
+	height: calc(100% - var(--window-gap));
 	background-color: transparent;
+	border-radius: var(--border-radius-small);
 }
 
 // Resize Handles at the Left Side of the workspace
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
-	border-radius: var(--border-radius-small);
-	width: var(--window-gap);
-	height: calc(100% - var(--window-gap));
 	top: calc(var(--window-gap) / 2);
 	right: calc(-1 * var(--window-gap) / 2);
+	width: var(--window-gap);
+	height: calc(100% - var(--window-gap));
 	background-color: transparent;
+	border-radius: var(--border-radius-small);
 }
 
 // Resize Handles Hover and Active use Accent Color

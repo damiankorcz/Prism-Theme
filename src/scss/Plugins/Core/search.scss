@@ -1,13 +1,13 @@
 /* #region  [Plugin - Core] Search */
 .search-result-hover-button.mod-top {
-	top: 0px;
-	right: 0px;
-	border-radius: var(--border-radius-small);
+	top: 0;
+	right: 0;
 	border: var(--border-size) solid transparent;
+	border-radius: var(--border-radius-small);
 
 	svg {
-		height: 10px;
 		width: 10px;
+		height: 10px;
 		color: var(--text-muted);
 	}
 
@@ -17,14 +17,14 @@
 }
 
 .search-result-hover-button.mod-bottom {
-	bottom: 0px;
-	right: 0px;
-	border-radius: var(--border-radius-small);
+	right: 0;
+	bottom: 0;
 	border: var(--border-size) solid transparent;
+	border-radius: var(--border-radius-small);
 
 	svg {
-		height: 10px;
 		width: 10px;
+		height: 10px;
 		color: var(--text-muted);
 	}
 
@@ -34,94 +34,94 @@
 }
 
 .tree-item-self .tree-item-flair {
-	border: var(--border-size) solid var(--background-secondary);
-	background-color: var(--background-secondary);
-	border-radius: var(--border-radius-small);
 	font-variation-settings: "wght" 600;
+	background-color: var(--background-secondary);
+	border: var(--border-size) solid var(--background-secondary);
+	border-radius: var(--border-radius-small);
 }
 
-.tree-item-flair-outer:after {
+.tree-item-flair-outer::after {
 	display: none;
 }
 
 .search-result-file-matched-text {
+	padding: 0 4px;
 	color: var(--highlight-text-normal);
 	background-color: var(--interactive-accent-base);
 	border-radius: var(--border-radius-small);
-	padding: 0px 4px;
 }
 
 .workspace-leaf-content[data-type="search"] {
 	.search-input-container {
-		width: 100%;
-		margin: 0px;
 		z-index: var(--layer-popover);
+		width: 100%;
+		margin: 0;
 		background: transparent;
 	}
 
 	.search-result-container {
-		padding: 0px 10px 0px 0px;
 		box-sizing: border-box;
+		padding: 0 10px 0 0;
 	}
 
 	.search-result-file-match {
-		font-family: var(--font-text);
+		left: 0;
 		width: 100%;
 		padding: 5px 20px 5px 10px;
-		border-radius: var(--border-radius-small);
-		left: 0px;
+		font-family: var(--font-text);
 		font-size: 0.875rem;
 		color: var(--text-normal);
 		background: var(--background-primary);
-		box-shadow: var(--drop-shadow);
-		border-radius: var(--border-radius-small);
 		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 
 		&:hover {
 			background: var(--background-primary);
 		}
 
-		&:after {
+		&::after {
 			display: none;
 		}
 	}
 
 	.search-result-file-matches {
-		margin: 0px;
 		padding: 8px;
+		margin: 0;
 		border-bottom: unset;
 	}
 
 	.search-result {
 		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		border: 1px solid var(--window-border);
 
 		.tree-item-self {
-			border-bottom: 1px solid var(--window-border);
-			background: var(--background-tertiary);
-			border-radius: var(--border-radius);
 			padding: 5px 5px 5px 25px;
+			background: var(--background-tertiary);
+			border-bottom: 1px solid var(--window-border);
+			border-radius: var(--border-radius);
 
 			&.is-clickable:hover {
-				box-shadow: unset;
 				background: unset;
 				background: var(--background-tertiary);
+				box-shadow: unset;
 			}
 		}
 	}
 
 	.search-info-container {
+		width: fit-content;
+		height: fit-content;
+		padding: 0 10px;
+		margin: 0 10px 10px 0;
 		font-size: 14px;
 		font-variation-settings: "wght" 600;
-		height: fit-content;
-		width: fit-content;
 		background: var(--background-tertiary);
 		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
-		padding: 0px 10px;
-		margin: 0px 10px 10px 0px;
 	}
 
 	.tree-item.search-result.is-collapsed .tree-item-self .tree-item-inner {

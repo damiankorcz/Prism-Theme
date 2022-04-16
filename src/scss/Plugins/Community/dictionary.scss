@@ -1,17 +1,17 @@
 /* #region  [Plugins - Community] Dictionary */
 .workspace-leaf-content[data-type="dictionary-view"] {
 	.view-content {
-		padding: unset;
-		height: 100%;
-		overflow: hidden;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		height: 100%;
+		padding: unset;
+		overflow: hidden;
 	}
 
 	.search-input-container {
+		padding: 0 0 calc(var(--window-gap) / 2) 0;
 		margin: unset;
-		padding: 0px 0px calc(var(--window-gap) / 2) 0px;
 	}
 
 	.contents {
@@ -21,26 +21,26 @@
 
 		.main {
 			padding: unset;
-			border: 1px solid var(--window-border);
 			background-color: var(--background-secondary);
+			border: 1px solid var(--window-border);
 			border-radius: var(--border-radius);
 			box-shadow: var(--drop-shadow);
 
 			.opener {
-				padding: 5px;
-				border-bottom-color: transparent;
-				border: none;
-				border-radius: var(--border-radius);
-				box-shadow: var(--drop-shadow);
 				position: relative;
 				z-index: var(--layer-popover);
+				padding: 5px;
 				font-size: 14px;
 				font-variation-settings: "wght" 600;
+				border: none;
+				border-bottom-color: transparent;
+				border-radius: var(--border-radius);
+				box-shadow: var(--drop-shadow);
 
 				.collapse-icon {
 					padding: 8px 10px;
 
-					&:after {
+					&::after {
 						display: none;
 					}
 				}
@@ -69,8 +69,8 @@
 
 			> div:nth-child(2) {
 				display: flex;
-				height: auto;
 				flex-flow: column;
+				height: auto;
 				padding: 8px;
 			}
 
@@ -80,16 +80,16 @@
 
 			.error,
 			.errorDescription {
-				margin: unset;
 				align-items: center;
-				background: var(--background-primary);
-				border-radius: var(--border-radius);
-				box-shadow: var(--drop-shadow);
-				padding: 10px;
-				height: fit-content;
 				width: fit-content;
 				min-width: -webkit-fill-available;
+				height: fit-content;
+				padding: 10px;
+				margin: unset;
+				background: var(--background-primary);
 				border: unset;
+				border-radius: var(--border-radius);
+				box-shadow: var(--drop-shadow);
 			}
 
 			i.mark {
@@ -110,36 +110,36 @@
 				}
 
 				blockquote {
+					padding: 4px 4px 4px 1rem;
 					border: 2px solid var(--table-border-color);
 					border-left-width: 5px;
-					padding: 4px 4px 4px 1rem;
 				}
 			}
 		}
 
 		.container {
-			margin: unset;
+			flex: 1;
+			max-width: -webkit-fill-available;
 			padding: unset;
-			background-color: unset;
+			margin: unset;
 			margin-right: 8px;
 			margin-bottom: 16px;
-			max-width: -webkit-fill-available;
-			flex: 1;
+			background-color: unset;
 
 			> h3 {
-				margin: unset;
 				align-items: center;
-				background: var(--background-primary);
-				border-radius: var(--border-radius);
-				box-shadow: var(--drop-shadow);
-				padding: 4px 4px 4px 8px;
-				height: fit-content;
 				width: fit-content;
 				min-width: -webkit-fill-available;
-				border: unset;
+				height: fit-content;
+				padding: 4px 4px 4px 8px;
+				margin: unset;
 				margin-bottom: 8px;
-				font-variation-settings: "wght" 600;
 				font-size: 14px;
+				font-variation-settings: "wght" 600;
+				background: var(--background-primary);
+				border: unset;
+				border-radius: var(--border-radius);
+				box-shadow: var(--drop-shadow);
 			}
 
 			> .main {

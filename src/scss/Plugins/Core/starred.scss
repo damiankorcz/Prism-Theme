@@ -3,30 +3,30 @@
 	.item-list {
 		flex-grow: unset;
 		height: fit-content;
+		padding: 8px;
+		background-color: var(--background-secondary);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
-		background-color: var(--background-secondary);
 		box-shadow: var(--drop-shadow);
-		padding: 8px;
 
-		&:after {
-			content: "";
+		&::after {
 			height: 65px;
+			content: "";
 		}
 	}
 
 	.nav-file-icon {
+		padding: 0 8px;
 		margin: unset;
-		padding: 0px 8px;
 	}
 
 	.nav-file-title {
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--window-border);
-		color: var(--text-normal);
 		width: 100%;
-		padding: 2px 0px;
+		padding: 2px 0;
+		color: var(--text-normal);
 		background: var(--background-primary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 	}
 

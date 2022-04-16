@@ -1,44 +1,44 @@
 /* #region  [UI] Scrollbar Base */
 .kanban-plugin__scroll-container::-webkit-scrollbar,
 ::-webkit-scrollbar {
-	height: var(--scroll-bar-size) !important;
 	width: var(--scroll-bar-size) !important;
-	border-radius: var(--border-radius-small) !important;
-	-webkit-border-radius: var(--border-radius-small) !important;
-	background-clip: border-box !important;
+	height: var(--scroll-bar-size) !important;
 	background: var(--scroll-button-background-color) !important;
+	background-clip: border-box !important;
+	-webkit-border-radius: var(--border-radius-small) !important;
+	border-radius: var(--border-radius-small) !important;
 }
 
 .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
-	border-radius: var(--border-radius-small) !important;
-	-webkit-border-radius: var(--border-radius-small) !important;
-	background-clip: border-box !important;
 	background: var(--scroll-bar-thumb) !important;
+	background-clip: border-box !important;
 	border: 1px solid var(--window-border);
+	-webkit-border-radius: var(--border-radius-small) !important;
+	border-radius: var(--border-radius-small) !important;
 }
 
 .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
 .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:active,
 ::-webkit-scrollbar-thumb:hover {
-	border-radius: var(--border-radius-small) !important;
-	-webkit-border-radius: var(--border-radius-small) !important;
 	background: var(--interactive-accent-base) !important;
 	border: 1px solid var(--window-border);
+	-webkit-border-radius: var(--border-radius-small) !important;
+	border-radius: var(--border-radius-small) !important;
 }
 /* #endregion */
 
 /* #region  [UI] Scrollbar Buttons */
 // Scroll Button
 .pt-scroll-button ::-webkit-scrollbar-button:single-button {
-	height: var(--scroll-bar-size);
 	width: var(--scroll-bar-size);
-	border-radius: 0px;
+	height: var(--scroll-bar-size);
 	background-color: var(--scroll-button-background-color);
-	background-size: calc(var(--scroll-bar-size) / 2);
 	background-repeat: no-repeat;
 	background-position: 50% 80%;
+	background-size: calc(var(--scroll-bar-size) / 2);
+	border-radius: 0;
 }
 
 // Scroll Button Up icon
@@ -72,27 +72,27 @@
 // Scroll Button Left icon
 .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:decrement,
 .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-	background-position: 20% 50%;
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(90 0 0)' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-position: 20% 50%;
 }
 
 .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:decrement,
 .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-	background-position: 20% 50%;
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-position: 20% 50%;
 }
 
 // Scroll Button Right icon
 .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:increment,
 .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
-	background-position: 80% 50%;
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-position: 80% 50%;
 }
 
 .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:increment,
 .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
-	background-position: 80% 50%;
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
+	background-position: 80% 50%;
 }
 /* #endregion */
 
@@ -105,8 +105,8 @@
 	.vertical-tab-content-container:hover ::-webkit-scrollbar,
 	.kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar,
 	.kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar {
-		height: var(--scroll-bar-size-hover) !important;
 		width: var(--scroll-bar-size-hover) !important;
+		height: var(--scroll-bar-size-hover) !important;
 	}
 }
 
@@ -118,10 +118,10 @@
 	.vertical-tab-content-container:hover ::-webkit-scrollbar-button:single-button,
 	.kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button,
 	.kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button {
-		height: var(--scroll-bar-size-hover) !important;
 		width: var(--scroll-bar-size-hover) !important;
-		background-size: calc(var(--scroll-bar-size-hover) / 2) !important;
+		height: var(--scroll-bar-size-hover) !important;
 		background-image: unset;
+		background-size: calc(var(--scroll-bar-size-hover) / 2) !important;
 	}
 }
 /* #endregion */

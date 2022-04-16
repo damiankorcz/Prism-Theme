@@ -4,7 +4,7 @@
 }
 
 .prompt-instructions {
-	padding: 10px 10px 0px 10px;
+	padding: 10px 10px 0;
 }
 
 input.prompt-input {
@@ -12,23 +12,23 @@ input.prompt-input {
 }
 
 .prompt-results {
-	padding: 0px 10px 0px 0px;
+	padding: 0 10px 0 0;
 }
 
 .modal-container .prompt {
+	background-color: var(--background-secondary-blur);
 	border: 1px solid var(--window-border);
 	box-shadow: var(--drop-shadow-popup);
-	background-color: var(--background-secondary-blur);
-	backdrop-filter: blur(var(--blur-intensity));
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
-}	
+	backdrop-filter: blur(var(--blur-intensity));
+}
 
 .suggestion-hotkey {
+	font-family: var(--font-interface);
+	font-variation-settings: "wght" 600;
 	background-color: var(--background-primary);
 	border-radius: var(--border-radius-small);
-	font-variation-settings: "wght" 600;
-	font-family: var(--font-interface);
-}	
+}
 
 .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
 	border-radius: var(--border-radius-small);
@@ -36,7 +36,7 @@ input.prompt-input {
 	.theme-light & {
 		background-color: var(--background-primary);
 	}
-	
+
 	.theme-dark & {
 		background-color: var(--background-secondary-alt);
 	}

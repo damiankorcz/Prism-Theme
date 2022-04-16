@@ -9,14 +9,14 @@
 	}
 
 	.leaflet-container .leaflet-control-attribution {
-		background: var(--background-secondary);
 		color: var(--text-muted);
+		background: var(--background-secondary);
 	}
 
 	.leaflet-control-zoom-in,
 	.leaflet-control-zoom-out {
-		background-color: unset;
 		color: var(--text-muted);
+		background-color: unset;
 
 		&:hover {
 			color: var(--interactive-accent-hover);
@@ -60,30 +60,30 @@
 	.leaflet-touch .leaflet-bar,
 	.leaflet-bar-part.leaflet-bar-part-single {
 		font-variation-settings: "wght" 600;
-		border-radius: var(--border-radius-small);
 		color: var(--text-muted);
 		background-color: var(--background-tertiary);
-		box-shadow: var(--drop-shadow);
 		border: 1px solid var(--background-tertiary);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 	}
 
 	.leaflet-control-geosearch form {
-		height: -webkit-fill-available;
-		background-color: var(--background-primary);
-		border-radius: var(--border-radius-small);
-		border: 1px solid var(--background-tertiary);
-		padding: unset;
 		right: 38px;
+		height: -webkit-fill-available;
+		padding: unset;
+		background-color: var(--background-primary);
+		border: 1px solid var(--background-tertiary);
+		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 	}
 
 	.leaflet-control-geosearch a.reset {
-		background-color: transparent;
-		line-height: unset;
 		height: -webkit-fill-available;
 		font-size: 19px;
-		content: "\D7";
+		line-height: unset;
 		color: var(--text-muted);
+		content: "\D7";
+		background-color: transparent;
 		border-bottom: unset;
 
 		&:hover {
@@ -93,7 +93,7 @@
 
 	.leaflet-control-geosearch form input {
 		height: -webkit-fill-available;
-		padding: 0px 30px 0px 0px;
+		padding: 0 30px 0 0;
 		font-size: 14px;
 	}
 
@@ -102,43 +102,42 @@
 	}
 
 	.leaflet-control-geosearch .results.active {
-		background-color: var(--background-secondary);
-		border-top: unset;
-		border: 1px solid var(--background-secondary);
-		border-radius: var(--border-radius-small);
-		background-color: var(--background-secondary-blur);
-		backdrop-filter: blur(var(--blur-intensity));
-		-webkit-backdrop-filter: blur(var(--blur-intensity));
-		box-shadow: var(--drop-shadow);
-		color: var(--text-normal);
 		margin-top: 8px;
+		color: var(--text-normal);
+		background-color: var(--background-secondary-blur);
+		border: 1px solid var(--background-secondary);
+		border-top: unset;
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
 	}
 
 	.leaflet-control-geosearch .results > .active,
 	.leaflet-control-geosearch .results > :hover {
-		background-color: var(--background-primary);
 		color: var(--interactive-accent-text);
+		background-color: var(--background-primary);
 		border: 1px solid var(--background-primary);
 	}
 
-	.leaflet-touch .leaflet-control-geosearch .results.active:after {
+	.leaflet-touch .leaflet-control-geosearch .results.active::after {
 		border-left: unset;
 	}
 
 	.graph-control-content {
 		> *:not(:last-child) {
 			display: inline-block;
-			margin-bottom: 8px;
 			margin-right: 8px;
+			margin-bottom: 8px;
 		}
 	}
 
 	.leaflet-popup-content-wrapper,
 	.leaflet-popup-tip {
-		background-color: var(--background-secondary);
 		color: var(--text-normal);
-		box-shadow: var(--drop-shadow);
+		background-color: var(--background-secondary);
 		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
 	}
 
 	.leaflet-container a.leaflet-popup-close-button {

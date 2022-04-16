@@ -1,18 +1,18 @@
 /* #region  [Plugin - Community] Style Settings */
 div.style-settings-heading[data-level="0"] {
 	position: relative;
-	margin-bottom: 0px;
 	padding: 8px;
+	margin-bottom: 0;
 	background-color: var(--background-primary);
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 
 	+ .style-settings-container {
+		padding: 25px 20px 20px;
 		margin-top: -10px;
-		padding: 25px 20px 20px 20px;
-		margin-left: 0px;
 		margin-bottom: 15px;
+		margin-left: 0;
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 
@@ -22,8 +22,8 @@ div.style-settings-heading[data-level="0"] {
 	}
 
 	&.is-collapsed {
-		margin-bottom: 15px;
 		padding-bottom: 8px;
+		margin-bottom: 15px;
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
@@ -59,7 +59,7 @@ div.style-settings-heading:not([data-level="0"]):not([data-level="1"]) {
 }
 
 div.style-settings-heading {
-	padding: 8px 0px;
+	padding: 8px 0;
 	margin-bottom: 5px;
 }
 
@@ -71,10 +71,10 @@ div.style-settings-container {
 	}
 
 	&[data-level] {
-		border-left: var(--vertical-lines-width-style-settings) solid var(--vertical-lines-color-style-settings);
+		padding-bottom: 0;
 		padding-left: 5px;
-		padding-bottom: 0px;
 		margin-left: 12px;
+		border-left: var(--vertical-lines-width-style-settings) solid var(--vertical-lines-color-style-settings);
 	}
 }
 
@@ -85,7 +85,7 @@ div.style-settings-container {
 
 	.setting-item-name {
 		width: fit-content;
-		padding: 0px 8px;
+		padding: 0 8px;
 		border-radius: var(--border-radius-small);
 	}
 
@@ -119,12 +119,12 @@ div.workspace-leaf-content[data-type="style-settings"] {
 }
 
 .setting-item-description div small {
+	display: block;
+	max-width: 400px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
-	max-width: 400px;
-	display: block;
 }
 
 div.setting-item,
@@ -133,75 +133,75 @@ div.style-settings-heading {
 	border-bottom: unset;
 }
 
-.style-settings-collapse-indicator:after {
+.style-settings-collapse-indicator::after {
+	display: inline-block;
+	width: 24px;
+	height: fit-content;
+	padding: 0;
+	margin-left: 8px;
 	font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 	font-weight: initial;
 	color: unset;
-	display: inline-block;
-	height: fit-content;
-	width: 24px;
-	margin-left: 8px;
-	padding: 0px;
 	text-align: center;
 }
 
 .setting-item.style-settings-heading[data-id="appearance"] {
-	.style-settings-collapse-indicator:after {
+	.style-settings-collapse-indicator::after {
 		content: "🎨";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="editor"] {
-	.style-settings-collapse-indicator:after {
+	.style-settings-collapse-indicator::after {
 		content: "📝";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="user-interface"] {
-	.style-settings-collapse-indicator:after {
+	.style-settings-collapse-indicator::after {
 		content: "👆";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="plugins"] {
-	.style-settings-collapse-indicator:after {
+	.style-settings-collapse-indicator::after {
 		content: "🧩";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="feature-toggles"] {
-	.style-settings-collapse-indicator:after {
+	.style-settings-collapse-indicator::after {
 		content: "🪠";
 	}
 }
 
 .style-settings-heading[data-id="prism-wiki"] {
-	border-top: 2px solid var(--table-border-color);
 	margin-top: 10px;
-	margin-bottom: 0px;
-	cursor: text;
+	margin-bottom: 0;
 	pointer-events: none;
+	cursor: text;
+	border-top: 2px solid var(--table-border-color);
 
 	.setting-item-control,
 	.style-settings-collapse-indicator {
 		display: none;
 	}
 
-	.setting-item-name:before {
-		content: "📖";
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
 		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-right: 8px;
+		content: "📖";
 	}
 }
 
 .style-settings-heading[data-id="prism-wiki-link"] {
-	cursor: default;
 	margin-bottom: 0;
+	cursor: default;
 
 	.setting-item-name,
 	.setting-item-control,
@@ -210,9 +210,9 @@ div.style-settings-heading {
 	}
 
 	.setting-item-description {
+		color: var(--interactive-accent-text);
 		cursor: text;
 		user-select: all;
-		color: var(--interactive-accent-text);
 	}
 }
 
@@ -224,15 +224,15 @@ div.style-settings-heading {
 		display: none;
 	}
 
-	.setting-item-name:before {
-		content: "❤️";
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
 		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-right: 8px;
+		content: "❤️";
 	}
 }
 
@@ -240,8 +240,8 @@ div.style-settings-heading {
 .style-settings-heading[data-id="support-submit-issue"],
 .style-settings-heading[data-id="support-donate"],
 .style-settings-heading[data-id="prism-wiki-link"] {
-	margin-bottom: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 0;
+	margin-bottom: 0;
 
 	.setting-item-control,
 	.style-settings-collapse-indicator {
@@ -256,21 +256,21 @@ div.style-settings-heading {
 		color: var(--text-normal);
 	}
 
-	.setting-item-name:before {
-		content: "⭐";
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
 		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-right: 8px;
+		content: "⭐";
 	}
 
 	.setting-item-description {
+		color: var(--interactive-accent-text);
 		cursor: text;
 		user-select: all;
-		color: var(--interactive-accent-text);
 	}
 }
 
@@ -281,21 +281,21 @@ div.style-settings-heading {
 		color: var(--text-normal);
 	}
 
-	.setting-item-name:before {
-		content: "⚠️";
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
 		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-right: 8px;
+		content: "⚠️";
 	}
 
 	.setting-item-description {
+		color: var(--interactive-accent-text);
 		cursor: text;
 		user-select: all;
-		color: var(--interactive-accent-text);
 	}
 }
 
@@ -306,21 +306,21 @@ div.style-settings-heading {
 		color: var(--text-normal);
 	}
 
-	.setting-item-name:before {
-		content: "☕";
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
 		font-family: "Seugoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		display: inline-block;
-		height: fit-content;
-		width: 20px;
-		padding-right: 8px;
+		content: "☕";
 	}
 
 	.setting-item-description {
+		color: var(--interactive-accent-text);
 		cursor: text;
 		user-select: all;
-		color: var(--interactive-accent-text);
 	}
 }
 
@@ -335,24 +335,24 @@ div.style-settings-heading {
 .style-settings-container .setting-item {
 	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-dark-"], [data-id*="color-accent-l-text-"]) {
 		.setting-item-control::before {
-			content: " ";
 			width: 1.5em;
 			height: 1.5em;
+			margin-right: 8px;
+			content: " ";
 			border: 1px solid var(--window-border);
 			border-radius: var(--border-radius-small);
-			margin-right: 8px;
 		}
 
 		input.slider {
-			height: 1.5em;
 			width: 150px;
+			height: 1.5em;
 
 			&::-webkit-slider-thumb {
-				-webkit-appearance: none;
-				height: 1.75em;
 				width: 4px;
+				height: 1.75em;
 				margin-top: -0.45em;
 				border: 1px solid var(--window-border);
+				-webkit-appearance: none;
 			}
 		}
 

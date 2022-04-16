@@ -84,10 +84,10 @@ mark {
 .theme-light.pt-highlight-style-none-lt {
 	mark,
 	.cm-highlight {
+		padding: 0;
 		font-size: 1em;
-		opacity: 1;
 		background-color: transparent;
-		padding: 0px;
+		opacity: 1;
 	}
 }
 
@@ -95,9 +95,9 @@ mark {
 .theme-light.pt-highlight-style-border-lt {
 	mark,
 	.cm-highlight {
+		padding: 0 4px;
 		background-color: var(--background-primary);
 		border: var(--border-size) solid var(--mark-highlight-dark);
-		padding: 0px 4px;
 	}
 }
 
@@ -105,8 +105,8 @@ mark {
 .theme-light.pt-highlight-style-filled-lt {
 	mark,
 	.cm-highlight {
+		padding: 0 4px;
 		background-color: var(--mark-highlight-base);
-		padding: 0px 4px;
 	}
 }
 
@@ -114,16 +114,16 @@ mark {
 .theme-light.pt-highlight-style-borderandfilled-lt {
 	mark,
 	.cm-highlight {
+		padding: 0 4px;
 		background-color: var(--mark-highlight-base);
 		border: var(--border-size) solid var(--mark-highlight-dark);
-		padding: 0px 4px;
 	}
 }
 
 mark,
 .cm-highlight {
-	font-variation-settings: "wght" 600;
 	font-size: 0.875em;
+	font-variation-settings: "wght" 600;
 	border-radius: var(--border-radius-small);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;

@@ -2,44 +2,44 @@
 // Tab label container
 .workspace-tabs .workspace-tab-header-container {
 	height: fit-content;
-	padding-bottom: calc(var(--window-gap) / 2);
 	padding-top: unset;
+	padding-bottom: calc(var(--window-gap) / 2);
 }
 
 // Tab label background
 .workspace-tab-container-inner {
+	flex-wrap: wrap;
 	min-height: 36px;
 	background-color: var(--background-tertiary);
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	flex-wrap: wrap;
-	border: 1px solid var(--window-border);
 }
 
 // Tab label spacing
 .workspace-tab-header-inner {
-	padding: unset;
 	align-items: center;
 	justify-content: center;
-	margin: auto;
 	height: fit-content;
+	padding: unset;
+	margin: auto;
 }
 
 // Tab label icon centering
 .workspace-tab-header-inner-icon {
-	height: 28px;
-	width: 28px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 28px;
+	height: 28px;
 }
 
 // Tab label border/radius
 .workspace-tab-header {
-	border: var(--border-size) solid transparent;
-	color: var(--text-muted);
-	margin: 0px;
 	padding: 2px 6px;
+	margin: 0;
+	color: var(--text-muted);
+	border: var(--border-size) solid transparent;
 }
 
 // Current Active Tab label
@@ -58,8 +58,8 @@
 .workspace-tab-header.is-before-active,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner {
 	background-color: transparent;
-	box-shadow: none;
 	border-radius: var(--border-radius);
+	box-shadow: none;
 }
 
 .workspace-tab-header:not(.is-active):hover {
@@ -69,7 +69,6 @@
 // Hide before and after elements surrounding the tab container
 .workspace-tab-container-after,
 .workspace-tab-container-before,
-.workspace-tab-container-after.is-after-active,
 .workspace-tab-container-after.is-after-active,
 .workspace-tab-container-before.is-before-active {
 	display: none;

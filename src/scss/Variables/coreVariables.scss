@@ -1,6 +1,5 @@
 /* #region  [Variables] Root */
 :root {
-	// Style Settings Accessible Default Properties
 	// Graph View - Light Theme
 	--graph-fill-opacity-lt: 1;
 	--graph-fill-focused-opacity-lt: 1;
@@ -44,7 +43,7 @@
 	--h6-font-size: 1em;
 
 	// Background Options - Light Theme
-	--background-image-lt: url();
+	--background-image-lt: url('');
 	--background-blur-lt: 0;
 	--background-repeat-lt: no-repeat;
 	--background-attachment-lt: fixed;
@@ -52,7 +51,7 @@
 	--background-size-lt: cover;
 
 	// Background Options - Dark Theme
-	--background-image-dt: url();
+	--background-image-dt: url('');
 	--background-blur-dt: 0;
 	--background-repeat-dt: no-repeat;
 	--background-attachment-dt: fixed;
@@ -60,7 +59,7 @@
 	--background-size-dt: cover;
 	
 	// Custom Vault Banner
-	--custom-vault-banner-icon-url: url(https://img.icons8.com/office/40/000000/book-shelf.png);
+	--custom-vault-banner-icon-url: url('https://img.icons8.com/office/40/000000/book-shelf.png');
 
 	// Shared Color Variables
 	--mark-highlight-base: var(--color-yellow-base);
@@ -113,9 +112,9 @@
 body {
 	// Theme Font Overwrites
 	// --default-font: var(--font-text);
-	--font-interface-theme: "Source Sans 3", sans-serif;
-	--font-text-theme: "Source Sans 3", sans-serif;
-	--font-monospace-theme: "Source Code Pro", monospace;
+	--font-interface-theme: 'Source Sans 3', sans-serif;
+	--font-text-theme: 'Source Sans 3', sans-serif;
+	--font-monospace-theme: 'Source Code Pro', monospace;
 }
 
 .theme-light {
@@ -206,75 +205,59 @@ body {
 	--color-accent-tint-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-dark-lt));
 	--color-accent-text-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-text-lt));
 
-	--hue-background-lt: linear-gradient(
-		to right,
-		hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(30 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(60 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(90 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(120 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(150 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(180 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(210 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(240 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(270 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(300 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(330 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
-		hsl(360 var(--color-accent-s-lt) var(--color-accent-l-base-lt))
-	);
+	--hue-background-lt: linear-gradient(to right,
+	hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(30 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(60 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(90 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(120 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(150 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(180 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(210 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(240 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(270 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(300 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(330 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
+	hsl(360 var(--color-accent-s-lt) var(--color-accent-l-base-lt)));
 
-	--saturation-background-lt: linear-gradient(
-		to right,
-		hsl(var(--color-accent-h-lt), 0%, var(--color-accent-l-base-lt)),
-		hsl(var(--color-accent-h-lt), 50%, var(--color-accent-l-base-lt)),
-		hsl(var(--color-accent-h-lt), 100%, var(--color-accent-l-base-lt))
-	);
+	--saturation-background-lt: linear-gradient(to right,
+	hsl(var(--color-accent-h-lt), 0%, var(--color-accent-l-base-lt)),
+	hsl(var(--color-accent-h-lt), 50%, var(--color-accent-l-base-lt)),
+	hsl(var(--color-accent-h-lt), 100%, var(--color-accent-l-base-lt)));
 
-	--lightness-background-lt: linear-gradient(
-		to right,
-		hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 0%),
-		hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 50%),
-		hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 100%)
-	);
+	--lightness-background-lt: linear-gradient(to right,
+	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 0%),
+	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 50%),
+	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 100%));
 
 	--color-accent-base-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-base-dt));
 	--color-accent-tint-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-dark-dt));
 	--color-accent-text-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-text-dt));
 
-	--hue-background-dt: linear-gradient(
-		to right,
-		hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(30 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(60 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(90 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(120 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(150 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(180 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(210 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(240 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(270 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(300 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(330 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
-		hsl(360 var(--color-accent-s-dt) var(--color-accent-l-base-dt))
-	);
+	--hue-background-dt: linear-gradient(to right,
+	hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(30 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(60 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(90 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(120 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(150 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(180 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(210 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(240 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(270 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(300 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(330 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
+	hsl(360 var(--color-accent-s-dt) var(--color-accent-l-base-dt)));
 
-	--saturation-background-dt: linear-gradient(
-		to right,
-		hsl(var(--color-accent-h-dt), 0%, var(--color-accent-l-base-dt)),
-		hsl(var(--color-accent-h-dt), 50%, var(--color-accent-l-base-dt)),
-		hsl(var(--color-accent-h-dt), 100%, var(--color-accent-l-base-dt))
-	);
+	--saturation-background-dt: linear-gradient(to right,
+	hsl(var(--color-accent-h-dt), 0%, var(--color-accent-l-base-dt)),
+	hsl(var(--color-accent-h-dt), 50%, var(--color-accent-l-base-dt)),
+	hsl(var(--color-accent-h-dt), 100%, var(--color-accent-l-base-dt)));
 
-	--lightness-background-dt: linear-gradient(
-		to right,
-		hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 0%),
-		hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 50%),
-		hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 100%)
-	);
-
-	&.pt-disable-blur {
-		--background-secondary-blur: var(--background-secondary);
-	}
+	--lightness-background-dt: linear-gradient(to right,
+	hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 0%),
+	hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 50%),
+	hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), 100%));
 
 	--text-error: var(--color-red-tint);
 	--background-modifier-error: var(--color-red-tint);
@@ -283,6 +266,10 @@ body {
 	--scroll-bar-thumb: var(--background-primary);
 	--highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
 	--highlight-text-accent-custom-dt: hsl(0, 0%, 0%);
+
+	&.pt-disable-blur {
+		--background-secondary-blur: var(--background-secondary);
+	}
 }
 /* #endregion */
 

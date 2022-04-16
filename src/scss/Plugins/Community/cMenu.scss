@@ -1,24 +1,24 @@
 /* #region  [Plugin - Community] cMenu */
 div#cMenuModalBar {
+	background-color: var(--background-tertiary);
 	border: 1px solid var(--background-tertiary);
 	border-radius: var(--border-radius);
-	background-color: var(--background-tertiary);
 	box-shadow: var(--drop-shadow);
 
 	.cMenuCommandItem {
-		background-color: transparent;
 		color: var(--text-muted);
+		background-color: transparent;
 	}
 
 	button.cMenuCommandItem:hover {
-		background-color: transparent;
 		color: var(--interactive-accent-hover);
+		background-color: transparent;
 	}
 
 	&.cMenuGlassAesthetic {
 		background: var(--background-secondary-blur);
-		backdrop-filter: blur(var(--blur-intensity));
 		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
 	}
 }
 

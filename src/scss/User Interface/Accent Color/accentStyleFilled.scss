@@ -52,14 +52,14 @@
 		border-color: transparent;
 	}
 
-	.workspace-split.mod-root .workspace-leaf.mod-active .view-header-title-container:after,
-	.workspace-leaf.mod-active .view-header-title-container:after,
-	.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container:after {
+	.workspace-split.mod-root .workspace-leaf.mod-active .view-header-title-container::after,
+	.workspace-leaf.mod-active .view-header-title-container::after,
+	.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container::after {
 		background: linear-gradient(to right, transparent, var(--interactive-accent-base));
 	}
 
-	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:before,
-	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container:after {
+	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::before,
+	&.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::after {
 		background: linear-gradient(to bottom, transparent, var(--interactive-accent-base));
 	}
 

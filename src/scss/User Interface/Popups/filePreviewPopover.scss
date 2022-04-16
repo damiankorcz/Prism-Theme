@@ -3,19 +3,19 @@
 	background-color: var(--page-background-color);
 
 	&.hover-popover {
-		transform: scale(0.9);
-		min-height: 500px;
 		width: 500px;
+		min-height: 500px;
+		padding: 2px 0 2px 10px;
 		overflow: auto;
-		padding: 2px 0px 2px 10px;
-		box-shadow: var(--drop-shadow-popup);
 		clear: both;
 		border: 2px solid var(--table-border-color);
 		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow-popup);
+		transform: scale(0.9);
 
 		.markdown-embed {
-			min-height: 491px;
 			height: 491px;
+			min-height: 491px;
 		}
 	}
 }

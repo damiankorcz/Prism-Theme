@@ -2,181 +2,181 @@
 body:not(.pt-disable-animations) {
 	@keyframes iconEnlargeIcon {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		50% {
-			transform: scale(1.128);
 			stroke-width: 3px;
+			transform: scale(1.128);
 		}
 		100% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 	}
 
 	@keyframes iconEnlargeText {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		50% {
-			transform: scale(1.058);
 			stroke-width: 3px;
+			transform: scale(1.058);
 		}
 		100% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 	}
 
 	@keyframes iconEnlargeHold {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		100% {
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
 			transform: scale(1.028);
-			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		}
 	}
 
 	@keyframes iconEnlargeHoldDropdown {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		25% {
 			background-position-y: 70%;
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
 			transform: scale(1.028);
-			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		}
 		50% {
 			background-position-y: 60%;
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
 			transform: scale(1.028);
-			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		}
 		75% {
 			background-position-y: 70%;
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
 			transform: scale(1.028);
-			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		}
 		100% {
 			background-position-y: 60%;
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
 			transform: scale(1.028);
-			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 		}
 	}
 
 	@keyframes iconEnlargeHoldBold {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		100% {
-			transform: scale(1.028);
-			box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 			font-variation-settings: "wght" 500;
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
+			transform: scale(1.028);
 		}
 	}
 
 	@keyframes floatIconUp {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		50% {
-			transform: translatey(-3px);
+			transform: translateY(-3px);
 		}
 		100% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 	}
 
 	@keyframes floatIconDown {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		50% {
-			transform: translatey(3px);
+			transform: translateY(3px);
 		}
 		100% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 	}
 
 	@keyframes floatIconRight {
 		0% {
-			transform: translatex(0px);
+			transform: translateX(0);
 		}
 		50% {
-			transform: translatex(-3px);
-			filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
+			filter: drop-shadow(5px 0 2px rgb(0 0 0 / 10%));
+			transform: translateX(-3px);
 		}
 		100% {
-			transform: translatex(0px);
+			transform: translateX(0);
 		}
 	}
 
 	@keyframes floatIconRightCheckbox {
 		0% {
-			transform: translatex(20px);
+			transform: translateX(20px);
 		}
 		50% {
-			transform: translatex(17px);
-			filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.1));
+			filter: drop-shadow(5px 0 2px rgb(0 0 0 / 10%));
+			transform: translateX(17px);
 		}
 		100% {
-			transform: translatex(20px);
+			transform: translateX(20px);
 		}
 	}
 
 	@keyframes floatIconLeft {
 		0% {
-			transform: translatex(0px);
+			transform: translateX(0);
 		}
 		50% {
-			transform: translatex(3px);
-			filter: drop-shadow(-5px 0px 2px rgba(0, 0, 0, 0.1));
+			filter: drop-shadow(-5px 0 2px rgb(0 0 0 / 10%));
+			transform: translateX(3px);
 		}
 		100% {
-			transform: translatex(0px);
+			transform: translateX(0);
 		}
 	}
 
 	@keyframes floatIconDownIndicator {
 		0% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 		50% {
-			transform: translatey(2px);
+			transform: translateY(2px);
 		}
 		100% {
-			transform: translatey(0px);
+			transform: translateY(0);
 		}
 	}
 
 	@keyframes floatIconRightIndicator {
 		0% {
-			transform: rotate(-90deg) translatey(0px);
+			transform: rotate(-90deg) translateY(0);
 		}
 		50% {
-			transform: rotate(-90deg) translatey(2px);
+			transform: rotate(-90deg) translateY(2px);
 		}
 		100% {
-			transform: rotate(-90deg) translatey(0px);
+			transform: rotate(-90deg) translateY(0);
 		}
 	}
 
 	.horizontal-tab-nav-item:hover,
 	.vertical-tab-nav-item:hover {
-		animation-fill-mode: forwards;
-		animation-duration: 0.15s;
 		animation-name: iconEnlargeHoldBold;
+		animation-duration: 0.15s;
 		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 	}
 
 	.workspace-ribbon-collapse-btn[aria-label-position="right"]:hover svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconRight;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
 	.workspace-ribbon-collapse-btn[aria-label-position="left"]:hover svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconLeft;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
@@ -191,59 +191,59 @@ body:not(.pt-disable-animations) {
 	.kanban-plugin__lane-settings-button:hover svg,
 	.kanban-plugin__item-postfix-button:hover svg,
 	.modal-close-button:hover {
-		animation-duration: 0.25s;
 		animation-name: iconEnlargeIcon;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
 	.workspace-leaf-content[data-type="calendar"] {
 		.arrow:not(.right):hover svg {
-			animation-duration: 0.25s;
 			animation-name: floatIconRight;
+			animation-duration: 0.25s;
 			animation-iteration-count: 2;
 		}
 
 		.arrow.right:hover svg {
-			animation-duration: 0.25s;
 			animation-name: floatIconRight;
+			animation-duration: 0.25s;
 			animation-iteration-count: 2;
 		}
 
 		.reset-button:hover {
-			animation-duration: 0.25s;
 			animation-name: iconEnlargeText;
+			animation-duration: 0.25s;
 			animation-iteration-count: 2;
 		}
 
 		.day:hover {
-			animation-fill-mode: forwards;
-			animation-duration: 0.15s;
 			animation-name: iconEnlargeHoldBold;
+			animation-duration: 0.15s;
 			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
 		}
 	}
 
 	.flatpickr-prev-month:hover svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconRight;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
 	.flatpickr-next-month:hover svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconLeft;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
 	.side-dock-ribbon-action.separator:not(.is-collapsed):hover svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconUp;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
 	.side-dock-ribbon-action.separator.is-collapsed:hover svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconDown;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
@@ -256,8 +256,8 @@ body:not(.pt-disable-animations) {
 	.workspace-leaf-content[data-type="dictionary-view"] .contents .main .opener:not(.open):hover svg,
 	.callout.is-collapsed .callout-title:hover .callout-fold svg,
 	.tree-item.graph-control-section .tree-item-self:hover .tree-item-icon.collapse-icon svg {
-		animation-duration: 0.25s;
 		animation-name: floatIconDownIndicator;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
@@ -271,21 +271,21 @@ body:not(.pt-disable-animations) {
 	.callout:not(.is-collapsed) .callout-title:hover .callout-fold svg,
 	.tree-item.graph-control-section:not(.is-collapsed) .tree-item-self:hover .tree-item-icon.collapse-icon svg,
 	.workspace-leaf-content[data-type="dangling-links"] .view-content details[open] summary::marker {
-		animation-duration: 0.25s;
 		animation-name: floatIconRightIndicator;
+		animation-duration: 0.25s;
 		animation-iteration-count: 2;
 	}
 
 	.titlebar-button {
 		&.mod-back:hover svg {
-			animation-duration: 0.25s;
 			animation-name: floatIconRight;
+			animation-duration: 0.25s;
 			animation-iteration-count: 2;
 		}
 
 		&.mod-forward:hover svg {
-			animation-duration: 0.25s;
 			animation-name: floatIconLeft;
+			animation-duration: 0.25s;
 			animation-iteration-count: 2;
 		}
 	}
@@ -302,10 +302,10 @@ body:not(.pt-disable-animations) {
 	div#quick-explorer .explorable:hover,
 	.setting-item-control input.slider:hover {
 		overflow: visible;
-		animation-fill-mode: forwards;
-		animation-duration: 0.15s;
 		animation-name: iconEnlargeHold;
+		animation-duration: 0.15s;
 		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
 	}
 
 	.graph-control-section .tree-item-self:hover {
@@ -313,8 +313,8 @@ body:not(.pt-disable-animations) {
 	}
 
 	.nav-folder-title[data-path="/"]:hover .nav-folder-collapse-indicator.collapse-icon {
-		animation-duration: 1s;
 		animation-name: iconEnlargeIcon;
+		animation-duration: 1s;
 		animation-iteration-count: infinite;
 		animation-direction: alternate;
 	}
@@ -324,31 +324,31 @@ body:not(.pt-disable-animations) {
 	.search-result-file-match-destination-file:hover,
 	button.kanban-plugin__confirm-action-button:hover,
 	button.kanban-plugin__cancel-action-button:hover {
-		animation-fill-mode: forwards;
-		animation-duration: 0.15s;
 		animation-name: iconEnlargeHold;
+		animation-duration: 0.15s;
 		animation-iteration-count: 1;
 		animation-direction: alternate;
+		animation-fill-mode: forwards;
 	}
 
-	.checkbox-container.is-enabled:hover:after {
-		animation-duration: 0.3s;
+	.checkbox-container.is-enabled:hover::after {
 		animation-name: floatIconRightCheckbox;
+		animation-duration: 0.3s;
 		animation-iteration-count: 2;
 	}
 
-	.checkbox-container:not(.is-enabled):hover:after {
-		animation-duration: 0.3s;
+	.checkbox-container:not(.is-enabled):hover::after {
 		animation-name: floatIconLeft;
+		animation-duration: 0.3s;
 		animation-iteration-count: 2;
 	}
 
 	.dropdown:hover {
-		animation-fill-mode: forwards;
-		animation-duration: 0.6s;
 		animation-name: iconEnlargeHoldDropdown;
+		animation-duration: 0.6s;
 		animation-iteration-count: 1;
 		animation-direction: alternate;
+		animation-fill-mode: forwards;
 	}
 
 	.workspace-tab-header,

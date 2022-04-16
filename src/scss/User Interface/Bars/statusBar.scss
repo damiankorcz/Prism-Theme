@@ -1,22 +1,22 @@
 /* #region  [Status Bar] Base */
 .status-bar {
-	border-top: 0px;
-	padding: 2px 0px;
-	margin-bottom: 4px;
-	line-height: 18px;
-	border-radius: var(--border-radius-small);
-	border: 1px solid var(--window-border);
 	width: fit-content;
-	background-color: var(--background-tertiary);
-	box-shadow: var(--drop-shadow);
+	padding: 2px 0;
+	margin-bottom: 4px;
 	overflow: hidden;
+	line-height: 18px;
+	background-color: var(--background-tertiary);
+	border: 1px solid var(--window-border);
+	border-top: 0;
+	border-radius: var(--border-radius-small);
+	box-shadow: var(--drop-shadow);
 }
 
 .theme-light.pt-solid-titlebar-lt.pt-status-bar-position-top .status-bar,
 .theme-dark.pt-solid-titlebar-dt.pt-status-bar-position-top .status-bar {
 	background: unset;
-	box-shadow: unset;
 	border: unset;
+	box-shadow: unset;
 }
 
 .pt-status-bar-position-top.pt-status-bar-align-center .titlebar-text {
@@ -25,13 +25,13 @@
 
 .pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
 	position: absolute;
+	right: 0;
 	order: 0;
+	height: 18px;
 	margin-top: -20px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	font-size: 13px;
 	line-height: 13px;
-	height: 18px;
-	right: 0;
 }
 
 .mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
@@ -52,43 +52,40 @@
 
 .pt-status-bar-position-top.pt-status-bar-align-center.pt-default-titlebar .status-bar {
 	position: absolute;
+	right: 0;
+	left: 0;
 	order: 0;
+	height: 18px;
 	margin-top: -20px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	font-size: 13px;
 	line-height: 13px;
-	height: 18px;
-	left: 0;
-	right: 0;
 }
 
 .pt-status-bar-position-top.pt-status-bar-align-right.pt-default-titlebar .status-bar {
 	position: absolute;
-	order: 0;
-	margin-top: -20px;
-	margin-bottom: 0px;
-	font-size: 13px;
-	line-height: 13px;
-	height: 18px;
 	right: 100px;
 	left: 0;
+	order: 0;
+	height: 18px;
+	margin-top: -20px;
+	margin-bottom: 0;
+	font-size: 13px;
+	line-height: 13px;
 }
 
 .pt-status-bar-position-top.pt-default-titlebar .status-bar svg {
-	height: 14px;
 	width: 14px;
+	height: 14px;
 }
 
 .pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
 	position: absolute;
-	margin-top: -26px;
-	order: 0;
-	margin-bottom: 0px;
 	right: 0;
-}
-
-.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
 	left: 132px;
+	order: 0;
+	margin-top: -26px;
+	margin-bottom: 0;
 }
 
 .pt-titlebar-hide-nav-buttons.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
@@ -97,42 +94,42 @@
 
 .pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
 	position: absolute;
-	margin-top: -26px;
-	order: 0;
-	left: 0;
 	right: 0;
-	margin-bottom: 0px;
+	left: 0;
+	order: 0;
+	margin-top: -26px;
+	margin-bottom: 0;
 }
 
 .pt-status-bar-position-top.pt-status-bar-align-right.pt-windows-titlebar .status-bar {
 	position: absolute;
-	margin-top: -26px;
-	order: 0;
-	margin-bottom: 0px;
 	right: 148px;
+	order: 0;
+	margin-top: -26px;
+	margin-bottom: 0;
 }
 
 .pt-status-bar-position-top .horizontal-main-container {
-	padding: 0px 5px 5px 5px;
+	padding: 0 5px 5px;
 }
 
 .pt-status-bar-position-top .status-bar-item-segment {
-	height: 14px;
 	width: 14px;
-	line-height: unset;
+	height: 14px;
 	font-size: unset;
+	line-height: unset;
 }
 
 .pt-status-bar-position-top .status-bar-item-icon {
-	color: var(--interactive-accent-tint);
-	height: 14px;
 	width: 14px;
-	line-height: unset;
+	height: 14px;
 	font-size: unset;
+	line-height: unset;
+	color: var(--interactive-accent-tint);
 }
 
 .pt-status-bar-position-bottom .horizontal-main-container {
-	padding: 0px 5px;
+	padding: 0 5px;
 }
 
 .pt-status-bar-align-left .status-bar {
@@ -141,13 +138,13 @@
 }
 
 .pt-status-bar-align-center .status-bar {
-	margin-left: auto;
 	margin-right: auto;
+	margin-left: auto;
 }
 
 .pt-status-bar-align-right .status-bar {
-	margin-left: auto;
 	margin-right: 5px;
+	margin-left: auto;
 }
 
 .pt-status-bar-rtl .status-bar {
@@ -159,7 +156,7 @@
 }
 
 .status-bar-item {
-	padding: 0px 10px;
+	padding: 0 10px;
 }
 
 .theme-light .sync-status-icon.mod-working {
@@ -199,10 +196,10 @@
 /* #region  [Status Bar] Solid */
 :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
 :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
-	box-shadow: unset;
 	width: 100%;
 	margin-bottom: unset;
 	border-radius: unset;
+	box-shadow: unset;
 }
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
@@ -225,7 +222,7 @@
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
 :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
-	margin-left: 0px;
+	margin-left: 0;
 }
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
@@ -250,7 +247,7 @@
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
 :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
-	margin-right: 0px;
+	margin-right: 0;
 }
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
@@ -260,7 +257,7 @@
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
 :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
-	margin-left: 0px;
+	margin-left: 0;
 }
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
@@ -275,7 +272,7 @@
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
 :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
-	margin-right: 0px;
+	margin-right: 0;
 }
 
 :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,

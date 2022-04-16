@@ -4,8 +4,8 @@ input[type="search"],
 input[type="email"],
 input[type="password"],
 input[type="number"] {
-	border: 1px solid var(--window-border);
 	background-color: var(--background-primary);
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 
@@ -53,8 +53,8 @@ textarea:focus::placeholder {
 .theme-light input[type="range"],
 .theme-dark input[type="range"] {
 	background-color: var(--background-secondary-alt);
-	box-shadow: var(--drop-shadow);
 	border: 1px solid var(--window-border);
+	box-shadow: var(--drop-shadow);
 }
 
 .theme-light div.style-settings-container input[type="range"],
@@ -71,24 +71,24 @@ input.slider {
 }
 
 .theme-light .slider::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	height: 14px;
 	width: 14px;
+	height: 14px;
 	margin-top: -1px;
+	background-color: var(--text-normal);
 	border: 5px solid var(--background-primary);
 	border-radius: var(--border-radius-small);
-	background-color: var(--text-normal);
 	box-shadow: var(--drop-shadow);
+	-webkit-appearance: none;
 }
 
 .theme-dark .slider::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	height: 14px;
 	width: 14px;
+	height: 14px;
 	margin-top: -1px;
+	background-color: var(--text-normal);
 	border: 5px solid var(--color-grey-base);
 	border-radius: var(--border-radius-small);
-	background-color: var(--text-normal);
 	box-shadow: var(--drop-shadow);
+	-webkit-appearance: none;
 }
 /* #endregion */

@@ -1,16 +1,16 @@
 /* #region  [Plugin - Community] Emoji Toolbar */
 .modal#emoji-modal {
 	background-color: var(--background-secondary);
+	border: unset;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	border: unset;
 
 	.emoji-mart {
 		font-family: var(--font-interface);
 		font-size: 14px;
-		border: unset;
-		background: unset;
 		color: var(--text-normal);
+		background: unset;
+		border: unset;
 	}
 
 	.emoji-mart-bar {
@@ -22,12 +22,12 @@
 	}
 
 	.emoji-mart-bar:first-child {
+		min-width: -webkit-fill-available;
+		padding: 0 8px;
 		background-color: var(--background-primary);
+		border: unset;
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-		padding: 0px 8px;
-		min-width: -webkit-fill-available;
-		border: unset;
 	}
 
 	.emoji-mart-preview-emoji {
@@ -37,7 +37,7 @@
 	}
 
 	.emoji-mart-preview-data {
-		padding: 0px 8px;
+		padding: 0 8px;
 	}
 
 	.emoji-mart-anchors {
@@ -45,7 +45,7 @@
 	}
 
 	.emoji-mart-search {
-		margin: 8px 8px 0px 8px;
+		margin: 8px 8px 0;
 
 		input {
 			border: unset;
@@ -58,8 +58,8 @@
 			margin-bottom: 8px;
 		}
 
-		.emoji-mart-emoji:hover:before,
-		.emoji-mart-emoji:focus:before {
+		.emoji-mart-emoji:hover::before,
+		.emoji-mart-emoji:focus::before {
 			background-color: var(--background-secondary);
 			border-radius: var(--border-radius-small);
 		}
@@ -84,28 +84,28 @@
 	}
 
 	.emoji-mart-category-label span {
-		background-color: var(--background-secondary);
-		text-align: center;
 		font-variation-settings: "wght" 600;
+		text-align: center;
+		background-color: var(--background-secondary);
 	}
 
 	button {
-		justify-content: unset;
-		align-content: unset;
 		flex-direction: unset;
-		border: unset;
+		align-content: unset;
+		justify-content: unset;
 		margin-right: unset;
+		border: unset;
 
 		&.emoji-mart-anchor {
-			padding: 8px;
 			flex: unset;
+			padding: 8px;
 		}
 
 		.emoji-mart-anchor-icon {
-			color: var(--text-muted);
-			justify-content: center;
-			align-content: center;
 			display: flex;
+			align-content: center;
+			justify-content: center;
+			color: var(--text-muted);
 		}
 
 		&:hover {

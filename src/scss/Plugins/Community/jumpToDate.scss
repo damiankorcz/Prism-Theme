@@ -2,11 +2,11 @@
 .flatpickr-calendar.obsidian42-jump-to-date,
 .kanban-plugin__date-picker {
 	background-color: var(--background-secondary);
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
-	border: 1px solid var(--window-border);
 
-	.flatpickr-calendar.arrowTop:before {
+	.flatpickr-calendar.arrowTop::before {
 		border-bottom-color: var(--background-primary);
 	}
 
@@ -15,33 +15,33 @@
 	}
 
 	.flatpickr-months {
-		margin: unset;
 		align-items: center;
-		background: var(--background-primary);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
-		height: fit-content;
 		width: fit-content;
 		min-width: -webkit-fill-available;
+		height: fit-content;
+		margin: unset;
+		background: var(--background-primary);
 		border: unset;
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
 
 		.flatpickr-prev-month,
 		.flatpickr-next-month {
-			fill: var(--text-normal);
 			padding: 7px;
+			fill: var(--text-normal);
 		}
 
 		.flatpickr-current-month {
-			padding-top: unset;
 			display: flex;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
+			padding-top: unset;
 
 			.flatpickr-monthDropdown-months {
-				font-weight: 600;
-				text-align: center;
-				color: var(--text-normal);
 				padding: unset;
+				font-weight: 600;
+				color: var(--text-normal);
+				text-align: center;
 
 				.flatpickr-monthDropdown-month:hover {
 					background-color: red;
@@ -68,13 +68,13 @@
 	}
 
 	.flatpickr-innerContainer {
-		margin: 6px 10px 10px 10px;
+		margin: 6px 10px 10px;
 
 		.flatpickr-rContainer,
 		.flatpickr-days,
 		.dayContainer {
-			max-width: -webkit-fill-available;
 			min-width: unset;
+			max-width: -webkit-fill-available;
 		}
 
 		.dayContainer {
@@ -90,9 +90,9 @@
 				color: var(--text-normal);
 
 				&:hover {
+					font-variation-settings: "wght" 600;
 					background-color: var(--background-primary);
 					border-radius: var(--border-radius-small);
-					font-variation-settings: "wght" 600;
 					transition: unset;
 				}
 
@@ -112,9 +112,9 @@
 				box-shadow: var(--drop-shadow);
 
 				&:hover {
+					font-variation-settings: "wght" 600;
 					background-color: var(--background-primary);
 					border-radius: var(--border-radius-small);
-					font-variation-settings: "wght" 600;
 					transition: unset;
 				}
 			}
@@ -124,11 +124,11 @@
 			border-bottom: 1px solid var(--table-border-color);
 
 			span.flatpickr-weekday {
-				color: var(--text-muted);
 				font-size: 10px;
-				letter-spacing: 1px;
-				text-transform: uppercase;
 				font-weight: bold;
+				color: var(--text-muted);
+				text-transform: uppercase;
+				letter-spacing: 1px;
 			}
 		}
 	}

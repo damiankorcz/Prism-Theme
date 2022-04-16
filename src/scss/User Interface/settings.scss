@@ -1,7 +1,7 @@
 /* #region  [UI] Settings */
 .modal-bg {
-	background-color: unset;
 	background: var(--background-primary);
+	background-color: unset;
 	opacity: 0.4;
 }
 
@@ -18,11 +18,11 @@
 }
 
 .modal.mod-settings {
-	padding: 0px;
 	width: 80vw;
+	max-width: 1400px;
 	height: 80vh;
 	max-height: 1000px;
-	max-width: 1400px;
+	padding: 0;
 
 	.theme-dark & {
 		background-color: var(--background-color-dt);
@@ -36,18 +36,18 @@
 .modal.mod-settings .horizontal-tab-content,
 .vertical-tab-content {
 	padding: 30px;
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	border: 1px solid var(--window-border);
 }
 
 .modal.mod-settings .vertical-tab-header {
-	padding: 0px;
-	background-color: unset;
-	margin: 0px 15px 15px 15px;
-	padding-right: 8px;
 	flex: 0 0 220px;
 	height: unset;
+	padding: 0;
+	padding-right: 8px;
+	margin: 0 15px 15px;
+	background-color: unset;
 }
 
 .modal.mod-settings .vertical-tabs-container {
@@ -55,40 +55,40 @@
 }
 
 .modal.mod-settings .modal-title {
+	display: flex;
 	height: 40px;
 	font-size: unset;
-	display: flex;
 
 	&::before {
-		content: "Prism Theme v2.0.0";
-		font-size: 14px;
-		padding: 0px 8px;
-		height: 24px;
-		margin: 7px 15px;
-		color: var(--interactive-accent-text);
-		background: var(--background-secondary);
-		border-radius: var(--border-radius);
-		border: 1px solid var(--window-border);
-		box-shadow: var(--drop-shadow);
-		width: fit-content;
-		display: inline-flex;
 		position: absolute;
-		justify-content: center;
-		align-content: center;
+		display: inline-flex;
 		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		width: fit-content;
+		height: 24px;
+		padding: 0 8px;
+		margin: 7px 15px;
+		font-size: 14px;
+		color: var(--interactive-accent-text);
+		content: "Prism Theme v2.0.0";
+		background: var(--background-secondary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
 	}
 
 	&::after {
-		content: "Settings";
-		font-size: 16px;
-		padding: 2px 10px;
-		height: 25px;
-		margin: 5px auto;
-		width: fit-content;
 		display: inline-flex;
-		justify-content: center;
-		align-content: center;
 		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		width: fit-content;
+		height: 25px;
+		padding: 2px 10px;
+		margin: 5px auto;
+		font-size: 16px;
+		content: "Settings";
 	}
 }
 
@@ -97,15 +97,15 @@
 }
 
 .modal.mod-settings .vertical-tab-header-group {
-	padding: 0px;
-	border-radius: var(--border-radius);
-	border: 1px solid var(--window-border);
+	padding: 0;
 	background-color: var(--background-secondary);
+	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 
 	.vertical-tab-header-group-items {
-		border-bottom: unset;
 		padding: 8px;
+		border-bottom: unset;
 	}
 
 	&:first-of-type {
@@ -113,10 +113,9 @@
 	}
 }
 
-// Padding around the setting's content container
 .modal.mod-settings .vertical-tab-content-container {
-	padding: 0px 15px 15px 0px;
 	height: unset;
+	padding: 0 15px 15px 0;
 }
 
 .setting-item-name {
@@ -152,24 +151,24 @@
 }
 
 .vertical-tab-header-group-title {
-	color: var(--text-normal);
-	background: var(--background-primary);
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
-	border-bottom: 1px solid var(--window-border);
-	text-transform: capitalize;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 8px;
-	margin: unset;
-	text-align: center;
-	height: fit-content;
 	width: fit-content;
 	min-width: -webkit-fill-available;
+	height: fit-content;
+	padding: 8px;
+	margin: unset;
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--text-normal);
+	text-align: center;
+	text-transform: capitalize;
+	background: var(--background-primary);
+	border-bottom: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
 }
 
 .modal-content.community-plugin {
-	padding-right: 0px;
+	padding-right: 0;
 }
 
 .modal-close-button {
@@ -190,23 +189,23 @@
 
 .horizontal-tab-nav-item,
 .vertical-tab-nav-item {
+	padding: 2px 12px;
 	margin: unset;
 	font-size: 15px;
-	padding: 2px 12px;
 	background-color: var(--background-secondary);
-	border-radius: var(--border-radius);
 	border: var(--border-size) solid transparent;
+	border-radius: var(--border-radius);
 
 	&:hover {
-		background-color: var(--background-primary);
 		color: var(--interactive-accent-text);
+		background-color: var(--background-primary);
 	}
 
 	&.is-active {
 		font-variation-settings: "wght" 600;
 		background-color: transparent;
-		border-radius: var(--border-radius);
 		border: var(--border-size) solid transparent;
+		border-radius: var(--border-radius);
 	}
 }
 
@@ -216,10 +215,10 @@
 
 select.dropdown {
 	font-family: var(--font-interface);
+	background-color: var(--background-primary);
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	background-color: var(--background-primary);
 
 	&:focus {
 		border-color: var(--interactive-accent-tint);
@@ -292,8 +291,8 @@ select.dropdown {
 		}
 
 		option {
-			background-color: var(--background-primary-alt);
 			color: var(--text-normal);
+			background-color: var(--background-primary-alt);
 		}
 	}
 
@@ -307,17 +306,17 @@ select.dropdown {
 		}
 
 		option {
-			background-color: var(--background-secondary);
 			color: var(--text-normal);
+			background-color: var(--background-secondary);
 		}
 	}
 }
 
 .checkbox-container {
-	border-radius: var(--border-radius-small);
 	background-color: var(--background-secondary-alt);
-	box-shadow: var(--drop-shadow);
 	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius-small);
+	box-shadow: var(--drop-shadow);
 
 	&.is-enabled {
 		background-color: var(--interactive-accent-hover);
@@ -326,8 +325,24 @@ select.dropdown {
 			background-color: var(--interactive-accent-base);
 		}
 
-		&:after {
+		&::after {
 			transform: translate3d(20px, 0, 0);
+
+			.theme-light & {
+				font-size: 10px;
+				font-variation-settings: "wght" 600;
+				color: var(--text-normal);
+				content: "ON";
+				background-color: var(--background-primary);
+			}
+
+			.theme-dark & {
+				font-size: 10px;
+				font-variation-settings: "wght" 600;
+				color: var(--text-normal);
+				content: "ON";
+				background-color: var(--background-primary);
+			}
 		}
 	}
 
@@ -335,53 +350,35 @@ select.dropdown {
 		background-color: var(--interactive-accent-tint);
 	}
 
-	&:after {
+	&::after {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin: 0px;
 		width: 20px;
 		height: 20px;
+		margin: 0;
 		background-color: var(--background-primary);
-		box-shadow: var(--drop-shadow);
 		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 		transform: translate3d(0, 0, 0);
 	}
 }
 
-.checkbox-container.is-enabled:after {
+.checkbox-container:not(.is-enabled)::after {
 	.theme-light & {
-		background-color: var(--background-primary);
-		content: "ON";
 		font-size: 10px;
 		font-variation-settings: "wght" 600;
 		color: var(--text-normal);
+		content: "OFF";
+		background-color: var(--background-primary);
 	}
 
 	.theme-dark & {
-		background-color: var(--background-primary);
-		content: "ON";
 		font-size: 10px;
 		font-variation-settings: "wght" 600;
 		color: var(--text-normal);
-	}
-}
-
-.checkbox-container:not(.is-enabled):after {
-	.theme-light & {
-		background-color: var(--background-primary);
 		content: "OFF";
-		font-size: 10px;
-		font-variation-settings: "wght" 600;
-		color: var(--text-normal);
-	}
-
-	.theme-dark & {
 		background-color: var(--background-primary);
-		content: "OFF";
-		font-size: 10px;
-		font-variation-settings: "wght" 600;
-		color: var(--text-normal);
 	}
 }
 
@@ -391,30 +388,15 @@ select.dropdown {
 
 .modal.mod-community-theme,
 .modal.mod-image-lightbox {
-	padding: 0px 15px 15px 15px;
+	width: 80vw;
+	max-width: 1400px;
+	height: 80vh;
+	min-height: unset;
+	max-height: 1000px;
+	padding: 0 15px 15px;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
-	width: 80vw;
-	height: 80vh;
-	max-height: 1000px;
-	max-width: 1400px;
-	min-height: unset;
-}
 
-.modal.mod-community-theme .modal-content {
-	padding: 0px;
-	margin-top: 0px;
-}
-
-.modal.mod-image-lightbox .modal-content {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	margin-top: 35px;
-}
-
-.modal.mod-community-theme,
-.modal.mod-image-lightbox {
 	.theme-light & {
 		background-color: var(--background-color-lt);
 	}
@@ -424,6 +406,18 @@ select.dropdown {
 	}
 }
 
+.modal.mod-community-theme .modal-content {
+	padding: 0;
+	margin-top: 0;
+}
+
+.modal.mod-image-lightbox .modal-content {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	margin-top: 35px;
+}
+
 img.community-theme-lightbox {
 	object-fit: contain;
 	max-width: 100%;
@@ -431,13 +425,13 @@ img.community-theme-lightbox {
 }
 
 .community-theme-container {
-	box-shadow: var(--drop-shadow);
-	background-color: var(--background-secondary);
-	padding: 25px 15px 15px 15px;
-	margin-right: 15px;
-	border-radius: var(--border-radius);
-	border: 1px solid var(--window-border);
+	padding: 25px 15px 15px;
 	margin-top: -10px;
+	margin-right: 15px;
+	background-color: var(--background-secondary);
+	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
 
 	&:not(:last-child) {
 		margin-bottom: 15px;
@@ -445,7 +439,7 @@ img.community-theme-lightbox {
 
 	.community-theme-filters-container,
 	.hotkey-search-container {
-		padding: 0px 40px 10px 40px;
+		padding: 0 40px 10px;
 	}
 }
 
@@ -454,14 +448,14 @@ img.community-theme-lightbox {
 }
 
 .community-theme {
-	padding: 10px;
-	margin: 5px;
 	width: 50%;
 	max-width: 240px;
-	border: 1px solid var(--window-border);
-	box-shadow: var(--drop-shadow);
+	padding: 10px;
+	margin: 5px;
 	background-color: var(--background-tertiary);
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
+	box-shadow: var(--drop-shadow);
 
 	&.is-selected,
 	&.is-selected .community-theme-info,
@@ -472,32 +466,32 @@ img.community-theme-lightbox {
 }
 
 .mod-community-theme > .modal-title::before {
-	content: "Community Themes";
-	color: var(--text-normal);
-	font-size: 16px;
-	padding: 2px 10px;
-	height: 25px;
-	margin: 5px auto;
-	width: fit-content;
 	display: flex;
-	justify-content: center;
-	align-content: center;
 	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	width: fit-content;
+	height: 25px;
+	padding: 2px 10px;
+	margin: 5px auto;
+	font-size: 16px;
+	color: var(--text-normal);
+	content: "Community Themes";
 }
 
 .mod-community-theme .modal-content .modal-title {
+	z-index: var(--layer-notice);
+	display: inline-block;
+	width: -webkit-fill-available;
+	height: fit-content;
+	padding: 2px 8px;
+	margin-right: 15px;
 	font-size: 16px;
 	font-variation-settings: "wght" 600;
+	text-transform: capitalize;
 	background: var(--background-primary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	padding: 2px 8px;
-	height: fit-content;
-	width: -webkit-fill-available;
-	margin-right: 15px;
-	z-index: var(--layer-notice);
-	display: inline-block;
-	text-transform: capitalize;
 }
 
 .community-theme-info {
@@ -510,29 +504,29 @@ img.community-theme-lightbox {
 
 .community-theme > div:nth-child(3) {
 	display: flex;
+	flex-grow: 1;
 	align-items: center;
 	justify-content: center;
-	flex-grow: 1;
-	padding: 0px;
+	padding: 0;
 }
 
-// Hides the Theme Screenshot when Style Settings isn't installed to make space for the warning prompt
+// Hides the Theme Screenshot when Style Settings not installed makes space for the warning prompt
 body:not(.css-settings-manager) .community-theme.is-selected img[alt="Prism"] {
 	display: none;
 }
 
 // Warning prompt to install Style Settings
 body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3)::after {
-	height: fit-content;
-	width: 100%;
 	display: block;
-	content: "'Style Settings' Plugin is required for Prism to function correctly!";
+	width: 100%;
+	height: fit-content;
 	padding: 10px;
-	border-radius: var(--border-radius);
-	border: var(--border-size) solid var(--color-red-tint);
-	background-color: var(--color-red-base);
 	font-variation-settings: "wght" 600;
 	text-align: center;
+	content: "Style Settings Plugin is required for Prism to function correctly!";
+	background-color: var(--color-red-base);
+	border: var(--border-size) solid var(--color-red-tint);
+	border-radius: var(--border-radius);
 }
 
 .community-plugin-search .search-input-clear-button {
@@ -548,9 +542,9 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .setting-item.setting-item-heading:not(.style-settings-heading) {
-	border-bottom: 1px solid var(--table-border-color);
-	padding: 10px 0px;
+	padding: 10px 0;
 	margin-bottom: 5px;
+	border-bottom: 1px solid var(--table-border-color);
 }
 
 .community-theme .modal-button-container .mod-cta:last-of-type {
@@ -558,7 +552,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .community-theme-filters-container .search-input-container {
-	margin: 0px;
+	margin: 0;
 }
 
 .modal-content hr {
@@ -566,17 +560,15 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .modal.mod-community-plugin {
-	padding: 0px;
+	width: 80vw;
+	max-width: 1400px;
+	height: 80vh;
+	min-height: unset;
+	max-height: 1000px;
+	padding: 0;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	width: 80vw;
-	height: 80vh;
-	max-height: 1000px;
-	max-width: 1400px;
-	min-height: unset;
-}
 
-.modal.mod-community-plugin {
 	.theme-light & {
 		background-color: var(--background-color-lt);
 	}
@@ -586,17 +578,17 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	}
 
 	.modal-title::before {
-		content: "Community Plugins";
-		color: var(--text-normal);
-		font-size: 16px;
-		padding: 2px 10px;
-		height: 25px;
-		margin: 5px auto;
-		width: fit-content;
 		display: flex;
-		justify-content: center;
-		align-content: center;
 		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		width: fit-content;
+		height: 25px;
+		padding: 2px 10px;
+		margin: 5px auto;
+		font-size: 16px;
+		color: var(--text-normal);
+		content: "Community Plugins";
 	}
 }
 
@@ -605,26 +597,26 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .community-plugin-info {
-	background-color: var(--page-background-color);
 	padding: 20px 30px;
-	margin: 0px 15px 15px 0px;
-	border-radius: var(--border-radius);
+	margin: 0 15px 15px 0;
+	background-color: var(--page-background-color);
 	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
 }
 
 .community-plugin-search {
-	background-color: var(--background-secondary);
 	padding: 10px;
-	margin: 0px 15px 15px 15px;
-	border-radius: var(--border-radius);
+	margin: 0 15px 15px;
+	background-color: var(--background-secondary);
 	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius);
 
 	> .setting-item {
 		padding-left: unset;
 
 		.search-input-container {
-			margin-left: unset;
 			margin-right: 8px;
+			margin-left: unset;
 
 			input[type="text"] {
 				max-width: -webkit-fill-available;
@@ -637,13 +629,13 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	}
 
 	&-summary {
+		width: fit-content;
 		padding: 2px 8px;
 		margin-bottom: 10px;
-		background-color: var(--background-primary);
-		box-shadow: var(--drop-shadow);
-		border-radius: var(--border-radius-small);
-		width: fit-content;
 		color: var(--text-normal);
+		background-color: var(--background-primary);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
 	}
 }
 
@@ -652,8 +644,8 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	padding: 8px 10px;
 	margin: unset;
 	background-color: var(--background-primary);
-	box-shadow: var(--drop-shadow);
 	border-radius: var(--border-radius-small);
+	box-shadow: var(--drop-shadow);
 
 	&:hover,
 	&:hover .community-plugin-name,
@@ -669,17 +661,17 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .community-plugin-name {
-	width: fit-content;
 	display: inline-flex;
 	align-items: center;
+	width: fit-content;
 	max-width: 85%;
 	font-variation-settings: "wght" 600;
 
 	.flair.mod-pop {
 		display: inline-flex;
 		align-items: center;
-		margin-left: 5px;
 		height: 24px;
+		margin-left: 5px;
 	}
 }
 
@@ -702,7 +694,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 
 .community-plugin-info .community-plugin-readme.markdown-preview-view {
-	padding: 0px 0px 20px 0px;
+	padding: 0 0 20px;
 }
 
 .theme-light .community-plugin-search-results::-webkit-scrollbar-track {

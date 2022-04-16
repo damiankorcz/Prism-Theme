@@ -2,10 +2,10 @@
 .menu {
 	background: var(--background-secondary-blur);
 	border: 1px solid var(--window-border);
-	backdrop-filter: blur(var(--blur-intensity));
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
 }
 
 .menu-separator {
@@ -18,8 +18,8 @@
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label) {
-	background-color: var(--background-primary);
 	font-variation-settings: "wght" 600;
+	background-color: var(--background-primary);
 }
 
 .menu-item:hover:not(.is-disabled):not(.is-label),

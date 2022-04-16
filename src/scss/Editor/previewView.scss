@@ -25,20 +25,20 @@
 .file-embed,
 .markdown-source-view .markdown-embed,
 .markdown-source-view .file-embed {
-	border-radius: var(--border-radius-small);
 	border: 1px solid var(--table-border-color);
+	border-radius: var(--border-radius-small);
 }
 
 .markdown-embed-link,
 .file-embed-link {
-	color: var(--text-muted);
 	top: 2px;
 	right: 2px;
-	padding: 4px;
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	padding: 4px;
+	color: var(--text-muted);
 }
 
 .markdown-embed-content > div.markdown-preview-view,
@@ -48,9 +48,9 @@
 }
 
 .markdown-embed .markdown-preview-sizer.markdown-preview-section {
+	height: fit-content;
 	min-height: unset !important;
 	padding: unset !important;
-	height: fit-content;
 }
 
 .markdown-embed-link:hover,
@@ -59,30 +59,30 @@
 }
 
 .markdown-embed .markdown-preview-section h3[data-heading] {
-	border: unset !important;
-	background: unset !important;
-	color: var(--text-normal);
 	margin: unset;
+	color: var(--text-normal);
+	background: unset !important;
+	border: unset !important;
 }
 
-.markdown-embed,
-.file-embed {
+.markdown-source-view .markdown-embed,
+.markdown-source-view .file-embed {
 	padding: unset;
-	margin: 10px 0px;
+	margin: 10px 0;
 }
 
 .markdown-embed .markdown-preview-view {
 	padding: 10px;
 }
 
-div:not(.is-collapsed) > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon,
-.cm-gutterElement > div:not(.is-collapsed) .collapse-icon {
-	color: var(--interactive-accent-text);
-}
-
 div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon:hover,
 .cm-gutterElement > div .collapse-icon:hover {
 	color: var(--interactive-accent-hover);
+}
+
+div:not(.is-collapsed) > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indicator.collapse-icon,
+.cm-gutterElement > div:not(.is-collapsed) .collapse-icon {
+	color: var(--interactive-accent-text);
 }
 
 .hr.cm-line hr {
@@ -94,15 +94,15 @@ div > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indicator.collapse-indi
 }
 
 a.tag[href*="#"] {
-	color: var(--text-normal);
-	text-decoration: none;
-	border-radius: var(--border-radius-small);
-	border: 2px solid var(--window-border);
-	background-color: var(--background-tertiary);
-	padding: 0px 4px;
 	display: inline-flex;
 	align-items: center;
+	padding: 0 4px;
+	color: var(--text-normal);
+	text-decoration: none;
 	vertical-align: bottom;
+	background-color: var(--background-tertiary);
+	border: 2px solid var(--window-border);
+	border-radius: var(--border-radius-small);
 
 	&:hover {
 		color: var(--interactive-accent-text);
@@ -125,10 +125,10 @@ a.tag[href*="#"] {
 /* #region  [Editor] Preview Checkbox */
 input[type="checkbox"],
 .markdown-preview-view .task-list-item-checkbox {
-	appearance: unset;
+	top: 5px;
 	filter: none;
 	border-radius: var(--border-radius-small);
-	top: 5px;
+	appearance: unset;
 
 	.theme-light & {
 		background-color: var(--background-primary-alt);
@@ -157,8 +157,8 @@ input[type="checkbox"]:checked:before {
 	height: 100%;
 	content: " ";
 	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMTUiIGhlaWdodD0iMTUiCnZpZXdCb3g9IjAgMCAyNCAyNCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDE5Ljk4MDQ2OSA1Ljk5MDIzNDQgQSAxLjAwMDEgMS4wMDAxIDAgMCAwIDE5LjI5Mjk2OSA2LjI5Mjk2ODggTCA5IDE2LjU4NTkzOCBMIDUuNzA3MDMxMiAxMy4yOTI5NjkgQSAxLjAwMDEgMS4wMDAxIDAgMSAwIDQuMjkyOTY4OCAxNC43MDcwMzEgTCA4LjI5Mjk2ODggMTguNzA3MDMxIEEgMS4wMDAxIDEuMDAwMSAwIDAgMCA5LjcwNzAzMTIgMTguNzA3MDMxIEwgMjAuNzA3MDMxIDcuNzA3MDMxMiBBIDEuMDAwMSAxLjAwMDEgMCAwIDAgMTkuOTgwNDY5IDUuOTkwMjM0NCB6Ij48L3BhdGg+PC9zdmc+");
-	background-position: center center;
 	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: 100%;
 
 	.theme-dark & {
@@ -166,17 +166,17 @@ input[type="checkbox"]:checked:before {
 	}
 }
 
+// Copy Button in the Code blocks
 button.copy-code-button,
 .markdown-rendered button.copy-code-button {
-	// Copy Button in the Code blocks
 	top: 0;
 	right: 0;
-	margin: 3px;
 	padding: 2px;
-	border: var(--border-size) solid transparent;
+	margin: 3px;
+	font-variation-settings: "wght" 600;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
-	font-variation-settings: "wght" 600;
+	border: var(--border-size) solid transparent;
 }
 
 .code-block-flair {
@@ -186,10 +186,10 @@ button.copy-code-button,
 
 /* #region  [Editor] Preview Front Matter */
 .frontmatter-container {
+	padding: 0;
 	color: var(--text-muted);
-	border-radius: var(--border-radius-small);
 	border: 1px solid var(--table-border-color);
-	padding: 0px;
+	border-radius: var(--border-radius-small);
 
 	.theme-light & {
 		background-color: var(--background-primary-alt);
@@ -199,40 +199,40 @@ button.copy-code-button,
 		background-color: var(--background-secondary);
 	}
 
-	&.is-collapsed .frontmatter-container-header {
-		margin: 0px;
-	}
-
 	.frontmatter-container-header {
+		padding: 8px 8px 8px 12px;
+		margin: 0;
 		border-bottom: 1px solid var(--table-border-color);
 		border-radius: var(--border-radius-small);
-		padding: 8px 8px 8px 12px;
-		margin: 0px;
+	}
+
+	&.is-collapsed .frontmatter-container-header {
+		margin: 0;
 	}
 
 	.frontmatter-section {
-		margin: 0px;
 		padding: 4px 12px;
+		margin: 0;
 	}
 
 	.frontmatter-section-label {
 		display: flex;
-		color: var(--text-normal);
-		justify-content: center;
-		align-content: center;
 		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		color: var(--text-normal);
 		text-align: center;
 	}
 
 	.tag,
 	.frontmatter-alias {
-		border-radius: var(--border-radius-small);
-		color: var(--text-normal);
-		font-size: 0.9em;
 		padding: 2px 8px;
 		margin: 2px 4px;
+		font-size: 0.9em;
 		line-height: 19px;
+		color: var(--text-normal);
 		border: unset;
+		border-radius: var(--border-radius-small);
 
 		.theme-light & {
 			background-color: var(--background-secondary-alt);
@@ -253,17 +253,17 @@ button.copy-code-button,
 /* #region  [Editor] Preview LT */
 .theme-light {
 	.markdown-preview-view blockquote {
-		border: 1px solid var(--table-border-color);
 		background-color: var(--background-primary-alt);
+		border: 1px solid var(--table-border-color);
 		border-left-width: 5px;
 	}
 
 	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-		border: 1px solid var(--table-border-color);
-		background-color: var(--background-primary-alt);
-		border-left-width: 5px;
 		padding: 10px 20px !important;
-		margin: 0px 30px !important;
+		margin: 0 30px !important;
+		background-color: var(--background-primary-alt);
+		border: 1px solid var(--table-border-color);
+		border-left-width: 5px;
 	}
 
 	.markdown-preview-view hr {
@@ -272,14 +272,19 @@ button.copy-code-button,
 
 	.markdown-preview-view code,
 	.markdown-preview-view kbd {
+		padding: 2px 4px;
 		color: var(--color-red-text);
 		background-color: var(--background-primary-alt);
 		border-radius: var(--border-radius-small);
-		padding: 2px 4px;
 	}
 
 	.markdown-preview-view pre > code {
 		padding: unset;
+	}
+
+	code[class*="language-"],
+	pre[class*="language-"] {
+		color: var(--text-normal);
 	}
 
 	.markdown-preview-view pre,
@@ -288,13 +293,8 @@ button.copy-code-button,
 	.markdown-preview-view .file-embed {
 		color: var(--interactive-accent-text);
 		background: var(--background-primary-alt);
-		border-radius: var(--border-radius-small);
 		border: 1px solid var(--table-border-color);
-	}
-
-	code[class*="language-"],
-	pre[class*="language-"] {
-		color: var(--text-normal);
+		border-radius: var(--border-radius-small);
 	}
 
 	.token.operator,
@@ -310,17 +310,17 @@ button.copy-code-button,
 /* #region  [Editor] Preview DT */
 .theme-dark {
 	.markdown-preview-view blockquote {
-		border: 1px solid var(--table-border-color);
 		background-color: var(--background-secondary-alt);
+		border: 1px solid var(--table-border-color);
 		border-left-width: 5px;
 	}
 
 	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-		border: 1px solid var(--table-border-color);
-		background-color: var(--background-secondary-alt);
-		border-left-width: 5px;
 		padding: 10px 20px !important;
-		margin: 0px 30px !important;
+		margin: 0 30px !important;
+		background-color: var(--background-secondary-alt);
+		border: 1px solid var(--table-border-color);
+		border-left-width: 5px;
 	}
 
 	.markdown-preview-view hr {
@@ -329,10 +329,10 @@ button.copy-code-button,
 
 	.markdown-preview-view code,
 	.markdown-preview-view kbd {
+		padding: 2px 4px;
 		color: var(--color-red-text);
 		background-color: var(--background-secondary-alt);
 		border-radius: var(--border-radius-small);
-		padding: 2px 4px;
 	}
 
 	.markdown-preview-view pre,
@@ -341,8 +341,8 @@ button.copy-code-button,
 	.markdown-preview-view .file-embed {
 		color: var(--interactive-accent-base);
 		background: var(--background-secondary-alt);
-		border-radius: var(--border-radius-small);
 		border: 1px solid var(--table-border-color);
+		border-radius: var(--border-radius-small);
 	}
 
 	code[class*="language-"],
