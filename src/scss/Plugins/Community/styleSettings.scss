@@ -333,7 +333,7 @@ div.style-settings-heading {
 }
 
 .style-settings-container .setting-item {
-	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-dark-"], [data-id*="color-accent-l-text-"]) {
+	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-tint-"], [data-id*="color-accent-l-text-"]) {
 		.setting-item-control::before {
 			width: 1.5em;
 			height: 1.5em;
@@ -389,7 +389,7 @@ div.style-settings-heading {
 		}
 	}
 
-	&:is([data-id^="color-accent-l-base-lt"], [data-id^="color-accent-l-dark-lt"], [data-id^="color-accent-l-text-lt"]) input.slider {
+	&:is([data-id^="color-accent-l-base-lt"], [data-id^="color-accent-l-tint-lt"], [data-id^="color-accent-l-text-lt"]) input.slider {
 		background: var(--lightness-background-lt);
 	}
 
@@ -397,7 +397,7 @@ div.style-settings-heading {
 		background-color: var(--color-accent-base-lt);
 	}
 
-	&[data-id^="color-accent-l-dark-lt"] .setting-item-control::before {
+	&[data-id^="color-accent-l-tint-lt"] .setting-item-control::before {
 		background-color: var(--color-accent-tint-lt);
 	}
 
@@ -425,7 +425,7 @@ div.style-settings-heading {
 		}
 	}
 
-	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-dark-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
+	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-tint-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
 		background: var(--lightness-background-dt);
 	}
 
@@ -433,7 +433,7 @@ div.style-settings-heading {
 		background-color: var(--color-accent-base-dt);
 	}
 
-	&[data-id^="color-accent-l-dark-dt"] .setting-item-control::before {
+	&[data-id^="color-accent-l-tint-dt"] .setting-item-control::before {
 		background-color: var(--color-accent-tint-dt);
 	}
 

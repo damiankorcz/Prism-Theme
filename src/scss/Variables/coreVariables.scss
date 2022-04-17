@@ -42,6 +42,14 @@
 	--h5-font-size: 1.2em;
 	--h6-font-size: 1em;
 
+	// Header Margin Size
+	--h1-margin-size: 0;
+	--h2-margin-size: 0;
+	--h3-margin-size: 0;
+	--h4-margin-size: 0;
+	--h5-margin-size: 0;
+	--h6-margin-size: 0;
+
 	// Background Options - Light Theme
 	--background-image-lt: url('');
 	--background-blur-lt: 0;
@@ -117,52 +125,6 @@ body {
 	--font-monospace-theme: 'Source Code Pro', monospace;
 }
 
-.theme-light {
-	--window-border: var(--background-secondary-alt);
-	--page-background-color: var(--background-primary);
-	--table-border-color: var(--background-secondary-alt);
-	--text-selection: var(--background-secondary);
-
-	&.pt-highlight-text-light-lt {
-		--highlight-text-normal: var(--background-primary);
-	}
-
-	&.pt-highlight-text-dark-lt {
-		--highlight-text-normal: var(--text-normal);
-	}
-
-	&.pt-highlight-text-accent-lt {
-		--highlight-text-normal: var(--interactive-accent-text);
-	}
-
-	&.pt-highlight-text-custom-lt {
-		--highlight-text-normal: var(--highlight-text-accent-custom-lt);
-	}
-}
-
-.theme-dark {
-	--window-border: var(--background-primary);
-	--page-background-color: var(--background-secondary);
-	--table-border-color: var(--background-primary-alt);
-	--text-selection: var(--background-primary);
-
-	&.pt-highlight-text-light-dt {
-		--highlight-text-normal: var(--text-normal);
-	}
-
-	&.pt-highlight-text-dark-dt {
-		--highlight-text-normal: var(--background-primary);
-	}
-
-	&.pt-highlight-text-accent-dt {
-		--highlight-text-normal: var(--interactive-accent-text);
-	}
-
-	&.pt-highlight-text-custom-dt {
-		--highlight-text-normal: var(--highlight-text-accent-custom-dt);
-	}
-}
-
 .theme-light,
 .theme-dark {
 	// Base Colors
@@ -202,7 +164,7 @@ body {
 	--color-grey-text: hsl(var(--color-grey-base-h), var(--color-grey-text-s), var(--color-grey-text-l));
 
 	--color-accent-base-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-base-lt));
-	--color-accent-tint-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-dark-lt));
+	--color-accent-tint-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-tint-lt));
 	--color-accent-text-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-text-lt));
 
 	--hue-background-lt: linear-gradient(to right,
@@ -231,7 +193,7 @@ body {
 	hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 100%));
 
 	--color-accent-base-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-base-dt));
-	--color-accent-tint-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-dark-dt));
+	--color-accent-tint-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-tint-dt));
 	--color-accent-text-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-text-dt));
 
 	--hue-background-dt: linear-gradient(to right,
@@ -263,12 +225,71 @@ body {
 	--background-modifier-error: var(--color-red-tint);
 	--background-modifier-border: var(--table-border-color);
 	--scroll-button-background-color: var(--background-secondary);
-	--scroll-bar-thumb: var(--background-primary);
 	--highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
 	--highlight-text-accent-custom-dt: hsl(0, 0%, 0%);
 
+	--color-accent-h-lt: 0;
+	--color-accent-s-lt: 60%;
+	--color-accent-l-base-lt: 82%;
+	--color-accent-l-tint-lt: 67%;
+	--color-accent-l-text-lt: 42%;
+
+	--color-accent-h-dt: 0;
+	--color-accent-s-dt: 50%;
+	--color-accent-l-base-dt: 20%;
+	--color-accent-l-tint-dt: 40%;
+	--color-accent-l-text-dt: 65%;
+
 	&.pt-disable-blur {
 		--background-secondary-blur: var(--background-secondary);
+	}
+}
+
+.theme-light {
+	--window-border: var(--background-secondary-alt);
+	--page-background-color: var(--background-primary);
+	--table-border-color: var(--background-secondary-alt);
+	--text-selection: var(--background-secondary);
+	--scroll-bar-thumb: var(--background-primary);
+
+	&.pt-highlight-text-light-lt {
+		--highlight-text-normal: var(--background-primary);
+	}
+
+	&.pt-highlight-text-dark-lt {
+		--highlight-text-normal: var(--text-normal);
+	}
+
+	&.pt-highlight-text-accent-lt {
+		--highlight-text-normal: var(--interactive-accent-text);
+	}
+
+	&.pt-highlight-text-custom-lt {
+		--highlight-text-normal: var(--highlight-text-accent-custom-lt);
+	}
+}
+
+.theme-dark {
+	--window-border: var(--background-primary);
+	--page-background-color: var(--background-secondary);
+	--table-border-color: var(--background-primary-alt);
+	--text-selection: var(--background-primary);
+	--scroll-bar-thumb: var(--background-primary-alt);
+
+	&.pt-highlight-text-light-dt {
+		--highlight-text-normal: var(--text-normal);
+	}
+
+	&.pt-highlight-text-dark-dt {
+		--highlight-text-normal: var(--background-primary);
+	}
+
+	&.pt-highlight-text-accent-dt {
+		--highlight-text-normal: var(--interactive-accent-text);
+	}
+
+	&.pt-highlight-text-custom-dt {
+		--highlight-text-normal: var(--highlight-text-accent-custom-dt);
 	}
 }
 /* #endregion */

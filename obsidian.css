@@ -75,6 +75,12 @@
   --h4-font-size: 1.4em;
   --h5-font-size: 1.2em;
   --h6-font-size: 1em;
+  --h1-margin-size: 0;
+  --h2-margin-size: 0;
+  --h3-margin-size: 0;
+  --h4-margin-size: 0;
+  --h5-margin-size: 0;
+  --h6-margin-size: 0;
   --background-image-lt: url("");
   --background-blur-lt: 0;
   --background-repeat-lt: no-repeat;
@@ -117,42 +123,6 @@ body {
   --font-text-theme: "Source Sans 3", sans-serif;
   --font-monospace-theme: "Source Code Pro", monospace;
 }
-.theme-light {
-  --window-border: var(--background-secondary-alt);
-  --page-background-color: var(--background-primary);
-  --table-border-color: var(--background-secondary-alt);
-  --text-selection: var(--background-secondary);
-}
-.theme-light.pt-highlight-text-light-lt {
-  --highlight-text-normal: var(--background-primary);
-}
-.theme-light.pt-highlight-text-dark-lt {
-  --highlight-text-normal: var(--text-normal);
-}
-.theme-light.pt-highlight-text-accent-lt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-light.pt-highlight-text-custom-lt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
-}
-.theme-dark {
-  --window-border: var(--background-primary);
-  --page-background-color: var(--background-secondary);
-  --table-border-color: var(--background-primary-alt);
-  --text-selection: var(--background-primary);
-}
-.theme-dark.pt-highlight-text-light-dt {
-  --highlight-text-normal: var(--text-normal);
-}
-.theme-dark.pt-highlight-text-dark-dt {
-  --highlight-text-normal: var(--background-primary);
-}
-.theme-dark.pt-highlight-text-accent-dt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-dark.pt-highlight-text-custom-dt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
-}
 .theme-light,
 .theme-dark {
   --color-red-base: hsl(var(--color-red-base-h), var(--color-red-base-s), var(--color-red-base-l));
@@ -186,7 +156,7 @@ body {
   --color-pink-text: hsl(var(--color-pink-base-h), var(--color-pink-text-s), var(--color-pink-text-l));
   --color-grey-text: hsl(var(--color-grey-base-h), var(--color-grey-text-s), var(--color-grey-text-l));
   --color-accent-base-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-base-lt));
-  --color-accent-tint-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-dark-lt));
+  --color-accent-tint-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-tint-lt));
   --color-accent-text-lt: hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), var(--color-accent-l-text-lt));
   --hue-background-lt: linear-gradient(to right,
   hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)),
@@ -211,7 +181,7 @@ body {
   hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 50%),
   hsl(var(--color-accent-h-lt), var(--color-accent-s-lt), 100%));
   --color-accent-base-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-base-dt));
-  --color-accent-tint-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-dark-dt));
+  --color-accent-tint-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-tint-dt));
   --color-accent-text-dt: hsl(var(--color-accent-h-dt), var(--color-accent-s-dt), var(--color-accent-l-text-dt));
   --hue-background-dt: linear-gradient(to right,
   hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)),
@@ -239,13 +209,60 @@ body {
   --background-modifier-error: var(--color-red-tint);
   --background-modifier-border: var(--table-border-color);
   --scroll-button-background-color: var(--background-secondary);
-  --scroll-bar-thumb: var(--background-primary);
   --highlight-text-accent-custom-lt: hsl(0, 0%, 100%);
   --highlight-text-accent-custom-dt: hsl(0, 0%, 0%);
+  --color-accent-h-lt: 0;
+  --color-accent-s-lt: 60%;
+  --color-accent-l-base-lt: 82%;
+  --color-accent-l-tint-lt: 67%;
+  --color-accent-l-text-lt: 42%;
+  --color-accent-h-dt: 0;
+  --color-accent-s-dt: 50%;
+  --color-accent-l-base-dt: 20%;
+  --color-accent-l-tint-dt: 40%;
+  --color-accent-l-text-dt: 65%;
 }
 .theme-light.pt-disable-blur,
 .theme-dark.pt-disable-blur {
   --background-secondary-blur: var(--background-secondary);
+}
+.theme-light {
+  --window-border: var(--background-secondary-alt);
+  --page-background-color: var(--background-primary);
+  --table-border-color: var(--background-secondary-alt);
+  --text-selection: var(--background-secondary);
+  --scroll-bar-thumb: var(--background-primary);
+}
+.theme-light.pt-highlight-text-light-lt {
+  --highlight-text-normal: var(--background-primary);
+}
+.theme-light.pt-highlight-text-dark-lt {
+  --highlight-text-normal: var(--text-normal);
+}
+.theme-light.pt-highlight-text-accent-lt {
+  --highlight-text-normal: var(--interactive-accent-text);
+}
+.theme-light.pt-highlight-text-custom-lt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-lt);
+}
+.theme-dark {
+  --window-border: var(--background-primary);
+  --page-background-color: var(--background-secondary);
+  --table-border-color: var(--background-primary-alt);
+  --text-selection: var(--background-primary);
+  --scroll-bar-thumb: var(--background-primary-alt);
+}
+.theme-dark.pt-highlight-text-light-dt {
+  --highlight-text-normal: var(--text-normal);
+}
+.theme-dark.pt-highlight-text-dark-dt {
+  --highlight-text-normal: var(--background-primary);
+}
+.theme-dark.pt-highlight-text-accent-dt {
+  --highlight-text-normal: var(--interactive-accent-text);
+}
+.theme-dark.pt-highlight-text-custom-dt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 /* #endregion */
 /* #region  [Accent Color Presets] Light Theme */
@@ -523,8 +540,8 @@ body.theme-dark.pt-color-scheme-default-dt {
   --text-normal: hsl(0 0% 83%);
   --text-muted: hsl(0 0% 72%);
   --text-faint: hsl(0 0% 52%);
-  --background-primary: hsl(0 0% 15%);
-  --background-primary-alt: hsl(0 0% 20%);
+  --background-primary: hsl(0 0% 13%);
+  --background-primary-alt: hsl(0 0% 18%);
   --background-secondary: hsl(0 0% 8%);
   --background-secondary-blur: hsl(0 0% 8% / 75%);
   --background-secondary-alt: hsl(0 0% 5.5%);
@@ -1416,7 +1433,9 @@ button.copy-code-button {
 .theme-light.pt-accent-style-border-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type.mod-active .view-header-title-container::after {
   background: linear-gradient(to right, transparent, var(--background-primary));
 }
-.theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::before, .theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::after, .theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::before, .theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::after {
+.theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::before, .theme-dark.pt-accent-style-border-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::after,
+.theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::before,
+.theme-light.pt-accent-style-border-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > .view-header > div.view-header-title-container::after {
   background: linear-gradient(to bottom, transparent, var(--background-primary));
 }
 .theme-dark.pt-accent-style-border-dt .search-result-container.node-insert-event .tree-item-self:hover .tree-item-flair,
@@ -5863,6 +5882,9 @@ div.graph-controls.is-close {
 .theme-light.pt-graph-note-custom-lt .graph-view.color-fill {
   color: var(--color-custom-graph-note-lt);
 }
+.theme-light.pt-graph-note-focused-accent-lt .graph-view.color-fill-focused {
+  color: var(--interactive-accent-tint);
+}
 .theme-light.pt-graph-note-focused-custom-lt .graph-view.color-fill-focused {
   color: var(--color-custom-graph-fill-focused-lt);
 }
@@ -5911,10 +5933,10 @@ div.graph-controls.is-close {
 .theme-light.pt-graph-note-purple-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-purple-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-purple-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-purple-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-purple-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-purple-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-purple-lt .graph-view.color-line-highlight {
   color: var(--color-purple-tint);
 }
-.theme-light.pt-graph-note-pink-lt .graph-view.color-fill, .theme-light.pt-graph-focused-note-pink-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-pink-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-pink-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-pink-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-pink-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-pink-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-pink-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-pink-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-pink-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-pink-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-pink-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-pink-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-pink-lt .graph-view.color-line-highlight {
   color: var(--color-pink-tint);
 }
-.theme-light.pt-graph-note-grey-lt .graph-view.color-fill, .theme-light.pt-graph-focused-note-grey-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-grey-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-grey-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-grey-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-grey-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-grey-lt .graph-view.color-line-highlight {
+.theme-light.pt-graph-note-grey-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-grey-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-grey-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-grey-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-grey-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-grey-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-grey-lt .graph-view.color-line-highlight {
   color: var(--color-grey-tint);
 }
 /* #endregion */
@@ -5943,6 +5965,9 @@ div.graph-controls.is-close {
 .theme-dark.pt-graph-note-custom-dt .graph-view.color-fill {
   color: var(--color-custom-graph-note-dt);
 }
+.theme-dark.pt-graph-note-focused-accent-dt .graph-view.color-fill-focused {
+  color: var(--interactive-accent-tint);
+}
 .theme-dark.pt-graph-note-focused-custom-dt .graph-view.color-fill-focused {
   color: var(--color-custom-graph-fill-focused-dt);
 }
@@ -5967,34 +5992,34 @@ div.graph-controls.is-close {
 .theme-dark.pt-graph-highlight-line-custom-dt .graph-view.color-line-highlight {
   color: var(--color-custom-graph-highlight-line-dt);
 }
-.theme-dark.pt-graph-note-red-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-red-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-red-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-red-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-red-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-red-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-red-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-red-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-red-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-red-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-red-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-red-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-red-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-red-dt .graph-view.color-line-highlight {
   color: var(--color-red-tint);
 }
-.theme-dark.pt-graph-note-orange-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-orange-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-orange-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-orange-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-orange-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-orange-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-orange-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-orange-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-orange-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-orange-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-orange-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-orange-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-orange-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-orange-dt .graph-view.color-line-highlight {
   color: var(--color-orange-tint);
 }
-.theme-dark.pt-graph-note-yellow-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-yellow-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-yellow-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-yellow-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-yellow-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-yellow-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-yellow-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-yellow-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-yellow-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-yellow-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-yellow-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-yellow-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-yellow-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-yellow-dt .graph-view.color-line-highlight {
   color: var(--color-yellow-tint);
 }
-.theme-dark.pt-graph-note-green-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-green-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-green-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-green-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-green-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-green-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-green-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-green-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-green-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-green-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-green-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-green-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-green-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-green-dt .graph-view.color-line-highlight {
   color: var(--color-green-tint);
 }
-.theme-dark.pt-graph-note-mint-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-mint-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-mint-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-mint-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-mint-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-mint-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-mint-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-mint-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-mint-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-mint-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-mint-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-mint-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-mint-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-mint-dt .graph-view.color-line-highlight {
   color: var(--color-mint-tint);
 }
-.theme-dark.pt-graph-note-aqua-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-aqua-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-aqua-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-aqua-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-aqua-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-aqua-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-aqua-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-aqua-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-aqua-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-aqua-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-aqua-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-aqua-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-aqua-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-aqua-dt .graph-view.color-line-highlight {
   color: var(--color-aqua-tint);
 }
-.theme-dark.pt-graph-note-blue-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-blue-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-blue-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-blue-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-blue-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-blue-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-blue-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-blue-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-blue-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-blue-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-blue-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-blue-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-blue-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-blue-dt .graph-view.color-line-highlight {
   color: var(--color-blue-tint);
 }
-.theme-dark.pt-graph-note-purple-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-purple-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-purple-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-purple-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-purple-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-purple-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-purple-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-purple-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-purple-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-purple-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-purple-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-purple-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-purple-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-purple-dt .graph-view.color-line-highlight {
   color: var(--color-purple-tint);
 }
-.theme-dark.pt-graph-note-pink-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-pink-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-pink-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-pink-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-pink-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-pink-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-pink-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-pink-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-pink-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-pink-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-pink-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-pink-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-pink-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-pink-dt .graph-view.color-line-highlight {
   color: var(--color-pink-tint);
 }
-.theme-dark.pt-graph-note-grey-dt .graph-view.color-fill, .theme-dark.pt-graph-focused-note-grey-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-grey-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-grey-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-grey-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
+.theme-dark.pt-graph-note-grey-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-grey-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-grey-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-grey-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-grey-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
   color: var(--color-grey-tint);
 }
 /* #endregion */
@@ -8326,7 +8351,7 @@ div.style-settings-heading {
 .theme-dark div.style-settings-container select.dropdown:hover {
   background-color: var(--background-secondary);
 }
-.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) .setting-item-control::before {
+.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-tint-], [data-id*=color-accent-l-text-]) .setting-item-control::before {
   width: 1.5em;
   height: 1.5em;
   margin-right: 8px;
@@ -8334,21 +8359,21 @@ div.style-settings-heading {
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius-small);
 }
-.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider {
+.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-tint-], [data-id*=color-accent-l-text-]) input.slider {
   width: 150px;
   height: 1.5em;
 }
-.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
+.style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-tint-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
   width: 4px;
   height: 1.75em;
   margin-top: -0.45em;
   border: 1px solid var(--window-border);
   -webkit-appearance: none;
 }
-.theme-light .style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
+.theme-light .style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-tint-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
   background-color: var(--background-primary);
 }
-.theme-dark .style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-dark-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
+.theme-dark .style-settings-container .setting-item:is([data-id*=color-accent-h-], [data-id*=color-accent-s-], [data-id*=color-accent-l-base-], [data-id*=color-accent-l-tint-], [data-id*=color-accent-l-text-]) input.slider::-webkit-slider-thumb {
   background-color: var(--text-normal);
 }
 .style-settings-container .setting-item:is([data-id^=color-accent-h-lt]) input.slider {
@@ -8363,13 +8388,13 @@ div.style-settings-heading {
 .style-settings-container .setting-item:is([data-id^=color-accent-s-lt]) .setting-item-control::before {
   background-color: var(--color-accent-base-lt);
 }
-.style-settings-container .setting-item:is([data-id^=color-accent-l-base-lt], [data-id^=color-accent-l-dark-lt], [data-id^=color-accent-l-text-lt]) input.slider {
+.style-settings-container .setting-item:is([data-id^=color-accent-l-base-lt], [data-id^=color-accent-l-tint-lt], [data-id^=color-accent-l-text-lt]) input.slider {
   background: var(--lightness-background-lt);
 }
 .style-settings-container .setting-item[data-id^=color-accent-l-base-lt] .setting-item-control::before {
   background-color: var(--color-accent-base-lt);
 }
-.style-settings-container .setting-item[data-id^=color-accent-l-dark-lt] .setting-item-control::before {
+.style-settings-container .setting-item[data-id^=color-accent-l-tint-lt] .setting-item-control::before {
   background-color: var(--color-accent-tint-lt);
 }
 .style-settings-container .setting-item[data-id^=color-accent-l-text-lt] .setting-item-control::before {
@@ -8387,13 +8412,13 @@ div.style-settings-heading {
 .style-settings-container .setting-item:is([data-id^=color-accent-s-dt]) .setting-item-control::before {
   background-color: var(--color-accent-base-dt);
 }
-.style-settings-container .setting-item:is([data-id^=color-accent-l-base-dt], [data-id^=color-accent-l-dark-dt], [data-id^=color-accent-l-text-dt]) input.slider {
+.style-settings-container .setting-item:is([data-id^=color-accent-l-base-dt], [data-id^=color-accent-l-tint-dt], [data-id^=color-accent-l-text-dt]) input.slider {
   background: var(--lightness-background-dt);
 }
 .style-settings-container .setting-item[data-id^=color-accent-l-base-dt] .setting-item-control::before {
   background-color: var(--color-accent-base-dt);
 }
-.style-settings-container .setting-item[data-id^=color-accent-l-dark-dt] .setting-item-control::before {
+.style-settings-container .setting-item[data-id^=color-accent-l-tint-dt] .setting-item-control::before {
   background-color: var(--color-accent-tint-dt);
 }
 .style-settings-container .setting-item[data-id^=color-accent-l-text-dt] .setting-item-control::before {
@@ -9362,7 +9387,7 @@ settings:
                 label: Periwinkle
                 value: pt-color-scheme-periwinkle-lt
             -
-                label: Pistachio 
+                label: Pistachio
                 value: pt-color-scheme-pistachio-lt
     -
         id: accent-style-lt
@@ -9375,13 +9400,13 @@ settings:
             -
                 label: Plain
                 value: pt-accent-style-text-lt
-            - 
+            -
                 label: Border
                 value: pt-accent-style-border-lt
-            - 
+            -
                 label: Filled
                 value: pt-accent-style-filled-lt
-            - 
+            -
                 label: Border & Filled
                 value: pt-accent-style-borderandfilled-lt
     -
@@ -9431,18 +9456,18 @@ settings:
         description: Adjusts the color used by the text in the Light Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
-        default: pt-highlight-text-accent-lt 
+        default: pt-highlight-text-accent-lt
         options:
-            - 
+            -
                 label: Custom
                 value: pt-highlight-text-custom-lt
             -
                 label: Dark
-                value: pt-highlight-text-dark-lt 
-            - 
+                value: pt-highlight-text-dark-lt
+            -
                 label: Light
-                value: pt-highlight-text-light-lt 
-            - 
+                value: pt-highlight-text-light-lt
+            -
                 label: Accent Color
                 value: pt-highlight-text-accent-lt
     -
@@ -9490,9 +9515,9 @@ settings:
         max: 100
         step: 1
     -
-        id: color-accent-l-dark-lt
-        title: Custom Accent Secondary Color Lightness
-        description: Secondary Color Lightness should ideally be between Base and Text.
+        id: color-accent-l-tint-lt
+        title: Custom Accent Tint Color Lightness
+        description: Tint Color Lightness should ideally be between Base and Text.
         type: variable-number-slider
         format: '%'
         default: 67
@@ -9545,13 +9570,13 @@ settings:
             -
                 label: Plain
                 value: pt-accent-style-text-dt
-            - 
+            -
                 label: Border
                 value: pt-accent-style-border-dt
-            - 
+            -
                 label: Filled
                 value: pt-accent-style-filled-dt
-            - 
+            -
                 label: Border & Filled
                 value: pt-accent-style-borderandfilled-dt
     -
@@ -9601,18 +9626,18 @@ settings:
         description: Adjusts the color used by the text in the Dark Theme Accented elements of the UI.
         type: class-select
         allowEmpty: false
-        default: pt-highlight-text-accent-dt 
+        default: pt-highlight-text-accent-dt
         options:
-            - 
+            -
                 label: Custom
                 value: pt-highlight-text-custom-dt
             -
                 label: Dark
-                value: pt-highlight-text-dark-dt 
-            - 
+                value: pt-highlight-text-dark-dt
+            -
                 label: Light
-                value: pt-highlight-text-light-dt 
-            - 
+                value: pt-highlight-text-light-dt
+            -
                 label: Accent Color
                 value: pt-highlight-text-accent-dt
     -
@@ -9660,9 +9685,9 @@ settings:
         max: 100
         step: 1
     -
-        id: color-accent-l-dark-dt
-        title: Custom Accent Secondary Color Lightness
-        description: Secondary Color Lightness should ideally be between Base and Text.
+        id: color-accent-l-tint-dt
+        title: Custom Accent Tint Color Lightness
+        description: Tint Color Lightness should ideally be between Base and Text.
         type: variable-number-slider
         format: '%'
         default: 40
@@ -9703,7 +9728,7 @@ settings:
             -
                 label: Solid Color
                 value: pt-background-color-lt
-            - 
+            -
                 label: Image
                 value: pt-background-image-lt
     -
@@ -9754,7 +9779,7 @@ settings:
         description: Define the size of the Light Theme Background Image. The image can be left to its natural size, stretched, or constrained to fit the available space.
         type: variable-text
         default: cover
-    -     
+    -
         id: background-image-options-dt
         title: Dark Theme
         type: heading
@@ -9771,7 +9796,7 @@ settings:
             -
                 label: Solid Color
                 value: pt-background-color-dt
-            - 
+            -
                 label: Image
                 value: pt-background-image-dt
     -
@@ -9788,7 +9813,7 @@ settings:
         description: Customise the Background Image for the Dark Theme. Insert the link to an image between the brackets in the url().Make sure you selected 'Image' in Dark Theme Background Type for this to work.
         type: variable-text
         default: url()
-    -   
+    -
         id: background-blur-dt
         title: Background Blur (px)
         description: Select the amount of blur applied to the Dark Theme Background Image.
@@ -9825,7 +9850,7 @@ settings:
     -
         id: graph-view-colors
         title: Graph Color Customisation
-        description: Define the colors used in the Graph View. In order to see changes you need to refresh the Graph View (restart Obsidian or toggle the Light/Dark theme). 
+        description: Define the colors used in the Graph View. In order to see changes you need to refresh the Graph View (restart Obsidian or toggle the Light/Dark theme).
         type: heading
         level: 2
         collapsed: true
@@ -9897,7 +9922,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-note-focused-color-lt
         title: Graph Note Focused Color
@@ -9963,7 +9988,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-tag-color-lt
         title: Graph Tag Color
@@ -10026,7 +10051,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-attachment-color-lt
         title: Graph Attachment Color
@@ -10089,7 +10114,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-unresolved-color-lt
         title: Graph Unresolved Color
@@ -10152,7 +10177,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-highlight-color-lt
         title: Graph Highlight Color
@@ -10218,7 +10243,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-highlight-line-color-lt
         title: Graph Highlight Line Color
@@ -10284,7 +10309,7 @@ settings:
         default: 0.4
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-view-dark-theme
         title: Dark Theme
@@ -10353,7 +10378,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-note-focused-color-dt
         title: Graph Note Focused Color
@@ -10419,7 +10444,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-tag-color-dt
         title: Graph Tag Color
@@ -10482,7 +10507,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-attachment-color-dt
         title: Graph Attachment Color
@@ -10545,7 +10570,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-unresolved-color-dt
         title: Graph Unresolved Color
@@ -10608,7 +10633,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-highlight-color-dt
         title: Graph Highlight Color
@@ -10674,7 +10699,7 @@ settings:
         default: 1
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: graph-highlight-line-color-lt
         title: Graph Highlight Line Color
@@ -10740,7 +10765,7 @@ settings:
         default: 0.4
         min: 0
         max: 1
-        step: 0.05 
+        step: 0.05
     -
         id: editor
         title: Editor
@@ -10900,13 +10925,13 @@ settings:
             -
                 label: None
                 value: pt-highlight-style-none-lt
-            - 
+            -
                 label: Border
                 value: pt-highlight-style-border-lt
-            - 
+            -
                 label: Filled
                 value: pt-highlight-style-filled-lt
-            - 
+            -
                 label: Border & Filled
                 value: pt-highlight-style-borderandfilled-lt
     -
@@ -10919,7 +10944,7 @@ settings:
             -
                 label: None
                 value: pt-highlight-text-none-lt
-            - 
+            -
                 label: Color
                 value: pt-highlight-text-color-lt
     -
@@ -10938,13 +10963,13 @@ settings:
             -
                 label: None
                 value: pt-highlight-style-none-dt
-            - 
+            -
                 label: Border
                 value: pt-highlight-style-border-dt
-            - 
+            -
                 label: Filled
                 value: pt-highlight-style-filled-dt
-            - 
+            -
                 label: Border & Filled
                 value: pt-highlight-style-borderandfilled-dt
     -
@@ -10957,7 +10982,7 @@ settings:
             -
                 label: None
                 value: pt-highlight-text-none-dt
-            - 
+            -
                 label: Color
                 value: pt-highlight-text-color-dt
     -
@@ -10974,7 +10999,7 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    - 
+    -
         id: window-gap
         title: Window Gap (px)
         description: The size of the space between the Workspace Containers.
@@ -10984,7 +11009,7 @@ settings:
         level: 2
         min: 1
         max: 20
-        step: 1 
+        step: 1
     -
         id: border-radius
         title: Border Radius (px)
@@ -10995,7 +11020,7 @@ settings:
         level: 2
         min: 0
         max: 20
-        step: 1 
+        step: 1
     -
         id: border-radius-small
         title: Border Radius Small (px)
@@ -11006,7 +11031,7 @@ settings:
         level: 2
         min: 0
         max: 20
-        step: 1 
+        step: 1
     -
         id: sidebar-elements
         title: Sidebar Elements
@@ -11021,7 +11046,7 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    - 
+    -
         id: left-sidebar-tab-label-alignment
         title: Left Sidebar Tab Label Alignment
         description: Horizontal Alignment of the Tab Labels in the Left Sidebar.
@@ -11029,13 +11054,13 @@ settings:
         allowEmpty: false
         default: pt-tab-label-left-sidebar-left
         options:
-            - 
+            -
                 label: Left
                 value: pt-tab-label-left-sidebar-left
-            - 
+            -
                 label: Center
                 value: pt-tab-label-left-sidebar-center
-            - 
+            -
                 label: Right
                 value: pt-tab-label-left-sidebar-right
     -
@@ -11046,13 +11071,13 @@ settings:
         allowEmpty: false
         default: pt-tab-label-right-sidebar-left
         options:
-            - 
+            -
                 label: Left
                 value: pt-tab-label-right-sidebar-left
-            - 
+            -
                 label: Center
                 value: pt-tab-label-right-sidebar-center
-            - 
+            -
                 label: Right
                 value: pt-tab-label-right-sidebar-right
     -
@@ -11062,7 +11087,7 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    - 
+    -
         id: nav-header-left-sidebar-position
         title: Left Sidebar Nav Header Position
         description: Vertical Position of the Nav Header in the Left Sidebar Workspace Leaf.
@@ -11070,10 +11095,10 @@ settings:
         allowEmpty: false
         default: pt-nav-header-left-sidebar-position-bottom
         options:
-            - 
+            -
                 label: Top
                 value: pt-nav-header-left-sidebar-position-top
-            - 
+            -
                 label: Bottom
                 value: pt-nav-header-left-sidebar-position-bottom
     -
@@ -11084,13 +11109,13 @@ settings:
         allowEmpty: false
         default: pt-nav-header-left-sidebar-align-center
         options:
-            - 
+            -
                 label: Left
                 value: pt-nav-header-left-sidebar-align-left
-            - 
+            -
                 label: Center
                 value: pt-nav-header-left-sidebar-align-center
-            - 
+            -
                 label: Right
                 value: pt-nav-header-left-sidebar-align-right
     -
@@ -11101,10 +11126,10 @@ settings:
         allowEmpty: false
         default: pt-nav-header-right-sidebar-position-bottom
         options:
-            - 
+            -
                 label: Top
                 value: pt-nav-header-right-sidebar-position-top
-            - 
+            -
                 label: Bottom
                 value: pt-nav-header-right-sidebar-position-bottom
     -
@@ -11115,29 +11140,29 @@ settings:
         allowEmpty: false
         default: pt-nav-header-right-sidebar-align-center
         options:
-            - 
+            -
                 label: Left
                 value: pt-nav-header-right-sidebar-align-left
-            - 
+            -
                 label: Center
                 value: pt-nav-header-right-sidebar-align-center
-            - 
+            -
                 label: Right
-                value: pt-nav-header-right-sidebar-align-right     
+                value: pt-nav-header-right-sidebar-align-right
     -
         id: file-explorer
         title: File Explorer
         description: Customisation options for the File Explorer module.
         type: heading
         level: 3
-        collapsed: true 
-    - 
+        collapsed: true
+    -
         id: pt-file-explorer-vertical-lines
         title: File Explorer Vertical Lines (Relationship Lines)
         description: Toggles Vertical Lines (Relationship Lines) in the File Explorer to help visualise the folder and file depth.
         default: true
         type: class-toggle
-    - 
+    -
         id: vertical-lines-width-file-explorer
         title: File Explorer Vertical Lines Width (px)
         type: variable-number-slider
@@ -11145,7 +11170,7 @@ settings:
         default: 2
         min: 1
         max: 5
-        step: 1 
+        step: 1
     -
         id: custom-vault-banner
         title: Custom Vault Banner
@@ -11167,13 +11192,13 @@ settings:
         allowEmpty: false
         default: pt-custom-vault-banner-justify-content-center
         options:
-            - 
+            -
                 label: Left
                 value: pt-custom-vault-banner-justify-content-left
-            - 
+            -
                 label: Center
                 value: pt-custom-vault-banner-justify-content-center
-            - 
+            -
                 label: Right
                 value: pt-custom-vault-banner-justify-content-right
     -
@@ -11184,13 +11209,13 @@ settings:
         allowEmpty: false
         default: pt-custom-vault-banner-order-ltr
         options:
-            - 
+            -
                 label: Left to Right
                 value: pt-custom-vault-banner-order-ltr
-            - 
+            -
                 label: Right to Left
                 value: pt-custom-vault-banner-order-rtl
-    -  
+    -
         id: pt-custom-vault-banner-sticky
         title: Custom Vault Banner Sticky
         description: Make the Custom Vault Banner stick to the top of the File Explorer.
@@ -11201,21 +11226,21 @@ settings:
         title: Vault Banner Icon (URL)
         description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
         type: variable-text
-        default: url(https://img.icons8.com/dusk/50/000000/safe.png)
+        default: url(https://img.icons8.com/office/40/000000/book-shelf.png)
     -
         id: outline
         title: Outline
         description: Customisation options for the Outline module.
         type: heading
         level: 3
-        collapsed: true 
-    - 
+        collapsed: true
+    -
         id: pt-outline-vertical-lines
         title: Outline Vertical Lines (Relationship Lines)
         description: Toggles Vertical Lines (Relationship Lines) in the Outline to help visualise the Header depth.
         default: true
         type: class-toggle
-    - 
+    -
         id: vertical-lines-width-outline
         title: Outline Vertical Lines Width (px)
         type: variable-number-slider
@@ -11223,15 +11248,15 @@ settings:
         default: 2
         min: 1
         max: 5
-        step: 1 
-    - 
+        step: 1
+    -
         id: titlebar
         title: Titlebar
         description: Settings for changing the style of the Titlebar.
         type: heading
         level: 2
         collapsed: true
-    -          
+    -
         id: titlebar-style
         title: Titlebar Style
         description: Titlebar Style to fit the design of your Operating System Titlebar.
@@ -11241,7 +11266,7 @@ settings:
             -
                 label: Default
                 value: pt-default-titlebar
-            - 
+            -
                 label: Windows 10/11
                 value: pt-windows-titlebar
     -
@@ -11259,7 +11284,7 @@ settings:
     -
         id: titlebar-customisation-lt
         title: Light Theme Customisation
-        description: 
+        description:
         type: heading
         level: 3
         collapsed: true
@@ -11279,7 +11304,7 @@ settings:
             -
                 label: Default
                 value: pt-titlebar-default-lt
-            - 
+            -
                 label: Custom
                 value: pt-titlebar-custom-lt
     -
@@ -11290,20 +11315,20 @@ settings:
         format: hsl
         opacity: false
         default: '#EBECEF'
-    -   
+    -
         id: titlebar-text-color-lt
         title: Titlebar Text/Icons Color
         description: Choose the color used for the Light Theme Titlebar Text/Icons.
         default: pt-titlebar-text-dark-lt
         type: class-select
         options:
-            - 
+            -
                 label: Light
                 value: pt-titlebar-text-light-lt
             -
                 label: Dark
                 value: pt-titlebar-text-dark-lt
-            - 
+            -
                 label: Accent Color
                 value: pt-titlebar-text-accent-lt
     -
@@ -11329,7 +11354,7 @@ settings:
             -
                 label: Default
                 value: pt-titlebar-default-dt
-            - 
+            -
                 label: Custom
                 value: pt-titlebar-custom-dt
     -
@@ -11347,13 +11372,13 @@ settings:
         default: pt-titlebar-text-light-dt
         type: class-select
         options:
-            - 
+            -
                 label: Light
                 value: pt-titlebar-text-light-dt
             -
                 label: Dark
                 value: pt-titlebar-text-dark-dt
-            - 
+            -
                 label: Accent Color
                 value: pt-titlebar-text-accent-dt
     -
@@ -11371,10 +11396,10 @@ settings:
         allowEmpty: false
         default: pt-status-bar-position-bottom
         options:
-            - 
+            -
                 label: Top
                 value: pt-status-bar-position-top
-            - 
+            -
                 label: Bottom
                 value: pt-status-bar-position-bottom
     -
@@ -11385,13 +11410,13 @@ settings:
         allowEmpty: false
         default: pt-status-bar-align-center
         options:
-            - 
+            -
                 label: Left
                 value: pt-status-bar-align-left
-            - 
+            -
                 label: Center
                 value: pt-status-bar-align-center
-            - 
+            -
                 label: Right
                 value: pt-status-bar-align-right
     -
@@ -11402,10 +11427,10 @@ settings:
         allowEmpty: false
         default: pt-status-bar-ltr
         options:
-            - 
+            -
                 label: Left to Right
                 value: pt-status-bar-ltr
-            - 
+            -
                 label: Right to Left
                 value: pt-status-bar-rtl
     -
@@ -11430,7 +11455,7 @@ settings:
             -
                 label: Default
                 value: pt-status-bar-default-lt
-            - 
+            -
                 label: Custom
                 value: pt-status-bar-custom-lt
     -
@@ -11448,13 +11473,13 @@ settings:
         default: pt-status-bar-text-dark-lt
         type: class-select
         options:
-            - 
+            -
                 label: Light
                 value: pt-status-bar-text-light-lt
             -
                 label: Dark
                 value: pt-status-bar-text-dark-lt
-            - 
+            -
                 label: Accent Color
                 value: pt-status-bar-text-accent-lt
     -
@@ -11480,7 +11505,7 @@ settings:
             -
                 label: Default
                 value: pt-status-bar-default-dt
-            - 
+            -
                 label: Custom
                 value: pt-status-bar-custom-dt
     -
@@ -11491,30 +11516,30 @@ settings:
         format: hsl
         opacity: false
         default: '#2B2B2B'
-    - 
+    -
         id: status-bar-text-color-dt
         title: Status Bar Text/Icons Color
         description: Choose the color used for the Dark Theme Status Bar Text/Icons.
         default: pt-status-bar-text-light-dt
         type: class-select
         options:
-            - 
+            -
                 label: Light
                 value: pt-status-bar-text-light-dt
             -
                 label: Dark
                 value: pt-status-bar-text-dark-dt
-            - 
+            -
                 label: Accent Color
                 value: pt-status-bar-text-accent-dt
-    - 
+    -
         id: scrollbar
         title: Scrollbar
         description: Settings for the Scrollbar; Adjust the width, Add Scroll Buttons, etc.
         type: heading
         level: 2
         collapsed: true
-    - 
+    -
         id: scroll-bar-size
         title: Scrollbar Width
         description: Change the width of the Scrollbar (px).
@@ -11529,13 +11554,13 @@ settings:
         description: Adds Scroll Buttons to the ends of the Scrollbar for more accurate scroll adjustment.
         type: class-toggle
         default: false
-    -            
+    -
         id: pt-scroll-hover
         title: Scrollbar Enlarge Width on Hover
         description: Enlarges the Scrollbar when you Hover over scrollable content.
         type: class-toggle
         default: false
-    - 
+    -
         id: scroll-bar-size-hover
         title: Scrollbar Width on Hover
         description: Change the width of the Enlarged scrollbar (px).
@@ -11544,21 +11569,21 @@ settings:
         min: 5
         max: 20
         format: px
-    - 
+    -
         id: plugins
         title: Plugins
         description: Plugin Specific Settings.
         type: heading
         level: 1
         collapsed: true
-    - 
+    -
         id: kanban-settings
         title: Kanban
         description: Mgmeyers' Obsidian Kanban Plugin (https://github.com/mgmeyers/obsidian-kanban).
         type: heading
         level: 2
         collapsed: true
-    - 
+    -
         id: pt-kanban-background-lt
         title: Light Theme Kanban Background
         description: Change the Light Theme background of the Kanban board.
@@ -11566,22 +11591,22 @@ settings:
         allowEmpty: false
         default: pt-kanban-background-grid-plain-lt
         options:
-            - 
+            -
                 label: Solid Color
                 value: pt-kanban-background-default-lt
             -
                 label: Transparent
-                value: pt-kanban-background-transparent-lt 
-            - 
+                value: pt-kanban-background-transparent-lt
+            -
                 label: Dots Plain Color
-                value: pt-kanban-background-dots-plain-lt 
-            - 
+                value: pt-kanban-background-dots-plain-lt
+            -
                 label: Dots Accent Color
                 value: pt-kanban-background-dots-accent-lt
-            - 
+            -
                 label: Grid Plain Color
                 value: pt-kanban-background-grid-plain-lt
-            - 
+            -
                 label: Grid Accent Color
                 value: pt-kanban-background-grid-accent-lt
     -
@@ -11592,22 +11617,22 @@ settings:
         allowEmpty: false
         default: pt-kanban-background-grid-plain-dt
         options:
-            - 
+            -
                 label: Solid Color
                 value: pt-kanban-background-default-dt
             -
                 label: Transparent
-                value: pt-kanban-background-transparent-dt 
-            - 
+                value: pt-kanban-background-transparent-dt
+            -
                 label: Dots Plain Color
-                value: pt-kanban-background-dots-plain-dt 
-            - 
+                value: pt-kanban-background-dots-plain-dt
+            -
                 label: Dots Accent Color
                 value: pt-kanban-background-dots-accent-dt
-            - 
+            -
                 label: Grid Plain Color
                 value: pt-kanban-background-grid-plain-dt
-            - 
+            -
                 label: Grid Accent Color
                 value: pt-kanban-background-grid-accent-dt
     -
@@ -11625,13 +11650,13 @@ settings:
         allowEmpty: false
         default: pt-advanced-tables-align-center
         options:
-            - 
+            -
                 label: Left
                 value: pt-advanced-tables-align-left
             -
                 label: Center
                 value: pt-advanced-tables-align-center
-            - 
+            -
                 label: Right
                 value: pt-advanced-tables-align-right
     -
@@ -11641,7 +11666,7 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    -            
+    -
         id: pt-icon-folder-accent
         title: Use UI Accent Color for Icon Folder
         description: Makes the Folder Icons inherit the UI Accent Color.
@@ -11654,7 +11679,7 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    -            
+    -
         id: pt-icons-accent
         title: Use UI Accent Color for Icons
         description: Makes the Icons inherit the UI Accent Color.
@@ -11673,7 +11698,7 @@ settings:
         description: Disables the blur background in all elements that use it by making them opaque.
         default: false
         type: class-toggle
-    - 
+    -
         id: pt-disable-animations
         title: Disable Animations
         description: Disables all animations added by Prism (default Obsidian animations remain).
@@ -11720,12 +11745,12 @@ settings:
         collapsed: true
     -
         id: support-submit-issue
-        title: Submit an issue with the theme 
+        title: Submit an issue with the theme
         description: https://github.com/damiankorcz/Prism-Theme/issues
         type: heading
         level: 2
         collapsed: true
-    - 
+    -
         id: support-donate
         title: Buy Me a Coffee!
         description: https://www.buymeacoffee.com/DamianKorcz
