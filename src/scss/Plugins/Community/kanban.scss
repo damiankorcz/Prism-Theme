@@ -44,6 +44,11 @@ div.kanban-plugin__ {
 		}
 	}
 
+	&drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
+		border-color: var(--interactive-accent-tint);
+		box-shadow: var(--drop-shadow-popup);
+	}
+
 	&board > div {
 		padding: 15px;
 	}
@@ -189,10 +194,12 @@ div.kanban-plugin__ {
 		display: block;
 		height: fit-content;
 		padding: 0 4px;
-		font-size: 0.9em;
+		font-size: 0.75em;
+		font-variation-settings: "wght" 600;
 		line-height: 20px;
 		color: var(--text-normal);
 		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
 	}
 }

@@ -5,18 +5,17 @@
 }
 
 .nav-folder.mod-root > .nav-folder-children > .nav-folder {
-	border: 0px;
 	margin-left: unset;
+	border: 0;
 }
 
 .nav-folder.mod-root {
-	border-left: 0px;
-	border: 0px;
 	margin-right: 10px;
 	background-color: var(--background-secondary);
+	border: 0;
+	border-left: 0;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-	border: 1px solid var(--window-border);
 }
 
 .nav-folder.mod-root > .nav-file-title,
@@ -26,6 +25,7 @@
 
 .nav-file-title,
 .nav-folder-title {
+	padding: 1px 5px 1px calc(var(--vertical-lines-width-file-explorer) / 2 + 1px);
 	border-radius: var(--border-radius-small);
 }
 
@@ -43,8 +43,8 @@
 
 .nav-file-title {
 	font-weight: normal;
-	border: 0px;
-	border-radius: 0px;
+	border: 0;
+	border-radius: 0;
 }
 
 .nav-file-title-content.is-being-renamed,
@@ -59,8 +59,8 @@
 }
 
 .nav-file-title.is-active {
+	padding: 0;
 	font-variation-settings: "wght" 600;
-	padding: 0px;
 	border-radius: var(--border-radius);
 }
 
@@ -70,22 +70,22 @@
 .nav-folder-title.is-active,
 body:not(.is-grabbing) .nav-file-title:hover,
 body:not(.is-grabbing) .nav-folder-title:hover {
-	color: var(--interactive-accent-text);
-	border-radius: var(--border-radius-small);
-	background-color: var(--background-primary);
 	font-variation-settings: "wght" 600;
+	color: var(--interactive-accent-text);
+	background-color: var(--background-primary);
+	border-radius: var(--border-radius-small);
 }
 
 // Adjusting padding to dynamically center the drop-down icon withe the vertical lines
 .nav-file-title:not([data-path="/"]),
 .nav-folder-title:not([data-path="/"]) {
+	max-width: -webkit-fill-available;
 	padding: 2px 5px 2px 1px;
 	line-height: 14px;
-	max-width: -webkit-fill-available;
 	border: var(--border-size) solid transparent;
 }
 
-// Tweaks the line height to keep it in the same height as the normal text 
+// Tweaks the line height to keep it in the same height as the normal text
 .nav-folder-title.is-active:not([data-path="/"]),
 .nav-file-title.is-active:not([data-path="/"]),
 .nav-folder-title:not([data-path="/"]):hover,
@@ -95,11 +95,6 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 .nav-folder.mod-root > .nav-folder-children > .nav-file > .nav-file-title:not(.is-active) {
 	border-left: transparent;
-}
-
-.nav-file-title,
-.nav-folder-title {
-	padding: 1px 5px 1px calc(var(--vertical-lines-width-file-explorer) / 2 + 1px);
 }
 
 .nav-folder-title-content {
@@ -112,7 +107,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 .nav-file-title-content {
-	padding: 2px 5px 2px 0px;
+	padding: 2px 5px 2px 0;
 	font-variation-settings: "wght" 600;
 }
 
@@ -123,23 +118,23 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 
 // Adjusting the spacing for the files that include the file tag
 .workspace-leaf-content[data-type="file-explorer"] .nav-file-title:not([data-path$="md"]) .nav-file-title-content {
-	padding-left: 0px;
+	padding-left: 0;
 }
 
 .nav-file-tag {
-	padding: 0px 5px;
-	margin: 0px 5px 0px 7px;
+	padding: 0 5px;
+	margin: 0 5px 0 7px;
 	background-color: var(--background-secondary-alt);
 	border: var(--border-size) solid var(--background-secondary-alt);
 }
 
 .nav-file-title.is-active .nav-file-tag,
 .nav-file-title:hover .nav-file-tag {
-	background-color: var(--background-secondary);
 	color: var(--text-muted);
+	background-color: var(--background-secondary);
 }
 
-// Horizontally centers the collapse icon in it's parent in the File Tree
+// Horizontally centers the collapse icon in the parent in the File Tree
 .collapse-icon {
 	justify-content: center;
 }

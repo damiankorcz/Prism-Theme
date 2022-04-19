@@ -93,10 +93,11 @@ div:not(.is-collapsed) > :is(h1, h2, h3, h4, h5, h6) > div.heading-collapse-indi
 	opacity: 0.75;
 }
 
-a.tag[href*="#"] {
+a.tag[href^="#"] {
 	display: inline-flex;
 	align-items: center;
-	padding: 0 4px;
+	padding: 0 0.5ch;
+	font-size: 0.9em;
 	color: var(--text-normal);
 	text-decoration: none;
 	vertical-align: bottom;

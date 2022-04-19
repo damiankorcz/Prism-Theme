@@ -4,9 +4,8 @@
 		align-items: center;
 		width: fit-content;
 		min-width: -webkit-fill-available;
-		height: fit-content;
+		height: 50px;
 		padding: 0 10px;
-		margin: 0 0 8px;
 		line-height: 16px;
 		background: var(--background-primary);
 		border-bottom: 1px solid var(--window-border);
@@ -17,22 +16,8 @@
 			background-color: var(--background-primary);
 			border: unset;
 			border-bottom: 1px solid var(--window-border);
+			border-radius: var(--border-radius);
 		}
-	}
-
-	&.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
-		justify-content: flex-start;
-	}
-
-	&.pt-custom-vault-banner-justify-content-center .nav-folder-title[data-path="/"] {
-		justify-content: center;
-	}
-
-	&.pt-custom-vault-banner-justify-content-right .nav-folder-title[data-path="/"] {
-		justify-content: flex-end;
-	}
-
-	.nav-folder-title[data-path="/"] {
 		.nav-folder-title-content {
 			width: fit-content;
 			width: auto;
@@ -53,6 +38,18 @@
 			background-size: contain;
 			border-radius: unset;
 		}
+	}
+
+	&.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
+		justify-content: flex-start;
+	}
+
+	&.pt-custom-vault-banner-justify-content-center .nav-folder-title[data-path="/"] {
+		justify-content: center;
+	}
+
+	&.pt-custom-vault-banner-justify-content-right .nav-folder-title[data-path="/"] {
+		justify-content: flex-end;
 	}
 
 	&.pt-custom-vault-banner-sticky .nav-folder-title[data-path="/"] {

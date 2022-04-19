@@ -69,9 +69,17 @@
 		padding: 0 5px;
 		margin-right: 8px;
 		font-size: 14px;
-		background-color: var(--background-primary);
+		color: var(--interactive-accent-text);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
+
+		.theme-light & {
+			background-color: var(--background-primary-alt);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
 	}
 
 	&:hover .suggestion-prefix,

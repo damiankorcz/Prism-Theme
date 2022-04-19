@@ -36,7 +36,7 @@
 .tree-item-self .tree-item-flair {
 	font-variation-settings: "wght" 600;
 	background-color: var(--background-secondary);
-	border: var(--border-size) solid var(--background-secondary);
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius-small);
 }
 
@@ -74,7 +74,6 @@
 		background: var(--background-primary);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
-		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 
 		&:hover {
@@ -99,7 +98,8 @@
 		box-shadow: var(--drop-shadow);
 
 		.tree-item-self {
-			padding: 5px 5px 5px 25px;
+			align-items: center;
+			padding: 5px 8px 5px 25px;
 			background: var(--background-tertiary);
 			border-bottom: 1px solid var(--window-border);
 			border-radius: var(--border-radius);

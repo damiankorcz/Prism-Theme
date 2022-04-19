@@ -1,9 +1,13 @@
 /* #region  [Plugin - Core] File Explorer */
 .workspace-leaf-content[data-type="file-explorer"] {
 	.nav-folder.mod-root > div.nav-folder-children {
-		padding: 0 8px 8px;
+		padding: 28px 8px 8px;
+		margin-top: -20px;
 		margin-left: unset;
-		border-left: unset;
+		border-right: 1px solid var(--window-border);
+		border-bottom: 1px solid var(--window-border);
+		border-left: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
 	}
 	.nav-folder:not(.mod-root) .nav-folder-children {
 		padding-left: unset;
@@ -19,6 +23,12 @@
 		margin: unset;
 	}
 
+	.nav-file-title.is-being-dragged-over,
+	.nav-folder-title.is-being-dragged-over {
+		background-color: var(--interactive-accent-base);
+		border: 2px solid var(--interactive-accent-tint);
+	}
+
 	// File Explorer Vertical Lines
 	.pt-file-explorer-vertical-lines & {
 		.nav-folder:not(.mod-root) .nav-folder-children {
@@ -27,9 +37,9 @@
 		}
 
 		.nav-folder.mod-root > div.nav-folder-children {
-			padding: 0 8px 8px;
+			padding: 28px 8px 8px;
 			margin-left: unset;
-			border-left: unset;
+			border-left-width: 1px;
 		}
 
 		.nav-folder.mod-root .nav-folder-children {
