@@ -25,7 +25,7 @@ if (process.platform === "win32") {
             /* Imports paths to the Theme and Snippet folder in my vault */
             env: {
                 main : {
-                src : "windows.env"
+                    src : "windows.env"
                 }
             },
 
@@ -137,7 +137,7 @@ if (process.platform === "linux") {
             /* Imports paths to the Theme and Snippet folder in my vault */
             env: {
                 main : {
-                src : "linux.env"
+                    src : "linux.env"
                 }
             },
 
