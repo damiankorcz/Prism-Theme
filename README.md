@@ -19,7 +19,6 @@
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Plugin-Support">Plugin Support</a> •
 		<a href="https://github.com/damiankorcz/Prism-Theme#%EF%B8%8F-snippets">Snippets</a> •
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Documentation">Documentation</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Roadmap">Roadmap</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contributing">Contributing</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contact">Contact</a> • 
 		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Acknowledgments">Acknowledgments</a> • 
@@ -108,27 +107,7 @@ I highly recommend for you to go through the options available in the Style Sett
 
 
 ## 🔌 Plugin Support
-Required for the Theme to work correctly and to enable customisation:
-
-[**Style Settings**](https://github.com/mgmeyers/obsidian-style-settings) - _Allows snippet, theme, and plugin CSS files to define a set of configuration options._
-
-Explicitly supported by the theme:
-* [**Advanced Tables**](https://github.com/tgrosinger/advanced-tables-obsidian) - _Add improved navigation, formatting, and manipulation to markdown tables in Obsidian._
-
-* [**Kanban**](https://github.com/mgmeyers/obsidian-kanban) - _Create markdown-backed Kanban boards in Obsidian._
-
-* [**Collapse All**](https://github.com/OfficerHalf/obsidian-collapse-all) - _Adds a button to close or open all folders in the File Explorer._ 
-
-* [**Quick Explorer**](https://github.com/pjeby/quick-explorer) - _Menu-based and keyboard-friendly Explorer in the Titlebar._
-* [**Calendar**](https://github.com/liamcain/obsidian-calendar-plugin) - _Creates a simple Calendar view for visualizing and navigating between your daily notes._
-* [**cMenu**](https://github.com/chetachiezikeuzor/cMenu-Plugin) - _Adds a minimal and user friendly text editor modal for a smoother writing/editing experience._
-* [**Dangling Links**](https://github.com/graydon/obsidian-dangling-links) - _Displays the set of dangling links in your current vault in a side-panel._
-* [**Pane Relief**](https://github.com/pjeby/pane-relief) - _Adds per-pane navigation history to Obsidian.md._
-* [**Sliding Panes**](https://github.com/deathau/sliding-panes-obsidian) - _Changes the way panes in the main workspace are handled. Inspired by the UI of [**Andy Matuschak's notes**](https://notes.andymatuschak.org/About_these_notes)._
-
-...and more! Checkout the full list in the [Plugins Supported](https://github.com/damiankorcz/Prism-Theme/wiki/Plugins-Supported) section of the Wiki.
-
-(These plugins have been checked to work correctly and might have additional settings in Style Settings)
+Checkout the full list in the [Plugins Supported](https://github.com/damiankorcz/Prism-Theme/wiki/Plugins-Supported) section of the Wiki. These plugins have been checked to work correctly and might have additional settings in Style Settings.
 
 If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
 
@@ -141,25 +120,13 @@ Theme features which you can import as snippets into Obsidian are located in the
 The theme has a fully encompassing Wiki, which includes additional detailed descriptions with images/GIFs of all Style Settings Options for Prism. This can be found in the [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) Section of this Repository.
 
 
-## 🗺 Roadmap
-Planned task in a rough order of priority:
-- [x] General code cleanup and polish of the core Obsidian UI theme.
-- [ ] Full commenting of the source code for easier development.
-- [x] Documentation/Frequently Asked Questions section to help guide new theme users.
-- [x] More explicitly supported plugins.
-- [ ] Custom-made UI Icons.
-- [ ] Mobile support.
-
-See the [**Open Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues) for a full list of proposed features and known issues.
-
-
 ## 🛠 Contributing
-Currently the theme is being designed for desktop use with mobile planned once the desktop theme is in a good place.
+Currently the theme is being designed for desktop use with mobile planned in the future.
 The theme has been tested on Windows 10/11 so there might be some issues on Linux/MacOS.
 
 If you want to provide specific feedback or report an issue please use [**Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues).
 
-Although I don't prohibit pull requests, the theme is quite complex with a lot of intricate details to keep in mind when adding features so unless you have a good understanding of how themes that utilise Style Settings work and familiarised yourself with how this theme is setup, I'd recommend submitting an [**Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues) instead. I'll try my best to stay on top of the most pressing issues/feature requests!
+Although I don't prohibit pull requests, the theme is quite complex with a lot of intricate setup to keep in mind when adding features. A good understanding of how themes that utilise Style Settings work and familiarised yourself with how this theme is setup, I'd recommend submitting an [**Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues) instead. I'll try my best to stay on top of the most pressing issues/feature requests!
 
 Otherwise you are welcome to contact me through the channels mentioned below to discuss anything regarding the theme.
 
@@ -173,9 +140,14 @@ Feel free to reach out to me via the Official Obsidian Discord Channel: <a href=
 ## 📣 Acknowledgments
 - Thanks to the developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
 - Special shoutout to [**@mgmeyers**](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
+- Thanks to [**@kepano**](https://github.com/kepano) and [**Minimal Theme**](https://github.com/kepano/obsidian-minimal) for figuring out the Sass/SCSS workflow using Grunt which I based my workflow on for Prism.
+- [**@chrisgrieser**](https://github.com/chrisgrieser) for the Hue slider gradient code. 
 - Huge thanks to the Obsidian Community over at Discord for endless inspiration to improve the theme!
-- Thanks to @kepano and [**Minimal Theme**](https://github.com/kepano/obsidian-minimal) for figuring out the Sass/SCSS workflow using Grunt which I based my workflow on for Prism.
 
 
 ## 📝 License
-Distributed under the MIT License. See [**LICENCE**](https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE) for more information.
+The Theme contains Base64 embedded versions of the following fonts:
+- [**Source Sans**](https://github.com/adobe-fonts/source-sans) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md)
+- [**Source Code Pro**](https://github.com/adobe-fonts/source-code-pro) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/adobe-fonts/source-code-pro/blob/release/LICENSE.md)
+
+The Theme code is distributed under the MIT License. See [**LICENCE**](https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE) for more information.
