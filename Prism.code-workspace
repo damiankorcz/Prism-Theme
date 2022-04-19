@@ -1,0 +1,46 @@
+{
+	"folders": [
+		{
+			"path": "Prism-Theme"
+		}
+	],
+	"settings": {
+		"[Log]": {
+			"editor.fontSize": 12
+		},
+		"files.exclude": {
+			".git": true
+		},
+		"search.exclude": {
+			".git": true
+		},
+		"editor.wordWrap": "on",
+		"files.autoSaveDelay": 500
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Grunt Build - Main Theme",
+				"type": "shell",
+				"command": "grunt main",
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"runOptions": {
+					"runOn": "folderOpen"
+				}
+			},
+			{
+				"label": "Grunt Build - MHS Snippet",
+				"type": "shell",
+				"command": "grunt snippetMHS",
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				}
+			}
+		]
+	}
+}
