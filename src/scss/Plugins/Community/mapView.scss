@@ -8,6 +8,27 @@
 		background: var(--background-secondary-alt);
 	}
 
+	.graph-controls {
+		padding: 8px;
+	}
+
+	.graph-control-div {
+		padding: 8px;
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		&:not(:last-of-type) {
+			margin-bottom: 8px;
+		}
+
+		.theme-light & {
+			background-color: var(--background-tertiary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
+	}
+
 	.leaflet-container .leaflet-control-attribution {
 		color: var(--text-muted);
 		background: var(--background-secondary);
@@ -38,18 +59,23 @@
 		}
 
 		&::before {
-			top: 17px;
-			left: 15px;
+			top: 18px;
+			left: 16px;
 		}
 
 		&::after {
-			top: 9px;
-			left: 9px;
+			top: 10px;
+			left: 10px;
 		}
 	}
 
-	.leaflet-bar a {
-		border-bottom: 1px solid var(--background-tertiary);
+	.leaflet-bar a.leaflet-bar-part-single {
+		width: 32px;
+		height: 32px;
+	}
+
+	.leaflet-control-zoom-in {
+		border-bottom: 1px solid var(--window-border);
 	}
 
 	.lbl-toggle {
@@ -57,14 +83,18 @@
 	}
 
 	.leaflet-touch .leaflet-control-layers,
-	.leaflet-touch .leaflet-bar,
-	.leaflet-bar-part.leaflet-bar-part-single {
+	.leaflet-bar-part.leaflet-bar-part-single,
+	.leaflet-bar.leaflet-control-zoom {
 		font-variation-settings: "wght" 600;
 		color: var(--text-muted);
 		background-color: var(--background-tertiary);
-		border: 1px solid var(--background-tertiary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
+	}
+
+	.leaflet-touch .leaflet-bar.leaflet-geosearch-button {
+		border: unset;
 	}
 
 	.leaflet-control-geosearch form {
@@ -72,7 +102,7 @@
 		height: -webkit-fill-available;
 		padding: unset;
 		background-color: var(--background-primary);
-		border: 1px solid var(--background-tertiary);
+		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
 	}
@@ -95,10 +125,6 @@
 		height: -webkit-fill-available;
 		padding: 0 30px 0 0;
 		font-size: 14px;
-	}
-
-	.leaflet-geosearch-button.active .leaflet-bar-part {
-		width: 30px;
 	}
 
 	.leaflet-control-geosearch .results.active {
@@ -125,6 +151,8 @@
 	}
 
 	.graph-control-content {
+		padding-top: 8px;
+
 		> *:not(:last-child) {
 			display: inline-block;
 			margin-right: 8px;

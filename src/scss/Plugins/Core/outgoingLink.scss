@@ -73,8 +73,21 @@
 
 	.search-result-container {
 		padding: unset;
-		margin-top: -30px;
+		margin-top: -38px;
 		margin-bottom: 8px;
+	}
+
+	.outgoing-link-pane > .search-result-container:not(:last-of-type) {
+		min-height: unset !important;
+		padding: 38px 8px 8px;
+		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.outgoing-link-pane .search-result-container:not(:last-of-type) > div:first-child {
+		display: none;
 	}
 
 	.tree-item-self.outgoing-link-item {
@@ -127,18 +140,6 @@
 		display: none;
 	}
 
-	.outgoing-link-pane > .search-result-container:not(:last-of-type) {
-		min-height: unset !important;
-		padding: 30px 8px 8px;
-		background-color: var(--background-secondary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
-	}
-
-	.outgoing-link-pane .search-result-container:not(:last-of-type) > div:first-child {
-		display: none;
-	}
 
 	.tree-item-self .tree-item-icon {
 		padding: 8px 10px;

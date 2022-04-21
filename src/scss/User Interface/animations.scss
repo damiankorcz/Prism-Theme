@@ -36,6 +36,16 @@ body:not(.pt-disable-animations) {
 		}
 	}
 
+	@keyframes iconShrinkHold {
+		0% {
+			transform: translateY(0);
+		}
+		100% {
+			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
+			transform: scale(0.972);
+		}
+	}
+
 	@keyframes iconEnlargeHoldDropdown {
 		0% {
 			transform: translateY(0);
@@ -43,22 +53,18 @@ body:not(.pt-disable-animations) {
 		25% {
 			background-position-y: 70%;
 			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
-			transform: scale(1.028);
 		}
 		50% {
 			background-position-y: 60%;
 			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
-			transform: scale(1.028);
 		}
 		75% {
 			background-position-y: 70%;
 			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
-			transform: scale(1.028);
 		}
 		100% {
 			background-position-y: 60%;
 			box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0 2px 4px -1px;
-			transform: scale(1.028);
 		}
 	}
 
@@ -324,7 +330,7 @@ body:not(.pt-disable-animations) {
 	.search-result-file-match-destination-file:hover,
 	button.kanban-plugin__confirm-action-button:hover,
 	button.kanban-plugin__cancel-action-button:hover {
-		animation-name: iconEnlargeHold;
+		animation-name: iconShrinkHold;
 		animation-duration: 0.15s;
 		animation-iteration-count: 1;
 		animation-direction: alternate;

@@ -24,21 +24,6 @@
 	margin: 0 0 5px;
 }
 
-.theme-dark.pt-accent-style-borderandfilled-dt button.mod-cta:hover,
-.theme-light.pt-accent-style-borderandfilled-lt button.mod-cta:hover {
-	color: var(--interactive-accent-tint);
-}
-
-.theme-dark.pt-accent-style-borderandfilled-dt button.mod-warning:hover,
-.theme-light.pt-accent-style-borderandfilled-lt button.mod-warning:hover {
-	color: var(--color-red-tint);
-}
-
-.theme-dark.pt-accent-style-borderandfilled-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-light.pt-accent-style-borderandfilled-lt .modal button:not(.mod-cta):not(.mod-warning):hover {
-	color: var(--color-grey-tint);
-}
-
 .workspace-leaf.mod-active .view-header,
 .plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
 	border: var(--border-size) solid;
@@ -53,6 +38,10 @@
 .workspace-leaf.mod-active .view-header .view-actions .view-action,
 .workspace-leaf.mod-active .view-header .view-header-title {
 	stroke-width: 2px;
+}
+
+.workspace-leaf .view-header .view-header-title:hover {
+	color: var(--interactive-accent-hover);
 }
 
 .workspace-tab-header.is-active {
