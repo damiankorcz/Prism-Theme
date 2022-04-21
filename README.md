@@ -29,7 +29,7 @@
 
 
 ## ✨ Key Features 
-- 6 Hand Crafted Light / Dark Colour Schemes.
+- 8 Hand Crafted Light / Dark Colour Schemes.
 - 4 Accent Styles and 10 Preset Accent Colours.
 - Highlight System based on the `<mark>` tag.
 - Customisable app background options.
