@@ -27,10 +27,10 @@
 ### 🌈 Colour Schemes
 | Codename | Light Variant | Dark Variant |
 |:---:|:---:|:---:|
-|**Bird**|![Swan](https://user-images.githubusercontent.com/7290097/164354699-2cf79e10-6d94-4b5b-a9c3-f1c9602fa409.png)</br>**Swan**|![Raven](https://user-images.githubusercontent.com/7290097/164354716-b6c3ec56-a64f-49ba-82cd-53ae415c488f.png)</br>**Raven**|
-|**Coffee**|![Latte](https://user-images.githubusercontent.com/7290097/164354703-a564af02-42a5-4fd7-afc9-b909ef97e3cd.png)</br>**Latte**|![Mocha](https://user-images.githubusercontent.com/7290097/164354721-1127b1cc-9050-4038-9c30-097ebd7d3ba1.png)</br>**Mocha**|
-|**Flower**|![Periwinkle](https://user-images.githubusercontent.com/7290097/164354708-4e802d67-0b78-455e-b32f-34d3deb4931e.png)</br>**Periwinkle**|![Indigo](https://user-images.githubusercontent.com/7290097/164354726-4d17aa2f-bd35-4366-916c-98ccc7ecb374.png)</br>**Indigo**|
-|**Tree**|![Pistachio](https://user-images.githubusercontent.com/7290097/164354711-2efc9aaf-9c53-4ab3-b0e5-fda7a939c53a.png)</br>**Pistachio**|![Pine](https://user-images.githubusercontent.com/7290097/164354730-d113fd88-8d5c-4edd-ac69-330990a74584.png)</br>**Pine**|
+|**Bird**|![Swan](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%201%20-%20Swan.png)</br>**Swan**|![Raven](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%201%20-%20Raven.png)</br>**Raven**|
+|**Coffee**|![Latte](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%202%20-%20Latte.png)</br>**Latte**|![Mocha](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%202%20-%20Mocha.png)</br>**Mocha**|
+|**Flower**|![Periwinkle](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%203%20-%20Periwinkle.png)</br>**Periwinkle**|![Indigo](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%203%20-%20Indigo.png)</br>**Indigo**|
+|**Tree**|![Pistachio](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%204%20-%20Pistachio.png)</br>**Pistachio**|![Pine](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%204%20-%20Pine.png)</br>**Pine**|
 
 ## 🚀 Getting Started
 ###  Install the Prism Theme
