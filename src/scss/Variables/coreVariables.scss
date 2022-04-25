@@ -96,8 +96,8 @@ body {
 	--font-monospace-theme: "Source Code Pro", monospace;
 }
 
-.theme-light,
-.theme-dark {
+body.theme-light,
+body.theme-dark {
 	--color-red-base: hsl(var(--color-red-base-h) var(--color-red-base-s) var(--color-red-base-l));
 	--color-orange-base: hsl(var(--color-orange-base-h) var(--color-orange-base-s) var(--color-orange-base-l));
 	--color-yellow-base: hsl(var(--color-yellow-base-h) var(--color-yellow-base-s) var(--color-yellow-base-l));
@@ -232,7 +232,7 @@ body {
 	}
 }
 
-.theme-light {
+body.theme-light {
 	--window-border: var(--background-secondary-alt);
 	--page-background-color: var(--background-primary);
 	--table-border-color: var(--background-secondary-alt);
@@ -254,9 +254,90 @@ body {
 	&.pt-highlight-text-custom-lt {
 		--highlight-text-normal: var(--highlight-text-accent-custom-lt);
 	}
+
+	/* #region  [Accent Color Presets] Light Theme */
+	&.pt-accent-color- {
+		&custom-lt {
+			--interactive-accent-base: var(--color-accent-base-lt);
+			--interactive-accent-tint: var(--color-accent-tint-lt);
+			--interactive-accent-text: var(--color-accent-text-lt);
+			--interactive-accent-hover: var(--color-accent-tint-lt);
+		}
+
+		&red-lt {
+			--interactive-accent-base: var(--color-red-base);
+			--interactive-accent-tint: var(--color-red-tint);
+			--interactive-accent-text: var(--color-red-text);
+			--interactive-accent-hover: var(--color-red-tint);
+		}
+
+		&orange-lt {
+			--interactive-accent-base: var(--color-orange-base);
+			--interactive-accent-tint: var(--color-orange-tint);
+			--interactive-accent-text: var(--color-orange-text);
+			--interactive-accent-hover: var(--color-orange-tint);
+		}
+
+		&yellow-lt {
+			--interactive-accent-base: var(--color-yellow-base);
+			--interactive-accent-tint: var(--color-yellow-tint);
+			--interactive-accent-text: var(--color-yellow-text);
+			--interactive-accent-hover: var(--color-yellow-tint);
+		}
+
+		&green-lt {
+			--interactive-accent-base: var(--color-green-base);
+			--interactive-accent-tint: var(--color-green-tint);
+			--interactive-accent-text: var(--color-green-text);
+			--interactive-accent-hover: var(--color-green-tint);
+		}
+
+		&mint-lt {
+			--interactive-accent-base: var(--color-mint-base);
+			--interactive-accent-tint: var(--color-mint-tint);
+			--interactive-accent-text: var(--color-mint-text);
+			--interactive-accent-hover: var(--color-mint-tint);
+		}
+
+		&aqua-lt {
+			--interactive-accent-base: var(--color-aqua-base);
+			--interactive-accent-tint: var(--color-aqua-tint);
+			--interactive-accent-text: var(--color-aqua-text);
+			--interactive-accent-hover: var(--color-aqua-tint);
+		}
+
+		&blue-lt {
+			--interactive-accent-base: var(--color-blue-base);
+			--interactive-accent-tint: var(--color-blue-tint);
+			--interactive-accent-text: var(--color-blue-text);
+			--interactive-accent-hover: var(--color-blue-tint);
+		}
+
+		&purple-lt {
+			--interactive-accent-base: var(--color-purple-base);
+			--interactive-accent-tint: var(--color-purple-tint);
+			--interactive-accent-text: var(--color-purple-text);
+			--interactive-accent-hover: var(--color-purple-tint);
+		}
+
+		&pink-lt {
+			--interactive-accent-base: var(--color-pink-base);
+			--interactive-accent-tint: var(--color-pink-tint);
+			--interactive-accent-text: var(--color-pink-text);
+			--interactive-accent-hover: var(--color-pink-tint);
+		}
+
+		&grey-lt {
+			--interactive-accent-base: var(--color-grey-base);
+			--interactive-accent-tint: var(--color-grey-tint);
+			--interactive-accent-text: var(--color-grey-text);
+			--interactive-accent-hover: var(--color-grey-tint);
+		}
+	}
+	/* #endregion */
 }
 
-.theme-dark {
+body.theme-dark {
 	--window-border: var(--background-primary-alt);
 	--page-background-color: var(--background-secondary);
 	--table-border-color: var(--background-primary-alt);
@@ -278,167 +359,86 @@ body {
 	&.pt-highlight-text-custom-dt {
 		--highlight-text-normal: var(--highlight-text-accent-custom-dt);
 	}
-}
-/* #endregion */
 
-/* #region  [Accent Color Presets] Light Theme */
-.theme-light.pt-accent-color- {
-	&custom-lt {
-		--interactive-accent-base: var(--color-accent-base-lt);
-		--interactive-accent-tint: var(--color-accent-tint-lt);
-		--interactive-accent-text: var(--color-accent-text-lt);
-		--interactive-accent-hover: var(--color-accent-tint-lt);
-	}
+	/* #region  [Accent Color Presets] Dark Theme */
+	&.pt-accent-color- {
+		&custom-dt {
+			--interactive-accent-base: var(--color-accent-base-dt);
+			--interactive-accent-tint: var(--color-accent-tint-dt);
+			--interactive-accent-text: var(--color-accent-text-dt);
+			--interactive-accent-hover: var(--color-accent-tint-dt);
+		}
 
-	&red-lt {
-		--interactive-accent-base: var(--color-red-base);
-		--interactive-accent-tint: var(--color-red-tint);
-		--interactive-accent-text: var(--color-red-text);
-		--interactive-accent-hover: var(--color-red-tint);
-	}
+		&red-dt {
+			--interactive-accent-base: var(--color-red-base);
+			--interactive-accent-tint: var(--color-red-tint);
+			--interactive-accent-text: var(--color-red-text);
+			--interactive-accent-hover: var(--color-red-tint);
+		}
 
-	&orange-lt {
-		--interactive-accent-base: var(--color-orange-base);
-		--interactive-accent-tint: var(--color-orange-tint);
-		--interactive-accent-text: var(--color-orange-text);
-		--interactive-accent-hover: var(--color-orange-tint);
-	}
+		&orange-dt {
+			--interactive-accent-base: var(--color-orange-base);
+			--interactive-accent-tint: var(--color-orange-tint);
+			--interactive-accent-text: var(--color-orange-text);
+			--interactive-accent-hover: var(--color-orange-tint);
+		}
 
-	&yellow-lt {
-		--interactive-accent-base: var(--color-yellow-base);
-		--interactive-accent-tint: var(--color-yellow-tint);
-		--interactive-accent-text: var(--color-yellow-text);
-		--interactive-accent-hover: var(--color-yellow-tint);
-	}
+		&yellow-dt {
+			--interactive-accent-base: var(--color-yellow-base);
+			--interactive-accent-tint: var(--color-yellow-tint);
+			--interactive-accent-text: var(--color-yellow-text);
+			--interactive-accent-hover: var(--color-yellow-tint);
+		}
 
-	&green-lt {
-		--interactive-accent-base: var(--color-green-base);
-		--interactive-accent-tint: var(--color-green-tint);
-		--interactive-accent-text: var(--color-green-text);
-		--interactive-accent-hover: var(--color-green-tint);
-	}
+		&green-dt {
+			--interactive-accent-base: var(--color-green-base);
+			--interactive-accent-tint: var(--color-green-tint);
+			--interactive-accent-text: var(--color-green-text);
+			--interactive-accent-hover: var(--color-green-tint);
+		}
 
-	&mint-lt {
-		--interactive-accent-base: var(--color-mint-base);
-		--interactive-accent-tint: var(--color-mint-tint);
-		--interactive-accent-text: var(--color-mint-text);
-		--interactive-accent-hover: var(--color-mint-tint);
-	}
+		&mint-dt {
+			--interactive-accent-base: var(--color-mint-base);
+			--interactive-accent-tint: var(--color-mint-tint);
+			--interactive-accent-text: var(--color-mint-text);
+			--interactive-accent-hover: var(--color-mint-tint);
+		}
 
-	&aqua-lt {
-		--interactive-accent-base: var(--color-aqua-base);
-		--interactive-accent-tint: var(--color-aqua-tint);
-		--interactive-accent-text: var(--color-aqua-text);
-		--interactive-accent-hover: var(--color-aqua-tint);
-	}
+		&aqua-dt {
+			--interactive-accent-base: var(--color-aqua-base);
+			--interactive-accent-tint: var(--color-aqua-tint);
+			--interactive-accent-text: var(--color-aqua-text);
+			--interactive-accent-hover: var(--color-aqua-tint);
+		}
 
-	&blue-lt {
-		--interactive-accent-base: var(--color-blue-base);
-		--interactive-accent-tint: var(--color-blue-tint);
-		--interactive-accent-text: var(--color-blue-text);
-		--interactive-accent-hover: var(--color-blue-tint);
-	}
+		&blue-dt {
+			--interactive-accent-base: var(--color-blue-base);
+			--interactive-accent-tint: var(--color-blue-tint);
+			--interactive-accent-text: var(--color-blue-text);
+			--interactive-accent-hover: var(--color-blue-tint);
+		}
 
-	&purple-lt {
-		--interactive-accent-base: var(--color-purple-base);
-		--interactive-accent-tint: var(--color-purple-tint);
-		--interactive-accent-text: var(--color-purple-text);
-		--interactive-accent-hover: var(--color-purple-tint);
-	}
+		&purple-dt {
+			--interactive-accent-base: var(--color-purple-base);
+			--interactive-accent-tint: var(--color-purple-tint);
+			--interactive-accent-text: var(--color-purple-text);
+			--interactive-accent-hover: var(--color-purple-tint);
+		}
 
-	&pink-lt {
-		--interactive-accent-base: var(--color-pink-base);
-		--interactive-accent-tint: var(--color-pink-tint);
-		--interactive-accent-text: var(--color-pink-text);
-		--interactive-accent-hover: var(--color-pink-tint);
-	}
+		&pink-dt {
+			--interactive-accent-base: var(--color-pink-base);
+			--interactive-accent-tint: var(--color-pink-tint);
+			--interactive-accent-text: var(--color-pink-text);
+			--interactive-accent-hover: var(--color-pink-tint);
+		}
 
-	&grey-lt {
-		--interactive-accent-base: var(--color-grey-base);
-		--interactive-accent-tint: var(--color-grey-tint);
-		--interactive-accent-text: var(--color-grey-text);
-		--interactive-accent-hover: var(--color-grey-tint);
+		&grey-dt {
+			--interactive-accent-base: var(--color-grey-base);
+			--interactive-accent-tint: var(--color-grey-tint);
+			--interactive-accent-text: var(--color-grey-text);
+			--interactive-accent-hover: var(--color-grey-tint);
+		}
 	}
-}
-/* #endregion */
-
-/* #region  [Accent Color Presets] Dark Theme */
-.theme-dark.pt-accent-color- {
-	&custom-dt {
-		--interactive-accent-base: var(--color-accent-base-dt);
-		--interactive-accent-tint: var(--color-accent-tint-dt);
-		--interactive-accent-text: var(--color-accent-text-dt);
-		--interactive-accent-hover: var(--color-accent-tint-dt);
-	}
-
-	&red-dt {
-		--interactive-accent-base: var(--color-red-base);
-		--interactive-accent-tint: var(--color-red-tint);
-		--interactive-accent-text: var(--color-red-text);
-		--interactive-accent-hover: var(--color-red-tint);
-	}
-
-	&orange-dt {
-		--interactive-accent-base: var(--color-orange-base);
-		--interactive-accent-tint: var(--color-orange-tint);
-		--interactive-accent-text: var(--color-orange-text);
-		--interactive-accent-hover: var(--color-orange-tint);
-	}
-
-	&yellow-dt {
-		--interactive-accent-base: var(--color-yellow-base);
-		--interactive-accent-tint: var(--color-yellow-tint);
-		--interactive-accent-text: var(--color-yellow-text);
-		--interactive-accent-hover: var(--color-yellow-tint);
-	}
-
-	&green-dt {
-		--interactive-accent-base: var(--color-green-base);
-		--interactive-accent-tint: var(--color-green-tint);
-		--interactive-accent-text: var(--color-green-text);
-		--interactive-accent-hover: var(--color-green-tint);
-	}
-
-	&mint-dt {
-		--interactive-accent-base: var(--color-mint-base);
-		--interactive-accent-tint: var(--color-mint-tint);
-		--interactive-accent-text: var(--color-mint-text);
-		--interactive-accent-hover: var(--color-mint-tint);
-	}
-
-	&aqua-dt {
-		--interactive-accent-base: var(--color-aqua-base);
-		--interactive-accent-tint: var(--color-aqua-tint);
-		--interactive-accent-text: var(--color-aqua-text);
-		--interactive-accent-hover: var(--color-aqua-tint);
-	}
-
-	&blue-dt {
-		--interactive-accent-base: var(--color-blue-base);
-		--interactive-accent-tint: var(--color-blue-tint);
-		--interactive-accent-text: var(--color-blue-text);
-		--interactive-accent-hover: var(--color-blue-tint);
-	}
-
-	&purple-dt {
-		--interactive-accent-base: var(--color-purple-base);
-		--interactive-accent-tint: var(--color-purple-tint);
-		--interactive-accent-text: var(--color-purple-text);
-		--interactive-accent-hover: var(--color-purple-tint);
-	}
-
-	&pink-dt {
-		--interactive-accent-base: var(--color-pink-base);
-		--interactive-accent-tint: var(--color-pink-tint);
-		--interactive-accent-text: var(--color-pink-text);
-		--interactive-accent-hover: var(--color-pink-tint);
-	}
-
-	&grey-dt {
-		--interactive-accent-base: var(--color-grey-base);
-		--interactive-accent-tint: var(--color-grey-tint);
-		--interactive-accent-text: var(--color-grey-text);
-		--interactive-accent-hover: var(--color-grey-tint);
-	}
+	/* #endregion */
 }
 /* #endregion */

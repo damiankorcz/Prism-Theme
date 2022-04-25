@@ -123,8 +123,8 @@ body {
   --font-text-theme: "Source Sans 3", sans-serif;
   --font-monospace-theme: "Source Code Pro", monospace;
 }
-.theme-light,
-.theme-dark {
+body.theme-light,
+body.theme-dark {
   --color-red-base: hsl(var(--color-red-base-h) var(--color-red-base-s) var(--color-red-base-l));
   --color-orange-base: hsl(var(--color-orange-base-h) var(--color-orange-base-s) var(--color-orange-base-l));
   --color-yellow-base: hsl(var(--color-yellow-base-h) var(--color-yellow-base-s) var(--color-yellow-base-l));
@@ -241,179 +241,179 @@ body {
   --color-accent-l-tint-dt: 40%;
   --color-accent-l-text-dt: 65%;
 }
-.theme-light.pt-disable-blur,
-.theme-dark.pt-disable-blur {
+body.theme-light.pt-disable-blur,
+body.theme-dark.pt-disable-blur {
   --background-secondary-blur: var(--background-secondary);
 }
-.theme-light {
+body.theme-light {
   --window-border: var(--background-secondary-alt);
   --page-background-color: var(--background-primary);
   --table-border-color: var(--background-secondary-alt);
   --text-selection: var(--background-secondary);
   --scroll-bar-thumb: var(--background-primary);
+  /* #region  [Accent Color Presets] Light Theme */
+  /* #endregion */
 }
-.theme-light.pt-highlight-text-light-lt {
+body.theme-light.pt-highlight-text-light-lt {
   --highlight-text-normal: var(--background-primary);
 }
-.theme-light.pt-highlight-text-dark-lt {
+body.theme-light.pt-highlight-text-dark-lt {
   --highlight-text-normal: var(--text-normal);
 }
-.theme-light.pt-highlight-text-accent-lt {
+body.theme-light.pt-highlight-text-accent-lt {
   --highlight-text-normal: var(--interactive-accent-text);
 }
-.theme-light.pt-highlight-text-custom-lt {
+body.theme-light.pt-highlight-text-custom-lt {
   --highlight-text-normal: var(--highlight-text-accent-custom-lt);
 }
-.theme-dark {
-  --window-border: var(--background-primary-alt);
-  --page-background-color: var(--background-secondary);
-  --table-border-color: var(--background-primary-alt);
-  --text-selection: var(--background-primary-alt);
-  --scroll-bar-thumb: var(--background-primary-alt);
-}
-.theme-dark.pt-highlight-text-light-dt {
-  --highlight-text-normal: var(--text-normal);
-}
-.theme-dark.pt-highlight-text-dark-dt {
-  --highlight-text-normal: var(--background-primary);
-}
-.theme-dark.pt-highlight-text-accent-dt {
-  --highlight-text-normal: var(--interactive-accent-text);
-}
-.theme-dark.pt-highlight-text-custom-dt {
-  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
-}
-/* #endregion */
-/* #region  [Accent Color Presets] Light Theme */
-.theme-light.pt-accent-color-custom-lt {
+body.theme-light.pt-accent-color-custom-lt {
   --interactive-accent-base: var(--color-accent-base-lt);
   --interactive-accent-tint: var(--color-accent-tint-lt);
   --interactive-accent-text: var(--color-accent-text-lt);
   --interactive-accent-hover: var(--color-accent-tint-lt);
 }
-.theme-light.pt-accent-color-red-lt {
+body.theme-light.pt-accent-color-red-lt {
   --interactive-accent-base: var(--color-red-base);
   --interactive-accent-tint: var(--color-red-tint);
   --interactive-accent-text: var(--color-red-text);
   --interactive-accent-hover: var(--color-red-tint);
 }
-.theme-light.pt-accent-color-orange-lt {
+body.theme-light.pt-accent-color-orange-lt {
   --interactive-accent-base: var(--color-orange-base);
   --interactive-accent-tint: var(--color-orange-tint);
   --interactive-accent-text: var(--color-orange-text);
   --interactive-accent-hover: var(--color-orange-tint);
 }
-.theme-light.pt-accent-color-yellow-lt {
+body.theme-light.pt-accent-color-yellow-lt {
   --interactive-accent-base: var(--color-yellow-base);
   --interactive-accent-tint: var(--color-yellow-tint);
   --interactive-accent-text: var(--color-yellow-text);
   --interactive-accent-hover: var(--color-yellow-tint);
 }
-.theme-light.pt-accent-color-green-lt {
+body.theme-light.pt-accent-color-green-lt {
   --interactive-accent-base: var(--color-green-base);
   --interactive-accent-tint: var(--color-green-tint);
   --interactive-accent-text: var(--color-green-text);
   --interactive-accent-hover: var(--color-green-tint);
 }
-.theme-light.pt-accent-color-mint-lt {
+body.theme-light.pt-accent-color-mint-lt {
   --interactive-accent-base: var(--color-mint-base);
   --interactive-accent-tint: var(--color-mint-tint);
   --interactive-accent-text: var(--color-mint-text);
   --interactive-accent-hover: var(--color-mint-tint);
 }
-.theme-light.pt-accent-color-aqua-lt {
+body.theme-light.pt-accent-color-aqua-lt {
   --interactive-accent-base: var(--color-aqua-base);
   --interactive-accent-tint: var(--color-aqua-tint);
   --interactive-accent-text: var(--color-aqua-text);
   --interactive-accent-hover: var(--color-aqua-tint);
 }
-.theme-light.pt-accent-color-blue-lt {
+body.theme-light.pt-accent-color-blue-lt {
   --interactive-accent-base: var(--color-blue-base);
   --interactive-accent-tint: var(--color-blue-tint);
   --interactive-accent-text: var(--color-blue-text);
   --interactive-accent-hover: var(--color-blue-tint);
 }
-.theme-light.pt-accent-color-purple-lt {
+body.theme-light.pt-accent-color-purple-lt {
   --interactive-accent-base: var(--color-purple-base);
   --interactive-accent-tint: var(--color-purple-tint);
   --interactive-accent-text: var(--color-purple-text);
   --interactive-accent-hover: var(--color-purple-tint);
 }
-.theme-light.pt-accent-color-pink-lt {
+body.theme-light.pt-accent-color-pink-lt {
   --interactive-accent-base: var(--color-pink-base);
   --interactive-accent-tint: var(--color-pink-tint);
   --interactive-accent-text: var(--color-pink-text);
   --interactive-accent-hover: var(--color-pink-tint);
 }
-.theme-light.pt-accent-color-grey-lt {
+body.theme-light.pt-accent-color-grey-lt {
   --interactive-accent-base: var(--color-grey-base);
   --interactive-accent-tint: var(--color-grey-tint);
   --interactive-accent-text: var(--color-grey-text);
   --interactive-accent-hover: var(--color-grey-tint);
 }
-/* #endregion */
-/* #region  [Accent Color Presets] Dark Theme */
-.theme-dark.pt-accent-color-custom-dt {
+body.theme-dark {
+  --window-border: var(--background-primary-alt);
+  --page-background-color: var(--background-secondary);
+  --table-border-color: var(--background-primary-alt);
+  --text-selection: var(--background-primary-alt);
+  --scroll-bar-thumb: var(--background-primary-alt);
+  /* #region  [Accent Color Presets] Dark Theme */
+  /* #endregion */
+}
+body.theme-dark.pt-highlight-text-light-dt {
+  --highlight-text-normal: var(--text-normal);
+}
+body.theme-dark.pt-highlight-text-dark-dt {
+  --highlight-text-normal: var(--background-primary);
+}
+body.theme-dark.pt-highlight-text-accent-dt {
+  --highlight-text-normal: var(--interactive-accent-text);
+}
+body.theme-dark.pt-highlight-text-custom-dt {
+  --highlight-text-normal: var(--highlight-text-accent-custom-dt);
+}
+body.theme-dark.pt-accent-color-custom-dt {
   --interactive-accent-base: var(--color-accent-base-dt);
   --interactive-accent-tint: var(--color-accent-tint-dt);
   --interactive-accent-text: var(--color-accent-text-dt);
   --interactive-accent-hover: var(--color-accent-tint-dt);
 }
-.theme-dark.pt-accent-color-red-dt {
+body.theme-dark.pt-accent-color-red-dt {
   --interactive-accent-base: var(--color-red-base);
   --interactive-accent-tint: var(--color-red-tint);
   --interactive-accent-text: var(--color-red-text);
   --interactive-accent-hover: var(--color-red-tint);
 }
-.theme-dark.pt-accent-color-orange-dt {
+body.theme-dark.pt-accent-color-orange-dt {
   --interactive-accent-base: var(--color-orange-base);
   --interactive-accent-tint: var(--color-orange-tint);
   --interactive-accent-text: var(--color-orange-text);
   --interactive-accent-hover: var(--color-orange-tint);
 }
-.theme-dark.pt-accent-color-yellow-dt {
+body.theme-dark.pt-accent-color-yellow-dt {
   --interactive-accent-base: var(--color-yellow-base);
   --interactive-accent-tint: var(--color-yellow-tint);
   --interactive-accent-text: var(--color-yellow-text);
   --interactive-accent-hover: var(--color-yellow-tint);
 }
-.theme-dark.pt-accent-color-green-dt {
+body.theme-dark.pt-accent-color-green-dt {
   --interactive-accent-base: var(--color-green-base);
   --interactive-accent-tint: var(--color-green-tint);
   --interactive-accent-text: var(--color-green-text);
   --interactive-accent-hover: var(--color-green-tint);
 }
-.theme-dark.pt-accent-color-mint-dt {
+body.theme-dark.pt-accent-color-mint-dt {
   --interactive-accent-base: var(--color-mint-base);
   --interactive-accent-tint: var(--color-mint-tint);
   --interactive-accent-text: var(--color-mint-text);
   --interactive-accent-hover: var(--color-mint-tint);
 }
-.theme-dark.pt-accent-color-aqua-dt {
+body.theme-dark.pt-accent-color-aqua-dt {
   --interactive-accent-base: var(--color-aqua-base);
   --interactive-accent-tint: var(--color-aqua-tint);
   --interactive-accent-text: var(--color-aqua-text);
   --interactive-accent-hover: var(--color-aqua-tint);
 }
-.theme-dark.pt-accent-color-blue-dt {
+body.theme-dark.pt-accent-color-blue-dt {
   --interactive-accent-base: var(--color-blue-base);
   --interactive-accent-tint: var(--color-blue-tint);
   --interactive-accent-text: var(--color-blue-text);
   --interactive-accent-hover: var(--color-blue-tint);
 }
-.theme-dark.pt-accent-color-purple-dt {
+body.theme-dark.pt-accent-color-purple-dt {
   --interactive-accent-base: var(--color-purple-base);
   --interactive-accent-tint: var(--color-purple-tint);
   --interactive-accent-text: var(--color-purple-text);
   --interactive-accent-hover: var(--color-purple-tint);
 }
-.theme-dark.pt-accent-color-pink-dt {
+body.theme-dark.pt-accent-color-pink-dt {
   --interactive-accent-base: var(--color-pink-base);
   --interactive-accent-tint: var(--color-pink-tint);
   --interactive-accent-text: var(--color-pink-text);
   --interactive-accent-hover: var(--color-pink-tint);
 }
-.theme-dark.pt-accent-color-grey-dt {
+body.theme-dark.pt-accent-color-grey-dt {
   --interactive-accent-base: var(--color-grey-base);
   --interactive-accent-tint: var(--color-grey-tint);
   --interactive-accent-text: var(--color-grey-text);
@@ -8155,6 +8155,12 @@ div.style-settings-heading[data-level="0"] + .style-settings-container {
 div.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
   margin-left: 0;
 }
+.theme-light div.style-settings-heading[data-level="0"] + .style-settings-container {
+  background-color: var(--background-tertiary);
+}
+.theme-dark div.style-settings-heading[data-level="0"] + .style-settings-container {
+  background-color: var(--background-secondary-alt);
+}
 div.style-settings-heading[data-level="0"].is-collapsed {
   padding-bottom: 8px;
   margin-bottom: 15px;
@@ -8167,12 +8173,6 @@ div.style-settings-heading[data-level="0"].is-collapsed {
 }
 .theme-dark div.style-settings-heading[data-level="0"].is-collapsed {
   background-color: var(--background-tertiary);
-}
-.theme-light div.style-settings-heading[data-level="0"] + .style-settings-container {
-  background-color: var(--background-tertiary);
-}
-.theme-dark div.style-settings-heading[data-level="0"] + .style-settings-container {
-  background-color: var(--background-secondary-alt);
 }
 div.style-settings-heading[data-level="1"] .setting-item-description {
   padding-left: 10px;
@@ -8219,6 +8219,16 @@ div.workspace-leaf-content[data-type=style-settings] .view-content {
 }
 div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
   flex-direction: row;
+}
+div.workspace-leaf-content[data-type=style-settings] .view-content .setting-item:first-of-type::before {
+  display: block;
+  width: fit-content;
+  height: -webkit-fill-available;
+  padding: 2px 8px;
+  content: "⚠️ If you upgraded from Prism v1.5.2 or older to Prism v2.0.0+, a full Style Settings Reset and Obsidian restart is required!";
+  background-color: var(--color-yellow-base);
+  border: var(--border-size) solid var(--color-yellow-tint);
+  border-radius: var(--border-radius);
 }
 .setting-item-description div small {
   display: block;

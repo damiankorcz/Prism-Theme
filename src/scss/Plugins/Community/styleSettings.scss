@@ -19,6 +19,14 @@ div.style-settings-heading[data-level="0"] {
 		.style-settings-collapse-indicator {
 			margin-left: 0;
 		}
+
+		.theme-light & {
+			background-color: var(--background-tertiary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
 	}
 
 	&.is-collapsed {
@@ -27,26 +35,13 @@ div.style-settings-heading[data-level="0"] {
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
-	}
-}
+		.theme-light & {
+			background-color: var(--background-primary-alt);
+		}
 
-div.style-settings-heading[data-level="0"].is-collapsed {
-	.theme-light & {
-		background-color: var(--background-primary-alt);
-	}
-
-	.theme-dark & {
-		background-color: var(--background-tertiary);
-	}
-}
-
-div.style-settings-heading[data-level="0"] + .style-settings-container {
-	.theme-light & {
-		background-color: var(--background-tertiary);
-	}
-
-	.theme-dark & {
-		background-color: var(--background-secondary-alt);
+		.theme-dark & {
+			background-color: var(--background-tertiary);
+		}
 	}
 }
 
@@ -115,6 +110,17 @@ div.workspace-leaf-content[data-type="style-settings"] {
 		.style-settings-container div.setting-item:not(.setting-item-heading) {
 			flex-direction: row;
 		}
+	}
+
+	.view-content .setting-item:first-of-type::before {
+		display: block;
+		width: fit-content;
+		height: -webkit-fill-available;
+		padding: 2px 8px;
+		content: "⚠️ If you upgraded from Prism v1.5.2 or older to Prism v2.0.0+, a full Style Settings Reset and Obsidian restart is required!";
+		background-color: var(--color-yellow-base);
+		border: var(--border-size) solid var(--color-yellow-tint);
+		border-radius: var(--border-radius);
 	}
 }
 
