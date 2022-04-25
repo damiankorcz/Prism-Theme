@@ -8,25 +8,8 @@
 	<br />
 	<br />
 	<a href="https://www.buymeacoffee.com/DamianKorcz"><img src="https://img.buymeacoffee.com/button-api/?text=Support the Development!&emoji=&slug=DamianKorcz&button_colour=4f4f4f&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
+	<br />
 </div>
-
-<hr />
-<div align="center">
-	<b>
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Key-Features">Key Features</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Screenshots">Screenshots</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Getting-Started">Getting Started</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Supported-Plugins">Supported Plugins</a> •
-		<a href="https://github.com/damiankorcz/Prism-Theme#%EF%B8%8F-snippets">Snippets</a> •
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Documentation">Documentation</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contributing">Contributing</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Contact">Contact</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-Acknowledgments">Acknowledgments</a> • 
-		<a href="https://github.com/damiankorcz/Obsidian-Prism#-License">License</a>
-</b>
-</div>
-<hr />
-
 
 ## ✨ Key Features 
 - 8 Hand Crafted Light / Dark Colour Schemes.
