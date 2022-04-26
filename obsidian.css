@@ -3707,6 +3707,23 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 .installed-plugins-container {
   border-top: unset;
 }
+.installed-plugins-container .setting-item.mod-toggle .setting-item-info .setting-item-name {
+  width: fit-content;
+}
+.installed-plugins-container .setting-item.mod-toggle .setting-item-info .setting-item-description > div:not(:last-child) {
+  display: inline-block;
+  width: fit-content;
+}
+.installed-plugins-container .setting-item.mod-toggle .setting-item-info .setting-item-description > div:first-child::after {
+  margin: 0 8px;
+  content: "-";
+}
+.installed-plugins-container .setting-item.mod-toggle .setting-item-info .setting-item-description > div:nth-child(2):not(:last-child)::first-letter {
+  text-transform: lowercase;
+}
+.installed-plugins-container .setting-item.mod-toggle .setting-item-info .setting-item-description > div:last-child {
+  width: fit-content;
+}
 .setting-item.setting-item-heading:not(.style-settings-heading) {
   padding: 10px 0;
   margin-bottom: 5px;
