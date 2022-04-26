@@ -1,4 +1,4 @@
-![Main Screenshot](https://github.com/damiankorcz/Prism-Theme/blob/main/assets/screenshots/Community%20Themes%20Screenshot.png)
+![Main Screenshot](https://github.com/damiankorcz/Prism-Theme/blob/main/assets/screenshots/Github%20Hero%20Image.png)
 
 <div align="center">
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/releases"><img src="https://img.shields.io/github/v/release/damiankorcz/Obsidian-Prism?style=for-the-badge&color=%23A47B61&labelColor=%23252525&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA1klEQVRIiWNgoDFgXJjpXU5LC1gYGP930NYCBgYGfV1NBn1dTaoafPHydYaLl68zMFHVVCyA5hawMDAgvEMbCxj/dzIwMNgw/Ge0FhMVpoqhr16/ZWBg/H+UgYHhCCMDAwPDwiyvBgYGhvq4qCCqWLBo2ToGBgaGxvhp2xroEwf4wKvXbxhevX6HVU5MTJhBTAR/sBK04P6DJww3b9/DKqeupkS5BeamBgzmpgaElOEEQz+jjVowagHlACWjQQsp6lvwj4npANO/f1Q1+B8T0wGqGogLAADmITOhp5zsqQAAAABJRU5ErkJggg==" /></a>
