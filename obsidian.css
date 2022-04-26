@@ -7963,6 +7963,9 @@ div.kanban-plugin__lane-form-wrapper {
 .theme-light div.kanban-plugin__action-confirm-text, .theme-dark div.kanban-plugin__action-confirm-text {
   color: var(--text-normal);
 }
+.kanban-plugin p {
+  font-family: var(--font-text-theme);
+}
 .theme-light button.kanban-plugin__new-item-button:hover,
 .theme-dark button.kanban-plugin__new-item-button:hover {
   font-variation-settings: "wght" 600;
@@ -8562,7 +8565,7 @@ div.style-settings-heading {
 /* #endregion */
 /* #region  [Plugin - Community] Sliding Panes */
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf {
-  box-shadow: none;
+  box-shadow: unset;
 }
 body.plugin-sliding-panes-rotate-header .workspace > .mod-root {
   padding-right: 8px;
@@ -8594,6 +8597,9 @@ body.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf
 }
 body.plugin-sliding-panes-rotate-header .status-bar {
   margin-top: 8px;
+}
+body.plugin-sliding-panes-stacking .workspace > .mod-root > div.workspace-leaf {
+  box-shadow: unset;
 }
 /* #endregion */
 /* #region  [Plugin - Community] cMenu */
