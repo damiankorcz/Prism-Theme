@@ -538,6 +538,32 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 
 .installed-plugins-container {
 	border-top: unset;
+
+	.setting-item.mod-toggle {
+		.setting-item-info {
+			.setting-item-name {
+				width: fit-content;
+			}
+
+			.setting-item-description > div:not(:last-child) {
+				display: inline-block;
+				width: fit-content;
+			}
+
+			.setting-item-description > div:first-child::after {
+				margin: 0 8px;
+				content: "-";
+			}
+
+			.setting-item-description > div:nth-child(2):not(:last-child)::first-letter {
+				text-transform: lowercase;
+			}
+
+			.setting-item-description > div:last-child {
+				width: fit-content;
+			}
+		}
+	}
 }
 
 .setting-item.setting-item-heading:not(.style-settings-heading) {
