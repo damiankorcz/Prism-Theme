@@ -230,6 +230,7 @@ body.theme-dark {
   --highlight-text-accent-custom-lt: hsl(0 0% 100%);
   --highlight-text-accent-custom-dt: hsl(0 0% 0%);
   --interactive-accent: var(--interactive-accent-base);
+  --text-accent-hover: var(--interactive-accent-hover);
   --color-accent-h-lt: 0;
   --color-accent-s-lt: 60%;
   --color-accent-l-base-lt: 82%;
@@ -4080,6 +4081,36 @@ input[type=range]::-webkit-slider-thumb {
   margin: unset;
   text-align: left;
   word-wrap: break-word;
+}
+.empty-state-container {
+  width: fit-content;
+  padding: 16px 28px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--window-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+}
+.empty-state-container .empty-state-title {
+  margin: 8px 0;
+  font-size: 28px;
+}
+.empty-state-container .empty-state-title:first-child {
+  display: block;
+}
+.empty-state-container .empty-state-title .empty-state-close-button {
+  position: absolute;
+  top: -20px;
+  right: -24px;
+  left: unset;
+}
+.empty-state-container .empty-state-action {
+  color: var(--interactive-accent-text);
+}
+.empty-state-container .empty-state-action:hover {
+  color: var(--interactive-accent-hover);
+}
+.empty-state-container .empty-state-action-list {
+  margin-top: 8px;
 }
 /* #endregion */
 /* #region  [UI] Startup */
