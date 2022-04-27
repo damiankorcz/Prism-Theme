@@ -6676,6 +6676,9 @@ div.graph-controls.is-close {
 body.theme-light.pt-background-color-lt {
   background: var(--background-color-lt);
 }
+body.theme-light.pt-background-custom-lt {
+  background: var(--background-custom-lt);
+}
 body.theme-light.pt-background-image-lt {
   background: var(--background-image-lt);
   background-repeat: var(--background-repeat-lt);
@@ -6684,8 +6687,11 @@ body.theme-light.pt-background-image-lt {
   background-size: var(--background-size-lt);
   backdrop-filter: blur(var(--background-blur-lt));
 }
-body.theme-dark.pt-background-color-dt {
+body.theme-dark.pt-background-default-dt {
   background: var(--background-color-dt);
+}
+body.theme-dark.pt-background-custom-dt {
+  background: var(--background-custom-dt);
 }
 body.theme-dark.pt-background-image-dt {
   background: var(--background-image-dt);
@@ -9847,20 +9853,23 @@ settings:
         id: background-type-lt
         title: Background Type
         description: Select what type of background you would like in the Light Theme.
-        default: pt-background-color-lt
+        default: pt-background-default-lt
         level: 2
         type: class-select
         options:
             -
-                label: Solid Color
+                label: Default
                 value: pt-background-color-lt
+            -
+                label: Custom Color
+                value: pt-background-custom-lt
             -
                 label: Image
                 value: pt-background-image-lt
     -
-        id: background-color-lt
-        title: Background Solid Color
-        description: Make sure you selected 'Solid Color' in Light Theme Background Type for this to work.
+        id: background-custom-lt
+        title: Background Custom Color
+        description: Make sure you selected 'Custom Color' in Light Theme Background Type for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -9915,20 +9924,23 @@ settings:
         id: background-type-dt
         title: Background Type
         description: Select what type of background you would like in the Dark Theme.
-        default: pt-background-color-dt
+        default: pt-background-default-dt
         level: 2
         type: class-select
         options:
             -
-                label: Solid Color
-                value: pt-background-color-dt
+                label: Default
+                value: pt-background-default-dt
+            -
+                label: Custom Color
+                value: pt-background-custom-dt
             -
                 label: Image
                 value: pt-background-image-dt
     -
-        id: background-color-dt
-        title: Background Solid Color
-        description: Make sure you selected 'Solid Color' in Dark Theme Background Type for this to work.
+        id: background-custom-dt
+        title: Background Custom Color
+        description: Make sure you selected 'Custom Color' in Dark Theme Background Type for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -9969,7 +9981,7 @@ settings:
         default: center
     -
         id: background-size-dt
-        title: ackground Size
+        title: Background Size
         description: Define the size of the Dark Theme Background Image. The image can be left to its natural size, stretched, or constrained to fit the available space.
         type: variable-text
         default: cover
