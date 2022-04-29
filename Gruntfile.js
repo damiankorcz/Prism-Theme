@@ -14,7 +14,7 @@ Copyright (c) 2020-2021 Stephan Ango (@kepano)
 See readme for more details:
 https://github.com/damiankorcz/obsidian-prism#-Build-Instructions
 */
-   
+
 /* Setup for my Windows Desktop */
 if (process.platform === "win32") {
     module.exports = function(grunt) {
