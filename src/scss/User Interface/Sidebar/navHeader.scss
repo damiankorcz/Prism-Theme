@@ -20,7 +20,8 @@
 .workspace-leaf-content[data-type="starred"] .nav-buttons-container,
 .workspace-leaf-content[data-type="backlink"] .nav-buttons-container,
 .workspace-leaf-content[data-type="tagfolder-view"] .nav-buttons-container,
-.embedded-backlinks .nav-buttons-container {
+.embedded-backlinks .nav-buttons-container,
+.internal-query .nav-buttons-container {
 	display: flex;
 	order: 2;
 	width: fit-content;
@@ -49,13 +50,22 @@
 	justify-content: center;
 	margin: 8px 0;
 }
+
+.workspace-leaf-content[data-type="markdown"] .internal-query div.nav-header {
+	position: absolute;
+	display: inline-flex;
+	justify-content: center;
+	margin: 8px 0 0;
+}
+
 /* #endregion */
 
 /* #region  [Nav Header] Buttons */
-.embedded-backlinks .nav-buttons-container {
+.embedded-backlinks .nav-buttons-container,
+.internal-query .nav-buttons-container {
 	background-color: var(--background-secondary-blur);
-	border: 1px solid var(--background-tertiary);
-	box-shadow: var(--drop-shadow);
+	border: 1px solid var(--window-border);
+	box-shadow: var(--drop-shadow-popup);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 }

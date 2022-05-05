@@ -1,17 +1,18 @@
 /* #region  [Plugin - Core] Backlinks */
-.theme-light .embedded-backlinks {
-	background-color: var(--background-color-lt);
-}
-
-.theme-dark .embedded-backlinks {
-	background-color: var(--background-color-dt);
-}
-
 .embedded-backlinks {
 	min-height: fit-content !important;
 	padding: unset;
 	margin: 0 auto;
+	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
+
+	.theme-light & {
+		background-color: var(--background-color-lt);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-color-dt);
+	}
 }
 
 .search-empty-state {
@@ -29,13 +30,13 @@
 	height: 100%;
 }
 
+.embedded-backlinks .search-input-container {
+	margin: 15px 8px;
+}
+
 .workspace-leaf-content[data-type="backlink"] .search-input-container {
 	padding-bottom: 8px;
 	margin: unset;
-}
-
-.embedded-backlinks .search-input-container {
-	margin: 15px 8px;
 }
 
 .workspace-leaf-content[data-type="backlink"] .backlink-pane {
