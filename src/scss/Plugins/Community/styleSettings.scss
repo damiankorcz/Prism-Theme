@@ -8,6 +8,10 @@ div.style-settings-heading[data-level="0"] {
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
 
+	.is-mobile & {
+		padding: 4px;
+	}
+
 	+ .style-settings-container {
 		padding: 45px 20px 20px;
 		margin-top: -30px;
@@ -30,7 +34,6 @@ div.style-settings-heading[data-level="0"] {
 	}
 
 	&.is-collapsed {
-		padding-bottom: 8px;
 		margin-bottom: 15px;
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);

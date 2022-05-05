@@ -1,11 +1,10 @@
 /* #region  [Titlebar] Base */
-.titlebar {
+body:not(.is-mobile) .titlebar {
 	height: 22px !important;
 	background-color: transparent;
 }
 
 .titlebar-inner {
-	font-variation-settings: "wght" 600;
 	font-weight: 600;
 	color: var(--text-normal);
 }
@@ -21,7 +20,6 @@
 	height: -webkit-fill-available;
 	padding-right: 8px;
 	padding-left: 8px;
-	font-variation-settings: "wght" 600;
 	font-weight: 600;
 	line-height: initial;
 	color: var(--interactive-accent-text);
@@ -61,7 +59,7 @@ body.pt-titlebar-hide-text .titlebar-text {
 /* #endregion */
 
 /* #region  [Titlebar] Default */
-.pt-default-titlebar {
+:not(.is-mobile).pt-default-titlebar {
 	.titlebar-text {
 		position: relative;
 		display: flex;
@@ -130,7 +128,7 @@ body.pt-titlebar-hide-text .titlebar-text {
 /* #endregion */
 
 /* #region  [Titlebar] Windows 10/11 */
-.pt-windows-titlebar {
+:not(.is-mobile).pt-windows-titlebar {
 	padding-top: 30px !important;
 
 	.titlebar {

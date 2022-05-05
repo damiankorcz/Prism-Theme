@@ -52,7 +52,7 @@
 	height: 16px;
 }
 
-.workspace-ribbon .side-dock-actions {
+.side-dock-actions {
 	margin-top: calc(var(--window-gap) / 2);
 	margin-bottom: auto;
 	background-color: var(--background-tertiary);
@@ -61,7 +61,7 @@
 	box-shadow: var(--drop-shadow);
 }
 
-.workspace-ribbon .side-dock-settings {
+.side-dock-settings {
 	margin-top: 10px;
 	background-color: var(--background-tertiary);
 	border: 1px solid var(--window-border);
@@ -77,6 +77,7 @@
 // Padding and margin around the buttons in the side ribbon
 .side-dock-ribbon-action {
 	display: flex;
+	justify-content: center;
 	padding: 10px;
 
 	&:not(:last-child) {
@@ -92,5 +93,30 @@
 .side-dock-ribbon-tab:hover,
 .side-dock-ribbon-action:hover {
 	color: var(--interactive-accent-hover);
+}
+
+body.is-mobile {
+	.workspace-drawer-ribbon {
+		width: 40px;
+		height: -webkit-fill-available;
+		padding: 0 4px 0 0;
+		background-color: unset;
+	}
+
+	.side-dock-actions {
+		margin-top: unset;
+	}
+
+	.side-dock-ribbon {
+		align-items: center;
+	}
+
+	.side-dock-ribbon-action {
+		padding: 10px 6px;
+	}
+
+	.workspace-drawer-active-tab-container {
+		padding: unset;
+	}
 }
 /* #endregion */

@@ -1,13 +1,129 @@
 /* #region  [UI] Settings */
-.modal-bg {
+.modal-bg,
+.workspace-drawer-backdrop {
 	background: var(--background-primary);
-	opacity: 0.4;
+	opacity: 0.4 !important;
 }
 
 .modal {
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
+}
+
+.is-mobile {
+	.modal {
+		margin: 8px 0;
+		border-radius: var(--border-radius);
+	}
+
+	.modal,
+	.prompt,
+	.suggestion-container {
+		right: 0;
+		left: 0;
+		width: 95vw;
+		max-width: 1100px;
+		height: 80vh;
+		max-height: 80vh;
+		padding: 4px;
+		margin: 4px auto;
+		border-radius: var(--border-radius);
+	}
+
+	.prompt-results {
+		padding: 0 4px 0 0;
+	}
+
+	.suggestion-item {
+		font-size: 16px;
+
+		.suggestion-prefix {
+			font-size: 12px;
+		}
+	}
+
+	.suggestion {
+		padding-right: 4px;
+	}
+
+	.modal.mod-community-plugin,
+	.modal.mod-community-theme,
+	.modal.mod-image-lightbox,
+	.modal.mod-settings {
+		width: 95vw;
+		max-width: 1100px;
+		height: 80vh;
+		max-height: 80vh;
+	}
+
+	.modal-close-button {
+		top: 5px;
+		right: 10px;
+		display: block;
+	}
+
+	.modal.mod-settings .vertical-tab-header,
+	.modal.mod-settings .vertical-tab-content-container {
+		position: unset;
+		top: unset;
+		right: unset;
+		left: unset;
+	}
+
+	.modal.mod-settings .vertical-tab-content {
+		height: calc(100% - 15px);
+		padding: 25px 10px 10px;
+		margin-top: -26px;
+		background-color: unset;
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.modal-setting-back-button {
+		position: relative;
+		z-index: var(--layer-cover);
+		padding: 4px 8px;
+		background: var(--background-primary);
+		border-bottom: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.setting-item:not(.style-settings-heading) {
+		padding: 10px 0;
+	}
+
+	.modal-content {
+		padding: unset;
+		margin: 0 4px 4px;
+	}
+
+	.search-input-container {
+		width: -webkit-fill-available;
+		margin: unset;
+	}
+
+	.setting-item-control button:not(:last-of-type) {
+		margin-right: 4px;
+	}
+
+	.setting-item-control select,
+	.setting-item-control button {
+		align-items: center;
+		padding: 8px;
+		text-align: center;
+	}
+
+	.modal.mod-settings .vertical-tab-nav-item {
+		padding: 0 8px;
+		font-size: 16px;
+	}
+
+	.modal.mod-settings .vertical-tab-nav-item:not(:last-of-type) {
+		margin-bottom: 8px;
+	}
 }
 
 .modal.modal-style-settings {
@@ -17,7 +133,7 @@
 }
 
 .modal.mod-settings {
-	width: 80vw;
+	width: 85vw;
 	max-width: 1400px;
 	height: 80vh;
 	max-height: 1000px;
@@ -33,7 +149,7 @@
 }
 
 .modal.mod-settings .horizontal-tab-content,
-.vertical-tab-content {
+body:not(.is-mobile) .vertical-tab-content {
 	padding: 30px;
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
@@ -41,12 +157,19 @@
 }
 
 .modal.mod-settings .vertical-tab-header {
-	flex: 0 0 220px;
-	height: unset;
-	padding: 0;
-	padding-right: 8px;
-	margin: 0 15px 15px;
-	background-color: unset;
+	body:not(.is-mobile) & {
+		flex: 0 0 220px;
+		height: unset;
+		padding: 0;
+		padding-right: 8px;
+		margin: 0 15px 15px;
+		background-color: unset;
+	}
+
+	.is-mobile & {
+		padding-right: 4px;
+		background-color: unset;
+	}
 }
 
 .modal.mod-settings .vertical-tabs-container {
@@ -70,12 +193,15 @@
 		margin: 7px 15px;
 		font-size: 14px;
 		color: var(--interactive-accent-text);
-		content: "Prism Theme v2.0.1";
 		content: "Prism v2.1.0";
 		background: var(--background-secondary);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
+
+		.is-mobile & {
+			margin: 7px 4px;
+		}
 	}
 
 	&::after {
@@ -165,6 +291,10 @@
 	border-bottom: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+
+	.is-mobile & {
+		padding: 4px;
+	}
 }
 
 .modal-content.community-plugin {
@@ -388,6 +518,7 @@ select.dropdown {
 
 .modal.mod-community-theme,
 .modal.mod-image-lightbox {
+	width: 85vw;
 	max-width: 1400px;
 	height: 80vh;
 	min-height: unset;
@@ -395,6 +526,10 @@ select.dropdown {
 	padding: 0 15px 15px;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
+
+	.is-mobile & {
+		padding: unset;
+	}
 
 	.theme-light & {
 		background-color: var(--background-color-lt);
@@ -408,6 +543,13 @@ select.dropdown {
 .modal.mod-community-theme .modal-content {
 	padding: 0;
 	margin-top: 0;
+
+	.is-mobile & {
+		.modal-title,
+		.community-theme-container {
+			margin-right: 4px;
+		}
+	}
 }
 
 .modal.mod-image-lightbox .modal-content {
@@ -455,6 +597,25 @@ img.community-theme-lightbox {
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+
+	.is-mobile & {
+		width: 255px;
+		padding: 4px;
+		margin: 4px;
+
+		.community-theme-title {
+			margin-top: 4px;
+		}
+
+		.community-theme-info {
+			font-size: 0.8em;
+
+			.clickable-icon {
+				align-items: center;
+				height: 23px;
+			}
+		}
+	}
 
 	&.is-selected,
 	&.is-selected .community-theme-info,
@@ -628,6 +789,11 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	background-color: var(--page-background-color);
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
+
+	.is-mobile & {
+		padding-top: 35px;
+		margin: -25px 0 0;
+	}
 }
 
 .community-plugin-search {
@@ -637,12 +803,28 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 
+	.is-mobile & {
+		margin: unset;
+
+		.setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
+			margin-top: unset;
+		}
+	}
+
 	> .setting-item {
 		padding-left: unset;
+
+		.is-mobile & {
+			padding: 4px;
+		}
 
 		.search-input-container {
 			margin-right: 8px;
 			margin-left: unset;
+
+			.is-mobile & {
+				margin-right: unset;
+			}
 
 			input[type="text"] {
 				max-width: -webkit-fill-available;
@@ -652,6 +834,11 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 
 	&-results {
 		padding-right: 10px;
+
+		.is-mobile & {
+			padding-right: 4px;
+			margin: 4px;
+		}
 	}
 
 	&-summary {
@@ -662,6 +849,10 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 		background-color: var(--background-primary);
 		border-radius: var(--border-radius-small);
 		box-shadow: var(--drop-shadow);
+
+		.is-mobile & {
+			margin: 4px;
+		}
 	}
 }
 

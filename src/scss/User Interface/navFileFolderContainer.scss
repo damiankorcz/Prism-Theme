@@ -1,6 +1,5 @@
 /* #region  [UI] Nav File/Folder Container */
 .nav-folder .nav-folder-title-content {
-	font-variation-settings: "wght" 600;
 	font-weight: 600;
 	color: var(--text-normal);
 }
@@ -17,6 +16,10 @@
 	border-left: 0;
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
+
+	.is-mobile & {
+		margin-right: 4px;
+	}
 }
 
 .nav-folder.mod-root > .nav-file-title,
