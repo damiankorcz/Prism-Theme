@@ -520,6 +520,72 @@ settings:
         level: 3
         collapsed: true
     -
+        id: graph-lines-color-lt
+        title: Graph Lines Color
+        description: The color of a Graph lines connecting Graph Nodes.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-lines-presets-lt
+        title: Graph Lines Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-lines-default-lt
+        options:
+            -
+                label: Default
+                value: pt-graph-lines-default-lt
+            -
+                label: Custom
+                value: pt-graph-lines-custom-lt
+            -
+                label: Red
+                value: pt-graph-lines-red-lt
+            -
+                label: Orange
+                value: pt-graph-lines-orange-lt
+            -
+                label: Yellow
+                value: pt-graph-lines-yellow-lt
+            -
+                label: Green
+                value: pt-graph-lines-green-lt
+            -
+                label: Mint
+                value: pt-graph-lines-mint-lt
+            -
+                label: Aqua
+                value: pt-graph-lines-aqua-lt
+            -
+                label: Blue
+                value: pt-graph-lines-blue-lt
+            -
+                label: Purple
+                value: pt-graph-lines-purple-lt
+            -
+                label: Pink
+                value: pt-graph-lines-pink-lt
+            -
+                label: Grey
+                value: pt-graph-lines-grey-lt
+    -
+        id: color-custom-graph-lines-lt
+        title: Graph Lines Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Graph Lines Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#C4C7CA'
+    -
+        id: graph-lines-opacity-lt
+        title: Graph Lines Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: graph-note-color-lt
         title: Graph Note Color
         description: The color of a Graph Node representing a note file.
@@ -975,6 +1041,72 @@ settings:
         type: heading
         level: 3
         collapsed: true
+    -
+        id: graph-lines-color-dt
+        title: Graph Lines Color
+        description: The color of a Graph lines connecting Graph Nodes.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: graph-lines-presets-dt
+        title: Graph Lines Presets
+        type: class-select
+        allowEmpty: false
+        default: pt-graph-lines-default-dt
+        options:
+            -
+                label: Default
+                value: pt-graph-lines-default-dt
+            -
+                label: Custom
+                value: pt-graph-lines-custom-dt
+            -
+                label: Red
+                value: pt-graph-lines-red-dt
+            -
+                label: Orange
+                value: pt-graph-lines-orange-dt
+            -
+                label: Yellow
+                value: pt-graph-lines-yellow-dt
+            -
+                label: Green
+                value: pt-graph-lines-green-dt
+            -
+                label: Mint
+                value: pt-graph-lines-mint-dt
+            -
+                label: Aqua
+                value: pt-graph-lines-aqua-dt
+            -
+                label: Blue
+                value: pt-graph-lines-blue-dt
+            -
+                label: Purple
+                value: pt-graph-lines-purple-dt
+            -
+                label: Pink
+                value: pt-graph-lines-pink-dt
+            -
+                label: Grey
+                value: pt-graph-lines-grey-dt
+    -
+        id: color-custom-graph-lines-dt
+        title: Graph Lines Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Graph Lines Color Presets for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#C4C7CA'
+    -
+        id: graph-lines-opacity-dt
+        title: Graph Lines Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: graph-note-color-dt
         title: Graph Note Color
