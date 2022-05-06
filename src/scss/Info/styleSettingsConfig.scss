@@ -1705,6 +1705,319 @@ settings:
         default: 10
         format: px
     -
+        id: header-text-color
+        title: Header Text Color
+        description: Options for changing the color of each header type.
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: h1-text-color
+        title: Header 1 (H1) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h1-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h1-text-color-custom
+        title: Header 1 (H1) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 1 (H1) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h2-text-color
+        title: Header 2 (H2) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h2-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h2-text-color-custom
+        title: Header 2 (H2) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 2 (H2) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h3-text-color
+        title: Header 3 (H3) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h3-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h3-text-color-custom
+        title: Header 3 (H3) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 3 (H3) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h4-text-color
+        title: Header 4 (H4) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h4-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h4-text-color-custom
+        title: Header 4 (H4) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 4 (H4) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h5-text-color
+        title: Header 5 (H5) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h5-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h5-text-color-custom
+        title: Header 5 (H5) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 5 (H5) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h6-text-color
+        title: Header 6 (H6) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h6-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h6-text-color-custom
+        title: Header 6 (H6) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 6 (H6) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
         id: mark-highlight-styles
         title: Mark Highlight
         description: Adjusts the style used by the <mark> tag highlight system. Colors available = red, orange, yellow, green, mint, aqua, blue, purple, pink and grey. e.g. <mark class="red">Your text</mark>
