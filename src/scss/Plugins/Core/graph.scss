@@ -52,6 +52,14 @@ div.graph-controls.is-close {
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 
+	.theme-light & {
+		background-color: var(--background-tertiary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
+
 	&:not(:last-child) {
 		margin-bottom: 8px;
 	}
@@ -92,14 +100,6 @@ div.graph-controls.is-close {
 	}
 }
 
-.theme-light .graph-control-section {
-	background-color: var(--background-tertiary);
-}
-
-.theme-dark .graph-control-section {
-	background-color: var(--background-secondary-alt);
-}
-
 .graph-view.color-fill-focused {
 	color: var(--interactive-accent-tint);
 	opacity: 1;
@@ -129,193 +129,43 @@ div.graph-controls.is-close {
 /* #region  [Plugin - Core] Graph LT */
 .theme-light {
 	.graph-view.color-line {
-		opacity: var(--graph-lines-opacity-lt);
+		color: var(--graph-line-color-lt);
+		opacity: var(--graph-line-opacity-lt);
 	}
 
 	.graph-view.color-fill {
+		color: var(--graph-fill-color-lt);
 		opacity: var(--graph-fill-opacity-lt);
 	}
 
 	.graph-view.color-fill-focused {
+		color: var(--graph-fill-focused-color-lt);
 		opacity: var(--graph-fill-focused-opacity-lt);
 	}
 
 	.graph-view.color-fill-tag {
+		color: var(--graph-tag-color-lt);
 		opacity: var(--graph-tag-opacity-lt);
 	}
 
 	.graph-view.color-fill-attachment {
+		color: var(--graph-attachment-color-lt);
 		opacity: var(--graph-attachment-opacity-lt);
 	}
 
 	.graph-view.color-fill-unresolved {
+		color: var(--graph-unresolved-color-lt);
 		opacity: var(--graph-unresolved-opacity-lt);
 	}
 
 	.graph-view.color-fill-highlight {
+		color: var(--graph-highlight-color-lt);
 		opacity: var(--graph-highlight-opacity-lt);
 	}
 
 	.graph-view.color-line-highlight {
+		color: var(--graph-highlight-line-color-lt);
 		opacity: var(--graph-highlight-line-opacity-lt);
-	}
-
-	&.pt-graph-lines-default-lt .graph-view.color-line {
-		color: var(--background-secondary-alt);
-	}
-
-	&.pt-graph-lines-custom-lt .graph-view.color-line {
-		color: var(--color-custom-graph-lines-lt);
-	}
-
-	&.pt-graph-note-custom-lt .graph-view.color-fill {
-		color: var(--color-custom-graph-note-lt);
-	}
-
-	&.pt-graph-note-focused-accent-lt .graph-view.color-fill-focused {
-		color: var(--interactive-accent-tint);
-	}
-
-	&.pt-graph-note-focused-custom-lt .graph-view.color-fill-focused {
-		color: var(--color-custom-graph-fill-focused-lt);
-	}
-
-	&.pt-graph-tag-custom-lt .graph-view.color-fill-tag {
-		color: var(--color-custom-graph-tag-lt);
-	}
-
-	&.pt-graph-attachment-custom-lt .graph-view.color-fill-attachment {
-		color: var(--color-custom-graph-attachment-lt);
-	}
-
-	&.pt-graph-unresolved-custom-lt .graph-view.color-fill-unresolved {
-		color: var(--color-custom-graph-unresolved-lt);
-	}
-
-	&.pt-graph-highlight-accent-lt .graph-view.color-fill-highlight {
-		color: var(--interactive-accent-tint);
-	}
-
-	&.pt-graph-highlight-custom-lt .graph-view.color-fill-highlight {
-		color: var(--color-custom-graph-highlight-lt);
-	}
-
-	&.pt-graph-highlight-line-accent-lt .graph-view.color-line-highlight {
-		color: var(--interactive-accent-tint);
-	}
-
-	&.pt-graph-highlight-line-custom-lt .graph-view.color-line-highlight {
-		color: var(--color-custom-graph-highlight-line-lt);
-	}
-
-	&.pt-graph-lines-red-lt .graph-view.color-line,
-	&.pt-graph-note-red-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-red-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-red-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-red-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-red-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-red-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-red-lt .graph-view.color-line-highlight {
-		color: var(--color-red-tint);
-	}
-
-	&.pt-graph-lines-orange-lt .graph-view.color-line,
-	&.pt-graph-note-orange-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-orange-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-orange-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-orange-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-orange-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-orange-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-orange-lt .graph-view.color-line-highlight {
-		color: var(--color-orange-tint);
-	}
-
-	&.pt-graph-lines-yellow-lt .graph-view.color-line,
-	&.pt-graph-note-yellow-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-yellow-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-yellow-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-yellow-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-yellow-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-yellow-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-yellow-lt .graph-view.color-line-highlight {
-		color: var(--color-yellow-tint);
-	}
-
-	&.pt-graph-lines-green-lt .graph-view.color-line,
-	&.pt-graph-note-green-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-green-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-green-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-green-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-green-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-green-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-green-lt .graph-view.color-line-highlight {
-		color: var(--color-green-tint);
-	}
-
-	&.pt-graph-lines-mint-lt .graph-view.color-line,
-	&.pt-graph-note-mint-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-mint-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-mint-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-mint-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-mint-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-mint-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-mint-lt .graph-view.color-line-highlight {
-		color: var(--color-mint-tint);
-	}
-
-	&.pt-graph-lines-aqua-lt .graph-view.color-line,
-	&.pt-graph-note-aqua-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-aqua-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-aqua-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-aqua-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-aqua-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-aqua-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-aqua-lt .graph-view.color-line-highlight {
-		color: var(--color-aqua-tint);
-	}
-
-	&.pt-graph-lines-blue-lt .graph-view.color-line,
-	&.pt-graph-note-blue-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-blue-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-blue-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-blue-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-blue-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-blue-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-blue-lt .graph-view.color-line-highlight {
-		color: var(--color-blue-tint);
-	}
-
-	&.pt-graph-lines-purple-lt .graph-view.color-line,
-	&.pt-graph-note-purple-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-purple-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-purple-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-purple-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-purple-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-purple-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-purple-lt .graph-view.color-line-highlight {
-		color: var(--color-purple-tint);
-	}
-
-	&.pt-graph-lines-pink-lt .graph-view.color-line,
-	&.pt-graph-note-pink-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-pink-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-pink-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-pink-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-pink-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-pink-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-pink-lt .graph-view.color-line-highlight {
-		color: var(--color-pink-tint);
-	}
-
-	&.pt-graph-lines-grey-lt .graph-view.color-line,
-	&.pt-graph-note-grey-lt .graph-view.color-fill,
-	&.pt-graph-note-focused-grey-lt .graph-view.color-fill-focused,
-	&.pt-graph-tag-grey-lt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-grey-lt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-grey-lt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-grey-lt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-grey-lt .graph-view.color-line-highlight {
-		color: var(--color-grey-tint);
 	}
 }
 /* #endregion */
@@ -323,193 +173,43 @@ div.graph-controls.is-close {
 /* #region  [Plugin - Core] Graph DT */
 .theme-dark {
 	.graph-view.color-line {
-		opacity: var(--graph-lines-opacity-dt);
+		color: var(--graph-line-color-dt);
+		opacity: var(--graph-line-opacity-dt);
 	}
 
 	.graph-view.color-fill {
+		color: var(--graph-fill-color-dt);
 		opacity: var(--graph-fill-opacity-dt);
 	}
 
 	.graph-view.color-fill-focused {
+		color: var(--graph-fill-focused-color-dt);
 		opacity: var(--graph-fill-focused-opacity-dt);
 	}
 
 	.graph-view.color-fill-tag {
+		color: var(--graph-tag-color-dt);
 		opacity: var(--graph-tag-opacity-dt);
 	}
 
 	.graph-view.color-fill-attachment {
+		color: var(--graph-attachment-color-dt);
 		opacity: var(--graph-attachment-opacity-dt);
 	}
 
 	.graph-view.color-fill-unresolved {
+		color: var(--graph-unresolved-color-dt);
 		opacity: var(--graph-unresolved-opacity-dt);
 	}
 
 	.graph-view.color-fill-highlight {
+		color: var(--graph-highlight-color-dt);
 		opacity: var(--graph-highlight-opacity-dt);
 	}
 
 	.graph-view.color-line-highlight {
+		color: var(--graph-highlight-line-color-dt);
 		opacity: var(--graph-highlight-line-opacity-dt);
-	}
-
-	&.pt-graph-lines-default-dt .graph-view.color-line {
-		color: var(--background-primary-alt);
-	}
-
-	&.pt-graph-lines-custom-dt .graph-view.color-line {
-		color: var(--color-custom-graph-lines-dt);
-	}
-
-	&.pt-graph-note-custom-dt .graph-view.color-fill {
-		color: var(--color-custom-graph-note-dt);
-	}
-
-	&.pt-graph-note-focused-accent-dt .graph-view.color-fill-focused {
-		color: var(--interactive-accent-tint);
-	}
-
-	&.pt-graph-note-focused-custom-dt .graph-view.color-fill-focused {
-		color: var(--color-custom-graph-fill-focused-dt);
-	}
-
-	&.pt-graph-tag-custom-dt .graph-view.color-fill-tag {
-		color: var(--color-custom-graph-tag-dt);
-	}
-
-	&.pt-graph-attachment-custom-dt .graph-view.color-fill-attachment {
-		color: var(--color-custom-graph-attachment-dt);
-	}
-
-	&.pt-graph-unresolved-custom-dt .graph-view.color-fill-unresolved {
-		color: var(--color-custom-graph-unresolved-dt);
-	}
-
-	&.pt-graph-highlight-accent-dt .graph-view.color-fill-highlight {
-		color: var(--interactive-accent-tint);
-	}
-
-	&.pt-graph-highlight-custom-dt .graph-view.color-fill-highlight {
-		color: var(--color-custom-graph-highlight-dt);
-	}
-
-	&.pt-graph-highlight-line-accent-dt .graph-view.color-line-highlight {
-		color: var(--interactive-accent-tint);
-	}
-
-	&.pt-graph-highlight-line-custom-dt .graph-view.color-line-highlight {
-		color: var(--color-custom-graph-highlight-line-dt);
-	}
-
-	&.pt-graph-lines-red-dt .graph-view.color-line,
-	&.pt-graph-note-red-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-red-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-red-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-red-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-red-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-red-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-red-dt .graph-view.color-line-highlight {
-		color: var(--color-red-tint);
-	}
-
-	&.pt-graph-lines-orange-dt .graph-view.color-line,
-	&.pt-graph-note-orange-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-orange-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-orange-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-orange-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-orange-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-orange-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-orange-dt .graph-view.color-line-highlight {
-		color: var(--color-orange-tint);
-	}
-
-	&.pt-graph-lines-yellow-dt .graph-view.color-line,
-	&.pt-graph-note-yellow-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-yellow-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-yellow-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-yellow-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-yellow-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-yellow-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-yellow-dt .graph-view.color-line-highlight {
-		color: var(--color-yellow-tint);
-	}
-
-	&.pt-graph-lines-green-dt .graph-view.color-line,
-	&.pt-graph-note-green-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-green-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-green-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-green-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-green-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-green-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-green-dt .graph-view.color-line-highlight {
-		color: var(--color-green-tint);
-	}
-
-	&.pt-graph-lines-mint-dt .graph-view.color-line,
-	&.pt-graph-note-mint-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-mint-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-mint-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-mint-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-mint-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-mint-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-mint-dt .graph-view.color-line-highlight {
-		color: var(--color-mint-tint);
-	}
-
-	&.pt-graph-lines-aqua-dt .graph-view.color-line,
-	&.pt-graph-note-aqua-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-aqua-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-aqua-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-aqua-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-aqua-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-aqua-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-aqua-dt .graph-view.color-line-highlight {
-		color: var(--color-aqua-tint);
-	}
-
-	&.pt-graph-lines-blue-dt .graph-view.color-line,
-	&.pt-graph-note-blue-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-blue-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-blue-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-blue-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-blue-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-blue-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-blue-dt .graph-view.color-line-highlight {
-		color: var(--color-blue-tint);
-	}
-
-	&.pt-graph-lines-purple-dt .graph-view.color-line,
-	&.pt-graph-note-purple-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-purple-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-purple-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-purple-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-purple-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-purple-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-purple-dt .graph-view.color-line-highlight {
-		color: var(--color-purple-tint);
-	}
-
-	&.pt-graph-lines-pink-dt .graph-view.color-line,
-	&.pt-graph-note-pink-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-pink-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-pink-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-pink-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-pink-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-pink-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-pink-dt .graph-view.color-line-highlight {
-		color: var(--color-pink-tint);
-	}
-
-	&.pt-graph-lines-grey-dt .graph-view.color-line,
-	&.pt-graph-note-grey-dt .graph-view.color-fill,
-	&.pt-graph-note-focused-grey-dt .graph-view.color-fill-focused,
-	&.pt-graph-tag-grey-dt .graph-view.color-fill-tag,
-	&.pt-graph-attachment-grey-dt .graph-view.color-fill-attachment,
-	&.pt-graph-unresolved-grey-dt .graph-view.color-fill-unresolved,
-	&.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight,
-	&.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
-		color: var(--color-grey-tint);
 	}
 }
 /* #endregion */

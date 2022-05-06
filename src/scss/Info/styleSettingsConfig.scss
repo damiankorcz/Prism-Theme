@@ -520,57 +520,57 @@ settings:
         level: 3
         collapsed: true
     -
-        id: graph-lines-color-lt
+        id: pt-graph-lines-color-lt
         title: Graph Lines Color
         description: The color of a Graph lines connecting Graph Nodes.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-lines-presets-lt
-        title: Graph Lines Presets
-        type: class-select
+        id: graph-line-color-lt
+        title: Graph Line Presets
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-lines-default-lt
+        default: 'var(--background-secondary-alt)'
         options:
             -
                 label: Default
-                value: pt-graph-lines-default-lt
+                value: 'var(--background-secondary-alt)'
             -
                 label: Custom
-                value: pt-graph-lines-custom-lt
+                value: 'var(--graph-line-custom-color-lt)'
             -
                 label: Red
-                value: pt-graph-lines-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-lines-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-lines-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-lines-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-lines-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-lines-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-lines-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-lines-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-lines-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-lines-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-lines-lt
+        id: graph-line-custom-color-lt
         title: Graph Lines Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Lines Color Presets for this to work.
         type: variable-color
@@ -578,7 +578,7 @@ settings:
         opacity: false
         default: '#C4C7CA'
     -
-        id: graph-lines-opacity-lt
+        id: graph-line-opacity-lt
         title: Graph Lines Opacity
         type: variable-number-slider
         default: 1
@@ -586,54 +586,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-note-color-lt
+        id: pt-graph-note-color-lt
         title: Graph Note Color
         description: The color of a Graph Node representing a note file.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-note-color-presets-lt
+        id: graph-fill-color-lt
         title: Graph Note Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-note-grey-lt
+        default: 'var(--color-grey-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-note-custom-lt
+                value: 'var(--graph-note-custom-color-lt)'
             -
                 label: Red
-                value: pt-graph-note-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-note-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-note-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-note-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-note-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-note-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-note-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-note-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-note-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-note-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-note-lt
+        id: graph-note-custom-color-lt
         title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
         type: variable-color
@@ -649,57 +649,57 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-note-focused-color-lt
+        id: pt-graph-note-focused-color-lt
         title: Graph Note Focused Color
         description: The color of a Graph Node representing currently focused note file.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-note-focused-color-presets-lt
+        id: graph-fill-focused-color-lt
         title: Graph Note Focused Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-note-focused-accent-lt
+        default: 'var(--interactive-accent-tint)'
         options:
             -
                 label: Accent Color
-                value: pt-graph-note-focused-accent-lt
+                value: 'var(--interactive-accent-tint)'
             -
                 label: Custom
-                value: pt-graph-note-focused-custom-lt
+                value: 'var(--graph-note-focused-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-note-focused-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-note-focused-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-note-focused-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-note-focused-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-note-focused-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-note-focused-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-note-focused-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-note-focused-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-note-focused-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-note-focused-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-note-focused-lt
+        id: graph-note-focused-color-custom-lt
         title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
@@ -715,54 +715,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-tag-color-lt
+        id: pt-graph-tag-color-lt
         title: Graph Tag Color
         description: The color of a Graph Node representing a tag.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-tag-color-presets-lt
+        id: graph-tag-color-lt
         title: Graph Tag Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-tag-blue-lt
+        default: 'var(--color-blue-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-tag-custom-lt
+                value: 'var(--graph-tag-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-tag-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-tag-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-tag-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-tag-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-tag-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-tag-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-tag-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-tag-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-tag-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-tag-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-tag-lt
+        id: graph-tag-color-custom-lt
         title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
         type: variable-color
@@ -778,54 +778,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-attachment-color-lt
+        id: pt-graph-attachment-color-lt
         title: Graph Attachment Color
         description: The color of a Graph Node representing an attachment.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-attachment-color-presets-lt
+        id: graph-attachment-color-lt
         title: Graph Attachment Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-attachment-yellow-lt
+        default: 'var(--color-yellow-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-attachment-custom-lt
+                value: 'var(--graph-attachment-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-attachment-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-attachment-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-attachment-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-attachment-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-attachment-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-attachment-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-attachment-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-attachment-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-attachment-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-attachment-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-attachment-lt
+        id: graph-attachment-color-custom-lt
         title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
         type: variable-color
@@ -841,54 +841,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-unresolved-color-lt
+        id: pt-graph-unresolved-color-lt
         title: Graph Unresolved Color
         description: The color of a Graph Node representing an unresolved note.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-unresolved-color-presets-lt
+        id: graph-unresolved-color-lt
         title: Graph Unresolved Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-unresolved-red-lt
+        default: 'var(--color-red-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-unresolved-custom-lt
+                value: 'var(--graph-unresolved-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-unresolved-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-unresolved-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-unresolved-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-unresolved-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-unresolved-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-unresolved-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-unresolved-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-unresolved-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-unresolved-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-unresolved-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-unresolved-lt
+        id: graph-unresolved-color-custom-lt
         title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
@@ -904,57 +904,57 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-highlight-color-lt
+        id: pt-graph-highlight-color-lt
         title: Graph Highlight Color
         description: The color of a Graph Node when highlighted.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-highlight-color-presets-lt
+        id: graph-highlight-color-lt
         title: Graph Highlight Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-highlight-accent-lt
+        default: 'var(--interactive-accent-tint)'
         options:
             -
                 label: Accent Color
-                value: pt-graph-highlight-accent-lt
+                value: 'var(--interactive-accent-tint)'
             -
                 label: Custom
-                value: pt-graph-highlight-custom-lt
+                value: 'var(--graph-highlight-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-highlight-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-highlight-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-highlight-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-highlight-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-highlight-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-highlight-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-highlight-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-highlight-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-highlight-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-highlight-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-highlight-lt
+        id: graph-highlight-color-custom-lt
         title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -970,57 +970,57 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-highlight-line-color-lt
+        id: pt-graph-highlight-line-color-lt
         title: Graph Highlight Line Color
         description: The color of the lines connected to a highlighted Graph Node.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-highlight-line-color-presets-lt
+        id: graph-highlight-line-color-lt
         title: Graph Highlight Line Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-highlight-line-accent-lt
+        default: 'var(--interactive-accent-tint)'
         options:
             -
                 label: Accent Color
-                value: pt-graph-highlight-line-accent-lt
+                value: 'var(--interactive-accent-tint)'
             -
                 label: Custom
-                value: pt-graph-highlight-line-custom-lt
+                value: 'var(--graph-highlight-line-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-highlight-line-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-highlight-line-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-highlight-line-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-highlight-line-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-highlight-line-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-highlight-line-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-highlight-line-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-highlight-line-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-highlight-line-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-highlight-line-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-highlight-line-lt
+        id: graph-highlight-line-color-custom-lt
         title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
