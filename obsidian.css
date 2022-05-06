@@ -100,24 +100,25 @@
   --titlebar-background-color-lt: #EBECEF;
   --status-bar-background-color-lt: #EBECEF;
   --background-color-lt: #E6E6E6;
-  --color-custom-graph-note-lt: #C4C7CA;
-  --color-custom-graph-note-focused-lt: #8670FF;
-  --color-custom-graph-tag-lt: #619EFF;
-  --color-custom-graph-attachment-lt: #FDDB6D;
-  --color-custom-graph-unresolved-lt: #FF7070;
-  --color-custom-graph-highlight-lt: #8670FF;
-  --color-custom-graph-highlight-line-lt: #8670FF;
+  --graph-line-custom-color-lt: #C4C7CA;
+  --graph-note-custom-color-lt: #C4C7CA;
+  --graph-note-focused-custom-color-lt: #8670FF;
+  --graph-tag-custom-color-lt: #619EFF;
+  --graph-attachment-custom-color-lt: #FDDB6D;
+  --graph-unresolved-custom-color-lt: #FF7070;
+  --graph-highlight-custom-color-lt: #8670FF;
+  --graph-highlight-line-custom-color-lt: #8670FF;
   --color-accent-dt: #8C7FD7;
   --titlebar-background-color-dt: #2B2B2B;
   --status-bar-background-color-dt: #2B2B2B;
   --background-color-dt: #0D0D0D;
-  --color-custom-graph-note-dt: #878787;
-  --color-custom-graph-note-focused-dt: #4C3AB6;
-  --color-custom-graph-tag-dt: #3663AB;
-  --color-custom-graph-attachment-dt: #AF943C;
-  --color-custom-graph-unresolved-dt: #B63A3A;
-  --color-custom-graph-highlight-dt: #4C3AB6;
-  --color-custom-graph-highlight-line-dt: #4C3AB6;
+  --graph-note-custom-color-dt: #878787;
+  --graph-note-focused-custom-color-dt: #4C3AB6;
+  --graph-tag-custom-color-dt: #3663AB;
+  --graph-attachment-custom-color-dt: #AF943C;
+  --graph-unresolved-custom-color-dt: #B63A3A;
+  --graph-highlight-custom-color-dt: #4C3AB6;
+  --graph-highlight-line-custom-color-dt: #4C3AB6;
 }
 body {
   --font-interface-theme: "Source Sans 3", sans-serif;
@@ -6233,6 +6234,12 @@ div.graph-controls.is-close {
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
 }
+.theme-light .graph-control-section {
+  background-color: var(--background-tertiary);
+}
+.theme-dark .graph-control-section {
+  background-color: var(--background-secondary-alt);
+}
 .graph-control-section:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -6265,12 +6272,6 @@ div.graph-controls.is-close {
 .graph-control-section .setting-item.mod-search-setting .setting-item-control {
   padding-top: unset;
 }
-.theme-light .graph-control-section {
-  background-color: var(--background-tertiary);
-}
-.theme-dark .graph-control-section {
-  background-color: var(--background-secondary-alt);
-}
 .graph-view.color-fill-focused {
   color: var(--interactive-accent-tint);
   opacity: 1;
@@ -6293,186 +6294,70 @@ div.graph-controls.is-close {
 /* #endregion */
 /* #region  [Plugin - Core] Graph LT */
 .theme-light .graph-view.color-line {
-  opacity: var(--graph-lines-opacity-lt);
+  color: var(--graph-line-color-lt);
+  opacity: var(--graph-line-opacity-lt);
 }
 .theme-light .graph-view.color-fill {
+  color: var(--graph-fill-color-lt);
   opacity: var(--graph-fill-opacity-lt);
 }
 .theme-light .graph-view.color-fill-focused {
+  color: var(--graph-fill-focused-color-lt);
   opacity: var(--graph-fill-focused-opacity-lt);
 }
 .theme-light .graph-view.color-fill-tag {
+  color: var(--graph-tag-color-lt);
   opacity: var(--graph-tag-opacity-lt);
 }
 .theme-light .graph-view.color-fill-attachment {
+  color: var(--graph-attachment-color-lt);
   opacity: var(--graph-attachment-opacity-lt);
 }
 .theme-light .graph-view.color-fill-unresolved {
+  color: var(--graph-unresolved-color-lt);
   opacity: var(--graph-unresolved-opacity-lt);
 }
 .theme-light .graph-view.color-fill-highlight {
+  color: var(--graph-highlight-color-lt);
   opacity: var(--graph-highlight-opacity-lt);
 }
 .theme-light .graph-view.color-line-highlight {
+  color: var(--graph-highlight-line-color-lt);
   opacity: var(--graph-highlight-line-opacity-lt);
-}
-.theme-light.pt-graph-lines-default-lt .graph-view.color-line {
-  color: var(--background-secondary-alt);
-}
-.theme-light.pt-graph-lines-custom-lt .graph-view.color-line {
-  color: var(--color-custom-graph-lines-lt);
-}
-.theme-light.pt-graph-note-custom-lt .graph-view.color-fill {
-  color: var(--color-custom-graph-note-lt);
-}
-.theme-light.pt-graph-note-focused-accent-lt .graph-view.color-fill-focused {
-  color: var(--interactive-accent-tint);
-}
-.theme-light.pt-graph-note-focused-custom-lt .graph-view.color-fill-focused {
-  color: var(--color-custom-graph-fill-focused-lt);
-}
-.theme-light.pt-graph-tag-custom-lt .graph-view.color-fill-tag {
-  color: var(--color-custom-graph-tag-lt);
-}
-.theme-light.pt-graph-attachment-custom-lt .graph-view.color-fill-attachment {
-  color: var(--color-custom-graph-attachment-lt);
-}
-.theme-light.pt-graph-unresolved-custom-lt .graph-view.color-fill-unresolved {
-  color: var(--color-custom-graph-unresolved-lt);
-}
-.theme-light.pt-graph-highlight-accent-lt .graph-view.color-fill-highlight {
-  color: var(--interactive-accent-tint);
-}
-.theme-light.pt-graph-highlight-custom-lt .graph-view.color-fill-highlight {
-  color: var(--color-custom-graph-highlight-lt);
-}
-.theme-light.pt-graph-highlight-line-accent-lt .graph-view.color-line-highlight {
-  color: var(--interactive-accent-tint);
-}
-.theme-light.pt-graph-highlight-line-custom-lt .graph-view.color-line-highlight {
-  color: var(--color-custom-graph-highlight-line-lt);
-}
-.theme-light.pt-graph-lines-red-lt .graph-view.color-line, .theme-light.pt-graph-note-red-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-red-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-red-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-red-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-red-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-red-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-red-lt .graph-view.color-line-highlight {
-  color: var(--color-red-tint);
-}
-.theme-light.pt-graph-lines-orange-lt .graph-view.color-line, .theme-light.pt-graph-note-orange-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-orange-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-orange-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-orange-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-orange-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-orange-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-orange-lt .graph-view.color-line-highlight {
-  color: var(--color-orange-tint);
-}
-.theme-light.pt-graph-lines-yellow-lt .graph-view.color-line, .theme-light.pt-graph-note-yellow-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-yellow-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-yellow-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-yellow-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-yellow-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-yellow-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-yellow-lt .graph-view.color-line-highlight {
-  color: var(--color-yellow-tint);
-}
-.theme-light.pt-graph-lines-green-lt .graph-view.color-line, .theme-light.pt-graph-note-green-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-green-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-green-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-green-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-green-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-green-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-green-lt .graph-view.color-line-highlight {
-  color: var(--color-green-tint);
-}
-.theme-light.pt-graph-lines-mint-lt .graph-view.color-line, .theme-light.pt-graph-note-mint-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-mint-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-mint-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-mint-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-mint-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-mint-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-mint-lt .graph-view.color-line-highlight {
-  color: var(--color-mint-tint);
-}
-.theme-light.pt-graph-lines-aqua-lt .graph-view.color-line, .theme-light.pt-graph-note-aqua-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-aqua-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-aqua-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-aqua-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-aqua-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-aqua-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-aqua-lt .graph-view.color-line-highlight {
-  color: var(--color-aqua-tint);
-}
-.theme-light.pt-graph-lines-blue-lt .graph-view.color-line, .theme-light.pt-graph-note-blue-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-blue-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-blue-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-blue-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-blue-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-blue-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-blue-lt .graph-view.color-line-highlight {
-  color: var(--color-blue-tint);
-}
-.theme-light.pt-graph-lines-purple-lt .graph-view.color-line, .theme-light.pt-graph-note-purple-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-purple-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-purple-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-purple-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-purple-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-purple-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-purple-lt .graph-view.color-line-highlight {
-  color: var(--color-purple-tint);
-}
-.theme-light.pt-graph-lines-pink-lt .graph-view.color-line, .theme-light.pt-graph-note-pink-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-pink-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-pink-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-pink-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-pink-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-pink-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-pink-lt .graph-view.color-line-highlight {
-  color: var(--color-pink-tint);
-}
-.theme-light.pt-graph-lines-grey-lt .graph-view.color-line, .theme-light.pt-graph-note-grey-lt .graph-view.color-fill, .theme-light.pt-graph-note-focused-grey-lt .graph-view.color-fill-focused, .theme-light.pt-graph-tag-grey-lt .graph-view.color-fill-tag, .theme-light.pt-graph-attachment-grey-lt .graph-view.color-fill-attachment, .theme-light.pt-graph-unresolved-grey-lt .graph-view.color-fill-unresolved, .theme-light.pt-graph-highlight-grey-lt .graph-view.color-fill-highlight, .theme-light.pt-graph-highlight-line-grey-lt .graph-view.color-line-highlight {
-  color: var(--color-grey-tint);
 }
 /* #endregion */
 /* #region  [Plugin - Core] Graph DT */
 .theme-dark .graph-view.color-line {
-  opacity: var(--graph-lines-opacity-dt);
+  color: var(--graph-line-color-dt);
+  opacity: var(--graph-line-opacity-dt);
 }
 .theme-dark .graph-view.color-fill {
+  color: var(--graph-fill-color-dt);
   opacity: var(--graph-fill-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-focused {
+  color: var(--graph-fill-focused-color-dt);
   opacity: var(--graph-fill-focused-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-tag {
+  color: var(--graph-tag-color-dt);
   opacity: var(--graph-tag-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-attachment {
+  color: var(--graph-attachment-color-dt);
   opacity: var(--graph-attachment-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-unresolved {
+  color: var(--graph-unresolved-color-dt);
   opacity: var(--graph-unresolved-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-highlight {
+  color: var(--graph-highlight-color-dt);
   opacity: var(--graph-highlight-opacity-dt);
 }
 .theme-dark .graph-view.color-line-highlight {
+  color: var(--graph-highlight-line-color-dt);
   opacity: var(--graph-highlight-line-opacity-dt);
-}
-.theme-dark.pt-graph-lines-default-dt .graph-view.color-line {
-  color: var(--background-primary-alt);
-}
-.theme-dark.pt-graph-lines-custom-dt .graph-view.color-line {
-  color: var(--color-custom-graph-lines-dt);
-}
-.theme-dark.pt-graph-note-custom-dt .graph-view.color-fill {
-  color: var(--color-custom-graph-note-dt);
-}
-.theme-dark.pt-graph-note-focused-accent-dt .graph-view.color-fill-focused {
-  color: var(--interactive-accent-tint);
-}
-.theme-dark.pt-graph-note-focused-custom-dt .graph-view.color-fill-focused {
-  color: var(--color-custom-graph-fill-focused-dt);
-}
-.theme-dark.pt-graph-tag-custom-dt .graph-view.color-fill-tag {
-  color: var(--color-custom-graph-tag-dt);
-}
-.theme-dark.pt-graph-attachment-custom-dt .graph-view.color-fill-attachment {
-  color: var(--color-custom-graph-attachment-dt);
-}
-.theme-dark.pt-graph-unresolved-custom-dt .graph-view.color-fill-unresolved {
-  color: var(--color-custom-graph-unresolved-dt);
-}
-.theme-dark.pt-graph-highlight-accent-dt .graph-view.color-fill-highlight {
-  color: var(--interactive-accent-tint);
-}
-.theme-dark.pt-graph-highlight-custom-dt .graph-view.color-fill-highlight {
-  color: var(--color-custom-graph-highlight-dt);
-}
-.theme-dark.pt-graph-highlight-line-accent-dt .graph-view.color-line-highlight {
-  color: var(--interactive-accent-tint);
-}
-.theme-dark.pt-graph-highlight-line-custom-dt .graph-view.color-line-highlight {
-  color: var(--color-custom-graph-highlight-line-dt);
-}
-.theme-dark.pt-graph-lines-red-dt .graph-view.color-line, .theme-dark.pt-graph-note-red-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-red-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-red-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-red-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-red-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-red-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-red-dt .graph-view.color-line-highlight {
-  color: var(--color-red-tint);
-}
-.theme-dark.pt-graph-lines-orange-dt .graph-view.color-line, .theme-dark.pt-graph-note-orange-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-orange-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-orange-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-orange-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-orange-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-orange-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-orange-dt .graph-view.color-line-highlight {
-  color: var(--color-orange-tint);
-}
-.theme-dark.pt-graph-lines-yellow-dt .graph-view.color-line, .theme-dark.pt-graph-note-yellow-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-yellow-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-yellow-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-yellow-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-yellow-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-yellow-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-yellow-dt .graph-view.color-line-highlight {
-  color: var(--color-yellow-tint);
-}
-.theme-dark.pt-graph-lines-green-dt .graph-view.color-line, .theme-dark.pt-graph-note-green-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-green-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-green-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-green-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-green-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-green-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-green-dt .graph-view.color-line-highlight {
-  color: var(--color-green-tint);
-}
-.theme-dark.pt-graph-lines-mint-dt .graph-view.color-line, .theme-dark.pt-graph-note-mint-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-mint-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-mint-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-mint-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-mint-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-mint-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-mint-dt .graph-view.color-line-highlight {
-  color: var(--color-mint-tint);
-}
-.theme-dark.pt-graph-lines-aqua-dt .graph-view.color-line, .theme-dark.pt-graph-note-aqua-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-aqua-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-aqua-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-aqua-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-aqua-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-aqua-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-aqua-dt .graph-view.color-line-highlight {
-  color: var(--color-aqua-tint);
-}
-.theme-dark.pt-graph-lines-blue-dt .graph-view.color-line, .theme-dark.pt-graph-note-blue-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-blue-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-blue-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-blue-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-blue-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-blue-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-blue-dt .graph-view.color-line-highlight {
-  color: var(--color-blue-tint);
-}
-.theme-dark.pt-graph-lines-purple-dt .graph-view.color-line, .theme-dark.pt-graph-note-purple-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-purple-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-purple-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-purple-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-purple-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-purple-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-purple-dt .graph-view.color-line-highlight {
-  color: var(--color-purple-tint);
-}
-.theme-dark.pt-graph-lines-pink-dt .graph-view.color-line, .theme-dark.pt-graph-note-pink-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-pink-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-pink-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-pink-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-pink-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-pink-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-pink-dt .graph-view.color-line-highlight {
-  color: var(--color-pink-tint);
-}
-.theme-dark.pt-graph-lines-grey-dt .graph-view.color-line, .theme-dark.pt-graph-note-grey-dt .graph-view.color-fill, .theme-dark.pt-graph-note-focused-grey-dt .graph-view.color-fill-focused, .theme-dark.pt-graph-tag-grey-dt .graph-view.color-fill-tag, .theme-dark.pt-graph-attachment-grey-dt .graph-view.color-fill-attachment, .theme-dark.pt-graph-unresolved-grey-dt .graph-view.color-fill-unresolved, .theme-dark.pt-graph-highlight-grey-dt .graph-view.color-fill-highlight, .theme-dark.pt-graph-highlight-line-grey-dt .graph-view.color-line-highlight {
-  color: var(--color-grey-tint);
 }
 /* #endregion */
 /* #region  [Plugin - Core] Markdown */
@@ -7101,85 +6986,87 @@ div.graph-controls.is-close {
 }
 /* #endregion */
 /* #region  [Plugin - Theme] Headers Base */
-.markdown-preview-view h1 {
-  font-size: var(--h1-font-size);
+.markdown-rendered h1 {
   margin: var(--h1-margin-size) 0;
 }
-.markdown-preview-view h2 {
-  font-size: var(--h2-font-size);
+.markdown-rendered h2 {
   margin: var(--h2-margin-size) 0;
 }
-.markdown-preview-view h3 {
-  font-size: var(--h3-font-size);
+.markdown-rendered h3 {
   margin: var(--h3-margin-size) 0;
 }
-.markdown-preview-view h4 {
-  font-size: var(--h4-font-size);
+.markdown-rendered h4 {
   margin: var(--h4-margin-size) 0;
 }
-.markdown-preview-view h5 {
-  font-size: var(--h5-font-size);
+.markdown-rendered h5 {
   margin: var(--h5-margin-size) 0;
 }
-.markdown-preview-view h6 {
-  font-size: var(--h6-font-size);
+.markdown-rendered h6 {
   margin: var(--h6-margin-size) 0;
 }
-.cm-s-obsidian .HyperMD-header,
-.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-  line-height: 1.5;
+.cm-header-1,
+.markdown-source-view.mod-cm6 .HyperMD-header-1 {
+  line-height: calc(1em + var(--h1-margin-size));
 }
-.cm-header-1 {
+.cm-header-2,
+.markdown-source-view.mod-cm6 .HyperMD-header-2 {
+  line-height: calc(1em + var(--h2-margin-size));
+}
+.cm-header-3,
+.markdown-source-view.mod-cm6 .HyperMD-header-3 {
+  line-height: calc(1em + var(--h3-margin-size));
+}
+.cm-header-4,
+.markdown-source-view.mod-cm6 .HyperMD-header-4 {
+  line-height: calc(1em + var(--h4-margin-size));
+}
+.cm-header-5,
+.markdown-source-view.mod-cm6 .HyperMD-header-5 {
+  line-height: calc(1em + var(--h5-margin-size));
+}
+.cm-header-6,
+.markdown-source-view.mod-cm6 .HyperMD-header-6 {
+  line-height: calc(1em + var(--h6-margin-size));
+}
+.cm-header-1,
+.HyperMD-header-1,
+.markdown-rendered h1 {
   font-size: var(--h1-font-size);
+  color: var(--h1-text-color);
 }
-.cm-header-2 {
+.cm-header-2,
+.HyperMD-header-2,
+.markdown-rendered h2 {
   font-size: var(--h2-font-size);
+  color: var(--h2-text-color);
 }
-.cm-header-3 {
+.cm-header-3,
+.HyperMD-header-3,
+.markdown-rendered h3 {
   font-size: var(--h3-font-size);
+  color: var(--h3-text-color);
 }
-.cm-header-4 {
+.cm-header-4,
+.HyperMD-header-4,
+.markdown-rendered h4 {
   font-size: var(--h4-font-size);
+  color: var(--h4-text-color);
 }
-.cm-header-5 {
+.cm-header-5,
+.HyperMD-header-5,
+.markdown-rendered h5 {
   font-size: var(--h5-font-size);
+  color: var(--h5-text-color);
 }
-.cm-header-6 {
+.cm-header-6,
+.HyperMD-header-6,
+.markdown-rendered h6 {
   font-size: var(--h6-font-size);
-}
-.cm-s-obsidian.mod-cm6 .HyperMD-header-1 {
-  font-size: var(--h1-font-size);
-}
-.cm-s-obsidian.mod-cm6 .HyperMD-header-2 {
-  font-size: var(--h2-font-size);
-}
-.cm-s-obsidian.mod-cm6 .HyperMD-header-3 {
-  font-size: var(--h3-font-size);
-}
-.cm-s-obsidian.mod-cm6 .HyperMD-header-4 {
-  font-size: var(--h4-font-size);
-}
-.cm-s-obsidian.mod-cm6 .HyperMD-header-5 {
-  font-size: var(--h5-font-size);
-}
-.cm-s-obsidian.mod-cm6 .HyperMD-header-6 {
-  font-size: var(--h6-font-size);
-}
-.HyperMD-header-1 > span[role=presentation], .HyperMD-header-2 > span[role=presentation], .HyperMD-header-3 > span[role=presentation], .HyperMD-header-4 > span[role=presentation], .HyperMD-header-5 > span[role=presentation], .HyperMD-header-6 > span[role=presentation], .HyperMD-header-1.cm-line, .HyperMD-header-2.cm-line, .HyperMD-header-3.cm-line, .HyperMD-header-4.cm-line, .HyperMD-header-5.cm-line, .HyperMD-header-6.cm-line {
-  display: block;
-  font-weight: unset;
-  z-index: 1;
-}
-.markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-  position: relative;
-  z-index: 1;
-}
-.markdown-preview-view .heading-collapse-indicator {
-  margin-left: -34px;
+  color: var(--h6-text-color);
 }
 /* #endregion */
 /* #region  [Plugin - Theme] Background Base */
-body.theme-light.pt-background-color-lt {
+body.theme-light.pt-background-default-lt {
   background: var(--background-color-lt);
 }
 body.theme-light.pt-background-custom-lt {
@@ -8862,7 +8749,6 @@ div.kanban-plugin__item-title {
   overflow: visible;
 }
 div.kanban-plugin__item-title-wrapper {
-  font-family: var(--font-text);
   background: unset;
 }
 div.kanban-plugin__grow-wrap > textarea, div.kanban-plugin__grow-wrap::after {
@@ -8899,9 +8785,6 @@ div.kanban-plugin__lane-form-wrapper {
 }
 .theme-light div.kanban-plugin__action-confirm-text, .theme-dark div.kanban-plugin__action-confirm-text {
   color: var(--text-normal);
-}
-.kanban-plugin p {
-  font-family: var(--font-text);
 }
 .theme-light button.kanban-plugin__new-item-button:hover,
 .theme-dark button.kanban-plugin__new-item-button:hover {
@@ -10776,7 +10659,7 @@ settings:
         options:
             -
                 label: Default
-                value: pt-background-color-lt
+                value: pt-background-default-lt
             -
                 label: Custom Color
                 value: pt-background-custom-lt
@@ -10916,57 +10799,57 @@ settings:
         level: 3
         collapsed: true
     -
-        id: graph-lines-color-lt
+        id: pt-graph-lines-color-lt
         title: Graph Lines Color
         description: The color of a Graph lines connecting Graph Nodes.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-lines-presets-lt
-        title: Graph Lines Presets
-        type: class-select
+        id: graph-line-color-lt
+        title: Graph Line Presets
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-lines-default-lt
+        default: 'var(--background-secondary-alt)'
         options:
             -
                 label: Default
-                value: pt-graph-lines-default-lt
+                value: 'var(--background-secondary-alt)'
             -
                 label: Custom
-                value: pt-graph-lines-custom-lt
+                value: 'var(--graph-line-custom-color-lt)'
             -
                 label: Red
-                value: pt-graph-lines-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-lines-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-lines-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-lines-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-lines-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-lines-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-lines-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-lines-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-lines-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-lines-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-lines-lt
+        id: graph-line-custom-color-lt
         title: Graph Lines Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Lines Color Presets for this to work.
         type: variable-color
@@ -10974,7 +10857,7 @@ settings:
         opacity: false
         default: '#C4C7CA'
     -
-        id: graph-lines-opacity-lt
+        id: graph-line-opacity-lt
         title: Graph Lines Opacity
         type: variable-number-slider
         default: 1
@@ -10982,54 +10865,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-note-color-lt
+        id: pt-graph-note-color-lt
         title: Graph Note Color
         description: The color of a Graph Node representing a note file.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-note-color-presets-lt
+        id: graph-fill-color-lt
         title: Graph Note Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-note-grey-lt
+        default: 'var(--color-grey-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-note-custom-lt
+                value: 'var(--graph-note-custom-color-lt)'
             -
                 label: Red
-                value: pt-graph-note-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-note-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-note-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-note-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-note-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-note-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-note-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-note-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-note-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-note-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-note-lt
+        id: graph-note-custom-color-lt
         title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
         type: variable-color
@@ -11045,57 +10928,57 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-note-focused-color-lt
+        id: pt-graph-note-focused-color-lt
         title: Graph Note Focused Color
         description: The color of a Graph Node representing currently focused note file.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-note-focused-color-presets-lt
+        id: graph-fill-focused-color-lt
         title: Graph Note Focused Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-note-focused-accent-lt
+        default: 'var(--interactive-accent-tint)'
         options:
             -
                 label: Accent Color
-                value: pt-graph-note-focused-accent-lt
+                value: 'var(--interactive-accent-tint)'
             -
                 label: Custom
-                value: pt-graph-note-focused-custom-lt
+                value: 'var(--graph-note-focused-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-note-focused-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-note-focused-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-note-focused-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-note-focused-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-note-focused-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-note-focused-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-note-focused-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-note-focused-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-note-focused-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-note-focused-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-note-focused-lt
+        id: graph-note-focused-color-custom-lt
         title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
@@ -11111,54 +10994,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-tag-color-lt
+        id: pt-graph-tag-color-lt
         title: Graph Tag Color
         description: The color of a Graph Node representing a tag.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-tag-color-presets-lt
+        id: graph-tag-color-lt
         title: Graph Tag Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-tag-blue-lt
+        default: 'var(--color-blue-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-tag-custom-lt
+                value: 'var(--graph-tag-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-tag-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-tag-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-tag-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-tag-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-tag-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-tag-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-tag-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-tag-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-tag-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-tag-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-tag-lt
+        id: graph-tag-color-custom-lt
         title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
         type: variable-color
@@ -11174,54 +11057,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-attachment-color-lt
+        id: pt-graph-attachment-color-lt
         title: Graph Attachment Color
         description: The color of a Graph Node representing an attachment.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-attachment-color-presets-lt
+        id: graph-attachment-color-lt
         title: Graph Attachment Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-attachment-yellow-lt
+        default: 'var(--color-yellow-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-attachment-custom-lt
+                value: 'var(--graph-attachment-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-attachment-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-attachment-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-attachment-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-attachment-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-attachment-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-attachment-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-attachment-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-attachment-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-attachment-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-attachment-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-attachment-lt
+        id: graph-attachment-color-custom-lt
         title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
         type: variable-color
@@ -11237,54 +11120,54 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-unresolved-color-lt
+        id: pt-graph-unresolved-color-lt
         title: Graph Unresolved Color
         description: The color of a Graph Node representing an unresolved note.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-unresolved-color-presets-lt
+        id: graph-unresolved-color-lt
         title: Graph Unresolved Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-unresolved-red-lt
+        default: 'var(--color-red-tint)'
         options:
             -
                 label: Custom
-                value: pt-graph-unresolved-custom-lt
+                value: 'var(--graph-unresolved-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-unresolved-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-unresolved-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-unresolved-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-unresolved-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-unresolved-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-unresolved-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-unresolved-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-unresolved-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-unresolved-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-unresolved-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-unresolved-lt
+        id: graph-unresolved-color-custom-lt
         title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
@@ -11300,57 +11183,57 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-highlight-color-lt
+        id: pt-graph-highlight-color-lt
         title: Graph Highlight Color
         description: The color of a Graph Node when highlighted.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-highlight-color-presets-lt
+        id: graph-highlight-color-lt
         title: Graph Highlight Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-highlight-accent-lt
+        default: 'var(--interactive-accent-tint)'
         options:
             -
                 label: Accent Color
-                value: pt-graph-highlight-accent-lt
+                value: 'var(--interactive-accent-tint)'
             -
                 label: Custom
-                value: pt-graph-highlight-custom-lt
+                value: 'var(--graph-highlight-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-highlight-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-highlight-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-highlight-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-highlight-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-highlight-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-highlight-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-highlight-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-highlight-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-highlight-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-highlight-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-highlight-lt
+        id: graph-highlight-color-custom-lt
         title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -11366,57 +11249,57 @@ settings:
         max: 1
         step: 0.05
     -
-        id: graph-highlight-line-color-lt
+        id: pt-graph-highlight-line-color-lt
         title: Graph Highlight Line Color
         description: The color of the lines connected to a highlighted Graph Node.
         type: heading
         level: 4
         collapsed: true
     -
-        id: graph-highlight-line-color-presets-lt
+        id: graph-highlight-line-color-lt
         title: Graph Highlight Line Color Presets
-        type: class-select
+        type: variable-select
         allowEmpty: false
-        default: pt-graph-highlight-line-accent-lt
+        default: 'var(--interactive-accent-tint)'
         options:
             -
                 label: Accent Color
-                value: pt-graph-highlight-line-accent-lt
+                value: 'var(--interactive-accent-tint)'
             -
                 label: Custom
-                value: pt-graph-highlight-line-custom-lt
+                value: 'var(--graph-highlight-line-color-custom-lt)'
             -
                 label: Red
-                value: pt-graph-highlight-line-red-lt
+                value: 'var(--color-red-tint)'
             -
                 label: Orange
-                value: pt-graph-highlight-line-orange-lt
+                value: 'var(--color-orange-tint)'
             -
                 label: Yellow
-                value: pt-graph-highlight-line-yellow-lt
+                value: 'var(--color-yellow-tint)'
             -
                 label: Green
-                value: pt-graph-highlight-line-green-lt
+                value: 'var(--color-green-tint)'
             -
                 label: Mint
-                value: pt-graph-highlight-line-mint-lt
+                value: 'var(--color-mint-tint)'
             -
                 label: Aqua
-                value: pt-graph-highlight-line-aqua-lt
+                value: 'var(--color-aqua-tint)'
             -
                 label: Blue
-                value: pt-graph-highlight-line-blue-lt
+                value: 'var(--color-blue-tint)'
             -
                 label: Purple
-                value: pt-graph-highlight-line-purple-lt
+                value: 'var(--color-purple-tint)'
             -
                 label: Pink
-                value: pt-graph-highlight-line-pink-lt
+                value: 'var(--color-pink-tint)'
             -
                 label: Grey
-                value: pt-graph-highlight-line-grey-lt
+                value: 'var(--color-grey-tint)'
     -
-        id: color-custom-graph-highlight-line-lt
+        id: graph-highlight-line-color-custom-lt
         title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -12100,6 +11983,319 @@ settings:
         step: 1
         default: 10
         format: px
+    -
+        id: header-text-color
+        title: Header Text Color
+        description: Options for changing the color of each header type.
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: h1-text-color
+        title: Header 1 (H1) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h1-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h1-text-color-custom
+        title: Header 1 (H1) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 1 (H1) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h2-text-color
+        title: Header 2 (H2) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h2-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h2-text-color-custom
+        title: Header 2 (H2) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 2 (H2) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h3-text-color
+        title: Header 3 (H3) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h3-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h3-text-color-custom
+        title: Header 3 (H3) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 3 (H3) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h4-text-color
+        title: Header 4 (H4) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h4-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h4-text-color-custom
+        title: Header 4 (H4) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 4 (H4) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h5-text-color
+        title: Header 5 (H5) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h5-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h5-text-color-custom
+        title: Header 5 (H5) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 5 (H5) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: h6-text-color
+        title: Header 6 (H6) Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Custom
+                value: var(--h6-text-color-custom)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: h6-text-color-custom
+        title: Header 6 (H6) Custom Text Color 
+        description: Make sure you selected 'Custom' in Header 6 (H6) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
     -
         id: mark-highlight-styles
         title: Mark Highlight
