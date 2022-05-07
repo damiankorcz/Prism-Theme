@@ -76,12 +76,12 @@
   --h4-font-size: 1.4em;
   --h5-font-size: 1.2em;
   --h6-font-size: 1em;
-  --h1-margin-size: 0;
-  --h2-margin-size: 0;
-  --h3-margin-size: 0;
-  --h4-margin-size: 0;
-  --h5-margin-size: 0;
-  --h6-margin-size: 0;
+  --h1-padding-size: 0;
+  --h2-padding-size: 0;
+  --h3-padding-size: 0;
+  --h4-padding-size: 0;
+  --h5-padding-size: 0;
+  --h6-padding-size: 0;
   --background-image-lt: url("");
   --background-blur-lt: 0;
   --background-repeat-lt: no-repeat;
@@ -5358,9 +5358,6 @@ a:hover {
 .is-mobile .markdown-source-view.mod-cm6 .cm-scroller {
   padding: 4px 4px 4px 2px;
 }
-.markdown-source-view.mod-cm6 .cm-line {
-  padding: unset;
-}
 .cm-line .cm-hashtag-begin {
   padding-left: 0.5ch;
   background-color: var(--background-tertiary);
@@ -7014,149 +7011,99 @@ div.graph-controls.is-close {
 }
 /* #endregion */
 /* #region  [Plugin - Theme] Headers Base */
-.markdown-rendered h1 {
-  margin: var(--h1-margin-size) 0;
-}
-.markdown-rendered h2 {
-  margin: var(--h2-margin-size) 0;
-}
-.markdown-rendered h3 {
-  margin: var(--h3-margin-size) 0;
-}
-.markdown-rendered h4 {
-  margin: var(--h4-margin-size) 0;
-}
-.markdown-rendered h5 {
-  margin: var(--h5-margin-size) 0;
-}
-.markdown-rendered h6 {
-  margin: var(--h6-margin-size) 0;
-}
-.cm-header-1,
-.markdown-source-view.mod-cm6 .HyperMD-header-1 {
-  line-height: calc(1em + var(--h1-margin-size));
-}
-.cm-header-2,
-.markdown-source-view.mod-cm6 .HyperMD-header-2 {
-  line-height: calc(1em + var(--h2-margin-size));
-}
-.cm-header-3,
-.markdown-source-view.mod-cm6 .HyperMD-header-3 {
-  line-height: calc(1em + var(--h3-margin-size));
-}
-.cm-header-4,
-.markdown-source-view.mod-cm6 .HyperMD-header-4 {
-  line-height: calc(1em + var(--h4-margin-size));
-}
-.cm-header-5,
-.markdown-source-view.mod-cm6 .HyperMD-header-5 {
-  line-height: calc(1em + var(--h5-margin-size));
-}
-.cm-header-6,
-.markdown-source-view.mod-cm6 .HyperMD-header-6 {
-  line-height: calc(1em + var(--h6-margin-size));
-}
-.cm-header-1,
-.HyperMD-header-1,
-.markdown-rendered h1 {
+.cm-s-obsidian .HyperMD-header-1,
+.markdown-preview-view h1 {
   font-size: var(--h1-font-size);
-  color: var(--h1-text-color);
-  transition: all ease 500ms;
+  transition: color ease 500ms;
+  padding-top: var(--h1-margin-size);
+  padding-bottom: var(--h1-margin-size);
 }
-.cm-header-2,
-.HyperMD-header-2,
-.markdown-rendered h2 {
-  font-size: var(--h2-font-size);
-  color: var(--h2-text-color);
-  transition: all ease 500ms;
-}
-.cm-header-3,
-.HyperMD-header-3,
-.markdown-rendered h3 {
-  font-size: var(--h3-font-size);
-  color: var(--h3-text-color);
-  transition: all ease 500ms;
-}
-.cm-header-4,
-.HyperMD-header-4,
-.markdown-rendered h4 {
-  font-size: var(--h4-font-size);
-  color: var(--h4-text-color);
-  transition: all ease 500ms;
-}
-.cm-header-5,
-.HyperMD-header-5,
-.markdown-rendered h5 {
-  font-size: var(--h5-font-size);
-  color: var(--h5-text-color);
-  transition: all ease 500ms;
-}
-.cm-header-6,
-.HyperMD-header-6,
-.markdown-rendered h6 {
-  font-size: var(--h6-font-size);
-  color: var(--h6-text-color);
-  transition: all ease 500ms;
-}
-.theme-light .cm-header-1,
-.theme-light .HyperMD-header-1,
-.theme-light .markdown-rendered h1 {
+.theme-light .cm-s-obsidian .HyperMD-header-1,
+.theme-light .markdown-preview-view h1 {
   color: var(--h1-text-color-lt);
 }
-.theme-light .cm-header-2,
-.theme-light .HyperMD-header-2,
-.theme-light .markdown-rendered h2 {
-  color: var(--h2-text-color-lt);
-}
-.theme-light .cm-header-3,
-.theme-light .HyperMD-header-3,
-.theme-light .markdown-rendered h3 {
-  color: var(--h3-text-color-lt);
-}
-.theme-light .cm-header-4,
-.theme-light .HyperMD-header-4,
-.theme-light .markdown-rendered h4 {
-  color: var(--h4-text-color-lt);
-}
-.theme-light .cm-header-5,
-.theme-light .HyperMD-header-5,
-.theme-light .markdown-rendered h5 {
-  color: var(--h5-text-color-lt);
-}
-.theme-light .cm-header-6,
-.theme-light .HyperMD-header-6,
-.theme-light .markdown-rendered h6 {
-  color: var(--h6-text-color-lt);
-}
-.theme-dark .cm-header-1,
-.theme-dark .HyperMD-header-1,
-.theme-dark .markdown-rendered h1 {
+.theme-dark .cm-s-obsidian .HyperMD-header-1,
+.theme-dark .markdown-preview-view h1 {
   color: var(--h1-text-color-dt);
 }
-.theme-dark .cm-header-2,
-.theme-dark .HyperMD-header-2,
-.theme-dark .markdown-rendered h2 {
+.cm-s-obsidian .HyperMD-header-2,
+.markdown-preview-view h2 {
+  font-size: var(--h2-font-size);
+  transition: color ease 500ms;
+  padding-top: var(--h2-margin-size);
+  padding-bottom: var(--h2-margin-size);
+}
+.theme-light .cm-s-obsidian .HyperMD-header-2,
+.theme-light .markdown-preview-view h2 {
+  color: var(--h2-text-color-lt);
+}
+.theme-dark .cm-s-obsidian .HyperMD-header-2,
+.theme-dark .markdown-preview-view h2 {
   color: var(--h2-text-color-dt);
 }
-.theme-dark .cm-header-3,
-.theme-dark .HyperMD-header-3,
-.theme-dark .markdown-rendered h3 {
+.cm-s-obsidian .HyperMD-header-3,
+.markdown-preview-view h3 {
+  font-size: var(--h3-font-size);
+  transition: color ease 500ms;
+  padding-top: var(--h3-margin-size);
+  padding-bottom: var(--h3-margin-size);
+}
+.theme-light .cm-s-obsidian .HyperMD-header-3,
+.theme-light .markdown-preview-view h3 {
+  color: var(--h3-text-color-lt);
+}
+.theme-dark .cm-s-obsidian .HyperMD-header-3,
+.theme-dark .markdown-preview-view h3 {
   color: var(--h3-text-color-dt);
 }
-.theme-dark .cm-header-4,
-.theme-dark .HyperMD-header-4,
-.theme-dark .markdown-rendered h4 {
+.cm-s-obsidian .HyperMD-header-4,
+.markdown-preview-view h4 {
+  font-size: var(--h4-font-size);
+  transition: color ease 500ms;
+  padding-top: var(--h4-margin-size);
+  padding-bottom: var(--h4-margin-size);
+}
+.theme-light .cm-s-obsidian .HyperMD-header-4,
+.theme-light .markdown-preview-view h4 {
+  color: var(--h4-text-color-lt);
+}
+.theme-dark .cm-s-obsidian .HyperMD-header-4,
+.theme-dark .markdown-preview-view h4 {
   color: var(--h4-text-color-dt);
 }
-.theme-dark .cm-header-5,
-.theme-dark .HyperMD-header-5,
-.theme-dark .markdown-rendered h5 {
+.cm-s-obsidian .HyperMD-header-5,
+.markdown-preview-view h5 {
+  font-size: var(--h5-font-size);
+  transition: color ease 500ms;
+  padding-top: var(--h5-margin-size);
+  padding-bottom: var(--h5-margin-size);
+}
+.theme-light .cm-s-obsidian .HyperMD-header-5,
+.theme-light .markdown-preview-view h5 {
+  color: var(--h5-text-color-lt);
+}
+.theme-dark .cm-s-obsidian .HyperMD-header-5,
+.theme-dark .markdown-preview-view h5 {
   color: var(--h5-text-color-dt);
 }
-.theme-dark .cm-header-6,
-.theme-dark .HyperMD-header-6,
-.theme-dark .markdown-rendered h6 {
+.cm-s-obsidian .HyperMD-header-6,
+.markdown-preview-view h6 {
+  font-size: var(--h6-font-size);
+  transition: color ease 500ms;
+  padding-top: var(--h6-margin-size);
+  padding-bottom: var(--h6-margin-size);
+}
+.theme-light .cm-s-obsidian .HyperMD-header-6,
+.theme-light .markdown-preview-view h6 {
+  color: var(--h6-text-color-lt);
+}
+.theme-dark .cm-s-obsidian .HyperMD-header-6,
+.theme-dark .markdown-preview-view h6 {
   color: var(--h6-text-color-dt);
+}
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.cm-s-obsidian .HyperMD-header {
+  margin: unset;
 }
 /* #endregion */
 /* #region  [Plugin - Theme] Background Base */
@@ -9138,16 +9085,6 @@ div.workspace-leaf-content[data-type=style-settings] .view-content {
 }
 div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container div.setting-item:not(.setting-item-heading) {
   flex-direction: row;
-}
-div.workspace-leaf-content[data-type=style-settings] > .view-content > .setting-item:first-child::before {
-  display: block;
-  width: fit-content;
-  height: -webkit-fill-available;
-  padding: 2px 8px;
-  content: "⚠️ If you upgraded from Prism v1.5.2 or older to Prism v2.0.0+, a full Style Settings Reset and Obsidian restart is required!";
-  background-color: var(--color-yellow-base);
-  border: var(--border-size) solid var(--color-yellow-tint);
-  border-radius: var(--border-radius);
 }
 .setting-item-description div small {
   display: block;
@@ -12017,65 +11954,65 @@ settings:
         default: 1
         format: em
     -
-        id: header-margin-size
-        title: Header Margin Size
-        description: The additional space above and below the headers (Only applies to Reading Mode).
+        id: header-padding-size
+        title: Header Padding Size
+        description: The additional space above and below the headers.
         type: heading
         level: 3
         collapsed: true
     -
-        id: h1-margin-size
-        title: Header 1 (H1) Margin Size (px)
+        id: h1-padding-size
+        title: Header 1 (H1) Padding Size (px)
         type: variable-number-slider
         min: 0
         max: 20
         step: 1
-        default: 10
+        default: 0
         format: px
     -
-        id: h2-margin-size
-        title: Header 2 (H2) Margin Size (px)
+        id: h2-padding-size
+        title: Header 2 (H2) Padding Size (px)
         type: variable-number-slider
         min: 0
         max: 20
         step: 1
-        default: 10
+        default: 0
         format: px
     -
-        id: h3-margin-size
-        title: Header 3 (H3) Margin Size (px)
+        id: h3-padding-size
+        title: Header 3 (H3) Padding Size (px)
         type: variable-number-slider
         min: 0
         max: 20
         step: 1
-        default: 10
+        default: 0
         format: px
     -
-        id: h4-margin-size
-        title: Header 4 (H4) Margin Size (px)
+        id: h4-padding-size
+        title: Header 4 (H4) Padding Size (px)
         type: variable-number-slider
         min: 0
         max: 20
         step: 1
-        default: 10
+        default: 0
         format: px
     -
-        id: h5-margin-size
-        title: Header 5 (H5) Margin Size (px)
+        id: h5-padding-size
+        title: Header 5 (H5) Padding Size (px)
         type: variable-number-slider
         min: 0
         max: 20
         step: 1
-        default: 10
+        default: 0
         format: px
     -
-        id: h6-margin-size
-        title: Header 6 (H6) Margin Size (px)
+        id: h6-padding-size
+        title: Header 6 (H6) Padding Size (px)
         type: variable-number-slider
         min: 0
         max: 20
         step: 1
-        default: 10
+        default: 0
         format: px
     -
         id: header-text-color
