@@ -129,7 +129,8 @@ Special thanks to the following people:
 - The developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
 - [**@mgmeyers**](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
 - [**@kepano**](https://github.com/kepano) and [**Minimal Theme**](https://github.com/kepano/obsidian-minimal) for figuring out the Sass/SCSS workflow using Grunt which I based my workflow on for Prism.
-- [**@chrisgrieser**](https://github.com/chrisgrieser) for the Hue slider gradient code. 
+- [**@chrisgrieser**](https://github.com/chrisgrieser) for the Hue slider gradient code.
+- [**@tingmelvin](https://github.com/tingmelvin) for helping me debug issues.
 - The Obsidian Community over at Discord for endless inspiration to improve the theme!
 
 
