@@ -6806,6 +6806,9 @@ div.graph-controls.is-close {
   margin: 0;
   background: transparent;
 }
+.is-mobile .workspace-leaf-content[data-type=search] .search-input-container input {
+  padding: 4px 14px 4px 28px;
+}
 .workspace-leaf-content[data-type=search] .search-result-container {
   box-sizing: border-box;
   padding: 0 10px 0 0;
@@ -8453,7 +8456,7 @@ body:not(.pt-disable-custom-icons) .cm-line span.cm-hashtag-begin::before {
   position: inherit;
   display: inline-flex;
   width: 1.2em;
-  height: -webkit-fill-available;
+  height: fill-available;
   content: " ";
   background-color: var(--interactive-accent-text);
   -webkit-mask-position: center;
