@@ -132,6 +132,7 @@ body.is-mobile {
 		width: 85vw;
 		max-width: 450px;
 		height: -webkit-fill-available;
+		height: fill-available;
 		padding: 4px;
 		margin: 4px;
 		border: 1px solid var(--window-border);
@@ -154,6 +155,7 @@ body.is-mobile {
 
 	.workspace-drawer-tab-options {
 		width: -webkit-fill-available;
+		width: fill-available;
 		height: fit-content;
 		padding: 4px;
 		margin: 4px 4px 4px 0;
@@ -345,7 +347,9 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
 }
 
 .workspace-split.mod-vertical > * {
-	height: fill-available;
+	.is-mobile & {
+		padding: unset;
+	}
 
 	> .workspace-leaf-resize-handle {
 		top: calc(var(--window-gap) / 2);

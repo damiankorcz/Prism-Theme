@@ -142,6 +142,10 @@ div.kanban-plugin__ {
 	}
 }
 
+.is-mobile button.kanban-plugin__search-cancel-button {
+	width: fit-content;
+}
+
 .theme-light,
 .theme-dark {
 	button.kanban-plugin__new-item-button:hover {
@@ -228,6 +232,7 @@ div.kanban-plugin__scroll-container.kanban-plugin__vertical {
 
 div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
 	width: -webkit-fill-available;
+	width: fill-available;
 	margin: 8px;
 	border-color: var(--window-border);
 	border-radius: var(--border-radius-small);

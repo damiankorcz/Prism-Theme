@@ -2064,6 +2064,7 @@ body:not(.is-mobile) .titlebar {
   display: flex;
   align-items: center;
   height: -webkit-fill-available;
+  height: fill-available;
   padding-right: 8px;
   padding-left: 8px;
   font-weight: 600;
@@ -2119,6 +2120,7 @@ body.pt-titlebar-hide-text .titlebar-text {
 }
 :not(.is-mobile).pt-default-titlebar .titlebar-button-container.mod-left {
   height: -webkit-fill-available;
+  height: fill-available;
   margin-top: 4px;
   background-color: var(--background-tertiary);
   border: 1px solid var(--window-border);
@@ -2130,10 +2132,12 @@ body.pt-titlebar-hide-text .titlebar-text {
   align-items: center;
   width: 18px;
   height: -webkit-fill-available;
+  height: fill-available;
 }
 :not(.is-mobile).pt-default-titlebar .titlebar-button-container.mod-left .mod-back,
 :not(.is-mobile).pt-default-titlebar .titlebar-button-container.mod-left .mod-forward {
   height: -webkit-fill-available;
+  height: fill-available;
   stroke-width: 2px;
 }
 :not(.is-mobile).pt-default-titlebar .titlebar-button-container.mod-right {
@@ -2180,6 +2184,7 @@ body.pt-titlebar-hide-text .titlebar-text {
   align-items: center;
   width: 17px;
   height: -webkit-fill-available;
+  height: fill-available;
 }
 :not(.is-mobile).pt-windows-titlebar div.titlebar-button-container.mod-left .mod-back,
 :not(.is-mobile).pt-windows-titlebar div.titlebar-button-container.mod-left .mod-forward {
@@ -3553,6 +3558,7 @@ body:not(.pt-disable-animations) .nav-folder-title:not([data-path="/"]) {
 }
 .is-mobile .search-input-container {
   width: -webkit-fill-available;
+  width: fill-available;
   margin: unset;
 }
 .is-mobile .setting-item-control button:not(:last-of-type) {
@@ -3649,6 +3655,7 @@ body:not(.is-mobile) .modal.mod-settings .vertical-tab-header {
 }
 .modal.mod-settings .modal-content {
   height: -webkit-fill-available;
+  height: fill-available;
 }
 .modal.mod-settings .vertical-tab-header-group {
   padding: 0;
@@ -3697,6 +3704,7 @@ body:not(.is-mobile) .modal.mod-settings .vertical-tab-header {
 .vertical-tab-header-group-title {
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: fit-content;
   padding: 8px;
   margin: unset;
@@ -3998,6 +4006,7 @@ img.community-theme-lightbox {
   z-index: var(--layer-notice);
   display: inline-block;
   width: -webkit-fill-available;
+  width: fill-available;
   height: fit-content;
   padding: 2px 8px;
   margin-right: 15px;
@@ -4041,6 +4050,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 .community-plugin-search .search-input-container {
   width: -webkit-fill-available;
+  width: fill-available;
 }
 .installed-plugins-container {
   padding-top: 0;
@@ -4148,6 +4158,7 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 }
 .community-plugin-search > .setting-item .search-input-container input[type=text] {
   max-width: -webkit-fill-available;
+  max-width: fill-available;
 }
 .community-plugin-search-results {
   padding-right: 10px;
@@ -4587,6 +4598,7 @@ body.is-mobile .workspace-drawer {
   width: 85vw;
   max-width: 450px;
   height: -webkit-fill-available;
+  height: fill-available;
   padding: 4px;
   margin: 4px;
   border: 1px solid var(--window-border);
@@ -4605,6 +4617,7 @@ body.is-mobile .workspace-drawer.is-pinned {
 }
 body.is-mobile .workspace-drawer-tab-options {
   width: -webkit-fill-available;
+  width: fill-available;
   height: fit-content;
   padding: 4px;
   margin: 4px 4px 4px 0;
@@ -4757,8 +4770,8 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .workspace-split.mod-horizontal.mod-right-split > * > .workspace-leaf-resize-handle {
   background-color: transparent;
 }
-.workspace-split.mod-vertical > * {
-  height: fill-available;
+.is-mobile .workspace-split.mod-vertical > * {
+  padding: unset;
 }
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle {
   top: calc(var(--window-gap) / 2);
@@ -4888,6 +4901,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 body.is-mobile .workspace-drawer-ribbon {
   width: 40px;
   height: -webkit-fill-available;
+  height: fill-available;
   padding: 0 4px 0 0;
   background-color: unset;
 }
@@ -4975,6 +4989,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 .nav-file-title:not([data-path="/"]),
 .nav-folder-title:not([data-path="/"]) {
   max-width: -webkit-fill-available;
+  max-width: fill-available;
   padding: 2px 5px 2px 1px;
   line-height: 14px;
   border: var(--border-size) solid transparent;
@@ -5062,6 +5077,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   align-self: center;
   width: fit-content;
   max-width: -webkit-fill-available;
+  max-width: fill-available;
   height: unset;
   margin: 4px;
   background-color: unset;
@@ -8459,6 +8475,7 @@ body:not(.pt-disable-custom-icons) .cm-line span.cm-hashtag-begin::before {
   position: inherit;
   display: inline-flex;
   width: 1.2em;
+  height: -webkit-fill-available;
   height: fill-available;
   content: " ";
   background-color: var(--interactive-accent-text);
@@ -8669,6 +8686,7 @@ body:not(.pt-disable-custom-icons).theme-light .mobile-option-setting-item-remov
   align-items: center;
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: 50px;
   padding: 0 10px;
   line-height: 16px;
@@ -8867,6 +8885,7 @@ mark,
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
   display: flex;
   height: -webkit-fill-available;
+  height: fill-available;
   padding: 0;
   overflow: auto;
   border: unset;
@@ -8993,6 +9012,9 @@ div.kanban-plugin__lane-form-wrapper {
 .theme-light div.kanban-plugin__action-confirm-text, .theme-dark div.kanban-plugin__action-confirm-text {
   color: var(--text-normal);
 }
+.is-mobile button.kanban-plugin__search-cancel-button {
+  width: fit-content;
+}
 .theme-light button.kanban-plugin__new-item-button:hover,
 .theme-dark button.kanban-plugin__new-item-button:hover {
   font-weight: 600;
@@ -9071,6 +9093,7 @@ div.kanban-plugin__scroll-container.kanban-plugin__vertical {
 }
 div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
   width: -webkit-fill-available;
+  width: fill-available;
   margin: 8px;
   border-color: var(--window-border);
   border-radius: var(--border-radius-small);
@@ -9659,6 +9682,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   align-items: center;
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: fit-content;
   padding: 10px;
   margin: unset;
@@ -9669,6 +9693,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container table.calendar {
   width: -webkit-fill-available;
+  width: fill-available;
   margin: 6px 10px 10px;
 }
 .workspace-leaf-content[data-type=calendar] #calendar-container thead tr:first-of-type th:first-child {
@@ -9853,6 +9878,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=map] .leaflet-control-geosearch form {
   right: 38px;
   height: -webkit-fill-available;
+  height: fill-available;
   padding: unset;
   background-color: var(--background-primary);
   border: 1px solid var(--window-border);
@@ -9861,6 +9887,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .workspace-leaf-content[data-type=map] .leaflet-control-geosearch a.reset {
   height: -webkit-fill-available;
+  height: fill-available;
   font-size: 19px;
   line-height: unset;
   color: var(--text-muted);
@@ -9873,6 +9900,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .workspace-leaf-content[data-type=map] .leaflet-control-geosearch form input {
   height: -webkit-fill-available;
+  height: fill-available;
   padding: 0 30px 0 0;
   font-size: 14px;
 }
@@ -9946,6 +9974,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .modal#emoji-modal .emoji-mart-bar:first-child {
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   padding: 0 8px;
   background-color: var(--background-primary);
   border: unset;
@@ -10123,6 +10152,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   align-items: center;
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: fit-content;
   padding: 10px;
   margin: unset;
@@ -10227,6 +10257,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   align-items: center;
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: fit-content;
   padding: 10px;
   margin: unset;
@@ -10270,6 +10301,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=dictionary-view] .contents .container {
   flex: 1;
   max-width: -webkit-fill-available;
+  max-width: fill-available;
   padding: unset;
   margin: unset;
   margin-right: 8px;
@@ -10280,6 +10312,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   align-items: center;
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: fit-content;
   padding: 4px 4px 4px 8px;
   margin: unset;
@@ -10327,6 +10360,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   align-items: center;
   width: fit-content;
   min-width: -webkit-fill-available;
+  min-width: fill-available;
   height: fit-content;
   margin: unset;
   background: var(--background-primary);
@@ -10386,6 +10420,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .kanban-plugin__date-picker .flatpickr-innerContainer .dayContainer {
   min-width: unset;
   max-width: -webkit-fill-available;
+  max-width: fill-available;
 }
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day,
 .flatpickr-calendar.obsidian42-jump-to-date .flatpickr-innerContainer .dayContainer span.flatpickr-day.prevMonthDay,
