@@ -3210,7 +3210,7 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
   100% {
     font-weight: 500;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
-    transform: scale(1.028);
+    transform: scale(1.02);
   }
 }
 @keyframes floatIconUp {
@@ -5727,7 +5727,7 @@ a.tag[href^="#"] {
   display: inline-flex;
   align-items: center;
   padding: 0 0.5ch;
-  font-size: 0.9em;
+  font-weight: 600;
   color: var(--text-normal);
   text-decoration: none;
   vertical-align: bottom;
@@ -5746,7 +5746,12 @@ a.tag[href^="#"]:hover {
 }
 .markdown-preview-view code,
 .markdown-preview-view kbd {
+  padding: 2px 4px;
   font-family: var(--font-monospace);
+}
+.markdown-preview-view pre code,
+.markdown-preview-view pre kbd {
+  padding: 0;
 }
 ul {
   padding-inline-start: 30px;
@@ -5813,6 +5818,7 @@ button.copy-code-button,
   right: 0;
   padding: 2px;
   margin: 3px;
+  font-family: var(--font-interface);
   font-weight: 600;
   color: var(--text-normal);
   background-color: var(--background-primary);
@@ -5896,7 +5902,6 @@ button.copy-code-button,
 }
 .theme-light .markdown-preview-view code,
 .theme-light .markdown-preview-view kbd {
-  padding: 2px 4px;
   color: var(--color-red-text);
   background-color: var(--background-primary-alt);
   border-radius: var(--border-radius-small);
@@ -5943,7 +5948,6 @@ button.copy-code-button,
 }
 .theme-dark .markdown-preview-view code,
 .theme-dark .markdown-preview-view kbd {
-  padding: 2px 4px;
   color: var(--color-red-text);
   background-color: var(--background-secondary-alt);
   border-radius: var(--border-radius-small);

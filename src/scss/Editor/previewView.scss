@@ -101,7 +101,7 @@ a.tag[href^="#"] {
 	display: inline-flex;
 	align-items: center;
 	padding: 0 0.5ch;
-	font-size: 0.9em;
+	font-weight: 600;
 	color: var(--text-normal);
 	text-decoration: none;
 	vertical-align: bottom;
@@ -121,9 +121,19 @@ a.tag[href^="#"] {
 	border-top: 1px solid var(--window-border);
 }
 
-.markdown-preview-view code,
-.markdown-preview-view kbd {
-	font-family: var(--font-monospace);
+.markdown-preview-view {
+	code,
+	kbd {
+		padding: 2px 4px;
+		font-family: var(--font-monospace);
+	}
+
+	pre {
+		code,
+		kbd {
+			padding: 0;
+		}
+	}
 }
 
 ul {
@@ -199,6 +209,7 @@ button.copy-code-button,
 	right: 0;
 	padding: 2px;
 	margin: 3px;
+	font-family: var(--font-interface);
 	font-weight: 600;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
@@ -298,7 +309,6 @@ button.copy-code-button,
 
 	.markdown-preview-view code,
 	.markdown-preview-view kbd {
-		padding: 2px 4px;
 		color: var(--color-red-text);
 		background-color: var(--background-primary-alt);
 		border-radius: var(--border-radius-small);
@@ -355,7 +365,6 @@ button.copy-code-button,
 
 	.markdown-preview-view code,
 	.markdown-preview-view kbd {
-		padding: 2px 4px;
 		color: var(--color-red-text);
 		background-color: var(--background-secondary-alt);
 		border-radius: var(--border-radius-small);
