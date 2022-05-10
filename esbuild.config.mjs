@@ -1,3 +1,9 @@
+/**
+ * On recommendation from @valentine195.
+ * Config based on @jdanielmouno's Sanctum theme esbuild setup.
+ * (https://github.com/jdanielmourao/obsidian-sanctum)
+ */
+
 import esbuild from "esbuild";
 import process from "process";
 import { config } from "dotenv";
@@ -11,10 +17,11 @@ const prod = process.argv[2] === "production";
 
 const dir = prod ? "./" : process.env.OUTDIR;
 
+/** Paths for final file */
 const fileProd = `${dir}/obsidian.css`;
 const fileDev = `${dir}/PrismDev.css`;
 
-/** readFileSync reads the file data in as a string. */
+/** Reading in text files to be added into the banner/footer */
  const license = readFileSync("./src/scss/Info/license.scss", "utf8");
  const styleSettings = readFileSync("./src/scss/Info/styleSettingsConfig.scss", "utf8");
  const hub = readFileSync("./src/scss/Info/pluginCompatibility.scss", "utf8");
