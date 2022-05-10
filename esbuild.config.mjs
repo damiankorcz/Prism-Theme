@@ -1,6 +1,6 @@
 /**
  * On recommendation from @valentine195.
- * Config based on @jdanielmouno's Sanctum theme esbuild setup.
+ * Config based on @jdanielmourao's Sanctum theme esbuild setup.
  * (https://github.com/jdanielmourao/obsidian-sanctum)
  */
 
