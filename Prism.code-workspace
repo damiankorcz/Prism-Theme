@@ -21,9 +21,9 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "Grunt Build - Main Theme",
+				"label": "ESBuild - Dev",
 				"type": "shell",
-				"command": "grunt main",
+				"command": "npm run dev",
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -33,9 +33,9 @@
 				}
 			},
 			{
-				"label": "Grunt Build - MHS Snippet",
+				"label": "ESBuild - Prod",
 				"type": "shell",
-				"command": "grunt snippetMHS",
+				"command": "npm run prod",
 				"group": {
 					"kind": "build",
 					"isDefault": true

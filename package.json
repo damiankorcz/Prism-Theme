@@ -1,24 +1,21 @@
 {
   "name": "obsidian-prism",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md",
   "author": "Damian Korcz",
   "license": "MIT",
   "homepage": "https://github.com/damiankorcz/Obsidian-Prism#readme",
-  "devDependencies": {
-    "grunt": "^1.5.2",
-    "grunt-concat-css": "^0.3.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-env": "^1.0.1",
-    "grunt-remove-empty-lines": "^2.0.0",
-    "grunt-sass-scss": "^0.1.9",
-    "postcss": "^8.4.12",
-    "stylelint": "^14.7.0"
+  "scripts": {
+    "dev": "node ./esbuild.config.mjs",
+    "build": "node ./esbuild.config.mjs production"
   },
-  "dependencies": {
-    "dotenv": "^11.0.0",
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "esbuild": "^0.14.38",
+    "esbuild-plugin-time": "^1.0.0",
+    "esbuild-sass-plugin": "^2.2.6",
+    "postcss": "^8.4.12",
+    "stylelint": "^14.7.0",
     "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-recommended": "^7.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
