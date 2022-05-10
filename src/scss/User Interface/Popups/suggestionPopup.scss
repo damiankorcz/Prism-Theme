@@ -25,12 +25,18 @@
 	padding: 2px;
 }
 
-.suggestion-item.is-selected {
-	color: var(--interactive-accent-text);
-	background-color: var(--background-primary);
-	border-radius: var(--border-radius-small);
-	font-weight: 600;
+.suggestion-item {
+	border: 1px solid transparent;
+
+	&.is-selected {
+		color: var(--interactive-accent-text);
+		background-color: var(--background-primary);
+		border-radius: var(--border-radius-small);
+		font-weight: 600;
+		border: 1px solid var(--window-border);
+	}
 }
+
 
 .search-input-clear-button {
 	top: 4px;

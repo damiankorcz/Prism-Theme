@@ -928,13 +928,18 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 	padding: 0 0 20px;
 }
 
-.theme-light .community-plugin-search-results::-webkit-scrollbar-track {
-	background-color: var(--background-color-lt);
-	border-radius: var(--border-radius-small);
+.community-plugin-search-results::-webkit-scrollbar-track {
+	.theme-light & {
+		background-color: var(--background-color-lt);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-color-dt);
+		border-radius: var(--border-radius-small);
+		box-shadow: var(--drop-shadow);
+	}
 }
 
-.theme-dark .community-plugin-search-results::-webkit-scrollbar-track {
-	background-color: var(--background-color-dt);
-	border-radius: var(--border-radius-small);
-}
 /* #endregion */
