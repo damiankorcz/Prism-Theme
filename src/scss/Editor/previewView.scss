@@ -222,6 +222,10 @@ button.copy-code-button,
 .code-block-flair {
 	font-weight: 600;
 }
+
+.markdown-rendered pre {
+	margin: unset;
+}
 /* #endregion */
 
 /* #region  [Editor] Preview Front Matter */
@@ -330,6 +334,7 @@ button.copy-code-button,
 	}
 
 	.markdown-preview-view pre,
+	.markdown-rendered pre,
 	:not(pre) > code[class*="language-"],
 	pre[class*="language-"],
 	.markdown-preview-view .file-embed {
@@ -377,9 +382,14 @@ button.copy-code-button,
 			background-color: var(--background-secondary-alt);
 			border-radius: var(--border-radius-small);
 		}
+
+		pre > code {
+			padding: unset;
+		}
 	}
 
 	.markdown-preview-view pre,
+	.markdown-rendered pre,
 	:not(pre) > code[class*="language-"],
 	pre[class*="language-"],
 	.markdown-preview-view .file-embed {
