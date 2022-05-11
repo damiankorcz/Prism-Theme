@@ -121,7 +121,9 @@ a.tag[href^="#"] {
 	border-top: 1px solid var(--window-border);
 }
 
-.markdown-preview-view {
+.markdown-preview-view,
+.markdown-rendered 
+ {
 	code,
 	kbd {
 		padding: 0 3px;
@@ -308,16 +310,19 @@ button.copy-code-button,
 		border-color: var(--table-border-color);
 	}
 
-	.markdown-preview-view code,
-	.markdown-preview-view kbd {
-		color: var(--color-red-text);
-		background-color: var(--background-primary-alt);
-		border-radius: var(--border-radius-small);
-	}
-
-	.markdown-preview-view pre > code {
-		padding: unset;
-	}
+	.markdown-preview-view,
+	.markdown-rendered {
+		code,
+		kbd {
+			color: var(--color-red-text);
+			background-color: var(--background-primary-alt);
+			border-radius: var(--border-radius-small);
+		}
+	
+		pre > code {
+			padding: unset;
+		}
+	} 
 
 	code[class*="language-"],
 	pre[class*="language-"] {
@@ -364,11 +369,14 @@ button.copy-code-button,
 		border-color: var(--table-border-color);
 	}
 
-	.markdown-preview-view code,
-	.markdown-preview-view kbd {
-		color: var(--color-red-text);
-		background-color: var(--background-secondary-alt);
-		border-radius: var(--border-radius-small);
+	.markdown-preview-view,
+	.markdown-rendered {
+		code,
+		kbd {
+			color: var(--color-red-text);
+			background-color: var(--background-secondary-alt);
+			border-radius: var(--border-radius-small);
+		}
 	}
 
 	.markdown-preview-view pre,
