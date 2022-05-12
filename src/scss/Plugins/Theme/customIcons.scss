@@ -176,7 +176,8 @@ body:not(.pt-disable-custom-icons) {
 	svg.scissors-glyph > *,
 	svg.calendar-glyph > *,
 	svg.clock-glyph > *,
-	svg.minus-with-circle > * {
+	svg.minus-with-circle > *,
+	.kanban-plugin__item-button-plus > * {
 		display: none;
 	}
 
@@ -313,7 +314,8 @@ body:not(.pt-disable-custom-icons) {
 	svg.scissors-glyph,
 	svg.calendar-glyph,
 	svg.clock-glyph,
-	svg.minus-with-circle {
+	svg.minus-with-circle,
+	.kanban-plugin__item-button-plus {
 		background-color: var(--text-muted);
 		-webkit-mask-position: center;
 		-webkit-mask-repeat: no-repeat;
@@ -465,7 +467,8 @@ body:not(.pt-disable-custom-icons) {
 		svg.scissors-glyph,
 		svg.calendar-glyph,
 		svg.clock-glyph,
-		svg.minus-with-circle {
+		svg.minus-with-circle,
+		.kanban-plugin__item-button-plus {
 			background-color: var(--interactive-accent-hover);
 		}
 	}
@@ -1553,6 +1556,14 @@ body:not(.pt-disable-custom-icons) {
 	svg.minus-with-circle {
 		-webkit-mask-size: 19px;
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M7 11h10v2H7z'%3E%3C/path%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z'%3E%3C/path%3E%3C/svg%3E");
+	}
+
+	.kanban-plugin__item-button-plus {
+		display: inline-block;
+		width: 15px;
+		margin-right: 4px;
+		-webkit-mask-size: 17px;
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z'%3E%3C/path%3E%3C/svg%3E");
 	}
 
 	&.theme-dark {
