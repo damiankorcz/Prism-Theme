@@ -1,0 +1,98 @@
+/* #region  [Editor] - Progress Bar */
+progress {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 13px;
+		
+	&::-webkit-progress-bar {
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius-small);
+
+		.theme-light & {
+			background-color: var(--background-secondary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
+	}
+
+	&::-webkit-progress-value {
+		border: 1px solid;
+		border-radius: var(--border-radius-small);
+		border-color: transparent;
+	}
+
+	&::before {
+		content: attr(value) " %";
+		font-family: var(--font-editor);
+		display: inline-flex;
+		position: fixed;
+		align-items: center;
+		justify-content: center;
+		font-size: 10px;
+		height: 13px;
+		padding: 0px 2px;
+		margin-top: 1px;
+		width: inherit;
+		font-weight: 700;
+
+		.theme-light & {
+			text-shadow: -1px -1px 0 hsla(0 0% 100% / 50%), 1px -1px 0 hsla(0 0% 100% / 50%), -1px 1px 0 hsla(0 0% 100% / 50%), 1px 1px 0 hsla(0 0% 100% / 50%);
+		}
+
+		.theme-dark & {
+			text-shadow: -1px -1px 0 hsla(0 0% 0% / 50%), 1px -1px 0 hsla(0 0% 0% / 50%), -1px 1px 0 hsla(0 0% 0% / 50%), 1px 1px 0 hsla(0 0% 0% / 50%);
+		}
+	}
+}
+
+progress:is([value="0"])::-webkit-progress-value {
+	border: unset;
+}
+
+$red:'';
+@for $i from 1 through 24 {
+	$red: $red + 'progress[value="' + $i + '"]::-webkit-progress-value,';
+}
+
+#{$red} {
+	background-color: var(--color-red-base);
+	border-color: var(--color-red-tint);
+}
+
+$orange:'';
+@for $i from 25 through 49 {
+	$orange: $orange + 'progress[value="' + $i + '"]::-webkit-progress-value,';
+}
+
+#{$orange} {
+	background-color: var(--color-orange-base);
+	border-color: var(--color-orange-tint);
+}
+
+$yellow:'';
+@for $i from 50 through 74 {
+	$yellow: $yellow + 'progress[value="' + $i + '"]::-webkit-progress-value,';
+}
+
+#{$yellow} {
+	background-color: var(--color-yellow-base);
+	border-color: var(--color-yellow-tint);
+}
+
+$green:'';
+@for $i from 75 through 99 {
+	$green: $green + 'progress[value="' + $i + '"]::-webkit-progress-value,';
+}
+
+#{$green} {
+	background-color: var(--color-green-base);
+	border-color: var(--color-green-tint);
+}
+
+progress:is([value="100"])::-webkit-progress-value {
+	background-color: var(--interactive-accent-base);
+	border-color: var(--interactive-accent-tint);
+}
+/* #endregion */
