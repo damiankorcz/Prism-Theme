@@ -30,10 +30,9 @@ progress {
 		position: fixed;
 		align-items: center;
 		justify-content: center;
+		// padding: 0 5px;
 		font-size: 10px;
 		height: 13px;
-		padding: 0px 2px;
-		margin-top: 1px;
 		width: inherit;
 		font-weight: 700;
 
@@ -47,18 +46,19 @@ progress {
 	}
 }
 
-progress:is([value="0"])::-webkit-progress-value {
+// @for $i from 20 through 100 {
+// 	progress[value="#{$i}"]::before {
+// 		margin-left: calc(150px * #{$i}/100 - 26px);
+// 	}
+// }
+
+progress[value="0"]::-webkit-progress-value {
 	border: unset;
 }
 
 $red:'';
-@for $i from 1 through 24 {
+@for $i from 0 through 24 {
 	$red: $red + 'progress[value="' + $i + '"]::-webkit-progress-value,';
-}
-
-#{$red} {
-	background-color: var(--color-red-base);
-	border-color: var(--color-red-tint);
 }
 
 $orange:'';
@@ -66,19 +66,9 @@ $orange:'';
 	$orange: $orange + 'progress[value="' + $i + '"]::-webkit-progress-value,';
 }
 
-#{$orange} {
-	background-color: var(--color-orange-base);
-	border-color: var(--color-orange-tint);
-}
-
 $yellow:'';
 @for $i from 50 through 74 {
 	$yellow: $yellow + 'progress[value="' + $i + '"]::-webkit-progress-value,';
-}
-
-#{$yellow} {
-	background-color: var(--color-yellow-base);
-	border-color: var(--color-yellow-tint);
 }
 
 $green:'';
@@ -86,12 +76,27 @@ $green:'';
 	$green: $green + 'progress[value="' + $i + '"]::-webkit-progress-value,';
 }
 
+#{$red} {
+	background-color: var(--color-red-base);
+	border-color: var(--color-red-tint);
+}
+
+#{$orange} {
+	background-color: var(--color-orange-base);
+	border-color: var(--color-orange-tint);
+}
+
+#{$yellow} {
+	background-color: var(--color-yellow-base);
+	border-color: var(--color-yellow-tint);
+}
+
 #{$green} {
 	background-color: var(--color-green-base);
 	border-color: var(--color-green-tint);
 }
 
-progress:is([value="100"])::-webkit-progress-value {
+progress[value="100"]::-webkit-progress-value {
 	background-color: var(--interactive-accent-base);
 	border-color: var(--interactive-accent-tint);
 }
