@@ -206,6 +206,10 @@ body.theme-light {
   --h4-text-color-lt: var(--text-normal);
   --h5-text-color-lt: var(--text-normal);
   --h6-text-color-lt: var(--text-normal);
+  --text-bold-color-lt: var(--text-normal);
+  --text-italic-color-lt: var(--text-normal);
+  --link-internal-color-lt: var(--interactive-accent-text);
+  --link-external-color-lt: var(--interactive-accent-text);
 }
 body.theme-light.pt-highlight-text-light-lt {
   --highlight-text-normal: var(--background-primary);
@@ -305,6 +309,10 @@ body.theme-dark {
   --h4-text-color-dt: var(--text-normal);
   --h5-text-color-dt: var(--text-normal);
   --h6-text-color-dt: var(--text-normal);
+  --text-bold-color-dt: var(--text-normal);
+  --text-italic-color-dt: var(--text-normal);
+  --link-internal-color-dt: var(--interactive-accent-text);
+  --link-external-color-dt: var(--interactive-accent-text);
 }
 body.theme-dark.pt-highlight-text-light-dt {
   --highlight-text-normal: var(--text-normal);
@@ -5631,13 +5639,41 @@ span.cm-inline-code {
   font-size: 0.9em;
   font-weight: 600;
 }
-.cm-s-obsidian span.cm-link,
-.cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--interactive-accent-text);
+.cm-s-obsidian span.cm-hmd-internal-link,
+span.cm-link {
+  font-weight: 600;
 }
-.cm-s-obsidian span.cm-link:hover,
-.cm-s-obsidian span.cm-hmd-internal-link:hover {
-  color: var(--interactive-accent-tint);
+.theme-light .cm-s-obsidian span.cm-hmd-internal-link,
+.theme-light .markdown-rendered .internal-link {
+  color: var(--link-internal-color-lt);
+}
+.theme-dark .cm-s-obsidian span.cm-hmd-internal-link,
+.theme-dark .markdown-rendered .internal-link {
+  color: var(--link-internal-color-dt);
+}
+.theme-light .cm-s-obsidian span.cm-link,
+.theme-light .markdown-rendered .external-link {
+  color: var(--link-external-color-lt);
+}
+.theme-dark .cm-s-obsidian span.cm-link,
+.theme-dark .markdown-rendered .external-link {
+  color: var(--link-external-color-dt);
+}
+.theme-light .cm-s-obsidian span.cm-strong,
+.theme-light .markdown-rendered strong {
+  color: var(--text-bold-color-lt);
+}
+.theme-dark .cm-s-obsidian span.cm-strong,
+.theme-dark .markdown-rendered strong {
+  color: var(--text-bold-color-dt);
+}
+.theme-light .cm-s-obsidian span.cm-em,
+.theme-light .markdown-rendered em {
+  color: var(--text-italic-color-lt);
+}
+.theme-dark .cm-s-obsidian span.cm-em,
+.theme-dark .markdown-rendered em {
+  color: var(--text-italic-color-dt);
 }
 .cm-s-obsidian span.cm-hmd-escape-backslash {
   color: var(--color-red-text);
@@ -13095,6 +13131,445 @@ settings:
         id: h6-text-color-custom-dt
         title: Header 6 (H6) Custom Text Color 
         description: Make sure you selected 'Custom' in Dark Theme Header 6 (H6) Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: editor-text-styles
+        title: Editor Text Color
+        description: Adjust the color of different types of text in the Editor.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: editor-text-light-theme
+        title: Light Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: text-bold-color-lt
+        title: Bold Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--text-bold-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: text-bold-custom-color-lt
+        title: Bold Text Custom Color 
+        description: Make sure you selected 'Custom' in Light Theme Bold Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: text-italic-color-lt
+        title: Italic Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--text-italic-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: text-italic-custom-color-lt
+        title: Italic Text Custom Color 
+        description: Make sure you selected 'Custom' in Light Theme Italic Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: link-internal-color-lt
+        title: Internal Link Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--interactive-accent-text)
+        options:
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--link-internal-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: link-internal-custom-color-lt
+        title: Internal Link Custom Color 
+        description: Make sure you selected 'Custom' in Light Theme Internal Link Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: link-external-color-lt
+        title: External Link Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--interactive-accent-text)
+        options:
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--link-external-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: link-external-custom-color-lt
+        title: External Link Custom Color 
+        description: Make sure you selected 'Custom' in Light Theme External Link Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: editor-text-dark-theme
+        title: Dark Theme
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: text-bold-color-dt
+        title: Bold Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--text-bold-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: text-bold-custom-color-dt
+        title: Bold Text Custom Color 
+        description: Make sure you selected 'Custom' in Dark Theme Bold Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: text-italic-color-dt
+        title: Italic Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--text-italic-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: text-italic-custom-color-dt
+        title: Italic Text Custom Color 
+        description: Make sure you selected 'Custom' in Dark Theme Italic Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: link-internal-color-dt
+        title: Internal Link Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--interactive-accent-text)
+        options:
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--link-internal-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: link-internal-custom-color-dt
+        title: Internal Link Custom Color 
+        description: Make sure you selected 'Custom' in Dark Theme Internal Link Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: link-external-color-dt
+        title: External Link Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--interactive-accent-text)
+        options:
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--link-external-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Aqua
+                value: var(--color-aqua-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    - 
+        id: link-external-custom-color-dt
+        title: External Link Custom Color 
+        description: Make sure you selected 'Custom' in Dark Theme External Link Color Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false

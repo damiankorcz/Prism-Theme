@@ -148,16 +148,56 @@ span.cm-inline-code, {
 	font-weight: 600;
 }
 
-.cm-s-obsidian {
-	span.cm-link,
-	span.cm-hmd-internal-link {
-		color: var(--interactive-accent-text);
-		
-		&:hover {
-			color: var(--interactive-accent-tint);
-		}
+.cm-s-obsidian span.cm-hmd-internal-link,
+span.cm-link {
+	font-weight: 600;
+}
+
+.cm-s-obsidian span.cm-hmd-internal-link,
+.markdown-rendered .internal-link {
+	.theme-light & {
+		color: var(--link-internal-color-lt);
 	}
-	
+
+	.theme-dark & {
+		color: var(--link-internal-color-dt);
+	}
+}
+
+.cm-s-obsidian span.cm-link,
+.markdown-rendered .external-link {
+	.theme-light & {
+		color: var(--link-external-color-lt);
+	}
+
+	.theme-dark & {
+		color: var(--link-external-color-dt);
+	}
+}
+
+.cm-s-obsidian span.cm-strong,
+.markdown-rendered strong {
+	.theme-light & {
+		color: var(--text-bold-color-lt);
+	}
+
+	.theme-dark & {
+		color: var(--text-bold-color-dt);
+	}
+}
+
+.cm-s-obsidian span.cm-em,
+.markdown-rendered em {
+	.theme-light & {
+		color: var(--text-italic-color-lt);
+	}
+
+	.theme-dark & {
+		color: var(--text-italic-color-dt);
+	}
+}
+
+.cm-s-obsidian {
 	span.cm-hmd-escape-backslash {
 		color: var(--color-red-text);
 	}
