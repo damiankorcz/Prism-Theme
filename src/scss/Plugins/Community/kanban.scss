@@ -60,9 +60,17 @@ div.kanban-plugin__ {
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
 
+		button.kanban-plugin__item-postfix-button {
+			background-color: var(--background-primary);
+			border-radius: var(--border-radius-small);
+		}
+
+
 		button.kanban-plugin__item-prefix-button:hover,
 		button.kanban-plugin__item-postfix-button:hover {
 			color: var(--interactive-accent-hover);
+			background-color: var(--background-primary);
+			border-radius: var(--border-radius-small);
 		}
 
 		&-button-wrapper {
@@ -85,6 +93,27 @@ div.kanban-plugin__ {
 
 		&-content-wrapper {
 			background: unset;
+
+			.kanban-plugin__item-prefix-button-wrapper,
+			.kanban-plugin__item-postfix-button-wrapper {
+				position: absolute;
+				right: 5px;
+			}
+
+			&[data-ignore-drag="true"] {
+				.kanban-plugin__item-title-wrapper {
+					flex-direction: column-reverse;
+				}
+
+				.kanban-plugin__item-prefix-button-wrapper,
+				.kanban-plugin__item-postfix-button-wrapper {
+					position: relative;
+					justify-content: end;
+					top: unset;
+					right: unset;
+					margin-bottom: 4px;
+				}
+			}
 		}
 
 		&-title {
