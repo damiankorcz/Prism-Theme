@@ -9337,6 +9337,10 @@ div.kanban-plugin__lane-form-wrapper {
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius-small);
 }
+.pt-disable-kanban-title-count .theme-light div.kanban-plugin__lane-title-count,
+.pt-disable-kanban-title-count .theme-dark div.kanban-plugin__lane-title-count {
+  display: none;
+}
 div.modal.kanban-plugin__board-settings-modal {
   width: 80vw;
   max-width: 1400px;
@@ -14255,6 +14259,12 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: pt-disable-kanban-title-count
+        title: Disable Kanban Title Count
+        description: Removes the card count in the Kanban Lane Title.
+        type: class-toggle
+        default: false
     -
         id: pt-kanban-background-lt
         title: Light Theme Kanban Background

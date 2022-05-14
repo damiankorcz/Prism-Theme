@@ -228,7 +228,7 @@ div.kanban-plugin__ {
 	div.kanban-plugin__markdown-preview-view > div > * {
 		overflow-wrap: anywhere;
 	}
-
+	
 	// Kanban Item Counter
 	div.kanban-plugin__lane-title-count {
 		display: block;
@@ -242,6 +242,14 @@ div.kanban-plugin__ {
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius-small);
 	}
+}
+
+.pt-center-kanban-title-text .kanban-plugin__lane-title {
+	align-items: center;
+}
+
+.pt-disable-kanban-title-count div.kanban-plugin__lane-title-count {
+	display: none;
 }
 
 div.modal.kanban-plugin__board-settings-modal {
