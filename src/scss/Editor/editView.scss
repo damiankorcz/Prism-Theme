@@ -1,7 +1,7 @@
 /* #region  [Editor] Hyperlink */
 a {
-	color: var(--interactive-accent-text);
 	font-weight: 600;
+	color: var(--interactive-accent-text);
 
 	&:hover {
 		color: var(--interactive-accent-hover);
@@ -201,12 +201,12 @@ span.cm-link {
 	span.cm-hmd-escape-backslash {
 		color: var(--color-red-text);
 	}
-	
+
 	.cm-inline-code,
 	.cm-math {
 		color: var(--color-red-text);
 	}
-	
+
 	.HyperMD-codeblock {
 		color: var(--color-muted);
 	}
@@ -215,6 +215,14 @@ span.cm-link {
 	span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
 		color: var(--color-red-text);
 		border-radius: var(--border-radius-small);
+
+		.theme-light & {
+			background-color: var(--background-primary-alt);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
 	}
 
 	span.cm-footref,
@@ -232,18 +240,7 @@ span.cm-link {
 			background-color: var(--background-secondary-alt);
 		}
 	}
-	
-	span.cm-inline-code,
-	span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-		.theme-light & {
-			background-color: var(--background-primary-alt);
-		}
 
-		.theme-dark & {
-			background-color: var(--background-secondary-alt);
-		}
-	}
-	
 	.CodeMirror-linenumber,
 	.CodeMirror-guttermarker-subtle {
 		.theme-light & {
