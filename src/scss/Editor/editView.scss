@@ -7,10 +7,6 @@ a {
 		color: var(--interactive-accent-hover);
 	}
 }
-
-.cm-hmd-internal-link {
-	font-weight: 600;
-}
 /* #endregion */
 
 /* #region  [Editor] Edit View */
@@ -153,6 +149,116 @@ span.cm-link {
 	font-weight: 600;
 }
 
+.cm-s-obsidian .cm-line:not(.cm-active) {
+	span.cm-highlight.cm-link,
+	span.cm-highlight.cm-hmd-internal-link {
+		&:nth-child(7),
+		&:nth-child(4) {
+			padding-right: unset;
+			border-right: unset;
+			border-top-right-radius: unset;
+			border-bottom-right-radius: unset;
+		}
+
+		&:nth-last-child(7),
+		&:nth-last-child(4) {
+			padding-left: unset;
+			border-left: unset;
+			border-top-left-radius: unset;
+			border-bottom-left-radius: unset;
+		}
+
+		&:not(:nth-child(7), :nth-last-child(7), :nth-child(4), :nth-last-child(4)) {
+			padding-right: unset;
+			padding-left: unset;
+			border-right: unset;
+			border-left: unset;
+			border-radius: unset;
+		}
+	}
+	span.cm-highlight:not(.cm-link, .cm-hmd-internal-link, .cm-formatting-highlight) {
+		&:nth-last-child(n + 4):not(:nth-child(4)) {
+			padding-left: unset;
+			border-left: unset;
+			border-top-left-radius: unset;
+			border-bottom-left-radius: unset;
+		}
+
+		&:nth-child(n + 4):not(:nth-last-child(4)) {
+			padding-right: unset;
+			border-right: unset;
+			border-top-right-radius: unset;
+			border-bottom-right-radius: unset;
+		}
+	}
+}
+
+.cm-s-obsidian.is-live-preview {
+	span.external-link {
+		display: none;
+	}
+}
+
+.cm-s-obsidian:not(.is-live-preview) .cm-line,
+.cm-s-obsidian.is-live-preview .cm-line.cm-active {
+	span.cm-highlight {
+		&:not(:first-child, :last-child) {
+			padding-right: unset;
+			padding-left: unset;
+			border-right: unset;
+			border-left: unset;
+			border-radius: unset;
+		}
+	}
+
+	span.cm-formatting-highlight,
+	span.external-link {
+		&:first-child {
+			padding-right: unset;
+			border-right: unset;
+			border-top-right-radius: unset;
+			border-bottom-right-radius: unset;
+		}
+
+		&:last-child {
+			padding-left: unset;
+			border-left: unset;
+			border-top-left-radius: unset;
+			border-bottom-left-radius: unset;
+		}
+	}
+}
+
+.cm-s-obsidian:not(.is-live-preview) .cm-line span.cm-inline-code,
+.cm-s-obsidian.is-live-preview .cm-line.cm-active span.cm-inline-code {
+	&:first-child {
+		padding-right: unset;
+		border-right: unset;
+		border-top-right-radius: unset;
+		border-bottom-right-radius: unset;
+	}
+
+	&:last-child {
+		padding-left: unset;
+		border-left: unset;
+		border-top-left-radius: unset;
+		border-bottom-left-radius: unset;
+	}
+}
+
+.cm-s-obsidian:not(.is-live-preview) .cm-line span.cm-inline-code,
+.cm-s-obsidian:not(.is-live-preview) .cm-line span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
+.cm-s-obsidian.is-live-preview .cm-line.cm-active span.cm-inline-code,
+.cm-s-obsidian.is-live-preview .cm-line.cm-active span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+	&:not(:first-child, :last-child) {
+		padding-right: unset;
+		padding-left: unset;
+		border-right: unset;
+		border-left: unset;
+		border-radius: unset;
+	}
+}
+
 .cm-s-obsidian span.cm-hmd-internal-link,
 .markdown-rendered .internal-link {
 	.theme-light & {
@@ -165,6 +271,7 @@ span.cm-link {
 }
 
 .cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-url,
 .markdown-rendered .external-link {
 	.theme-light & {
 		color: var(--link-external-color-lt);
