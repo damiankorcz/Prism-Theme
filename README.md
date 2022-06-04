@@ -94,8 +94,8 @@ If you have any issues with the plugins mentioned above or would like another pl
 Theme features which you can import as snippets into Obsidian are located in the [**Snippets Folder**](https://github.com/damiankorcz/Prism-Theme/tree/main/src/snippets). These features have been requested by users for use in other themes and for additional interoperability between themes. If you would like to see a feature of Prism as a snippet make a Feature Request in the [**Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues) section of this repo. 
 
 
-## 📖 Documentation
-The theme has a fully encompassing Wiki, which includes additional detailed descriptions with images/GIFs of all Style Settings Options for Prism. This can be found in the [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) Section of this Repository.
+<!-- ## 📖 Documentation
+The theme has a fully encompassing Wiki, which includes additional detailed descriptions with images/GIFs of all Style Settings Options for Prism. This can be found in the [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) Section of this Repository. -->
 
 
 ## 🛠 Contributing
