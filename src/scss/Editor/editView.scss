@@ -149,51 +149,6 @@ span.cm-link {
 	font-weight: 600;
 }
 
-.cm-s-obsidian .cm-line:not(.cm-active) {
-	span.cm-highlight.cm-link,
-	span.cm-highlight.cm-hmd-internal-link {
-		&:nth-child(7):not(:nth-last-child(7)):not(:nth-last-child(18)),
-		&:nth-child(4) {
-			padding-right: unset;
-			border-right: unset;
-			border-top-right-radius: unset;
-			border-bottom-right-radius: unset;
-		}
-
-		&:nth-last-child(7):not(:nth-child(7)):not(:nth-child(18)),
-		&:nth-last-child(4) {
-			padding-left: unset;
-			border-left: unset;
-			border-top-left-radius: unset;
-			border-bottom-left-radius: unset;
-		}
-
-		&:not(:nth-child(7), :nth-last-child(7), :nth-child(4), :nth-last-child(4), :nth-child(18), :nth-last-child(18)) {
-			padding-right: unset;
-			padding-left: unset;
-			border-right: unset;
-			border-left: unset;
-			border-radius: unset;
-		}
-	}
-
-	span.cm-highlight:not(.cm-link, .cm-hmd-internal-link, .cm-formatting-highlight) {
-		&:nth-last-child(n + 4):not(:nth-child(4)) {
-			padding-left: unset;
-			border-left: unset;
-			border-top-left-radius: unset;
-			border-bottom-left-radius: unset;
-		}
-
-		&:nth-child(n + 4):not(:nth-last-child(4)) {
-			padding-right: unset;
-			border-right: unset;
-			border-top-right-radius: unset;
-			border-bottom-right-radius: unset;
-		}
-	}
-}
-
 .cm-s-obsidian.is-live-preview {
 	span.external-link {
 		display: none;
@@ -216,66 +171,6 @@ span.cm-link {
 		.theme-dark & {
 			background-color: var(--link-external-color-dt);
 		}
-	}
-}
-
-.cm-s-obsidian:not(.is-live-preview) .cm-line,
-.cm-s-obsidian.is-live-preview .cm-line.cm-active {
-	span.cm-highlight {
-		&:not(:first-child, :last-child) {
-			padding-right: unset;
-			padding-left: unset;
-			border-right: unset;
-			border-left: unset;
-			border-radius: unset;
-		}
-	}
-
-	span.cm-formatting-highlight,
-	span.external-link {
-		&:first-child {
-			padding-right: unset;
-			border-right: unset;
-			border-top-right-radius: unset;
-			border-bottom-right-radius: unset;
-		}
-
-		&:last-child {
-			padding-left: unset;
-			border-left: unset;
-			border-top-left-radius: unset;
-			border-bottom-left-radius: unset;
-		}
-	}
-}
-
-.cm-s-obsidian:not(.is-live-preview) .cm-line span.cm-inline-code,
-.cm-s-obsidian.is-live-preview .cm-line.cm-active span.cm-inline-code {
-	&:first-child {
-		padding-right: unset;
-		border-right: unset;
-		border-top-right-radius: unset;
-		border-bottom-right-radius: unset;
-	}
-
-	&:last-child {
-		padding-left: unset;
-		border-left: unset;
-		border-top-left-radius: unset;
-		border-bottom-left-radius: unset;
-	}
-}
-
-.cm-s-obsidian:not(.is-live-preview) .cm-line span.cm-inline-code,
-.cm-s-obsidian:not(.is-live-preview) .cm-line span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
-.cm-s-obsidian.is-live-preview .cm-line.cm-active span.cm-inline-code,
-.cm-s-obsidian.is-live-preview .cm-line.cm-active span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-	&:not(:first-child, :last-child) {
-		padding-right: unset;
-		padding-left: unset;
-		border-right: unset;
-		border-left: unset;
-		border-radius: unset;
 	}
 }
 
