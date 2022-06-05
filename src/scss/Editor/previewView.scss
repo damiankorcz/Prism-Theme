@@ -117,10 +117,6 @@ a.tag[href^="#"] {
 	}
 }
 
-.cm-s-obsidian .HyperMD-quote.HyperMD-quote-1:first-of-type {
-	border-top: 1px solid var(--window-border);
-}
-
 .markdown-preview-view,
 .markdown-rendered {
 	code,
@@ -226,6 +222,10 @@ button.copy-code-button,
 .markdown-rendered pre {
 	margin: 0.5em 0;
 }
+
+.markdown-source-view.mod-cm6 .cm-indent::before {
+	border-right: none;
+}
 /* #endregion */
 
 /* #region  [Editor] Preview Front Matter */
@@ -302,12 +302,16 @@ button.copy-code-button,
 		border-left-width: 5px;
 	}
 
-	.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+	.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote {
 		padding: 10px 20px !important;
 		margin: 0 30px !important;
 		background-color: var(--background-primary-alt);
 		border: 1px solid var(--table-border-color);
 		border-left-width: 5px;
+
+		&.HyperMD-callout {
+			font-weight: 600;
+		}
 	}
 
 	.markdown-preview-view hr {
