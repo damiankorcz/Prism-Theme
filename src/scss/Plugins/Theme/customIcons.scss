@@ -168,13 +168,27 @@ body:not(.pt-disable-custom-icons) {
 		-webkit-mask-repeat: no-repeat;
 
 		path:first-of-type {
-			d: path("M 0 0 H 150 V 150 H 0 Z") !important;
+			d: path("M 0 0 H 150 V 150 H 0 Z");
+		}
+
+		@supports (-webkit-touch-callout: none) {
+			background-color: var(--text-muted);
+			
+			> * {
+				display: none;
+			}
 		}
 	}
 
 	svg.spreadsheet > svg {
 		path:first-of-type {
-			d: path("M 0 0 H 1000 V 1000 H 0 Z") !important;
+			d: path("M 0 0 H 1000 V 1000 H 0 Z");
+		}
+
+		@supports (-webkit-touch-callout: none) {
+			> * {
+				display: none;
+			}
 		}
 	}
 
@@ -195,7 +209,13 @@ body:not(.pt-disable-custom-icons) {
 	.nav-action-button[title="export as csv"] svg.widget-icon,
 	.nav-action-button[title="help"] svg.widget-icon {
 		path:first-of-type {
-			d: path("M 0 0 H 750 V 750 H 0 Z") !important;
+			d: path("M 0 0 H 750 V 750 H 0 Z");
+		}
+
+		@supports (-webkit-touch-callout: none) {
+			> * {
+				display: none;
+			}
 		}
 	}
 
@@ -221,41 +241,76 @@ body:not(.pt-disable-custom-icons) {
 	div[data-callout="quote"] .callout-title svg,
 	div[data-callout="cite"] .callout-title svg {
 		background-color: var(--color-grey-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="abstract"] .callout-title svg,
 	div[data-callout="summary"] .callout-title svg,
 	div[data-callout="tldr"] .callout-title svg {
 		background-color: var(--color-aqua-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="info"] .callout-title svg,
 	div[data-callout="todo"] .callout-title svg {
 		background-color: var(--color-blue-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="tip"] .callout-title svg,
 	div[data-callout="hint"] .callout-title svg,
 	div[data-callout="important"] .callout-title svg {
 		background-color: var(--color-mint-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="success"] .callout-title svg,
 	div[data-callout="check"] .callout-title svg,
 	div[data-callout="done"] .callout-title svg {
 		background-color: var(--color-green-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="question"] .callout-title svg,
 	div[data-callout="help"] .callout-title svg,
 	div[data-callout="faq"] .callout-title svg {
 		background-color: var(--color-yellow-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="warning"] .callout-title svg,
 	div[data-callout="caution"] .callout-title svg,
 	div[data-callout="attention"] .callout-title svg {
 		background-color: var(--color-orange-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="failure"] .callout-title svg,
@@ -264,14 +319,29 @@ body:not(.pt-disable-custom-icons) {
 	div[data-callout="danger"] .callout-title svg,
 	div[data-callout="error"] .callout-title svg {
 		background-color: var(--color-red-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="bug"] .callout-title svg {
 		background-color: var(--color-pink-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	div[data-callout="example"] .callout-title svg {
 		background-color: var(--color-purple-text);
+
+		@supports (-webkit-touch-callout: none) {
+			-webkit-mask-position: center;
+			-webkit-mask-repeat: no-repeat;
+		}
 	}
 
 	svg.alert-circle {

@@ -7915,10 +7915,349 @@ body:not(.pt-disable-custom-icons) svg.minus-with-circle path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.cross-in-box path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.pdf-file path:first-of-type,
 body:not(.pt-disable-custom-icons) .kanban-plugin__item-button-plus path:first-of-type {
-  d: path("M 0 0 H 150 V 150 H 0 Z") !important;
+  d: path("M 0 0 H 150 V 150 H 0 Z");
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) svg.folder,
+  body:not(.pt-disable-custom-icons) svg.search,
+  body:not(.pt-disable-custom-icons) svg.star,
+  body:not(.pt-disable-custom-icons) svg.stacked-levels,
+  body:not(.pt-disable-custom-icons) svg.up-and-down-arrows,
+  body:not(.pt-disable-custom-icons) svg.document,
+  body:not(.pt-disable-custom-icons) svg.hashtag,
+  body:not(.pt-disable-custom-icons) svg.quote-glyph,
+  body:not(.pt-disable-custom-icons) svg.calendar-with-checkmark,
+  body:not(.pt-disable-custom-icons) svg.pencil,
+  body:not(.pt-disable-custom-icons) svg.cross,
+  body:not(.pt-disable-custom-icons) svg.vertical-three-dots,
+  body:not(.pt-disable-custom-icons) svg.left-arrow,
+  body:not(.pt-disable-custom-icons) svg.right-arrow,
+  body:not(.pt-disable-custom-icons) svg.double-up-arrow-glyph,
+  body:not(.pt-disable-custom-icons) svg.double-down-arrow-glyph,
+  body:not(.pt-disable-custom-icons) svg.bullet-list,
+  body:not(.pt-disable-custom-icons) svg.expand-vertically,
+  body:not(.pt-disable-custom-icons) svg.magnifying-glass,
+  body:not(.pt-disable-custom-icons) svg.JumpToDate,
+  body:not(.pt-disable-custom-icons) svg.spreadsheet,
+  body:not(.pt-disable-custom-icons) svg.dot-network,
+  body:not(.pt-disable-custom-icons) svg.documents,
+  body:not(.pt-disable-custom-icons) svg.run-command,
+  body:not(.pt-disable-custom-icons) svg.pane-layout,
+  body:not(.pt-disable-custom-icons) svg.paper-plane,
+  body:not(.pt-disable-custom-icons) svg.left-arrow-with-tail,
+  body:not(.pt-disable-custom-icons) svg.right-arrow-with-tail,
+  body:not(.pt-disable-custom-icons) svg.vault,
+  body:not(.pt-disable-custom-icons) svg.open-vault,
+  body:not(.pt-disable-custom-icons) svg.help,
+  body:not(.pt-disable-custom-icons) svg.gear,
+  body:not(.pt-disable-custom-icons) svg.switch,
+  body:not(.pt-disable-custom-icons) svg.any-key,
+  body:not(.pt-disable-custom-icons) svg.reset,
+  body:not(.pt-disable-custom-icons) svg.install,
+  body:not(.pt-disable-custom-icons) svg.info,
+  body:not(.pt-disable-custom-icons) svg.reading-glasses,
+  body:not(.pt-disable-custom-icons) svg.trash,
+  body:not(.pt-disable-custom-icons) svg.link,
+  body:not(.pt-disable-custom-icons) svg.presentation,
+  body:not(.pt-disable-custom-icons) svg.popup-open,
+  body:not(.pt-disable-custom-icons) svg.merge-files,
+  body:not(.pt-disable-custom-icons) svg.code-glyph,
+  body:not(.pt-disable-custom-icons) svg.horizontal-split,
+  body:not(.pt-disable-custom-icons) svg.vertical-split,
+  body:not(.pt-disable-custom-icons) svg.pin,
+  body:not(.pt-disable-custom-icons) svg.microphone,
+  body:not(.pt-disable-custom-icons) svg.dice,
+  body:not(.pt-disable-custom-icons) svg.sheets-in-box,
+  body:not(.pt-disable-custom-icons) svg.blocks,
+  body:not(.pt-disable-custom-icons) svg.go-to-file,
+  body:not(.pt-disable-custom-icons) svg.add-note-glyph,
+  body:not(.pt-disable-custom-icons) svg.link-glyph,
+  body:not(.pt-disable-custom-icons) svg.links-coming-in,
+  body:not(.pt-disable-custom-icons) svg.links-going-out,
+  body:not(.pt-disable-custom-icons) svg.broken-link,
+  body:not(.pt-disable-custom-icons) svg.cloud,
+  body:not(.pt-disable-custom-icons) svg.languages,
+  body:not(.pt-disable-custom-icons) svg.uppercase-lowercase-a,
+  body:not(.pt-disable-custom-icons) svg.plus-with-circle,
+  body:not(.pt-disable-custom-icons) svg.crossed-star,
+  body:not(.pt-disable-custom-icons) svg.wand,
+  body:not(.pt-disable-custom-icons) svg.image-file,
+  body:not(.pt-disable-custom-icons) svg.split,
+  body:not(.pt-disable-custom-icons) svg.create-new,
+  body:not(.pt-disable-custom-icons) .kanban-plugin__lane-grip svg,
+  body:not(.pt-disable-custom-icons) svg.github-glyph,
+  body:not(.pt-disable-custom-icons) div[data-callout=note] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=abstract] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=summary] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=tldr] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=info] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=todo] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=tip] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=hint] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=important] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=success] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=help] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=faq] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=warning] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=caution] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=missing] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=danger] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=error] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=bug] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=example] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=quote] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=cite] .callout-icon svg,
+  body:not(.pt-disable-custom-icons) svg.globe,
+  body:not(.pt-disable-custom-icons) svg.filled-pin,
+  body:not(.pt-disable-custom-icons) svg.three-horizontal-bars,
+  body:not(.pt-disable-custom-icons) svg.ChevronDown,
+  body:not(.pt-disable-custom-icons) svg.sidebar-open,
+  body:not(.pt-disable-custom-icons) svg.minus,
+  body:not(.pt-disable-custom-icons) svg.maximize,
+  body:not(.pt-disable-custom-icons) svg.x,
+  body:not(.pt-disable-custom-icons) svg.lucide-pin,
+  body:not(.pt-disable-custom-icons) svg.scissors,
+  body:not(.pt-disable-custom-icons) svg.two-blank-pages,
+  body:not(.pt-disable-custom-icons) svg.paste,
+  body:not(.pt-disable-custom-icons) svg.paste-text,
+  body:not(.pt-disable-custom-icons) svg.select-all-text,
+  body:not(.pt-disable-custom-icons) svg.alert-circle,
+  body:not(.pt-disable-custom-icons) div#dangling-links svg.folder,
+  body:not(.pt-disable-custom-icons) svg.fullscreen,
+  body:not(.pt-disable-custom-icons) svg.exit-fullscreen,
+  body:not(.pt-disable-custom-icons) svg.bracket-glyph,
+  body:not(.pt-disable-custom-icons) svg.note-glyph,
+  body:not(.pt-disable-custom-icons) svg.price-tag-glyph,
+  body:not(.pt-disable-custom-icons) svg.image-glyph,
+  body:not(.pt-disable-custom-icons) svg.heading-glyph,
+  body:not(.pt-disable-custom-icons) svg.bold-glyph,
+  body:not(.pt-disable-custom-icons) svg.italic-glyph,
+  body:not(.pt-disable-custom-icons) svg.strikethrough-glyph,
+  body:not(.pt-disable-custom-icons) svg.highlight-glyph,
+  body:not(.pt-disable-custom-icons) svg.bullet-list-glyph,
+  body:not(.pt-disable-custom-icons) svg.number-list-glyph,
+  body:not(.pt-disable-custom-icons) svg.checkbox-glyph,
+  body:not(.pt-disable-custom-icons) svg.indent-glyph,
+  body:not(.pt-disable-custom-icons) svg.unindent-glyph,
+  body:not(.pt-disable-custom-icons) svg.undo-glyph,
+  body:not(.pt-disable-custom-icons) svg.redo-glyph,
+  body:not(.pt-disable-custom-icons) svg.keyboard-glyph,
+  body:not(.pt-disable-custom-icons) svg.wrench-screwdriver-glyph,
+  body:not(.pt-disable-custom-icons) svg.arrowenter,
+  body:not(.pt-disable-custom-icons) svg.arrowtab,
+  body:not(.pt-disable-custom-icons) svg.insertColumn,
+  body:not(.pt-disable-custom-icons) svg.insertRow,
+  body:not(.pt-disable-custom-icons) svg.alignLeft,
+  body:not(.pt-disable-custom-icons) svg.alignCenter,
+  body:not(.pt-disable-custom-icons) svg.alignRight,
+  body:not(.pt-disable-custom-icons) svg.moveColumnLeft,
+  body:not(.pt-disable-custom-icons) svg.moveColumnRight,
+  body:not(.pt-disable-custom-icons) svg.moveRowUp,
+  body:not(.pt-disable-custom-icons) svg.moveRowDown,
+  body:not(.pt-disable-custom-icons) svg.deleteColumn,
+  body:not(.pt-disable-custom-icons) svg.deleteRow,
+  body:not(.pt-disable-custom-icons) svg.sortAsc,
+  body:not(.pt-disable-custom-icons) svg.sortDesc,
+  body:not(.pt-disable-custom-icons) svg.formula,
+  body:not(.pt-disable-custom-icons) svg.plus-minus-glyph,
+  body:not(.pt-disable-custom-icons) svg.compress-glyph,
+  body:not(.pt-disable-custom-icons) svg.enlarge-glyph,
+  body:not(.pt-disable-custom-icons) svg.percent-sign-glyph,
+  body:not(.pt-disable-custom-icons) svg.up-curly-arrow-glyph,
+  body:not(.pt-disable-custom-icons) svg.down-curly-arrow-glyph,
+  body:not(.pt-disable-custom-icons) svg.up-chevron-glyph,
+  body:not(.pt-disable-custom-icons) svg.down-chevron-glyph,
+  body:not(.pt-disable-custom-icons) svg.left-chevron-glyph,
+  body:not(.pt-disable-custom-icons) svg.right-chevron-glyph,
+  body:not(.pt-disable-custom-icons) svg.scissors-glyph,
+  body:not(.pt-disable-custom-icons) svg.calendar-glyph,
+  body:not(.pt-disable-custom-icons) svg.clock-glyph,
+  body:not(.pt-disable-custom-icons) svg.minus-with-circle,
+  body:not(.pt-disable-custom-icons) svg.cross-in-box,
+  body:not(.pt-disable-custom-icons) svg.pdf-file,
+  body:not(.pt-disable-custom-icons) .kanban-plugin__item-button-plus {
+    background-color: var(--text-muted);
+  }
+  body:not(.pt-disable-custom-icons) svg.folder > *,
+  body:not(.pt-disable-custom-icons) svg.search > *,
+  body:not(.pt-disable-custom-icons) svg.star > *,
+  body:not(.pt-disable-custom-icons) svg.stacked-levels > *,
+  body:not(.pt-disable-custom-icons) svg.up-and-down-arrows > *,
+  body:not(.pt-disable-custom-icons) svg.document > *,
+  body:not(.pt-disable-custom-icons) svg.hashtag > *,
+  body:not(.pt-disable-custom-icons) svg.quote-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.calendar-with-checkmark > *,
+  body:not(.pt-disable-custom-icons) svg.pencil > *,
+  body:not(.pt-disable-custom-icons) svg.cross > *,
+  body:not(.pt-disable-custom-icons) svg.vertical-three-dots > *,
+  body:not(.pt-disable-custom-icons) svg.left-arrow > *,
+  body:not(.pt-disable-custom-icons) svg.right-arrow > *,
+  body:not(.pt-disable-custom-icons) svg.double-up-arrow-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.double-down-arrow-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.bullet-list > *,
+  body:not(.pt-disable-custom-icons) svg.expand-vertically > *,
+  body:not(.pt-disable-custom-icons) svg.magnifying-glass > *,
+  body:not(.pt-disable-custom-icons) svg.JumpToDate > *,
+  body:not(.pt-disable-custom-icons) svg.spreadsheet > *,
+  body:not(.pt-disable-custom-icons) svg.dot-network > *,
+  body:not(.pt-disable-custom-icons) svg.documents > *,
+  body:not(.pt-disable-custom-icons) svg.run-command > *,
+  body:not(.pt-disable-custom-icons) svg.pane-layout > *,
+  body:not(.pt-disable-custom-icons) svg.paper-plane > *,
+  body:not(.pt-disable-custom-icons) svg.left-arrow-with-tail > *,
+  body:not(.pt-disable-custom-icons) svg.right-arrow-with-tail > *,
+  body:not(.pt-disable-custom-icons) svg.vault > *,
+  body:not(.pt-disable-custom-icons) svg.open-vault > *,
+  body:not(.pt-disable-custom-icons) svg.help > *,
+  body:not(.pt-disable-custom-icons) svg.gear > *,
+  body:not(.pt-disable-custom-icons) svg.switch > *,
+  body:not(.pt-disable-custom-icons) svg.any-key > *,
+  body:not(.pt-disable-custom-icons) svg.reset > *,
+  body:not(.pt-disable-custom-icons) svg.install > *,
+  body:not(.pt-disable-custom-icons) svg.info > *,
+  body:not(.pt-disable-custom-icons) svg.reading-glasses > *,
+  body:not(.pt-disable-custom-icons) svg.trash > *,
+  body:not(.pt-disable-custom-icons) svg.link > *,
+  body:not(.pt-disable-custom-icons) svg.presentation > *,
+  body:not(.pt-disable-custom-icons) svg.popup-open > *,
+  body:not(.pt-disable-custom-icons) svg.merge-files > *,
+  body:not(.pt-disable-custom-icons) svg.code-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.horizontal-split > *,
+  body:not(.pt-disable-custom-icons) svg.vertical-split > *,
+  body:not(.pt-disable-custom-icons) svg.pin > *,
+  body:not(.pt-disable-custom-icons) svg.microphone > *,
+  body:not(.pt-disable-custom-icons) svg.dice > *,
+  body:not(.pt-disable-custom-icons) svg.sheets-in-box > *,
+  body:not(.pt-disable-custom-icons) svg.blocks > *,
+  body:not(.pt-disable-custom-icons) svg.go-to-file > *,
+  body:not(.pt-disable-custom-icons) svg.add-note-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.link-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.links-coming-in > *,
+  body:not(.pt-disable-custom-icons) svg.links-going-out > *,
+  body:not(.pt-disable-custom-icons) svg.broken-link > *,
+  body:not(.pt-disable-custom-icons) svg.cloud > *,
+  body:not(.pt-disable-custom-icons) svg.languages > *,
+  body:not(.pt-disable-custom-icons) svg.uppercase-lowercase-a > *,
+  body:not(.pt-disable-custom-icons) svg.plus-with-circle > *,
+  body:not(.pt-disable-custom-icons) svg.crossed-star > *,
+  body:not(.pt-disable-custom-icons) svg.wand > *,
+  body:not(.pt-disable-custom-icons) svg.image-file > *,
+  body:not(.pt-disable-custom-icons) svg.split > *,
+  body:not(.pt-disable-custom-icons) svg.create-new > *,
+  body:not(.pt-disable-custom-icons) .kanban-plugin__lane-grip svg > *,
+  body:not(.pt-disable-custom-icons) svg.github-glyph > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=note] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=abstract] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=summary] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=tldr] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=info] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=todo] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=tip] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=hint] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=important] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=success] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=help] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=faq] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=warning] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=caution] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=missing] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=danger] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=error] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=bug] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=example] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=quote] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) div[data-callout=cite] .callout-icon svg > *,
+  body:not(.pt-disable-custom-icons) svg.globe > *,
+  body:not(.pt-disable-custom-icons) svg.filled-pin > *,
+  body:not(.pt-disable-custom-icons) svg.three-horizontal-bars > *,
+  body:not(.pt-disable-custom-icons) svg.ChevronDown > *,
+  body:not(.pt-disable-custom-icons) svg.sidebar-open > *,
+  body:not(.pt-disable-custom-icons) svg.minus > *,
+  body:not(.pt-disable-custom-icons) svg.maximize > *,
+  body:not(.pt-disable-custom-icons) svg.x > *,
+  body:not(.pt-disable-custom-icons) svg.lucide-pin > *,
+  body:not(.pt-disable-custom-icons) svg.scissors > *,
+  body:not(.pt-disable-custom-icons) svg.two-blank-pages > *,
+  body:not(.pt-disable-custom-icons) svg.paste > *,
+  body:not(.pt-disable-custom-icons) svg.paste-text > *,
+  body:not(.pt-disable-custom-icons) svg.select-all-text > *,
+  body:not(.pt-disable-custom-icons) svg.alert-circle > *,
+  body:not(.pt-disable-custom-icons) div#dangling-links svg.folder > *,
+  body:not(.pt-disable-custom-icons) svg.fullscreen > *,
+  body:not(.pt-disable-custom-icons) svg.exit-fullscreen > *,
+  body:not(.pt-disable-custom-icons) svg.bracket-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.note-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.price-tag-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.image-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.heading-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.bold-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.italic-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.strikethrough-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.highlight-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.bullet-list-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.number-list-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.checkbox-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.indent-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.unindent-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.undo-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.redo-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.keyboard-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.wrench-screwdriver-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.arrowenter > *,
+  body:not(.pt-disable-custom-icons) svg.arrowtab > *,
+  body:not(.pt-disable-custom-icons) svg.insertColumn > *,
+  body:not(.pt-disable-custom-icons) svg.insertRow > *,
+  body:not(.pt-disable-custom-icons) svg.alignLeft > *,
+  body:not(.pt-disable-custom-icons) svg.alignCenter > *,
+  body:not(.pt-disable-custom-icons) svg.alignRight > *,
+  body:not(.pt-disable-custom-icons) svg.moveColumnLeft > *,
+  body:not(.pt-disable-custom-icons) svg.moveColumnRight > *,
+  body:not(.pt-disable-custom-icons) svg.moveRowUp > *,
+  body:not(.pt-disable-custom-icons) svg.moveRowDown > *,
+  body:not(.pt-disable-custom-icons) svg.deleteColumn > *,
+  body:not(.pt-disable-custom-icons) svg.deleteRow > *,
+  body:not(.pt-disable-custom-icons) svg.sortAsc > *,
+  body:not(.pt-disable-custom-icons) svg.sortDesc > *,
+  body:not(.pt-disable-custom-icons) svg.formula > *,
+  body:not(.pt-disable-custom-icons) svg.plus-minus-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.compress-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.enlarge-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.percent-sign-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.up-curly-arrow-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.down-curly-arrow-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.up-chevron-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.down-chevron-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.left-chevron-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.right-chevron-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.scissors-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.calendar-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.clock-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.minus-with-circle > *,
+  body:not(.pt-disable-custom-icons) svg.cross-in-box > *,
+  body:not(.pt-disable-custom-icons) svg.pdf-file > *,
+  body:not(.pt-disable-custom-icons) .kanban-plugin__item-button-plus > * {
+    display: none;
+  }
 }
 body:not(.pt-disable-custom-icons) svg.spreadsheet > svg path:first-of-type {
-  d: path("M 0 0 H 1000 V 1000 H 0 Z") !important;
+  d: path("M 0 0 H 1000 V 1000 H 0 Z");
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) svg.spreadsheet > svg > * {
+    display: none;
+  }
 }
 body:not(.pt-disable-custom-icons) .nav-action-button[title="left align column"] svg.widget-icon path:first-of-type,
 body:not(.pt-disable-custom-icons) .nav-action-button[title="center align column"] svg.widget-icon path:first-of-type,
@@ -7936,7 +8275,27 @@ body:not(.pt-disable-custom-icons) .nav-action-button[title="insert row above"] 
 body:not(.pt-disable-custom-icons) .nav-action-button[title="evaluate formulas"] svg.widget-icon path:first-of-type,
 body:not(.pt-disable-custom-icons) .nav-action-button[title="export as csv"] svg.widget-icon path:first-of-type,
 body:not(.pt-disable-custom-icons) .nav-action-button[title=help] svg.widget-icon path:first-of-type {
-  d: path("M 0 0 H 750 V 750 H 0 Z") !important;
+  d: path("M 0 0 H 750 V 750 H 0 Z");
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="left align column"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="center align column"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="right align column"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="move row up"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="move row down"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="move column left"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="move column right"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="sort by column ascending"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="sort by column descending"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="delete column"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="delete row"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="insert column left"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="insert row above"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="evaluate formulas"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title="export as csv"] svg.widget-icon > *,
+  body:not(.pt-disable-custom-icons) .nav-action-button[title=help] svg.widget-icon > * {
+    display: none;
+  }
 }
 body:not(.pt-disable-custom-icons) .nav-action-button[title="export as csv"] svg.widget-icon path:first-of-type {
   fill: unset;
@@ -7958,34 +8317,89 @@ body:not(.pt-disable-custom-icons) div[data-callout=quote] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=cite] .callout-title svg {
   background-color: var(--color-grey-text);
 }
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=note] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=quote] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=cite] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
 body:not(.pt-disable-custom-icons) div[data-callout=abstract] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=summary] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=tldr] .callout-title svg {
   background-color: var(--color-aqua-text);
 }
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=abstract] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=summary] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=tldr] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
 body:not(.pt-disable-custom-icons) div[data-callout=info] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=todo] .callout-title svg {
   background-color: var(--color-blue-text);
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=info] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=todo] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
 }
 body:not(.pt-disable-custom-icons) div[data-callout=tip] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=hint] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=important] .callout-title svg {
   background-color: var(--color-mint-text);
 }
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=tip] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=hint] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=important] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
 body:not(.pt-disable-custom-icons) div[data-callout=success] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-title svg {
   background-color: var(--color-green-text);
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=success] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=check] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=done] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
 }
 body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=help] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=faq] .callout-title svg {
   background-color: var(--color-yellow-text);
 }
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=question] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=help] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=faq] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
 body:not(.pt-disable-custom-icons) div[data-callout=warning] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=caution] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-title svg {
   background-color: var(--color-orange-text);
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=warning] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=caution] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=attention] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
 }
 body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-title svg,
@@ -7994,11 +8408,33 @@ body:not(.pt-disable-custom-icons) div[data-callout=danger] .callout-title svg,
 body:not(.pt-disable-custom-icons) div[data-callout=error] .callout-title svg {
   background-color: var(--color-red-text);
 }
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=failure] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=fail] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=missing] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=danger] .callout-title svg,
+  body:not(.pt-disable-custom-icons) div[data-callout=error] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
 body:not(.pt-disable-custom-icons) div[data-callout=bug] .callout-title svg {
   background-color: var(--color-pink-text);
 }
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=bug] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
+}
 body:not(.pt-disable-custom-icons) div[data-callout=example] .callout-title svg {
   background-color: var(--color-purple-text);
+}
+@supports (-webkit-touch-callout: none) {
+  body:not(.pt-disable-custom-icons) div[data-callout=example] .callout-title svg {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+  }
 }
 body:not(.pt-disable-custom-icons) svg.alert-circle {
   background-color: var(--color-red-tint);
