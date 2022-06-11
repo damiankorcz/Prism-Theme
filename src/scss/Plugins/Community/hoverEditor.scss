@@ -1,5 +1,5 @@
 /* #region  [Plugin - Community] Hover Editor */
-body .popover.hover-popover {
+.popover.hover-popover {
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
@@ -7,6 +7,10 @@ body .popover.hover-popover {
 	.popover-titlebar {
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
+	}
+
+	.popover-content {
+		border-radius: var(--border-radius);
 	}
 
 	&.is-pinned.is-pinned {
@@ -29,8 +33,21 @@ body .popover.hover-popover {
 		}
 	}
 
+	.popover-action,
+	.popover-header-icon {
+		color: var(--text-muted);
+	}
+
 	.mod-show-navbar svg {
-		transform: rotate(0deg);
+		body & {
+			transform: rotate(0deg);
+		}
+	}
+
+	.mod-show-navbar.is-active svg {
+		body & {
+			transform: rotate(180deg);
+		}
 	}
 }
 /* #endregion */
