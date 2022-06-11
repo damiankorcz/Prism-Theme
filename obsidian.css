@@ -3297,7 +3297,9 @@ body:not(.pt-disable-animations) .workspace-tab-header:hover svg,
 body:not(.pt-disable-animations) .graph-controls-button:hover svg,
 body:not(.pt-disable-animations) .kanban-plugin__lane-settings-button:hover svg,
 body:not(.pt-disable-animations) .kanban-plugin__item-postfix-button:hover svg,
-body:not(.pt-disable-animations) .modal-close-button:hover {
+body:not(.pt-disable-animations) .modal-close-button:hover,
+body:not(.pt-disable-animations) .popover-action:hover svg,
+body:not(.pt-disable-animations) .popover-header-icon:hover svg {
   animation-name: iconEnlargeIcon;
   animation-duration: 0.25s;
   animation-iteration-count: 2;
@@ -7683,11 +7685,6 @@ body:not(.pt-disable-custom-icons) svg.globe,
 body:not(.pt-disable-custom-icons) svg.filled-pin,
 body:not(.pt-disable-custom-icons) svg.three-horizontal-bars,
 body:not(.pt-disable-custom-icons) svg.ChevronDown,
-body:not(.pt-disable-custom-icons) svg.sidebar-open,
-body:not(.pt-disable-custom-icons) svg.minus,
-body:not(.pt-disable-custom-icons) svg.maximize,
-body:not(.pt-disable-custom-icons) svg.x,
-body:not(.pt-disable-custom-icons) svg.lucide-pin,
 body:not(.pt-disable-custom-icons) svg.scissors,
 body:not(.pt-disable-custom-icons) svg.two-blank-pages,
 body:not(.pt-disable-custom-icons) svg.paste,
@@ -7849,11 +7846,6 @@ body:not(.pt-disable-custom-icons) svg.globe path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.filled-pin path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.three-horizontal-bars path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.ChevronDown path:first-of-type,
-body:not(.pt-disable-custom-icons) svg.sidebar-open path:first-of-type,
-body:not(.pt-disable-custom-icons) svg.minus path:first-of-type,
-body:not(.pt-disable-custom-icons) svg.maximize path:first-of-type,
-body:not(.pt-disable-custom-icons) svg.x path:first-of-type,
-body:not(.pt-disable-custom-icons) svg.lucide-pin path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.scissors path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.two-blank-pages path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.paste path:first-of-type,
@@ -8015,11 +8007,6 @@ body:not(.pt-disable-custom-icons) svg.pdf-file path:first-of-type {
   body:not(.pt-disable-custom-icons) svg.filled-pin,
   body:not(.pt-disable-custom-icons) svg.three-horizontal-bars,
   body:not(.pt-disable-custom-icons) svg.ChevronDown,
-  body:not(.pt-disable-custom-icons) svg.sidebar-open,
-  body:not(.pt-disable-custom-icons) svg.minus,
-  body:not(.pt-disable-custom-icons) svg.maximize,
-  body:not(.pt-disable-custom-icons) svg.x,
-  body:not(.pt-disable-custom-icons) svg.lucide-pin,
   body:not(.pt-disable-custom-icons) svg.scissors,
   body:not(.pt-disable-custom-icons) svg.two-blank-pages,
   body:not(.pt-disable-custom-icons) svg.paste,
@@ -8180,11 +8167,6 @@ body:not(.pt-disable-custom-icons) svg.pdf-file path:first-of-type {
   body:not(.pt-disable-custom-icons) svg.filled-pin > *,
   body:not(.pt-disable-custom-icons) svg.three-horizontal-bars > *,
   body:not(.pt-disable-custom-icons) svg.ChevronDown > *,
-  body:not(.pt-disable-custom-icons) svg.sidebar-open > *,
-  body:not(.pt-disable-custom-icons) svg.minus > *,
-  body:not(.pt-disable-custom-icons) svg.maximize > *,
-  body:not(.pt-disable-custom-icons) svg.x > *,
-  body:not(.pt-disable-custom-icons) svg.lucide-pin > *,
   body:not(.pt-disable-custom-icons) svg.scissors > *,
   body:not(.pt-disable-custom-icons) svg.two-blank-pages > *,
   body:not(.pt-disable-custom-icons) svg.paste > *,
@@ -8254,6 +8236,50 @@ body:not(.pt-disable-custom-icons) svg.spreadsheet > svg path:first-of-type {
   body:not(.pt-disable-custom-icons) svg.spreadsheet > svg > * {
     display: none;
   }
+}
+body:not(.pt-disable-custom-icons) svg.minimize,
+body:not(.pt-disable-custom-icons) svg.maximize,
+body:not(.pt-disable-custom-icons) svg.lucide-pin,
+body:not(.pt-disable-custom-icons) svg.sidebar-open {
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--text-muted);
+}
+body:not(.pt-disable-custom-icons) svg.minimize:hover,
+body:not(.pt-disable-custom-icons) svg.maximize:hover,
+body:not(.pt-disable-custom-icons) svg.lucide-pin:hover,
+body:not(.pt-disable-custom-icons) svg.sidebar-open:hover {
+  background-color: var(--interactive-accent-hover);
+}
+body:not(.pt-disable-custom-icons) svg.minimize path:first-of-type,
+body:not(.pt-disable-custom-icons) svg.maximize path:first-of-type,
+body:not(.pt-disable-custom-icons) svg.lucide-pin path:first-of-type,
+body:not(.pt-disable-custom-icons) svg.sidebar-open path:first-of-type {
+  d: path("M 0 0 H 150 V 150 H 0 Z");
+}
+body:not(.pt-disable-custom-icons) svg.minimize rect,
+body:not(.pt-disable-custom-icons) svg.minimize path:not(:first-of-type),
+body:not(.pt-disable-custom-icons) svg.maximize rect,
+body:not(.pt-disable-custom-icons) svg.maximize path:not(:first-of-type),
+body:not(.pt-disable-custom-icons) svg.lucide-pin rect,
+body:not(.pt-disable-custom-icons) svg.lucide-pin path:not(:first-of-type),
+body:not(.pt-disable-custom-icons) svg.sidebar-open rect,
+body:not(.pt-disable-custom-icons) svg.sidebar-open path:not(:first-of-type) {
+  display: none;
+}
+body:not(.pt-disable-custom-icons) svg.minus,
+body:not(.pt-disable-custom-icons) svg.x {
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  background-color: var(--text-muted);
+}
+body:not(.pt-disable-custom-icons) svg.minus:hover,
+body:not(.pt-disable-custom-icons) svg.x:hover {
+  background-color: var(--interactive-accent-hover);
+}
+body:not(.pt-disable-custom-icons) svg.minus line,
+body:not(.pt-disable-custom-icons) svg.x line {
+  display: none;
 }
 body:not(.pt-disable-custom-icons) .nav-action-button[title="left align column"] svg.widget-icon path:first-of-type,
 body:not(.pt-disable-custom-icons) .nav-action-button[title="center align column"] svg.widget-icon path:first-of-type,
@@ -9011,6 +9037,10 @@ body:not(.pt-disable-custom-icons) svg.sidebar-open {
 body:not(.pt-disable-custom-icons) svg.minus {
   -webkit-mask-size: 23px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M5 11h14v2H5z'%3E%3C/path%3E%3C/svg%3E");
+}
+body:not(.pt-disable-custom-icons) svg.minimize {
+  -webkit-mask-size: 17px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3v3a2 2 0 0 1-2 2H3'%3E%3C/path%3E%3Cpath d='M21 8h-3a2 2 0 0 1-2-2V3'%3E%3C/path%3E%3Cpath d='M3 16h3a2 2 0 0 1 2 2v3'%3E%3C/path%3E%3Cpath d='M16 21v-3a2 2 0 0 1 2-2h3'%3E%3C/path%3E%3C/svg%3E");
 }
 body:not(.pt-disable-custom-icons) svg.maximize {
   -webkit-mask-size: 17px;
@@ -11062,32 +11092,42 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-body .popover.hover-popover {
+.popover.hover-popover {
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow-popup);
 }
-body .popover.hover-popover .popover-titlebar {
+.popover.hover-popover .popover-titlebar {
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
 }
-body .popover.hover-popover.is-pinned.is-pinned div.popover-titlebar {
+.popover.hover-popover .popover-content {
+  border-radius: var(--border-radius);
+}
+.popover.hover-popover.is-pinned.is-pinned div.popover-titlebar {
   background-color: var(--background-primary);
 }
-body .popover.hover-popover.is-pinned.is-pinned div.popover-title::after {
+.popover.hover-popover.is-pinned.is-pinned div.popover-title::after {
   background: linear-gradient(to right, transparent, var(--background-primary));
 }
-body .popover.hover-popover.is-pinned.is-pinned.is-active {
+.popover.hover-popover.is-pinned.is-pinned.is-active {
   border: 1px solid var(--interactive-accent-base);
 }
-body .popover.hover-popover.is-pinned.is-pinned.is-active div.popover-titlebar {
+.popover.hover-popover.is-pinned.is-pinned.is-active div.popover-titlebar {
   background-color: var(--background-primary);
 }
-body .popover.hover-popover.is-pinned.is-pinned.is-active div.popover-title::after {
+.popover.hover-popover.is-pinned.is-pinned.is-active div.popover-title::after {
   background: linear-gradient(to right, transparent, var(--background-primary));
+}
+.popover.hover-popover .popover-action,
+.popover.hover-popover .popover-header-icon {
+  color: var(--text-muted);
 }
 body .popover.hover-popover .mod-show-navbar svg {
   transform: rotate(0deg);
+}
+body .popover.hover-popover .mod-show-navbar.is-active svg {
+  transform: rotate(180deg);
 }
 .workspace-leaf-content[data-type=quiet-outline] .view-content {
   padding: unset;
