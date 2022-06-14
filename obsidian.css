@@ -1,6 +1,6 @@
 /* #region  [Info] License */
 /*
-    Prism Theme for Obsidian.md (Version: v2.2.1)
+    Prism Theme for Obsidian.md (Version: v2.2.2)
     > A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -2000,6 +2000,7 @@ button.copy-code-button {
 body:not(.is-mobile) .titlebar {
   height: 22px !important;
   background-color: transparent;
+  border-bottom: unset;
 }
 .titlebar-inner {
   font-weight: 600;
@@ -3610,7 +3611,7 @@ body:not(.is-mobile) .modal.mod-settings .vertical-tab-header {
   margin: 7px 15px;
   font-size: 14px;
   color: var(--interactive-accent-text);
-  content: "Prism v2.2.1";
+  content: "Prism v2.2.2";
   background: var(--background-secondary);
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
@@ -3646,8 +3647,23 @@ body:not(.is-mobile) .modal.mod-settings .vertical-tab-header {
   padding: 8px;
   border-bottom: unset;
 }
-.modal.mod-settings .vertical-tab-header-group:first-of-type {
+.modal.mod-settings .vertical-tab-header-group .vertical-tab-header-group-items:empty {
+  display: none;
+}
+.modal.mod-settings .vertical-tab-header-group:not(:last-of-type) {
   margin-bottom: 10px;
+}
+.card {
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid var(--window-border);
+  border-radius: var(--border-radius);
+}
+.theme-light .card {
+  background-color: var(--background-tertiary);
+}
+.theme-dark .card {
+  background-color: var(--background-secondary-alt);
 }
 .modal.mod-settings .vertical-tab-content-container {
   height: unset;
@@ -3728,6 +3744,7 @@ body:not(.is-mobile) .modal.mod-settings .vertical-tab-header {
 .vertical-tab-nav-item:hover {
   color: var(--interactive-accent-text);
   background-color: var(--background-primary);
+  border: var(--border-size) solid var(--window-border);
 }
 .horizontal-tab-nav-item.is-active,
 .vertical-tab-nav-item.is-active {
@@ -4481,11 +4498,15 @@ input[type=range]::-webkit-slider-thumb {
   position: absolute;
   height: 8px;
   background-color: var(--interactive-accent-base);
+  border: 2px solid var(--interactive-accent-tint);
 }
 .view-header-icon {
   top: 0;
   display: flex;
   align-items: center;
+}
+.view-header-icon:hover {
+  color: var(--interactive-accent-tint);
 }
 .view-header-title {
   word-wrap: normal;
@@ -4669,6 +4690,10 @@ body:not(.is-mobile) .workspace-split.mod-horizontal.mod-root .workspace-leaf {
 }
 .workspace-tabs .workspace-leaf {
   background-color: transparent;
+  border: unset;
+}
+.workspace-tabs .workspace-leaf.mod-active {
+  border-radius: var(--border-radius);
 }
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf,
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
@@ -4770,6 +4795,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   height: calc(100% - var(--window-gap));
   background-color: transparent;
   border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
 }
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   bottom: calc(-1 * var(--window-gap) / 2);
@@ -4778,6 +4804,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   height: var(--window-gap);
   background-color: transparent;
   border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   top: calc(var(--window-gap) / 2);
@@ -4786,6 +4813,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   height: calc(100% - var(--window-gap));
   background-color: transparent;
   border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
 }
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   top: calc(var(--window-gap) / 2);
@@ -4794,6 +4822,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   height: calc(100% - var(--window-gap));
   background-color: transparent;
   border-radius: var(--border-radius-small);
+  border: var(--border-size) solid transparent;
 }
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
@@ -6668,6 +6697,16 @@ input.prompt-input {
 .nav-folder.mod-root > .nav-folder-children > .nav-file {
   margin-left: unset;
 }
+.workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title {
+  background-color: var(--interactive-accent-base);
+  border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius-small);
+}
+.workspace-leaf.mod-active .nav-file.has-focus {
+  background-color: var(--interactive-accent-base);
+  border: unset;
+  border-radius: var(--border-radius-small);
+}
 .is-mobile .nav-file-title,
 .is-mobile .nav-folder-title,
 .is-mobile .outline,
@@ -7082,9 +7121,17 @@ div.graph-controls.is-close {
   display: none;
 }
 .search-result-file-matched-text {
-  padding: 0 4px;
+  padding: 0 2px;
+  font-size: 0.859em;
   color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
+  border: 1px solid var(--interactive-accent-tint);
+  border-radius: var(--border-radius-small);
+}
+.workspace-leaf.mod-active .search-result.has-focus .tree-item-self,
+.workspace-leaf.mod-active .search-result-file-match.has-focus {
+  background-color: var(--interactive-accent-base);
+  border: 1px solid var(--interactive-accent-tint);
   border-radius: var(--border-radius-small);
 }
 .workspace-leaf-content[data-type=search] .search-input-container {
@@ -7098,7 +7145,11 @@ div.graph-controls.is-close {
 }
 .workspace-leaf-content[data-type=search] .search-result-container {
   box-sizing: border-box;
-  padding: 0 10px 0 0;
+  padding: 8px 10px 0 0;
+}
+.workspace-leaf-content[data-type=search] .search-result-container.is-loading::before {
+  background-color: var(--interactive-accent-base);
+  border: 1px solid var(--interactive-accent-tint);
 }
 .workspace-leaf-content[data-type=search] .search-result-file-match {
   left: 0;

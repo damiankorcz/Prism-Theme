@@ -45,9 +45,18 @@
 }
 
 .search-result-file-matched-text {
-	padding: 0 4px;
+	padding: 0 2px;
+	font-size: 0.859em;
 	color: var(--highlight-text-normal);
 	background-color: var(--interactive-accent-base);
+	border: 1px solid var(--interactive-accent-tint);
+	border-radius: var(--border-radius-small);
+}
+
+.workspace-leaf.mod-active .search-result.has-focus .tree-item-self,
+.workspace-leaf.mod-active .search-result-file-match.has-focus {
+	background-color: var(--interactive-accent-base);
+	border: 1px solid var(--interactive-accent-tint);
 	border-radius: var(--border-radius-small);
 }
 
@@ -67,7 +76,12 @@
 
 	.search-result-container {
 		box-sizing: border-box;
-		padding: 0 10px 0 0;
+		padding: 8px 10px 0 0;
+
+		&.is-loading::before {
+			background-color: var(--interactive-accent-base);
+			border: 1px solid var(--interactive-accent-tint);
+		}
 	}
 
 	.search-result-file-match {
