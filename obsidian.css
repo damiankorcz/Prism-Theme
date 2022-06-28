@@ -64,6 +64,12 @@
   --scroll-bar-size: 8px;
   --scroll-bar-size-hover: 15px;
   --custom-readable-line-length: 700px;
+  --h1-weight: 800;
+  --h2-weight: 800;
+  --h3-weight: 800;
+  --h4-weight: 800;
+  --h5-weight: 800;
+  --h6-weight: 800;
   --h1-font-size: 2em;
   --h2-font-size: 1.8em;
   --h3-font-size: 1.6em;
@@ -5653,9 +5659,35 @@ a:hover {
   text-decoration: none;
 }
 .CodeMirror pre.CodeMirror-line,
-.markdown-source-view .cm-line,
-.cm-s-obsidian .cm-line {
+.markdown-source-view .cm-line:not(.HyperMD-header),
+.cm-s-obsidian .cm-line:not(.HyperMD-header) {
   line-height: 1.5em;
+}
+.is-mobile h1,
+.is-mobile h2,
+.is-mobile h3,
+.is-mobile h4,
+.is-mobile h5,
+.is-mobile h6,
+.is-mobile .markdown-rendered h1,
+.is-mobile .markdown-rendered h2,
+.is-mobile .markdown-rendered h3,
+.is-mobile .markdown-rendered h4,
+.is-mobile .markdown-rendered h5,
+.is-mobile .markdown-rendered h6,
+.is-mobile .HyperMD-header-1,
+.is-mobile .HyperMD-header-2,
+.is-mobile .HyperMD-header-3,
+.is-mobile .HyperMD-header-4,
+.is-mobile .HyperMD-header-5,
+.is-mobile .HyperMD-header-6,
+.is-mobile .HyperMD-list-line .cm-header-1,
+.is-mobile .HyperMD-list-line .cm-header-2,
+.is-mobile .HyperMD-list-line .cm-header-3,
+.is-mobile .HyperMD-list-line .cm-header-4,
+.is-mobile .HyperMD-list-line .cm-header-5,
+.is-mobile .HyperMD-list-line .cm-header-6 {
+  line-height: 1em;
 }
 p {
   margin-block-start: 0.5em;

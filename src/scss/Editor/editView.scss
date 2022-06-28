@@ -120,9 +120,26 @@ a {
 }
 
 .CodeMirror pre.CodeMirror-line,
-.markdown-source-view .cm-line,
-.cm-s-obsidian .cm-line {
+.markdown-source-view .cm-line:not(.HyperMD-header),
+.cm-s-obsidian .cm-line:not(.HyperMD-header) {
 	line-height: 1.5em;
+}
+
+.is-mobile {
+	h,
+	.markdown-rendered h,
+	.HyperMD-header-,
+	.HyperMD-list-line .cm-header- {
+		&1,
+		&2,
+		&3,
+		&4,
+		&5,
+		&6 {
+
+			line-height: 1em;
+		}
+	}
 }
 
 p {
