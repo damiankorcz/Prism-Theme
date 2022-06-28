@@ -5,51 +5,54 @@
 	flex: 0 0 38px;
 	background-color: var(--background-secondary-alt);
 	border: unset;
+	
+	&.is-collapsed {
+		background-color: unset;
+	}
+	
+	&.mod-left.is-collapsed {
+		border-right-color: var(--background-secondary-alt);
+	}
+	
+	&.mod-right.is-collapsed {
+		border-left-color: var(--background-secondary-alt);
+	}
+
+	.workspace-ribbon-collapse-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 9px;
+		margin-top: calc(var(--window-gap) / 2);
+		color: var(--text-muted);
+		background-color: var(--background-tertiary);
+		border: var(--border-size) solid transparent;
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+		stroke-width: 2px;
+		transition: all ease 200ms;
+		
+		&:hover {
+			color: var(--interactive-accent-hover);
+		}
+		
+		svg {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	
+	&.side-dock-ribbon.mod-right.is-collapsed .workspace-ribbon-collapse-btn,
+	&.side-dock-ribbon.mod-left.is-collapsed .workspace-ribbon-collapse-btn {
+		padding: 10px;
+		border: 1px solid var(--window-border);
+	}
 }
 
-// Collapsed ribbon background/border color
-.workspace-ribbon.mod-left.is-collapsed {
-	border-right-color: var(--background-secondary-alt);
-}
-
-.workspace-ribbon.mod-right.is-collapsed {
-	border-left-color: var(--background-secondary-alt);
-}
-
-.workspace-ribbon.is-collapsed {
-	background-color: unset;
-}
-
-// Ribbon collapse button positioning
-.workspace-ribbon-collapse-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 9px;
-	margin-top: calc(var(--window-gap) / 2);
-	color: var(--text-muted);
-	background-color: var(--background-tertiary);
-	border: var(--border-size) solid transparent;
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
-	stroke-width: 2px;
-	transition: all ease 200ms;
-}
-
-.workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed .workspace-ribbon-collapse-btn,
-.workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .workspace-ribbon-collapse-btn {
-	padding: 10px;
-	border: 1px solid var(--window-border);
-}
-
-.workspace-ribbon-collapse-btn:hover {
-	color: var(--interactive-accent-hover);
-}
-
-// Ribbon collapse button size
-.workspace-ribbon-collapse-btn svg {
-	width: 16px;
-	height: 16px;
+.pt-minimal-right-sidebar .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) {
+	position: fixed;
+    width: 38px;
+    right: 5px;
 }
 
 .side-dock-actions {
@@ -67,14 +70,9 @@
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow);
-}
-
-// Moves the settings section closer to the bottom of the window
-.side-dock-settings {
 	margin-bottom: 5px;
 }
 
-// Padding and margin around the buttons in the side ribbon
 .side-dock-ribbon-action {
 	display: flex;
 	justify-content: center;
@@ -88,11 +86,10 @@
 .side-dock-ribbon-tab,
 .side-dock-ribbon-action {
 	color: var(--text-muted);
-}
-
-.side-dock-ribbon-tab:hover,
-.side-dock-ribbon-action:hover {
-	color: var(--interactive-accent-hover);
+	
+	&:hover {
+		color: var(--interactive-accent-hover);
+	}
 }
 
 body.is-mobile {

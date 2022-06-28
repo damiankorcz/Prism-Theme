@@ -2640,6 +2640,9 @@ body.pt-solid-titlebar-lt.theme-light .titlebar-button-container.mod-right div.t
 .pt-tab-label-left-sidebar-right .workspace-split.mod-left-split .workspace-tabs .workspace-tab-header-container {
   justify-content: flex-end;
 }
+.pt-minimal-right-sidebar .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+  width: calc(100% - 38px);
+}
 .pt-tab-label-right-sidebar-left .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
   justify-content: flex-start;
 }
@@ -4851,16 +4854,16 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   background-color: var(--background-secondary-alt);
   border: unset;
 }
+.workspace-ribbon.is-collapsed {
+  background-color: unset;
+}
 .workspace-ribbon.mod-left.is-collapsed {
   border-right-color: var(--background-secondary-alt);
 }
 .workspace-ribbon.mod-right.is-collapsed {
   border-left-color: var(--background-secondary-alt);
 }
-.workspace-ribbon.is-collapsed {
-  background-color: unset;
-}
-.workspace-ribbon-collapse-btn {
+.workspace-ribbon .workspace-ribbon-collapse-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4874,17 +4877,22 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   stroke-width: 2px;
   transition: all ease 200ms;
 }
+.workspace-ribbon .workspace-ribbon-collapse-btn:hover {
+  color: var(--interactive-accent-hover);
+}
+.workspace-ribbon .workspace-ribbon-collapse-btn svg {
+  width: 16px;
+  height: 16px;
+}
 .workspace-ribbon.side-dock-ribbon.mod-right.is-collapsed .workspace-ribbon-collapse-btn,
 .workspace-ribbon.side-dock-ribbon.mod-left.is-collapsed .workspace-ribbon-collapse-btn {
   padding: 10px;
   border: 1px solid var(--window-border);
 }
-.workspace-ribbon-collapse-btn:hover {
-  color: var(--interactive-accent-hover);
-}
-.workspace-ribbon-collapse-btn svg {
-  width: 16px;
-  height: 16px;
+.pt-minimal-right-sidebar .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) {
+  position: fixed;
+  width: 38px;
+  right: 5px;
 }
 .side-dock-actions {
   margin-top: calc(var(--window-gap) / 2);
@@ -4900,8 +4908,6 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
   box-shadow: var(--drop-shadow);
-}
-.side-dock-settings {
   margin-bottom: 5px;
 }
 .side-dock-ribbon-action {
@@ -14972,6 +14978,12 @@ settings:
         id: pt-hide-view-header
         title: Hide Note Titlebar
         description: Hides the Note Titlebar until you hover over the top part of a note.
+        default: false
+        type: class-toggle
+    -
+        id: pt-minimal-right-sidebar
+        title: Minimal Right Sidebar
+        description: Makes the Right Sidebar collapse button merge next to the top tabs. Helps reduce the wasted space caused by the empty column which accomodates the collapse button.
         default: false
         type: class-toggle
     -
