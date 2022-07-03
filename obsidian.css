@@ -1046,8 +1046,9 @@ body.theme-dark.pt-color-scheme-pine-dt {
   border: var(--border-size) solid;
   border-radius: var(--border-radius);
 }
-.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  border: var(--border-size) solid;
+body:not(.is-focused) .workspace-split.mod-root > .workspace-leaf:not(.mod-active):first-of-type:last-of-type .view-header {
+  border: var(--border-size) solid transparent;
+  border-bottom: 1px solid var(--window-border);
 }
 .workspace-leaf.mod-active .view-header .view-header-icon,
 .workspace-leaf.mod-active .view-header .view-actions .view-action,
@@ -1162,24 +1163,19 @@ button.copy-code-button {
   background-color: var(--background-primary);
   border-color: transparent;
 }
-.theme-dark.pt-accent-style-text-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
-.theme-light.pt-accent-style-text-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  background-color: var(--background-primary);
-  border-color: transparent;
-}
-.theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-header-icon,
-.theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-actions .view-action,
+.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-icon,
+.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
 .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-title,
-.theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-header-icon,
-.theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-actions .view-action,
+.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-icon,
+.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
 .theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-title {
   color: var(--highlight-text-normal);
 }
-.theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-header-icon:hover,
-.theme-dark.pt-accent-style-text-dt .workspace-leaf .view-header .view-actions .view-action:hover,
+.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
 .theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
-.theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-header-icon:hover,
-.theme-light.pt-accent-style-text-lt .workspace-leaf .view-header .view-actions .view-action:hover,
+.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
 .theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
   color: var(--interactive-accent-hover);
 }
@@ -1371,24 +1367,19 @@ button.copy-code-button {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
-.theme-dark.pt-accent-style-border-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
-.theme-light.pt-accent-style-border-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-  background-color: var(--background-primary);
-  border-color: var(--interactive-accent-tint);
-}
-.theme-dark.pt-accent-style-border-dt .workspace-leaf .view-header .view-header-icon,
-.theme-dark.pt-accent-style-border-dt .workspace-leaf .view-header .view-actions .view-action,
+.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-icon,
+.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
 .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-title,
-.theme-light.pt-accent-style-border-lt .workspace-leaf .view-header .view-header-icon,
-.theme-light.pt-accent-style-border-lt .workspace-leaf .view-header .view-actions .view-action,
+.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-icon,
+.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
 .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-title {
   color: var(--highlight-text-normal);
 }
-.theme-dark.pt-accent-style-border-dt .workspace-leaf .view-header .view-header-icon:hover,
-.theme-dark.pt-accent-style-border-dt .workspace-leaf .view-header .view-actions .view-action:hover,
+.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
 .theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
-.theme-light.pt-accent-style-border-lt .workspace-leaf .view-header .view-header-icon:hover,
-.theme-light.pt-accent-style-border-lt .workspace-leaf .view-header .view-actions .view-action:hover,
+.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
+.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
 .theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
   color: var(--interactive-accent-hover);
 }
@@ -1578,11 +1569,6 @@ button.copy-code-button {
 .theme-dark.pt-accent-style-filled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
 .theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header,
 .theme-light.pt-accent-style-filled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
-  background-color: var(--interactive-accent-base);
-  border-color: transparent;
-}
-.theme-dark.pt-accent-style-filled-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
-.theme-light.pt-accent-style-filled-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -1792,11 +1778,6 @@ button.copy-code-button {
 .theme-dark.pt-accent-style-borderandfilled-dt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header,
 .theme-light.pt-accent-style-borderandfilled-lt.plugin-sliding-panes-rotate-header .workspace > .mod-root > .workspace-leaf.mod-active > .workspace-leaf-content > div.view-header {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -6537,7 +6518,7 @@ progress[value="100"]::-webkit-progress-value {
 }
 .workspace-leaf-content[data-type=backlink] .tree-item-self .tree-item-icon,
 .embedded-backlinks .tree-item-self .tree-item-icon {
-  padding: 8px 10px;
+  padding: 0 10px;
 }
 .workspace-leaf-content[data-type=backlink] .tree-item-self .tree-item-icon::after,
 .embedded-backlinks .tree-item-self .tree-item-icon::after {
@@ -6730,7 +6711,7 @@ input.prompt-input {
 }
 .nav-file:not(.mod-root),
 .nav-folder:not(.mod-root) {
-  margin-left: 2px;
+  margin-left: var(--file-explorer-left-margin);
 }
 .nav-folder.mod-root > .nav-folder-children > .nav-file {
   margin-left: unset;
@@ -7041,7 +7022,7 @@ div.graph-controls.is-close {
   display: none;
 }
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon {
-  padding: 8px 10px;
+  padding: 0 10px;
 }
 .workspace-leaf-content[data-type=outgoing-link] .tree-item-self .tree-item-icon::after {
   display: none;
@@ -7245,7 +7226,7 @@ div.graph-controls.is-close {
   padding-right: 5px;
 }
 .workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon {
-  padding: 8px 10px;
+  padding: 0 10px;
 }
 .workspace-leaf-content[data-type=search] .tree-item-self .tree-item-icon::after {
   display: none;
@@ -14294,7 +14275,7 @@ settings:
     -
         id: pt-minimal-right-sidebar
         title: Minimal Right Sidebar
-        description: Makes the Right Sidebar collapse button merge next to the top tabs. Helps reduce the wasted space caused by the empty column which accomodates the collapse button.
+        description: Makes the Right Sidebar Ribbon collapse button merge next to the top tabs. Helps reduce the wasted space caused by the empty column which accomodates the collapse button.
         default: false
         type: class-toggle
     -
@@ -14428,6 +14409,16 @@ settings:
         default: 2
         min: 1
         max: 5
+        step: 1
+    -
+        id: file-explorer-left-margin
+        title: File Explorer Left Margin (px)
+        description: Increases the distance that folders/files are inset within another folder.
+        type: variable-number-slider
+        format: 'px'
+        default: 5
+        min: 1
+        max: 25
         step: 1
     -
         id: custom-vault-banner
