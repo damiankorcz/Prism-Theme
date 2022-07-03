@@ -30,8 +30,9 @@
 	border-radius: var(--border-radius);
 }
 
-.workspace-split.mod-root > .workspace-leaf:first-of-type:last-of-type .view-header {
-	border: var(--border-size) solid;
+body:not(.is-focused) .workspace-split.mod-root > .workspace-leaf:not(.mod-active):first-of-type:last-of-type .view-header {
+	border: var(--border-size) solid transparent;
+	border-bottom: 1px solid var(--window-border);
 }
 
 .workspace-leaf.mod-active .view-header .view-header-icon,
