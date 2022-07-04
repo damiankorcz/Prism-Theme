@@ -46,12 +46,13 @@
 			border-left: var(--vertical-lines-width-file-explorer) solid var(--vertical-lines-color-file-explorer);
 		}
 	}
+	
+	.nav-file:not(.mod-root),
+	.nav-folder:not(.mod-root) {
+		margin-left: var(--file-explorer-left-margin);
+	}
 }
 
-.nav-file:not(.mod-root),
-.nav-folder:not(.mod-root) {
-	margin-left: var(--file-explorer-left-margin);
-}
 
 .nav-folder.mod-root > .nav-folder-children > .nav-file {
 	margin-left: unset;
