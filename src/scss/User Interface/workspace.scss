@@ -20,13 +20,17 @@
 		height: 42px;
 	}
 
-	.view-header-title {
-		font-size: 18px;
-		line-height: unset;
-	}
-
+	
 	.view-header-title-container {
-		height: unset;
+		height: inherit;
+		align-items: center;
+
+		.view-header-title {
+			font-size: 18px;
+			line-height: unset;
+			width: -webkit-fill-available;
+			width: fill-available;
+		}
 	}
 }
 
