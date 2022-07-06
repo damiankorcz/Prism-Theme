@@ -32,7 +32,9 @@
 }
 
 .workspace-leaf-content[data-type="dangling-links"] .nav-header,
-.workspace-leaf-content[data-type="dictionary-view"] .nav-buttons-container {
+.workspace-leaf-content[data-type="dictionary-view"] .nav-buttons-container,
+.workspace-leaf-content[data-type="file-tree-view"] .oz-folders-action-items,
+.workspace-leaf-content[data-type="file-tree-view"] .oz-flex-container {
 	z-index: var(--layer-popover);
 	display: flex;
 	order: 2;
@@ -230,7 +232,9 @@
 		margin-right: calc(10px + var(--scroll-bar-size-hover));
 	}
 
-	&[data-type="dangling-links"]:hover .nav-header {
+	&[data-type="dangling-links"]:hover .nav-header,
+	&[data-type="file-tree-view"] .oz-folders-action-items,
+	&[data-type="file-tree-view"] .oz-flex-container {
 		bottom: calc(10px + var(--scroll-bar-size-hover));
 	}
 }
@@ -259,12 +263,16 @@
 	&[data-type="search"] .nav-header,
 	&[data-type="starred"] .nav-header,
 	&[data-type="backlink"] .nav-header,
-	&[data-type="tagfolder-view"] .nav-header {
+	&[data-type="tagfolder-view"] .nav-header,
+	&[data-type="file-tree-view"] .oz-folders-action-items,
+	&[data-type="file-tree-view"] .oz-flex-container {
 		justify-content: flex-start;
 	}
 
 	&[data-type="dangling-links"] .nav-header,
-	&[data-type="dictionary-view"] .nav-buttons-container {
+	&[data-type="dictionary-view"] .nav-buttons-container,
+	&[data-type="file-tree-view"] .oz-folders-action-items,
+	&[data-type="file-tree-view"] .oz-flex-container {
 		margin-right: auto;
 	}
 }
@@ -285,7 +293,9 @@
 	}
 
 	&[data-type="dangling-links"] .nav-header,
-	&[data-type="dictionary-view"] .nav-buttons-container {
+	&[data-type="dictionary-view"] .nav-buttons-container,
+	&[data-type="file-tree-view"] .oz-folders-action-items,
+	&[data-type="file-tree-view"] .oz-flex-container {
 		margin-right: auto;
 		margin-left: auto;
 	}
@@ -307,7 +317,9 @@
 	}
 
 	&[data-type="dangling-links"] .nav-header,
-	&[data-type="dictionary-view"] .nav-buttons-container {
+	&[data-type="dictionary-view"] .nav-buttons-container,
+	&[data-type="file-tree-view"] .oz-folders-action-items,
+	&[data-type="file-tree-view"] .oz-flex-container {
 		margin-left: auto;
 	}
 }

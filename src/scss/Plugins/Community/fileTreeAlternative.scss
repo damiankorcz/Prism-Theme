@@ -1,0 +1,156 @@
+/* #region  [Plugins - Community] File Tree Alternative Plugin */
+.workspace-leaf div.workspace-leaf-content[data-type="file-tree-view"] {
+	> div.view-content {
+		padding: 0;
+	}
+
+	.oz-folder-pane {
+		resize: unset;
+	}
+
+	.file-tree-plugin-view {
+		padding: 8px;
+		background-color: var(--background-secondary);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.oz-folders-tree-wrapper {
+		padding-right: 4px;
+		padding-bottom: unset;
+		padding-left: unset;
+	}
+
+	.oz-file-tree-header {
+		align-items: center;
+		width: fit-content;
+		min-width: -webkit-fill-available;
+		min-width: fill-available;
+		height: fit-content;
+		padding: 0 10px;
+		background: var(--background-primary);
+		border-bottom: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow);
+	}
+
+	.oz-folders-action-items,
+	.oz-flex-container {
+		z-index: var(--layer-popover);
+		display: flex;
+		width: fit-content;
+		height: min-content;
+		padding: 2px;
+		margin-bottom: 8px;
+		background: var(--background-secondary-blur);
+		border: 1px solid var(--window-border);
+		border-radius: var(--border-radius);
+		box-shadow: var(--drop-shadow-popup);
+		stroke-width: 2px;
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
+
+		.oz-nav-action-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			order: 2;
+			width: 32px;
+			height: 32px;
+			padding: 2px;
+			margin: 0 2px;
+			color: var(--text-muted);
+			border-radius: var(--border-radius);
+			opacity: 1;
+
+			&:hover {
+				color: var(--interactive-accent-hover);
+				fill: var(--interactive-accent-hover);
+			}
+		}
+	}
+
+	.oz-nav-buttons-right-block {
+		display: flex;
+		width: fit-content;
+		height: min-content;
+	}
+
+	.oz-nav-file-tag {
+		border: 1px solid var(--window-border);
+	}
+
+	.oz-explorer-container {
+		padding-right: unset !important;
+		padding-left: unset !important;
+	}
+
+	.is-folder-active {
+		color: var(--interactive-accent-text);
+	}
+
+	div.oz-nav-file.is-active,
+	div.oz-nav-file.is-active div.oz-nav-file-title,
+	div.oz-nav-file.is-active div.oz-nav-file-title-content {
+		color: unset;
+		background-color: unset;
+	}
+
+	.drag-entered,
+	.oz-folder-element:hover,
+	.oz-nav-file:hover {
+		font-weight: 600;
+		background-color: var(--background-primary);
+		border-radius: var(--border-radius-small);
+
+		.oz-folder-name {
+			color: var(--interactive-accent-text);
+		}
+
+		.oz-nav-file-tag {
+			color: var(--highlight-text-normal);
+			background-color: var(--interactive-accent-base);
+		}
+	}
+
+	.oz-file-list-pane {
+		padding-right: 4px;
+	}
+
+	.oz-folder-count {
+		display: flex;
+		justify-content: center;
+	}
+
+	div#file-tree-divider {
+		height: 6px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+		background-color: var(--vertical-lines-color-file-explorer);
+		border: 2px solid transparent;
+		border-radius: var(--border-radius-small);
+		opacity: 1;
+		transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+
+		&:hover {
+			background-color: var(--interactive-accent-base);
+			border-color: var(--interactive-accent-tint);
+			box-shadow: var(--drop-shadow);
+		}
+	}
+
+	svg.oz-folder-toggle {
+		width: 0.9em;
+		height: 0.9em;
+
+		path {
+			fill: var(--interactive-accent-text);
+		}
+	}
+
+	.oz-folder-contents {
+		border-left-color: var(--vertical-lines-color-file-explorer);
+	}
+}
+/* #endregion */
