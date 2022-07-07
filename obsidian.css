@@ -5212,11 +5212,17 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   margin: 0 4px;
   border: 1px solid transparent;
 }
+.is-popout-window .menu-item {
+  align-items: unset;
+}
 .menu-item .menu-item-icon {
   width: fit-content;
   height: fit-content;
   padding-top: 3px;
   padding-right: 8px;
+}
+.is-popout-window .menu-item .menu-item-icon {
+  padding-top: 5px;
 }
 .menu-item.selected:not(.is-disabled):not(.is-label) {
   font-weight: 600;
@@ -15340,6 +15346,8 @@ community:
 - obsidian-jump-to-date-plugin
 - obsidian-hover-editor
 - obsidian-quiet-outline
+- recent-files-obsidian
+- file-tree-alternative
 
 */
 /* #endregion */
