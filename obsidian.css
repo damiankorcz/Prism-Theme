@@ -1,6 +1,6 @@
 /* #region  [Info] License */
 /*
-    Prism Theme for Obsidian.md (Version: v2.2.3)
+    Prism Theme for Obsidian.md (Version: v2.3.0)
     > A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -3653,7 +3653,7 @@ body:not(.is-mobile) .modal.mod-settings .vertical-tab-header {
   margin: 7px 15px;
   font-size: 14px;
   color: var(--interactive-accent-text);
-  content: "Prism v2.2.3";
+  content: "Prism v2.3.0";
   background: var(--background-secondary);
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius);
@@ -5689,6 +5689,12 @@ a:hover {
   border-top-right-radius: var(--border-radius-small);
   border-bottom-right-radius: var(--border-radius-small);
 }
+.cm-line .cm-hashtag.cm-meta:not(.cm-hashtag-begin, .cm-hashtag-end) {
+  background-color: var(--background-tertiary);
+  border: 2px solid var(--window-border);
+  border-right: unset;
+  border-left: unset;
+}
 .cm-s-obsidian span.cm-url {
   color: var(--interactive-accent-text);
 }
@@ -7434,7 +7440,7 @@ div.graph-controls.is-close {
   padding-right: 5px;
 }
 .workspace-leaf-content[data-type=tag] .tree-item-self .tree-item-icon {
-  padding: 8px 10px;
+  padding: 0 10px;
   margin-left: -12px;
   color: var(--text-muted);
 }
@@ -7458,7 +7464,7 @@ div.graph-controls.is-close {
   color: var(--interactive-accent-text);
 }
 .workspace-leaf-content[data-type=tag] .tree-item-children {
-  margin-left: 16px;
+  margin-left: 8px;
 }
 .workspace-leaf-content[data-type=tag] .tree-item-children .tree-item {
   margin-top: 8px;
@@ -7866,6 +7872,7 @@ body:not(.pt-disable-custom-icons) svg.left-chevron-glyph,
 body:not(.pt-disable-custom-icons) svg.right-chevron-glyph,
 body:not(.pt-disable-custom-icons) svg.scissors-glyph,
 body:not(.pt-disable-custom-icons) svg.calendar-glyph,
+body:not(.pt-disable-custom-icons) svg.clock,
 body:not(.pt-disable-custom-icons) svg.clock-glyph,
 body:not(.pt-disable-custom-icons) svg.minus-with-circle,
 body:not(.pt-disable-custom-icons) svg.cross-in-box,
@@ -8029,6 +8036,7 @@ body:not(.pt-disable-custom-icons) svg.left-chevron-glyph path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.right-chevron-glyph path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.scissors-glyph path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.calendar-glyph path:first-of-type,
+body:not(.pt-disable-custom-icons) svg.clock path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.clock-glyph path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.minus-with-circle path:first-of-type,
 body:not(.pt-disable-custom-icons) svg.cross-in-box path:first-of-type,
@@ -8192,6 +8200,7 @@ body:not(.pt-disable-custom-icons) .oz-nav-action-button svg[aria-label="Reveal 
   body:not(.pt-disable-custom-icons) svg.right-chevron-glyph,
   body:not(.pt-disable-custom-icons) svg.scissors-glyph,
   body:not(.pt-disable-custom-icons) svg.calendar-glyph,
+  body:not(.pt-disable-custom-icons) svg.clock,
   body:not(.pt-disable-custom-icons) svg.clock-glyph,
   body:not(.pt-disable-custom-icons) svg.minus-with-circle,
   body:not(.pt-disable-custom-icons) svg.cross-in-box,
@@ -8354,6 +8363,7 @@ body:not(.pt-disable-custom-icons) .oz-nav-action-button svg[aria-label="Reveal 
   body:not(.pt-disable-custom-icons) svg.right-chevron-glyph > *,
   body:not(.pt-disable-custom-icons) svg.scissors-glyph > *,
   body:not(.pt-disable-custom-icons) svg.calendar-glyph > *,
+  body:not(.pt-disable-custom-icons) svg.clock > *,
   body:not(.pt-disable-custom-icons) svg.clock-glyph > *,
   body:not(.pt-disable-custom-icons) svg.minus-with-circle > *,
   body:not(.pt-disable-custom-icons) svg.cross-in-box > *,
@@ -8480,13 +8490,11 @@ body:not(.pt-disable-custom-icons) .nav-action-button[title=help] svg.widget-ico
 body:not(.pt-disable-custom-icons) .nav-action-button[title="export as csv"] svg.widget-icon path:first-of-type {
   fill: unset;
 }
-body:not(.pt-disable-custom-icons) .workspace-tab-header.is-active svg,
 body:not(.pt-disable-custom-icons) .workspace-ribbon-collapse-btn[aria-label=Collapse] svg,
 body:not(.pt-disable-custom-icons) .workspace-leaf.mod-active .view-header svg,
 body:not(.pt-disable-custom-icons) .nav-action-button.is-active svg {
   background-color: var(--highlight-text-normal);
 }
-body:not(.pt-disable-custom-icons) .workspace-tab-header.is-active :hover > svg,
 body:not(.pt-disable-custom-icons) .workspace-ribbon-collapse-btn[aria-label=Collapse] :hover > svg,
 body:not(.pt-disable-custom-icons) .workspace-leaf.mod-active .view-header :hover > svg,
 body:not(.pt-disable-custom-icons) .nav-action-button.is-active :hover > svg {
@@ -9427,9 +9435,15 @@ body:not(.pt-disable-custom-icons) svg.calendar-glyph {
   -webkit-mask-size: 21px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M11 12h6v6h-6z'%3E%3C/path%3E%3Cpath d='M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z'%3E%3C/path%3E%3C/svg%3E");
 }
+body:not(.pt-disable-custom-icons) svg.clock,
+body:not(.pt-disable-custom-icons) svg.clock-glyph {
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z'%3E%3C/path%3E%3Cpath d='M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z'%3E%3C/path%3E%3C/svg%3E");
+}
+body:not(.pt-disable-custom-icons) svg.clock {
+  -webkit-mask-size: 21px;
+}
 body:not(.pt-disable-custom-icons) svg.clock-glyph {
   -webkit-mask-size: 19px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z'%3E%3C/path%3E%3Cpath d='M13 7h-2v5.414l3.293 3.293 1.414-1.414L13 11.586z'%3E%3C/path%3E%3C/svg%3E");
 }
 body:not(.pt-disable-custom-icons) svg.minus-with-circle {
   -webkit-mask-size: 19px;
@@ -11576,6 +11590,20 @@ body .popover.hover-popover .mod-show-navbar.is-active svg {
 }
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-contents {
   border-left-color: var(--vertical-lines-color-file-explorer);
+}
+.workspace-leaf-content[data-type=recent-files] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=recent-files] .nav-folder.mod-root {
+  height: fit-content;
+  padding: 8px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--window-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--drop-shadow);
+}
+.workspace-leaf-content[data-type=recent-files] .nav-file-title {
+  padding: 2px 5px;
 }
 /* #region  [Info] Style Settings */
 /* @settings
