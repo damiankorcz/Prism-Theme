@@ -4,6 +4,12 @@ mark,
 	--mark-highlight-base: var(--interactive-accent-base);
 	--mark-highlight-dark: var(--interactive-accent-tint);
 	--mark-highlight-text: var(--interactive-accent-text);
+
+	font-size: 0.859em;
+	font-weight: 600;
+	border-radius: var(--border-radius-small);
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 
 mark {
@@ -118,15 +124,6 @@ mark {
 		background-color: var(--mark-highlight-base);
 		border: var(--border-size) solid var(--mark-highlight-dark);
 	}
-}
-
-mark,
-.cm-highlight {
-	font-size: 0.859em;
-	font-weight: 600;
-	border-radius: var(--border-radius-small);
-	-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
 }
 
 .theme-light.pt-highlight-text-none-lt,

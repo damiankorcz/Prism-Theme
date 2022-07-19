@@ -4560,14 +4560,14 @@ input[type=range]::-webkit-slider-thumb {
   height: 42px;
 }
 .is-mobile .view-header-title-container {
-  height: inherit;
   align-items: center;
+  height: inherit;
 }
 .is-mobile .view-header-title-container .view-header-title {
-  font-size: 18px;
-  line-height: unset;
   width: -webkit-fill-available;
   width: fill-available;
+  font-size: 18px;
+  line-height: unset;
 }
 .view-action {
   position: relative;
@@ -4840,8 +4840,8 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   width: var(--window-gap);
   height: calc(100% - var(--window-gap));
   background-color: transparent;
-  border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius-small);
 }
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   bottom: calc(-1 * var(--window-gap) / 2);
@@ -4849,8 +4849,8 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   width: calc(100% - var(--window-gap));
   height: var(--window-gap);
   background-color: transparent;
-  border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius-small);
 }
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   top: calc(var(--window-gap) / 2);
@@ -4858,8 +4858,8 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   width: var(--window-gap);
   height: calc(100% - var(--window-gap));
   background-color: transparent;
-  border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius-small);
 }
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   top: calc(var(--window-gap) / 2);
@@ -4867,8 +4867,8 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   width: var(--window-gap);
   height: calc(100% - var(--window-gap));
   background-color: transparent;
-  border-radius: var(--border-radius-small);
   border: var(--border-size) solid transparent;
+  border-radius: var(--border-radius-small);
 }
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:hover,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle:active,
@@ -6778,7 +6778,7 @@ input.prompt-input {
   border-left: var(--vertical-lines-width-file-explorer) solid var(--vertical-lines-color-file-explorer);
 }
 .workspace-leaf-content[data-type=file-explorer] .nav-file:not(.mod-root),
-.workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) {
+.workspace-leaf-content[data-type=file-explorer] .nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder {
   margin-left: var(--file-explorer-left-margin);
 }
 .nav-folder.mod-root > .nav-folder-children > .nav-file {
@@ -9689,6 +9689,60 @@ mark,
 .theme-dark.pt-highlight-text-color-dt mark,
 .theme-dark.pt-highlight-text-color-dt .cm-highlight {
   color: var(--mark-highlight-text);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+2) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title {
+  background-color: var(--color-red-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+3) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title {
+  background-color: var(--color-orange-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+4) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title {
+  background-color: var(--color-yellow-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+5) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title {
+  background-color: var(--color-green-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+6) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title {
+  background-color: var(--color-mint-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+7) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title {
+  background-color: var(--color-aqua-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+8) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title {
+  background-color: var(--color-blue-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+9) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title {
+  background-color: var(--color-purple-base);
+}
+body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+10) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title,
+body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title {
+  background-color: var(--color-pink-base);
 }
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   position: unset;
@@ -14708,6 +14762,13 @@ settings:
         min: 1
         max: 25
         step: 1
+    -
+        id: colored-folders
+        title: Colored Folders
+        description: Changes the background of folders in the File Explorer to help with readability.
+        type: heading
+        level: 4
+        collapsed: true
     -
         id: custom-vault-banner
         title: Custom Vault Banner
