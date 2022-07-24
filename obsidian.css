@@ -9577,6 +9577,11 @@ mark,
   --mark-highlight-base: var(--interactive-accent-base);
   --mark-highlight-dark: var(--interactive-accent-tint);
   --mark-highlight-text: var(--interactive-accent-text);
+  font-size: 0.859em;
+  font-weight: 600;
+  border-radius: var(--border-radius-small);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 mark.red,
 mark.Red {
@@ -9670,14 +9675,6 @@ mark.Grey {
   background-color: var(--mark-highlight-base);
   border: var(--border-size) solid var(--mark-highlight-dark);
 }
-mark,
-.cm-highlight {
-  font-size: 0.859em;
-  font-weight: 600;
-  border-radius: var(--border-radius-small);
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
 .theme-light.pt-highlight-text-none-lt mark,
 .theme-light.pt-highlight-text-none-lt .cm-highlight,
 .theme-dark.pt-highlight-text-none-dt mark,
@@ -9690,59 +9687,113 @@ mark,
 .theme-dark.pt-highlight-text-color-dt .cm-highlight {
   color: var(--mark-highlight-text);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+2) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+2) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title {
   background-color: var(--color-red-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+3) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+2) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+2) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-red-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+3) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title {
   background-color: var(--color-orange-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+4) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+3) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+3) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-orange-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+4) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title {
   background-color: var(--color-yellow-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+5) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+4) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+4) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-yellow-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+5) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title {
   background-color: var(--color-green-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+6) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+5) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+5) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-green-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+6) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title {
   background-color: var(--color-mint-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+7) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+6) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+6) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-mint-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+7) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title {
   background-color: var(--color-aqua-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+8) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+7) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+7) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-aqua-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+8) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title {
   background-color: var(--color-blue-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+9) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+8) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+8) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-blue-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+9) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title {
   background-color: var(--color-purple-base);
 }
-body.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+10) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title,
-body.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title {
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+9) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+9) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-purple-text);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+10) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title {
   background-color: var(--color-pink-base);
+}
+.pt-colored-folders .nav-folder-children .nav-folder:nth-child(9n+10) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title .nav-folder-title-content,
+.pt-colored-folders .nav-folder-children .nav-folder-children .nav-folder-children .nav-folder .nav-folder:nth-child(9n+10) .nav-folder-title .nav-folder-title-content {
+  color: var(--color-pink-text);
 }
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   position: unset;
@@ -12187,7 +12238,7 @@ settings:
         level: 3
         collapsed: true
     -
-        id: pt-graph-lines-color-lt
+        id: pt-graph-line-color-lt
         title: Graph Lines Color
         description: The color of a Graph lines connecting Graph Nodes.
         type: heading
@@ -12253,7 +12304,7 @@ settings:
         max: 1
         step: 0.05
     -
-        id: pt-graph-note-color-lt
+        id: pt-graph-fill-color-lt
         title: Graph Note Color
         description: The color of a Graph Node representing a note file.
         type: heading
@@ -12268,7 +12319,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-note-custom-color-lt)
+                value: var(--graph-fill-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12300,7 +12351,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-note-custom-color-lt
+        id: graph-fill-custom-color-lt
         title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Color Presets for this to work.
         type: variable-color
@@ -12316,7 +12367,7 @@ settings:
         max: 1
         step: 0.05
     -
-        id: pt-graph-note-focused-color-lt
+        id: pt-graph-fill-focused-color-lt
         title: Graph Note Focused Color
         description: The color of a Graph Node representing currently focused note file.
         type: heading
@@ -12334,7 +12385,7 @@ settings:
                 value: var(--interactive-accent-tint)
             -
                 label: Custom
-                value: var(--graph-note-focused-color-custom-lt)
+                value: var(--graph-fill-focused-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12366,7 +12417,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-note-focused-color-custom-lt
+        id: graph-fill-focused-custom-color-lt
         title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
@@ -12397,7 +12448,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-tag-color-custom-lt)
+                value: var(--graph-tag-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12429,7 +12480,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-tag-color-custom-lt
+        id: graph-tag-custom-color-lt
         title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Tag Color Presets for this to work.
         type: variable-color
@@ -12460,7 +12511,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-attachment-color-custom-lt)
+                value: var(--graph-attachment-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12492,7 +12543,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-attachment-color-custom-lt
+        id: graph-attachment-custom-color-lt
         title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Attachment Color Presets for this to work.
         type: variable-color
@@ -12523,7 +12574,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-unresolved-color-custom-lt)
+                value: var(--graph-unresolved-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12555,7 +12606,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-unresolved-color-custom-lt
+        id: graph-unresolved-custom-color-lt
         title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
@@ -12589,7 +12640,7 @@ settings:
                 value: var(--interactive-accent-tint)
             -
                 label: Custom
-                value: var(--graph-highlight-color-custom-lt)
+                value: var(--graph-highlight-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12621,7 +12672,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-highlight-color-custom-lt
+        id: graph-highlight-custom-color-lt
         title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -12655,7 +12706,7 @@ settings:
                 value: var(--interactive-accent-tint)
             -
                 label: Custom
-                value: var(--graph-highlight-line-color-custom-lt)
+                value: var(--graph-highlight-line-custom-color-lt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12687,7 +12738,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-highlight-line-color-custom-lt
+        id: graph-highlight-line-custom-color-lt
         title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Light Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -12709,7 +12760,7 @@ settings:
         level: 3
         collapsed: true
     -
-        id: pt-graph-lines-color-dt
+        id: pt-graph-line-color-dt
         title: Graph Lines Color
         description: The color of a Graph lines connecting Graph Nodes.
         type: heading
@@ -12759,7 +12810,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-line-color-custom-dt
+        id: graph-line-custom-color-dt
         title: Graph Lines Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Lines Color Presets for this to work.
         type: variable-color
@@ -12775,7 +12826,7 @@ settings:
         max: 1
         step: 0.05
     -
-        id: pt-graph-note-color-dt
+        id: pt-graph-fill-color-dt
         title: Graph Note Color
         description: The color of a Graph Node representing a note file.
         type: heading
@@ -12790,7 +12841,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-note-custom-color-dt)
+                value: var(--graph-fill-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12822,7 +12873,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-note-custom-color-dt
+        id: graph-fill-custom-color-dt
         title: Graph Note Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Note Color Presets for this to work.
         type: variable-color
@@ -12838,7 +12889,7 @@ settings:
         max: 1
         step: 0.05
     -
-        id: pt-graph-note-focused-color-dt
+        id: pt-graph-fill-focused-color-dt
         title: Graph Note Focused Color
         description: The color of a Graph Node representing currently focused note file.
         type: heading
@@ -12856,7 +12907,7 @@ settings:
                 value: var(--interactive-accent-tint)
             -
                 label: Custom
-                value: var(--graph-note-focused-color-custom-dt)
+                value: var(--graph-fill-focused-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12888,7 +12939,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-note-focused-color-custom-dt
+        id: graph-fill-focused-custom-color-dt
         title: Graph Note Focused Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Note Focused Color Presets for this to work.
         type: variable-color
@@ -12919,7 +12970,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-tag-color-custom-lt)
+                value: var(--graph-tag-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -12951,7 +13002,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-tag-color-custom-dt
+        id: graph-tag-custom-color-dt
         title: Graph Tag Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Tag Color Presets for this to work.
         type: variable-color
@@ -12974,7 +13025,7 @@ settings:
         level: 4
         collapsed: true
     -
-        id: graph-attachment-color-presets-dt
+        id: graph-attachment-color-dt
         title: Graph Attachment Color Presets
         type: variable-select
         allowEmpty: false
@@ -12982,7 +13033,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-attachment-color-custom-dt)
+                value: var(--graph-attachment-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -13014,7 +13065,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-attachment-color-custom-dt
+        id: graph-attachment-custom-color-dt
         title: Graph Attachment Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Attachment Color Presets for this to work.
         type: variable-color
@@ -13037,7 +13088,7 @@ settings:
         level: 4
         collapsed: true
     -
-        id: graph-unresolved-color-presets-dt
+        id: graph-unresolved-color-dt
         title: Graph Unresolved Color Presets
         type: variable-select
         allowEmpty: false
@@ -13045,7 +13096,7 @@ settings:
         options:
             -
                 label: Custom
-                value: var(--graph-unresolved-color-custom-dt)
+                value: var(--graph-unresolved-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -13077,7 +13128,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-unresolved-color-custom-dt
+        id: graph-unresolved-custom-color-dt
         title: Graph Unresolved Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Unresolved Color Presets for this to work.
         type: variable-color
@@ -13111,7 +13162,7 @@ settings:
                 value: var(--interactive-accent-tint)
             -
                 label: Custom
-                value: var(--graph-highlight-color-custom-dt)
+                value: var(--graph-highlight-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -13143,7 +13194,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-highlight-color-custom-dt
+        id: graph-highlight-custom-color-dt
         title: Graph Highlight Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -13177,7 +13228,7 @@ settings:
                 value: var(--interactive-accent-tint)
             -
                 label: Custom
-                value: var(--graph-highlight-line-color-custom-dt)
+                value: var(--graph-highlight-line-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-tint)
@@ -13209,7 +13260,7 @@ settings:
                 label: Grey
                 value: var(--color-grey-tint)
     -
-        id: graph-highlight-line-color-custom-dt
+        id: graph-highlight-line-custom-color-dt
         title: Graph Highlight Line Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Graph Highlight Color Presets for this to work.
         type: variable-color
@@ -14769,6 +14820,11 @@ settings:
         type: heading
         level: 4
         collapsed: true
+    -
+        id: pt-colored-folders
+        title: Enable Colored Folders
+        type: class-toggle
+        default: false
     -
         id: custom-vault-banner
         title: Custom Vault Banner
