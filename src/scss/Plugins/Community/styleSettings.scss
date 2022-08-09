@@ -172,60 +172,86 @@ div.style-settings-heading {
 	}
 }
 
-// -
-// id: prism-wiki
-// title: Prism Wiki
-// description: Visit the Wiki section of the GitHub Repository for additional detailed descriptions with images/GIFs of all Style Settings Options in Prism.
-// type: heading
-// level: 1
-// collapsed: false
-// -
-// id: prism-wiki-link
-// description: https://github.com/damiankorcz/Prism-Theme/wiki
-// type: heading
-// level: 2
-// collapsed: true
+.style-settings-heading[data-id="color-folders"] {
+	display: inline-flex;
+	justify-content: center;
 
-// .style-settings-heading[data-id="prism-wiki"] {
-// 	margin-top: 10px;
-// 	margin-bottom: 0;
-// 	pointer-events: none;
-// 	cursor: text;
-// 	border-top: 2px solid var(--table-border-color);
+	.setting-item-info .setting-item-name {
+		&::after {
+			display: inline-flex;
+			align-items: center;
+			width: fit-content;
+			height: 22px;
+			padding: 0 4px;
+			margin-left: 8px;
+			font-size: 0.8em;
+			font-weight: 600;
+			color: var(--text-normal);
+			content: "🚧 Work in progress";
+			background: var(--background-primary);
+			border: 1px solid var(--window-border);
+			border-radius: var(--border-radius-small);
+			box-shadow: var(--drop-shadow);
+		}
+	}
+}
 
-// 	.setting-item-control,
-// 	.style-settings-collapse-indicator {
-// 		display: none;
-// 	}
+/*
+-
+	id: prism-wiki
+	title: Prism Wiki
+	description: Visit the Wiki section of the GitHub Repository for additional detailed descriptions with images/GIFs of all Style Settings Options in Prism.
+	type: heading
+	level: 1
+	collapsed: false
+-
+	id: prism-wiki-link
+	description: https://github.com/damiankorcz/Prism-Theme/wiki
+	type: heading
+	level: 2
+	collapsed: true
 
-// 	.setting-item-name::before {
-// 		display: inline-block;
-// 		width: 20px;
-// 		height: fit-content;
-// 		padding-right: 8px;
-// 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-// 		font-weight: initial;
-// 		color: unset;
-// 		content: "📖";
-// 	}
-// }
+.style-settings-heading[data-id="prism-wiki"] {
+	margin-top: 10px;
+	margin-bottom: 0;
+	pointer-events: none;
+	cursor: text;
+	border-top: 2px solid var(--table-border-color);
 
-// .style-settings-heading[data-id="prism-wiki-link"] {
-// 	margin-bottom: 0;
-// 	cursor: default;
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
 
-// 	.setting-item-name,
-// 	.setting-item-control,
-// 	.style-settings-collapse-indicator {
-// 		display: none;
-// 	}
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
+		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-weight: initial;
+		color: unset;
+		content: "📖";
+	}
+}
 
-// 	.setting-item-description {
-// 		color: var(--interactive-accent-text);
-// 		cursor: text;
-// 		user-select: all;
-// 	}
-// }
+.style-settings-heading[data-id="prism-wiki-link"] {
+	margin-bottom: 0;
+	cursor: default;
+
+	.setting-item-name,
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+
+	.setting-item-description {
+		color: var(--interactive-accent-text);
+		cursor: text;
+		user-select: all;
+	}
+}
+*/
 
 .style-settings-heading[data-id="support"] {
 	margin-top: 10px;
@@ -233,9 +259,6 @@ div.style-settings-heading {
 	pointer-events: none;
 	cursor: text;
 	border-top: 2px solid var(--table-border-color);
-
-
-	pointer-events: none;
 
 	.setting-item-control,
 	.style-settings-collapse-indicator {
