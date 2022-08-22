@@ -1,41 +1,27 @@
 /* #region  [Plugin - Core] Starred */
 .workspace-leaf-content[data-type="starred"] {
 	.item-list {
-		flex-grow: unset;
-		height: fit-content;
-		padding: 8px;
-		background-color: var(--background-secondary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		padding-top: var(--size-4-1);
+		padding-right: var(--size-4-1);
+		padding-left: var(--size-4-1);
 
 		&::after {
 			height: 65px;
 			content: "";
 		}
+
+		.nav-file {
+			margin-left: unset;
+
+			.nav-file-title {
+				padding-left: var(--size-4-1);
+			}
+		}
 	}
 
 	.nav-file-icon {
-		padding: 0 8px;
+		padding-right: var(--size-4-2);
 		margin: unset;
-	}
-
-	.nav-file-title {
-		width: 100%;
-		padding: 2px 0;
-		color: var(--text-normal);
-		background: var(--background-primary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius-small);
-		box-shadow: var(--drop-shadow);
-	}
-
-	.nav-file:not(:last-child) {
-		margin-bottom: 8px;
-	}
-
-	.nav-file-title:hover {
-		line-height: 14px;
 	}
 }
 /* #endregion */

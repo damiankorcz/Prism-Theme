@@ -13,13 +13,8 @@ import { readFileSync } from "fs";
 
 config();
 
-const prod = process.argv[2] === "production";
-
-const dir = prod ? "./" : process.env.OUTDIR;
-
-/** Paths for final file */
-const fileProd = `${dir}/obsidian.css`;
-const fileDev = `${dir}/PrismDev.css`;
+/** Path for final file */
+const fileDev = `./theme.css`;
 
 /** Reading in text files to be added into the banner/footer */
  const license = readFileSync("./src/scss/Info/license.scss", "utf8");
@@ -41,10 +36,10 @@ esbuild.build({
     },
 
     /** npm run dev will watch for file changes and rebuild instantly. */
-    watch: !prod,
+    watch: true,
     logLevel: "info",
     minify: false,
-    outfile: prod ? fileProd : fileDev,
+    outfile: fileDev,
     plugins: [
         sassPlugin(),
         time()

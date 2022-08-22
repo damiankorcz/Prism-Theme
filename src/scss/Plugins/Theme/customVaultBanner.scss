@@ -2,30 +2,23 @@
 .pt-custom-vault-banner {
 	.nav-folder-title[data-path="/"] {
 		align-items: center;
-		width: fit-content;
 		min-width: -webkit-fill-available;
 		min-width: fill-available;
-		height: 50px;
 		padding: 0 10px;
+		margin-bottom: unset;
 		line-height: 16px;
-		background: var(--background-primary);
+		overflow-wrap: break-word;
+		white-space: unset;
+		background: var(--background-secondary-blur);
+		border: unset;
 		border-bottom: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		border-radius: unset;
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
 
 		&:hover {
-			background-color: var(--background-primary);
-			border: unset;
-			border-bottom: 1px solid var(--window-border);
-			border-radius: var(--border-radius);
-		}
-		.nav-folder-title-content {
-			width: fit-content;
-			width: auto;
-			height: fit-content;
-			color: var(--text-normal);
-			white-space: normal;
-			border-radius: var(--border-radius);
+			color: var(--nav-item-color-hover);
+			background-color: var(--nav-item-background-hover);
 		}
 
 		.nav-folder-collapse-indicator {
@@ -40,6 +33,7 @@
 			border-radius: unset;
 		}
 	}
+
 	&.is-mobile .nav-folder-title[data-path="/"] {
 		height: 40px;
 		padding: 0 4px;

@@ -1,45 +1,35 @@
 /* #region  [Plugin - Core] Command Palette */
-.prompt {
-	background-color: var(--background-secondary);
-}
-
-.prompt-instructions {
-	padding: 10px 10px 0;
-}
-
-input.prompt-input {
-	margin-bottom: 10px;
-}
-
-.prompt-results {
-	padding: 0 10px 0 0;
-}
-
 .modal-container .prompt {
 	background-color: var(--background-secondary-blur);
 	border: 1px solid var(--window-border);
 	box-shadow: var(--drop-shadow-popup);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
-}
 
-.suggestion-hotkey {
-	font-family: var(--font-interface);
-	font-weight: 600;
-	background-color: var(--background-primary);
-	border-radius: var(--border-radius-small);
-}
+	.prompt-results {
+		padding: var(--size-4-2) var(--size-4-2) 0;
 
-.modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-	border-radius: var(--border-radius-small);
-	box-shadow: var(--drop-shadow);
+		&::-webkit-scrollbar-track {
+			border-radius: var(--border-radius-small);
+			box-shadow: var(--drop-shadow);
 
-	.theme-light & {
-		background-color: var(--background-primary);
+			.theme-light & {
+				background-color: var(--background-primary);
+			}
+
+			.theme-dark & {
+				background-color: var(--background-secondary-alt);
+			}
+		}
 	}
 
-	.theme-dark & {
-		background-color: var(--background-secondary-alt);
+	.prompt-instructions {
+		padding: var(--size-2-1) var(--size-4-2);
+	}
+
+	.suggestion-item.mod-complex .suggestion-hotkey {
+		font-weight: 600;
+		border-radius: var(--border-radius-small);
 	}
 }
 /* #endregion */

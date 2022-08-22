@@ -1,45 +1,37 @@
 /* #region  [UI] Tooltip Popup */
 .tooltip {
 	display: flex;
-	max-width: fit-content;
-	padding: 5px 14px;
 	font-weight: 600;
 	color: var(--text-normal);
-	word-wrap: break-word;
 	background: var(--background-secondary-blur);
 	border: 2px solid var(--table-border-color);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
-	animation: pop-down 200ms forwards ease-in-out;
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 }
 
 .tooltip .tooltip-arrow {
 	margin-top: -2px;
-	border-bottom: 5px solid var(--table-border-color);
-	box-shadow: unset;
+	border-bottom-color: var(--table-border-color);
 }
 
 .tooltip.mod-top .tooltip-arrow {
 	margin-top: unset;
 	margin-top: 2px;
-	border-top: 5px solid var(--table-border-color);
-	box-shadow: unset;
+	border-top-color: var(--table-border-color);
 }
 
 .tooltip.mod-right .tooltip-arrow {
 	margin-top: unset;
 	margin-left: -7px;
-	border-right: 5px solid var(--table-border-color);
-	box-shadow: unset;
+	border-right-color: var(--table-border-color);
 }
 
 .tooltip.mod-left .tooltip-arrow {
 	margin-top: unset;
 	margin-left: -3px;
-	border-left: 5px solid var(--table-border-color);
-	box-shadow: unset;
+	border-left-color: var(--table-border-color);
 }
 
 .tooltip.mod-error {

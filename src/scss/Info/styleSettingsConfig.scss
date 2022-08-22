@@ -1585,12 +1585,12 @@ settings:
     -
         id: pt-font-alt-a
         title: Alternative lower case 'a' appearance
-        default: false
+        default: true
         type: class-toggle
     -
         id: pt-font-alt-g
         title: Alternative lower case 'g' appearance
-        default: false
+        default: true
         type: class-toggle
     -
         id: pt-font-slashed-zero
@@ -1612,7 +1612,7 @@ settings:
         level: 3
         collapsed: true
     -
-        id: h1-font-size
+        id: h1-size
         title: Header 1 (H1) Font Size (em)
         type: variable-number-slider
         min: 0.5
@@ -1621,7 +1621,7 @@ settings:
         default: 2
         format: em
     -
-        id: h2-font-size
+        id: h2-size
         title: Header 2 (H2) Font Size (em)
         type: variable-number-slider
         min: 0.5
@@ -1630,7 +1630,7 @@ settings:
         default: 1.8
         format: em
     -
-        id: h3-font-size
+        id: h3-size
         title: Header 3 (H3) Font Size (em)
         type: variable-number-slider
         min: 0.5
@@ -1639,7 +1639,7 @@ settings:
         default: 1.6
         format: em
     -
-        id: h4-font-size
+        id: h4-size
         title: Header 4 (H4) Font Size (em)
         type: variable-number-slider
         min: 0.5
@@ -1648,7 +1648,7 @@ settings:
         default: 1.4
         format: em
     -
-        id: h5-font-size
+        id: h5-size
         title: Header 5 (H5) Font Size (em)
         type: variable-number-slider
         min: 0.5
@@ -1657,7 +1657,7 @@ settings:
         default: 1.2
         format: em
     -
-        id: h6-font-size
+        id: h6-size
         title: Header 6 (H6) Font Size (em)
         type: variable-number-slider
         min: 0.5
@@ -2970,12 +2970,6 @@ settings:
         level: 2
         collapsed: true
     -
-        id: pt-minimal-right-sidebar
-        title: Minimal Right Sidebar
-        description: Makes the Right Sidebar Ribbon collapse button merge next to the top tabs. Helps reduce the wasted space caused by the empty column which accomodates the collapse button.
-        default: false
-        type: class-toggle
-    -
         id: tab-label
         title: Tab Label
         description: Settings for positioning, alignment, etc. of the Tab Labels.
@@ -3093,27 +3087,12 @@ settings:
         level: 3
         collapsed: true
     -
-        id: pt-file-explorer-vertical-lines
-        title: File Explorer Vertical Lines (Relationship Lines)
-        description: Toggles Vertical Lines (Relationship Lines) in the File Explorer to help visualise the folder and file depth.
-        default: true
-        type: class-toggle
-    -
-        id: vertical-lines-width-file-explorer
-        title: File Explorer Vertical Lines Width (px)
-        type: variable-number-slider
-        format: 'px'
-        default: 2
-        min: 1
-        max: 5
-        step: 1
-    -
         id: file-explorer-left-margin
         title: File Explorer File/Folder Left Margin (px)
         description: Increases the Left Margin for Files/Folders in order indent them within another folder.
         type: variable-number-slider
         format: 'px'
-        default: 5
+        default: 4
         min: 1
         max: 25
         step: 1
@@ -3209,21 +3188,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    -
-        id: pt-outline-vertical-lines
-        title: Outline Vertical Lines (Relationship Lines)
-        description: Toggles Vertical Lines (Relationship Lines) in the Outline to help visualise the Header depth.
-        default: true
-        type: class-toggle
-    -
-        id: vertical-lines-width-outline
-        title: Outline Vertical Lines Width (px)
-        type: variable-number-slider
-        format: 'px'
-        default: 2
-        min: 1
-        max: 5
-        step: 1
     -
         id: titlebar
         title: Titlebar
@@ -3519,7 +3483,7 @@ settings:
         title: Scrollbar Width
         description: Change the width of the Scrollbar (px).
         type: variable-number-slider
-        default: 8
+        default: 10
         min: 5
         max: 20
         format: px

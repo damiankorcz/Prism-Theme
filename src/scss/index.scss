@@ -1,103 +1,112 @@
 /* Font Imports */
-@use "Fonts/fontFamilyImports.scss";
+@use "Fonts/fontFamilyImports.scss"; // Remove @import for potential fonts 
 
 /* Variables */
-@use "Variables/coreVariables.scss";
+@use "Variables/coreVariables.scss"; // 🔧 Evaluate the need of all variables.
 
 /* Color Schemes */
-@use "Color Schemes/colorSchemeBird.scss";
-@use "Color Schemes/colorSchemeCoffee.scss";
-@use "Color Schemes/colorSchemeFlower.scss";
-@use "Color Schemes/colorSchemeTree.scss";
-
-/* Accent Colors */
-@use "User Interface/Accent Color/accentStyleBase.scss";
-@use "User Interface/Accent Color/accentStyleTextOnly.scss";
-@use "User Interface/Accent Color/accentStyleBorderOnly.scss";
-@use "User Interface/Accent Color/accentStyleFilled.scss";
-@use "User Interface/Accent Color/accentStyleBorderAndFilled.scss";
+@use "Color Schemes/colorSchemeBird.scss"; // 🔧 Evaluate the need of all variables.
+@use "Color Schemes/colorSchemeCoffee.scss"; // 🔧 Evaluate the need of all variables.
+@use "Color Schemes/colorSchemeFlower.scss"; // 🔧 Evaluate the need of all variables.
+@use "Color Schemes/colorSchemeTree.scss"; // 🔧 Evaluate the need of all variables.
 
 /* Title Bar/Status Bar */
-@use "User Interface/Bars/titleBar.scss";
-@use "User Interface/Bars/statusBar.scss";
+// @use "User Interface/Bars/titleBar.scss"; // 🔧
+@use "User Interface/Bars/statusBar.scss"; // 🔧 Needs Style Settings redoing/reconsiderring.
 
 /* Sidebar */
-@use "User Interface/Sidebar/tabHeader.scss";
-@use "User Interface/Sidebar/tabLabel.scss";
-@use "User Interface/Sidebar/navHeader.scss";
+@use "User Interface/Sidebar/tabHeader.scss"; // ✅
+@use "User Interface/Sidebar/tabLabel.scss"; // ✅
+@use "User Interface/Sidebar/navHeader.scss"; // ✅ Needs scroll bar hover code fixed when that is addressed
 
 /* Other User Interface Elements */
-@use "User Interface/animations.scss";
-@use "User Interface/settings.scss";
-@use "User Interface/inputContainers.scss";
-@use "User Interface/scrollBar.scss";
-@use "User Interface/emptyState.scss";
-@use "User Interface/startup.scss";
-@use "User Interface/workspace.scss";
-@use "User Interface/workspaceRibbon.scss";
-@use "User Interface/navFileFolderContainer.scss";
-@use "User Interface/documentSearch.scss";
-@use "User Interface/mobileToolbar.scss";
+// @use "User Interface/animations.scss"; // 🔧
+@use "User Interface/settings.scss"; // 🧹 Kinda broken. Waiting for new Community Themes modal
+// @use "User Interface/inputContainers.scss"; // 🔧
+@use "User Interface/scrollBar.scss"; // 🧹 Scrollbar Buttons needs tidying
+@use "User Interface/emptyState.scss"; // ✅ Empty for now.
+@use "User Interface/startup.scss"; // ✅
+@use "User Interface/workspace.scss"; // ✅ View Header will need a little styling
+@use "User Interface/workspaceRibbon.scss"; // ✅
+// @use "User Interface/navFileFolderContainer.scss"; // 🔧
+// @use "User Interface/documentSearch.scss"; // 🔧
+// @use "User Interface/mobileToolbar.scss"; // 🔧
+
+/* Accent Colors */
+@use "User Interface/Accent Color/accentStyleBase.scss"; // 🧹
+@use "User Interface/Accent Color/accentStyleTextOnly.scss"; // 🔧
+@use "User Interface/Accent Color/accentStyleBorderOnly.scss"; // 🔧
+@use "User Interface/Accent Color/accentStyleFilled.scss"; // 🔧
+@use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; // 🧹
 
 /* Popups */
-@use "User Interface/Popups/filePreviewPopover.scss";
-@use "User Interface/Popups/menuPopup.scss";
-@use "User Interface/Popups/notificationPopup.scss";
-@use "User Interface/Popups/suggestionPopup.scss";
-@use "User Interface/Popups/tooltipPopup.scss";
-@use "User Interface/Popups/dragGhost.scss";
+@use "User Interface/Popups/filePreviewPopover.scss"; // ✅
+@use "User Interface/Popups/menuPopup.scss"; // ✅
+@use "User Interface/Popups/notificationPopup.scss"; // ✅
+@use "User Interface/Popups/suggestionPopup.scss"; // ✅ Might not need an entire file for this anymore.
+@use "User Interface/Popups/tooltipPopup.scss"; // ✅
+@use "User Interface/Popups/dragGhost.scss"; // ✅
 
 /* Editor */
-@use "Editor/callouts.scss";
-@use "Editor/editView.scss";
-@use "Editor/previewView.scss";
-@use "Editor/textSelection.scss";
-@use "Editor/vim.scss";
-@use "Editor/progressBar.scss";
+// @use "Editor/callouts.scss"; // 🧹
+// @use "Editor/editView.scss"; // 🔧
+// @use "Editor/previewView.scss"; // 🔧
+// @use "Editor/textSelection.scss"; // 🔧
+// @use "Editor/vim.scss"; // 🔧
+// @use "Editor/progressBar.scss"; // 🔧
 
 /* Core Plugins */
-@use "Plugins/Core/audio.scss";
-@use "Plugins/Core/audioRecorder.scss";
-@use "Plugins/Core/backlinks.scss";
-@use "Plugins/Core/commandPalette.scss";
-@use "Plugins/Core/fileExplorer.scss";
-@use "Plugins/Core/graph.scss";
-@use "Plugins/Core/markdown.scss";
-@use "Plugins/Core/outgoingLink.scss";
-@use "Plugins/Core/outline.scss";
-@use "Plugins/Core/search.scss";
-@use "Plugins/Core/slashCommands.scss";
-@use "Plugins/Core/starred.scss";
-@use "Plugins/Core/tags.scss";
-@use "Plugins/Core/query.scss";
-
-/* Community Plugins */
-@use "Plugins/Community/advancedTables.scss";
-@use "Plugins/Community/kanban.scss";
-@use "Plugins/Community/quickExplorer.scss";
-@use "Plugins/Community/styleSettings.scss";
-@use "Plugins/Community/danglingLinks.scss";
-@use "Plugins/Community/slidingPanes.scss";
-@use "Plugins/Community/cMenu.scss";
-@use "Plugins/Community/calendar.scss";
-@use "Plugins/Community/iconFolder.scss";
-@use "Plugins/Community/mapView.scss";
-@use "Plugins/Community/emojiToolbar.scss";
-@use "Plugins/Community/reminder.scss";
-@use "Plugins/Community/tagFolder.scss";
-@use "Plugins/Community/dictionary.scss";
-@use "Plugins/Community/icons.scss";
-@use "Plugins/Community/jumpToDate.scss";
-@use "Plugins/Community/hoverEditor.scss";
-@use "Plugins/Community/quietOutline.scss";
-@use "Plugins/Community/fileTreeAlternative.scss";
-@use "Plugins/Community/recentFiles.scss";
+@use "Plugins/Core/audio.scss"; // ✅
+@use "Plugins/Core/audioRecorder.scss"; // Needs adjusting for different accent modes
+// @use "Plugins/Core/backlinks.scss";
+@use "Plugins/Core/commandPalette.scss"; // ✅
+@use "Plugins/Core/slashCommands.scss"; // ✅
+@use "Plugins/Core/fileExplorer.scss"; // ✅
+@use "Plugins/Core/graph.scss"; // ✅ Come back to style the menu when decieded on style.
+// @use "Plugins/Core/markdown.scss"; // 🔧
+// @use "Plugins/Core/outgoingLink.scss"; // 🔧
+@use "Plugins/Core/outline.scss"; // ✅
+// @use "Plugins/Core/search.scss";
+@use "Plugins/Core/starred.scss"; // ✅ Just check for the need of bottom padding for Nav Header
+@use "Plugins/Core/tags.scss"; // ✅
+// @use "Plugins/Core/query.scss"; // 🔧
 
 /* Theme Plugins */
-@use "Plugins/Theme/Headers/headersCustomisation.scss";
-@use "Plugins/Theme/background.scss";
-@use "Plugins/Theme/customIcons.scss";
-@use "Plugins/Theme/customVaultBanner.scss";
-@use "Plugins/Theme/markHighlightSystem.scss";
-@use "Plugins/Theme/coloredFolders.scss";
-@use "Plugins/Theme/fontFeatures.scss";
+@use "Plugins/Theme/Headers/headersCustomisation.scss"; // 🧹
+// @use "Plugins/Theme/background.scss"; // 🔧 Might be dropped
+// @use "Plugins/Theme/customIcons.scss"; // 🔧 Might be dropped
+@use "Plugins/Theme/customVaultBanner.scss"; // ✅
+@use "Plugins/Theme/markHighlightSystem.scss"; // ✅
+@use "Plugins/Theme/fontFeatures.scss"; // ✅
+@use "Plugins/Theme/coloredFolders.scss"; // 🧹
+
+/* Community Plugins */
+// @use "Plugins/Community/advancedTables.scss"; // 🔧
+// @use "Plugins/Community/kanban.scss";  // Issues with lane headers, add button border, menu button shadow
+// @use "Plugins/Community/quickExplorer.scss"; // 🔧
+@use "Plugins/Community/styleSettings.scss"; // 🧹
+// @use "Plugins/Community/danglingLinks.scss"; // 🔧
+// @use "Plugins/Community/slidingPanes.scss"; // 🔧
+// @use "Plugins/Community/cMenu.scss"; // 🔧
+// @use "Plugins/Community/calendar.scss"; // 🔧
+// @use "Plugins/Community/iconFolder.scss"; // 🔧
+// @use "Plugins/Community/mapView.scss"; // 🔧
+// @use "Plugins/Community/emojiToolbar.scss"; // 🔧
+// @use "Plugins/Community/reminder.scss"; // 🔧
+// @use "Plugins/Community/tagFolder.scss"; // 🔧
+// @use "Plugins/Community/dictionary.scss"; // 🔧
+// @use "Plugins/Community/icons.scss"; // 🔧
+// @use "Plugins/Community/jumpToDate.scss"; // 🔧
+// @use "Plugins/Community/hoverEditor.scss"; // 🔧
+// @use "Plugins/Community/quietOutline.scss"; // 🔧
+// @use "Plugins/Community/fileTreeAlternative.scss"; // 🔧
+// @use "Plugins/Community/recentFiles.scss"; // 🔧
+
+
+// TODO
+// - Need to sort out all the hover states.
+// - Check all accent colours to see if there isn't a variable that can now be used instead. 
+//    - Border radius.
+// - Will need to redo the Mobile side of the theme.
+// - Replace the custom Border Radius variable for native ones. 
+// - embedded-backlinks / internal-query styling.

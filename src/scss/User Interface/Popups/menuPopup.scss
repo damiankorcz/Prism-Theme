@@ -1,70 +1,9 @@
 /* #region  [UI] Menu Popup */
 .menu {
 	background: var(--background-secondary-blur);
-	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius);
+	border-color: var(--window-border);
 	box-shadow: var(--drop-shadow-popup);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
-
-	.is-mobile & {
-		right: 0;
-		left: 0 !important;
-		width: 95vw;
-		max-width: 1100px;
-		max-height: 80vh;
-		padding: 8px;
-		margin: 8px auto;
-		border-radius: var(--border-radius);
-
-		.menu-item {
-			border-radius: var(--border-radius);
-		}
-	}
-}
-
-.menu-separator {
-	border-bottom-color: var(--window-border);
-}
-
-.theme-dark .menu,
-.theme-dark .menu-item-icon {
-	color: var(--text-normal);
-}
-
-.menu-item {
-	display: flex;
-	align-items: center;
-	justify-items: center;
-	padding: 0 8px;
-	margin: 0 4px;
-	border: 1px solid transparent;
-
-	.is-popout-window & {
-		align-items: unset;
-	}
-
-	.menu-item-icon {
-		width: fit-content;
-		height: fit-content;
-		padding-top: 3px;
-		padding-right: 8px;
-
-		.is-popout-window & {
-			padding-top: 5px;
-		}
-	}
-}
-
-.menu-item.selected:not(.is-disabled):not(.is-label) {
-	font-weight: 600;
-	background-color: var(--background-primary);
-	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius-small);
-}
-
-.menu-item:hover:not(.is-disabled):not(.is-label),
-.menu-item:hover:not(.is-disabled):not(.is-label) .menu-item-icon {
-	color: var(--interactive-accent-text);
 }
 /* #endregion */

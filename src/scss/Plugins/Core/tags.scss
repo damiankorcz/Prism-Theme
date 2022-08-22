@@ -1,77 +1,32 @@
 /* #region  [Plugin - Core] Tags */
-.workspace-leaf-content[data-type="tag"] {
-	.tree-item-self {
-		align-items: center;
-		width: 100%;
-		padding: 0 8px;
-		color: var(--text-normal);
-		background: var(--background-primary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius-small);
-		box-shadow: var(--drop-shadow);
+.tag-container {
+	padding: var(--size-4-1);
 
-		.tree-item-inner {
-			padding-right: 5px;
-		}
-
-		.tree-item-icon {
-			padding: 0 10px;
-			margin-left: -12px;
-			color: var(--text-muted);
-
-			&::after {
-				display: none;
-			}
-		}
-
-		&.is-clickable:hover {
-			font-weight: 600;
-			color: var(--interactive-accent-text);
-			background-color: var(--background-primary);
-			box-shadow: var(--drop-shadow);
-		}
+	> div > .tree-item > .tree-item-children .tree-item {
+		margin-left: var(--file-explorer-left-margin);
 	}
+}
 
-	.tree-item:not(:last-child) {
-		margin-bottom: 8px;
-	}
+.tree-item .tree-item-self {
+	align-items: center;
+	width: 100%;
+	padding: 1px var(--size-4-2);
+	color: var(--text-normal);
+	border: 2px solid transparent;
+}
 
-	.tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
-	.tree-item-self.is-clickable .tree-item-icon:hover {
-		color: var(--interactive-accent-hover);
-	}
+.tree-item-flair {
+	padding: 1px 2px;
+	border: 1px solid var(--window-border);
+}
 
-	.tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
-		color: var(--interactive-accent-text);
-	}
+.tree-item-self .tree-item-icon {
+	width: 16px;
+}
 
-	.tree-item-children {
-		margin-left: 8px;
-
-		.tree-item {
-			margin-top: 8px;
-		}
-	}
-
-	.tree-item-flair {
-		border: 1px solid var(--window-border);
-	}
-
-	.tag-container {
-		padding: 0 10px 0 0;
-
-		> div:first-of-type {
-			padding: 8px;
-			background-color: var(--background-secondary);
-			border: none;
-			border: 1px solid var(--window-border);
-			border-radius: var(--border-radius);
-			box-shadow: var(--drop-shadow);
-		}
-	}
-
-	.tag-pane-tag-text {
-		font-weight: 600;
-	}
+.tree-item-children {
+	padding-left: unset;
+	margin: 0 0 var(--size-4-1) 10px;
+	border-left: 2px solid var(--vertical-lines-color);
 }
 /* #endregion */

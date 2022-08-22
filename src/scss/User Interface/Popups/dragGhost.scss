@@ -1,24 +1,8 @@
 /* #region  [UI] Drag Ghost */
 .drag-ghost {
-	padding: 5px 14px;
-	font-weight: 600;
-	color: var(--text-normal);
-	background: var(--background-secondary-blur);
+	background: var(--background-secondary);
 	border: 2px solid var(--table-border-color);
-	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
 	animation: pop-down 200ms forwards ease-in-out;
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
-
-	.drag-ghost-icon {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		svg {
-			-webkit-mask-size: 19px;
-		}
-	}
 }
 /* #endregion */

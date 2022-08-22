@@ -1,93 +1,9 @@
 /* #region  [Plugin - Core] Outline */
-.workspace-leaf-content[data-type="outline"] {
-	.outline {
-		padding: 8px;
-		margin-bottom: 5px;
-		background-color: var(--background-secondary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
-	}
+.outline {
+	padding: var(--size-4-1);
+}
 
-	.view-content {
-		padding: 0 10px 0 0;
-	}
-
-	.tree-item-inner {
-		padding: 2px 2px 2px calc(8px - var(--vertical-lines-width-file-explorer));
-		font-weight: 600;
-		line-height: 14px;
-		color: var(--text-normal);
-	}
-
-	.tree-item-self.is-clickable:hover {
-		background-color: var(--background-primary);
-	}
-
-	.tree-item-self.is-clickable:hover .tree-item-inner {
-		color: var(--interactive-accent-text);
-	}
-
-	.outline .tree-item:not(.is-collapsed) .tree-item-self:hover .tree-item-icon:hover,
-	.outline .tree-item-self.is-clickable .tree-item-icon:hover {
-		color: var(--interactive-accent-hover);
-	}
-
-	.outline .tree-item:not(.is-collapsed) > .tree-item-self > .tree-item-icon {
-		color: var(--interactive-accent-text);
-	}
-
-	.tree-item-self .tree-item-inner {
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.tree-item-self .tree-item-icon {
-		z-index: var(--layer-popover);
-		align-items: center;
-		justify-content: center;
-		width: 16px;
-		height: 16px;
-		padding: unset;
-		margin-right: -2px;
-		margin-left: unset;
-	}
-
-	.tree-item-self .tree-item-icon::after {
-		display: none;
-	}
-
-	.tree-item-children {
-		margin: 0 0 0 calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
-		border-left: 2px solid transparent;
-	}
-
-	.tree-item-self {
-		min-width: 100%;
-		padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
-		white-space: nowrap;
-		border: var(--border-size) solid transparent;
-		border-radius: var(--border-radius-small);
-	}
-
-	.tree-item-children > .tree-item > .tree-item-self {
-		margin-left: 2px;
-	}
-
-	.outline > .tree-item > .tree-item-children {
-		margin-left: 10px;
-	}
-
-	.pt-outline-vertical-lines & {
-		.tree-item-self {
-			padding: 2px 5px 2px calc(var(--vertical-lines-width-outline) / 2);
-			border: var(--border-size) solid transparent;
-		}
-
-		.tree-item-children {
-			margin: 2px 0 2px calc(12px - calc(var(--vertical-lines-width-file-explorer) / 2) + 1px);
-			border-left: var(--vertical-lines-width-outline) solid var(--vertical-lines-color-outline);
-		}
-	}
+.tree-item > .tree-item-children .tree-item {
+	margin-left: var(--file-explorer-left-margin);
 }
 /* #endregion */

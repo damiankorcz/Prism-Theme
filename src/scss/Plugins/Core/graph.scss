@@ -1,128 +1,18 @@
 /* #region  [Plugin - Core] Graph Base */
-.theme-light .workspace-leaf-content[data-type="graph"] .view-content,
-.theme-light .workspace-leaf-content[data-type="localgraph"] .view-content {
-	background-color: var(--page-background-color);
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
+.graph-controls-button.mod-close,
+.graph-controls-button.mod-reset {
+	top: var(--size-4-1);
 }
 
-.theme-dark .workspace-leaf-content[data-type="graph"] .view-content,
-.theme-dark .workspace-leaf-content[data-type="localgraph"] .view-content {
-	background-color: var(--background-secondary-alt);
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
-}
-
-div.graph-controls,
-div.graph-controls.is-close {
-	position: absolute;
-	top: 8px;
-	left: 8px;
-	margin-top: unset;
-	background-color: var(--background-secondary-blur);
-	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
-}
-
-.graph-controls.is-close {
-	padding: 6px 8px 8px;
-}
-
-.graph-controls-button {
-	color: var(--text-muted);
-
-	&:hover {
-		color: var(--interactive-accent-hover);
-	}
-}
-
-.graph-controls:not(.is-close) {
-	padding: 30px 8px 8px;
-
-	.graph-controls-button.mod-reset,
-	.graph-controls-button.mod-close {
-		display: inline-block;
-	}
-}
-
-.graph-control-section {
-	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius);
-
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="localgraph"] .view-content {
 	.theme-light & {
-		background-color: var(--background-tertiary);
+		background-color: var(--page-background-color);
 	}
 
 	.theme-dark & {
 		background-color: var(--background-secondary-alt);
 	}
-
-	&:not(:last-child) {
-		margin-bottom: 8px;
-	}
-
-	.tree-item-self {
-		position: relative;
-		padding: 4px 4px 4px 25px;
-		margin-bottom: 8px;
-		font-size: 14px;
-		font-weight: 600;
-		background-color: var(--background-primary);
-		border-bottom: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
-	}
-
-	&.is-collapsed .tree-item-self {
-		margin-bottom: unset;
-		background-color: var(--background-tertiary);
-	}
-
-	&:not(:last-child) .tree-item-children {
-		margin: unset;
-		border-bottom: unset;
-	}
-
-	.tree-item-children {
-		padding: 5px 15px;
-		margin: unset;
-	}
-
-	.setting-item {
-		padding: 5px 0;
-
-		&.mod-search-setting .setting-item-control {
-			padding-top: unset;
-		}
-	}
-}
-
-.graph-view.color-fill-focused {
-	color: var(--interactive-accent-tint);
-	opacity: 1;
-}
-
-.graph-view.color-circle {
-	color: var(--interactive-accent-tint);
-}
-
-.graph-view.color-text {
-	color: var(--text-normal);
-}
-
-.tree-item.graph-control-section:not(.is-collapsed) .tree-item-icon.collapse-icon {
-	color: var(--interactive-accent-text);
-}
-
-.tree-item.graph-control-section .tree-item-icon {
-	padding-inline-end: 8px;
-}
-
-.tree-item-icon.collapse-icon::after {
-	display: none;
 }
 /* #endregion */
 

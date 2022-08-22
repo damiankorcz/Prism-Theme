@@ -1,100 +1,50 @@
 /* #region  [Plugin - Core] Slash Commands */
 .suggestion-container {
 	max-width: 700px;
-	padding: 8px;
-	border: 1px solid var(--table-border-color);
+	background-color: var(--background-secondary-blur);
+	border: 1px solid var(--window-border);
+	box-shadow: var(--drop-shadow-popup);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
 
-	kbd {
-		letter-spacing: 0.05em;
-	}
+	.suggestion {
+		padding: var(--size-4-2);
 
-	.suggestion::-webkit-scrollbar-track {
-		border-radius: var(--border-radius-small);
-		box-shadow: var(--drop-shadow);
-
-		.theme-light & {
-			background-color: var(--background-primary);
+		.is-mobile & {
+			max-height: -webkit-fill-available;
+			max-height: fill-available;
 		}
 
-		.theme-dark & {
-			background-color: var(--background-secondary-alt);
-		}
-	}
-}
-
-.suggestion {
-	padding-right: 8px;
-
-	.is-mobile & {
-		max-height: -webkit-fill-available;
-		max-height: fill-available;
-	}
-}
-
-.suggestion-content {
-	flex-grow: 1;
-	padding-right: 10px;
-	line-height: 28px;
-	word-wrap: break-word;
-}
-
-.suggestion-item {
-	align-items: center;
-	padding: 5px 10px;
-
-	.suggestion-flair {
-		position: relative;
-		top: unset;
-		left: unset;
-		display: inline-flex;
-		order: 5;
-		color: var(--interactive-accent-text);
-
-		&[aria-label] {
-			margin-right: 8px;
-		}
-
-		&:first-child {
-			font-size: 0.75rem;
-			font-weight: 600;
-			background-color: var(--background-primary);
+		&::-webkit-scrollbar-track {
 			border-radius: var(--border-radius-small);
+			box-shadow: var(--drop-shadow);
+
+			.theme-light & {
+				background-color: var(--background-secondary);
+			}
+
+			.theme-dark & {
+				background-color: var(--background-secondary-alt);
+			}
 		}
 	}
 
-	&:hover .suggestion-flair:first-child {
-		background-color: var(--background-secondary);
+	.suggestion-item {
+		padding: var(--size-4-2);
 	}
+}
 
-	.suggestion-flair svg {
-		display: block;
-		margin: 0 auto;
-	}
+.suggestion-prefix {
+	padding: 0 var(--size-4-1);
+	margin-right: var(--size-4-2);
+	font-size: 0.9em;
+	font-weight: 600;
+	background: var(--background-primary);
+	border: 1px solid var(--window-border);
+	border-radius: var(--border-radius-small);
+	box-shadow: var(--drop-shadow);
 
-	.suggestion-prefix {
-		padding: 0 5px;
-		margin-right: 8px;
-		font-size: 14px;
-		font-weight: 600;
-		color: var(--interactive-accent-text);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius-small);
-
-		.theme-light & {
-			background-color: var(--background-primary-alt);
-		}
-
-		.theme-dark & {
-			background-color: var(--background-secondary-alt);
-		}
-	}
-
-	&:hover .suggestion-prefix,
-	&.is-selected .suggestion-prefix {
-		background-color: var(--background-secondary);
-	}
-
-	.suggestion-prefix::after {
+	&::after {
 		display: none;
 	}
 }

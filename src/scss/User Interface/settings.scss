@@ -1,4 +1,123 @@
 /* #region  [UI] Settings */
+.modal.mod-settings {
+	.vertical-tab-header {
+		max-width: 215px;
+		padding: 42px 0 0;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			display: inline-flex;
+			width: 206px;
+			height: 42px;
+			content: "";
+			background: var(--background-secondary-blur);
+			border-bottom: 1px solid var(--window-border);
+			-webkit-backdrop-filter: blur(var(--blur-intensity));
+			backdrop-filter: blur(var(--blur-intensity));
+		}
+
+		&::after {
+			position: absolute;
+			top: var(--size-4-2);
+			left: var(--size-4-2);
+			display: inline-flex;
+			flex-direction: column;
+			align-content: center;
+			justify-content: center;
+			width: fit-content;
+			height: 24px;
+			padding: 0 8px;
+			font-size: 14px;
+			color: var(--interactive-accent-text);
+			content: "Prism v3.0.0 WIP";
+			background: var(--background-secondary);
+			border: 1px solid var(--window-border);
+			border-radius: var(--border-radius);
+			box-shadow: var(--drop-shadow);
+
+			.is-mobile & {
+				margin: 7px 4px;
+			}
+		}
+	}
+
+	.vertical-tab-header-group {
+		padding: unset;
+	}
+
+	.vertical-tab-header-group-title {
+		font-size: var(--font-ui-medium);
+		color: var(--text-normal);
+		text-align: center;
+		border-top: 1px solid var(--window-border);
+		border-bottom: 1px solid var(--window-border);
+	}
+
+	.vertical-tab-header-group-items {
+		padding: var(--size-4-2);
+	}
+
+	.vertical-tab-nav-item {
+		padding: var(--size-2-1) var(--size-4-2);
+		border: var(--border-size) solid transparent;
+	}
+
+	.horizontal-tab-content,
+	.vertical-tab-content {
+		padding: var(--size-4-8);
+	}
+	/*
+	.vertical-tab-content {
+		.theme-dark & {
+			background-color: var(--background-color-dt);
+		}
+	}
+	*/
+}
+
+.modal.mod-image-lightbox {
+	width: var(--modal-width);
+	max-width: var(--modal-max-width);
+	height: var(--modal-height);
+	max-height: var(--modal-max-height);
+
+	.modal-content {
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		height: 100%;
+
+		padding: var(--size-4-2);
+	}
+}
+
+img.community-theme-lightbox {
+	object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.modal.mod-community-theme {
+	max-width: var(--modal-max-width);
+	max-height: var(--modal-max-height);
+}
+
+.setting-item {
+	padding: var(--size-4-2) 0;
+
+	&.setting-item-heading {
+		margin-bottom: var(--size-4-2);
+		border-bottom: 1px solid var(--window-border);
+	}
+}
+
+body:not(.native-scrollbars) .modal-close-button {
+	top: var(--size-4-1);
+	right: var(--size-4-3);
+}
+
+/*
 .modal-bg,
 .workspace-drawer-backdrop {
 	background: var(--background-primary);
@@ -9,6 +128,10 @@
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius);
 	box-shadow: var(--drop-shadow-popup);
+}
+
+.modal-title {
+	margin-bottom: unset;
 }
 
 .is-mobile {
@@ -55,39 +178,40 @@
 		padding-right: 4px;
 	}
 
-	.modal.mod-community-plugin,
-	.modal.mod-community-theme,
-	.modal.mod-image-lightbox,
-	.modal.mod-settings {
-		width: 95vw;
-		max-width: 1100px;
-		height: 80vh;
-		max-height: 80vh;
-	}
-
 	.modal-close-button {
 		top: 5px;
 		right: 10px;
 		display: block;
 	}
 
-	.modal.mod-settings .vertical-tab-header,
-	.modal.mod-settings .vertical-tab-content-container {
-		position: unset;
-		top: unset;
-		right: unset;
-		left: unset;
-	}
+	.modal.mod-settings {
+		.vertical-tab-header,
+		.vertical-tab-content-container {
+			position: unset;
+			top: unset;
+			right: unset;
+			left: unset;
+		}
 
-	.modal.mod-settings .vertical-tab-content {
-		height: calc(100% - 15px);
-		padding: 25px 10px 10px;
-		margin-top: -26px;
-		background-color: unset;
-		background-color: var(--background-secondary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		.vertical-tab-content {
+			height: calc(100% - 15px);
+			padding: 25px 10px 10px;
+			margin-top: -26px;
+			background-color: unset;
+			background-color: var(--background-secondary);
+			border: 1px solid var(--window-border);
+			border-radius: var(--border-radius);
+			box-shadow: var(--drop-shadow);
+		}
+
+		.vertical-tab-nav-item {
+			padding: 0 8px;
+			font-size: 16px;
+
+			&:not(:last-of-type) {
+				margin-bottom: 8px;
+			}
+		}
 	}
 
 	.modal-setting-back-button {
@@ -125,36 +249,11 @@
 		padding: 8px;
 		text-align: center;
 	}
-
-	.modal.mod-settings .vertical-tab-nav-item {
-		padding: 0 8px;
-		font-size: 16px;
-	}
-
-	.modal.mod-settings .vertical-tab-nav-item:not(:last-of-type) {
-		margin-bottom: 8px;
-	}
 }
 
 .modal.modal-style-settings {
 	.modal-content {
 		overflow: unset;
-	}
-}
-
-.modal.mod-settings {
-	width: 85vw;
-	max-width: 1400px;
-	height: 80vh;
-	max-height: 1000px;
-	padding: 0;
-
-	.theme-dark & {
-		background-color: var(--background-color-dt);
-	}
-
-	.theme-light & {
-		background-color: var(--background-color-lt);
 	}
 }
 
@@ -166,91 +265,65 @@ body:not(.is-mobile) .vertical-tab-content {
 	box-shadow: var(--drop-shadow);
 }
 
-.modal.mod-settings .vertical-tab-header {
-	body:not(.is-mobile) & {
-		flex: 0 0 220px;
-		height: unset;
+.modal.mod-settings {
+	.theme-dark & {
+		background-color: var(--background-color-dt);
+	}
+
+	.theme-light & {
+		background-color: var(--background-color-lt);
+	}
+
+	.vertical-tab-header {
+		body:not(.is-mobile) & {
+			flex: 0 0 220px;
+			height: unset;
+			padding: 0;
+			padding-right: 8px;
+			margin: 0 var(--size-4-2) var(--size-4-2) var(--size-4-2);
+			background-color: unset;
+			border-right: unset;
+		}
+
+		.is-mobile & {
+			padding-right: 4px;
+			background-color: unset;
+		}
+	}
+
+	.vertical-tabs-container {
+		height: 100%;
+	}
+
+	.modal-content {
+		height: -webkit-fill-available;
+		height: fill-available;
+	}
+
+	.vertical-tab-header-group {
 		padding: 0;
-		padding-right: 8px;
-		margin: 0 15px 15px;
-		background-color: unset;
-	}
-
-	.is-mobile & {
-		padding-right: 4px;
-		background-color: unset;
-	}
-}
-
-.modal.mod-settings .vertical-tabs-container {
-	height: 100%;
-}
-
-.modal.mod-settings .modal-title {
-	display: flex;
-	height: 40px;
-	font-size: unset;
-
-	&::before {
-		position: absolute;
-		display: inline-flex;
-		flex-direction: column;
-		align-content: center;
-		justify-content: center;
-		width: fit-content;
-		height: 24px;
-		padding: 0 8px;
-		margin: 7px 15px;
-		font-size: 14px;
-		color: var(--interactive-accent-text);
-		content: "Prism v2.3.0";
-		background: var(--background-secondary);
+		background-color: var(--background-secondary);
 		border: 1px solid var(--window-border);
 		border-radius: var(--border-radius);
 		box-shadow: var(--drop-shadow);
 
-		.is-mobile & {
-			margin: 7px 4px;
+		.vertical-tab-header-group-items {
+			padding: 8px;
+			border-bottom: unset;
+
+			&:empty {
+				display: none;
+			}
+		}
+
+		&:not(:last-of-type) {
+			margin-bottom: 10px;
 		}
 	}
 
-	&::after {
-		display: inline-flex;
-		flex-direction: column;
-		align-content: center;
-		justify-content: center;
-		width: fit-content;
-		height: 25px;
-		padding: 2px 10px;
-		margin: 5px auto;
-		font-size: 16px;
-		content: "Settings";
-	}
-}
-
-.modal.mod-settings .modal-content {
-	height: -webkit-fill-available;
-	height: fill-available;
-}
-
-.modal.mod-settings .vertical-tab-header-group {
-	padding: 0;
-	background-color: var(--background-secondary);
-	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
-
-	.vertical-tab-header-group-items {
-		padding: 8px;
-		border-bottom: unset;
-
-		&:empty {
-			display: none;
-		}
-	}
-
-	&:not(:last-of-type) {
-		margin-bottom: 10px;
+	.vertical-tab-content-container {
+		height: unset;
+		padding: 0 var(--size-4-2) var(--size-4-2) 0;
 	}
 }
 
@@ -269,21 +342,12 @@ body:not(.is-mobile) .vertical-tab-content {
 	}
 }
 
-.modal.mod-settings .vertical-tab-content-container {
-	height: unset;
-	padding: 0 15px 15px 0;
-}
-
 .setting-item-name {
 	font-weight: bold;
 }
 
 .setting-item:not(.style-settings-heading) {
 	padding: 10px 0 10px 15px;
-}
-
-.clickable-icon {
-	stroke-width: 2px;
 }
 
 .community-theme-downloads:hover,
@@ -332,20 +396,17 @@ body:not(.is-mobile) .vertical-tab-content {
 	padding-right: 0;
 }
 
-.modal-close-button {
-	top: 8px;
-	right: 13px;
+body:not(.native-scrollbars) .modal-container .modal-close-button {
+	top: var(--size-4-2);
+	right: var(--size-4-2);
 
 	&:hover {
 		color: var(--color-red-tint);
 	}
 }
 
-.spellchecker-dictionary-remove-button {
-	stroke-width: 2px;
-	&:hover {
-		color: var(--interactive-accent-text);
-	}
+.spellchecker-dictionary-remove-button:hover {
+	color: var(--interactive-accent-text);
 }
 
 .horizontal-tab-nav-item,
@@ -975,5 +1036,5 @@ body:not(.css-settings-manager) .community-theme.is-selected > div:nth-child(3):
 		box-shadow: var(--drop-shadow);
 	}
 }
-
+*/
 /* #endregion */
