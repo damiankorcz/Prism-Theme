@@ -1,43 +1,28 @@
 /* #region  [Accent Style] Border and Filled */
 .theme-dark.pt-accent-style-borderandfilled-dt,
 .theme-light.pt-accent-style-borderandfilled-lt {
-	.workspace-leaf.mod-active .view-header .view-header-icon,
-	.workspace-leaf.mod-active .view-header .view-actions .view-action,
-	.workspace-leaf.mod-active .view-header .view-header-title {
-		color: var(--highlight-text-normal);
-
-		&:hover {
-			color: var(--interactive-accent-hover);
-		}
-	}
-
 	.workspace-tab-header.is-active {
-		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 	}
 
 	.nav-action-button.is-active {
-		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 	}
 
 	.vertical-tab-nav-item.is-active {
-		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 	}
 
 	.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
 	.workspace-leaf div.workspace-leaf-content[data-type="file-tree-view"] .oz-nav-file.is-active .oz-nav-file-title {
-		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 	}
 
 	.suggestion-hotkey {
-		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 	}
@@ -73,14 +58,12 @@
 
 	.community-theme {
 		&.is-selected {
-			color: var(--highlight-text-normal);
 			background-color: var(--interactive-accent-base);
 			border-color: var(--interactive-accent-tint);
 		}
 	}
 
 	button.mod-cta {
-		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 
@@ -142,9 +125,8 @@
 		}
 	}
 
-	.workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-	.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
-		color: var(--highlight-text-normal);
+	.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 

@@ -24,11 +24,27 @@
 	margin: 0 0 5px;
 }
 
+.workspace-leaf.mod-active .view-header .view-header-icon,
+.workspace-leaf.mod-active .view-header .view-actions .view-action,
+.workspace-leaf.mod-active .view-header .view-header-title {
+	color: var(--highlight-text-normal);
+
+	&:hover {
+		color: var(--interactive-accent-hover);
+	}
+}
+
 .workspace-tab-header.is-active {
+	color: var(--highlight-text-normal);
 	border: var(--border-size) solid;
+
+	svg.svg-icon {
+		color: var(--highlight-text-normal);
+	}
 }
 
 .nav-action-button.is-active {
+	color: var(--highlight-text-normal);
 	border: var(--border-size) solid;
 
 	&:hover svg {
@@ -37,6 +53,7 @@
 }
 
 .vertical-tab-nav-item.is-active {
+	color: var(--highlight-text-normal);
 	border: var(--border-size) solid;
 
 	&:hover {
@@ -44,7 +61,9 @@
 	}
 }
 
-.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active {
+.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
+.workspace-leaf div.workspace-leaf-content[data-type="file-tree-view"] .oz-nav-file.is-active .oz-nav-file-title {
+	color: var(--highlight-text-normal);
 	border: var(--border-size) solid;
 	border-radius: var(--border-radius-small);
 
@@ -54,6 +73,7 @@
 }
 
 .suggestion-hotkey {
+	color: var(--highlight-text-normal);
 	border: var(--border-size) solid;
 }
 
@@ -77,6 +97,7 @@
 
 .community-theme {
 	&.is-selected {
+		color: var(--highlight-text-normal);
 		border: var(--border-size) solid;
 
 		.community-theme-info,
@@ -89,6 +110,10 @@
 			}
 		}
 	}
+}
+
+button.mod-cta {
+	color: var(--highlight-text-normal);
 }
 
 button.mod-cta,
@@ -107,10 +132,15 @@ button.copy-code-button {
 	font-family: var(--font-interface);
 }
 
-.workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
+.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
 	font-weight: 600;
+	color: var(--highlight-text-normal);
 	border: var(--border-size) solid;
 	border-radius: var(--border-radius);
+
+	svg.svg-icon {
+		color: var(--highlight-text-normal);
+	}
 }
 /* #endregion */

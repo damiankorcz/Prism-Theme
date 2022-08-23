@@ -1393,25 +1393,11 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .workspace-split.mod-right-split .sidebar-toggle-button,
 .workspace-split.mod-vertical.mod-root .sidebar-toggle-button {
   width: fit-content;
-  height: 32px;
+  height: 31px;
   padding: 2px;
   margin: 4px;
   border: 2px solid transparent;
   border-radius: var(--border-radius);
-}
-.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
-.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left .clickable-icon {
-  color: var(--interactive-accent-text);
-}
-.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
-.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right .clickable-icon {
-  color: var(--interactive-accent-text);
 }
 .modal button:not(.mod-cta):not(.mod-warning) {
   display: inline-flex;
@@ -1434,29 +1420,49 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .search-result-file-match-destination-file {
   margin: 0 0 5px;
 }
+.workspace-leaf.mod-active .view-header .view-header-icon,
+.workspace-leaf.mod-active .view-header .view-actions .view-action,
+.workspace-leaf.mod-active .view-header .view-header-title {
+  color: var(--highlight-text-normal);
+}
+.workspace-leaf.mod-active .view-header .view-header-icon:hover,
+.workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
+.workspace-leaf.mod-active .view-header .view-header-title:hover {
+  color: var(--interactive-accent-hover);
+}
 .workspace-tab-header.is-active {
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
 }
+.workspace-tab-header.is-active svg.svg-icon {
+  color: var(--highlight-text-normal);
+}
 .nav-action-button.is-active {
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
 }
 .nav-action-button.is-active:hover svg {
   color: var(--interactive-accent-hover);
 }
 .vertical-tab-nav-item.is-active {
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
 }
 .vertical-tab-nav-item.is-active:hover {
   color: var(--interactive-accent-hover);
 }
-.workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active {
+.workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title {
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
   border-radius: var(--border-radius-small);
 }
-.workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active:hover {
+.workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active:hover,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title:hover {
   color: var(--interactive-accent-hover);
 }
 .suggestion-hotkey {
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
 }
 .search-result-hover-button.mod-top:hover,
@@ -1476,6 +1482,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   border-radius: var(--border-radius-small);
 }
 .community-theme.is-selected {
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
 }
 .community-theme.is-selected .community-theme-info,
@@ -1487,6 +1494,9 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .community-theme.is-selected .community-theme-downloads:hover,
 .community-theme.is-selected .clickable-icon:hover {
   color: var(--interactive-accent-hover);
+}
+button.mod-cta {
+  color: var(--highlight-text-normal);
 }
 button.mod-cta,
 button.mod-warning,
@@ -1502,43 +1512,29 @@ button.copy-code-button {
 .setting-hotkey {
   font-family: var(--font-interface);
 }
-.workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
+.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   font-weight: 600;
+  color: var(--highlight-text-normal);
   border: var(--border-size) solid;
   border-radius: var(--border-radius);
 }
-.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-title,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-title {
+.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right svg.svg-icon,
+.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left svg.svg-icon {
   color: var(--highlight-text-normal);
-}
-.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-dark.pt-accent-style-text-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-light.pt-accent-style-text-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
-  color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-text-dt .workspace-tab-header.is-active,
 .theme-light.pt-accent-style-text-lt .workspace-tab-header.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .nav-action-button.is-active,
 .theme-light.pt-accent-style-text-lt .nav-action-button.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .vertical-tab-nav-item.is-active,
 .theme-light.pt-accent-style-text-lt .vertical-tab-nav-item.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: transparent;
 }
@@ -1546,13 +1542,11 @@ button.copy-code-button {
 .theme-dark.pt-accent-style-text-dt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title,
 .theme-light.pt-accent-style-text-lt .workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active,
 .theme-light.pt-accent-style-text-lt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .suggestion-hotkey,
 .theme-light.pt-accent-style-text-lt .suggestion-hotkey {
-  color: var(--highlight-text-normal);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .search-result-hover-button.mod-top:hover,
@@ -1588,13 +1582,11 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-text-dt .community-theme.is-selected,
 .theme-light.pt-accent-style-text-lt .community-theme.is-selected {
-  color: var(--highlight-text-normal);
   background-color: var(--background-secondary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-text-dt button.mod-cta,
 .theme-light.pt-accent-style-text-lt button.mod-cta {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: transparent;
 }
@@ -1654,51 +1646,31 @@ button.copy-code-button {
 .theme-light.pt-accent-style-text-lt button.copy-code-button:hover {
   color: var(--interactive-accent-hover);
 }
-.theme-dark.pt-accent-style-text-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-dark.pt-accent-style-text-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-text-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-text-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
-  color: var(--highlight-text-normal);
+.theme-dark.pt-accent-style-text-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-dark.pt-accent-style-text-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-text-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--background-primary);
   border-color: transparent;
 }
-.theme-dark.pt-accent-style-text-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-dark.pt-accent-style-text-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-text-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-text-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover {
-  color: var(--interactive-accent-hover);
-}
-.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-title,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-title {
-  color: var(--highlight-text-normal);
-}
-.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-dark.pt-accent-style-border-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-light.pt-accent-style-border-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
+.theme-dark.pt-accent-style-text-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-dark.pt-accent-style-text-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-text-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-border-dt .workspace-tab-header.is-active,
 .theme-light.pt-accent-style-border-lt .workspace-tab-header.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .nav-action-button.is-active,
 .theme-light.pt-accent-style-border-lt .nav-action-button.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border: var(--border-size) solid var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .vertical-tab-nav-item.is-active,
 .theme-light.pt-accent-style-border-lt .vertical-tab-nav-item.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
@@ -1706,13 +1678,11 @@ button.copy-code-button {
 .theme-dark.pt-accent-style-border-dt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title,
 .theme-light.pt-accent-style-border-lt .workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active,
 .theme-light.pt-accent-style-border-lt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .suggestion-hotkey,
 .theme-light.pt-accent-style-border-lt .suggestion-hotkey {
-  color: var(--highlight-text-normal);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .search-result-hover-button.mod-top:hover,
@@ -1749,13 +1719,11 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-border-dt .community-theme.is-selected,
 .theme-light.pt-accent-style-border-lt .community-theme.is-selected {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt button.mod-cta,
 .theme-light.pt-accent-style-border-lt button.mod-cta {
-  color: var(--highlight-text-normal);
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
@@ -1816,51 +1784,31 @@ button.copy-code-button {
 .theme-light.pt-accent-style-border-lt button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-.theme-dark.pt-accent-style-border-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-dark.pt-accent-style-border-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-border-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-border-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
-  color: var(--highlight-text-normal);
+.theme-dark.pt-accent-style-border-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-dark.pt-accent-style-border-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-border-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
-.theme-dark.pt-accent-style-border-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-dark.pt-accent-style-border-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-border-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-border-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover {
-  color: var(--interactive-accent-hover);
-}
-.theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header .view-header-title,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header .view-header-title {
-  color: var(--highlight-text-normal);
-}
-.theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-dark.pt-accent-style-filled-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-light.pt-accent-style-filled-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
+.theme-dark.pt-accent-style-border-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-dark.pt-accent-style-border-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-border-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-filled-dt .workspace-tab-header.is-active,
 .theme-light.pt-accent-style-filled-lt .workspace-tab-header.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-filled-dt .nav-action-button.is-active,
 .theme-light.pt-accent-style-filled-lt .nav-action-button.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-filled-dt .vertical-tab-nav-item.is-active,
 .theme-light.pt-accent-style-filled-lt .vertical-tab-nav-item.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -1868,13 +1816,11 @@ button.copy-code-button {
 .theme-dark.pt-accent-style-filled-dt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title,
 .theme-light.pt-accent-style-filled-lt .workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active,
 .theme-light.pt-accent-style-filled-lt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-filled-dt .suggestion-hotkey,
 .theme-light.pt-accent-style-filled-lt .suggestion-hotkey {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -1912,13 +1858,11 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-filled-dt .community-theme.is-selected,
 .theme-light.pt-accent-style-filled-lt .community-theme.is-selected {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-base);
 }
 .theme-dark.pt-accent-style-filled-dt button.mod-cta,
 .theme-light.pt-accent-style-filled-lt button.mod-cta {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -1982,51 +1926,31 @@ button.copy-code-button {
 .theme-light.pt-accent-style-filled-lt button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-.theme-dark.pt-accent-style-filled-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-dark.pt-accent-style-filled-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-filled-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-filled-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
-  color: var(--highlight-text-normal);
+.theme-dark.pt-accent-style-filled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-dark.pt-accent-style-filled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-filled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
-.theme-dark.pt-accent-style-filled-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-dark.pt-accent-style-filled-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-filled-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-filled-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover {
-  color: var(--interactive-accent-hover);
-}
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-header-title,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-header-icon,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-actions .view-action,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-header-title {
-  color: var(--highlight-text-normal);
-}
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf.mod-active .view-header .view-header-title:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf.mod-active .view-header .view-header-title:hover {
+.theme-dark.pt-accent-style-filled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-dark.pt-accent-style-filled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-filled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-tab-header.is-active,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace-tab-header.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .nav-action-button.is-active,
 .theme-light.pt-accent-style-borderandfilled-lt .nav-action-button.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .vertical-tab-nav-item.is-active,
 .theme-light.pt-accent-style-borderandfilled-lt .vertical-tab-nav-item.is-active {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2034,13 +1958,11 @@ button.copy-code-button {
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf-content[data-type=file-explorer] .nav-file-title.is-active,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file.is-active .oz-nav-file-title {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .suggestion-hotkey,
 .theme-light.pt-accent-style-borderandfilled-lt .suggestion-hotkey {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2079,13 +2001,11 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .community-theme.is-selected,
 .theme-light.pt-accent-style-borderandfilled-lt .community-theme.is-selected {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt button.mod-cta,
 .theme-light.pt-accent-style-borderandfilled-lt button.mod-cta {
-  color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2149,18 +2069,17 @@ button.copy-code-button {
 .theme-light.pt-accent-style-borderandfilled-lt button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn {
-  color: var(--highlight-text-normal);
+.theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-dark.pt-accent-style-borderandfilled-dt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-right:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-ribbon.side-dock-ribbon.mod-left:not(.is-collapsed) .workspace-ribbon-collapse-btn:hover {
+.theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .popover {
