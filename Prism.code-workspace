@@ -16,11 +16,23 @@
 		},
 		"editor.wordWrap": "on",
 		"files.autoSaveDelay": 500,
-		"task.allowAutomaticTasks": "on"
+		"task.allowAutomaticTasks": true
 	},
 	"tasks": {
 		"version": "2.0.0",
 		"tasks": [
+			{
+				"label": "ESBuild - Dev",
+				"type": "shell",
+				"command": "npm run dev",
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"runOptions": {
+					"runOn": "folderOpen"
+				}
+			},
 			{
 				"label": "ESBuild - Build",
 				"type": "shell",
@@ -28,9 +40,6 @@
 				"group": {
 					"kind": "build",
 					"isDefault": true
-				},
-				"runOptions": {
-					"runOn": "folderOpen"
 				}
 			}
 		]
