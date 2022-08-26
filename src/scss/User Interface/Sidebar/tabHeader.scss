@@ -1,6 +1,6 @@
 /* #region  [Sidebar] Tab Header */
 .workspace-tab-header {
-	padding: unset;
+	padding: 0 var(--size-4-2);
 	border: var(--border-size) solid transparent;
 	border-radius: var(--border-radius);
 
@@ -22,16 +22,15 @@
 	}
 }
 
+.workspace .mod-root .workspace-tab-header {
+	padding: inherit;
+}
+
 .mod-root {
 	.workspace-tab-header-inner {
 		gap: var(--size-4-1);
-		padding: 0 var(--size-4-2);
+		padding: 0 var(--size-4-1);
 	}
-}
-
-.workspace-tab-header-inner-icon,
-.workspace-tab-header-inner-close-button {
-	padding: 0 0 1px 0;
 }
 
 .workspace-tab-header-inner-close-button::after {
@@ -41,6 +40,7 @@
 .workspace-tabs {
 	.workspace-tab-header-container-inner {
 		gap: var(--size-2-1);
+		height: 40px;
 		padding: var(--size-4-1);
 		margin: unset;
 	}

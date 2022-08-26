@@ -69,6 +69,11 @@ body {
   --text-accent: var(--interactive-accent-text);
   --drag-ghost-text-color: var(--text-normal);
   --clickable-icon-radius: var(--radius-m);
+  --text-error: var(--color-red-text);
+  --background-modifier-error: var(--color-red-text);
+  --background-modifier-border: var(--table-border-color);
+  --toggle-radius: var(--size-4-1);
+  --toggle-thumb-radius: var(--size-4-1);
   --graph-fill-opacity-lt: 1;
   --graph-fill-focused-opacity-lt: 1;
   --graph-tag-opacity-lt: 1;
@@ -179,9 +184,6 @@ body.theme-dark {
   --hue-background-dt: linear-gradient( to right, hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(30 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(60 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(90 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(120 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(150 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(180 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(210 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(240 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(270 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(300 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(330 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(360 var(--color-accent-s-dt) var(--color-accent-l-base-dt)) );
   --saturation-background-dt: linear-gradient( to right, hsl(var(--color-accent-h-dt) 0% var(--color-accent-l-base-dt)), hsl(var(--color-accent-h-dt) 50% var(--color-accent-l-base-dt)), hsl(var(--color-accent-h-dt) 100% var(--color-accent-l-base-dt)) );
   --lightness-background-dt: linear-gradient( to right, hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 0%), hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 50%), hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 100%) );
-  --text-error: var(--color-red-tint);
-  --background-modifier-error: var(--color-red-tint);
-  --background-modifier-border: var(--table-border-color);
   --scroll-button-background-color: var(--background-secondary);
   --highlight-text-accent-custom-lt: hsl(0 0% 100%);
   --highlight-text-accent-custom-dt: hsl(0 0% 0%);
@@ -1030,7 +1032,7 @@ body.theme-dark.pt-color-scheme-pine-dt {
   box-shadow: var(--drop-shadow-popup);
 }
 .workspace-tab-header {
-  padding: unset;
+  padding: 0 var(--size-4-2);
   border: var(--border-size) solid transparent;
   border-radius: var(--border-radius);
 }
@@ -1047,19 +1049,19 @@ body.theme-dark.pt-color-scheme-pine-dt {
 .workspace-tab-header::after {
   display: none;
 }
+.workspace .mod-root .workspace-tab-header {
+  padding: inherit;
+}
 .mod-root .workspace-tab-header-inner {
   gap: var(--size-4-1);
-  padding: 0 var(--size-4-2);
-}
-.workspace-tab-header-inner-icon,
-.workspace-tab-header-inner-close-button {
-  padding: 0 0 1px 0;
+  padding: 0 var(--size-4-1);
 }
 .workspace-tab-header-inner-close-button::after {
   display: none;
 }
 .workspace-tabs .workspace-tab-header-container-inner {
   gap: var(--size-2-1);
+  height: 40px;
   padding: var(--size-4-1);
   margin: unset;
 }
@@ -1153,8 +1155,6 @@ body.theme-dark.pt-color-scheme-pine-dt {
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
-.modal.mod-settings {
-}
 .modal.mod-settings .vertical-tab-header {
   max-width: 215px;
   padding: 42px 0 0;
@@ -1187,8 +1187,7 @@ body.theme-dark.pt-color-scheme-pine-dt {
   content: "Prism v3.0.0 WIP";
   background: var(--background-secondary);
   border: 1px solid var(--window-border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
+  border-radius: var(--border-radius-small);
 }
 .is-mobile .modal.mod-settings .vertical-tab-header::after {
   margin: 7px 4px;
@@ -1246,6 +1245,74 @@ img.community-theme-lightbox {
 body:not(.native-scrollbars) .modal-close-button {
   top: var(--size-4-1);
   right: var(--size-4-3);
+}
+.community-modal-controls .setting-item {
+  display: inline-flex;
+}
+.community-modal-controls .community-modal-search-summary {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0 var(--size-4-3) var(--size-4-1);
+}
+.mod-warning {
+  color: var(--color-red-text);
+}
+.checkbox-container.is-enabled {
+  background-color: var(--interactive-accent-base);
+}
+select.dropdown {
+  font-family: var(--font-interface);
+  background-color: var(--background-primary);
+  border: 1px solid var(--window-border);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--drop-shadow);
+}
+select.dropdown option[value*=accent]:not([value*=accent-style]):not([value*=accent-color]) {
+  color: var(--interactive-accent-text);
+  background-color: var(--interactive-accent-base);
+}
+select.dropdown option[value*=red] {
+  color: var(--color-red-text);
+  background-color: var(--color-red-base);
+}
+select.dropdown option[value*=orange] {
+  color: var(--color-orange-text);
+  background-color: var(--color-orange-base);
+}
+select.dropdown option[value*=yellow] {
+  color: var(--color-yellow-text);
+  background-color: var(--color-yellow-base);
+}
+select.dropdown option[value*=green] {
+  color: var(--color-green-text);
+  background-color: var(--color-green-base);
+}
+select.dropdown option[value*=mint] {
+  color: var(--color-mint-text);
+  background-color: var(--color-mint-base);
+}
+select.dropdown option[value*=aqua] {
+  color: var(--color-aqua-text);
+  background-color: var(--color-aqua-base);
+}
+select.dropdown option[value*=blue] {
+  color: var(--color-blue-text);
+  background-color: var(--color-blue-base);
+}
+select.dropdown option[value*=purple] {
+  color: var(--color-purple-text);
+  background-color: var(--color-purple-base);
+}
+select.dropdown option[value*=pink] {
+  color: var(--color-pink-text);
+  background-color: var(--color-pink-base);
+}
+select.dropdown option[value*=grey] {
+  color: var(--color-grey-text);
+  background-color: var(--color-grey-base);
+}
+.modal {
+  box-shadow: var(--drop-shadow-popup);
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar,
 body:not(.native-scrollbars) ::-webkit-scrollbar {
@@ -1393,7 +1460,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .workspace-split.mod-right-split .sidebar-toggle-button,
 .workspace-split.mod-vertical.mod-root .sidebar-toggle-button {
   width: fit-content;
-  height: 31px;
+  height: 32px;
   padding: 2px;
   margin: 4px;
   border: 2px solid transparent;
@@ -2399,13 +2466,12 @@ div.notice-container div.notice {
 .tree-item .tree-item-self {
   align-items: center;
   width: 100%;
-  padding: 1px var(--size-4-2);
+  padding: 1px var(--size-4-1) 1px var(--size-4-2);
   color: var(--text-normal);
   border: 2px solid transparent;
 }
 .tree-item-flair {
   padding: 1px 2px;
-  border: 1px solid var(--window-border);
 }
 .tree-item-self .tree-item-icon {
   width: 16px;

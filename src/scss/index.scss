@@ -21,13 +21,12 @@
 
 /* Other User Interface Elements */
 // @use "User Interface/animations.scss"; // 🔧
-@use "User Interface/settings.scss"; // 🧹 Kinda broken. Waiting for new Community Themes modal
+@use "User Interface/settings.scss"; // ✅ Main background and small areas will need work.
 // @use "User Interface/inputContainers.scss"; // 🔧
 @use "User Interface/scrollBar.scss"; // 🧹 Scrollbar Buttons needs tidying
 @use "User Interface/emptyState.scss"; // ✅ Empty for now.
 @use "User Interface/startup.scss"; // ✅
 @use "User Interface/workspace.scss"; // ✅ View Header will need a little styling
-@use "User Interface/workspaceRibbon.scss"; // ✅
 // @use "User Interface/navFileFolderContainer.scss"; // 🔧
 // @use "User Interface/documentSearch.scss"; // 🔧
 // @use "User Interface/mobileToolbar.scss"; // 🔧
@@ -58,12 +57,11 @@
 /* Core Plugins */
 @use "Plugins/Core/audio.scss"; // ✅
 @use "Plugins/Core/audioRecorder.scss"; // Needs adjusting for different accent modes
-// @use "Plugins/Core/backlinks.scss";
+// @use "Plugins/Core/backlinks.scss"; // 🔧
 @use "Plugins/Core/commandPalette.scss"; // ✅
 @use "Plugins/Core/slashCommands.scss"; // ✅
 @use "Plugins/Core/fileExplorer.scss"; // ✅
 @use "Plugins/Core/graph.scss"; // ✅ Come back to style the menu when decieded on style.
-// @use "Plugins/Core/markdown.scss"; // 🔧
 // @use "Plugins/Core/outgoingLink.scss"; // 🔧
 @use "Plugins/Core/outline.scss"; // ✅
 // @use "Plugins/Core/search.scss";
@@ -86,7 +84,7 @@
 // @use "Plugins/Community/quickExplorer.scss"; // 🔧
 @use "Plugins/Community/styleSettings.scss"; // 🧹
 // @use "Plugins/Community/danglingLinks.scss"; // 🔧
-// @use "Plugins/Community/slidingPanes.scss"; // 🔧
+// @use "Plugins/Community/slidingPanes.scss"; // 🔧 Plugin currently broken. Will revisit once addressed.
 // @use "Plugins/Community/cMenu.scss"; // 🔧
 // @use "Plugins/Community/calendar.scss"; // 🔧
 // @use "Plugins/Community/iconFolder.scss"; // 🔧
@@ -105,10 +103,11 @@
 
 // TODO
 // - Need to sort out all the hover states.
-// - Check all accent colours to see if there isn't a variable that can now be used instead. 
+// - Look over all custom variables to see if there area now native replacements (including new ones replacing redundant    code). 
 //    - Border radius.
+//    - Replace the custom Border Radius variable for native ones. Same for shadows. 
 // - Will need to redo the Mobile side of the theme.
-// - Replace the custom Border Radius variable for native ones. 
 // - embedded-backlinks / internal-query styling.
 // - Read through the app.css for additional insight and potential improvements for the theme.
 // - Make sure that the currently active tab is distinguisable between the active tabs in other panes.
+// - Describe how the new native accent colour picker won't be used and to use Style Settings instead.
