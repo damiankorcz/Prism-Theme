@@ -1,285 +1,69 @@
 /* #region  [Status Bar] Base */
-.status-bar {
-	position: absolute;
-	left: 0;
+.pt-status-bar-position-floating .status-bar {
+	--status-bar-position: absolute;
 	right: 0;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: var(--size-4-4);
+	left: 0;
 	width: fit-content;
+	margin: 0 auto var(--size-4-4);
 	background: var(--background-secondary-blur);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
 	border: 1px solid var(--window-border);
 	border-radius: var(--border-radius-small);
-	box-shadow: var(--drop-shadow-popup);;
+	box-shadow: var(--drop-shadow-popup);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
 }
 
-// .theme-light.pt-solid-titlebar-lt.pt-status-bar-position-top .status-bar,
-// .theme-dark.pt-solid-titlebar-dt.pt-status-bar-position-top .status-bar {
-// 	background: unset;
-// 	border: unset;
-// 	box-shadow: unset;
-// }
+.pt-status-bar-position-fixed .status-bar {
+	--status-bar-position: relative;
+	border-top: 1px solid var(--window-border);
+	border-radius: unset;
+}
 
-// .pt-status-bar-position-top.pt-status-bar-align-center .titlebar-text {
-// 	display: none;
-// }
+.pt-status-bar-align-left .status-bar {
+	justify-content: flex-start;
+}
 
-// .pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-// 	position: absolute;
-// 	right: 0;
-// 	order: 0;
-// 	height: 18px;
-// 	margin-top: -20px;
-// 	margin-bottom: 0;
-// 	font-size: 13px;
-// 	line-height: 13px;
-// }
+.pt-status-bar-align-center .status-bar {
+	justify-content: center;
+}
 
-// .mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-// 	left: 134px;
-// }
+.pt-status-bar-align-right .status-bar {
+	justify-content: flex-end;
+}
+/* #endregion */
 
-// .pt-titlebar-hide-nav-buttons.mod-windows.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-// 	left: 48px;
-// }
+/* #region  [Status Bar] Solid */
+.theme-light.pt-status-bar-default-lt div.status-bar,
+.theme-dark.pt-status-bar-default-dt div.status-bar {
+	background: var(--background-tertiary);
+}
 
-// .mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-// 	left: 154px;
-// }
+.theme-light.pt-status-bar-custom-lt div.status-bar {
+	background: var(--status-bar-background-color-lt);
+}
 
-// .pt-titlebar-hide-nav-buttons.mod-mac.pt-status-bar-position-top.pt-status-bar-align-left.pt-default-titlebar .status-bar {
-// 	left: 68px;
-// }
+.theme-dark.pt-status-bar-custom-dt div.status-bar {
+	background: var(--status-bar-background-color-dt);
+}
 
-// .pt-status-bar-position-top.pt-status-bar-align-center.pt-default-titlebar .status-bar {
-// 	position: absolute;
-// 	right: 0;
-// 	left: 0;
-// 	order: 0;
-// 	height: 18px;
-// 	margin-top: -20px;
-// 	margin-bottom: 0;
-// 	font-size: 13px;
-// 	line-height: 13px;
-// }
+.theme-light.pt-status-bar-text-light-lt .status-bar {
+	color: var(--background-primary);
+}
 
-// .pt-status-bar-position-top.pt-status-bar-align-right.pt-default-titlebar .status-bar {
-// 	position: absolute;
-// 	right: 100px;
-// 	left: 0;
-// 	order: 0;
-// 	height: 18px;
-// 	margin-top: -20px;
-// 	margin-bottom: 0;
-// 	font-size: 13px;
-// 	line-height: 13px;
-// }
+.theme-light.pt-status-bar-text-dark-lt .status-bar {
+	color: var(--text-normal);
+}
 
-// .pt-status-bar-position-top.pt-default-titlebar .status-bar svg {
-// 	width: 14px;
-// 	height: 14px;
-// }
+.theme-dark.pt-status-bar-text-light-dt .status-bar {
+	color: var(--text-normal);
+}
 
-// .pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
-// 	position: absolute;
-// 	right: 0;
-// 	left: 132px;
-// 	order: 0;
-// 	margin-top: -26px;
-// 	margin-bottom: 0;
-// }
+.theme-dark.pt-status-bar-text-dark-dt .status-bar {
+	color: var(--background-primary);
+}
 
-// .pt-titlebar-hide-nav-buttons.pt-status-bar-position-top.pt-status-bar-align-left.pt-windows-titlebar .status-bar {
-// 	left: 48px;
-// }
-
-// .pt-status-bar-position-top.pt-status-bar-align-center.pt-windows-titlebar .status-bar {
-// 	position: absolute;
-// 	right: 0;
-// 	left: 0;
-// 	order: 0;
-// 	margin-top: -26px;
-// 	margin-bottom: 0;
-// }
-
-// .pt-status-bar-position-top.pt-status-bar-align-right.pt-windows-titlebar .status-bar {
-// 	position: absolute;
-// 	right: 148px;
-// 	order: 0;
-// 	margin-top: -26px;
-// 	margin-bottom: 0;
-// }
-
-// .pt-status-bar-position-top .horizontal-main-container {
-// 	padding: 0 5px 5px;
-// }
-
-// .pt-status-bar-position-top .status-bar-item-segment {
-// 	width: 14px;
-// 	height: 14px;
-// 	font-size: unset;
-// 	line-height: unset;
-// }
-
-// .pt-status-bar-position-top .status-bar-item-icon {
-// 	width: 14px;
-// 	height: 14px;
-// 	font-size: unset;
-// 	line-height: unset;
-// 	color: var(--interactive-accent-tint);
-// }
-
-// .pt-status-bar-position-bottom .horizontal-main-container {
-// 	padding: 0 5px;
-// }
-
-// .pt-status-bar-align-left .status-bar {
-// 	margin-right: auto;
-// 	margin-left: 5px;
-// }
-
-// .pt-status-bar-align-center .status-bar {
-// 	margin-right: auto;
-// 	margin-left: auto;
-// }
-
-// .pt-status-bar-align-right .status-bar {
-// 	margin-right: 5px;
-// 	margin-left: auto;
-// }
-
-// .pt-status-bar-rtl .status-bar {
-// 	flex-direction: row-reverse;
-// }
-
-// .pt-status-bar-ltr .status-bar {
-// 	flex-direction: row;
-// }
-
-// .status-bar-item {
-// 	padding: 0 10px;
-// }
-
-// .theme-light .sync-status-icon.mod-working {
-// 	color: var(--interactive-accent-tint);
-// }
-
-// .theme-dark .sync-status-icon.mod-working {
-// 	color: var(--interactive-accent-base);
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-light-lt .status-bar {
-// 	color: var(--background-primary);
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-dark-lt .status-bar {
-// 	color: var(--text-normal);
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-text-accent-lt .status-bar {
-// 	color: var(--interactive-accent-text);
-// }
-
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-light-dt .status-bar {
-// 	color: var(--text-normal);
-// }
-
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-dark-dt .status-bar {
-// 	color: var(--background-primary);
-// }
-
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-text-accent-dt .status-bar {
-// 	color: var(--interactive-accent-text);
-// }
-
-// /* #endregion */
-
-// /* #region  [Status Bar] Solid */
-// :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar,
-// :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar {
-// 	width: 100%;
-// 	margin-bottom: unset;
-// 	border-radius: unset;
-// 	box-shadow: unset;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-default-lt div.status-bar,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-default-dt div.status-bar {
-// 	background: var(--background-tertiary);
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-custom-lt div.status-bar {
-// 	background: var(--status-bar-background-color-lt);
-// }
-
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-custom-dt div.status-bar {
-// 	background: var(--status-bar-background-color-dt);
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-solid-status-bar-lt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-solid-status-bar-dt div.status-bar-item.plugin-word-count .status-bar-item-segment:first-child {
-// 	margin-right: 10px !important;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
-// 	margin-left: 0;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
-// 	margin-right: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
-// 	margin-left: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
-// 	margin-right: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
-// 	margin-left: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-ltr.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-ltr.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
-// 	margin-right: 0;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :first-child {
-// 	margin-right: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-left div.status-bar :last-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-left div.status-bar :last-child {
-// 	margin-left: 0;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :first-child {
-// 	margin-right: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-center div.status-bar :last-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-center div.status-bar :last-child {
-// 	margin-left: auto;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :first-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :first-child {
-// 	margin-right: 0;
-// }
-
-// :not(.pt-status-bar-position-top).theme-light.pt-status-bar-rtl.pt-solid-status-bar-lt.pt-status-bar-align-right div.status-bar :last-child,
-// :not(.pt-status-bar-position-top).theme-dark.pt-status-bar-rtl.pt-solid-status-bar-dt.pt-status-bar-align-right div.status-bar :last-child {
-// 	margin-left: auto;
-// }
+.theme-light.pt-status-bar-text-accent-lt .status-bar,
+.theme-dark.pt-status-bar-text-accent-dt .status-bar {
+	color: var(--interactive-accent-text);
+}
 /* #endregion */

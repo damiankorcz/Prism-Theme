@@ -1017,20 +1017,58 @@ body.theme-dark.pt-color-scheme-pine-dt {
     hsl(135 35% 7% / 10%) 0 4px 8px,
     hsl(135 35% 7% / 10%) 0 8px 16px;
 }
-.status-bar {
-  position: absolute;
-  left: 0;
+.pt-status-bar-position-floating .status-bar {
+  --status-bar-position: absolute;
   right: 0;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: var(--size-4-4);
+  left: 0;
   width: fit-content;
+  margin: 0 auto var(--size-4-4);
   background: var(--background-secondary-blur);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius-small);
   box-shadow: var(--drop-shadow-popup);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.pt-status-bar-position-fixed .status-bar {
+  --status-bar-position: relative;
+  border-top: 1px solid var(--window-border);
+  border-radius: unset;
+}
+.pt-status-bar-align-left .status-bar {
+  justify-content: flex-start;
+}
+.pt-status-bar-align-center .status-bar {
+  justify-content: center;
+}
+.pt-status-bar-align-right .status-bar {
+  justify-content: flex-end;
+}
+.theme-light.pt-status-bar-default-lt div.status-bar,
+.theme-dark.pt-status-bar-default-dt div.status-bar {
+  background: var(--background-tertiary);
+}
+.theme-light.pt-status-bar-custom-lt div.status-bar {
+  background: var(--status-bar-background-color-lt);
+}
+.theme-dark.pt-status-bar-custom-dt div.status-bar {
+  background: var(--status-bar-background-color-dt);
+}
+.theme-light.pt-status-bar-text-light-lt .status-bar {
+  color: var(--background-primary);
+}
+.theme-light.pt-status-bar-text-dark-lt .status-bar {
+  color: var(--text-normal);
+}
+.theme-dark.pt-status-bar-text-light-dt .status-bar {
+  color: var(--text-normal);
+}
+.theme-dark.pt-status-bar-text-dark-dt .status-bar {
+  color: var(--background-primary);
+}
+.theme-light.pt-status-bar-text-accent-lt .status-bar,
+.theme-dark.pt-status-bar-text-accent-dt .status-bar {
+  color: var(--interactive-accent-text);
 }
 .workspace-tab-header {
   padding: 0 var(--size-4-2);
@@ -1184,6 +1222,7 @@ body.theme-dark.pt-color-scheme-pine-dt {
   height: 24px;
   padding: 0 8px;
   font-size: 14px;
+  font-weight: 600;
   color: var(--interactive-accent-text);
   content: "Prism v3.0.0 WIP";
   background: var(--background-secondary);
@@ -2450,12 +2489,15 @@ div.notice-container div.notice {
   margin: var(--size-4-1);
 }
 .search-result-container {
-  padding: var(--size-4-2);
+  padding: var(--size-4-1);
 }
 .search-result-file-matched-text {
   padding: 0 4px;
   font-weight: 600;
   color: var(--interactive-accent-text);
+}
+.search-result-file-matches {
+  margin: var(--size-4-1);
 }
 .search-result-hover-button {
   padding: var(--size-2-1);
@@ -6750,19 +6792,19 @@ settings:
         level: 2
         collapsed: true
     -
-        id: pt-status-bar-position
-        title: Status Bar Position
-        description: Change the Position of the Status Bar. When in the Top position, the Status Bar inherits theme specific customisation options from the Titlebar.
+        id: pt-status-bar-style
+        title: Status Bar Style
+        description: Change the Position of the Status Bar.
         type: class-select
         allowEmpty: false
-        default: pt-status-bar-position-bottom
+        default: pt-status-bar-position-floating
         options:
             -
-                label: Top
-                value: pt-status-bar-position-top
+                label: Floating
+                value: pt-status-bar-position-floating
             -
-                label: Bottom
-                value: pt-status-bar-position-bottom
+                label: Fixed
+                value: pt-status-bar-position-fixed
     -
         id: pt-status-bar-align
         title: Status Bar Horizontal Alignment
@@ -6781,31 +6823,11 @@ settings:
                 label: Right
                 value: pt-status-bar-align-right
     -
-        id: pt-status-bar-order
-        title: Status Bar Items Order
-        description: Change the Items Order in the Status Bar.
-        type: class-select
-        allowEmpty: false
-        default: pt-status-bar-ltr
-        options:
-            -
-                label: Left to Right
-                value: pt-status-bar-ltr
-            -
-                label: Right to Left
-                value: pt-status-bar-rtl
-    -
         id: status-bar-customisation-lt
         title: Light Theme Customisation
         type: heading
         level: 3
         collapsed: true
-    -
-        id: pt-solid-status-bar-lt
-        title: Solid Status Bar Background
-        description: Changes the Light Theme Status Bar Background to a solid app wide bar container instead of separated containers.
-        type: class-toggle
-        default: false
     -
         id: status-bar-preset-lt
         title: Status Bar Preset
@@ -6849,12 +6871,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    -
-        id: pt-solid-status-bar-dt
-        title: Solid Status Bar Background
-        description: Changes the Dark Theme Status Bar Background to a solid app wide bar container instead of separated containers.
-        type: class-toggle
-        default: false
     -
         id: status-bar-preset-dt
         title: Status Bar Preset
