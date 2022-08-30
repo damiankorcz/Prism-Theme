@@ -1,4 +1,8 @@
 /* #region  [UI] Settings */
+.modal {
+	box-shadow: var(--drop-shadow-popup);
+}
+
 .modal.mod-settings {
 	.vertical-tab-header {
 		max-width: 215px;
@@ -132,6 +136,19 @@ body:not(.native-scrollbars) .modal-close-button {
 	}
 }
 
+input[type="range"] {
+	width: 125px;
+	height: 0.7em;
+	background-color: var(--background-primary);
+	border: 1px solid var(--window-border);
+	border-radius: var(--size-2-1);
+
+	&::-webkit-slider-thumb {
+		height: 19px;
+		box-shadow: unset;
+	}
+}
+
 select.dropdown {
 	font-family: var(--font-interface);
 	background-color: var(--background-primary);
@@ -193,9 +210,5 @@ select.dropdown {
 		color: var(--color-grey-text);
 		background-color: var(--color-grey-base);
 	}
-}
-
-.modal {
-	box-shadow: var(--drop-shadow-popup);
 }
 /* #endregion */

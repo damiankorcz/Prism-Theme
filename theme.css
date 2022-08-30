@@ -58,9 +58,9 @@ body {
   --callout-padding: 4px;
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
+  --status-bar-font-size: var(--font-ui-small);
   --icon-color-focused: var(--interactive-accent-text);
   --background-modifier-border-focus: var(--interactive-accent-base);
-  --status-bar-font-size: var(--font-ui-small);
   --modal-width: 85vw;
   --modal-max-width: 1400px;
   --modal-height: 80vh;
@@ -73,7 +73,9 @@ body {
   --background-modifier-error: var(--color-red-text);
   --background-modifier-border: var(--table-border-color);
   --toggle-radius: var(--size-4-1);
-  --toggle-thumb-radius: var(--size-4-1);
+  --toggle-thumb-radius: 3px;
+  --slider-thumb-radius: var(--size-4-1);
+  --slider-thumb-width: 10px;
   --graph-fill-opacity-lt: 1;
   --graph-fill-focused-opacity-lt: 1;
   --graph-tag-opacity-lt: 1;
@@ -1194,6 +1196,9 @@ body.theme-dark.pt-color-scheme-pine-dt {
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
+.modal {
+  box-shadow: var(--drop-shadow-popup);
+}
 .modal.mod-settings .vertical-tab-header {
   max-width: 215px;
   padding: 42px 0 0;
@@ -1300,6 +1305,17 @@ body:not(.native-scrollbars) .modal-close-button {
 .checkbox-container.is-enabled {
   background-color: var(--interactive-accent-base);
 }
+input[type=range] {
+  width: 125px;
+  height: 0.7em;
+  background-color: var(--background-primary);
+  border: 1px solid var(--window-border);
+  border-radius: var(--size-2-1);
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 19px;
+  box-shadow: unset;
+}
 select.dropdown {
   font-family: var(--font-interface);
   background-color: var(--background-primary);
@@ -1350,9 +1366,6 @@ select.dropdown option[value*=pink] {
 select.dropdown option[value*=grey] {
   color: var(--color-grey-text);
   background-color: var(--color-grey-base);
-}
-.modal {
-  box-shadow: var(--drop-shadow-popup);
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar,
 body:not(.native-scrollbars) ::-webkit-scrollbar {
@@ -2472,6 +2485,17 @@ div.notice-container div.notice {
   color: var(--graph-highlight-line-color-dt);
   opacity: var(--graph-highlight-line-opacity-dt);
 }
+.backlink-pane > .tree-item-self .collapse-icon,
+.outgoing-link-pane > .tree-item-self .collapse-icon {
+  display: block;
+}
+.backlink-pane,
+.outgoing-link-pane {
+  padding: var(--size-4-1);
+}
+.outgoing-link-pane .tree-item-self .tree-item-icon {
+  margin-right: var(--size-4-2);
+}
 .outline {
   padding: var(--size-4-1);
 }
@@ -2496,8 +2520,11 @@ div.notice-container div.notice {
   font-weight: 600;
   color: var(--interactive-accent-text);
 }
+.search-result {
+  margin-bottom: var(--size-4-2);
+}
 .search-result-file-matches {
-  margin: var(--size-4-1);
+  margin: var(--size-4-1) var(--size-4-1) var(--size-4-1) var(--size-4-3);
 }
 .search-result-hover-button {
   padding: var(--size-2-1);
@@ -2538,11 +2565,15 @@ div.notice-container div.notice {
   color: var(--text-normal);
   border: 2px solid transparent;
 }
+.tree-item-self {
+  align-items: center;
+}
 .tree-item-flair {
   padding: 1px 2px;
 }
 .tree-item-self .tree-item-icon {
   width: 16px;
+  padding-inline-end: unset;
 }
 .tree-item-children {
   padding-left: unset;
