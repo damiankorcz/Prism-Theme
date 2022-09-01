@@ -22,6 +22,10 @@
 	}
 }
 
+.workspace-tab-header-container {
+	padding-right: unset;
+}
+
 .workspace .mod-root .workspace-tab-header {
 	padding: inherit;
 }
@@ -37,10 +41,14 @@
 	display: none;
 }
 
+.workspace .mod-root .workspace-tab-header-inner::after {
+	display: none;
+}
+
 .workspace-tabs {
 	.workspace-tab-header-container-inner {
 		gap: var(--size-2-1);
-		height: 40px;
+		height: var(--header-height);
 		padding: var(--size-4-1);
 		margin: unset;
 	}

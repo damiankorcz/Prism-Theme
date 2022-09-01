@@ -44,6 +44,32 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 }
 /* #endregion */
 
+/* #region  [UI] View Header */
+.view-header {
+	position: fixed;
+	width: calc(100% - var(--scroll-bar-size));
+	background: var(--background-secondary-blur);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
+}
+
+.workspace-tabs .view-header {
+	margin: unset;
+}
+
+.view-header-title-container::after {
+	display: none;
+}
+
+.view-actions {
+	padding-right: var(--size-4-2);
+}
+
+.view-header-title {
+	padding-left: var(--size-4-4);
+}
+/* #endregion */
+
 /* #region  [UI] Workspace Ribbon */
 .workspace-ribbon.mod-left,
 .workspace-split.mod-right-split,
@@ -58,4 +84,3 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 	}
 }
 /* #endregion */
-
