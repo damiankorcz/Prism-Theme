@@ -1,7 +1,7 @@
-/* Font Imports */
-@use "Fonts/fontFamilyImports.scss"; // Remove @import for potential fonts 
+@use"Info/license.scss";
 
-/* Variables */
+/* Setup */
+@use "Fonts/fontFamilyImports.scss"; // Remove @import for potential fonts 
 @use "Variables/coreVariables.scss"; // 🔧 Evaluate the need of all variables.
 
 /* Color Schemes */
@@ -11,7 +11,7 @@
 @use "Color Schemes/colorSchemeTree.scss"; // 🔧 Evaluate the need of all variables.
 
 /* Title Bar/Status Bar */
-@use "User Interface/Bars/titleBar.scss"; // 🔧
+@use "User Interface/Bars/titleBar.scss"; // 🧹 Needs reconsidering due to different variants.
 @use "User Interface/Bars/statusBar.scss"; // ✅
 /* Sidebar */
 @use "User Interface/Sidebar/tabHeader.scss"; // ✅
@@ -95,6 +95,10 @@
 // @use "Plugins/Community/quietOutline.scss"; // 🔧
 // @use "Plugins/Community/fileTreeAlternative.scss"; // 🔧
 // @use "Plugins/Community/recentFiles.scss"; // 🔧
+
+/* Config Files */
+@use"Info/styleSettingsConfig.scss";
+@use"Info/pluginCompatibility.scss";
 
 
 // TODO
