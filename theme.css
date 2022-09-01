@@ -1,15 +1,15 @@
-/* #region  [Info] License */
-/*
+@charset "UTF-8";
+/*!
     Prism Theme for Obsidian.md (Version: v3.0.0) WIP
     > A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
+    Support the development: https://www.buymeacoffee.com/DamianKorcz
+    Forum Thread: https://forum.obsidian.md/t/theme-prism/36493
+
     Distributed under the MIT License. See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
     Copyright (c) 2022 Damian Korcz <https://github.com/damiankorcz>
 */
-/* #endregion */
-
-@charset "UTF-8";
 @font-face {
   font-family: "Source Sans 3";
   font-style: normal;
@@ -55,7 +55,6 @@ body {
   --h5-size: 1.2em;
   --h6-size: 1em;
   --header-height: 41px;
-  --custom-readable-line-length: 700px;
   --callout-padding: 4px;
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
@@ -97,8 +96,7 @@ body {
   --border-radius: 8px;
   --border-radius-small: 4px;
   --vertical-lines-width: 2px;
-  --scroll-bar-size: 8px;
-  --scroll-bar-size-hover: 15px;
+  --scroll-bar-size: 12px;
   --h1-padding-size: 0;
   --h2-padding-size: 0;
   --h3-padding-size: 0;
@@ -187,7 +185,7 @@ body.theme-dark {
   --hue-background-dt: linear-gradient( to right, hsl(0 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(30 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(60 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(90 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(120 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(150 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(180 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(210 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(240 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(270 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(300 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(330 var(--color-accent-s-dt) var(--color-accent-l-base-dt)), hsl(360 var(--color-accent-s-dt) var(--color-accent-l-base-dt)) );
   --saturation-background-dt: linear-gradient( to right, hsl(var(--color-accent-h-dt) 0% var(--color-accent-l-base-dt)), hsl(var(--color-accent-h-dt) 50% var(--color-accent-l-base-dt)), hsl(var(--color-accent-h-dt) 100% var(--color-accent-l-base-dt)) );
   --lightness-background-dt: linear-gradient( to right, hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 0%), hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 50%), hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 100%) );
-  --scroll-button-background-color: var(--background-secondary);
+  --scroll-button-background-color: var(--background-primary);
   --highlight-text-accent-custom-lt: hsl(0 0% 100%);
   --highlight-text-accent-custom-dt: hsl(0 0% 0%);
   --interactive-accent: var(--interactive-accent-base);
@@ -213,7 +211,7 @@ body.theme-light {
   --page-background-color: var(--background-primary);
   --table-border-color: var(--background-secondary-alt);
   --text-selection: var(--background-secondary-alt);
-  --scroll-bar-thumb: var(--background-primary);
+  --scroll-bar-thumb: var(--window-border);
   --interactive-accent: var(--background-primary);
   --text-on-accent: var(--text-normal);
   --graph-line-color-lt: var(--background-secondary-alt);
@@ -318,7 +316,7 @@ body.theme-dark {
   --page-background-color: var(--background-secondary);
   --table-border-color: var(--background-primary-alt);
   --text-selection: var(--background-primary-alt);
-  --scroll-bar-thumb: var(--background-primary-alt);
+  --scroll-bar-thumb: var(--window-border);
   --graph-line-color-dt: var(--background-primary-alt);
   --graph-fill-color-dt: var(--color-grey-tint);
   --graph-fill-focused-color-dt: var(--interactive-accent-tint);
@@ -1020,70 +1018,6 @@ body.theme-dark.pt-color-scheme-pine-dt {
     hsl(135 35% 7% / 10%) 0 4px 8px,
     hsl(135 35% 7% / 10%) 0 8px 16px;
 }
-body.pt-titlebar-hide-text .titlebar .titlebar-text {
-  display: none;
-}
-.theme-light.pt-titlebar-default-lt div.titlebar-text,
-.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
-  background-color: var(--background-tertiary);
-  box-shadow: var(--drop-shadow);
-}
-.theme-light.pt-titlebar-custom-lt div.titlebar-text,
-.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar {
-  background-color: var(--titlebar-background-color-lt);
-  box-shadow: var(--drop-shadow);
-}
-.theme-light.pt-titlebar-text-light-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar {
-  color: var(--background-primary);
-}
-.theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar {
-  color: var(--text-normal);
-}
-.theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
-.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right,
-.theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar {
-  color: var(--interactive-accent-text);
-}
-.theme-dark.pt-titlebar-custom-dt div.titlebar-text,
-.theme-dark.pt-titlebar-custom-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-right,
-.theme-dark.pt-titlebar-custom-dt.pt-status-bar-position-top .status-bar {
-  background-color: var(--titlebar-background-color-dt);
-  box-shadow: var(--drop-shadow);
-}
-.theme-dark.pt-titlebar-text-light-dt div.titlebar-text,
-.theme-dark.pt-titlebar-text-light-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right,
-.theme-dark.pt-titlebar-text-light-dt.pt-status-bar-position-top .status-bar {
-  color: var(--text-normal);
-}
-.theme-dark.pt-titlebar-text-dark-dt div.titlebar-text,
-.theme-dark.pt-titlebar-text-dark-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right,
-.theme-dark.pt-titlebar-text-dark-dt.pt-status-bar-position-top .status-bar {
-  color: var(--background-primary);
-}
-.theme-dark.pt-titlebar-text-accent-dt div.titlebar-text,
-.theme-dark.pt-titlebar-text-accent-dt div.titlebar-button svg,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left,
-.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right,
-.theme-dark.pt-titlebar-text-accent-dt.pt-status-bar-position-top .status-bar {
-  color: var(--interactive-accent-text);
-}
 .pt-status-bar-position-floating .status-bar {
   --status-bar-position: absolute;
   right: 0;
@@ -1157,6 +1091,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace-tab-header-container {
   padding-right: unset;
+  padding-left: 1px;
 }
 .workspace .mod-root .workspace-tab-header {
   padding: inherit;
@@ -1278,7 +1213,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   position: absolute;
   top: 0;
   display: inline-flex;
-  width: 206px;
+  width: 204px;
   height: 42px;
   content: "";
   background: var(--background-secondary-blur);
@@ -1442,16 +1377,15 @@ body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar
 body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: var(--scroll-bar-size);
   height: var(--scroll-bar-size);
-  background: var(--scroll-button-background-color);
-  border-right: 1px solid var(--window-border);
+  background: var(--background-secondary);
   border-left: 1px solid var(--window-border);
   border-radius: unset;
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
-  margin: 0 1px;
   background-color: var(--scroll-bar-thumb) !important;
   border-radius: unset;
+  border-width: 1px 2px;
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
@@ -1467,6 +1401,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   background-repeat: no-repeat;
   background-position: 50% 80%;
   background-size: calc(var(--scroll-bar-size) / 2);
+  border: 1px solid var(--window-border);
   border-radius: 0;
 }
 .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:decrement,
@@ -1509,26 +1444,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
 .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
   background-position: 80% 50%;
-}
-.pt-scroll-hover .view-content:hover ::-webkit-scrollbar,
-.pt-scroll-hover .suggestion-container:hover ::-webkit-scrollbar,
-.pt-scroll-hover .workspace-leaf-content:hover ::-webkit-scrollbar,
-.pt-scroll-hover .vertical-tab-content-container:hover ::-webkit-scrollbar,
-.pt-scroll-hover .kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar,
-.pt-scroll-hover .kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar {
-  width: var(--scroll-bar-size-hover) !important;
-  height: var(--scroll-bar-size-hover) !important;
-}
-.pt-scroll-button.pt-scroll-hover .view-content:hover ::-webkit-scrollbar-button:single-button,
-.pt-scroll-button.pt-scroll-hover .suggestion-container:hover ::-webkit-scrollbar:single-button,
-.pt-scroll-button.pt-scroll-hover .workspace-leaf-content:hover ::-webkit-scrollbar-button:single-button,
-.pt-scroll-button.pt-scroll-hover .vertical-tab-content-container:hover ::-webkit-scrollbar-button:single-button,
-.pt-scroll-button.pt-scroll-hover .kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button,
-.pt-scroll-button.pt-scroll-hover .kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button {
-  width: var(--scroll-bar-size-hover) !important;
-  height: var(--scroll-bar-size-hover) !important;
-  background-image: unset;
-  background-size: calc(var(--scroll-bar-size-hover) / 2) !important;
 }
 .progress-bar {
   background-color: var(--background-secondary-blur);
@@ -1580,6 +1495,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   transition: opacity 200ms;
   transition-delay: 200ms;
 }
+.is-focused .workspace-leaf.mod-active .view-header,
 .view-header {
   position: fixed;
   width: calc(100% - var(--scroll-bar-size));
@@ -1599,11 +1515,14 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .view-header-title {
   padding-left: var(--size-4-4);
 }
+.show-view-header .markdown-source-view.mod-cm6 .cm-scroller {
+  --file-margins: 64px 32px 32px 32px;
+}
 .workspace-ribbon.mod-left .sidebar-toggle-button,
 .workspace-split.mod-right-split .sidebar-toggle-button,
 .workspace-split.mod-vertical.mod-root .sidebar-toggle-button {
   width: fit-content;
-  height: 32px;
+  height: 33px;
   padding: 2px;
   margin: 4px;
   border: 2px solid transparent;
@@ -1629,16 +1548,6 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 }
 .search-result-file-match-destination-file {
   margin: 0 0 5px;
-}
-.workspace-leaf.mod-active .view-header .view-header-icon,
-.workspace-leaf.mod-active .view-header .view-actions .view-action,
-.workspace-leaf.mod-active .view-header .view-header-title {
-  color: var(--highlight-text-normal);
-}
-.workspace-leaf.mod-active .view-header .view-header-icon:hover,
-.workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
-.workspace-leaf.mod-active .view-header .view-header-title:hover {
-  color: var(--interactive-accent-hover);
 }
 .workspace-tab-header.is-active {
   color: var(--highlight-text-normal);
@@ -3589,7 +3498,7 @@ div.style-settings-heading {
 .style-settings-container .setting-item[data-id^=color-accent-l-text-dt] .setting-item-control::before {
   background-color: var(--color-accent-text-dt);
 }
-/* #region  [Info] Style Settings */
+/*!
 /* @settings
 name: Prism Theme
 id: obsidian-prism-theme
@@ -5156,7 +5065,7 @@ settings:
         level: 1
         collapsed: true
     -
-        id: custom-readable-line-length
+        id: file-line-width
         title: Custom Readable Line Length (px)
         description: Changes the maximum width of the Readable Line Length (px). Enable 'Readable line length' in the Editor tab in Settings for this to apply.
         type: variable-number-slider
@@ -5176,12 +5085,12 @@ settings:
     -
         id: pt-font-alt-a
         title: Alternative lower case 'a' appearance
-        default: true
+        default: false
         type: class-toggle
     -
         id: pt-font-alt-g
         title: Alternative lower case 'g' appearance
-        default: true
+        default: false
         type: class-toggle
     -
         id: pt-font-slashed-zero
@@ -5378,7 +5287,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h1-text-color-custom-lt
-        title: Header 1 (H1) Custom Text Color 
+        title: Header 1 (H1) Custom Text Color
         description: Make sure you selected 'Custom' in Light Theme Header 1 (H1) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5432,7 +5341,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h2-text-color-custom-lt
-        title: Header 2 (H2) Custom Text Color 
+        title: Header 2 (H2) Custom Text Color
         description: Make sure you selected 'Custom' in Light Theme Header 2 (H2) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5486,7 +5395,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h3-text-color-custom-lt
-        title: Header 3 (H3) Custom Text Color 
+        title: Header 3 (H3) Custom Text Color
         description: Make sure you selected 'Custom' in Light Theme Header 3 (H3) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5540,7 +5449,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h4-text-color-custom-lt
-        title: Header 4 (H4) Custom Text Color 
+        title: Header 4 (H4) Custom Text Color
         description: Make sure you selected 'Custom' in Light Theme Header 4 (H4) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5594,7 +5503,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h5-text-color-custom-lt
-        title: Header 5 (H5) Custom Text Color 
+        title: Header 5 (H5) Custom Text Color
         description: Make sure you selected 'Custom' in Light Theme Header 5 (H5) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5648,7 +5557,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h6-text-color-custom-lt
-        title: Header 6 (H6) Custom Text Color 
+        title: Header 6 (H6) Custom Text Color
         description: Make sure you selected 'Custom' in Light Theme Header 6 (H6) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5708,7 +5617,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h1-text-color-custom-dt
-        title: Header 1 (H1) Custom Text Color 
+        title: Header 1 (H1) Custom Text Color
         description: Make sure you selected 'Custom' in Dark Theme Header 1 (H1) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5762,7 +5671,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h2-text-color-custom-dt
-        title: Header 2 (H2) Custom Text Color 
+        title: Header 2 (H2) Custom Text Color
         description: Make sure you selected 'Custom' in Dark Theme Header 2 (H2) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5816,7 +5725,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h3-text-color-custom-dt
-        title: Header 3 (H3) Custom Text Color 
+        title: Header 3 (H3) Custom Text Color
         description: Make sure you selected 'Custom' in Dark Theme Header 3 (H3) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5870,7 +5779,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h4-text-color-custom-dt
-        title: Header 4 (H4) Custom Text Color 
+        title: Header 4 (H4) Custom Text Color
         description: Make sure you selected 'Custom' in Dark Theme Header 4 (H4) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5924,7 +5833,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h5-text-color-custom-dt
-        title: Header 5 (H5) Custom Text Color 
+        title: Header 5 (H5) Custom Text Color
         description: Make sure you selected 'Custom' in Dark Theme Header 5 (H5) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -5978,7 +5887,7 @@ settings:
                 value: var(--color-grey-text)
     -
         id: h6-text-color-custom-dt
-        title: Header 6 (H6) Custom Text Color 
+        title: Header 6 (H6) Custom Text Color
         description: Make sure you selected 'Custom' in Dark Theme Header 6 (H6) Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6043,9 +5952,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: text-bold-custom-color-lt
-        title: Bold Text Custom Color 
+        title: Bold Text Custom Color
         description: Make sure you selected 'Custom' in Light Theme Bold Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6097,9 +6006,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: text-italic-custom-color-lt
-        title: Italic Text Custom Color 
+        title: Italic Text Custom Color
         description: Make sure you selected 'Custom' in Light Theme Italic Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6148,9 +6057,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: link-internal-custom-color-lt
-        title: Internal Link Custom Color 
+        title: Internal Link Custom Color
         description: Make sure you selected 'Custom' in Light Theme Internal Link Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6199,9 +6108,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: link-external-custom-color-lt
-        title: External Link Custom Color 
+        title: External Link Custom Color
         description: Make sure you selected 'Custom' in Light Theme External Link Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6259,9 +6168,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: text-bold-custom-color-dt
-        title: Bold Text Custom Color 
+        title: Bold Text Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Bold Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6313,9 +6222,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: text-italic-custom-color-dt
-        title: Italic Text Custom Color 
+        title: Italic Text Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Italic Text Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6364,9 +6273,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: link-internal-custom-color-dt
-        title: Internal Link Custom Color 
+        title: Internal Link Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Internal Link Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -6415,9 +6324,9 @@ settings:
             -
                 label: Grey
                 value: var(--color-grey-text)
-    - 
+    -
         id: link-external-custom-color-dt
-        title: External Link Custom Color 
+        title: External Link Custom Color
         description: Make sure you selected 'Custom' in Dark Theme External Link Color Preset for this to work.
         type: variable-color
         format: hsl
@@ -7023,7 +6932,7 @@ settings:
         title: Scrollbar Width
         description: Change the width of the Scrollbar (px).
         type: variable-number-slider
-        default: 10
+        default: 12
         min: 5
         max: 20
         format: px
@@ -7033,21 +6942,6 @@ settings:
         description: Adds Scroll Buttons to the ends of the Scrollbar for more accurate scroll adjustment.
         type: class-toggle
         default: false
-    -
-        id: pt-scroll-hover
-        title: Scrollbar Enlarge Width on Hover
-        description: Enlarges the Scrollbar when you Hover over scrollable content.
-        type: class-toggle
-        default: false
-    -
-        id: scroll-bar-size-hover
-        title: Scrollbar Width on Hover
-        description: Change the width of the Enlarged scrollbar (px).
-        type: variable-number-slider
-        default: 12
-        min: 5
-        max: 20
-        format: px
     -
         id: plugins
         title: Plugins
@@ -7235,10 +7129,8 @@ settings:
         type: heading
         level: 2
         collapsed: true
-
 */
-/* #endregion */
-/* #region [Info] Hub Plugin Compatibility */
+/*!
 /* @plugins
 core:
 - audio-recorder
@@ -7290,7 +7182,4 @@ community:
 - obsidian-quiet-outline
 - recent-files-obsidian
 - file-tree-alternative
-
 */
-/* #endregion */
-
