@@ -54,6 +54,7 @@ body {
   --h4-size: 1.4em;
   --h5-size: 1.2em;
   --h6-size: 1em;
+  --header-height: 41px;
   --custom-readable-line-length: 700px;
   --callout-padding: 4px;
   --file-header-font-size: var(--font-ui-medium);
@@ -1019,6 +1020,70 @@ body.theme-dark.pt-color-scheme-pine-dt {
     hsl(135 35% 7% / 10%) 0 4px 8px,
     hsl(135 35% 7% / 10%) 0 8px 16px;
 }
+body.pt-titlebar-hide-text .titlebar .titlebar-text {
+  display: none;
+}
+.theme-light.pt-titlebar-default-lt div.titlebar-text,
+.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-default-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-default-lt.pt-status-bar-position-top .status-bar {
+  background-color: var(--background-tertiary);
+  box-shadow: var(--drop-shadow);
+}
+.theme-light.pt-titlebar-custom-lt div.titlebar-text,
+.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-custom-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-custom-lt.pt-status-bar-position-top .status-bar {
+  background-color: var(--titlebar-background-color-lt);
+  box-shadow: var(--drop-shadow);
+}
+.theme-light.pt-titlebar-text-light-lt div.titlebar-text,
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-text-light-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-text-light-lt.pt-status-bar-position-top .status-bar {
+  color: var(--background-primary);
+}
+.theme-light.pt-titlebar-text-dark-lt div.titlebar-text,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-text-dark-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-text-dark-lt.pt-status-bar-position-top .status-bar {
+  color: var(--text-normal);
+}
+.theme-light.pt-titlebar-text-accent-lt div.titlebar-text,
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-left,
+.theme-light.pt-titlebar-text-accent-lt .titlebar-button-container.mod-right,
+.theme-light.pt-titlebar-text-accent-lt.pt-status-bar-position-top .status-bar {
+  color: var(--interactive-accent-text);
+}
+.theme-dark.pt-titlebar-custom-dt div.titlebar-text,
+.theme-dark.pt-titlebar-custom-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-custom-dt .titlebar-button-container.mod-right,
+.theme-dark.pt-titlebar-custom-dt.pt-status-bar-position-top .status-bar {
+  background-color: var(--titlebar-background-color-dt);
+  box-shadow: var(--drop-shadow);
+}
+.theme-dark.pt-titlebar-text-light-dt div.titlebar-text,
+.theme-dark.pt-titlebar-text-light-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-text-light-dt .titlebar-button-container.mod-right,
+.theme-dark.pt-titlebar-text-light-dt.pt-status-bar-position-top .status-bar {
+  color: var(--text-normal);
+}
+.theme-dark.pt-titlebar-text-dark-dt div.titlebar-text,
+.theme-dark.pt-titlebar-text-dark-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-text-dark-dt .titlebar-button-container.mod-right,
+.theme-dark.pt-titlebar-text-dark-dt.pt-status-bar-position-top .status-bar {
+  color: var(--background-primary);
+}
+.theme-dark.pt-titlebar-text-accent-dt div.titlebar-text,
+.theme-dark.pt-titlebar-text-accent-dt div.titlebar-button svg,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-left,
+.theme-dark.pt-titlebar-text-accent-dt .titlebar-button-container.mod-right,
+.theme-dark.pt-titlebar-text-accent-dt.pt-status-bar-position-top .status-bar {
+  color: var(--interactive-accent-text);
+}
 .pt-status-bar-position-floating .status-bar {
   --status-bar-position: absolute;
   right: 0;
@@ -1090,6 +1155,9 @@ body.theme-dark.pt-color-scheme-pine-dt {
 .workspace-tab-header::after {
   display: none;
 }
+.workspace-tab-header-container {
+  padding-right: unset;
+}
 .workspace .mod-root .workspace-tab-header {
   padding: inherit;
 }
@@ -1100,9 +1168,12 @@ body.theme-dark.pt-color-scheme-pine-dt {
 .workspace-tab-header-inner-close-button::after {
   display: none;
 }
+.workspace .mod-root .workspace-tab-header-inner::after {
+  display: none;
+}
 .workspace-tabs .workspace-tab-header-container-inner {
   gap: var(--size-2-1);
-  height: 40px;
+  height: var(--header-height);
   padding: var(--size-4-1);
   margin: unset;
 }
@@ -1508,6 +1579,25 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   opacity: 1;
   transition: opacity 200ms;
   transition-delay: 200ms;
+}
+.view-header {
+  position: fixed;
+  width: calc(100% - var(--scroll-bar-size));
+  background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.workspace-tabs .view-header {
+  margin: unset;
+}
+.view-header-title-container::after {
+  display: none;
+}
+.view-actions {
+  padding-right: var(--size-4-2);
+}
+.view-header-title {
+  padding-left: var(--size-4-4);
 }
 .workspace-ribbon.mod-left .sidebar-toggle-button,
 .workspace-split.mod-right-split .sidebar-toggle-button,
@@ -2493,6 +2583,15 @@ div.notice-container div.notice {
 .outgoing-link-pane {
   padding: var(--size-4-1);
 }
+.backlink-pane .search-result-container,
+.outgoing-link-pane .search-result-container {
+  padding: unset;
+  margin: var(--size-4-1) var(--size-4-1) var(--size-4-1) var(--size-4-3);
+}
+.backlink-pane .search-result-file-matches,
+.outgoing-link-pane .search-result-file-matches {
+  margin: unset;
+}
 .outgoing-link-pane .tree-item-self .tree-item-icon {
   margin-right: var(--size-4-2);
 }
@@ -2696,14 +2795,17 @@ div.notice-container div.notice {
 }
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator {
   display: block;
-  width: 32px;
-  height: 32px;
-  margin: 8px;
+  width: 28px;
+  height: 28px;
+  margin: 6px;
   background-image: var(--custom-vault-banner-icon-url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border-radius: unset;
+}
+.pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-title-content {
+  margin: 0 4px;
 }
 .pt-custom-vault-banner.is-mobile .nav-folder-title[data-path="/"] {
   height: 40px;
@@ -2731,14 +2833,8 @@ div.notice-container div.notice {
 .pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 0;
 }
-.pt-custom-vault-banner.pt-custom-vault-banner-order-ltr .nav-folder-title[data-path="/"] .nav-folder-title-content {
-  margin-right: 8px;
-}
 .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 1;
-}
-.pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-title-content {
-  margin-left: 8px;
 }
 mark,
 .cm-highlight {
@@ -6691,19 +6787,6 @@ settings:
         level: 2
         collapsed: true
     -
-        id: titlebar-style
-        title: Titlebar Style
-        description: Titlebar Style to fit the design of your Operating System Titlebar.
-        default: pt-default-titlebar
-        type: class-select
-        options:
-            -
-                label: Default
-                value: pt-default-titlebar
-            -
-                label: Windows 10/11
-                value: pt-windows-titlebar
-    -
         id: pt-titlebar-hide-nav-buttons
         title: Hide Titlebar Navigation Buttons
         description: Hides the Titlebar Navigation Buttons.
@@ -6722,12 +6805,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    -
-        id: pt-solid-titlebar-lt
-        title: Solid Titlebar Background
-        description: Changes the Light Theme Titlebar Background to a solid app wide bar container instead of separated containers.
-        type: class-toggle
-        default: false
     -
         id: titlebar-preset-lt
         title: Titlebar Preset
@@ -6771,12 +6848,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    -
-        id: pt-solid-titlebar-dt
-        title: Solid Titlebar Background
-        description: Changes the Dark Theme Titlebar Background to a solid app wide bar container instead of separated containers.
-        type: class-toggle
-        default: false
     -
         id: titlebar-preset-dt
         title: Titlebar Preset
