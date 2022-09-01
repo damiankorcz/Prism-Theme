@@ -4,17 +4,17 @@ body:not(.native-scrollbars) {
 	::-webkit-scrollbar {
 		width: var(--scroll-bar-size);
 		height: var(--scroll-bar-size);
-		background: var(--scroll-button-background-color);
-		border-right: 1px solid var(--window-border);
+		background: var(--background-secondary);
+		// border-right: 1px solid var(--window-border);
 		border-left: 1px solid var(--window-border);
 		border-radius: unset;
 	}
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 	::-webkit-scrollbar-thumb {
-		margin: 0 1px;
 		background-color: var(--scroll-bar-thumb) !important;
 		border-radius: unset;
+		border-width: 1px 2px;
 	}
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
@@ -37,6 +37,7 @@ body:not(.native-scrollbars) {
 	background-repeat: no-repeat;
 	background-position: 50% 80%;
 	background-size: calc(var(--scroll-bar-size) / 2);
+	border: 1px solid var(--window-border);
 	border-radius: 0;
 }
 
@@ -92,35 +93,5 @@ body:not(.native-scrollbars) {
 .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
 	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
 	background-position: 80% 50%;
-}
-/* #endregion */
-
-/* #region  [UI] Scrollbar Hover */
-// Enlarged Scrollbar when hovering on the page content/workspace leaf
-.pt-scroll-hover {
-	.view-content:hover ::-webkit-scrollbar,
-	.suggestion-container:hover ::-webkit-scrollbar,
-	.workspace-leaf-content:hover ::-webkit-scrollbar,
-	.vertical-tab-content-container:hover ::-webkit-scrollbar,
-	.kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar,
-	.kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar {
-		width: var(--scroll-bar-size-hover) !important;
-		height: var(--scroll-bar-size-hover) !important;
-	}
-}
-
-// Enlarged Scroll Button when hovering on the page content/workspace leaf
-.pt-scroll-button.pt-scroll-hover {
-	.view-content:hover ::-webkit-scrollbar-button:single-button,
-	.suggestion-container:hover ::-webkit-scrollbar:single-button,
-	.workspace-leaf-content:hover ::-webkit-scrollbar-button:single-button,
-	.vertical-tab-content-container:hover ::-webkit-scrollbar-button:single-button,
-	.kanban-plugin__board.kanban-plugin__horizontal.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button,
-	.kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container:hover ::-webkit-scrollbar-button:single-button {
-		width: var(--scroll-bar-size-hover) !important;
-		height: var(--scroll-bar-size-hover) !important;
-		background-image: unset;
-		background-size: calc(var(--scroll-bar-size-hover) / 2) !important;
-	}
 }
 /* #endregion */
