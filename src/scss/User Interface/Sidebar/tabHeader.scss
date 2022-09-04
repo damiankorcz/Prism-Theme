@@ -28,14 +28,12 @@
 }
 
 .workspace .mod-root .workspace-tab-header {
-	padding: inherit;
+	padding: unset;
 }
 
-.mod-root {
-	.workspace-tab-header-inner {
-		gap: var(--size-4-1);
-		padding: 0 var(--size-4-1);
-	}
+.mod-root .workspace-tab-header-inner {
+	gap: var(--size-4-1);
+	padding: 0 var(--size-4-2);
 }
 
 .workspace-tab-header-inner-close-button::after {
@@ -46,18 +44,21 @@
 	display: none;
 }
 
-.workspace-tabs {
-	.workspace-tab-header-container-inner {
-		gap: var(--size-2-1);
-		height: var(--header-height);
-		padding: var(--size-4-1);
-		margin: unset;
-	}
+.workspace-tabs .workspace-tab-header-container-inner {
+	gap: var(--size-4-1);
+	height: var(--header-height);
+	padding: var(--size-4-1);
+	margin: unset;
+}
+
+.workspace-tab-header-tab-list,
+.workspace-tab-header-new-tab {
+	margin-left: unset;
 }
 
 .workspace-tab-header-tab-list .clickable-icon,
 .workspace-tab-header-new-tab .clickable-icon {
-	padding: var(--size-4-1) var(--size-4-1);
+	padding: var(--size-4-1);
 }
 
 .workspace-tab-header-new-tab {
@@ -65,6 +66,7 @@
 }
 
 .workspace-tab-header-tab-list {
-	padding: var(--size-4-1) var(--size-4-1);
+	padding: var(--size-4-1);
+	margin-right: unset;
 }
 /* #endregion */

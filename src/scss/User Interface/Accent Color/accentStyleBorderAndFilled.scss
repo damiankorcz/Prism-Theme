@@ -16,8 +16,7 @@
 		border-color: var(--interactive-accent-tint);
 	}
 
-	.workspace-leaf-content[data-type="file-explorer"] .nav-file-title.is-active,
-	.workspace-leaf div.workspace-leaf-content[data-type="file-tree-view"] .oz-nav-file.is-active .oz-nav-file-title {
+	.nav-file-title.is-active {
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 	}
@@ -27,13 +26,7 @@
 		border-color: var(--interactive-accent-tint);
 	}
 
-	.search-result-hover-button.mod-top:hover,
-	.search-result-hover-button.mod-bottom:hover {
-		background-color: var(--interactive-accent-base);
-		border-color: var(--interactive-accent-tint);
-	}
-
-	.workspace-leaf-content[data-type="outgoing-link"] .search-result-file-match-destination-file {
+	.search-result-file-match-destination-file {
 		color: var(--text-normal);
 		background-color: var(--color-grey-base);
 		border-color: var(--color-grey-tint);
@@ -45,19 +38,11 @@
 		}
 	}
 
-	.workspace-leaf-content[data-type="backlink"] .search-result-file-match-replace-button,
-	.embedded-backlinks .search-result-file-match-replace-button {
+	.search-result-file-match-replace-button {
 		background-color: var(--color-grey-base);
 		border-color: var(--color-grey-tint);
 
 		&:hover {
-			background-color: var(--interactive-accent-base);
-			border-color: var(--interactive-accent-tint);
-		}
-	}
-
-	.community-theme {
-		&.is-selected {
 			background-color: var(--interactive-accent-base);
 			border-color: var(--interactive-accent-tint);
 		}

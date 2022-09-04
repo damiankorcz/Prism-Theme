@@ -11,8 +11,9 @@
 @use "Color Schemes/colorSchemeTree.scss"; // 🔧 Evaluate the need of all variables.
 
 /* Title Bar/Status Bar */
-@use "User Interface/Bars/titleBar.scss"; // 🧹 Needs reconsidering due to different variants.
+@use "User Interface/Bars/titleBar.scss"; // ✅
 @use "User Interface/Bars/statusBar.scss"; // ✅
+
 /* Sidebar */
 @use "User Interface/Sidebar/tabHeader.scss"; // ✅
 @use "User Interface/Sidebar/tabLabel.scss"; // ✅
@@ -21,18 +22,18 @@
 /* Other User Interface Elements */
 // @use "User Interface/animations.scss"; // 🔧
 @use "User Interface/settings.scss"; // ✅ Main background and small areas will need work.
-@use "User Interface/scrollBar.scss"; // 🧹 Scrollbar Buttons needs tidying
+@use "User Interface/scrollBar.scss"; // ✅ Needs a better way to handle correctly coloured Scroll button icons
 @use "User Interface/emptyState.scss"; // ✅ Empty for now.
 @use "User Interface/startup.scss"; // ✅
 @use "User Interface/workspace.scss"; // ✅ View Header will need a little styling
-// @use "User Interface/documentSearch.scss"; // 🔧
-// @use "User Interface/mobileToolbar.scss"; // 🔧
+@use "User Interface/documentSearch.scss"; // ✅ Buttons need changing to theme design
+// @use "User Interface/mobileToolbar.scss"; // 🔧 Will address when Mobile support inline with Desktop changes
 
 /* Accent Colors */
 @use "User Interface/Accent Color/accentStyleBase.scss"; // 🧹
-@use "User Interface/Accent Color/accentStyleTextOnly.scss"; // 🔧
-@use "User Interface/Accent Color/accentStyleBorderOnly.scss"; // 🔧
-@use "User Interface/Accent Color/accentStyleFilled.scss"; // 🔧
+@use "User Interface/Accent Color/accentStyleTextOnly.scss"; // 🧹
+@use "User Interface/Accent Color/accentStyleBorderOnly.scss"; // 🧹
+@use "User Interface/Accent Color/accentStyleFilled.scss"; // 🧹
 @use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; // 🧹
 
 /* Popups */
@@ -53,34 +54,32 @@
 
 /* Core Plugins */
 @use "Plugins/Core/audio.scss"; // ✅
-@use "Plugins/Core/audioRecorder.scss"; // Needs adjusting for different accent modes
+@use "Plugins/Core/audioRecorder.scss"; // 🔧 Needs adjusting for different accent modes
 @use "Plugins/Core/commandPalette.scss"; // ✅
 @use "Plugins/Core/slashCommands.scss"; // ✅
 @use "Plugins/Core/fileExplorer.scss"; // ✅
 @use "Plugins/Core/graph.scss"; // ✅ Come back to style the menu when decieded on style.
-@use "Plugins/Core/outgoingLinkBacklinks.scss"; // 🧹Spacing and indent needs work
 @use "Plugins/Core/outline.scss"; // ✅
 @use "Plugins/Core/search.scss"; // ✅
 @use "Plugins/Core/starred.scss"; // ✅ Just check for the need of bottom padding for Nav Header
 @use "Plugins/Core/tags.scss"; // ✅
-// @use "Plugins/Core/query.scss"; // 🔧
+@use "Plugins/Core/outgoingLinkBacklinks.scss"; // 🧹 Spacing and indent needs work
 
 /* Theme Plugins */
-@use "Plugins/Theme/Headers/headersCustomisation.scss"; // 🧹
-// @use "Plugins/Theme/background.scss"; // 🔧 Might be dropped
-// @use "Plugins/Theme/customIcons.scss"; // 🔧 Might be dropped
 @use "Plugins/Theme/customVaultBanner.scss"; // ✅
 @use "Plugins/Theme/markHighlightSystem.scss"; // ✅
 @use "Plugins/Theme/fontFeatures.scss"; // ✅
+@use "Plugins/Theme/Headers/headersCustomisation.scss"; // 🧹
 @use "Plugins/Theme/coloredFolders.scss"; // 🧹
+// @use "Plugins/Theme/background.scss"; // 🔧 Might be dropped
+// @use "Plugins/Theme/customIcons.scss"; // 🔧 Might be dropped
 
 /* Community Plugins */
+@use "Plugins/Community/styleSettings.scss"; // 🧹 Needs new style
 // @use "Plugins/Community/advancedTables.scss"; // 🔧
 // @use "Plugins/Community/kanban.scss";  // Issues with lane headers, add button border, menu button shadow
 // @use "Plugins/Community/quickExplorer.scss"; // 🔧
-@use "Plugins/Community/styleSettings.scss"; // 🧹
 // @use "Plugins/Community/danglingLinks.scss"; // 🔧
-// @use "Plugins/Community/slidingPanes.scss"; // 🔧 Plugin currently broken. Will revisit once addressed.
 // @use "Plugins/Community/cMenu.scss"; // 🔧
 // @use "Plugins/Community/calendar.scss"; // 🔧
 // @use "Plugins/Community/iconFolder.scss"; // 🔧
@@ -102,12 +101,12 @@
 
 
 // TODO
-// - Need to sort out all the hover states.
-// - Look over all custom variables to see if there area now native replacements (including new ones replacing redundant    code). 
+// - Need to evaluate hover states through out the app due to previous version of the theme implemented them and might be redundant in select areas.
+// - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant    code). 
 //    - Border radius.
 //    - Replace the custom Border Radius variable for native ones. Same for shadows. 
-// - Will need to redo the Mobile side of the theme.
 // - embedded-backlinks / internal-query styling.
 // - Read through the app.css for additional insight and potential improvements for the theme.
 // - Make sure that the currently active tab is distinguisable between the active tabs in other panes.
 // - Describe how the new native accent colour picker won't be used and to use Style Settings instead.
+// - Will need to redo the Mobile side of the theme.
