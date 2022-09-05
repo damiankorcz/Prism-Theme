@@ -56,6 +56,7 @@ body {
   --h6-size: 1em;
   --header-height: 41px;
   --callout-padding: 4px;
+  --divider-color-hover: var(--interactive-accent-tint);
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
   --status-bar-font-size: var(--font-ui-small);
@@ -1026,7 +1027,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   right: 0;
   left: 0;
   width: fit-content;
-  margin: 0 auto var(--size-4-4);
+  margin: 0 auto calc(4px + var(--scroll-bar-size));
   background: var(--background-secondary-blur);
   border: 1px solid var(--window-border);
   border-radius: var(--border-radius-small);
@@ -1194,9 +1195,9 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   bottom: calc(4px + var(--scroll-bar-size));
   z-index: var(--layer-popover);
   order: 2;
-  width: 100%;
+  width: -webkit-fill-available;
+  width: fill-available;
   padding: unset;
-  margin-right: calc(4px + var(--scroll-bar-size));
   border-bottom: unset;
 }
 .pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .nav-buttons-container,
@@ -1317,6 +1318,9 @@ body:not(.native-scrollbars) .modal-close-button {
 }
 .mod-warning {
   color: var(--color-red-text);
+}
+.setting-hotkey {
+  font-family: var(--font-interface);
 }
 .checkbox-container.is-enabled {
   background-color: var(--interactive-accent-base);
@@ -1566,10 +1570,10 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .suggestion-hotkey {
   color: var(--highlight-text-normal);
   border: var(--border-size) solid;
+  box-shadow: unset;
 }
 .search-result-file-match-destination-file,
 .search-result-file-match-replace-button {
-  font-weight: 600;
   color: var(--text-normal);
   border: var(--border-size) solid;
   border-radius: var(--border-radius-small);
@@ -1584,16 +1588,11 @@ button.mod-warning,
 .setting-hotkey,
 .flair.mod-pop,
 button.copy-code-button {
-  font-weight: 600;
   border: var(--border-size) solid;
   border-radius: var(--border-radius-small);
 }
-.setting-hotkey {
-  font-family: var(--font-interface);
-}
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
-  font-weight: 600;
   color: var(--highlight-text-normal);
   border: var(--border-size) solid;
   border-radius: var(--border-radius);
@@ -1603,27 +1602,16 @@ button.copy-code-button {
   color: var(--highlight-text-normal);
 }
 .theme-dark.pt-accent-style-text-dt .workspace-tab-header.is-active,
-.theme-light.pt-accent-style-text-lt .workspace-tab-header.is-active {
-  background-color: var(--background-primary);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-text-dt .nav-action-button.is-active,
-.theme-light.pt-accent-style-text-lt .nav-action-button.is-active {
-  background-color: var(--background-primary);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-text-dt .vertical-tab-nav-item.is-active,
-.theme-light.pt-accent-style-text-lt .vertical-tab-nav-item.is-active {
-  background-color: var(--background-primary);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-text-dt .nav-file-title.is-active,
-.theme-light.pt-accent-style-text-lt .nav-file-title.is-active {
-  background-color: var(--background-primary);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-text-dt .suggestion-hotkey,
+.theme-light.pt-accent-style-text-lt .workspace-tab-header.is-active,
+.theme-light.pt-accent-style-text-lt .nav-action-button.is-active,
+.theme-light.pt-accent-style-text-lt .vertical-tab-nav-item.is-active,
+.theme-light.pt-accent-style-text-lt .nav-file-title.is-active,
 .theme-light.pt-accent-style-text-lt .suggestion-hotkey {
+  background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .search-result-file-match-destination-file,
@@ -1721,27 +1709,16 @@ button.copy-code-button {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-border-dt .workspace-tab-header.is-active,
-.theme-light.pt-accent-style-border-lt .workspace-tab-header.is-active {
-  background-color: var(--background-primary);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-border-dt .nav-action-button.is-active,
-.theme-light.pt-accent-style-border-lt .nav-action-button.is-active {
-  background-color: var(--background-primary);
-  border: var(--border-size) solid var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-border-dt .vertical-tab-nav-item.is-active,
-.theme-light.pt-accent-style-border-lt .vertical-tab-nav-item.is-active {
-  background-color: var(--background-primary);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-border-dt .nav-file-title.is-active,
-.theme-light.pt-accent-style-border-lt .nav-file-title.is-active {
-  background-color: var(--background-primary);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-border-dt .suggestion-hotkey,
+.theme-light.pt-accent-style-border-lt .workspace-tab-header.is-active,
+.theme-light.pt-accent-style-border-lt .nav-action-button.is-active,
+.theme-light.pt-accent-style-border-lt .vertical-tab-nav-item.is-active,
+.theme-light.pt-accent-style-border-lt .nav-file-title.is-active,
 .theme-light.pt-accent-style-border-lt .suggestion-hotkey {
+  background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .search-result-file-match-destination-file,
@@ -1841,26 +1818,14 @@ button.copy-code-button {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-filled-dt .workspace-tab-header.is-active,
-.theme-light.pt-accent-style-filled-lt .workspace-tab-header.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-filled-dt .nav-action-button.is-active,
-.theme-light.pt-accent-style-filled-lt .nav-action-button.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-filled-dt .vertical-tab-nav-item.is-active,
-.theme-light.pt-accent-style-filled-lt .vertical-tab-nav-item.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-filled-dt .nav-file-title.is-active,
-.theme-light.pt-accent-style-filled-lt .nav-file-title.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: transparent;
-}
 .theme-dark.pt-accent-style-filled-dt .suggestion-hotkey,
+.theme-light.pt-accent-style-filled-lt .workspace-tab-header.is-active,
+.theme-light.pt-accent-style-filled-lt .nav-action-button.is-active,
+.theme-light.pt-accent-style-filled-lt .vertical-tab-nav-item.is-active,
+.theme-light.pt-accent-style-filled-lt .nav-file-title.is-active,
 .theme-light.pt-accent-style-filled-lt .suggestion-hotkey {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
@@ -1965,26 +1930,14 @@ button.copy-code-button {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-tab-header.is-active,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace-tab-header.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-borderandfilled-dt .nav-action-button.is-active,
-.theme-light.pt-accent-style-borderandfilled-lt .nav-action-button.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-borderandfilled-dt .vertical-tab-nav-item.is-active,
-.theme-light.pt-accent-style-borderandfilled-lt .vertical-tab-nav-item.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-borderandfilled-dt .nav-file-title.is-active,
-.theme-light.pt-accent-style-borderandfilled-lt .nav-file-title.is-active {
-  background-color: var(--interactive-accent-base);
-  border-color: var(--interactive-accent-tint);
-}
 .theme-dark.pt-accent-style-borderandfilled-dt .suggestion-hotkey,
+.theme-light.pt-accent-style-borderandfilled-lt .workspace-tab-header.is-active,
+.theme-light.pt-accent-style-borderandfilled-lt .nav-action-button.is-active,
+.theme-light.pt-accent-style-borderandfilled-lt .vertical-tab-nav-item.is-active,
+.theme-light.pt-accent-style-borderandfilled-lt .nav-file-title.is-active,
 .theme-light.pt-accent-style-borderandfilled-lt .suggestion-hotkey {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
