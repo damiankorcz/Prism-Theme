@@ -26,7 +26,7 @@
 .workspace-leaf-content[data-type="search"] .search-results-children,
 .workspace-leaf-content[data-type="starred"] .item-list,
 .workspace-leaf-content[data-type="dictionary-view"] .contents {
-	padding-bottom: 62px;
+	padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 /* #endregion */
 
@@ -62,6 +62,7 @@
 		z-index: var(--layer-popover);
 		order: 2;
 		width: 100%;
+		padding: unset;
 		margin-right: calc(4px + var(--scroll-bar-size));
 		border-bottom: unset;
 	}

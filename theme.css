@@ -1112,9 +1112,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace-tabs .workspace-tab-header-container-inner {
   gap: var(--size-4-1);
-  height: var(--header-height);
-  padding: var(--size-4-1);
-  margin: unset;
+  padding: unset;
+  margin: var(--size-4-1);
 }
 .workspace-tab-header-tab-list,
 .workspace-tab-header-new-tab {
@@ -1173,7 +1172,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .workspace-leaf-content[data-type=search] .search-results-children,
 .workspace-leaf-content[data-type=starred] .item-list,
 .workspace-leaf-content[data-type=dictionary-view] .contents {
-  padding-bottom: 62px;
+  padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 .pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content .nav-header,
 .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content .nav-header {
@@ -1196,6 +1195,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   z-index: var(--layer-popover);
   order: 2;
   width: 100%;
+  padding: unset;
   margin-right: calc(4px + var(--scroll-bar-size));
   border-bottom: unset;
 }
@@ -1394,8 +1394,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-bar-thumb) !important;
-  border-radius: unset;
   border-width: 1px 2px;
+  border-radius: unset;
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
@@ -1532,7 +1532,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .workspace-split.mod-right-split .sidebar-toggle-button,
 .workspace-split.mod-vertical.mod-root .sidebar-toggle-button {
   width: fit-content;
-  height: 33px;
+  height: 32px;
   padding: 2px;
   margin: 4px;
   border: 2px solid transparent;
@@ -2401,7 +2401,7 @@ div.notice-container div.notice {
   margin-bottom: var(--size-4-2);
 }
 .search-result-file-matches {
-  margin: var(--size-4-1) var(--size-4-1) var(--size-4-1) var(--size-4-3);
+  margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
 }
 .search-result-hover-button {
   padding: var(--size-2-1);
@@ -2468,14 +2468,10 @@ div.notice-container div.notice {
 .outgoing-link-pane {
   padding: var(--size-4-1);
 }
-.backlink-pane .search-result-container,
-.outgoing-link-pane .search-result-container {
+.backlink-pane .search-result-container .search-result-container,
+.outgoing-link-pane .search-result-container .search-result-container {
   padding: unset;
-  margin: var(--size-4-1) var(--size-4-1) var(--size-4-1) var(--size-4-3);
-}
-.backlink-pane .search-result-file-matches,
-.outgoing-link-pane .search-result-file-matches {
-  margin: unset;
+  margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
 }
 .outgoing-link-pane .tree-item-self .tree-item-icon {
   margin-right: var(--size-4-2);
