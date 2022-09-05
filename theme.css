@@ -1216,14 +1216,17 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   box-shadow: var(--drop-shadow-popup);
 }
 .modal.mod-settings .vertical-tab-header {
-  max-width: 215px;
+  flex: none;
+  width: 215px;
+  min-width: unset;
+  max-width: unset;
   padding: 42px 0 0;
 }
 .modal.mod-settings .vertical-tab-header::before {
   position: absolute;
   top: 0;
   display: inline-flex;
-  width: 204px;
+  width: calc(214px - var(--scroll-bar-size));
   height: 42px;
   content: "";
   background: var(--background-secondary-blur);
@@ -1252,6 +1255,19 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .is-mobile .modal.mod-settings .vertical-tab-header::after {
   margin: 7px 4px;
+}
+.modal.mod-settings .vertical-tab-content-container::before {
+  position: relative;
+  z-index: var(--layer-status-bar);
+  display: block;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 42px;
+  content: "";
+  background: var(--background-secondary-blur);
+  border-bottom: 1px solid var(--window-border);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
 }
 .modal.mod-settings .vertical-tab-header-group {
   padding: unset;
@@ -1296,6 +1312,153 @@ img.community-theme-lightbox {
   max-width: var(--modal-max-width);
   max-height: var(--modal-max-height);
 }
+.community-modal-sidebar {
+  padding: unset;
+}
+.community-modal-info {
+  display: grid;
+  grid-template: repeat(1fr);
+  grid-template-areas: "info-name button-container" "info-author info-version" "info-repo info-downloads" "info-desc info-desc" "seperator seperator" "readme readme";
+  row-gap: var(--size-2-1);
+  padding: var(--size-4-8) var(--size-4-12);
+}
+.community-modal-info hr {
+  grid-area: seperator;
+  margin: 1em 0;
+}
+.community-modal-button-container {
+  display: flex;
+  grid-area: button-container;
+  gap: var(--size-4-2);
+  justify-content: flex-end;
+  margin: unset;
+}
+.community-modal-button-container button {
+  margin-right: unset;
+}
+.community-modal-info-name {
+  display: flex;
+  grid-area: info-name;
+  align-items: center;
+  margin-bottom: unset;
+}
+.community-modal-info-downloads {
+  display: flex;
+  grid-area: info-downloads;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: unset;
+  font-weight: 500;
+}
+.community-modal-info-author {
+  display: flex;
+  grid-area: info-author;
+  align-items: center;
+  justify-content: left;
+  font-weight: 500;
+}
+.community-modal-info-author a {
+  margin-left: var(--size-4-1);
+}
+.community-modal-info-version {
+  display: flex;
+  grid-area: info-version;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 500;
+}
+.community-modal-info-repo {
+  display: flex;
+  grid-area: info-repo;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 500;
+}
+.community-modal-info-desc {
+  grid-area: info-desc;
+}
+.community-modal-readme {
+  grid-area: readme;
+}
+.modal.mod-community-theme .community-item {
+  display: grid;
+  grid-template: repeat(1fr);
+  grid-template-areas: "item-name item-name" "item-author item-downloads" "item-screenshot item-screenshot";
+  row-gap: var(--size-2-1);
+}
+.modal.mod-community-plugin .community-item {
+  display: grid;
+  grid-template: repeat(1fr);
+  grid-template-areas: "item-name item-name" "item-author item-downloads" "item-desc item-desc";
+  row-gap: var(--size-2-1);
+}
+.community-item-name {
+  grid-area: item-name;
+  font-weight: var(--font-semibold);
+}
+.community-item-author {
+  grid-area: item-author;
+  font-weight: 500;
+}
+.community-item-downloads {
+  display: flex;
+  grid-area: item-downloads;
+  justify-content: flex-end;
+  margin-bottom: unset;
+  font-weight: 500;
+}
+.community-item-screenshot {
+  grid-area: item-screenshot;
+  margin-top: var(--size-4-1);
+}
+.community-item-desc {
+  grid-area: item-desc;
+}
+.community-modal-controls {
+  position: absolute;
+  display: flex;
+  gap: var(--size-4-3);
+  align-items: center;
+  width: 100%;
+  height: 43px;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.community-modal-controls .community-modal-search-summary {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0 var(--size-4-1) 0;
+}
+.community-modal-controls .setting-item {
+  display: inline-flex;
+  padding: unset;
+}
+.community-modal-controls .setting-item:first-child {
+  margin-bottom: unset;
+}
+.modal-setting-nav-bar {
+  position: absolute;
+  height: 0;
+  padding: 0 var(--size-4-2);
+  border-bottom: unset;
+}
+.modal-setting-nav-bar .clickable-icon {
+  width: 30px;
+  height: 30px;
+  padding: var(--size-4-1);
+  margin-top: var(--size-4-2);
+}
+.modal-setting-nav-bar .clickable-icon svg.svg-icon {
+  width: 28px;
+  height: 28px;
+}
+.community-modal-search-results-wrapper {
+  border-top: unset;
+}
+.community-modal-search-results-wrapper,
+.community-modal-details {
+  margin-top: 43px;
+}
 .setting-item {
   padding: var(--size-4-2) 0;
   border-top: unset;
@@ -1306,15 +1469,8 @@ img.community-theme-lightbox {
 }
 body:not(.native-scrollbars) .modal-close-button {
   top: var(--size-4-1);
-  right: var(--size-4-3);
-}
-.community-modal-controls .setting-item {
-  display: inline-flex;
-}
-.community-modal-controls .community-modal-search-summary {
-  display: inline-flex;
-  width: fit-content;
-  padding: 0 var(--size-4-3) var(--size-4-1);
+  right: var(--size-4-1);
+  z-index: var(--layer-popover);
 }
 .mod-warning {
   color: var(--color-red-text);
@@ -1587,6 +1743,7 @@ button.mod-warning,
 .graph-control-content button,
 .setting-hotkey,
 .flair.mod-pop,
+.community-item .flair,
 button.copy-code-button {
   border: var(--border-size) solid;
   border-radius: var(--border-radius-small);
@@ -1599,6 +1756,13 @@ button.copy-code-button {
 }
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right svg.svg-icon,
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left svg.svg-icon {
+  color: var(--highlight-text-normal);
+}
+.modal-setting-nav-bar .clickable-icon {
+  border: var(--border-size) solid;
+  border-radius: var(--border-radius);
+}
+.modal-setting-nav-bar .clickable-icon svg.svg-icon {
   color: var(--highlight-text-normal);
 }
 .theme-dark.pt-accent-style-text-dt .workspace-tab-header.is-active,
@@ -1682,7 +1846,9 @@ button.copy-code-button {
   color: var(--color-red-text);
 }
 .theme-dark.pt-accent-style-text-dt .flair.mod-pop,
-.theme-light.pt-accent-style-text-lt .flair.mod-pop {
+.theme-dark.pt-accent-style-text-dt .community-item .flair,
+.theme-light.pt-accent-style-text-lt .flair.mod-pop,
+.theme-light.pt-accent-style-text-lt .community-item .flair {
   color: var(--color-green-text);
   background-color: var(--background-secondary);
   border-color: transparent;
@@ -1697,15 +1863,19 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-text-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-text-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-dark.pt-accent-style-text-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-text-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-text-lt .modal-setting-nav-bar .clickable-icon {
   background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-text-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-dark.pt-accent-style-text-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-text-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
+.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-text-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-border-dt .workspace-tab-header.is-active,
@@ -1790,7 +1960,9 @@ button.copy-code-button {
   border-color: var(--color-red-tint);
 }
 .theme-dark.pt-accent-style-border-dt .flair.mod-pop,
-.theme-light.pt-accent-style-border-lt .flair.mod-pop {
+.theme-dark.pt-accent-style-border-dt .community-item .flair,
+.theme-light.pt-accent-style-border-lt .flair.mod-pop,
+.theme-light.pt-accent-style-border-lt .community-item .flair {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-green-tint);
@@ -1806,15 +1978,19 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-border-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-border-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-dark.pt-accent-style-border-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-border-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-border-lt .modal-setting-nav-bar .clickable-icon {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-border-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-dark.pt-accent-style-border-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-border-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
+.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-border-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-filled-dt .workspace-tab-header.is-active,
@@ -1901,7 +2077,9 @@ button.copy-code-button {
   border-color: var(--color-red-base);
 }
 .theme-dark.pt-accent-style-filled-dt .flair.mod-pop,
-.theme-light.pt-accent-style-filled-lt .flair.mod-pop {
+.theme-dark.pt-accent-style-filled-dt .community-item .flair,
+.theme-light.pt-accent-style-filled-lt .flair.mod-pop,
+.theme-light.pt-accent-style-filled-lt .community-item .flair {
   color: var(--highlight-text-normal);
   background-color: var(--color-green-base);
   border-color: transparent;
@@ -1918,15 +2096,19 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-filled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-filled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-dark.pt-accent-style-filled-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-filled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-filled-lt .modal-setting-nav-bar .clickable-icon {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-filled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-filled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-dark.pt-accent-style-filled-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-filled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
+.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-filled-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-tab-header.is-active,
@@ -2014,7 +2196,9 @@ button.copy-code-button {
   border-color: var(--color-red-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .flair.mod-pop,
-.theme-light.pt-accent-style-borderandfilled-lt .flair.mod-pop {
+.theme-dark.pt-accent-style-borderandfilled-dt .community-item .flair,
+.theme-light.pt-accent-style-borderandfilled-lt .flair.mod-pop,
+.theme-light.pt-accent-style-borderandfilled-lt .community-item .flair {
   color: var(--text-normal);
   background-color: var(--color-green-base);
   border-color: var(--color-green-tint);
@@ -2031,15 +2215,19 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-dark.pt-accent-style-borderandfilled-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+.theme-light.pt-accent-style-borderandfilled-lt .modal-setting-nav-bar .clickable-icon {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-dark.pt-accent-style-borderandfilled-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
+.theme-light.pt-accent-style-borderandfilled-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--interactive-accent-hover);
 }
 .popover {
