@@ -1256,6 +1256,9 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .is-mobile .modal.mod-settings .vertical-tab-header::after {
   margin: 7px 4px;
 }
+.modal.mod-settings .vertical-tab-content {
+  height: calc(100% - 43px);
+}
 .modal.mod-settings .vertical-tab-content-container::before {
   position: relative;
   z-index: var(--layer-status-bar);
@@ -1280,15 +1283,24 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   border-bottom: 1px solid var(--window-border);
 }
 .modal.mod-settings .vertical-tab-header-group-items {
+  gap: var(--size-2-1);
   padding: var(--size-4-2);
 }
 .modal.mod-settings .vertical-tab-nav-item {
   padding: var(--size-2-1) var(--size-4-2);
+  margin-bottom: unset;
   border: var(--border-size) solid transparent;
 }
 .modal.mod-settings .horizontal-tab-content,
 .modal.mod-settings .vertical-tab-content {
   padding: var(--size-4-8);
+}
+.modal.mod-settings .installed-plugins-container {
+  padding-top: var(--size-4-2);
+  border-top: unset;
+}
+.modal.mod-settings .plugin-list-plugins:last-child {
+  padding-top: var(--size-4-1);
 }
 .modal.mod-image-lightbox {
   width: var(--modal-width);
@@ -1317,7 +1329,6 @@ img.community-theme-lightbox {
 }
 .community-modal-info {
   display: grid;
-  grid-template: repeat(1fr);
   grid-template-areas: "info-name button-container" "info-author info-version" "info-repo info-downloads" "info-desc info-desc" "seperator seperator" "readme readme";
   row-gap: var(--size-2-1);
   padding: var(--size-4-8) var(--size-4-12);
@@ -1416,6 +1427,7 @@ img.community-theme-lightbox {
   grid-area: item-desc;
 }
 .community-item .flair {
+  height: fit-content;
   margin-left: auto;
 }
 .community-modal-controls {
@@ -1748,7 +1760,8 @@ button.mod-warning,
 .setting-hotkey,
 .flair.mod-pop,
 .community-item .flair,
-button.copy-code-button {
+button.copy-code-button,
+.modal-setting-nav-bar .clickable-icon {
   border: var(--border-size) solid;
   border-radius: var(--border-radius-small);
 }
@@ -1760,13 +1773,6 @@ button.copy-code-button {
 }
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right svg.svg-icon,
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left svg.svg-icon {
-  color: var(--highlight-text-normal);
-}
-.modal-setting-nav-bar .clickable-icon {
-  border: var(--border-size) solid;
-  border-radius: var(--border-radius);
-}
-.modal-setting-nav-bar .clickable-icon svg.svg-icon {
   color: var(--highlight-text-normal);
 }
 .theme-dark.pt-accent-style-text-dt .workspace-tab-header.is-active,
@@ -1823,16 +1829,20 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-text-dt .modal button:not(.mod-cta):not(.mod-warning),
 .theme-dark.pt-accent-style-text-dt .graph-control-content button,
+.theme-dark.pt-accent-style-text-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-text-lt .modal button:not(.mod-cta):not(.mod-warning),
-.theme-light.pt-accent-style-text-lt .graph-control-content button {
+.theme-light.pt-accent-style-text-lt .graph-control-content button,
+.theme-light.pt-accent-style-text-lt .modal-setting-nav-bar .clickable-icon {
   color: var(--color-grey-text);
   background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-dark.pt-accent-style-text-dt .graph-control-content button:hover,
+.theme-dark.pt-accent-style-text-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-text-lt .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-light.pt-accent-style-text-lt .graph-control-content button:hover {
+.theme-light.pt-accent-style-text-lt .graph-control-content button:hover,
+.theme-light.pt-accent-style-text-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--color-grey-tint);
 }
 .theme-dark.pt-accent-style-text-dt .setting-hotkey,
@@ -1867,19 +1877,15 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-text-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-text-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-dark.pt-accent-style-text-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-text-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-light.pt-accent-style-text-lt .modal-setting-nav-bar .clickable-icon {
+.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--background-primary);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-text-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-text-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-dark.pt-accent-style-text-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-text-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-light.pt-accent-style-text-lt .modal-setting-nav-bar .clickable-icon:hover {
+.theme-light.pt-accent-style-text-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-border-dt .workspace-tab-header.is-active,
@@ -1937,16 +1943,20 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-border-dt .modal button:not(.mod-cta):not(.mod-warning),
 .theme-dark.pt-accent-style-border-dt .graph-control-content button,
+.theme-dark.pt-accent-style-border-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-border-lt .modal button:not(.mod-cta):not(.mod-warning),
-.theme-light.pt-accent-style-border-lt .graph-control-content button {
+.theme-light.pt-accent-style-border-lt .graph-control-content button,
+.theme-light.pt-accent-style-border-lt .modal-setting-nav-bar .clickable-icon {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-grey-tint);
 }
 .theme-dark.pt-accent-style-border-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-dark.pt-accent-style-border-dt .graph-control-content button:hover,
+.theme-dark.pt-accent-style-border-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-border-lt .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-light.pt-accent-style-border-lt .graph-control-content button:hover {
+.theme-light.pt-accent-style-border-lt .graph-control-content button:hover,
+.theme-light.pt-accent-style-border-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--color-grey-tint);
 }
 .theme-dark.pt-accent-style-border-dt .setting-hotkey,
@@ -1982,19 +1992,15 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-border-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-border-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-dark.pt-accent-style-border-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-border-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-light.pt-accent-style-border-lt .modal-setting-nav-bar .clickable-icon {
+.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-border-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-border-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-dark.pt-accent-style-border-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-border-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-light.pt-accent-style-border-lt .modal-setting-nav-bar .clickable-icon:hover {
+.theme-light.pt-accent-style-border-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-filled-dt .workspace-tab-header.is-active,
@@ -2052,16 +2058,20 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-filled-dt .modal button:not(.mod-cta):not(.mod-warning),
 .theme-dark.pt-accent-style-filled-dt .graph-control-content button,
+.theme-dark.pt-accent-style-filled-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-filled-lt .modal button:not(.mod-cta):not(.mod-warning),
-.theme-light.pt-accent-style-filled-lt .graph-control-content button {
+.theme-light.pt-accent-style-filled-lt .graph-control-content button,
+.theme-light.pt-accent-style-filled-lt .modal-setting-nav-bar .clickable-icon {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-base);
 }
 .theme-dark.pt-accent-style-filled-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-dark.pt-accent-style-filled-dt .graph-control-content button:hover,
+.theme-dark.pt-accent-style-filled-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-filled-lt .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-light.pt-accent-style-filled-lt .graph-control-content button:hover {
+.theme-light.pt-accent-style-filled-lt .graph-control-content button:hover,
+.theme-light.pt-accent-style-filled-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--color-grey-tint);
 }
 .theme-dark.pt-accent-style-filled-dt .setting-hotkey,
@@ -2100,19 +2110,15 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-filled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-filled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-dark.pt-accent-style-filled-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-filled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-light.pt-accent-style-filled-lt .modal-setting-nav-bar .clickable-icon {
+.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
 .theme-dark.pt-accent-style-filled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-filled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-dark.pt-accent-style-filled-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-filled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-light.pt-accent-style-filled-lt .modal-setting-nav-bar .clickable-icon:hover {
+.theme-light.pt-accent-style-filled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace-tab-header.is-active,
@@ -2171,16 +2177,20 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .modal button:not(.mod-cta):not(.mod-warning),
 .theme-dark.pt-accent-style-borderandfilled-dt .graph-control-content button,
+.theme-dark.pt-accent-style-borderandfilled-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-borderandfilled-lt .modal button:not(.mod-cta):not(.mod-warning),
-.theme-light.pt-accent-style-borderandfilled-lt .graph-control-content button {
+.theme-light.pt-accent-style-borderandfilled-lt .graph-control-content button,
+.theme-light.pt-accent-style-borderandfilled-lt .modal-setting-nav-bar .clickable-icon {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-dark.pt-accent-style-borderandfilled-dt .graph-control-content button:hover,
+.theme-dark.pt-accent-style-borderandfilled-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-borderandfilled-lt .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-light.pt-accent-style-borderandfilled-lt .graph-control-content button:hover {
+.theme-light.pt-accent-style-borderandfilled-lt .graph-control-content button:hover,
+.theme-light.pt-accent-style-borderandfilled-lt .modal-setting-nav-bar .clickable-icon:hover {
   color: var(--color-grey-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .setting-hotkey,
@@ -2219,19 +2229,15 @@ button.copy-code-button {
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-dark.pt-accent-style-borderandfilled-dt .modal-setting-nav-bar .clickable-icon,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
-.theme-light.pt-accent-style-borderandfilled-lt .modal-setting-nav-bar .clickable-icon {
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
 .theme-dark.pt-accent-style-borderandfilled-dt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-dark.pt-accent-style-borderandfilled-dt .modal-setting-nav-bar .clickable-icon:hover,
 .theme-light.pt-accent-style-borderandfilled-lt .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover,
-.theme-light.pt-accent-style-borderandfilled-lt .modal-setting-nav-bar .clickable-icon:hover {
+.theme-light.pt-accent-style-borderandfilled-lt .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left:hover {
   color: var(--interactive-accent-hover);
 }
 .popover {
