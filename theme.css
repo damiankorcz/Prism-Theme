@@ -91,10 +91,8 @@ body {
   --graph-unresolved-opacity-dt: 1;
   --graph-highlight-opacity-dt: 1;
   --graph-highlight-line-opacity-dt: 0.4;
-  --window-gap: 10px;
   --blur-intensity: 8px;
   --accent-border-width: 2px;
-  --vertical-lines-width: 2px;
   --scroll-bar-size: 12px;
   --h1-padding-size: 0;
   --h2-padding-size: 0;
@@ -2911,34 +2909,34 @@ mark.Grey {
   text-align: right;
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+2) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-red-tint);
+  border-left: 2px solid var(--color-red-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+3) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-orange-tint);
+  border-left: 2px solid var(--color-orange-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+4) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-yellow-tint);
+  border-left: 2px solid var(--color-yellow-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+5) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-green-tint);
+  border-left: 2px solid var(--color-green-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+6) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-mint-tint);
+  border-left: 2px solid var(--color-mint-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+7) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-aqua-tint);
+  border-left: 2px solid var(--color-aqua-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+8) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-blue-tint);
+  border-left: 2px solid var(--color-blue-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+9) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-purple-tint);
+  border-left: 2px solid var(--color-purple-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+10) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-pink-tint);
+  border-left: 2px solid var(--color-pink-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+11) .nav-folder-children .nav-folder-children {
-  border-left: var(--vertical-lines-width) solid var(--color-grey-tint);
+  border-left: 2px solid var(--color-grey-tint);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children .nav-folder-title:not([data-path="/"]) {
   padding: 2px 0 2px 2px;
@@ -6139,17 +6137,6 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    -
-        id: window-gap
-        title: Window Gap (px)
-        description: The size of the space between the Workspace Containers.
-        type: variable-number-slider
-        format: 'px'
-        default: 10
-        level: 2
-        min: 1
-        max: 20
-        step: 1
     -
         id: border-radius
         title: Border Radius Medium (px)
