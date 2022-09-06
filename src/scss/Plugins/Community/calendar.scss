@@ -11,8 +11,8 @@
 		padding: unset;
 		background-color: var(--background-secondary);
 		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		border-radius: var(--radius-m);
+		box-shadow: var(--shadow-s);
 
 		.nav {
 			align-items: center;
@@ -24,8 +24,8 @@
 			margin: unset;
 			background: var(--background-primary);
 			border: unset;
-			border-radius: var(--border-radius);
-			box-shadow: var(--drop-shadow);
+			border-radius: var(--radius-m);
+			box-shadow: var(--shadow-s);
 		}
 
 		table.calendar {
@@ -35,11 +35,11 @@
 		}
 
 		thead tr:first-of-type th:first-child {
-			border-top-left-radius: var(--border-radius);
+			border-top-left-radius: var(--radius-m);
 		}
 
 		tbody tr:last-of-type td:first-child {
-			border-bottom-left-radius: var(--border-radius);
+			border-bottom-left-radius: var(--radius-m);
 		}
 
 		td.svelte-egt0yd {
@@ -66,7 +66,7 @@
 		.week-num {
 			font-weight: 600;
 			color: var(--text-normal);
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 			transition: unset;
 
 			&:hover {
@@ -77,7 +77,7 @@
 				font-size: 0.9em;
 				font-weight: 600;
 				color: var(--highlight-text-normal);
-				box-shadow: var(--drop-shadow);
+				box-shadow: var(--shadow-s);
 
 				.dot {
 					fill: var(--highlight-text-normal);

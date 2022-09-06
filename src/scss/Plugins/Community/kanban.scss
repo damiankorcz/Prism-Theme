@@ -8,8 +8,8 @@ div.kanban-plugin__ {
 	background-color: var(--background-secondary);
 	border: none;
 	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow);
+	border-radius: var(--radius-m);
+	box-shadow: var(--shadow-s);
 
 	button.kanban-plugin__lane-settings-button:hover {
 		color: var(--interactive-accent-hover);
@@ -27,7 +27,7 @@ div.kanban-plugin__ {
 		padding: 8px;
 		background: var(--background-primary);
 		border-bottom-color: var(--window-border);
-		border-radius: var(--border-radius);
+		border-radius: var(--radius-m);
 
 		.markdown-preview-view.kanban-plugin__markdown-preview-view {
 			line-height: initial;
@@ -49,7 +49,7 @@ div.kanban-plugin__ {
 
 	&drag-container > .kanban-plugin__item-wrapper .kanban-plugin__item {
 		border-color: var(--interactive-accent-tint);
-		box-shadow: var(--drop-shadow-popup);
+		box-shadow: var(--shadow-l);
 	}
 
 	&board > div {
@@ -60,19 +60,19 @@ div.kanban-plugin__ {
 		margin: 0 8px;
 		background-color: var(--background-primary);
 		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		border-radius: var(--radius-m);
+		box-shadow: var(--shadow-s);
 
 		button.kanban-plugin__item-postfix-button {
 			background-color: var(--background-primary);
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 		}
 
 		button.kanban-plugin__item-prefix-button:hover,
 		button.kanban-plugin__item-postfix-button:hover {
 			color: var(--interactive-accent-hover);
 			background-color: var(--background-primary);
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 		}
 
 		progress::before {
@@ -82,8 +82,8 @@ div.kanban-plugin__ {
 		&-button-wrapper {
 			background: var(--background-tertiary);
 			border-top-color: var(--window-border);
-			border-bottom-right-radius: var(--border-radius);
-			border-bottom-left-radius: var(--border-radius);
+			border-bottom-right-radius: var(--radius-m);
+			border-bottom-left-radius: var(--radius-m);
 
 			button.kanban-plugin__new-item-button {
 				font-weight: 600;
@@ -144,22 +144,22 @@ div.kanban-plugin__ {
 	}
 
 	&drag-container > .kanban-plugin__lane-wrapper > .kanban-plugin__lane {
-		box-shadow: var(--drop-shadow-popup);
+		box-shadow: var(--shadow-l);
 	}
 
 	&date-picker {
 		.flatpickr-calendar {
 			background: var(--background-secondary-blur);
 			border: 1px solid var(--background-secondary);
-			border-radius: var(--border-radius);
-			box-shadow: var(--drop-shadow);
+			border-radius: var(--radius-m);
+			box-shadow: var(--shadow-s);
 			-webkit-backdrop-filter: blur(var(--blur-intensity));
 			backdrop-filter: blur(var(--blur-intensity));
 		}
 
 		.flatpickr-day.today {
 			background-color: var(--background-primary);
-			border: var(--border-size) solid var(--interactive-accent-tint);
+			border: var(--accent-border-width) solid var(--interactive-accent-tint);
 		}
 
 		.flatpickr-day.selected {
@@ -178,8 +178,8 @@ div.kanban-plugin__ {
 	.theme-light &action-confirm-wrapper,
 	.theme-dark &action-confirm-wrapper {
 		background-color: var(--background-primary);
-		border: var(--border-size) solid var(--color-red-tint);
-		box-shadow: var(--drop-shadow);
+		border: var(--accent-border-width) solid var(--color-red-tint);
+		box-shadow: var(--shadow-s);
 	}
 
 	.theme-light &action-confirm-text,
@@ -204,7 +204,7 @@ div.kanban-plugin__ {
 		font-weight: 600;
 		color: var(--text-normal);
 		background-color: var(--color-red-base);
-		border: var(--border-size) solid var(--color-red-tint);
+		border: var(--accent-border-width) solid var(--color-red-tint);
 
 		&:hover {
 			color: var(--color-red-tint);
@@ -215,7 +215,7 @@ div.kanban-plugin__ {
 		font-weight: 600;
 		color: var(--text-normal);
 		background-color: var(--color-grey-base);
-		border: var(--border-size) solid var(--color-grey-tint);
+		border: var(--accent-border-width) solid var(--color-grey-tint);
 
 		&:hover {
 			color: var(--color-grey-tint);
@@ -249,7 +249,7 @@ div.kanban-plugin__ {
 		color: var(--text-normal);
 		background-color: var(--background-secondary);
 		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 	}
 }
 
@@ -268,8 +268,8 @@ div.modal.kanban-plugin__board-settings-modal {
 	max-width: 1400px;
 	height: 80vh;
 	max-height: 1000px;
-	border-radius: var(--border-radius);
-	box-shadow: var(--drop-shadow-popup);
+	border-radius: var(--radius-m);
+	box-shadow: var(--shadow-l);
 
 	.modal-content {
 		padding: 0 25px;
@@ -291,7 +291,7 @@ div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
 	width: fill-available;
 	margin: 8px;
 	border-color: var(--window-border);
-	border-radius: var(--border-radius-small);
+	border-radius: var(--radius-s);
 }
 /* #endregion */
 

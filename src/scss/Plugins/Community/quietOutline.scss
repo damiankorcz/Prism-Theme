@@ -8,7 +8,7 @@
 		.n-slider-rail {
 			background-color: var(--background-secondary-alt);
 			border: 1px solid var(--window-border);
-			box-shadow: var(--drop-shadow);
+			box-shadow: var(--shadow-s);
 
 			.n-slider-rail__fill {
 				background-color: var(--interactive-accent-tint);
@@ -42,7 +42,7 @@
 		&.n-tree--block-line .n-tree-node {
 			border-right: 1px solid transparent;
 			border-left: 1px solid transparent;
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 
 			&:not(.n-tree-node--disabled):hover {
 				background-color: var(--background-primary);
@@ -60,8 +60,8 @@
 		height: 32px;
 		color: var(--highlight-text-normal);
 		background-color: var(--interactive-accent-base);
-		border: var(--border-size) solid var(--interactive-accent-tint);
-		border-radius: var(--border-radius);
+		border: var(--accent-border-width) solid var(--interactive-accent-tint);
+		border-radius: var(--radius-m);
 
 		.n-button__icon {
 			svg {
@@ -84,7 +84,7 @@
 	.n-input {
 		height: 32px;
 		background-color: var(--background-primary);
-		border-radius: var(--border-radius);
+		border-radius: var(--radius-m);
 
 		.n-input__border {
 			border: 1px solid var(--window-border);
@@ -119,7 +119,7 @@
 		margin-bottom: 5px;
 		background-color: var(--background-secondary);
 		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
+		border-radius: var(--radius-m);
 
 		.n-tree-node-content__text p {
 			font-weight: 600;

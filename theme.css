@@ -93,9 +93,7 @@ body {
   --graph-highlight-line-opacity-dt: 0.4;
   --window-gap: 10px;
   --blur-intensity: 8px;
-  --border-size: 2px;
-  --border-radius: 8px;
-  --border-radius-small: 4px;
+  --accent-border-width: 2px;
   --vertical-lines-width: 2px;
   --scroll-bar-size: 12px;
   --h1-padding-size: 0;
@@ -490,8 +488,8 @@ body.theme-dark.pt-color-scheme-raven-dt {
   --background-tertiary: hsl(0 0% 96.5%);
   --background-color-lt: hsl(0 0% 88%);
   --vertical-lines-color: hsl(0 0% 60% / 30%);
-  --drop-shadow: hsl(0 0% 0% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(0 0% 0% / 3%) 0 1px 2px,
     hsl(0 0% 0% / 3%) 0 2px 4px,
     hsl(0 0% 0% / 3%) 0 4px 8px,
@@ -559,8 +557,8 @@ body.theme-dark.pt-color-scheme-raven-dt {
   --background-tertiary: hsl(0 0% 7.5%);
   --background-color-dt: hsl(0 0% 5%);
   --vertical-lines-color: hsl(0 0% 12%);
-  --drop-shadow: hsl(0 0% 0% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(0 0% 0% / 5%) 0 1px 2px,
     hsl(0 0% 0% / 5%) 0 2px 4px,
     hsl(0 0% 0% / 5%) 0 4px 8px,
@@ -641,8 +639,8 @@ body.theme-dark.pt-color-scheme-mocha-dt {
   --background-tertiary: hsl(28 32% 91.8%);
   --background-color-lt: hsl(28 32% 83.8%);
   --vertical-lines-color: hsl(28 32% 80%);
-  --drop-shadow: hsl(28 32% 7% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(28 32% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(28 32% 7% / 4%) 0 1px 2px,
     hsl(28 32% 7% / 4%) 0 2px 4px,
     hsl(28 32% 7% / 4%) 0 4px 8px,
@@ -710,8 +708,8 @@ body.theme-dark.pt-color-scheme-mocha-dt {
   --background-tertiary: hsl(28 32% 7.2%);
   --background-color-dt: hsl(28 32% 6.2%);
   --vertical-lines-color: hsl(28 32% 14%);
-  --drop-shadow: hsl(28 32% 7% / 50%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(28 32% 7% / 50%) 0 1px 2px 0;
+  --shadow-l:
     hsl(28 32% 7% / 50%) 0 1px 2px,
     hsl(28 32% 7% / 50%) 0 2px 4px,
     hsl(28 32% 7% / 50%) 0 4px 8px,
@@ -792,8 +790,8 @@ body.theme-dark.pt-color-scheme-indigo-dt {
   --background-tertiary: hsl(225 35% 91.8%);
   --background-color-lt: hsl(225 35% 83.8%);
   --vertical-lines-color: hsl(225 35% 82%);
-  --drop-shadow: hsl(225 35% 7% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(225 35% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(225 35% 7% / 4%) 0 1px 2px,
     hsl(225 35% 7% / 4%) 0 2px 4px,
     hsl(225 35% 7% / 4%) 0 4px 8px,
@@ -861,8 +859,8 @@ body.theme-dark.pt-color-scheme-indigo-dt {
   --background-tertiary: hsl(245 30% 9%);
   --background-color-dt: hsl(245 30% 8%);
   --vertical-lines-color: hsl(245 30% 17%);
-  --drop-shadow: hsl(245 30% 7% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(245 30% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(245 30% 7% / 10%) 0 1px 2px,
     hsl(245 30% 7% / 10%) 0 2px 4px,
     hsl(245 30% 7% / 10%) 0 4px 8px,
@@ -943,8 +941,8 @@ body.theme-dark.pt-color-scheme-pine-dt {
   --background-tertiary: hsl(135 35% 93%);
   --background-color-lt: hsl(135 35% 81%);
   --vertical-lines-color: hsl(135 35% 84%);
-  --drop-shadow: hsl(135 35% 7% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(135 35% 7% / 4%) 0 1px 2px,
     hsl(135 35% 7% / 4%) 0 2px 4px,
     hsl(135 35% 7% / 4%) 0 4px 8px,
@@ -1012,8 +1010,8 @@ body.theme-dark.pt-color-scheme-pine-dt {
   --background-tertiary: hsl(135 35% 6.2%);
   --background-color-dt: hsl(135 35% 6%);
   --vertical-lines-color: hsl(135 35% 12%);
-  --drop-shadow: hsl(135 35% 7% / 10%) 0 1px 2px 0;
-  --drop-shadow-popup:
+  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
     hsl(135 35% 7% / 10%) 0 1px 2px,
     hsl(135 35% 7% / 10%) 0 2px 4px,
     hsl(135 35% 7% / 10%) 0 4px 8px,
@@ -1030,8 +1028,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   margin: 0 auto calc(4px + var(--scroll-bar-size));
   background: var(--background-secondary-blur);
   border: 1px solid var(--window-border);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow-popup);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-l);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -1078,11 +1076,11 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace-tab-header {
   padding: 0 var(--size-4-2);
-  border: var(--border-size) solid transparent;
-  border-radius: var(--border-radius);
+  border: var(--accent-border-width) solid transparent;
+  border-radius: var(--radius-m);
 }
 .workspace-tab-header.is-active {
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-m);
 }
 .workspace-tab-header.is-active:hover svg {
   color: var(--interactive-accent-hover);
@@ -1165,7 +1163,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   width: 28px;
   height: 28px;
   padding: 2px;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-m);
 }
 .nav-files-container,
 .workspace-leaf-content[data-type=tag] .tag-container,
@@ -1207,13 +1205,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   padding: var(--size-4-1);
   background: var(--background-secondary-blur);
   border: 1px solid var(--window-border);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow-popup);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-l);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
-}
-.modal {
-  box-shadow: var(--drop-shadow-popup);
 }
 .modal.mod-settings .vertical-tab-header {
   flex: none;
@@ -1251,7 +1246,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   content: "Prism v3.0.0 Beta 2";
   background: var(--background-secondary);
   border: 1px solid var(--window-border);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
 }
 .is-mobile .modal.mod-settings .vertical-tab-header::after {
   margin: 7px 4px;
@@ -1289,7 +1284,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .modal.mod-settings .vertical-tab-nav-item {
   padding: var(--size-2-1) var(--size-4-2);
   margin-bottom: unset;
-  border: var(--border-size) solid transparent;
+  border: var(--accent-border-width) solid transparent;
 }
 .modal.mod-settings .horizontal-tab-content,
 .modal.mod-settings .vertical-tab-content {
@@ -1512,8 +1507,8 @@ select.dropdown {
   font-family: var(--font-interface);
   background-color: var(--background-primary);
   border: 1px solid var(--window-border);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-s);
 }
 select.dropdown option[value*=accent]:not([value*=accent-style]):not([value*=accent-color]) {
   color: var(--interactive-accent-text);
@@ -1601,7 +1596,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
 .theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:hover,
 .theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:hover {
   background-color: var(--background-primary);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
 }
 .theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:increment,
 .theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:increment {
@@ -1642,7 +1637,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
 .progress-bar-subline {
   background-color: var(--interactive-accent-base);
   border: 2px solid var(--interactive-accent-tint);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
 }
 body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   display: block;
@@ -1653,12 +1648,12 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   text-align: center;
   content: "Style Settings Plugin is required for Prism to function correctly!";
   background-color: var(--color-red-base);
-  border: var(--border-size) solid var(--color-red-tint);
-  border-radius: var(--border-radius);
+  border: var(--accent-border-width) solid var(--color-red-tint);
+  border-radius: var(--radius-m);
 }
 body.pt-hide-view-header div.workspace-leaf-content div.view-header {
   height: 1px;
-  border: var(--border-size) solid transparent;
+  border: var(--accent-border-width) solid transparent;
   box-shadow: unset;
   transition-delay: 600ms;
 }
@@ -1670,9 +1665,9 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header svg {
 body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
   height: 36px;
   background-color: var(--background-tertiary);
-  border: var(--border-size) solid transparent;
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
+  border: var(--accent-border-width) solid transparent;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-s);
   transition: all ease 200ms;
 }
 body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
@@ -1712,7 +1707,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
   padding: 2px;
   margin: 4px;
   border: 2px solid transparent;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-m);
 }
 .document-search-container {
   padding: var(--size-4-1) 0;
@@ -1741,14 +1736,14 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .nav-file-title.is-active,
 .suggestion-hotkey {
   color: var(--highlight-text-normal);
-  border: var(--border-size) solid;
+  border: var(--accent-border-width) solid;
   box-shadow: unset;
 }
 .search-result-file-match-destination-file,
 .search-result-file-match-replace-button {
   color: var(--text-normal);
-  border: var(--border-size) solid;
-  border-radius: var(--border-radius-small);
+  border: var(--accent-border-width) solid;
+  border-radius: var(--radius-s);
 }
 button.mod-cta {
   color: var(--highlight-text-normal);
@@ -1762,14 +1757,14 @@ button.mod-warning,
 .community-item .flair,
 button.copy-code-button,
 .modal-setting-nav-bar .clickable-icon {
-  border: var(--border-size) solid;
-  border-radius: var(--border-radius-small);
+  border: var(--accent-border-width) solid;
+  border-radius: var(--radius-s);
 }
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
   color: var(--highlight-text-normal);
-  border: var(--border-size) solid;
-  border-radius: var(--border-radius);
+  border: var(--accent-border-width) solid;
+  border-radius: var(--radius-m);
 }
 .workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right svg.svg-icon,
 .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left svg.svg-icon {
@@ -2242,11 +2237,10 @@ button.copy-code-button,
 }
 .popover {
   background-color: var(--page-background-color);
+  box-shadow: var(--shadow-l);
 }
 .popover.hover-popover {
-  border: 2px solid var(--table-border-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow-popup);
+  border: var(--accent-border-width) solid var(--table-border-color);
 }
 .markdown-embed-link,
 .file-embed-link {
@@ -2255,7 +2249,7 @@ button.copy-code-button,
 .menu {
   background: var(--background-secondary-blur);
   border-color: var(--window-border);
-  box-shadow: var(--drop-shadow-popup);
+  box-shadow: var(--shadow-l);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -2264,8 +2258,8 @@ div.notice-container div.notice {
   color: var(--text-normal);
   background: var(--interactive-accent-base);
   border: 2px solid var(--interactive-accent-tint);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-s);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -2278,8 +2272,8 @@ div.notice-container div.notice {
   color: var(--text-normal);
   background: var(--background-secondary-blur);
   border: 2px solid var(--table-border-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--drop-shadow-popup);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-l);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -2310,7 +2304,7 @@ div.notice-container div.notice {
 .drag-ghost {
   background: var(--background-secondary);
   border: 2px solid var(--table-border-color);
-  box-shadow: var(--drop-shadow-popup);
+  box-shadow: var(--shadow-l);
   animation: pop-down 200ms forwards ease-in-out;
 }
 .theme-light.pt-color-scheme-swan-lt audio {
@@ -2337,12 +2331,11 @@ div.notice-container div.notice {
 .icon-btn.side-dock-ribbon-action.is-active[aria-label="Start/stop recording"] {
   color: var(--color-red-text);
   background-color: var(--color-red-base);
-  border: var(--border-size) solid var(--color-red-tint);
+  border: var(--accent-border-width) solid var(--color-red-tint);
 }
 .modal-container .prompt {
   background-color: var(--background-secondary-blur);
   border: 1px solid var(--window-border);
-  box-shadow: var(--drop-shadow-popup);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -2350,8 +2343,8 @@ div.notice-container div.notice {
   padding: var(--size-4-2) var(--size-4-2) 0;
 }
 .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-s);
 }
 .theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
   background-color: var(--background-primary);
@@ -2364,13 +2357,13 @@ div.notice-container div.notice {
 }
 .modal-container .prompt .suggestion-item.mod-complex .suggestion-hotkey {
   font-weight: 600;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
 }
 .suggestion-container {
   max-width: 700px;
   background-color: var(--background-secondary-blur);
   border: 1px solid var(--window-border);
-  box-shadow: var(--drop-shadow-popup);
+  box-shadow: var(--shadow-l);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -2382,8 +2375,8 @@ div.notice-container div.notice {
   max-height: fill-available;
 }
 .suggestion-container .suggestion::-webkit-scrollbar-track {
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-s);
 }
 .theme-light .suggestion-container .suggestion::-webkit-scrollbar-track {
   background-color: var(--background-secondary);
@@ -2401,8 +2394,8 @@ div.notice-container div.notice {
   font-weight: 600;
   background: var(--background-primary);
   border: 1px solid var(--window-border);
-  border-radius: var(--border-radius-small);
-  box-shadow: var(--drop-shadow);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-s);
 }
 .suggestion-prefix::after {
   display: none;
@@ -2439,13 +2432,13 @@ div.notice-container div.notice {
 }
 .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title {
   background-color: var(--interactive-accent-base);
-  border: var(--border-size) solid transparent;
-  border-radius: var(--border-radius-small);
+  border: var(--accent-border-width) solid transparent;
+  border-radius: var(--radius-s);
 }
 .workspace-leaf.mod-active .nav-file.has-focus {
   background-color: var(--interactive-accent-base);
   border: unset;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
 }
 .graph-controls-button.mod-close,
 .graph-controls-button.mod-reset {
@@ -2697,7 +2690,7 @@ mark,
   --mark-highlight-text: var(--interactive-accent-text);
   font-size: 0.859em;
   font-weight: 600;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
@@ -2776,7 +2769,7 @@ mark.Grey {
 .theme-light.pt-highlight-style-border-lt .cm-highlight {
   padding: 0 3px;
   background-color: var(--background-primary);
-  border: var(--border-size) solid var(--mark-highlight-dark);
+  border: var(--accent-border-width) solid var(--mark-highlight-dark);
 }
 .theme-dark.pt-highlight-style-filled-dt mark,
 .theme-dark.pt-highlight-style-filled-dt .cm-highlight,
@@ -2791,7 +2784,7 @@ mark.Grey {
 .theme-light.pt-highlight-style-borderandfilled-lt .cm-highlight {
   padding: 0 3px;
   background-color: var(--mark-highlight-base);
-  border: var(--border-size) solid var(--mark-highlight-dark);
+  border: var(--accent-border-width) solid var(--mark-highlight-dark);
 }
 .theme-light.pt-highlight-text-none-lt mark,
 .theme-light.pt-highlight-text-none-lt .cm-highlight,
@@ -2968,7 +2961,7 @@ mark.Grey {
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) {
   padding: 4px 4px 4px 0;
   border: 1px solid;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--radius-s);
 }
 .pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title {
   width: calc(100% + 6px);
@@ -6159,7 +6152,7 @@ settings:
         step: 1
     -
         id: border-radius
-        title: Border Radius (px)
+        title: Border Radius Medium (px)
         description: The size of the border radius around larger elements of the UI.
         type: variable-number-slider
         format: 'px'
@@ -6169,7 +6162,7 @@ settings:
         max: 20
         step: 1
     -
-        id: border-radius-small
+        id: radius-s
         title: Border Radius Small (px)
         description: The size of the border radius around smaller elements of the UI.
         type: variable-number-slider

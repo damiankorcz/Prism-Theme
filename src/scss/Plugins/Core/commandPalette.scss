@@ -2,7 +2,6 @@
 .modal-container .prompt {
 	background-color: var(--background-secondary-blur);
 	border: 1px solid var(--window-border);
-	box-shadow: var(--drop-shadow-popup);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 
@@ -10,8 +9,8 @@
 		padding: var(--size-4-2) var(--size-4-2) 0;
 
 		&::-webkit-scrollbar-track {
-			border-radius: var(--border-radius-small);
-			box-shadow: var(--drop-shadow);
+			border-radius: var(--radius-s);
+			box-shadow: var(--shadow-s);
 
 			.theme-light & {
 				background-color: var(--background-primary);
@@ -29,7 +28,7 @@
 
 	.suggestion-item.mod-complex .suggestion-hotkey {
 		font-weight: 600;
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 	}
 }
 /* #endregion */

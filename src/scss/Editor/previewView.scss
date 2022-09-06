@@ -26,7 +26,7 @@ table {
 .markdown-source-view .markdown-embed,
 .markdown-source-view .file-embed {
 	border: 1px solid var(--table-border-color);
-	border-radius: var(--border-radius-small);
+	border-radius: var(--radius-s);
 }
 
 .markdown-embed-link,
@@ -107,7 +107,7 @@ a.tag[href^="#"] {
 	vertical-align: bottom;
 	background-color: var(--background-tertiary);
 	border: 2px solid var(--window-border);
-	border-radius: var(--border-radius-small);
+	border-radius: var(--radius-s);
 
 	&:hover {
 		color: var(--interactive-accent-text);
@@ -155,17 +155,17 @@ input[type="checkbox"],
 .markdown-preview-view .task-list-item-checkbox {
 	top: 5px;
 	filter: none;
-	border-radius: var(--border-radius-small);
+	border-radius: var(--radius-s);
 	appearance: unset;
 
 	.theme-light & {
 		background-color: var(--background-primary-alt);
-		border: var(--border-size) solid var(--background-secondary-alt);
+		border: var(--accent-border-width) solid var(--background-secondary-alt);
 	}
 
 	.theme-dark & {
 		background-color: var(--background-primary);
-		border: var(--border-size) solid var(--background-primary-alt);
+		border: var(--accent-border-width) solid var(--background-primary-alt);
 	}
 
 	&:hover {
@@ -174,7 +174,7 @@ input[type="checkbox"],
 
 	&:checked {
 		background: var(--interactive-accent-base);
-		border: var(--border-size) solid var(--interactive-accent-tint);
+		border: var(--accent-border-width) solid var(--interactive-accent-tint);
 		box-shadow: none;
 	}
 }
@@ -205,7 +205,7 @@ button.copy-code-button,
 	font-weight: 600;
 	color: var(--text-normal);
 	background-color: var(--background-primary);
-	border: var(--border-size) solid transparent;
+	border: var(--accent-border-width) solid transparent;
 }
 
 .code-block-flair {
@@ -221,7 +221,7 @@ button.copy-code-button,
 }
 
 .workspace-leaf-content[data-type="pdf"] .view-content {
-    padding: unset;
+	padding: unset;
 
 	iframe {
 		border: unset;
@@ -234,7 +234,7 @@ button.copy-code-button,
 	padding: 0;
 	color: var(--text-muted);
 	border: 1px solid var(--table-border-color);
-	border-radius: var(--border-radius-small);
+	border-radius: var(--radius-s);
 
 	.theme-light & {
 		background-color: var(--background-primary-alt);
@@ -248,7 +248,7 @@ button.copy-code-button,
 		padding: 8px 8px 8px 12px;
 		margin: 0;
 		border-bottom: 1px solid var(--table-border-color);
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 	}
 
 	&.is-collapsed .frontmatter-container-header {
@@ -277,7 +277,7 @@ button.copy-code-button,
 		line-height: 19px;
 		color: var(--text-normal);
 		border: unset;
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 
 		.theme-light & {
 			background-color: var(--background-secondary-alt);
@@ -325,7 +325,7 @@ button.copy-code-button,
 		kbd {
 			color: var(--color-red-text);
 			background-color: var(--background-primary-alt);
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 		}
 
 		pre > code {
@@ -346,7 +346,7 @@ button.copy-code-button,
 		color: var(--interactive-accent-text);
 		background: var(--background-primary-alt);
 		border: 1px solid var(--table-border-color);
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 	}
 
 	.token.operator,
@@ -385,7 +385,7 @@ button.copy-code-button,
 		kbd {
 			color: var(--color-red-text);
 			background-color: var(--background-secondary-alt);
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 		}
 
 		pre > code {
@@ -401,7 +401,7 @@ button.copy-code-button,
 		color: var(--interactive-accent-base);
 		background: var(--background-secondary-alt);
 		border: 1px solid var(--table-border-color);
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 	}
 
 	code[class*="language-"],

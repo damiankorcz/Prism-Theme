@@ -3,7 +3,7 @@
 	max-width: 700px;
 	background-color: var(--background-secondary-blur);
 	border: 1px solid var(--window-border);
-	box-shadow: var(--drop-shadow-popup);
+	box-shadow: var(--shadow-l);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 
@@ -16,8 +16,8 @@
 		}
 
 		&::-webkit-scrollbar-track {
-			border-radius: var(--border-radius-small);
-			box-shadow: var(--drop-shadow);
+			border-radius: var(--radius-s);
+			box-shadow: var(--shadow-s);
 
 			.theme-light & {
 				background-color: var(--background-secondary);
@@ -41,8 +41,8 @@
 	font-weight: 600;
 	background: var(--background-primary);
 	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius-small);
-	box-shadow: var(--drop-shadow);
+	border-radius: var(--radius-s);
+	box-shadow: var(--shadow-s);
 
 	&::after {
 		display: none;

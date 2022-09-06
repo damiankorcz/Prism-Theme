@@ -12,8 +12,8 @@
 		padding: 8px;
 		background-color: var(--background-secondary);
 		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		border-radius: var(--radius-m);
+		box-shadow: var(--shadow-s);
 	}
 
 	.oz-folders-tree-wrapper {
@@ -31,8 +31,8 @@
 		padding: 0 10px;
 		background: var(--background-primary);
 		border-bottom: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow);
+		border-radius: var(--radius-m);
+		box-shadow: var(--shadow-s);
 	}
 
 	.oz-folders-action-items,
@@ -45,8 +45,8 @@
 		margin-bottom: 8px;
 		background: var(--background-secondary-blur);
 		border: 1px solid var(--window-border);
-		border-radius: var(--border-radius);
-		box-shadow: var(--drop-shadow-popup);
+		border-radius: var(--radius-m);
+		box-shadow: var(--shadow-l);
 		-webkit-backdrop-filter: blur(var(--blur-intensity));
 		backdrop-filter: blur(var(--blur-intensity));
 
@@ -60,7 +60,7 @@
 			padding: 2px;
 			margin: 0 2px;
 			color: var(--text-muted);
-			border-radius: var(--border-radius);
+			border-radius: var(--radius-m);
 			opacity: 1;
 
 			&:hover {
@@ -101,7 +101,7 @@
 	.oz-nav-file:hover {
 		font-weight: 600;
 		background-color: var(--background-primary);
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 
 		.oz-folder-name {
 			color: var(--interactive-accent-text);
@@ -128,14 +128,14 @@
 		margin-bottom: 8px;
 		background-color: var(--vertical-lines-color);
 		border: 2px solid transparent;
-		border-radius: var(--border-radius-small);
+		border-radius: var(--radius-s);
 		opacity: 1;
 		transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
 
 		&:hover {
 			background-color: var(--interactive-accent-base);
 			border-color: var(--interactive-accent-tint);
-			box-shadow: var(--drop-shadow);
+			box-shadow: var(--shadow-s);
 		}
 	}
 

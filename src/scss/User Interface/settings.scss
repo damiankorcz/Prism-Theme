@@ -1,8 +1,4 @@
 /* #region  [UI] Settings */
-.modal {
-	box-shadow: var(--drop-shadow-popup);
-}
-
 .modal.mod-settings {
 	.vertical-tab-header {
 		flex: none;
@@ -41,7 +37,7 @@
 			content: "Prism v3.0.0 Beta 2";
 			background: var(--background-secondary);
 			border: 1px solid var(--window-border);
-			border-radius: var(--border-radius-small);
+			border-radius: var(--radius-s);
 
 			.is-mobile & {
 				margin: 7px 4px;
@@ -87,7 +83,7 @@
 	.vertical-tab-nav-item {
 		padding: var(--size-2-1) var(--size-4-2);
 		margin-bottom: unset;
-		border: var(--border-size) solid transparent;
+		border: var(--accent-border-width) solid transparent;
 	}
 
 	.horizontal-tab-content,
@@ -372,8 +368,8 @@ select.dropdown {
 	font-family: var(--font-interface);
 	background-color: var(--background-primary);
 	border: 1px solid var(--window-border);
-	border-radius: var(--border-radius-small);
-	box-shadow: var(--drop-shadow);
+	border-radius: var(--radius-s);
+	box-shadow: var(--shadow-s);
 
 	option[value*="accent"]:not([value*="accent-style"]):not([value*="accent-color"]) {
 		color: var(--interactive-accent-text);
