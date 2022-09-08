@@ -1,9 +1,29 @@
 /* #region  [Editor] - Progress Bar */
-progress {
-	-webkit-appearance: none;
-	appearance: none;
-	height: 13px;
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress {
+	height: 14px;
+	// display: inline-flex;
+	// justify-content: center;
 		
+	&::before {
+		content: attr(value) " %";
+		font-family: var(--font-editor);
+		position: fixed;
+		font-size: 10px;
+		font-weight: 700;
+		width: inherit;
+		text-align: center;
+		font-family: var(--font-text);
+
+		.theme-light & {
+			text-shadow: -1px -1px 0 hsla(0 0% 100% / 50%), 1px -1px 0 hsla(0 0% 100% / 50%), -1px 1px 0 hsla(0 0% 100% / 50%), 1px 1px 0 hsla(0 0% 100% / 50%);
+		}
+
+		.theme-dark & {
+			text-shadow: -1px -1px 0 hsla(0 0% 0% / 50%), 1px -1px 0 hsla(0 0% 0% / 50%), -1px 1px 0 hsla(0 0% 0% / 50%), 1px 1px 0 hsla(0 0% 0% / 50%);
+		}
+	}
+
 	&::-webkit-progress-bar {
 		border: 1px solid var(--window-border);
 		border-radius: var(--radius-s);
@@ -23,81 +43,60 @@ progress {
 		border-color: transparent;
 	}
 
-	&::before {
-		content: attr(value) " %";
-		font-family: var(--font-editor);
-		display: inline-flex;
-		position: fixed;
-		align-items: center;
-		justify-content: center;
-		// padding: 0 5px;
-		font-size: 10px;
-		height: 13px;
-		width: inherit;
-		font-weight: 700;
 
-		.theme-light & {
-			text-shadow: -1px -1px 0 hsla(0 0% 100% / 50%), 1px -1px 0 hsla(0 0% 100% / 50%), -1px 1px 0 hsla(0 0% 100% / 50%), 1px 1px 0 hsla(0 0% 100% / 50%);
-		}
-
-		.theme-dark & {
-			text-shadow: -1px -1px 0 hsla(0 0% 0% / 50%), 1px -1px 0 hsla(0 0% 0% / 50%), -1px 1px 0 hsla(0 0% 0% / 50%), 1px 1px 0 hsla(0 0% 0% / 50%);
-		}
+	&[value="0"]::-webkit-progress-value {
+		border: unset;
 	}
-}
+	
+	$red:'';
+	@for $i from 0 through 24 {
+		$red: $red + '&[value="' + $i + '"]::-webkit-progress-value,';
+	}
+	
+	$orange:'';
+	@for $i from 25 through 49 {
+		$orange: $orange + '&[value="' + $i + '"]::-webkit-progress-value,';
+	}
+	
+	$yellow:'';
+	@for $i from 50 through 74 {
+		$yellow: $yellow + '&[value="' + $i + '"]::-webkit-progress-value,';
+	}
+	
+	$green:'';
+	@for $i from 75 through 99 {
+		$green: $green + '&[value="' + $i + '"]::-webkit-progress-value,';
+	}
+	
+	#{$red} {
+		background-color: var(--color-red-base);
+		border-color: var(--color-red-tint);
+	}
+	
+	#{$orange} {
+		background-color: var(--color-orange-base);
+		border-color: var(--color-orange-tint);
+	}
+	
+	#{$yellow} {
+		background-color: var(--color-yellow-base);
+		border-color: var(--color-yellow-tint);
+	}
+	
+	#{$green} {
+		background-color: var(--color-green-base);
+		border-color: var(--color-green-tint);
+	}
 
-// @for $i from 20 through 100 {
-// 	progress[value="#{$i}"]::before {
-// 		margin-left: calc(150px * #{$i}/100 - 26px);
-// 	}
-// }
-
-progress[value="0"]::-webkit-progress-value {
-	border: unset;
-}
-
-$red:'';
-@for $i from 0 through 24 {
-	$red: $red + 'progress[value="' + $i + '"]::-webkit-progress-value,';
-}
-
-$orange:'';
-@for $i from 25 through 49 {
-	$orange: $orange + 'progress[value="' + $i + '"]::-webkit-progress-value,';
-}
-
-$yellow:'';
-@for $i from 50 through 74 {
-	$yellow: $yellow + 'progress[value="' + $i + '"]::-webkit-progress-value,';
-}
-
-$green:'';
-@for $i from 75 through 99 {
-	$green: $green + 'progress[value="' + $i + '"]::-webkit-progress-value,';
-}
-
-#{$red} {
-	background-color: var(--color-red-base);
-	border-color: var(--color-red-tint);
-}
-
-#{$orange} {
-	background-color: var(--color-orange-base);
-	border-color: var(--color-orange-tint);
-}
-
-#{$yellow} {
-	background-color: var(--color-yellow-base);
-	border-color: var(--color-yellow-tint);
-}
-
-#{$green} {
-	background-color: var(--color-green-base);
-	border-color: var(--color-green-tint);
-}
-
-progress[value="100"]::-webkit-progress-value {
-	background-color: var(--interactive-accent-base);
-	border-color: var(--interactive-accent-tint);
+	&[value="100"]::-webkit-progress-value {
+		background-color: var(--color-blue-base);
+		border-color: var(--color-blue-tint);
+	}
+	
+	// @for $i from 20 through 100 {
+	// 	&[value="#{$i}"]::before {
+	// 		margin-left: calc(148px * #{$i}/100 - 26px);
+	// 	}
+	// }
 }
 /* #endregion */

@@ -2540,6 +2540,277 @@ div.notice-container div.notice {
   background-color: hsl(var(--color-grey-base-h) var(--color-grey-base-s) var(--color-grey-base-l)/20%);
   border-color: var(--color-grey-tint);
 }
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress {
+  height: 14px;
+}
+.markdown-rendered progress::before,
+.markdown-source-view.is-live-preview progress::before {
+  content: attr(value) " %";
+  font-family: var(--font-editor);
+  position: fixed;
+  font-size: 10px;
+  font-weight: 700;
+  width: inherit;
+  text-align: center;
+  font-family: var(--font-text);
+}
+.theme-light .markdown-rendered progress::before,
+.theme-light .markdown-source-view.is-live-preview progress::before {
+  text-shadow:
+    -1px -1px 0 hsla(0deg, 0%, 100%, 0.5),
+    1px -1px 0 hsla(0deg, 0%, 100%, 0.5),
+    -1px 1px 0 hsla(0deg, 0%, 100%, 0.5),
+    1px 1px 0 hsla(0deg, 0%, 100%, 0.5);
+}
+.theme-dark .markdown-rendered progress::before,
+.theme-dark .markdown-source-view.is-live-preview progress::before {
+  text-shadow:
+    -1px -1px 0 hsla(0deg, 0%, 0%, 0.5),
+    1px -1px 0 hsla(0deg, 0%, 0%, 0.5),
+    -1px 1px 0 hsla(0deg, 0%, 0%, 0.5),
+    1px 1px 0 hsla(0deg, 0%, 0%, 0.5);
+}
+.markdown-rendered progress::-webkit-progress-bar,
+.markdown-source-view.is-live-preview progress::-webkit-progress-bar {
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-s);
+}
+.theme-light .markdown-rendered progress::-webkit-progress-bar,
+.theme-light .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
+  background-color: var(--background-secondary);
+}
+.theme-dark .markdown-rendered progress::-webkit-progress-bar,
+.theme-dark .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
+  background-color: var(--background-secondary-alt);
+}
+.markdown-rendered progress::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress::-webkit-progress-value {
+  border: 1px solid;
+  border-radius: var(--radius-s);
+  border-color: transparent;
+}
+.markdown-rendered progress[value="0"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="0"]::-webkit-progress-value {
+  border: unset;
+}
+.markdown-rendered progress[value="0"]::-webkit-progress-value,
+.markdown-rendered progress[value="1"]::-webkit-progress-value,
+.markdown-rendered progress[value="2"]::-webkit-progress-value,
+.markdown-rendered progress[value="3"]::-webkit-progress-value,
+.markdown-rendered progress[value="4"]::-webkit-progress-value,
+.markdown-rendered progress[value="5"]::-webkit-progress-value,
+.markdown-rendered progress[value="6"]::-webkit-progress-value,
+.markdown-rendered progress[value="7"]::-webkit-progress-value,
+.markdown-rendered progress[value="8"]::-webkit-progress-value,
+.markdown-rendered progress[value="9"]::-webkit-progress-value,
+.markdown-rendered progress[value="10"]::-webkit-progress-value,
+.markdown-rendered progress[value="11"]::-webkit-progress-value,
+.markdown-rendered progress[value="12"]::-webkit-progress-value,
+.markdown-rendered progress[value="13"]::-webkit-progress-value,
+.markdown-rendered progress[value="14"]::-webkit-progress-value,
+.markdown-rendered progress[value="15"]::-webkit-progress-value,
+.markdown-rendered progress[value="16"]::-webkit-progress-value,
+.markdown-rendered progress[value="17"]::-webkit-progress-value,
+.markdown-rendered progress[value="18"]::-webkit-progress-value,
+.markdown-rendered progress[value="19"]::-webkit-progress-value,
+.markdown-rendered progress[value="20"]::-webkit-progress-value,
+.markdown-rendered progress[value="21"]::-webkit-progress-value,
+.markdown-rendered progress[value="22"]::-webkit-progress-value,
+.markdown-rendered progress[value="23"]::-webkit-progress-value,
+.markdown-rendered progress[value="24"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="0"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="1"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="2"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="3"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="4"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="5"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="6"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="7"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="8"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="9"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="10"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="11"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="12"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="13"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="14"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="15"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="16"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="17"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="18"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="19"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="20"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="21"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="22"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="23"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="24"]::-webkit-progress-value {
+  background-color: var(--color-red-base);
+  border-color: var(--color-red-tint);
+}
+.markdown-rendered progress[value="25"]::-webkit-progress-value,
+.markdown-rendered progress[value="26"]::-webkit-progress-value,
+.markdown-rendered progress[value="27"]::-webkit-progress-value,
+.markdown-rendered progress[value="28"]::-webkit-progress-value,
+.markdown-rendered progress[value="29"]::-webkit-progress-value,
+.markdown-rendered progress[value="30"]::-webkit-progress-value,
+.markdown-rendered progress[value="31"]::-webkit-progress-value,
+.markdown-rendered progress[value="32"]::-webkit-progress-value,
+.markdown-rendered progress[value="33"]::-webkit-progress-value,
+.markdown-rendered progress[value="34"]::-webkit-progress-value,
+.markdown-rendered progress[value="35"]::-webkit-progress-value,
+.markdown-rendered progress[value="36"]::-webkit-progress-value,
+.markdown-rendered progress[value="37"]::-webkit-progress-value,
+.markdown-rendered progress[value="38"]::-webkit-progress-value,
+.markdown-rendered progress[value="39"]::-webkit-progress-value,
+.markdown-rendered progress[value="40"]::-webkit-progress-value,
+.markdown-rendered progress[value="41"]::-webkit-progress-value,
+.markdown-rendered progress[value="42"]::-webkit-progress-value,
+.markdown-rendered progress[value="43"]::-webkit-progress-value,
+.markdown-rendered progress[value="44"]::-webkit-progress-value,
+.markdown-rendered progress[value="45"]::-webkit-progress-value,
+.markdown-rendered progress[value="46"]::-webkit-progress-value,
+.markdown-rendered progress[value="47"]::-webkit-progress-value,
+.markdown-rendered progress[value="48"]::-webkit-progress-value,
+.markdown-rendered progress[value="49"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="25"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="26"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="27"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="28"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="29"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="30"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="31"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="32"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="33"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="34"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="35"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="36"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="37"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="38"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="39"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="40"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="41"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="42"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="43"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="44"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="45"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="46"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="47"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="48"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="49"]::-webkit-progress-value {
+  background-color: var(--color-orange-base);
+  border-color: var(--color-orange-tint);
+}
+.markdown-rendered progress[value="50"]::-webkit-progress-value,
+.markdown-rendered progress[value="51"]::-webkit-progress-value,
+.markdown-rendered progress[value="52"]::-webkit-progress-value,
+.markdown-rendered progress[value="53"]::-webkit-progress-value,
+.markdown-rendered progress[value="54"]::-webkit-progress-value,
+.markdown-rendered progress[value="55"]::-webkit-progress-value,
+.markdown-rendered progress[value="56"]::-webkit-progress-value,
+.markdown-rendered progress[value="57"]::-webkit-progress-value,
+.markdown-rendered progress[value="58"]::-webkit-progress-value,
+.markdown-rendered progress[value="59"]::-webkit-progress-value,
+.markdown-rendered progress[value="60"]::-webkit-progress-value,
+.markdown-rendered progress[value="61"]::-webkit-progress-value,
+.markdown-rendered progress[value="62"]::-webkit-progress-value,
+.markdown-rendered progress[value="63"]::-webkit-progress-value,
+.markdown-rendered progress[value="64"]::-webkit-progress-value,
+.markdown-rendered progress[value="65"]::-webkit-progress-value,
+.markdown-rendered progress[value="66"]::-webkit-progress-value,
+.markdown-rendered progress[value="67"]::-webkit-progress-value,
+.markdown-rendered progress[value="68"]::-webkit-progress-value,
+.markdown-rendered progress[value="69"]::-webkit-progress-value,
+.markdown-rendered progress[value="70"]::-webkit-progress-value,
+.markdown-rendered progress[value="71"]::-webkit-progress-value,
+.markdown-rendered progress[value="72"]::-webkit-progress-value,
+.markdown-rendered progress[value="73"]::-webkit-progress-value,
+.markdown-rendered progress[value="74"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="50"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="51"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="52"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="53"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="54"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="55"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="56"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="57"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="58"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="59"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="60"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="61"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="62"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="63"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="64"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="65"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="66"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="67"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="68"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="69"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="70"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="71"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="72"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="73"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="74"]::-webkit-progress-value {
+  background-color: var(--color-yellow-base);
+  border-color: var(--color-yellow-tint);
+}
+.markdown-rendered progress[value="75"]::-webkit-progress-value,
+.markdown-rendered progress[value="76"]::-webkit-progress-value,
+.markdown-rendered progress[value="77"]::-webkit-progress-value,
+.markdown-rendered progress[value="78"]::-webkit-progress-value,
+.markdown-rendered progress[value="79"]::-webkit-progress-value,
+.markdown-rendered progress[value="80"]::-webkit-progress-value,
+.markdown-rendered progress[value="81"]::-webkit-progress-value,
+.markdown-rendered progress[value="82"]::-webkit-progress-value,
+.markdown-rendered progress[value="83"]::-webkit-progress-value,
+.markdown-rendered progress[value="84"]::-webkit-progress-value,
+.markdown-rendered progress[value="85"]::-webkit-progress-value,
+.markdown-rendered progress[value="86"]::-webkit-progress-value,
+.markdown-rendered progress[value="87"]::-webkit-progress-value,
+.markdown-rendered progress[value="88"]::-webkit-progress-value,
+.markdown-rendered progress[value="89"]::-webkit-progress-value,
+.markdown-rendered progress[value="90"]::-webkit-progress-value,
+.markdown-rendered progress[value="91"]::-webkit-progress-value,
+.markdown-rendered progress[value="92"]::-webkit-progress-value,
+.markdown-rendered progress[value="93"]::-webkit-progress-value,
+.markdown-rendered progress[value="94"]::-webkit-progress-value,
+.markdown-rendered progress[value="95"]::-webkit-progress-value,
+.markdown-rendered progress[value="96"]::-webkit-progress-value,
+.markdown-rendered progress[value="97"]::-webkit-progress-value,
+.markdown-rendered progress[value="98"]::-webkit-progress-value,
+.markdown-rendered progress[value="99"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="75"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="76"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="77"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="78"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="79"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="80"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="81"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="82"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="83"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="84"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="85"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="86"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="87"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="88"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="89"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="90"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="91"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="92"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="93"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="94"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="95"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="96"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="97"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="98"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="99"]::-webkit-progress-value {
+  background-color: var(--color-green-base);
+  border-color: var(--color-green-tint);
+}
+.markdown-rendered progress[value="100"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="100"]::-webkit-progress-value {
+  background-color: var(--color-blue-base);
+  border-color: var(--color-blue-tint);
+}
 .theme-light.pt-color-scheme-swan-lt audio {
   filter: brightness(100%) contrast(115%);
 }
