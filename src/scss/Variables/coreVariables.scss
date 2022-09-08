@@ -19,6 +19,19 @@ body {
 	--h5-size: 1.2em;
 	--h6-size: 1em;
 
+	--h1-padding-size: 0;
+	--h2-padding-size: 0;
+	--h3-padding-size: 0;
+	--h4-padding-size: 0;
+	--h5-padding-size: 0;
+	--h6-padding-size: 0;
+
+	--icon-color-focused: var(--interactive-accent-text);
+	--background-modifier-border-focus: var(--interactive-accent-base);
+	--text-error: var(--color-red-text);
+	--background-modifier-error: var(--color-red-text);
+	--background-modifier-border: var(--table-border-color);
+
 	--header-height: 41px;
 
 	--callout-padding: 4px;
@@ -28,9 +41,6 @@ body {
 	--file-header-font-size: var(--font-ui-medium);
 	--vault-name-font-size: var(--font-ui-medium);
 	--status-bar-font-size: var(--font-ui-small);
-
-	--icon-color-focused: var(--interactive-accent-text);
-	--background-modifier-border-focus: var(--interactive-accent-base);
 
 	--modal-width: 85vw;
 	--modal-max-width: 1400px;
@@ -42,10 +52,6 @@ body {
 	--drag-ghost-text-color: var(--text-normal);
 
 	--clickable-icon-radius: var(--radius-m);
-
-	--text-error: var(--color-red-text);
-	--background-modifier-error: var(--color-red-text);
-	--background-modifier-border: var(--table-border-color);
 
 	--toggle-radius: var(--size-4-1);
 	--toggle-thumb-radius: 3px;
@@ -74,13 +80,6 @@ body {
 	--accent-border-width: 2px;
 	--scroll-bar-size: 12px;
 
-	--h1-padding-size: 0;
-	--h2-padding-size: 0;
-	--h3-padding-size: 0;
-	--h4-padding-size: 0;
-	--h5-padding-size: 0;
-	--h6-padding-size: 0;
-
 	--background-image-lt: url("");
 	--background-blur-lt: 0;
 	--background-repeat-lt: no-repeat;
@@ -104,6 +103,11 @@ body {
 	--status-bar-background-color-lt: #EBECEF;
 	--background-color-lt: #E6E6E6;
 
+	--color-accent-dt: #8C7FD7;
+	--titlebar-background-color-dt: #2B2B2B;
+	--status-bar-background-color-dt: #2B2B2B;
+	--background-color-dt: #0D0D0D;
+
 	--graph-line-custom-color-lt: #C4C7CA;
 	--graph-note-custom-color-lt: #C4C7CA;
 	--graph-note-focused-custom-color-lt: #8670FF;
@@ -112,11 +116,6 @@ body {
 	--graph-unresolved-custom-color-lt: #FF7070;
 	--graph-highlight-custom-color-lt: #8670FF;
 	--graph-highlight-line-custom-color-lt: #8670FF;
-
-	--color-accent-dt: #8C7FD7;
-	--titlebar-background-color-dt: #2B2B2B;
-	--status-bar-background-color-dt: #2B2B2B;
-	--background-color-dt: #0D0D0D;
 
 	--graph-note-custom-color-dt: #878787;
 	--graph-note-focused-custom-color-dt: #4C3AB6;
@@ -287,6 +286,13 @@ body {
 		--h5-text-color-lt: var(--text-normal);
 		--h6-text-color-lt: var(--text-normal);
 
+		--h1-color: var(--h1-text-color-lt);
+		--h2-color: var(--h2-text-color-lt);
+		--h3-color: var(--h3-text-color-lt);
+		--h4-color: var(--h4-text-color-lt);
+		--h5-color: var(--h5-text-color-lt);
+		--h6-color: var(--h6-text-color-lt);
+
 		--text-bold-color-lt: var(--text-normal);
 		--text-italic-color-lt: var(--text-normal);
 		--link-internal-color-lt: var(--interactive-accent-text);
@@ -309,83 +315,81 @@ body {
 		}
 
 		/* #region  [Accent Color Presets] Light Theme */
-		&.pt-accent-color- {
-			&custom-lt {
-				--interactive-accent-base: var(--color-accent-base-lt);
-				--interactive-accent-tint: var(--color-accent-tint-lt);
-				--interactive-accent-text: var(--color-accent-text-lt);
-				--interactive-accent-hover: var(--color-accent-tint-lt);
-			}
+		&.pt-accent-color-custom-lt {
+			--interactive-accent-base: var(--color-accent-base-lt);
+			--interactive-accent-tint: var(--color-accent-tint-lt);
+			--interactive-accent-text: var(--color-accent-text-lt);
+			--interactive-accent-hover: var(--color-accent-tint-lt);
+		}
 
-			&red-lt {
-				--interactive-accent-base: var(--color-red-base);
-				--interactive-accent-tint: var(--color-red-tint);
-				--interactive-accent-text: var(--color-red-text);
-				--interactive-accent-hover: var(--color-red-tint);
-			}
+		&.pt-accent-color-red-lt {
+			--interactive-accent-base: var(--color-red-base);
+			--interactive-accent-tint: var(--color-red-tint);
+			--interactive-accent-text: var(--color-red-text);
+			--interactive-accent-hover: var(--color-red-tint);
+		}
 
-			&orange-lt {
-				--interactive-accent-base: var(--color-orange-base);
-				--interactive-accent-tint: var(--color-orange-tint);
-				--interactive-accent-text: var(--color-orange-text);
-				--interactive-accent-hover: var(--color-orange-tint);
-			}
+		&.pt-accent-color-orange-lt {
+			--interactive-accent-base: var(--color-orange-base);
+			--interactive-accent-tint: var(--color-orange-tint);
+			--interactive-accent-text: var(--color-orange-text);
+			--interactive-accent-hover: var(--color-orange-tint);
+		}
 
-			&yellow-lt {
-				--interactive-accent-base: var(--color-yellow-base);
-				--interactive-accent-tint: var(--color-yellow-tint);
-				--interactive-accent-text: var(--color-yellow-text);
-				--interactive-accent-hover: var(--color-yellow-tint);
-			}
+		&.pt-accent-color-yellow-lt {
+			--interactive-accent-base: var(--color-yellow-base);
+			--interactive-accent-tint: var(--color-yellow-tint);
+			--interactive-accent-text: var(--color-yellow-text);
+			--interactive-accent-hover: var(--color-yellow-tint);
+		}
 
-			&green-lt {
-				--interactive-accent-base: var(--color-green-base);
-				--interactive-accent-tint: var(--color-green-tint);
-				--interactive-accent-text: var(--color-green-text);
-				--interactive-accent-hover: var(--color-green-tint);
-			}
+		&.pt-accent-color-green-lt {
+			--interactive-accent-base: var(--color-green-base);
+			--interactive-accent-tint: var(--color-green-tint);
+			--interactive-accent-text: var(--color-green-text);
+			--interactive-accent-hover: var(--color-green-tint);
+		}
 
-			&mint-lt {
-				--interactive-accent-base: var(--color-mint-base);
-				--interactive-accent-tint: var(--color-mint-tint);
-				--interactive-accent-text: var(--color-mint-text);
-				--interactive-accent-hover: var(--color-mint-tint);
-			}
+		&.pt-accent-color-mint-lt {
+			--interactive-accent-base: var(--color-mint-base);
+			--interactive-accent-tint: var(--color-mint-tint);
+			--interactive-accent-text: var(--color-mint-text);
+			--interactive-accent-hover: var(--color-mint-tint);
+		}
 
-			&aqua-lt {
-				--interactive-accent-base: var(--color-aqua-base);
-				--interactive-accent-tint: var(--color-aqua-tint);
-				--interactive-accent-text: var(--color-aqua-text);
-				--interactive-accent-hover: var(--color-aqua-tint);
-			}
+		&.pt-accent-color-aqua-lt {
+			--interactive-accent-base: var(--color-aqua-base);
+			--interactive-accent-tint: var(--color-aqua-tint);
+			--interactive-accent-text: var(--color-aqua-text);
+			--interactive-accent-hover: var(--color-aqua-tint);
+		}
 
-			&blue-lt {
-				--interactive-accent-base: var(--color-blue-base);
-				--interactive-accent-tint: var(--color-blue-tint);
-				--interactive-accent-text: var(--color-blue-text);
-				--interactive-accent-hover: var(--color-blue-tint);
-			}
+		&.pt-accent-color-blue-lt {
+			--interactive-accent-base: var(--color-blue-base);
+			--interactive-accent-tint: var(--color-blue-tint);
+			--interactive-accent-text: var(--color-blue-text);
+			--interactive-accent-hover: var(--color-blue-tint);
+		}
 
-			&purple-lt {
-				--interactive-accent-base: var(--color-purple-base);
-				--interactive-accent-tint: var(--color-purple-tint);
-				--interactive-accent-text: var(--color-purple-text);
-				--interactive-accent-hover: var(--color-purple-tint);
-			}
+		&.pt-accent-color-purple-lt {
+			--interactive-accent-base: var(--color-purple-base);
+			--interactive-accent-tint: var(--color-purple-tint);
+			--interactive-accent-text: var(--color-purple-text);
+			--interactive-accent-hover: var(--color-purple-tint);
+		}
 
-			&pink-lt {
-				--interactive-accent-base: var(--color-pink-base);
-				--interactive-accent-tint: var(--color-pink-tint);
-				--interactive-accent-text: var(--color-pink-text);
-				--interactive-accent-hover: var(--color-pink-tint);
-			}
+		&.pt-accent-color-pink-lt {
+			--interactive-accent-base: var(--color-pink-base);
+			--interactive-accent-tint: var(--color-pink-tint);
+			--interactive-accent-text: var(--color-pink-text);
+			--interactive-accent-hover: var(--color-pink-tint);
+		}
 
-			&grey-lt {
-				--interactive-accent-base: var(--color-grey-base);
-				--interactive-accent-tint: var(--color-grey-tint);
-				--interactive-accent-text: var(--color-grey-text);
-				--interactive-accent-hover: var(--color-grey-tint);
-			}
+		&.pt-accent-color-grey-lt {
+			--interactive-accent-base: var(--color-grey-base);
+			--interactive-accent-tint: var(--color-grey-tint);
+			--interactive-accent-text: var(--color-grey-text);
+			--interactive-accent-hover: var(--color-grey-tint);
 		}
 		/* #endregion */
 	}
@@ -413,6 +417,13 @@ body {
 		--h5-text-color-dt: var(--text-normal);
 		--h6-text-color-dt: var(--text-normal);
 
+		--h1-color: var(--h1-text-color-dt);
+		--h2-color: var(--h2-text-color-dt);
+		--h3-color: var(--h3-text-color-dt);
+		--h4-color: var(--h4-text-color-dt);
+		--h5-color: var(--h5-text-color-dt);
+		--h6-color: var(--h6-text-color-dt);
+
 		--text-bold-color-dt: var(--text-normal);
 		--text-italic-color-dt: var(--text-normal);
 		--link-internal-color-dt: var(--interactive-accent-text);
@@ -435,83 +446,81 @@ body {
 		}
 
 		/* #region  [Accent Color Presets] Dark Theme */
-		&.pt-accent-color- {
-			&custom-dt {
-				--interactive-accent-base: var(--color-accent-base-dt);
-				--interactive-accent-tint: var(--color-accent-tint-dt);
-				--interactive-accent-text: var(--color-accent-text-dt);
-				--interactive-accent-hover: var(--color-accent-tint-dt);
-			}
+		&.pt-accent-color-custom-dt {
+			--interactive-accent-base: var(--color-accent-base-dt);
+			--interactive-accent-tint: var(--color-accent-tint-dt);
+			--interactive-accent-text: var(--color-accent-text-dt);
+			--interactive-accent-hover: var(--color-accent-tint-dt);
+		}
 
-			&red-dt {
-				--interactive-accent-base: var(--color-red-base);
-				--interactive-accent-tint: var(--color-red-tint);
-				--interactive-accent-text: var(--color-red-text);
-				--interactive-accent-hover: var(--color-red-tint);
-			}
+		&.pt-accent-color-red-dt {
+			--interactive-accent-base: var(--color-red-base);
+			--interactive-accent-tint: var(--color-red-tint);
+			--interactive-accent-text: var(--color-red-text);
+			--interactive-accent-hover: var(--color-red-tint);
+		}
 
-			&orange-dt {
-				--interactive-accent-base: var(--color-orange-base);
-				--interactive-accent-tint: var(--color-orange-tint);
-				--interactive-accent-text: var(--color-orange-text);
-				--interactive-accent-hover: var(--color-orange-tint);
-			}
+		&.pt-accent-color-orange-dt {
+			--interactive-accent-base: var(--color-orange-base);
+			--interactive-accent-tint: var(--color-orange-tint);
+			--interactive-accent-text: var(--color-orange-text);
+			--interactive-accent-hover: var(--color-orange-tint);
+		}
 
-			&yellow-dt {
-				--interactive-accent-base: var(--color-yellow-base);
-				--interactive-accent-tint: var(--color-yellow-tint);
-				--interactive-accent-text: var(--color-yellow-text);
-				--interactive-accent-hover: var(--color-yellow-tint);
-			}
+		&.pt-accent-color-yellow-dt {
+			--interactive-accent-base: var(--color-yellow-base);
+			--interactive-accent-tint: var(--color-yellow-tint);
+			--interactive-accent-text: var(--color-yellow-text);
+			--interactive-accent-hover: var(--color-yellow-tint);
+		}
 
-			&green-dt {
-				--interactive-accent-base: var(--color-green-base);
-				--interactive-accent-tint: var(--color-green-tint);
-				--interactive-accent-text: var(--color-green-text);
-				--interactive-accent-hover: var(--color-green-tint);
-			}
+		&.pt-accent-color-green-dt {
+			--interactive-accent-base: var(--color-green-base);
+			--interactive-accent-tint: var(--color-green-tint);
+			--interactive-accent-text: var(--color-green-text);
+			--interactive-accent-hover: var(--color-green-tint);
+		}
 
-			&mint-dt {
-				--interactive-accent-base: var(--color-mint-base);
-				--interactive-accent-tint: var(--color-mint-tint);
-				--interactive-accent-text: var(--color-mint-text);
-				--interactive-accent-hover: var(--color-mint-tint);
-			}
+		&.pt-accent-color-mint-dt {
+			--interactive-accent-base: var(--color-mint-base);
+			--interactive-accent-tint: var(--color-mint-tint);
+			--interactive-accent-text: var(--color-mint-text);
+			--interactive-accent-hover: var(--color-mint-tint);
+		}
 
-			&aqua-dt {
-				--interactive-accent-base: var(--color-aqua-base);
-				--interactive-accent-tint: var(--color-aqua-tint);
-				--interactive-accent-text: var(--color-aqua-text);
-				--interactive-accent-hover: var(--color-aqua-tint);
-			}
+		&.pt-accent-color-aqua-dt {
+			--interactive-accent-base: var(--color-aqua-base);
+			--interactive-accent-tint: var(--color-aqua-tint);
+			--interactive-accent-text: var(--color-aqua-text);
+			--interactive-accent-hover: var(--color-aqua-tint);
+		}
 
-			&blue-dt {
-				--interactive-accent-base: var(--color-blue-base);
-				--interactive-accent-tint: var(--color-blue-tint);
-				--interactive-accent-text: var(--color-blue-text);
-				--interactive-accent-hover: var(--color-blue-tint);
-			}
+		&.pt-accent-color-blue-dt {
+			--interactive-accent-base: var(--color-blue-base);
+			--interactive-accent-tint: var(--color-blue-tint);
+			--interactive-accent-text: var(--color-blue-text);
+			--interactive-accent-hover: var(--color-blue-tint);
+		}
 
-			&purple-dt {
-				--interactive-accent-base: var(--color-purple-base);
-				--interactive-accent-tint: var(--color-purple-tint);
-				--interactive-accent-text: var(--color-purple-text);
-				--interactive-accent-hover: var(--color-purple-tint);
-			}
+		&.pt-accent-color-purple-dt {
+			--interactive-accent-base: var(--color-purple-base);
+			--interactive-accent-tint: var(--color-purple-tint);
+			--interactive-accent-text: var(--color-purple-text);
+			--interactive-accent-hover: var(--color-purple-tint);
+		}
 
-			&pink-dt {
-				--interactive-accent-base: var(--color-pink-base);
-				--interactive-accent-tint: var(--color-pink-tint);
-				--interactive-accent-text: var(--color-pink-text);
-				--interactive-accent-hover: var(--color-pink-tint);
-			}
+		&.pt-accent-color-pink-dt {
+			--interactive-accent-base: var(--color-pink-base);
+			--interactive-accent-tint: var(--color-pink-tint);
+			--interactive-accent-text: var(--color-pink-text);
+			--interactive-accent-hover: var(--color-pink-tint);
+		}
 
-			&grey-dt {
-				--interactive-accent-base: var(--color-grey-base);
-				--interactive-accent-tint: var(--color-grey-tint);
-				--interactive-accent-text: var(--color-grey-text);
-				--interactive-accent-hover: var(--color-grey-tint);
-			}
+		&.pt-accent-color-grey-dt {
+			--interactive-accent-base: var(--color-grey-base);
+			--interactive-accent-tint: var(--color-grey-tint);
+			--interactive-accent-text: var(--color-grey-text);
+			--interactive-accent-hover: var(--color-grey-tint);
 		}
 		/* #endregion */
 	}

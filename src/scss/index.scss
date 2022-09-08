@@ -69,10 +69,10 @@
 @use "Plugins/Theme/customVaultBanner.scss"; // ✅
 @use "Plugins/Theme/markHighlightSystem.scss"; // ✅
 @use "Plugins/Theme/fontFeatures.scss"; // ✅
-@use "Plugins/Theme/Headers/headersCustomisation.scss"; // 🧹
-@use "Plugins/Theme/coloredFolders.scss"; // 🧹 Won't be perfect. Might not implement.
-// @use "Plugins/Theme/background.scss"; // 🔧 Might be dropped
-// @use "Plugins/Theme/customIcons.scss"; // 🔧 Might be dropped
+@use "Plugins/Theme/Headers/headersCustomisation.scss"; // 🧹 Might need to rework the padding and margin.
+// @use "Plugins/Theme/coloredFolders.scss"; // ⚠️ Won't be perfect. Might not implement.
+// @use "Plugins/Theme/background.scss"; // ⚠️ Might be dropped
+// @use "Plugins/Theme/customIcons.scss"; // ⚠️ Might be dropped
 
 /* Community Plugins */
 @use "Plugins/Community/styleSettings.scss"; // 🧹 Needs new style
@@ -103,7 +103,7 @@
 // TODO
 // - Need to evaluate hover states through out the app due to previous version of the theme implemented them and might be redundant in select areas.
 // - Read through the app.css for additional insight and potential improvements for the theme.
-// - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant    code). 
+//     - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant    code). 
 // - embedded-backlinks / internal-query styling.
 // - Make sure that the currently active tab is distinguisable between the active tabs in other panes.
 // - Will need to redo the Mobile side of the theme.

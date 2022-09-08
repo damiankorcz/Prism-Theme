@@ -54,14 +54,23 @@ body {
   --h4-size: 1.4em;
   --h5-size: 1.2em;
   --h6-size: 1em;
+  --h1-padding-size: 0;
+  --h2-padding-size: 0;
+  --h3-padding-size: 0;
+  --h4-padding-size: 0;
+  --h5-padding-size: 0;
+  --h6-padding-size: 0;
+  --icon-color-focused: var(--interactive-accent-text);
+  --background-modifier-border-focus: var(--interactive-accent-base);
+  --text-error: var(--color-red-text);
+  --background-modifier-error: var(--color-red-text);
+  --background-modifier-border: var(--table-border-color);
   --header-height: 41px;
   --callout-padding: 4px;
   --divider-color-hover: var(--interactive-accent-tint);
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
   --status-bar-font-size: var(--font-ui-small);
-  --icon-color-focused: var(--interactive-accent-text);
-  --background-modifier-border-focus: var(--interactive-accent-base);
   --modal-width: 85vw;
   --modal-max-width: 1400px;
   --modal-height: 80vh;
@@ -70,9 +79,6 @@ body {
   --text-accent: var(--interactive-accent-text);
   --drag-ghost-text-color: var(--text-normal);
   --clickable-icon-radius: var(--radius-m);
-  --text-error: var(--color-red-text);
-  --background-modifier-error: var(--color-red-text);
-  --background-modifier-border: var(--table-border-color);
   --toggle-radius: var(--size-4-1);
   --toggle-thumb-radius: 3px;
   --slider-thumb-radius: var(--size-4-1);
@@ -94,12 +100,6 @@ body {
   --blur-intensity: 8px;
   --accent-border-width: 2px;
   --scroll-bar-size: 12px;
-  --h1-padding-size: 0;
-  --h2-padding-size: 0;
-  --h3-padding-size: 0;
-  --h4-padding-size: 0;
-  --h5-padding-size: 0;
-  --h6-padding-size: 0;
   --background-image-lt: url();
   --background-blur-lt: 0;
   --background-repeat-lt: no-repeat;
@@ -118,6 +118,10 @@ body {
   --titlebar-background-color-lt: #EBECEF;
   --status-bar-background-color-lt: #EBECEF;
   --background-color-lt: #E6E6E6;
+  --color-accent-dt: #8C7FD7;
+  --titlebar-background-color-dt: #2B2B2B;
+  --status-bar-background-color-dt: #2B2B2B;
+  --background-color-dt: #0D0D0D;
   --graph-line-custom-color-lt: #C4C7CA;
   --graph-note-custom-color-lt: #C4C7CA;
   --graph-note-focused-custom-color-lt: #8670FF;
@@ -126,10 +130,6 @@ body {
   --graph-unresolved-custom-color-lt: #FF7070;
   --graph-highlight-custom-color-lt: #8670FF;
   --graph-highlight-line-custom-color-lt: #8670FF;
-  --color-accent-dt: #8C7FD7;
-  --titlebar-background-color-dt: #2B2B2B;
-  --status-bar-background-color-dt: #2B2B2B;
-  --background-color-dt: #0D0D0D;
   --graph-note-custom-color-dt: #878787;
   --graph-note-focused-custom-color-dt: #4C3AB6;
   --graph-tag-custom-color-dt: #3663AB;
@@ -225,6 +225,12 @@ body.theme-light {
   --h4-text-color-lt: var(--text-normal);
   --h5-text-color-lt: var(--text-normal);
   --h6-text-color-lt: var(--text-normal);
+  --h1-color: var(--h1-text-color-lt);
+  --h2-color: var(--h2-text-color-lt);
+  --h3-color: var(--h3-text-color-lt);
+  --h4-color: var(--h4-text-color-lt);
+  --h5-color: var(--h5-text-color-lt);
+  --h6-color: var(--h6-text-color-lt);
   --text-bold-color-lt: var(--text-normal);
   --text-italic-color-lt: var(--text-normal);
   --link-internal-color-lt: var(--interactive-accent-text);
@@ -328,6 +334,12 @@ body.theme-dark {
   --h4-text-color-dt: var(--text-normal);
   --h5-text-color-dt: var(--text-normal);
   --h6-text-color-dt: var(--text-normal);
+  --h1-color: var(--h1-text-color-dt);
+  --h2-color: var(--h2-text-color-dt);
+  --h3-color: var(--h3-text-color-dt);
+  --h4-color: var(--h4-text-color-dt);
+  --h5-color: var(--h5-text-color-dt);
+  --h6-color: var(--h6-text-color-dt);
   --text-bold-color-dt: var(--text-normal);
   --text-italic-color-dt: var(--text-normal);
   --link-internal-color-dt: var(--interactive-accent-text);
@@ -2810,383 +2822,43 @@ mark.Grey {
 }
 .cm-s-obsidian .HyperMD-header-1,
 .markdown-preview-view h1 {
-  font-size: var(--h1-size);
   transition: color ease 500ms;
   padding-top: var(--h1-padding-size);
   padding-bottom: var(--h1-padding-size);
 }
-.theme-light .cm-s-obsidian .HyperMD-header-1,
-.theme-light .markdown-preview-view h1 {
-  color: var(--h1-text-color-lt);
-}
-.theme-dark .cm-s-obsidian .HyperMD-header-1,
-.theme-dark .markdown-preview-view h1 {
-  color: var(--h1-text-color-dt);
-}
 .cm-s-obsidian .HyperMD-header-2,
 .markdown-preview-view h2 {
-  font-size: var(--h2-size);
   transition: color ease 500ms;
   padding-top: var(--h2-padding-size);
   padding-bottom: var(--h2-padding-size);
 }
-.theme-light .cm-s-obsidian .HyperMD-header-2,
-.theme-light .markdown-preview-view h2 {
-  color: var(--h2-text-color-lt);
-}
-.theme-dark .cm-s-obsidian .HyperMD-header-2,
-.theme-dark .markdown-preview-view h2 {
-  color: var(--h2-text-color-dt);
-}
 .cm-s-obsidian .HyperMD-header-3,
 .markdown-preview-view h3 {
-  font-size: var(--h3-size);
   transition: color ease 500ms;
   padding-top: var(--h3-padding-size);
   padding-bottom: var(--h3-padding-size);
 }
-.theme-light .cm-s-obsidian .HyperMD-header-3,
-.theme-light .markdown-preview-view h3 {
-  color: var(--h3-text-color-lt);
-}
-.theme-dark .cm-s-obsidian .HyperMD-header-3,
-.theme-dark .markdown-preview-view h3 {
-  color: var(--h3-text-color-dt);
-}
 .cm-s-obsidian .HyperMD-header-4,
 .markdown-preview-view h4 {
-  font-size: var(--h4-size);
   transition: color ease 500ms;
   padding-top: var(--h4-padding-size);
   padding-bottom: var(--h4-padding-size);
 }
-.theme-light .cm-s-obsidian .HyperMD-header-4,
-.theme-light .markdown-preview-view h4 {
-  color: var(--h4-text-color-lt);
-}
-.theme-dark .cm-s-obsidian .HyperMD-header-4,
-.theme-dark .markdown-preview-view h4 {
-  color: var(--h4-text-color-dt);
-}
 .cm-s-obsidian .HyperMD-header-5,
 .markdown-preview-view h5 {
-  font-size: var(--h5-size);
   transition: color ease 500ms;
   padding-top: var(--h5-padding-size);
   padding-bottom: var(--h5-padding-size);
 }
-.theme-light .cm-s-obsidian .HyperMD-header-5,
-.theme-light .markdown-preview-view h5 {
-  color: var(--h5-text-color-lt);
-}
-.theme-dark .cm-s-obsidian .HyperMD-header-5,
-.theme-dark .markdown-preview-view h5 {
-  color: var(--h5-text-color-dt);
-}
 .cm-s-obsidian .HyperMD-header-6,
 .markdown-preview-view h6 {
-  font-size: var(--h6-size);
   transition: color ease 500ms;
   padding-top: var(--h6-padding-size);
   padding-bottom: var(--h6-padding-size);
 }
-.theme-light .cm-s-obsidian .HyperMD-header-6,
-.theme-light .markdown-preview-view h6 {
-  color: var(--h6-text-color-lt);
-}
-.theme-dark .cm-s-obsidian .HyperMD-header-6,
-.theme-dark .markdown-preview-view h6 {
-  color: var(--h6-text-color-dt);
-}
 .markdown-rendered :is(h1, h2, h3, h4, h5, h6),
 .cm-s-obsidian .HyperMD-header {
   margin: unset;
-}
-.pt-color-folders.pt-color-folders-text-center .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title > .nav-folder-title-content {
-  text-align: center;
-}
-.pt-color-folders.pt-color-folders-text-right .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title > .nav-folder-title-content {
-  text-align: right;
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+2) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-red-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+3) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-orange-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+4) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-yellow-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+5) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-green-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+6) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-mint-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+7) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-aqua-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+8) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-blue-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+9) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-purple-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+10) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-pink-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children > .nav-folder:nth-child(10n+11) .nav-folder-children .nav-folder-children {
-  border-left: 2px solid var(--color-grey-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children .nav-folder-title:not([data-path="/"]) {
-  padding: 2px 0 2px 2px;
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder {
-  margin-bottom: 8px;
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-children {
-  margin-top: 4px;
-  margin-bottom: 0;
-  margin-left: unset;
-  border-left: unset;
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title > .nav-folder-title-content {
-  width: -webkit-fill-available;
-  width: fill-available;
-  padding: 4px 22px 4px 0;
-  font-size: 16px;
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) {
-  padding: 4px 4px 4px 0;
-  border: 1px solid;
-  border-radius: var(--radius-s);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed) > .nav-folder-title {
-  width: calc(100% + 6px);
-  margin-top: -5px;
-  margin-right: -5px;
-  margin-left: -1px;
-  border: 2px solid;
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+2) {
-  background-color: hsl(var(--color-red-base-h) var(--color-red-base-s) var(--color-red-base-l)/30%);
-  border-color: var(--color-red-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+2) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+2) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-red-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+2) > .nav-folder-title {
-  background-color: var(--color-red-base);
-  border-color: var(--color-red-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+2) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-red-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+3) {
-  background-color: hsl(var(--color-orange-base-h) var(--color-orange-base-s) var(--color-orange-base-l)/30%);
-  border-color: var(--color-orange-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+3) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+3) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-orange-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+3) > .nav-folder-title {
-  background-color: var(--color-orange-base);
-  border-color: var(--color-orange-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+3) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-orange-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+4) {
-  background-color: hsl(var(--color-yellow-base-h) var(--color-yellow-base-s) var(--color-yellow-base-l)/30%);
-  border-color: var(--color-yellow-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+4) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+4) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-yellow-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+4) > .nav-folder-title {
-  background-color: var(--color-yellow-base);
-  border-color: var(--color-yellow-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+4) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-yellow-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+5) {
-  background-color: hsl(var(--color-green-base-h) var(--color-green-base-s) var(--color-green-base-l)/30%);
-  border-color: var(--color-green-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+5) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+5) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-green-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+5) > .nav-folder-title {
-  background-color: var(--color-green-base);
-  border-color: var(--color-green-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+5) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-green-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+6) {
-  background-color: hsl(var(--color-mint-base-h) var(--color-mint-base-s) var(--color-mint-base-l)/30%);
-  border-color: var(--color-mint-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+6) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+6) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-mint-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+6) > .nav-folder-title {
-  background-color: var(--color-mint-base);
-  border-color: var(--color-mint-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+6) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-mint-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+7) {
-  background-color: hsl(var(--color-aqua-base-h) var(--color-aqua-base-s) var(--color-aqua-base-l)/30%);
-  border-color: var(--color-aqua-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+7) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+7) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-aqua-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+7) > .nav-folder-title {
-  background-color: var(--color-aqua-base);
-  border-color: var(--color-aqua-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+7) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-aqua-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+8) {
-  background-color: hsl(var(--color-blue-base-h) var(--color-blue-base-s) var(--color-blue-base-l)/30%);
-  border-color: var(--color-blue-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+8) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+8) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-blue-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+8) > .nav-folder-title {
-  background-color: var(--color-blue-base);
-  border-color: var(--color-blue-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+8) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-blue-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+9) {
-  background-color: hsl(var(--color-purple-base-h) var(--color-purple-base-s) var(--color-purple-base-l)/30%);
-  border-color: var(--color-purple-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+9) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+9) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-purple-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+9) > .nav-folder-title {
-  background-color: var(--color-purple-base);
-  border-color: var(--color-purple-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+9) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-purple-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+10) {
-  background-color: hsl(var(--color-pink-base-h) var(--color-pink-base-s) var(--color-pink-base-l)/30%);
-  border-color: var(--color-pink-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+10) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+10) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-pink-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+10) > .nav-folder-title {
-  background-color: var(--color-pink-base);
-  border-color: var(--color-pink-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+10) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-pink-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+11) {
-  background-color: hsl(var(--color-grey-base-h) var(--color-grey-base-s) var(--color-grey-base-l)/30%);
-  border-color: var(--color-grey-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+11) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator,
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+11) .nav-folder:not(.is-collapsed) > div.nav-folder-title:not([data-path="/"]) > .nav-folder-collapse-indicator {
-  color: var(--color-grey-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+11) > .nav-folder-title {
-  background-color: var(--color-grey-base);
-  border-color: var(--color-grey-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder:not(.is-collapsed):nth-child(10n+11) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-grey-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+2) > .nav-folder-title {
-  background-color: var(--color-red-base);
-  border: 2px solid var(--color-red-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+2) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-red-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+3) > .nav-folder-title {
-  background-color: var(--color-orange-base);
-  border: 2px solid var(--color-orange-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+3) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-orange-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+4) > .nav-folder-title {
-  background-color: var(--color-yellow-base);
-  border: 2px solid var(--color-yellow-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+4) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-yellow-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+5) > .nav-folder-title {
-  background-color: var(--color-green-base);
-  border: 2px solid var(--color-green-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+5) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-green-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+6) > .nav-folder-title {
-  background-color: var(--color-mint-base);
-  border: 2px solid var(--color-mint-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+6) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-mint-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+7) > .nav-folder-title {
-  background-color: var(--color-aqua-base);
-  border: 2px solid var(--color-aqua-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+7) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-aqua-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+8) > .nav-folder-title {
-  background-color: var(--color-blue-base);
-  border: 2px solid var(--color-blue-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+8) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-blue-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+9) > .nav-folder-title {
-  background-color: var(--color-purple-base);
-  border: 2px solid var(--color-purple-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+9) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-purple-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+10) > .nav-folder-title {
-  background-color: var(--color-pink-base);
-  border: 2px solid var(--color-pink-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+10) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-pink-text);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+11) > .nav-folder-title {
-  background-color: var(--color-grey-base);
-  border: 2px solid var(--color-grey-tint);
-}
-.pt-color-folders .workspace-leaf-content[data-type=file-explorer] .nav-files-container > .nav-folder.mod-root > .nav-folder-children > .nav-folder.is-collapsed:nth-child(10n+11) > .nav-folder-title .nav-folder-title-content {
-  color: var(--color-grey-text);
 }
 div.workspace-leaf-content[data-type=style-settings] div.view-content {
   padding: var(--file-margins);
