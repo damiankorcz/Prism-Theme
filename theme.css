@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
-    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 2
+    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 3
     > A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -67,6 +67,7 @@ body {
   --background-modifier-border: var(--table-border-color);
   --header-height: 41px;
   --callout-padding: 4px;
+  --callout-radius: var(--radius-m);
   --divider-color-hover: var(--interactive-accent-tint);
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
@@ -1253,7 +1254,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism v3.0.0 Beta 2";
+  content: "Prism v3.0.0 Beta 3";
   background: var(--background-secondary);
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
@@ -2316,6 +2317,228 @@ div.notice-container div.notice {
   border: 2px solid var(--table-border-color);
   box-shadow: var(--shadow-l);
   animation: pop-down 200ms forwards ease-in-out;
+}
+.callout {
+  background-color: unset;
+}
+.callout .callout-title {
+  position: relative;
+  z-index: 5;
+  gap: unset;
+  align-items: center;
+  height: 36px;
+  border: 2px solid;
+  border-radius: var(--radius-m);
+}
+.callout .callout-title-inner {
+  margin-left: var(--size-4-1);
+}
+.callout .callout-icon {
+  margin: 0 var(--size-4-1) 0 var(--size-4-2);
+  border-radius: var(--radius-m);
+}
+.callout .callout-fold {
+  display: flex;
+  align-self: center;
+  margin-left: auto;
+}
+.callout .callout-content {
+  padding: var(--size-4-4) var(--size-4-3) var(--size-4-1) var(--size-4-3);
+  margin-top: -16px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-bottom-right-radius: var(--radius-m);
+  border-bottom-left-radius: var(--radius-m);
+}
+.callout[data-callout=note] .callout-title {
+  color: var(--color-grey-text);
+  background-color: var(--color-grey-base);
+  border-color: var(--color-grey-tint);
+}
+.callout[data-callout=note] .callout-icon .svg-icon {
+  color: var(--color-grey-text);
+}
+.callout[data-callout=note] .callout-content {
+  background-color: hsl(var(--color-grey-base-h) var(--color-grey-base-s) var(--color-grey-base-l)/20%);
+  border-color: var(--color-grey-tint);
+}
+.callout[data-callout=abstract] .callout-title,
+.callout[data-callout=summary] .callout-title,
+.callout[data-callout=tldr] .callout-title {
+  color: var(--color-aqua-text);
+  background-color: var(--color-aqua-base);
+  border-color: var(--color-aqua-tint);
+}
+.callout[data-callout=abstract] .callout-icon .svg-icon,
+.callout[data-callout=summary] .callout-icon .svg-icon,
+.callout[data-callout=tldr] .callout-icon .svg-icon {
+  color: var(--color-aqua-text);
+}
+.callout[data-callout=abstract] .callout-content,
+.callout[data-callout=summary] .callout-content,
+.callout[data-callout=tldr] .callout-content {
+  background-color: hsl(var(--color-aqua-base-h) var(--color-aqua-base-s) var(--color-aqua-base-l)/20%);
+  border-color: var(--color-aqua-tint);
+}
+.callout[data-callout=info] .callout-title,
+.callout[data-callout=todo] .callout-title {
+  color: var(--color-blue-text);
+  background-color: var(--color-blue-base);
+  border-color: var(--color-blue-tint);
+}
+.callout[data-callout=info] .callout-icon .svg-icon,
+.callout[data-callout=todo] .callout-icon .svg-icon {
+  color: var(--color-blue-text);
+}
+.callout[data-callout=info] .callout-content,
+.callout[data-callout=todo] .callout-content {
+  background-color: hsl(var(--color-blue-base-h) var(--color-blue-base-s) var(--color-blue-base-l)/20%);
+  border-color: var(--color-blue-tint);
+}
+.callout[data-callout=tip] .callout-title,
+.callout[data-callout=hint] .callout-title,
+.callout[data-callout=important] .callout-title {
+  color: var(--color-mint-text);
+  background-color: var(--color-mint-base);
+  border-color: var(--color-mint-tint);
+}
+.callout[data-callout=tip] .callout-icon .svg-icon,
+.callout[data-callout=hint] .callout-icon .svg-icon,
+.callout[data-callout=important] .callout-icon .svg-icon {
+  color: var(--color-mint-text);
+}
+.callout[data-callout=tip] .callout-content,
+.callout[data-callout=hint] .callout-content,
+.callout[data-callout=important] .callout-content {
+  background-color: hsl(var(--color-mint-base-h) var(--color-mint-base-s) var(--color-mint-base-l)/20%);
+  border-color: var(--color-mint-tint);
+}
+.callout[data-callout=success] .callout-title,
+.callout[data-callout=check] .callout-title,
+.callout[data-callout=done] .callout-title {
+  color: var(--color-green-text);
+  background-color: var(--color-green-base);
+  border-color: var(--color-green-tint);
+}
+.callout[data-callout=success] .callout-icon .svg-icon,
+.callout[data-callout=check] .callout-icon .svg-icon,
+.callout[data-callout=done] .callout-icon .svg-icon {
+  color: var(--color-green-text);
+}
+.callout[data-callout=success] .callout-content,
+.callout[data-callout=check] .callout-content,
+.callout[data-callout=done] .callout-content {
+  background-color: hsl(var(--color-green-base-h) var(--color-green-base-s) var(--color-green-base-l)/20%);
+  border-color: var(--color-green-tint);
+}
+.callout[data-callout=question] .callout-title,
+.callout[data-callout=help] .callout-title,
+.callout[data-callout=faq] .callout-title {
+  color: var(--color-yellow-text);
+  background-color: var(--color-yellow-base);
+  border-color: var(--color-yellow-tint);
+}
+.callout[data-callout=question] .callout-icon .svg-icon,
+.callout[data-callout=help] .callout-icon .svg-icon,
+.callout[data-callout=faq] .callout-icon .svg-icon {
+  color: var(--color-yellow-text);
+}
+.callout[data-callout=question] .callout-content,
+.callout[data-callout=help] .callout-content,
+.callout[data-callout=faq] .callout-content {
+  background-color: hsl(var(--color-yellow-base-h) var(--color-yellow-base-s) var(--color-yellow-base-l)/20%);
+  border-color: var(--color-yellow-tint);
+}
+.callout[data-callout=warning] .callout-title,
+.callout[data-callout=caution] .callout-title,
+.callout[data-callout=attention] .callout-title {
+  color: var(--color-orange-text);
+  background-color: var(--color-orange-base);
+  border-color: var(--color-orange-tint);
+}
+.callout[data-callout=warning] .callout-icon .svg-icon,
+.callout[data-callout=caution] .callout-icon .svg-icon,
+.callout[data-callout=attention] .callout-icon .svg-icon {
+  color: var(--color-orange-text);
+}
+.callout[data-callout=warning] .callout-content,
+.callout[data-callout=caution] .callout-content,
+.callout[data-callout=attention] .callout-content {
+  background-color: hsl(var(--color-orange-base-h) var(--color-orange-base-s) var(--color-orange-base-l)/20%);
+  border-color: var(--color-orange-tint);
+}
+.callout[data-callout=failure] .callout-title,
+.callout[data-callout=fail] .callout-title,
+.callout[data-callout=missing] .callout-title {
+  color: var(--color-red-text);
+  background-color: var(--color-red-base);
+  border-color: var(--color-red-tint);
+}
+.callout[data-callout=failure] .callout-icon .svg-icon,
+.callout[data-callout=fail] .callout-icon .svg-icon,
+.callout[data-callout=missing] .callout-icon .svg-icon {
+  color: var(--color-red-text);
+}
+.callout[data-callout=failure] .callout-content,
+.callout[data-callout=fail] .callout-content,
+.callout[data-callout=missing] .callout-content {
+  background-color: hsl(var(--color-red-base-h) var(--color-red-base-s) var(--color-red-base-l)/20%);
+  border-color: var(--color-red-tint);
+}
+.callout[data-callout=danger] .callout-title,
+.callout[data-callout=error] .callout-title {
+  color: var(--color-red-text);
+  background-color: var(--color-red-base);
+  border-color: var(--color-red-tint);
+}
+.callout[data-callout=danger] .callout-icon .svg-icon,
+.callout[data-callout=error] .callout-icon .svg-icon {
+  color: var(--color-red-text);
+}
+.callout[data-callout=danger] .callout-content,
+.callout[data-callout=error] .callout-content {
+  background-color: hsl(var(--color-red-base-h) var(--color-red-base-s) var(--color-red-base-l)/20%);
+  border-color: var(--color-red-tint);
+}
+.callout[data-callout=bug] .callout-title {
+  color: var(--color-pink-text);
+  background-color: var(--color-pink-base);
+  border-color: var(--color-pink-tint);
+}
+.callout[data-callout=bug] .callout-icon .svg-icon {
+  color: var(--color-pink-text);
+}
+.callout[data-callout=bug] .callout-content {
+  background-color: hsl(var(--color-pink-base-h) var(--color-pink-base-s) var(--color-pink-base-l)/20%);
+  border-color: var(--color-pink-tint);
+}
+.callout[data-callout=example] .callout-title {
+  color: var(--color-purple-text);
+  background-color: var(--color-purple-base);
+  border-color: var(--color-purple-tint);
+}
+.callout[data-callout=example] .callout-icon .svg-icon {
+  color: var(--color-purple-text);
+}
+.callout[data-callout=example] .callout-content {
+  background-color: hsl(var(--color-purple-base-h) var(--color-purple-base-s) var(--color-purple-base-l)/20%);
+  border-color: var(--color-purple-tint);
+}
+.callout[data-callout=quote] .callout-title,
+.callout[data-callout=cite] .callout-title {
+  color: var(--color-grey-text);
+  background-color: var(--color-grey-base);
+  border-color: var(--color-grey-tint);
+}
+.callout[data-callout=quote] .callout-icon .svg-icon,
+.callout[data-callout=cite] .callout-icon .svg-icon {
+  color: var(--color-grey-text);
+}
+.callout[data-callout=quote] .callout-content,
+.callout[data-callout=cite] .callout-content {
+  background-color: hsl(var(--color-grey-base-h) var(--color-grey-base-s) var(--color-grey-base-l)/20%);
+  border-color: var(--color-grey-tint);
 }
 .theme-light.pt-color-scheme-swan-lt audio {
   filter: brightness(100%) contrast(115%);
