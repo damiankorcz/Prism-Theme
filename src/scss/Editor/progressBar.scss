@@ -1,9 +1,8 @@
 /* #region  [Editor] - Progress Bar */
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress {
-	height: 14px;
-	// display: inline-flex;
-	// justify-content: center;
+	height: 15px;
+	vertical-align: middle;
 		
 	&::before {
 		content: attr(value) " %";
@@ -13,6 +12,7 @@
 		font-weight: 700;
 		width: inherit;
 		text-align: center;
+		height: inherit;
 		font-family: var(--font-text);
 
 		.theme-light & {
