@@ -17,17 +17,18 @@
 /* Sidebar */
 @use "User Interface/Sidebar/tabHeader.scss"; // ✅
 @use "User Interface/Sidebar/tabLabel.scss"; // ✅
-@use "User Interface/Sidebar/navHeader.scss"; // ✅ Needs scroll bar hover code fixed when that is addressed
+@use "User Interface/Sidebar/navHeader.scss"; // ✅
 
 /* Other User Interface Elements */
-// @use "User Interface/animations.scss"; // 🔧
-@use "User Interface/settings.scss"; // ✅ Main background and small areas will need work.
+@use "User Interface/settings.scss"; // 🧹 Main background and small areas will need work. Needs organising.
 @use "User Interface/scrollBar.scss"; // ✅ Needs a better way to handle correctly coloured Scroll button icons
 @use "User Interface/emptyState.scss"; // ✅ Empty for now.
 @use "User Interface/startup.scss"; // ✅
 @use "User Interface/workspace.scss"; // ✅ View Header will need a little styling
-@use "User Interface/documentSearch.scss"; // ✅ Buttons need changing to theme design
-// @use "User Interface/mobileToolbar.scss"; // 🔧 Will address when Mobile support inline with Desktop changes
+@use "User Interface/documentSearch.scss"; // ✅ Buttons need changing to theme design.
+@use "User Interface/popups.scss"; // ✅
+// @use "User Interface/animations.scss"; // 🔧
+// @use "User Interface/mobileToolbar.scss"; // 🔧 Will address when Mobile support inline with Desktop changes.
 
 /* Accent Colors */
 @use "User Interface/Accent Color/accentStyleBase.scss"; // ✅ Will need tuning when colour schemes are reworked.
@@ -36,21 +37,11 @@
 @use "User Interface/Accent Color/accentStyleFilled.scss"; // ✅ Will need tuning when colour schemes are reworked.
 @use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; // ✅ Will need tuning when colour schemes are reworked.
 
-/* Popups */
-@use "User Interface/Popups/filePreviewPopover.scss"; // ✅
-@use "User Interface/Popups/menuPopup.scss"; // ✅
-@use "User Interface/Popups/notificationPopup.scss"; // ✅
-@use "User Interface/Popups/suggestionPopup.scss"; // ✅ Might not need an entire file for this anymore.
-@use "User Interface/Popups/tooltipPopup.scss"; // ✅
-@use "User Interface/Popups/dragGhost.scss"; // ✅
-
 /* Editor */
+@use "Editor/editorStyling.scss"; // ✅ Check for consistency across all modes.
 @use "Editor/callouts.scss"; // ✅
-@use "Editor/editView.scss"; // 🔧
-@use "Editor/previewView.scss"; // 🔧
-// @use "Editor/textSelection.scss"; // 🔧
-// @use "Editor/vim.scss"; // 🔧
 @use "Editor/progressBar.scss"; // ✅
+// @use "Editor/vim.scss"; // 🔧
 
 /* Core Plugins */
 @use "Plugins/Core/audio.scss"; // ✅
@@ -103,7 +94,16 @@
 // TODO
 // - Need to evaluate hover states through out the app due to previous version of the theme implemented them and might be redundant in select areas.
 // - Read through the app.css for additional insight and potential improvements for the theme.
-//     - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant    code). 
+//     - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant code). 
 // - embedded-backlinks / internal-query styling.
 // - Make sure that the currently active tab is distinguisable between the active tabs in other panes.
 // - Will need to redo the Mobile side of the theme.
+// - Look into var(--text-on-accent);
+
+// Codeblocks' background not displaying correctly in callouts
+
+// Reported Issues
+// Italic and Bold issue: https://discord.com/channels/686053708261228577/989603365606531104/1017879982766301305
+// Codeblock inconsistency: https://discord.com/channels/686053708261228577/989603365606531104/1017911856364523601
+// Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933
+// Unused Variables: https://discord.com/channels/686053708261228577/989603365606531104/1018219565454463036

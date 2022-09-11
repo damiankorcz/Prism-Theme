@@ -34,7 +34,7 @@
 			font-size: 14px;
 			font-weight: 600;
 			color: var(--interactive-accent-text);
-			content: "Prism v3.0.0 Beta 4";
+			content: "Prism v3.0.0 Beta 5";
 			background: var(--background-secondary);
 			border: 1px solid var(--window-border);
 			border-radius: var(--radius-s);
@@ -254,6 +254,7 @@ img.community-theme-lightbox {
 .community-item-screenshot {
 	grid-area: item-screenshot;
 	margin-top: var(--size-4-1);
+	image-rendering: unset;
 }
 
 .community-item-desc {
@@ -327,6 +328,10 @@ img.community-theme-lightbox {
 		margin-bottom: var(--size-4-2);
 		border-bottom: 1px solid var(--window-border);
 	}
+}
+
+.setting-item-name {
+	font-weight: var(--font-medium);
 }
 
 body:not(.native-scrollbars) .modal-close-button {

@@ -1,37 +1,45 @@
 /* #region  [Plugin - Community] Style Settings */
-div.workspace-leaf-content[data-type=style-settings] div.view-content {
-	padding: var(--file-margins);
-}
 
-.setting-item.style-settings-heading[data-id="appearance"] {
-	.style-settings-collapse-indicator::after {
-		content: "🎨";
+div.workspace-leaf-content[data-type="style-settings"] {
+	div.view-content {
+		padding: var(--file-margins);
+	}
+
+	.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+		flex-direction: row;
+	}
+	
+	.setting-item.style-settings-heading[data-id="appearance"] {
+		.style-settings-collapse-indicator::after {
+			content: "🎨";
+		}
+	}
+	
+	.setting-item.style-settings-heading[data-id="editor"] {
+		.style-settings-collapse-indicator::after {
+			content: "📝";
+		}
+	}
+	
+	.setting-item.style-settings-heading[data-id="user-interface"] {
+		.style-settings-collapse-indicator::after {
+			content: "👆";
+		}
+	}
+	
+	.setting-item.style-settings-heading[data-id="plugins"] {
+		.style-settings-collapse-indicator::after {
+			content: "🧩";
+		}
+	}
+	
+	.setting-item.style-settings-heading[data-id="feature-toggles"] {
+		.style-settings-collapse-indicator::after {
+			content: "🪠";
+		}
 	}
 }
 
-.setting-item.style-settings-heading[data-id="editor"] {
-	.style-settings-collapse-indicator::after {
-		content: "📝";
-	}
-}
-
-.setting-item.style-settings-heading[data-id="user-interface"] {
-	.style-settings-collapse-indicator::after {
-		content: "👆";
-	}
-}
-
-.setting-item.style-settings-heading[data-id="plugins"] {
-	.style-settings-collapse-indicator::after {
-		content: "🧩";
-	}
-}
-
-.setting-item.style-settings-heading[data-id="feature-toggles"] {
-	.style-settings-collapse-indicator::after {
-		content: "🪠";
-	}
-}
 
 // div.style-settings-heading[data-level="0"] {
 // 	position: relative;
@@ -129,20 +137,6 @@ div.workspace-leaf-content[data-type=style-settings] div.view-content {
 
 // 	&:not(.is-collapsed) .style-settings-collapse-indicator {
 // 		color: var(--interactive-accent-text);
-// 	}
-// }
-
-// div.workspace-leaf-content[data-type="style-settings"] {
-// 	background-color: var(--background-secondary) !important;
-
-// 	// Style Settings open as a note
-// 	.view-content {
-// 		padding: 20px 35px;
-// 		background-color: var(--background-secondary);
-
-// 		.style-settings-container div.setting-item:not(.setting-item-heading) {
-// 			flex-direction: row;
-// 		}
 // 	}
 // }
 

@@ -12,12 +12,12 @@ body {
 	--h5-weight: var(--font-extrabold);
 	--h6-weight: var(--font-extrabold);
 
-	--h1-size: 2em;
-	--h2-size: 1.8em;
-	--h3-size: 1.6em;
-	--h4-size: 1.4em;
-	--h5-size: 1.2em;
-	--h6-size: 1em;
+	--h1-size: 2.2em;
+	--h2-size: 2em;
+	--h3-size: 1.8em;
+	--h4-size: 1.6em;
+	--h5-size: 1.4em;
+	--h6-size: 1.2em;
 
 	--h1-padding-size: 0;
 	--h2-padding-size: 0;
@@ -26,11 +26,23 @@ body {
 	--h5-padding-size: 0;
 	--h6-padding-size: 0;
 
+	--tag-size: var(--font-smallest);
+	--tag-padding-x: 0.75ch;
+	--tag-padding-y: 0;
+	--tag-border-width: 2px;
+
 	--icon-color-focused: var(--interactive-accent-text);
 	--background-modifier-border-focus: var(--interactive-accent-base);
+	--text-accent: var(--interactive-accent-text);
 	--text-error: var(--color-red-text);
 	--background-modifier-error: var(--color-red-text);
 	--background-modifier-border: var(--table-border-color);
+
+	--checkbox-marker-color: var(--highlight-text-normal);
+	--checkbox-border-color-hover: var(--interactive-accent-tint);
+	--checklist-done-color: var(--interactive-accent-base);
+
+	--blockquote-border-color: var(--table-border-color);
 
 	--header-height: 41px;
 
@@ -49,7 +61,6 @@ body {
 	--modal-max-height: 1000px;
 	--modal-border-color: var(--window-border);
 
-	--text-accent: var(--interactive-accent-text);
 	--drag-ghost-text-color: var(--text-normal);
 
 	--clickable-icon-radius: var(--radius-m);
@@ -59,6 +70,14 @@ body {
 
 	--slider-thumb-radius: var(--size-4-1);
 	--slider-thumb-width: 10px;
+
+	--code-function: var(--color-yellow-text);
+	--code-important: var(--color-orange-text);
+	--code-keyword: var(--color-pink-text);
+	--code-property: var(--color-aqua-text);
+	--code-string: var(--color-green-text);
+	--code-tag: var(--color-red-text);
+	--code-value: var(--color-purple-text);
 
 	/* Custom Prism Properties */
 	--graph-fill-opacity-lt: 1;
@@ -237,11 +256,13 @@ body {
 				hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 100%)
 			);
 
+		--text-highlight-bg: var(--interactive-accent-base);
 		--scroll-button-background-color: var(--background-primary);
 		--highlight-text-accent-custom-lt: hsl(0 0% 100%);
 		--highlight-text-accent-custom-dt: hsl(0 0% 0%);
-		--interactive-accent: var(--interactive-accent-base);
+		--interactive-accent: var(--interactive-accent-tint);
 		--text-accent-hover: var(--interactive-accent-hover);
+		--text-on-accent: var(--text-normal);
 
 		--color-accent-h-lt: 0;
 		--color-accent-s-lt: 60%;
@@ -261,15 +282,11 @@ body {
 	}
 
 	&.theme-light {
-		--text-highlight-bg: var(--interactive-accent-base);
-
 		--window-border: var(--background-secondary-alt);
 		--page-background-color: var(--background-primary);
 		--table-border-color: var(--background-secondary-alt);
 		--text-selection: var(--background-secondary-alt);
 		--scroll-bar-thumb: var(--window-border);
-		--interactive-accent: var(--background-primary);
-		--text-on-accent: var(--text-normal);
 
 		--graph-line-color-lt: var(--background-secondary-alt);
 		--graph-fill-color-lt: var(--color-grey-tint);
@@ -299,6 +316,18 @@ body {
 		--link-internal-color-lt: var(--interactive-accent-text);
 		--link-external-color-lt: var(--interactive-accent-text);
 
+		--bold-color: var(--text-bold-color-lt);
+		--italic-color: var(--text-italic-color-lt);
+		--link-color: var(--link-internal-color-lt);
+		--link-unresolved-color: var(--link-internal-color-lt);
+		--link-external-color: var(--link-external-color-lt);
+
+		--code-background: var(--background-primary-alt);
+		--blockquote-background-color: var(--background-primary-alt);
+
+		--checkbox-color: var(--background-primary-alt);
+		--checkbox-border-color: var(--background-secondary-alt);
+
 		&.pt-highlight-text-light-lt {
 			--highlight-text-normal: var(--background-primary);
 		}
@@ -315,7 +344,6 @@ body {
 			--highlight-text-normal: var(--highlight-text-accent-custom-lt);
 		}
 
-		/* #region  [Accent Color Presets] Light Theme */
 		&.pt-accent-color-custom-lt {
 			--interactive-accent-base: var(--color-accent-base-lt);
 			--interactive-accent-tint: var(--color-accent-tint-lt);
@@ -392,7 +420,6 @@ body {
 			--interactive-accent-text: var(--color-grey-text);
 			--interactive-accent-hover: var(--color-grey-tint);
 		}
-		/* #endregion */
 	}
 
 	&.theme-dark {
@@ -430,6 +457,18 @@ body {
 		--link-internal-color-dt: var(--interactive-accent-text);
 		--link-external-color-dt: var(--interactive-accent-text);
 
+		--bold-color: var(--text-bold-color-dt);
+		--italic-color: var(--text-italic-color-dt);
+		--link-color: var(--link-internal-color-dt);
+		--link-unresolved-color: var(--link-internal-color-dt);
+		--link-external-color: var(--link-external-color-dt);
+
+		--code-background: var(--background-secondary);
+		--blockquote-background-color: var(--background-secondary-alt);
+
+		--checkbox-color: var(--background-primary);
+		--checkbox-border-color: var(--background-primary-alt);
+
 		&.pt-highlight-text-light-dt {
 			--highlight-text-normal: var(--text-normal);
 		}
@@ -446,7 +485,6 @@ body {
 			--highlight-text-normal: var(--highlight-text-accent-custom-dt);
 		}
 
-		/* #region  [Accent Color Presets] Dark Theme */
 		&.pt-accent-color-custom-dt {
 			--interactive-accent-base: var(--color-accent-base-dt);
 			--interactive-accent-tint: var(--color-accent-tint-dt);
@@ -523,7 +561,6 @@ body {
 			--interactive-accent-text: var(--color-grey-text);
 			--interactive-accent-hover: var(--color-grey-tint);
 		}
-		/* #endregion */
 	}
 }
 /* #endregion */

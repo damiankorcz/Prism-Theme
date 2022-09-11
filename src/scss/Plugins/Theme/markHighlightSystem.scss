@@ -1,15 +1,52 @@
-/* #region  [Plugin - Theme] Mark Highlight Color Presets */
+/* #region  [Plugin - Theme] Mark Highlight System */
 mark,
 .cm-highlight {
 	--mark-highlight-base: var(--interactive-accent-base);
 	--mark-highlight-dark: var(--interactive-accent-tint);
 	--mark-highlight-text: var(--interactive-accent-text);
 
-	font-size: 0.859em;
+	padding: 0 3px;
+	font-size: var(--font-smallest);
 	font-weight: 600;
 	border-radius: var(--radius-s);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
+
+	.theme-dark.pt-highlight-style-none-dt &,
+	.theme-light.pt-highlight-style-none-lt & {
+		padding: 0;
+		font-size: 1em;
+		background-color: transparent;
+		opacity: 1;
+	}
+
+	.theme-dark.pt-highlight-style-border-dt &,
+	.theme-light.pt-highlight-style-border-lt & {
+		background-color: var(--background-primary);
+		border: var(--accent-border-width) solid var(--mark-highlight-dark);
+	}
+
+	.theme-dark.pt-highlight-style-filled-dt &,
+	.theme-light.pt-highlight-style-filled-lt & {
+		background-color: var(--mark-highlight-base);
+		border: var(--accent-border-width) solid var(--mark-highlight-base);
+	}
+
+	.theme-dark.pt-highlight-style-borderandfilled-dt &,
+	.theme-light.pt-highlight-style-borderandfilled-lt & {
+		background-color: var(--mark-highlight-base);
+		border: var(--accent-border-width) solid var(--mark-highlight-dark);
+	}
+
+	.theme-light.pt-highlight-text-none-lt &,
+	.theme-dark.pt-highlight-text-none-dt & {
+		color: var(--text-normal);
+	}
+
+	.theme-light.pt-highlight-text-color-lt &,
+	.theme-dark.pt-highlight-text-color-dt & {
+		color: var(--mark-highlight-text);
+	}
 }
 
 mark {
@@ -81,64 +118,6 @@ mark {
 		--mark-highlight-base: var(--color-grey-base);
 		--mark-highlight-dark: var(--color-grey-tint);
 		--mark-highlight-text: var(--color-grey-text);
-	}
-}
-/* #endregion */
-
-/* #region  [Plugin - Theme} Mark Highlight Styles */
-.theme-dark.pt-highlight-style-none-dt,
-.theme-light.pt-highlight-style-none-lt {
-	mark,
-	.cm-highlight {
-		padding: 0;
-		font-size: 1em;
-		background-color: transparent;
-		opacity: 1;
-	}
-}
-
-.theme-dark.pt-highlight-style-border-dt,
-.theme-light.pt-highlight-style-border-lt {
-	mark,
-	.cm-highlight {
-		padding: 0 3px;
-		background-color: var(--background-primary);
-		border: var(--accent-border-width) solid var(--mark-highlight-dark);
-	}
-}
-
-.theme-dark.pt-highlight-style-filled-dt,
-.theme-light.pt-highlight-style-filled-lt {
-	mark,
-	.cm-highlight {
-		padding: 0 3px;
-		background-color: var(--mark-highlight-base);
-	}
-}
-
-.theme-dark.pt-highlight-style-borderandfilled-dt,
-.theme-light.pt-highlight-style-borderandfilled-lt {
-	mark,
-	.cm-highlight {
-		padding: 0 3px;
-		background-color: var(--mark-highlight-base);
-		border: var(--accent-border-width) solid var(--mark-highlight-dark);
-	}
-}
-
-.theme-light.pt-highlight-text-none-lt,
-.theme-dark.pt-highlight-text-none-dt {
-	mark,
-	.cm-highlight {
-		color: var(--text-normal);
-	}
-}
-
-.theme-light.pt-highlight-text-color-lt,
-.theme-dark.pt-highlight-text-color-dt {
-	mark,
-	.cm-highlight {
-		color: var(--mark-highlight-text);
 	}
 }
 /* #endregion */
