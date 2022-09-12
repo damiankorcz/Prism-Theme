@@ -27,7 +27,12 @@ esbuild.build({
     logLevel: "info",
     outfile: prod ? fileProd : fileDev,
     plugins: [
-        sassPlugin(),
+        sassPlugin({
+            cache: true,
+            charset: false,
+            alertColor: true,
+            alertAscii: true
+        }),
         time()
     ]
 }).catch(() => process.exit(1));
