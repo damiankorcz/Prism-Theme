@@ -1,168 +1,105 @@
-/* #region  [Color Scheme - Default] Base Colors */
-body.theme-light.pt-color-scheme-swan-lt,
-body.theme-dark.pt-color-scheme-raven-dt {
-	--color-red-base-h: 0;
-	--color-orange-base-h: 30;
-	--color-yellow-base-h: 45;
-	--color-green-base-h: 95;
-	--color-mint-base-h: 160;
-	--color-aqua-base-h: 185;
-	--color-blue-base-h: 217;
-	--color-purple-base-h: 257;
-	--color-pink-base-h: 300;
-	--color-grey-base-h: 0;
-}
-/* #endregion */
-
 /* #region  [Color Scheme - Default] Light Theme */
 .theme-light.pt-color-scheme-swan-lt {
-	--color-red-base-s: 84%;
-	--color-orange-base-s: 72%;
-	--color-yellow-base-s: 74%;
-	--color-green-base-s: 52%;
-	--color-mint-base-s: 57%;
-	--color-aqua-base-s: 67%;
-	--color-blue-base-s: 66%;
-	--color-purple-base-s: 82%;
-	--color-pink-base-s: 66%;
-	--color-grey-base-s: 0%;
+	--color-red-base-hsl:0,84%,88%;
+	--color-orange-base-hsl:30,72%,82%;
+	--color-yellow-base-hsl:45,74%,83%;
+	--color-green-base-hsl:95,52%,83%;
+	--color-mint-base-hsl:160,57%,83%;
+	--color-aqua-base-hsl:185,67%,82%;
+	--color-blue-base-hsl:217,66%,86%;
+	--color-purple-base-hsl:257,82%,89%;
+	--color-pink-base-hsl:300,66%,90%;
+	--color-grey-base-hsl:0,0%,85%;
 
-	--color-red-base-l: 88%;
-	--color-orange-base-l: 82%;
-	--color-yellow-base-l: 83%;
-	--color-green-base-l: 83%;
-	--color-mint-base-l: 83%;
-	--color-aqua-base-l: 82%;
-	--color-blue-base-l: 86%;
-	--color-purple-base-l: 89%;
-	--color-pink-base-l: 90%;
-	--color-grey-base-l: 85%;
+	--color-red-tint-hsl:0,84%,75%;
+	--color-orange-tint-hsl:30,72%,60%;
+	--color-yellow-tint-hsl:45,74%,49%;
+	--color-green-tint-hsl:95,52%,57%;
+	--color-mint-tint-hsl:160,57%,60%;
+	--color-aqua-tint-hsl:185,67%,58%;
+	--color-blue-tint-hsl:217,66%,72%;
+	--color-purple-tint-hsl:257,82%,78%;
+	--color-pink-tint-hsl:300,66%,73%;
+	--color-grey-tint-hsl:0,0%,68%;
 
-	--color-red-tint-l: 75%;
-	--color-orange-tint-l: 60%;
-	--color-yellow-tint-l: 49%;
-	--color-green-tint-l: 57%;
-	--color-mint-tint-l: 60%;
-	--color-aqua-tint-l: 58%;
-	--color-blue-tint-l: 72%;
-	--color-purple-tint-l: 78%;
-	--color-pink-tint-l: 73%;
-	--color-grey-tint-l: 68%;
+	--color-red-text-hsl:0,70%,58%;
+	--color-orange-text-hsl:30,88%,41%;
+	--color-yellow-text-hsl:45,88%,35%;
+	--color-green-text-hsl:95,75%,34%;
+	--color-mint-text-hsl:160,88%,32%;
+	--color-aqua-text-hsl:185,75%,37%;
+	--color-blue-text-hsl:217,70%,53%;
+	--color-purple-text-hsl:257,80%,61%;
+	--color-pink-text-hsl:300,70%,47%;
+	--color-grey-text-hsl:0,0%,42%;
 
-	--color-red-text-s: 70%;
-	--color-orange-text-s: 88%;
-	--color-yellow-text-s: 88%;
-	--color-green-text-s: 75%;
-	--color-mint-text-s: 88%;
-	--color-aqua-text-s: 75%;
-	--color-blue-text-s: 70%;
-	--color-purple-text-s: 80%;
-	--color-pink-text-s: 70%;
-	--color-grey-text-s: 0%;
+	--text-normal:hsl(0 0% 25%);
+	--text-muted:hsl(0 0% 40%);
+	--text-faint:hsl(0 0% 50%);
 
-	--color-red-text-l: 58%;
-	--color-orange-text-l: 41%;
-	--color-yellow-text-l: 35%;
-	--color-green-text-l: 34%;
-	--color-mint-text-l: 32%;
-	--color-aqua-text-l: 37%;
-	--color-blue-text-l: 53%;
-	--color-purple-text-l: 61%;
-	--color-pink-text-l: 47%;
-	--color-grey-text-l: 42%;
+	--background-primary:hsl(0 0% 100%);
+	--background-primary-alt:hsl(0 0% 98%);
+	--background-secondary:hsl(0 0% 94.5%);
+	--background-secondary-blur:hsl(0 0% 94.5% / 75%);
+	--background-secondary-alt:hsl(0 0% 81%);
+	--background-tertiary:hsl(0 0% 96.5%);
 
-	--text-normal: hsl(0 0% 25%);
-	--text-muted: hsl(0 0% 40%);
-	--text-faint: hsl(0 0% 50%);
+	--vertical-lines-color:hsl(0 0% 60% / 30%);
 
-	--background-primary: hsl(0 0% 100%);
-	--background-primary-alt: hsl(0 0% 98%);
-	--background-secondary: hsl(0 0% 94.5%);
-	--background-secondary-blur: hsl(0 0% 94.5% / 75%);
-	--background-secondary-alt: hsl(0 0% 81%);
-	--background-tertiary: hsl(0 0% 96.5%);
-
-
-	--vertical-lines-color: hsl(0 0% 60% / 30%);
-
-	--shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
-	--shadow-l: hsl(0 0% 0% / 3%) 0 1px 2px, hsl(0 0% 0% / 3%) 0 2px 4px, hsl(0 0% 0% / 3%) 0 4px 8px, hsl(0 0% 0% / 3%) 0 8px 16px;
-
-	// --shadow-l: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	--shadow-s:hsl(0 0% 0% / 10%) 0 1px 2px 0;
+	--shadow-l:hsl(0 0% 0% / 3%) 0 1px 2px,hsl(0 0% 0% / 3%) 0 2px 4px,hsl(0 0% 0% / 3%) 0 4px 8px,hsl(0 0% 0% / 3%) 0 8px 16px;
 }
 /* #endregion */
 
 /* #region  [Color Scheme - Default] Dark Theme */
 .theme-dark.pt-color-scheme-raven-dt {
-	--color-red-base-s: 48%;
-	--color-orange-base-s: 56%;
-	--color-yellow-base-s: 53%;
-	--color-green-base-s: 38%;
-	--color-mint-base-s: 38%;
-	--color-aqua-base-s: 38%;
-	--color-blue-base-s: 41%;
-	--color-purple-base-s: 38%;
-	--color-pink-base-s: 38%;
-	--color-grey-base-s: 0%;
+	--color-red-base-hsl:0,48%,24%;
+	--color-orange-base-hsl:30,56%,24%;
+	--color-yellow-base-hsl:45,53%,23%;
+	--color-green-base-hsl:95,38%,22%;
+	--color-mint-base-hsl:160,38%,22%;
+	--color-aqua-base-hsl:185,38%,22%;
+	--color-blue-base-hsl:217,41%,24%;
+	--color-purple-base-hsl:257,38%,22%;
+	--color-pink-base-hsl:300,38%,19%;
+	--color-grey-base-hsl:0,0%,25%;
 
-	--color-red-base-l: 24%;
-	--color-orange-base-l: 24%;
-	--color-yellow-base-l: 23%;
-	--color-green-base-l: 22%;
-	--color-mint-base-l: 22%;
-	--color-aqua-base-l: 22%;
-	--color-blue-base-l: 24%;
-	--color-purple-base-l: 22%;
-	--color-pink-base-l: 19%;
-	--color-grey-base-l: 25%;
+	--color-red-tint-hsl:0,48%,45%;
+	--color-orange-tint-hsl:30,56%,40%;
+	--color-yellow-tint-hsl:45,53%,40%;
+	--color-green-tint-hsl:95,38%,39%;
+	--color-mint-tint-hsl:160,38%,40%;
+	--color-aqua-tint-hsl:185,38%,41%;
+	--color-blue-tint-hsl:217,41%,44%;
+	--color-purple-tint-hsl:257,38%,48%;
+	--color-pink-tint-hsl:300,38%,42%;
+	--color-grey-tint-hsl:0,0%,46%;
 
-	--color-red-tint-l: 45%;
-	--color-orange-tint-l: 40%;
-	--color-yellow-tint-l: 40%;
-	--color-green-tint-l: 39%;
-	--color-mint-tint-l: 40%;
-	--color-aqua-tint-l: 41%;
-	--color-blue-tint-l: 44%;
-	--color-purple-tint-l: 48%;
-	--color-pink-tint-l: 42%;
-	--color-grey-tint-l: 46%;
+	--color-red-text-hsl:0,78%,71%;
+	--color-orange-text-hsl:30,72%,64%;
+	--color-yellow-text-hsl:45,68%,59%;
+	--color-green-text-hsl:95,52%,53%;
+	--color-mint-text-hsl:160,64%,56%;
+	--color-aqua-text-hsl:185,62%,57%;
+	--color-blue-text-hsl:217,64%,68%;
+	--color-purple-text-hsl:257,64%,70%;
+	--color-pink-text-hsl:300,62%,68%;
+	--color-grey-text-hsl:0,0%,67%;
 
-	--color-red-text-s: 78%;
-	--color-orange-text-s: 72%;
-	--color-yellow-text-s: 68%;
-	--color-green-text-s: 52%;
-	--color-mint-text-s: 64%;
-	--color-aqua-text-s: 62%;
-	--color-blue-text-s: 64%;
-	--color-purple-text-s: 64%;
-	--color-pink-text-s: 62%;
-	--color-grey-text-s: 0%;
+	--text-normal:hsl(0 0% 83%);
+	--text-muted:hsl(0 0% 72%);
+	--text-faint:hsl(0 0% 52%);
 
-	--color-red-text-l: 71%;
-	--color-orange-text-l: 64%;
-	--color-yellow-text-l: 59%;
-	--color-green-text-l: 53%;
-	--color-mint-text-l: 56%;
-	--color-aqua-text-l: 57%;
-	--color-blue-text-l: 68%;
-	--color-purple-text-l: 70%;
-	--color-pink-text-l: 68%;
-	--color-grey-text-l: 67%;
+	--background-primary:hsl(0 0% 12%);
+	--background-primary-alt:hsl(0 0% 15%);
+	--background-secondary:hsl(0 0% 8%);
+	--background-secondary-blur:hsl(0 0% 8% / 75%);
+	--background-secondary-alt:hsl(0 0% 5.5%);
+	--background-tertiary:hsl(0 0% 7.5%);
 
-	--text-normal: hsl(0 0% 83%);
-	--text-muted: hsl(0 0% 72%);
-	--text-faint: hsl(0 0% 52%);
+	--vertical-lines-color:hsl(0 0% 12%);
 
-	--background-primary: hsl(0 0% 12%);
-	--background-primary-alt: hsl(0 0% 15%);
-	--background-secondary: hsl(0 0% 8%);
-	--background-secondary-blur: hsl(0 0% 8% / 75%);
-	--background-secondary-alt: hsl(0 0% 5.5%);
-	--background-tertiary: hsl(0 0% 7.5%);
-
-	--vertical-lines-color: hsl(0 0% 12%);
-
-	--shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
-	--shadow-l: hsl(0 0% 0% / 5%) 0 1px 2px, hsl(0 0% 0% / 5%) 0 2px 4px, hsl(0 0% 0% / 5%) 0 4px 8px, hsl(0 0% 0% / 5%) 0 8px 16px;
+	--shadow-s:hsl(0 0% 0% / 10%) 0 1px 2px 0;
+	--shadow-l:hsl(0 0% 0% / 5%) 0 1px 2px,hsl(0 0% 0% / 5%) 0 2px 4px,hsl(0 0% 0% / 5%) 0 4px 8px,hsl(0 0% 0% / 5%) 0 8px 16px;
 }
 /* #endregion */

@@ -1,166 +1,105 @@
-/* #region  [Color Scheme - Forest] Base Colors */
-body.theme-light.pt-color-scheme-pistachio-lt,
-body.theme-dark.pt-color-scheme-pine-dt {
-	--color-red-base-h: 355;
-	--color-orange-base-h: 21;
-	--color-yellow-base-h: 40;
-	--color-green-base-h: 110;
-	--color-mint-base-h: 151;
-	--color-aqua-base-h: 190;
-	--color-blue-base-h: 222;
-	--color-purple-base-h: 260;
-	--color-pink-base-h: 323;
-	--color-grey-base-h: 233;
-}
-/* #endregion */
-
 /* #region  [Color Scheme - Forest] Light Theme */
 .theme-light.pt-color-scheme-pistachio-lt {
-	--color-red-base-s: 70%;
-	--color-orange-base-s: 66%;
-	--color-yellow-base-s: 70%;
-	--color-green-base-s: 35%;
-	--color-mint-base-s: 40%;
-	--color-aqua-base-s: 31%;
-	--color-blue-base-s: 27%;
-	--color-purple-base-s: 38%;
-	--color-pink-base-s: 42%;
-	--color-grey-base-s: 5%;
+	--color-red-base-hsl:355,70%,83%;
+	--color-orange-base-hsl:21,66%,82%;
+	--color-yellow-base-hsl:40,70%,83%;
+	--color-green-base-hsl:110,35%,81%;
+	--color-mint-base-hsl:151,40%,82%;
+	--color-aqua-base-hsl:190,31%,85%;
+	--color-blue-base-hsl:222,27%,84%;
+	--color-purple-base-hsl:260,38%,82%;
+	--color-pink-base-hsl:323,42%,83%;
+	--color-grey-base-hsl:233,5%,82%;
 
-	--color-red-base-l: 83%;
-	--color-orange-base-l: 82%;
-	--color-yellow-base-l: 83%;
-	--color-green-base-l: 81%;
-	--color-mint-base-l: 82%;
-	--color-aqua-base-l: 85%;
-	--color-blue-base-l: 84%;
-	--color-purple-base-l: 82%;
-	--color-pink-base-l: 83%;
-	--color-grey-base-l: 82%;
+	--color-red-tint-hsl:355,70%,74%;
+	--color-orange-tint-hsl:21,66%,73%;
+	--color-yellow-tint-hsl:40,70%,70%;
+	--color-green-tint-hsl:110,35%,68%;
+	--color-mint-tint-hsl:151,40%,67%;
+	--color-aqua-tint-hsl:190,31%,72%;
+	--color-blue-tint-hsl:222,27%,74%;
+	--color-purple-tint-hsl:260,38%,73%;
+	--color-pink-tint-hsl:323,42%,72%;
+	--color-grey-tint-hsl:233,5%,68%;
 
-	--color-red-tint-l: 74%;
-	--color-orange-tint-l: 73%;
-	--color-yellow-tint-l: 70%;
-	--color-green-tint-l: 68%;
-	--color-mint-tint-l: 67%;
-	--color-aqua-tint-l: 72%;
-	--color-blue-tint-l: 74%;
-	--color-purple-tint-l: 73%;
-	--color-pink-tint-l: 72%;
-	--color-grey-tint-l: 68%;
+	--color-red-text-hsl:355,53%,55%;
+	--color-orange-text-hsl:21,54%,52%;
+	--color-yellow-text-hsl:40,55%,46%;
+	--color-green-text-hsl:110,45%,40%;
+	--color-mint-text-hsl:151,58%,38%;
+	--color-aqua-text-hsl:190,50%,40%;
+	--color-blue-text-hsl:222,30%,56%;
+	--color-purple-text-hsl:260,36%,51%;
+	--color-pink-text-hsl:323,42%,50%;
+	--color-grey-text-hsl:233,5%,47%;
 
-	--color-red-text-s: 53%;
-	--color-orange-text-s: 54%;
-	--color-yellow-text-s: 55%;
-	--color-green-text-s: 45%;
-	--color-mint-text-s: 58%;
-	--color-aqua-text-s: 50%;
-	--color-blue-text-s: 30%;
-	--color-purple-text-s: 36%;
-	--color-pink-text-s: 42%;
-	--color-grey-text-s: 5%;
+	--text-normal:hsl(135 35% 20%);
+	--text-muted:hsl(135 35% 30%);
+	--text-faint:hsl(135 35% 40%);
 
-	--color-red-text-l: 55%;
-	--color-orange-text-l: 52%;
-	--color-yellow-text-l: 46%;
-	--color-green-text-l: 40%;
-	--color-mint-text-l: 38%;
-	--color-aqua-text-l: 40%;
-	--color-blue-text-l: 56%;
-	--color-purple-text-l: 51%;
-	--color-pink-text-l: 50%;
-	--color-grey-text-l: 47%;
+	--background-primary:hsl(135 35% 95.5%);
+	--background-primary-alt:hsl(135 35% 93%);
+	--background-secondary:hsl(135 35% 90.5%);
+	--background-secondary-blur:hsl(135 35% 90.5% / 75%);
+	--background-secondary-alt:hsl(135 35% 75%);
+	--background-tertiary:hsl(135 35% 93%);
 
-	--text-normal: hsl(135 35% 20%);
-	--text-muted: hsl(135 35% 30%);
-	--text-faint: hsl(135 35% 40%);
+	--vertical-lines-color:hsl(135 35% 84%);
 
-	--background-primary: hsl(135 35% 95.5%);
-	--background-primary-alt: hsl(135 35% 93%);
-	--background-secondary: hsl(135 35% 90.5%);
-	--background-secondary-blur: hsl(135 35% 90.5% / 75%);
-	--background-secondary-alt: hsl(135 35% 75%);
-	--background-tertiary: hsl(135 35% 93%);
-
-
-	--vertical-lines-color: hsl(135 35% 84%);
-
-	--shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
-	--shadow-l: hsl(135 35% 7% / 4%) 0 1px 2px, hsl(135 35% 7% / 4%) 0 2px 4px, hsl(135 35% 7% / 4%) 0 4px 8px, hsl(135 35% 7% / 4%) 0 8px 16px;
+	--shadow-s:hsl(135 35% 7% / 10%) 0 1px 2px 0;
+	--shadow-l:hsl(135 35% 7% / 4%) 0 1px 2px,hsl(135 35% 7% / 4%) 0 2px 4px,hsl(135 35% 7% / 4%) 0 4px 8px,hsl(135 35% 7% / 4%) 0 8px 16px;
 }
 /* #endregion */
 
 /* #region  [Color Scheme - Forest] Dark Theme */
 .theme-dark.pt-color-scheme-pine-dt {
-	--color-red-base-s: 58%;
-	--color-orange-base-s: 62%;
-	--color-yellow-base-s: 70%;
-	--color-green-base-s: 35%;
-	--color-mint-base-s: 31%;
-	--color-aqua-base-s: 38%;
-	--color-blue-base-s: 30%;
-	--color-purple-base-s: 40%;
-	--color-pink-base-s: 46%;
-	--color-grey-base-s: 2%;
+	--color-red-base-hsl:355,58%,21%;
+	--color-orange-base-hsl:21,62%,22%;
+	--color-yellow-base-hsl:40,70%,20%;
+	--color-green-base-hsl:110,35%,23%;
+	--color-mint-base-hsl:151,31%,25%;
+	--color-aqua-base-hsl:190,38%,20%;
+	--color-blue-base-hsl:222,30%,24%;
+	--color-purple-base-hsl:260,40%,22%;
+	--color-pink-base-hsl:323,46%,22%;
+	--color-grey-base-hsl:233,2%,23%;
 
-	--color-red-base-l: 21%;
-	--color-orange-base-l: 22%;
-	--color-yellow-base-l: 20%;
-	--color-green-base-l: 23%;
-	--color-mint-base-l: 25%;
-	--color-aqua-base-l: 20%;
-	--color-blue-base-l: 24%;
-	--color-purple-base-l: 22%;
-	--color-pink-base-l: 22%;
-	--color-grey-base-l: 23%;
+	--color-red-tint-hsl:355,58%,40%;
+	--color-orange-tint-hsl:21,62%,40%;
+	--color-yellow-tint-hsl:40,70%,33%;
+	--color-green-tint-hsl:110,35%,37%;
+	--color-mint-tint-hsl:151,31%,38%;
+	--color-aqua-tint-hsl:190,38%,35%;
+	--color-blue-tint-hsl:222,30%,46%;
+	--color-purple-tint-hsl:260,40%,47%;
+	--color-pink-tint-hsl:323,46%,42%;
+	--color-grey-tint-hsl:233,2%,42%;
 
-	--color-red-tint-l: 40%;
-	--color-orange-tint-l: 40%;
-	--color-yellow-tint-l: 33%;
-	--color-green-tint-l: 37%;
-	--color-mint-tint-l: 38%;
-	--color-aqua-tint-l: 35%;
-	--color-blue-tint-l: 46%;
-	--color-purple-tint-l: 47%;
-	--color-pink-tint-l: 42%;
-	--color-grey-tint-l: 42%;
+	--color-red-text-hsl:355,74%,70%;
+	--color-orange-text-hsl:21,72%,62%;
+	--color-yellow-text-hsl:40,70%,53%;
+	--color-green-text-hsl:110,48%,52%;
+	--color-mint-text-hsl:151,58%,52%;
+	--color-aqua-text-hsl:190,50%,53%;
+	--color-blue-text-hsl:222,70%,70%;
+	--color-purple-text-hsl:260,65%,73%;
+	--color-pink-text-hsl:323,67%,73%;
+	--color-grey-text-hsl:233,2%,71%;
 
-	--color-red-text-s: 74%;
-	--color-orange-text-s: 72%;
-	--color-yellow-text-s: 70%;
-	--color-green-text-s: 48%;
-	--color-mint-text-s: 58%;
-	--color-aqua-text-s: 50%;
-	--color-blue-text-s: 70%;
-	--color-purple-text-s: 65%;
-	--color-pink-text-s: 67%;
-	--color-grey-text-s: 2%;
+	--text-normal:hsl(135 35% 85%);
+	--text-muted:hsl(135 35% 70%);
+	--text-faint:hsl(135 35% 60%);
 
-	--color-red-text-l: 70%;
-	--color-orange-text-l: 62%;
-	--color-yellow-text-l: 53%;
-	--color-green-text-l: 52%;
-	--color-mint-text-l: 52%;
-	--color-aqua-text-l: 53%;
-	--color-blue-text-l: 70%;
-	--color-purple-text-l: 73%;
-	--color-pink-text-l: 73%;
-	--color-grey-text-l: 71%;
+	--background-primary:hsl(135 35% 12%);
+	--background-primary-alt:hsl(135 35% 15.5%);
+	--background-secondary:hsl(135 35% 7.7%);
+	--background-secondary-blur:hsl(135 35% 7.7% / 75%);
+	--background-secondary-alt:hsl(135 35% 6%);
+	--background-tertiary:hsl(135 35% 6.2%);
 
-	--text-normal: hsl(135 35% 85%);
-	--text-muted: hsl(135 35% 70%);
-	--text-faint: hsl(135 35% 60%);
+	--vertical-lines-color:hsl(135 35% 12%);
 
-	--background-primary: hsl(135 35% 12%);
-	--background-primary-alt: hsl(135 35% 15.5%);
-	--background-secondary: hsl(135 35% 7.7%);
-	--background-secondary-blur: hsl(135 35% 7.7% / 75%);
-	--background-secondary-alt: hsl(135 35% 6%);
-	--background-tertiary: hsl(135 35% 6.2%);
-
-	--vertical-lines-color: hsl(135 35% 12%);
-
-	--shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
-	--shadow-l: hsl(135 35% 7% / 10%) 0 1px 2px, hsl(135 35% 7% / 10%) 0 2px 4px, hsl(135 35% 7% / 10%) 0 4px 8px, hsl(135 35% 7% / 10%) 0 8px 16px;
+	--shadow-s:hsl(135 35% 7% / 10%) 0 1px 2px 0;
+	--shadow-l:hsl(135 35% 7% / 10%) 0 1px 2px,hsl(135 35% 7% / 10%) 0 2px 4px,hsl(135 35% 7% / 10%) 0 4px 8px,hsl(135 35% 7% / 10%) 0 8px 16px;
 }
 /* #endregion */

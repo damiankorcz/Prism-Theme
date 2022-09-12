@@ -1,165 +1,105 @@
-/* #region  [Color Scheme - Coffee] Base Colors */
-body.theme-light.pt-color-scheme-latte-lt,
-body.theme-dark.pt-color-scheme-mocha-dt {
-	--color-red-base-h: 352;
-	--color-orange-base-h: 18;
-	--color-yellow-base-h: 35;
-	--color-green-base-h: 121;
-	--color-mint-base-h: 149;
-	--color-aqua-base-h: 180;
-	--color-blue-base-h: 235;
-	--color-purple-base-h: 275;
-	--color-pink-base-h: 325;
-	--color-grey-base-h: 356;
-}
-/* #endregion */
-
 /* #region  [Color Scheme - Coffee] Light Theme */
 .theme-light.pt-color-scheme-latte-lt {
-	--color-red-base-s: 70%;
-	--color-orange-base-s: 66%;
-	--color-yellow-base-s: 70%;
-	--color-green-base-s: 37%;
-	--color-mint-base-s: 33%;
-	--color-aqua-base-s: 31%;
-	--color-blue-base-s: 27%;
-	--color-purple-base-s: 38%;
-	--color-pink-base-s: 42%;
-	--color-grey-base-s: 5%;
+	--color-red-base-hsl:352,70%,83%;
+	--color-orange-base-hsl:18,66%,82%;
+	--color-yellow-base-hsl:35,70%,83%;
+	--color-green-base-hsl:121,37%,81%;
+	--color-mint-base-hsl:149,33%,84%;
+	--color-aqua-base-hsl:180,31%,81%;
+	--color-blue-base-hsl:235,27%,84%;
+	--color-purple-base-hsl:275,38%,82%;
+	--color-pink-base-hsl:325,42%,83%;
+	--color-grey-base-hsl:356,5%,82%;
 
-	--color-red-base-l: 83%;
-	--color-orange-base-l: 82%;
-	--color-yellow-base-l: 83%;
-	--color-green-base-l: 81%;
-	--color-mint-base-l: 84%;
-	--color-aqua-base-l: 81%;
-	--color-blue-base-l: 84%;
-	--color-purple-base-l: 82%;
-	--color-pink-base-l: 83%;
-	--color-grey-base-l: 82%;
+	--color-red-tint-hsl:352,70%,71%;
+	--color-orange-tint-hsl:18,66%,70%;
+	--color-yellow-tint-hsl:35,70%,65%;
+	--color-green-tint-hsl:121,37%,65%;
+	--color-mint-tint-hsl:149,33%,67%;
+	--color-aqua-tint-hsl:180,31%,64%;
+	--color-blue-tint-hsl:235,27%,71%;
+	--color-purple-tint-hsl:275,38%,70%;
+	--color-pink-tint-hsl:325,42%,69%;
+	--color-grey-tint-hsl:356,5%,65%;
 
-	--color-red-tint-l: 71%;
-	--color-orange-tint-l: 70%;
-	--color-yellow-tint-l: 65%;
-	--color-green-tint-l: 65%;
-	--color-mint-tint-l: 67%;
-	--color-aqua-tint-l: 64%;
-	--color-blue-tint-l: 71%;
-	--color-purple-tint-l: 70%;
-	--color-pink-tint-l: 69%;
-	--color-grey-tint-l: 65%;
+	--color-red-text-hsl:352,53%,55%;
+	--color-orange-text-hsl:18,54%,52%;
+	--color-yellow-text-hsl:35,55%,46%;
+	--color-green-text-hsl:121,45%,43%;
+	--color-mint-text-hsl:149,65%,40%;
+	--color-aqua-text-hsl:180,50%,40%;
+	--color-blue-text-hsl:235,30%,56%;
+	--color-purple-text-hsl:275,36%,52%;
+	--color-pink-text-hsl:325,42%,50%;
+	--color-grey-text-hsl:356,5%,47%;
 
-	--color-red-text-s: 53%;
-	--color-orange-text-s: 54%;
-	--color-yellow-text-s: 55%;
-	--color-green-text-s: 45%;
-	--color-mint-text-s: 65%;
-	--color-aqua-text-s: 50%;
-	--color-blue-text-s: 30%;
-	--color-purple-text-s: 36%;
-	--color-pink-text-s: 42%;
-	--color-grey-text-s: 5%;
+	--text-normal:hsl(28 32% 18%);
+	--text-muted:hsl(28 32% 35%);
+	--text-faint:hsl(28 32% 50%);
 
-	--color-red-text-l: 55%;
-	--color-orange-text-l: 52%;
-	--color-yellow-text-l: 46%;
-	--color-green-text-l: 43%;
-	--color-mint-text-l: 40%;
-	--color-aqua-text-l: 40%;
-	--color-blue-text-l: 56%;
-	--color-purple-text-l: 52%;
-	--color-pink-text-l: 50%;
-	--color-grey-text-l: 47%;
+	--background-primary:hsl(28 32% 95%);
+	--background-primary-alt:hsl(28 32% 93%);
+	--background-secondary:hsl(28 32% 90%);
+	--background-secondary-blur:hsl(28 32% 90% / 75%);
+	--background-secondary-alt:hsl(28 32% 77%);
+	--background-tertiary:hsl(28 32% 91.8%);
 
-	--text-normal: hsl(28 32% 18%);
-	--text-muted: hsl(28 32% 35%);
-	--text-faint: hsl(28 32% 50%);
+	--vertical-lines-color:hsl(28 32% 80%);
 
-	--background-primary: hsl(28 32% 95%);
-	--background-primary-alt: hsl(28 32% 93%);
-	--background-secondary: hsl(28 32% 90%);
-	--background-secondary-blur: hsl(28 32% 90% / 75%);
-	--background-secondary-alt: hsl(28 32% 77%);
-	--background-tertiary: hsl(28 32% 91.8%);
-
-	--vertical-lines-color: hsl(28 32% 80%);
-
-	--shadow-s: hsl(28 32% 7% / 10%) 0 1px 2px 0;
-	--shadow-l: hsl(28 32% 7% / 4%) 0 1px 2px, hsl(28 32% 7% / 4%) 0 2px 4px, hsl(28 32% 7% / 4%) 0 4px 8px, hsl(28 32% 7% / 4%) 0 8px 16px;
+	--shadow-s:hsl(28 32% 7% / 10%) 0 1px 2px 0;
+	--shadow-l:hsl(28 32% 7% / 4%) 0 1px 2px,hsl(28 32% 7% / 4%) 0 2px 4px,hsl(28 32% 7% / 4%) 0 4px 8px,hsl(28 32% 7% / 4%) 0 8px 16px;
 }
 /* #endregion */
 
 /* #region  [Color Scheme - Coffee] Dark Theme */
 .theme-dark.pt-color-scheme-mocha-dt {
-	--color-red-base-s: 62%;
-	--color-orange-base-s: 60%;
-	--color-yellow-base-s: 76%;
-	--color-green-base-s: 25%;
-	--color-mint-base-s: 30%;
-	--color-aqua-base-s: 35%;
-	--color-blue-base-s: 30%;
-	--color-purple-base-s: 30%;
-	--color-pink-base-s: 39%;
-	--color-grey-base-s: 5%;
+	--color-red-base-hsl:352,62%,18%;
+	--color-orange-base-hsl:18,60%,20%;
+	--color-yellow-base-hsl:35,76%,16%;
+	--color-green-base-hsl:121,25%,20%;
+	--color-mint-base-hsl:149,30%,22%;
+	--color-aqua-base-hsl:180,35%,17%;
+	--color-blue-base-hsl:235,30%,21%;
+	--color-purple-base-hsl:275,30%,19%;
+	--color-pink-base-hsl:325,39%,19%;
+	--color-grey-base-hsl:356,5%,20%;
 
-	--color-red-base-l: 18%;
-	--color-orange-base-l: 20%;
-	--color-yellow-base-l: 16%;
-	--color-green-base-l: 20%;
-	--color-mint-base-l: 22%;
-	--color-aqua-base-l: 17%;
-	--color-blue-base-l: 21%;
-	--color-purple-base-l: 19%;
-	--color-pink-base-l: 19%;
-	--color-grey-base-l: 20%;
+	--color-red-tint-hsl:352,62%,31%;
+	--color-orange-tint-hsl:18,60%,33%;
+	--color-yellow-tint-hsl:35,76%,28%;
+	--color-green-tint-hsl:121,25%,34%;
+	--color-mint-tint-hsl:149,30%,35%;
+	--color-aqua-tint-hsl:180,35%,30%;
+	--color-blue-tint-hsl:235,30%,40%;
+	--color-purple-tint-hsl:275,30%,36%;
+	--color-pink-tint-hsl:325,39%,33%;
+	--color-grey-tint-hsl:356,5%,34%;
 
-	--color-red-tint-l: 31%;
-	--color-orange-tint-l: 33%;
-	--color-yellow-tint-l: 28%;
-	--color-green-tint-l: 34%;
-	--color-mint-tint-l: 35%;
-	--color-aqua-tint-l: 30%;
-	--color-blue-tint-l: 40%;
-	--color-purple-tint-l: 36%;
-	--color-pink-tint-l: 33%;
-	--color-grey-tint-l: 34%;
+	--color-red-text-hsl:352,72%,66%;
+	--color-orange-text-hsl:18,75%,64%;
+	--color-yellow-text-hsl:35,65%,56%;
+	--color-green-text-hsl:121,44%,55%;
+	--color-mint-text-hsl:149,52%,55%;
+	--color-aqua-text-hsl:180,46%,48%;
+	--color-blue-text-hsl:235,60%,75%;
+	--color-purple-text-hsl:275,60%,69%;
+	--color-pink-text-hsl:325,62%,68%;
+	--color-grey-text-hsl:356,5%,69%;
 
-	--color-red-text-s: 72%;
-	--color-orange-text-s: 75%;
-	--color-yellow-text-s: 65%;
-	--color-green-text-s: 44%;
-	--color-mint-text-s: 52%;
-	--color-aqua-text-s: 46%;
-	--color-blue-text-s: 60%;
-	--color-purple-text-s: 60%;
-	--color-pink-text-s: 62%;
-	--color-grey-text-s: 5%;
+	--text-normal:hsl(28 32% 85%);
+	--text-muted:hsl(28 32% 70%);
+	--text-faint:hsl(28 32% 60%);
 
-	--color-red-text-l: 66%;
-	--color-orange-text-l: 64%;
-	--color-yellow-text-l: 56%;
-	--color-green-text-l: 55%;
-	--color-mint-text-l: 55%;
-	--color-aqua-text-l: 48%;
-	--color-blue-text-l: 75%;
-	--color-purple-text-l: 69%;
-	--color-pink-text-l: 68%;
-	--color-grey-text-l: 69%;
+	--background-primary:hsl(28 32% 13%);
+	--background-primary-alt:hsl(28 32% 15.5%);
+	--background-secondary:hsl(28 32% 9.2%);
+	--background-secondary-blur:hsl(28 32% 9.2% / 75%);
+	--background-secondary-alt:hsl(28 32% 6.8%);
+	--background-tertiary:hsl(28 32% 7.2%);
 
-	--text-normal: hsl(28 32% 85%);
-	--text-muted: hsl(28 32% 70%);
-	--text-faint: hsl(28 32% 60%);
+	--vertical-lines-color:hsl(28 32% 14%);
 
-	--background-primary: hsl(28 32% 13%);
-	--background-primary-alt: hsl(28 32% 15.5%);
-	--background-secondary: hsl(28 32% 9.2%);
-	--background-secondary-blur: hsl(28 32% 9.2% / 75%);
-	--background-secondary-alt: hsl(28 32% 6.8%);
-	--background-tertiary: hsl(28 32% 7.2%);
-
-	--vertical-lines-color: hsl(28 32% 14%);
-
-	--shadow-s: hsl(28 32% 7% / 50%) 0 1px 2px 0;
-	--shadow-l: hsl(28 32% 7% / 50%) 0 1px 2px, hsl(28 32% 7% / 50%) 0 2px 4px, hsl(28 32% 7% / 50%) 0 4px 8px, hsl(28 32% 7% / 50%) 0 8px 16px;
+	--shadow-s:hsl(28 32% 7% / 50%) 0 1px 2px 0;
+	--shadow-l:hsl(28 32% 7% / 50%) 0 1px 2px,hsl(28 32% 7% / 50%) 0 2px 4px,hsl(28 32% 7% / 50%) 0 4px 8px,hsl(28 32% 7% / 50%) 0 8px 16px;
 }
 /* #endregion */
