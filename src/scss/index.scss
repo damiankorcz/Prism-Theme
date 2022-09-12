@@ -62,11 +62,10 @@
 @use "Plugins/Theme/fontFeatures.scss"; // ✅
 @use "Plugins/Theme/Headers/headersCustomisation.scss"; // 🧹 Might need to rework the padding and margin.
 // @use "Plugins/Theme/coloredFolders.scss"; // ⚠️ Won't be perfect. Might not implement.
-// @use "Plugins/Theme/background.scss"; // ⚠️ Might be dropped
 // @use "Plugins/Theme/customIcons.scss"; // ⚠️ Might be dropped
 
 /* Community Plugins */
-@use "Plugins/Community/styleSettings.scss"; // 🧹 Needs new style
+@use "Plugins/Community/styleSettings.scss"; // ✅
 // @use "Plugins/Community/advancedTables.scss"; // 🔧
 // @use "Plugins/Community/kanban.scss";  // Issues with lane headers, add button border, menu button shadow
 // @use "Plugins/Community/quickExplorer.scss"; // 🔧
@@ -87,8 +86,8 @@
 // @use "Plugins/Community/recentFiles.scss"; // 🔧
 
 /* Config Files */
-@use"Info/styleSettingsConfig.scss";
-@use"Info/pluginCompatibility.scss";
+@use "Info/styleSettingsConfig.scss";
+@use "Info/pluginCompatibility.scss";
 
 
 // TODO
@@ -97,8 +96,8 @@
 //     - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant code). 
 // - embedded-backlinks / internal-query styling.
 // - Make sure that the currently active tab is distinguisable between the active tabs in other panes.
-// - Will need to redo the Mobile side of the theme.
 // - Look into var(--text-on-accent);
+// - Will need to redo the Mobile side of the theme.
 
 // Codeblocks' background not displaying correctly in callouts
 

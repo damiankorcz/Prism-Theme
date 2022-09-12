@@ -1,5 +1,4 @@
-/* #region  [Plugin - Community] Style Settings */
-
+/* #region  [Plugin - Community] Style Settings Base */
 div.workspace-leaf-content[data-type="style-settings"] {
 	div.view-content {
 		padding: var(--file-margins);
@@ -8,163 +7,295 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
 		flex-direction: row;
 	}
-	
-	.setting-item.style-settings-heading[data-id="appearance"] {
-		.style-settings-collapse-indicator::after {
-			content: "🎨";
-		}
-	}
-	
-	.setting-item.style-settings-heading[data-id="editor"] {
-		.style-settings-collapse-indicator::after {
-			content: "📝";
-		}
-	}
-	
-	.setting-item.style-settings-heading[data-id="user-interface"] {
-		.style-settings-collapse-indicator::after {
-			content: "👆";
-		}
-	}
-	
-	.setting-item.style-settings-heading[data-id="plugins"] {
-		.style-settings-collapse-indicator::after {
-			content: "🧩";
-		}
-	}
-	
-	.setting-item.style-settings-heading[data-id="feature-toggles"] {
-		.style-settings-collapse-indicator::after {
-			content: "🪠";
-		}
-	}
+}
+
+.setting-item.setting-item-heading.style-settings-heading,
+.style-settings-container .style-settings-heading {
+	border-bottom: unset;
 }
 
 
-// div.style-settings-heading[data-level="0"] {
-// 	position: relative;
-// 	padding: 8px;
-// 	margin-bottom: 0;
-// 	background-color: var(--background-primary);
-// 	border: 1px solid var(--window-border);
-// 	border-radius: var(--radius-m);
-// 	box-shadow: var(--shadow-s);
+div.style-settings-heading[data-level="1"] div.setting-item-description,
+div.style-settings-heading div.setting-item-description {
+	padding-left: unset;
+}
 
-// 	+ .style-settings-container {
-// 		padding: 45px 20px 20px;
-// 		margin-top: -30px;
-// 		margin-bottom: 15px;
-// 		margin-left: 0;
-// 		border: 1px solid var(--window-border);
-// 		border-radius: var(--radius-m);
+.setting-item.setting-item-heading.is-collapsed {
+	margin-bottom: unset;
+}
 
-// 		.style-settings-collapse-indicator {
-// 			margin-left: 0;
-// 		}
+.style-settings-container > .setting-item:last-of-type {
+	padding-bottom: unset;
+}
 
-// 		.theme-light & {
-// 			background-color: var(--background-tertiary);
-// 		}
+.style-settings-heading[data-level="0"] + .style-settings-container,
+.style-settings-container {
+	padding-left: var(--size-4-2);
+	margin-left: var(--size-4-1);
+}
+/* #endregion */
 
-// 		.theme-dark & {
-// 			background-color: var(--background-secondary-alt);
-// 		}
-// 	}
+/* #region  [Plugin - Community] Style Settings Header Icons */
+.setting-item.style-settings-heading[data-id="appearance"] {
+	.style-settings-collapse-indicator::after {
+		content: "🎨";
+		margin-left: var(--size-4-2);
+	}
+}
 
-// 	&.is-collapsed {
-// 		margin-bottom: 15px;
-// 		border: 1px solid var(--window-border);
-// 		border-radius: var(--radius-m);
-// 		box-shadow: var(--shadow-s);
-// 		.theme-light & {
-// 			background-color: var(--background-primary-alt);
-// 		}
+.setting-item.style-settings-heading[data-id="editor"] {
+	.style-settings-collapse-indicator::after {
+		content: "📝";
+		margin-left: var(--size-4-2);
+	}
+}
 
-// 		.theme-dark & {
-// 			background-color: var(--background-tertiary);
-// 		}
-// 	}
-// }
+.setting-item.style-settings-heading[data-id="user-interface"] {
+	.style-settings-collapse-indicator::after {
+		content: "👆";
+		margin-left: var(--size-4-2);
+	}
+}
 
-// div.style-settings-heading[data-level="1"] {
-// 	.setting-item-description {
-// 		padding-left: 10px;
-// 	}
-// }
+.setting-item.style-settings-heading[data-id="plugins"] {
+	.style-settings-collapse-indicator::after {
+		content: "🧩";
+		margin-left: var(--size-4-2);
+	}
+}
 
-// div.style-settings-heading:not([data-level="0"]):not([data-level="1"]) {
-// 	.setting-item-description {
-// 		padding-left: 10px;
-// 	}
-// }
+.setting-item.style-settings-heading[data-id="feature-toggles"] {
+	border-bottom: unset;
 
-// div.style-settings-heading {
-// 	padding: 8px 0;
-// 	margin-bottom: 5px;
-// }
+	.style-settings-collapse-indicator::after {
+		content: "🪠";
+		margin-left: var(--size-4-2);
+	}
+}
 
-// div.style-settings-container {
-// 	margin-left: 15px;
+.style-settings-heading[data-id="support"] {
+	margin-bottom: 0;
+	pointer-events: none;
+	cursor: text;
+	border-top: 2px solid var(--table-border-color);
 
-// 	&[data-level="0"] {
-// 		margin-left: 4px;
-// 	}
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
 
-// 	&[data-level] {
-// 		padding-bottom: 0;
-// 		padding-left: 5px;
-// 		margin-left: 12px;
-// 		border-left: 2px solid var(--vertical-lines-color);
-// 	}
-// }
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
+		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-weight: initial;
+		color: unset;
+		content: "❤️";
+	}
+}
 
-// .setting-item.setting-item-heading.style-settings-heading {
-// 	.setting-item-name {
-// 		width: fit-content;
-// 		padding: 0 8px;
-// 		border-radius: var(--radius-s);
-// 	}
+.style-settings-heading[data-id="support-star-repo"],
+.style-settings-heading[data-id="support-submit-issue"],
+.style-settings-heading[data-id="support-donate"],
+.style-settings-heading[data-id="prism-wiki-link"] {
+	padding-bottom: 0;
+	margin-bottom: 0;
 
-// 	&:hover {
-// 		.style-settings-collapse-indicator {
-// 			color: var(--interactive-accent-hover);
-// 		}
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+}
 
-// 		.setting-item-name {
-// 			color: var(--interactive-accent-text);
-// 		}
-// 	}
+.setting-item.style-settings-heading[data-id="support-star-repo"] {
+	cursor: default;
 
-// 	&:not(.is-collapsed) .style-settings-collapse-indicator {
-// 		color: var(--interactive-accent-text);
-// 	}
-// }
+	&:hover div.setting-item-name {
+		color: var(--text-normal);
+	}
 
-// .setting-item-description div small {
-// 	display: block;
-// 	max-width: 400px;
-// 	overflow: hidden;
-// 	text-overflow: ellipsis;
-// 	white-space: nowrap;
-// }
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: var(--size-4-2);
+		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-weight: initial;
+		color: unset;
+		content: "⭐";
+	}
 
-// div.setting-item,
-// div.style-settings-heading {
-// 	border-top: unset;
-// 	border-bottom: unset;
-// }
+	.setting-item-description {
+		color: var(--interactive-accent-text);
+		cursor: text;
+		user-select: all;
+	}
+}
 
-// .style-settings-collapse-indicator::after {
-// 	display: inline-block;
-// 	width: 24px;
-// 	height: fit-content;
-// 	padding: 0;
-// 	margin-left: 8px;
-// 	font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-// 	font-weight: initial;
-// 	color: unset;
-// 	text-align: center;
-// }
+.setting-item.style-settings-heading[data-id="support-submit-issue"] {
+	cursor: default;
+
+	&:hover div.setting-item-name {
+		color: var(--text-normal);
+	}
+
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
+		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-weight: initial;
+		color: unset;
+		content: "⚠️";
+	}
+
+	.setting-item-description {
+		color: var(--interactive-accent-text);
+		cursor: text;
+		user-select: all;
+	}
+}
+
+.setting-item.style-settings-heading[data-id="support-donate"] {
+	cursor: default;
+
+	&:hover div.setting-item-name {
+		color: var(--text-normal);
+	}
+
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
+		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-weight: initial;
+		color: unset;
+		content: "☕";
+	}
+
+	.setting-item-description {
+		color: var(--interactive-accent-text);
+		cursor: text;
+		user-select: all;
+	}
+}
+/* #endregion */
+
+/* #region  [Plugin - Community] Style Settings Custom Accent Color Sliders */
+.style-settings-container .setting-item {
+	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-tint-"], [data-id*="color-accent-l-text-"]) {
+		.setting-item-control::before {
+			width: 1.5em;
+			height: 1.5em;
+			margin-right: 8px;
+			content: " ";
+			border: 1px solid var(--window-border);
+			border-radius: var(--radius-s);
+		}
+
+		input.slider {
+			width: 150px;
+			height: 1.5em;
+
+			&::-webkit-slider-thumb {
+				width: 4px;
+				height: 1.75em;
+				margin-top: -3px;
+				border: 1px solid var(--window-border);
+				-webkit-appearance: none;
+			}
+		}
+
+		.theme-light & {
+			input.slider::-webkit-slider-thumb {
+				background-color: var(--background-primary);
+			}
+		}
+
+		.theme-dark & {
+			input.slider::-webkit-slider-thumb {
+				background-color: var(--text-normal);
+			}
+		}
+	}
+
+	&:is([data-id^="color-accent-h-lt"]) {
+		input.slider {
+			background: var(--hue-background-lt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-lt);
+		}
+	}
+
+	&:is([data-id^="color-accent-s-lt"]) {
+		input.slider {
+			background: var(--saturation-background-lt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-lt);
+		}
+	}
+
+	&:is([data-id^="color-accent-l-base-lt"], [data-id^="color-accent-l-tint-lt"], [data-id^="color-accent-l-text-lt"]) input.slider {
+		background: var(--lightness-background-lt);
+	}
+
+	&[data-id^="color-accent-l-base-lt"] .setting-item-control::before {
+		background-color: var(--color-accent-base-lt);
+	}
+
+	&[data-id^="color-accent-l-tint-lt"] .setting-item-control::before {
+		background-color: var(--color-accent-tint-lt);
+	}
+
+	&[data-id^="color-accent-l-text-lt"] .setting-item-control::before {
+		background-color: var(--color-accent-text-lt);
+	}
+
+	&:is([data-id^="color-accent-h-dt"]) {
+		input.slider {
+			background: var(--hue-background-dt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-dt);
+		}
+	}
+
+	&:is([data-id^="color-accent-s-dt"]) {
+		input.slider {
+			background: var(--saturation-background-dt);
+		}
+
+		.setting-item-control::before {
+			background-color: var(--color-accent-base-dt);
+		}
+	}
+
+	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-tint-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
+		background: var(--lightness-background-dt);
+	}
+
+	&[data-id^="color-accent-l-base-dt"] .setting-item-control::before {
+		background-color: var(--color-accent-base-dt);
+	}
+
+	&[data-id^="color-accent-l-tint-dt"] .setting-item-control::before {
+		background-color: var(--color-accent-tint-dt);
+	}
+
+	&[data-id^="color-accent-l-text-dt"] .setting-item-control::before {
+		background-color: var(--color-accent-text-dt);
+	}
+}
+/* #endregion */
 
 // .style-settings-heading[data-id="color-folders"] {
 // 	display: inline-flex;
@@ -246,234 +377,3 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 */
-
-// .style-settings-heading[data-id="support"] {
-// 	margin-top: 10px;
-// 	margin-bottom: 0;
-// 	pointer-events: none;
-// 	cursor: text;
-// 	border-top: 2px solid var(--table-border-color);
-
-// 	.setting-item-control,
-// 	.style-settings-collapse-indicator {
-// 		display: none;
-// 	}
-
-// 	.setting-item-name::before {
-// 		display: inline-block;
-// 		width: 20px;
-// 		height: fit-content;
-// 		padding-right: 8px;
-// 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-// 		font-weight: initial;
-// 		color: unset;
-// 		content: "❤️";
-// 	}
-// }
-
-// .style-settings-heading[data-id="support-star-repo"],
-// .style-settings-heading[data-id="support-submit-issue"],
-// .style-settings-heading[data-id="support-donate"],
-// .style-settings-heading[data-id="prism-wiki-link"] {
-// 	padding-bottom: 0;
-// 	margin-bottom: 0;
-
-// 	.setting-item-control,
-// 	.style-settings-collapse-indicator {
-// 		display: none;
-// 	}
-// }
-
-// .setting-item.style-settings-heading[data-id="support-star-repo"] {
-// 	cursor: default;
-
-// 	&:hover div.setting-item-name {
-// 		color: var(--text-normal);
-// 	}
-
-// 	.setting-item-name::before {
-// 		display: inline-block;
-// 		width: 20px;
-// 		height: fit-content;
-// 		padding-right: 8px;
-// 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-// 		font-weight: initial;
-// 		color: unset;
-// 		content: "⭐";
-// 	}
-
-// 	.setting-item-description {
-// 		color: var(--interactive-accent-text);
-// 		cursor: text;
-// 		user-select: all;
-// 	}
-// }
-
-// .setting-item.style-settings-heading[data-id="support-submit-issue"] {
-// 	cursor: default;
-
-// 	&:hover div.setting-item-name {
-// 		color: var(--text-normal);
-// 	}
-
-// 	.setting-item-name::before {
-// 		display: inline-block;
-// 		width: 20px;
-// 		height: fit-content;
-// 		padding-right: 8px;
-// 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-// 		font-weight: initial;
-// 		color: unset;
-// 		content: "⚠️";
-// 	}
-
-// 	.setting-item-description {
-// 		color: var(--interactive-accent-text);
-// 		cursor: text;
-// 		user-select: all;
-// 	}
-// }
-
-// .setting-item.style-settings-heading[data-id="support-donate"] {
-// 	cursor: default;
-
-// 	&:hover div.setting-item-name {
-// 		color: var(--text-normal);
-// 	}
-
-// 	.setting-item-name::before {
-// 		display: inline-block;
-// 		width: 20px;
-// 		height: fit-content;
-// 		padding-right: 8px;
-// 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-// 		font-weight: initial;
-// 		color: unset;
-// 		content: "☕";
-// 	}
-
-// 	.setting-item-description {
-// 		color: var(--interactive-accent-text);
-// 		cursor: text;
-// 		user-select: all;
-// 	}
-// }
-
-// .theme-light div.style-settings-container select.dropdown:hover {
-// 	background-color: var(--background-primary-alt);
-// }
-
-// .theme-dark div.style-settings-container select.dropdown:hover {
-// 	background-color: var(--background-secondary);
-// }
-
-// .style-settings-container .setting-item {
-// 	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-tint-"], [data-id*="color-accent-l-text-"]) {
-// 		.setting-item-control::before {
-// 			width: 1.5em;
-// 			height: 1.5em;
-// 			margin-right: 8px;
-// 			content: " ";
-// 			border: 1px solid var(--window-border);
-// 			border-radius: var(--radius-s);
-// 		}
-
-// 		input.slider {
-// 			width: 150px;
-// 			height: 1.5em;
-
-// 			&::-webkit-slider-thumb {
-// 				width: 4px;
-// 				height: 1.75em;
-// 				margin-top: -0.45em;
-// 				border: 1px solid var(--window-border);
-// 				-webkit-appearance: none;
-// 			}
-// 		}
-
-// 		.theme-light & {
-// 			input.slider::-webkit-slider-thumb {
-// 				background-color: var(--background-primary);
-// 			}
-// 		}
-
-// 		.theme-dark & {
-// 			input.slider::-webkit-slider-thumb {
-// 				background-color: var(--text-normal);
-// 			}
-// 		}
-// 	}
-
-// 	&:is([data-id^="color-accent-h-lt"]) {
-// 		input.slider {
-// 			background: var(--hue-background-lt);
-// 		}
-
-// 		.setting-item-control::before {
-// 			background-color: var(--color-accent-base-lt);
-// 		}
-// 	}
-
-// 	&:is([data-id^="color-accent-s-lt"]) {
-// 		input.slider {
-// 			background: var(--saturation-background-lt);
-// 		}
-
-// 		.setting-item-control::before {
-// 			background-color: var(--color-accent-base-lt);
-// 		}
-// 	}
-
-// 	&:is([data-id^="color-accent-l-base-lt"], [data-id^="color-accent-l-tint-lt"], [data-id^="color-accent-l-text-lt"]) input.slider {
-// 		background: var(--lightness-background-lt);
-// 	}
-
-// 	&[data-id^="color-accent-l-base-lt"] .setting-item-control::before {
-// 		background-color: var(--color-accent-base-lt);
-// 	}
-
-// 	&[data-id^="color-accent-l-tint-lt"] .setting-item-control::before {
-// 		background-color: var(--color-accent-tint-lt);
-// 	}
-
-// 	&[data-id^="color-accent-l-text-lt"] .setting-item-control::before {
-// 		background-color: var(--color-accent-text-lt);
-// 	}
-
-// 	&:is([data-id^="color-accent-h-dt"]) {
-// 		input.slider {
-// 			background: var(--hue-background-dt);
-// 		}
-
-// 		.setting-item-control::before {
-// 			background-color: var(--color-accent-base-dt);
-// 		}
-// 	}
-
-// 	&:is([data-id^="color-accent-s-dt"]) {
-// 		input.slider {
-// 			background: var(--saturation-background-dt);
-// 		}
-
-// 		.setting-item-control::before {
-// 			background-color: var(--color-accent-base-dt);
-// 		}
-// 	}
-
-// 	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-tint-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
-// 		background: var(--lightness-background-dt);
-// 	}
-
-// 	&[data-id^="color-accent-l-base-dt"] .setting-item-control::before {
-// 		background-color: var(--color-accent-base-dt);
-// 	}
-
-// 	&[data-id^="color-accent-l-tint-dt"] .setting-item-control::before {
-// 		background-color: var(--color-accent-tint-dt);
-// 	}
-
-// 	&[data-id^="color-accent-l-text-dt"] .setting-item-control::before {
-// 		background-color: var(--color-accent-text-dt);
-// 	}
-// }
-/* #endregion */
