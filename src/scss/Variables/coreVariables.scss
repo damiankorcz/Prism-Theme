@@ -71,13 +71,14 @@ body {
 	--slider-thumb-radius: var(--size-4-1);
 	--slider-thumb-width: 10px;
 
-	--code-function: var(--color-yellow-text);
-	--code-important: var(--color-orange-text);
-	--code-keyword: var(--color-pink-text);
-	--code-property: var(--color-aqua-text);
-	--code-string: var(--color-green-text);
-	--code-tag: var(--color-red-text);
-	--code-value: var(--color-purple-text);
+	--color-red: var(--color-red-text);
+	--color-green: var(--color-green-text);
+	--color-orange: var(--color-orange-text);
+	--color-yellow: var(--color-yellow-text);
+	--color-cyan: var(--color-cyan-text);
+	--color-blue: var(--color-blue-text);
+	--color-purple: var(--color-purple-text);
+	--color-pink: var(--color-pink-text);
 
 	/* Custom Prism Properties */
 	--graph-fill-opacity-lt: 1;
@@ -134,7 +135,7 @@ body {
 		--color-yellow-base: hsl(var(--color-yellow-base-hsl));
 		--color-green-base: hsl(var(--color-green-base-hsl));
 		--color-mint-base: hsl(var(--color-mint-base-hsl));
-		--color-aqua-base: hsl(var(--color-aqua-base-hsl));
+		--color-cyan-base: hsl(var(--color-cyan-base-hsl));
 		--color-blue-base: hsl(var(--color-blue-base-hsl));
 		--color-purple-base: hsl(var(--color-purple-base-hsl));
 		--color-pink-base: hsl(var(--color-pink-base-hsl));
@@ -145,7 +146,7 @@ body {
 		--color-yellow-tint: hsl(var(--color-yellow-tint-hsl));
 		--color-green-tint: hsl(var(--color-green-tint-hsl));
 		--color-mint-tint: hsl(var(--color-mint-tint-hsl));
-		--color-aqua-tint: hsl(var(--color-aqua-tint-hsl));
+		--color-cyan-tint: hsl(var(--color-cyan-tint-hsl));
 		--color-blue-tint: hsl(var(--color-blue-tint-hsl));
 		--color-purple-tint: hsl(var(--color-purple-tint-hsl));
 		--color-pink-tint: hsl(var(--color-pink-tint-hsl));
@@ -156,7 +157,7 @@ body {
 		--color-yellow-text: hsl(var(--color-yellow-text-hsl));
 		--color-green-text: hsl(var(--color-green-text-hsl));
 		--color-mint-text: hsl(var(--color-mint-text-hsl));
-		--color-aqua-text: hsl(var(--color-aqua-text-hsl));
+		--color-cyan-text: hsl(var(--color-cyan-text-hsl));
 		--color-blue-text: hsl(var(--color-blue-text-hsl));
 		--color-purple-text: hsl(var(--color-purple-text-hsl));
 		--color-pink-text: hsl(var(--color-pink-text-hsl));
@@ -368,11 +369,11 @@ body {
 			--interactive-accent-hover: var(--color-mint-tint);
 		}
 
-		&.pt-accent-color-aqua-lt {
-			--interactive-accent-base: var(--color-aqua-base);
-			--interactive-accent-tint: var(--color-aqua-tint);
-			--interactive-accent-text: var(--color-aqua-text);
-			--interactive-accent-hover: var(--color-aqua-tint);
+		&.pt-accent-color-cyan-lt {
+			--interactive-accent-base: var(--color-cyan-base);
+			--interactive-accent-tint: var(--color-cyan-tint);
+			--interactive-accent-text: var(--color-cyan-text);
+			--interactive-accent-hover: var(--color-cyan-tint);
 		}
 
 		&.pt-accent-color-blue-lt {
@@ -509,11 +510,11 @@ body {
 			--interactive-accent-hover: var(--color-mint-tint);
 		}
 
-		&.pt-accent-color-aqua-dt {
-			--interactive-accent-base: var(--color-aqua-base);
-			--interactive-accent-tint: var(--color-aqua-tint);
-			--interactive-accent-text: var(--color-aqua-text);
-			--interactive-accent-hover: var(--color-aqua-tint);
+		&.pt-accent-color-cyan-dt {
+			--interactive-accent-base: var(--color-cyan-base);
+			--interactive-accent-tint: var(--color-cyan-tint);
+			--interactive-accent-text: var(--color-cyan-text);
+			--interactive-accent-hover: var(--color-cyan-tint);
 		}
 
 		&.pt-accent-color-blue-dt {
