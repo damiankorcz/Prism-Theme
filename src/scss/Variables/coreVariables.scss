@@ -35,14 +35,15 @@ body {
 	--text-accent: var(--interactive-accent-text);
 	--icon-color-focused: var(--interactive-accent-text);
 	--background-modifier-error: var(--color-red-text);
-	--background-modifier-border: var(--table-border-color);
+	--background-modifier-border: var(--window-border);
 	--background-modifier-border-focus: var(--interactive-accent-base);
+	--background-modifier-hover: var(--background-primary);
 
 	--checkbox-marker-color: var(--highlight-text-normal);
 	--checklist-done-color: var(--interactive-accent-base);
 	--checkbox-border-color-hover: var(--interactive-accent-tint);
 
-	--blockquote-border-color: var(--table-border-color);
+	--blockquote-border-color: var(--window-border);
 
 	--header-height: 41px;
 
@@ -80,22 +81,7 @@ body {
 	--color-purple: var(--color-purple-text);
 	--color-pink: var(--color-pink-text);
 
-	/* Custom Prism Properties */
-	--graph-fill-opacity-lt: 1;
-	--graph-fill-focused-opacity-lt: 1;
-	--graph-tag-opacity-lt: 1;
-	--graph-attachment-opacity-lt: 1;
-	--graph-unresolved-opacity-lt: 1;
-	--graph-highlight-opacity-lt: 1;
-	--graph-highlight-line-opacity-lt: 0.4;
-
-	--graph-fill-opacity-dt: 1;
-	--graph-fill-focused-opacity-dt: 1;
-	--graph-tag-opacity-dt: 1;
-	--graph-attachment-opacity-dt: 1;
-	--graph-unresolved-opacity-dt: 1;
-	--graph-highlight-opacity-dt: 1;
-	--graph-highlight-line-opacity-dt: 0.4;
+	--text-on-accent: var(--text-normal);
 
 	/* Custom Prism Properties */
 	--blur-intensity: 8px;
@@ -106,23 +92,21 @@ body {
 
 	--mark-highlight-base: var(--color-yellow-base);
 
-	--titlebar-background-color-lt: #EBECEF;
 	--status-bar-background-color-lt: #EBECEF;
-
-	--titlebar-background-color-dt: #2B2B2B;
 	--status-bar-background-color-dt: #2B2B2B;
 
 	--graph-line-custom-color-lt: #C4C7CA;
-	--graph-note-custom-color-lt: #C4C7CA;
-	--graph-note-focused-custom-color-lt: #8670FF;
+	--graph-fill-custom-color-lt: #C4C7CA;
+	--graph-fill-focused-custom-color-lt: #8670FF;
 	--graph-tag-custom-color-lt: #619EFF;
 	--graph-attachment-custom-color-lt: #FDDB6D;
 	--graph-unresolved-custom-color-lt: #FF7070;
 	--graph-highlight-custom-color-lt: #8670FF;
 	--graph-highlight-line-custom-color-lt: #8670FF;
 
-	--graph-note-custom-color-dt: #878787;
-	--graph-note-focused-custom-color-dt: #4C3AB6;
+	--graph-line-custom-color-dt: #878787;
+	--graph-fill-custom-color-dt: #878787;
+	--graph-fill-focused-custom-color-dt: #4C3AB6;
 	--graph-tag-custom-color-dt: #3663AB;
 	--graph-attachment-custom-color-dt: #AF943C;
 	--graph-unresolved-custom-color-dt: #B63A3A;
@@ -242,7 +226,6 @@ body {
 
 		--highlight-text-accent-custom-lt: hsl(0 0% 100%);
 		--highlight-text-accent-custom-dt: hsl(0 0% 0%);
-		--text-on-accent: var(--text-normal);
 		--text-highlight-bg: var(--interactive-accent-base);
 		--interactive-accent: var(--interactive-accent-tint);
 		--text-accent-hover: var(--interactive-accent-hover);
