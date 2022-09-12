@@ -31,7 +31,7 @@ esbuild.build({
             cache: true,
             charset: false,
             alertColor: true,
-            alertAscii: true
+            alertAscii: true,
         }),
         time()
     ]
