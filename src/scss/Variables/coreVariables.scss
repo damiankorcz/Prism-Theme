@@ -3,14 +3,7 @@ body {
 	/* Native Theme Overwrite */
 	--font-interface-theme: "Source Sans 3", sans-serif;
 	--font-text-theme: "Source Sans 3", sans-serif;
-	--font-monospace-theme: "Source Code Pro", monospace;
-
-	--h1-padding-size: 0;
-	--h2-padding-size: 0;
-	--h3-padding-size: 0;
-	--h4-padding-size: 0;
-	--h5-padding-size: 0;
-	--h6-padding-size: 0;
+	--font-monospace-theme: "JetBrains Mono", monospace;
 
 	--h1-size: 2.2em;
 	--h2-size: 2em;
@@ -31,6 +24,8 @@ body {
 	--tag-border-width: 2px;
 	--tag-size: var(--font-smallest);
 
+	--file-folding-offset: 20px;
+
 	--text-error: var(--color-red-text);
 	--text-accent: var(--interactive-accent-text);
 	--icon-color-focused: var(--interactive-accent-text);
@@ -40,12 +35,16 @@ body {
 	--background-modifier-hover: var(--background-primary);
 
 	--checkbox-marker-color: var(--highlight-text-normal);
-	--checklist-done-color: var(--interactive-accent-base);
+	--checklist-done-color: var(--interactive-accent-tint);
 	--checkbox-border-color-hover: var(--interactive-accent-tint);
 
 	--blockquote-border-color: var(--window-border);
 
+	--ribbon-background-collapsed: var(--backcground-secondary);
+
 	--header-height: 41px;
+	--input-height: 32px;
+	--input-radius: var(--radius-s);
 
 	--callout-padding: 4px;
 	--callout-radius: var(--radius-m);
@@ -206,10 +205,9 @@ body {
 				hsl(var(--color-accent-h-dt) var(--color-accent-s-dt) 100%)
 			);
 
-		--highlight-text-accent-custom-lt: hsl(0 0% 100%);
-		--highlight-text-accent-custom-dt: hsl(0 0% 0%);
 		--text-highlight-bg: var(--interactive-accent-base);
 		--interactive-accent: var(--interactive-accent-tint);
+		--interactive-hover: var(--background-primary);
 		--text-accent-hover: var(--interactive-accent-hover);
 		--scroll-button-background-color: var(--background-primary);
 
@@ -234,7 +232,7 @@ body {
 		--window-border: var(--background-secondary-alt);
 		--page-background-color: var(--background-primary);
 		--text-selection: var(--background-secondary-alt);
-		--scroll-bar-thumb: var(--window-border);
+		--scroll-bar-thumb: var(--background-primary);
 
 		--graph-line-color-lt: var(--background-secondary-alt);
 		--graph-fill-color-lt: var(--color-grey-tint);
@@ -261,6 +259,7 @@ body {
 
 		--text-bold-color-lt: var(--text-normal);
 		--text-italic-color-lt: var(--text-normal);
+		--text-italic-bold-color-lt: var(--text-normal);
 		--link-internal-color-lt: var(--interactive-accent-text);
 		--link-external-color-lt: var(--interactive-accent-text);
 
@@ -374,7 +373,7 @@ body {
 		--window-border: var(--background-primary-alt);
 		--page-background-color: var(--background-secondary);
 		--text-selection: var(--background-primary-alt);
-		--scroll-bar-thumb: var(--window-border);
+		--scroll-bar-thumb: var(--background-primary);
 
 		--graph-line-color-dt: var(--background-primary-alt);
 		--graph-fill-color-dt: var(--color-grey-tint);
@@ -401,6 +400,7 @@ body {
 
 		--text-bold-color-dt: var(--text-normal);
 		--text-italic-color-dt: var(--text-normal);
+		--text-italic-bold-color-dt: var(--text-normal);
 		--link-internal-color-dt: var(--interactive-accent-text);
 		--link-external-color-dt: var(--interactive-accent-text);
 

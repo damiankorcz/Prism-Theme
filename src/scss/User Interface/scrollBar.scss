@@ -4,15 +4,33 @@ body:not(.native-scrollbars) {
 	::-webkit-scrollbar {
 		width: var(--scroll-bar-size);
 		height: var(--scroll-bar-size);
-		background: var(--background-secondary);
-		border-left: 1px solid var(--window-border);
 		border-radius: unset;
+
+		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+		&:vertical {
+			border-left: 1px solid var(--window-border);
+		}
+
+		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+		&:horizontal {
+			border-top: 1px solid var(--window-border);
+		}
+	}
+
+	&.theme-light .kanban-plugin__scroll-container::-webkit-scrollbar,
+	&.theme-light ::-webkit-scrollbar {
+		background: var(--background-secondary);
+	}
+
+	&.theme-dark .kanban-plugin__scroll-container::-webkit-scrollbar,
+	&.theme-dark ::-webkit-scrollbar {
+		background: var(--background-secondary-alt);
 	}
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 	::-webkit-scrollbar-thumb {
 		background-color: var(--scroll-bar-thumb) !important;
-		border-width: 1px 2px;
+		border: 1px solid transparent;
 		border-radius: unset;
 	}
 
@@ -25,72 +43,7 @@ body:not(.native-scrollbars) {
 	}
 }
 
-/* #endregion */
-
-/* #region  [UI] Scrollbar Buttons */
-/* Scroll Button */
-.pt-scroll-button ::-webkit-scrollbar-button:single-button {
-	width: var(--scroll-bar-size);
-	height: var(--scroll-bar-size);
-	background-color: var(--scroll-button-background-color);
-	background-repeat: no-repeat;
-	background-position: 50% 80%;
-	background-size: calc(var(--scroll-bar-size) / 2);
-	border: 1px solid var(--window-border);
-	border-radius: 0;
-}
-
-/* Scroll Button Up icon */
-.theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:decrement,
-.theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:decrement {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(0, 0, 0)'><polygon points='5,0 0,5 10,5'/></svg>");
-}
-
-.theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:decrement,
-.theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:decrement {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(255, 255, 255)'><polygon points='5,0 0,5 10,5'/></svg>");
-}
-
-.theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:hover,
-.theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:hover {
-	background-color: var(--background-primary);
-	border-radius: var(--radius-s);
-}
-
-/* Scroll Button Down icon */
-.theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:increment,
-.theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:increment {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
-}
-
-.theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:vertical:increment,
-.theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:vertical:increment {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
-}
-
-/* Scroll Button Left icon */
-.theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:decrement,
-.theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(90 0 0)' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
-	background-position: 20% 50%;
-}
-
-.theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:decrement,
-.theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:decrement {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
-	background-position: 20% 50%;
-}
-
-/* Scroll Button Right icon */
-.theme-light.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:increment,
-.theme-light.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(0, 0, 0)'><polygon points='0,0 10,0 5,5'/></svg>");
-	background-position: 80% 50%;
-}
-
-.theme-dark.pt-scroll-button ::-webkit-scrollbar-button:single-button:horizontal:increment,
-.theme-dark.pt-scroll-button:hover ::-webkit-scrollbar-button:single-button:horizontal:increment {
-	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' transform='rotate(-90 0 0)' fill='rgb(255, 255, 255)'><polygon points='0,0 10,0 5,5'/></svg>");
-	background-position: 80% 50%;
+.show-view-header .cm-scroller::-webkit-scrollbar-track {
+	margin-top: var(--header-height) !important;
 }
 /* #endregion */

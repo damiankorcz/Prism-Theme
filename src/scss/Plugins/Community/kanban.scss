@@ -1,6 +1,88 @@
 /* #region  [Plugin - Community] Kanban Base */
+.kanban-plugin__lane-header-wrapper {
+	gap: var(--size-4-1);
+	padding: var(--size-4-2);
+}
+
+.kanban-plugin__item-title-wrapper {
+	.theme-dark & {
+		background: var(--background-secondary-alt);
+	}
+}
+
+.kanban-plugin__new-item-button:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+.kanban-plugin__lane-items {
+	gap: var(--size-4-1);
+	padding: var(--size-4-2);
+	margin: unset;
+
+	> div {
+		margin-top: unset;
+	}
+
+	> .kanban-plugin__placeholder:not(:only-child) {
+		display: none;
+	}
+}
+
+.kanban-plugin__lane-grip,
+div.kanban-plugin__lane-title-count,
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+	margin: unset;
+}
+
+.kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+	box-shadow: unset;
+}
+
+.modal.kanban-plugin__board-settings-modal {
+	width: var(--modal-width);
+	max-width: var(--modal-max-width);
+	height: var(--modal-height);
+	max-height: var(--modal-max-height);
+
+	.modal-title:empty {
+		display: block;
+		width: -webkit-fill-available;
+		width: fill-available;
+		height: 42px;
+		margin-bottom: unset;
+		content: "";
+		border-bottom: 1px solid var(--window-border);
+	}
+
+	.modal-content {
+		padding: var(--size-4-8);
+	}
+
+	h3,
+	h4 {
+		margin: var(--size-4-2) 0;
+		border-bottom: 1px solid var(--window-border);
+	}
+}
+
+.kanban-plugin__board > div {
+	padding: var(--size-4-4);
+
+	.show-view-header & {
+		padding-top: calc(var(--header-height) + var(--size-4-4));
+	}
+}
+
+/* .is-focused .workspace-leaf.mod-active div.workspace-leaf-content[data-type="kanban"],
+div.workspace-leaf-content[data-type="kanban"] {
+	.view-header {
+		position: relative;
+		display: inline-flex;
+	}
+} */
+
 /* Background fill behind the Kanban View Header */
-.workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
+/* .workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
 	background-color: var(--background-secondary-alt);
 }
 
@@ -234,7 +316,7 @@ div.kanban-plugin__ {
 		overflow-wrap: anywhere;
 	}
 
-	/* Kanban Item Counter */
+	// Kanban Item Counter
 	div.kanban-plugin__lane-title-count {
 		display: block;
 		height: fit-content;
@@ -288,10 +370,11 @@ div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
 	margin: 8px;
 	border-color: var(--window-border);
 	border-radius: var(--radius-s);
-}
+} */
 /* #endregion */
 
 /* #region  [Plugin - Community] Kanban Background Styles */
+/*
 .theme-light.pt-kanban-background-transparent-lt,
 .theme-dark.pt-kanban-background-transparent-dt {
 	.workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
@@ -303,7 +386,7 @@ div.kanban-plugin__lane-items > .kanban-plugin__placeholder:only-child {
 		background-color: unset;
 	}
 }
-/*
+
 NEEDS DIFFERENT BACKGROUND VARIABLE
 
 .theme-light.pt-kanban-background-dots-plain-lt {

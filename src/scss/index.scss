@@ -1,7 +1,7 @@
 @use "Info/license.scss";
 
 /* Setup */
-@use "Fonts/fontFamilyImports.scss"; /* Remove @import for potential fonts */
+@use "Fonts/fontFamilyImports.scss"; /* ✅ */
 
 @use "Variables/coreVariables.scss"; /* ✅ Unless more variables introduced / found useful */
 
@@ -16,27 +16,27 @@
 @use "User Interface/Bars/statusBar.scss"; /* ✅ */
 
 /* Sidebar */
-@use "User Interface/Sidebar/tabHeader.scss"; /* ✅ */
+@use "User Interface/Sidebar/tabHeader.scss"; /* 🔧 Need to decide on the style of Stacked Tabs */
 @use "User Interface/Sidebar/tabLabel.scss"; /* ✅ */
 @use "User Interface/Sidebar/navHeader.scss"; /* ✅ */
 
 /* Other User Interface Elements */
-@use "User Interface/settings.scss"; /* 🧹 Main background and small areas will need work. Needs organising. */
-@use "User Interface/scrollBar.scss"; /* ✅ Needs a better way to handle correctly coloured Scroll button icons */
+@use "User Interface/settings.scss"; /* ✅ */
+@use "User Interface/scrollBar.scss"; /* ✅ */
 @use "User Interface/startup.scss"; /* ✅ */
-@use "User Interface/workspace.scss"; /* ✅ View Header will need a little styling */
-@use "User Interface/documentSearch.scss"; /* ✅ Buttons need changing to theme design. */
+@use "User Interface/workspace.scss"; /* ✅ */
+@use "User Interface/documentSearch.scss"; /* ✅ */
 @use "User Interface/popups.scss"; /* ✅ */
 
 /* @use "User Interface/animations.scss"; 🔧 */
 /* @use "User Interface/mobileToolbar.scss"; 🔧 Will address when Mobile support inline with Desktop changes. */
 
 /* Accent Colors */
-@use "User Interface/Accent Color/accentStyleBase.scss"; /* ✅ Will need tuning when colour schemes are reworked. */
-@use "User Interface/Accent Color/accentStyleTextOnly.scss"; /* ✅ Will need tuning when colour schemes are reworked. */
-@use "User Interface/Accent Color/accentStyleBorderOnly.scss"; /* ✅ Will need tuning when colour schemes are reworked. */
-@use "User Interface/Accent Color/accentStyleFilled.scss"; /* ✅ Will need tuning when colour schemes are reworked. */
-@use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; /* ✅ Will need tuning when colour schemes are reworked. */
+@use "User Interface/Accent Color/accentStyleBase.scss"; /* ✅ */
+@use "User Interface/Accent Color/accentStyleTextOnly.scss"; /* ✅ */
+@use "User Interface/Accent Color/accentStyleBorderOnly.scss"; /* ✅ */
+@use "User Interface/Accent Color/accentStyleFilled.scss"; /* ✅ */
+@use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; /* ✅ */
 
 /* Editor */
 @use "Editor/editorStyling.scss"; /* ✅ Check for consistency across all modes. */
@@ -50,12 +50,12 @@
 @use "Plugins/Core/commandPalette.scss"; /* ✅ */
 @use "Plugins/Core/slashCommands.scss"; /* ✅ */
 @use "Plugins/Core/fileExplorer.scss"; /* ✅ */
-@use "Plugins/Core/graph.scss"; /* ✅ Come back to style the menu when decieded on style. */
+@use "Plugins/Core/graph.scss"; /* ✅ */
 @use "Plugins/Core/outline.scss"; /* ✅ */
 @use "Plugins/Core/search.scss"; /* ✅ */
-@use "Plugins/Core/starred.scss"; /* ✅ Just check for the need of bottom padding for Nav Header */
+@use "Plugins/Core/starred.scss"; /* ✅ */
 @use "Plugins/Core/tags.scss"; /* ✅ */
-@use "Plugins/Core/outgoingLinkBacklinks.scss"; /* 🧹 Spacing and indent needs work */
+@use "Plugins/Core/outgoingLinkBacklinks.scss"; /* ✅ */
 
 /* Theme Plugins */
 @use "Plugins/Theme/customVaultBanner.scss"; /* ✅ */
@@ -67,9 +67,9 @@
 
 /* Community Plugins */
 @use "Plugins/Community/styleSettings.scss"; /* ✅ */
+@use "Plugins/Community/kanban.scss"; /* 🧹 Small tweaks needed and remove old code */
 
 /* @use "Plugins/Community/advancedTables.scss"; 🔧 */
-/* @use "Plugins/Community/kanban.scss";  Issues with lane headers, add button border, menu button shadow */
 /* @use "Plugins/Community/quickExplorer.scss"; 🔧 */
 /* @use "Plugins/Community/danglingLinks.scss"; 🔧 */
 /* @use "Plugins/Community/cMenu.scss"; 🔧 */
@@ -100,12 +100,14 @@ TODO
 - Make sure that the currently active tab is distinguisable between the active tabs in other panes.
 - Look into var(--text-on-accent);
 - Will need to redo the Mobile side of the theme.
+- Hide View Header option needs work
+- Replace Background Tertiary custom variable.
+- Update readme with new mono font info. Explore the font features and see if they can be added as options to Style Settings
+- Need to rework how the results in the Unlinked mentions and Search results look.
 
-Codeblocks' background not displaying correctly in callouts (Possibly only in Dark mode?)
+- Codeblocks' background not displaying correctly in callouts (Possibly only in Dark mode?)
 
 Reported Issues
-Italic and Bold issue: https://discord.com/channels/686053708261228577/989603365606531104/1017879982766301305
-Codeblock inconsistency: https://discord.com/channels/686053708261228577/989603365606531104/1017911856364523601
 Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933
-Unused Variables: https://discord.com/channels/686053708261228577/989603365606531104/1018219565454463036
+Syntax Highlighting inconsistency - https://discord.com/channels/686053708261228577/989603365606531104/1020085523177558036
 */

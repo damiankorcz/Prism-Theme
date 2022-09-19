@@ -5,13 +5,16 @@
 	> div > .tree-item > .tree-item-children .tree-item {
 		margin-left: var(--file-explorer-left-margin);
 	}
+
+	.tree-item-children > div:first-child {
+		display: none;
+	}
 }
 
 .tree-item .tree-item-self {
 	align-items: center;
 	width: 100%;
 	padding: 1px var(--size-4-1) 1px var(--size-4-2);
-	color: var(--text-normal);
 	border: 2px solid transparent;
 }
 
@@ -29,8 +32,12 @@
 }
 
 .tree-item-children {
-	padding-left: unset;
-	margin: 0 0 var(--size-4-1) 10px;
-	border-left: 2px solid var(--vertical-lines-color);
+	padding-left: var(--size-4-1);
+	margin: var(--size-4-1) 0 var(--size-4-1) 10px;
+	border-left: 2px solid var(--window-border);
+
+	&:empty {
+		display: none;
+	}
 }
 /* #endregion */
