@@ -27,11 +27,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 	}
 
 	&:hover {
-		height: 36px;
-		background-color: var(--background-tertiary);
-		border: var(--accent-border-width) solid transparent;
-		border-radius: var(--radius-m);
-		box-shadow: var(--shadow-s);
+		height: var(--header-height);
 		transition: all ease 200ms;
 
 		svg {
@@ -42,13 +38,29 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 		}
 	}
 }
+
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+	height: calc(var(--divider-vertical-height) - var(--header-height));
+}
+
+.workspace-tabs .workspace-leaf {
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
+}
 /* #endregion */
 
 /* #region  [UI] View Header */
 .is-focused .workspace-leaf.mod-active .view-header,
 .view-header {
 	position: fixed;
-	width: calc(100% - var(--scroll-bar-size));
+	width: 100%;
 	background: var(--background-secondary-blur);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
@@ -56,6 +68,11 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 
 .workspace-tabs .view-header {
 	margin: unset;
+	border-bottom: 1px solid var(--window-border);
+}
+
+.view-header-nav-buttons {
+	padding-left: var(--size-4-2);
 }
 
 .view-header-title-container::after {
@@ -66,8 +83,9 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 	padding-right: var(--size-4-2);
 }
 
+.is-focused .workspace-leaf.mod-active .view-header-title,
 .view-header-title {
-	padding-left: var(--size-4-4);
+	color: var(--interactive-accent-text);
 }
 
 .show-view-header {
@@ -81,7 +99,7 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header {
 .workspace-split.mod-vertical.mod-root {
 	.sidebar-toggle-button {
 		width: fit-content;
-		height: 32px;
+		height: calc(var(--header-height) - 9px);
 		padding: 2px;
 		margin: 4px;
 		border: 2px solid transparent;

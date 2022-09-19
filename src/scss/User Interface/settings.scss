@@ -85,6 +85,10 @@
 	.horizontal-tab-content,
 	.vertical-tab-content {
 		padding: var(--size-4-8);
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
 	}
 
 	.installed-plugins-container {
@@ -133,12 +137,12 @@ img.community-theme-lightbox {
 .community-modal-info {
 	display: grid;
 	grid-template-areas:
-		"info-name button-container"
-		"info-author info-version"
-		"info-repo info-downloads"
-		"info-desc info-desc"
-		"seperator seperator"
-		"readme readme";
+		"info-name button-container button-container"
+		"info-author info-version info-version"
+		"info-repo info-repo info-downloads"
+		"info-desc info-desc info-desc"
+		"seperator seperator seperator"
+		"readme readme readme";
 	row-gap: var(--size-2-1);
 	padding: var(--size-4-8) var(--size-4-12);
 
@@ -214,22 +218,18 @@ img.community-theme-lightbox {
 
 .modal.mod-community-theme .community-item {
 	display: grid;
-	grid-template: repeat(1fr);
 	grid-template-areas:
 		"item-name item-name"
 		"item-author item-downloads"
 		"item-screenshot item-screenshot";
-	row-gap: var(--size-2-1);
 }
 
 .modal.mod-community-plugin .community-item {
 	display: grid;
-	grid-template: repeat(1fr);
 	grid-template-areas:
 		"item-name item-name"
 		"item-author item-downloads"
 		"item-desc item-desc";
-	row-gap: var(--size-2-1);
 }
 
 .community-item-name {
@@ -253,7 +253,7 @@ img.community-theme-lightbox {
 
 .community-item-screenshot {
 	grid-area: item-screenshot;
-	margin-top: var(--size-4-1);
+	margin-top: var(--size-4-2);
 	image-rendering: unset;
 }
 
@@ -346,10 +346,6 @@ body:not(.native-scrollbars) .modal-close-button {
 
 .setting-hotkey {
 	font-family: var(--font-interface);
-}
-
-.checkbox-container.is-enabled {
-	background-color: var(--interactive-accent-base);
 }
 
 input[type="range"] {

@@ -1,12 +1,14 @@
 /* #region  [Nav Header] Base */
 .nav-header {
 	display: flex;
-	padding: var(--size-4-1);
+	height: var(--header-height);
+	background-color: var(--background-secondary);
 	border-bottom: 1px solid var(--window-border);
 }
 
 .nav-buttons-container {
 	gap: var(--size-4-1);
+	align-items: center;
 	width: fit-content;
 }
 
@@ -63,12 +65,16 @@
 		order: 2;
 		width: -webkit-fill-available;
 		width: fill-available;
-		padding: unset;
+		height: unset;
+		padding: 0 var(--size-4-2);
+		pointer-events: none;
+		background-color: unset;
 		border-bottom: unset;
 	}
 
 	.nav-buttons-container {
 		padding: var(--size-4-1);
+		pointer-events: auto;
 		background: var(--background-secondary-blur);
 		border: 1px solid var(--window-border);
 		border-radius: var(--radius-m);

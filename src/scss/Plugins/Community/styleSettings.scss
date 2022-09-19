@@ -14,7 +14,6 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	border-bottom: unset;
 }
 
-
 div.style-settings-heading[data-level="1"] div.setting-item-description,
 div.style-settings-heading div.setting-item-description {
 	padding-left: unset;
@@ -30,6 +29,7 @@ div.style-settings-heading div.setting-item-description {
 
 .style-settings-heading[data-level="0"] + .style-settings-container,
 .style-settings-container {
+	padding-bottom: var(--size-4-2);
 	padding-left: var(--size-4-2);
 	margin-left: var(--size-4-1);
 }
@@ -38,29 +38,29 @@ div.style-settings-heading div.setting-item-description {
 /* #region  [Plugin - Community] Style Settings Header Icons */
 .setting-item.style-settings-heading[data-id="appearance"] {
 	.style-settings-collapse-indicator::after {
-		content: "🎨";
 		margin-left: var(--size-4-2);
+		content: "🎨";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="editor"] {
 	.style-settings-collapse-indicator::after {
-		content: "📝";
 		margin-left: var(--size-4-2);
+		content: "📝";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="user-interface"] {
 	.style-settings-collapse-indicator::after {
-		content: "👆";
 		margin-left: var(--size-4-2);
+		content: "👆";
 	}
 }
 
 .setting-item.style-settings-heading[data-id="plugins"] {
 	.style-settings-collapse-indicator::after {
-		content: "🧩";
 		margin-left: var(--size-4-2);
+		content: "🧩";
 	}
 }
 
@@ -68,8 +68,8 @@ div.style-settings-heading div.setting-item-description {
 	border-bottom: unset;
 
 	.style-settings-collapse-indicator::after {
-		content: "🪠";
 		margin-left: var(--size-4-2);
+		content: "🪠";
 	}
 }
 
@@ -277,7 +277,7 @@ div.style-settings-heading div.setting-item-description {
 		.setting-item-control::before {
 			background-color: var(--color-accent-base-dt);
 		}
-	} 
+	}
 
 	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-tint-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
 		background: var(--lightness-background-dt);
