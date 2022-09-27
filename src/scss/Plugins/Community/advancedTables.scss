@@ -1,42 +1,18 @@
 /* #region  [Plugin - Community] Advanced Tables */
 .workspace-leaf-content[data-type="advanced-tables-toolbar"] {
-	.nav-header {
-		position: unset;
-		display: flex;
-		flex-direction: column;
-		width: unset;
-		height: unset;
-		padding: 3px;
-		background: var(--background-secondary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--radius-m);
-		box-shadow: var(--shadow-s);
-	}
-
 	/* Positions the Advanced Tables Toolbar at the top of the View Content */
 	.view-content {
-		display: flex;
-		height: -webkit-fill-available;
-		height: fill-available;
 		padding: 0;
-		overflow: auto;
-		border: unset;
+
+		> div {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
-	.view-content > div {
-		height: fit-content;
-	}
-
-	.pt-advanced-tables-align-left & .view-content {
-		justify-content: flex-start;
-	}
-
-	.pt-advanced-tables-align-center & .view-content {
-		justify-content: center;
-	}
-
-	.pt-advanced-tables-align-right & .view-content {
-		justify-content: flex-end;
+	.nav-header {
+		flex-direction: column;
 	}
 }
 /* #endregion */
