@@ -54,14 +54,12 @@
 	margin: var(--size-4-1);
 }
 
-.workspace-tab-header-tab-list,
-.workspace-tab-header-new-tab {
+:is(.workspace-tab-header-tab-list, .workspace-tab-header-new-tab) {
 	margin-left: unset;
-}
 
-.workspace-tab-header-tab-list .clickable-icon,
-.workspace-tab-header-new-tab .clickable-icon {
-	padding: var(--size-4-1);
+	.clickable-icon {
+		padding: var(--size-4-1);
+	}
 }
 
 .workspace-tab-header-new-tab {

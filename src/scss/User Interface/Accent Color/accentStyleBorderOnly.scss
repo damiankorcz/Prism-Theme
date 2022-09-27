@@ -1,11 +1,6 @@
 /* #region  [Accent Style] Border Only */
-.theme-dark.pt-accent-style-border-dt,
-.theme-light.pt-accent-style-border-lt {
-	.workspace-tab-header.is-active,
-	.nav-action-button.is-active,
-	.vertical-tab-nav-item.is-active,
-	.nav-file-title.is-active,
-	.suggestion-hotkey {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) {
+	:is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-tint);
 	}
@@ -40,8 +35,7 @@
 		}
 	}
 
-	button.mod-warning,
-	.side-dock-ribbon-action.is-active[aria-label="Start/stop recording"] {
+	:is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
 		color: var(--text-normal);
 		background-color: var(--background-primary);
 		border-color: var(--color-red-tint);
@@ -51,10 +45,7 @@
 		}
 	}
 
-	.modal button:not(.mod-cta):not(.mod-warning),
-	.graph-control-content button,
-	.modal-setting-nav-bar .clickable-icon,
-	.document-search-button {
+	:is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
 		color: var(--text-normal);
 		background-color: var(--background-secondary);
 		border-color: var(--color-grey-tint);
@@ -64,7 +55,7 @@
 		}
 	}
 
-	.setting-hotkey {
+	.setting-command-hotkeys .setting-hotkey {
 		color: var(--text-normal);
 		background-color: var(--background-secondary);
 		border-color: var(--color-blue-tint);
@@ -78,8 +69,7 @@
 		}
 	}
 
-	.flair.mod-pop,
-	.community-item .flair {
+	:is(.flair.mod-pop, .community-item .flair) {
 		color: var(--text-normal);
 		background-color: var(--background-secondary);
 		border-color: var(--color-green-tint);
@@ -94,8 +84,7 @@
 		}
 	}
 
-	.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-tint);
 

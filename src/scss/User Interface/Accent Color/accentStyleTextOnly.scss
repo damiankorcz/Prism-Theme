@@ -1,11 +1,6 @@
 /* #region  [Accent Style] Text Only */
-.theme-dark.pt-accent-style-text-dt,
-.theme-light.pt-accent-style-text-lt {
-	.workspace-tab-header.is-active,
-	.nav-action-button.is-active,
-	.vertical-tab-nav-item.is-active,
-	.nav-file-title.is-active,
-	.suggestion-hotkey {
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) {
+	:is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
 		background-color: var(--background-primary);
 		border-color: transparent;
 	}
@@ -39,8 +34,7 @@
 		}
 	}
 
-	button.mod-warning,
-	.side-dock-ribbon-action.is-active[aria-label="Start/stop recording"] {
+	:is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
 		color: var(--color-red-text);
 		background-color: var(--background-primary);
 		border-color: transparent;
@@ -50,10 +44,7 @@
 		}
 	}
 
-	.modal button:not(.mod-cta):not(.mod-warning),
-	.graph-control-content button,
-	.modal-setting-nav-bar .clickable-icon,
-	.document-search-button {
+	:is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
 		color: var(--color-grey-text);
 		background-color: var(--background-primary);
 		border-color: transparent;
@@ -63,7 +54,7 @@
 		}
 	}
 
-	.setting-hotkey {
+	.setting-command-hotkeys  .setting-hotkey {
 		color: var(--color-blue-text);
 		background-color: var(--background-primary);
 		border-color: transparent;
@@ -77,8 +68,7 @@
 		}
 	}
 
-	.flair.mod-pop,
-	.community-item .flair {
+	:is(.flair.mod-pop, .community-item .flair) {
 		color: var(--color-green-text);
 		background-color: var(--background-secondary);
 		border-color: transparent;
@@ -92,8 +82,7 @@
 		}
 	}
 
-	.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
 		background-color: var(--background-primary);
 		border-color: transparent;
 

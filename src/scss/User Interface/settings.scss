@@ -82,8 +82,7 @@
 		border: var(--accent-border-width) solid transparent;
 	}
 
-	.horizontal-tab-content,
-	.vertical-tab-content {
+	:is(.horizontal-tab-content, .vertical-tab-content) {
 		padding: var(--size-4-8);
 
 		.theme-dark & {
@@ -216,20 +215,22 @@ img.community-theme-lightbox {
 	grid-area: readme;
 }
 
-.modal.mod-community-theme .community-item {
-	display: grid;
-	grid-template-areas:
-		"item-name item-name"
-		"item-author item-downloads"
-		"item-screenshot item-screenshot";
-}
+.community-item {
+	.modal.mod-community-theme & {
+		display: grid;
+		grid-template-areas:
+			"item-name item-name"
+			"item-author item-downloads"
+			"item-screenshot item-screenshot";
+	}
 
-.modal.mod-community-plugin .community-item {
-	display: grid;
-	grid-template-areas:
-		"item-name item-name"
-		"item-author item-downloads"
-		"item-desc item-desc";
+	.modal.mod-community-plugin & {
+		display: grid;
+		grid-template-areas:
+			"item-name item-name"
+			"item-author item-downloads"
+			"item-desc item-desc";
+	}
 }
 
 .community-item-name {
@@ -315,8 +316,7 @@ img.community-theme-lightbox {
 	border-top: unset;
 }
 
-.community-modal-search-results-wrapper,
-.community-modal-details {
+:is(.community-modal-search-results-wrapper, .community-modal-details) {
 	margin-top: 43px;
 }
 

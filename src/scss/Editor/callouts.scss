@@ -56,9 +56,7 @@
 	}
 
 	/* Type 2 */
-	&[data-callout='abstract'],
-	&[data-callout='summary'],
-	&[data-callout='tldr'] {
+	:is(&[data-callout='abstract'],	&[data-callout='summary'], &[data-callout='tldr']) {
 		.callout-title {
 			color: var(--color-cyan-text);
 			background-color: var(--color-cyan-base);
@@ -76,8 +74,7 @@
 	}
 
 	/* Type 3 */
-	&[data-callout='info'],
-	&[data-callout='todo'] {
+	:is(&[data-callout='info'],	&[data-callout='todo']) {
 		.callout-title {
 			color: var(--color-blue-text);
 			background-color: var(--color-blue-base);
@@ -95,9 +92,7 @@
 	}
 
 	/* Type 4 */
-	&[data-callout='tip'],
-	&[data-callout='hint'],
-	&[data-callout='important'] {
+	:is(&[data-callout='tip'], &[data-callout='hint'], &[data-callout='important']) {
 		.callout-title {
 			color: var(--color-mint-text);
 			background-color: var(--color-mint-base);
@@ -115,9 +110,7 @@
 	}
 
 	/* Type 5 */
-	&[data-callout='success'],
-	&[data-callout='check'],
-	&[data-callout='done'] {
+	:is(&[data-callout='success'], &[data-callout='check'], &[data-callout='done']) {
 		.callout-title {
 			color: var(--color-green-text);
 			background-color: var(--color-green-base);
@@ -135,9 +128,7 @@
 	}
 
 	/* Type 6 */
-	&[data-callout='question'],
-	&[data-callout='help'],
-	&[data-callout='faq'] {
+	:is(&[data-callout='question'],	&[data-callout='help'],	&[data-callout='faq']) {
 		.callout-title {
 			color: var(--color-yellow-text);
 			background-color: var(--color-yellow-base);
@@ -155,9 +146,7 @@
 	}
 
 	/* Type 7 */
-	&[data-callout='warning'],
-	&[data-callout='caution'],
-	&[data-callout='attention'] {
+	:is(&[data-callout='warning'], &[data-callout='caution'], &[data-callout='attention']) {
 		.callout-title {
 			color: var(--color-orange-text);
 			background-color: var(--color-orange-base);
@@ -175,9 +164,7 @@
 	}
 
 	/* Type 8 */
-	&[data-callout='failure'],
-	&[data-callout='fail'],
-	&[data-callout='missing'] {
+	:is(&[data-callout='failure'], &[data-callout='fail'], &[data-callout='missing']) {
 		.callout-title {
 			color: var(--color-red-text);
 			background-color: var(--color-red-base);
@@ -195,8 +182,7 @@
 	}
 
 	/* Type 9 */
-	&[data-callout='danger'],
-	&[data-callout='error'] {
+	:is(&[data-callout='danger'], &[data-callout='error']) {
 		.callout-title {
 			color: var(--color-red-text);
 			background-color: var(--color-red-base);
@@ -250,8 +236,7 @@
 	}
 
 	/* Type 12 */
-	&[data-callout='quote'],
-	&[data-callout='cite'] {
+	:is(&[data-callout='quote'], &[data-callout='cite']) {
 		.callout-title {
 			color: var(--color-grey-text);
 			background-color: var(--color-grey-base);

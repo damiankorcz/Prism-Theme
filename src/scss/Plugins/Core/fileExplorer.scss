@@ -11,12 +11,6 @@
 	}
 }
 
-.nav-file-title,
-.nav-folder-title {
-	padding: 1px var(--size-4-2);
-	border: 2px solid transparent;
-}
-
 .nav-folder.mod-root .nav-folder > {
 	.nav-folder-children {
 		padding-left: var(--size-4-1);
@@ -30,15 +24,18 @@
 }
 
 /* Indent width */
-.nav-file:not(.mod-root),
-.nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder {
+:is(.nav-file:not(.mod-root), .nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder) {
 	margin-left: var(--file-explorer-left-margin);
 }
 
-.nav-file-title.is-being-dragged-over,
-.nav-folder-title.is-being-dragged-over {
-	background-color: var(--interactive-accent-base);
-	border: 2px solid var(--interactive-accent-tint);
+:is(.nav-file-title, .nav-folder-title) {
+	padding: 1px var(--size-4-2);
+	border: 2px solid transparent;
+
+	&.is-being-dragged-over {
+		background-color: var(--interactive-accent-base);
+		border: 2px solid var(--interactive-accent-tint);
+	}
 }
 
 .workspace-leaf.mod-active {

@@ -17,14 +17,18 @@ body:not(.native-scrollbars) {
 		}
 	}
 
-	&.theme-light .kanban-plugin__scroll-container::-webkit-scrollbar,
-	&.theme-light ::-webkit-scrollbar {
-		background: var(--background-secondary);
+	&.theme-light {
+		.kanban-plugin__scroll-container::-webkit-scrollbar,
+		::-webkit-scrollbar {
+			background: var(--background-secondary);
+		}
 	}
 
-	&.theme-dark .kanban-plugin__scroll-container::-webkit-scrollbar,
-	&.theme-dark ::-webkit-scrollbar {
-		background: var(--background-secondary-alt);
+	&.theme-dark {
+		.kanban-plugin__scroll-container::-webkit-scrollbar,
+		::-webkit-scrollbar {
+			background: var(--background-secondary-alt);
+		}
 	}
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,

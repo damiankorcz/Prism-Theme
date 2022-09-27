@@ -6,18 +6,13 @@
 	justify-content: center;
 }
 
-.workspace-tab-header.is-active,
-.nav-action-button.is-active,
-.vertical-tab-nav-item.is-active,
-.nav-file-title.is-active,
-.suggestion-hotkey {
+:is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
 	color: var(--highlight-text-normal);
 	border: var(--accent-border-width) solid;
 	box-shadow: unset;
 }
 
-.search-result-file-match-destination-file,
-.search-result-file-match-replace-button {
+:is(.search-result-file-match-destination-file, .search-result-file-match-replace-button) {
 	color: var(--text-normal);
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-s);
@@ -27,17 +22,7 @@ button.mod-cta {
 	color: var(--highlight-text-normal);
 }
 
-button.mod-cta,
-button.mod-warning,
-.modal button:not(.mod-cta):not(.mod-warning),
-.graph-control-content button,
-.setting-hotkey,
-.flair.mod-pop,
-.community-item .flair,
-button.copy-code-button,
-.modal-setting-nav-bar .clickable-icon,
-.document-search-button,
-.side-dock-ribbon-action.is-active[aria-label="Start/stop recording"] {
+:is(button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-s);
 }
@@ -46,8 +31,7 @@ button.copy-code-button,
 	padding: var(--size-2-1) var(--size-2-2);
 }
 
-.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
-.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
 	color: var(--highlight-text-normal);
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-m);

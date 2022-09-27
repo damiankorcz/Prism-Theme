@@ -1,17 +1,19 @@
 /* #region  [Plugin - Core] Graph Base */
-.graph-controls-button.mod-close,
-.graph-controls-button.mod-reset {
-	top: var(--size-4-2);
+.graph-controls-button {
+	:is(&.mod-close, &.mod-reset) {
+		top: var(--size-4-2);
+	}
 }
 
-.workspace-leaf-content[data-type="graph"] .view-content,
-.workspace-leaf-content[data-type="localgraph"] .view-content {
-	.theme-light & {
-		background-color: var(--page-background-color);
-	}
+.view-content {
+	:is(.workspace-leaf-content[data-type="graph"] &, .workspace-leaf-content[data-type="localgraph"] &) {
+		.theme-light & {
+			background-color: var(--page-background-color);
+		}
 
-	.theme-dark & {
-		background-color: var(--background-secondary-alt);
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
 	}
 }
 
@@ -55,8 +57,7 @@
 	}
 }
 
-.graph-view.color-fill-unresolved,
-.graph-view.color-arrow {
+:is(.graph-view.color-fill-unresolved, .graph-view.color-arrow) {
 	opacity: 1;
 }
 

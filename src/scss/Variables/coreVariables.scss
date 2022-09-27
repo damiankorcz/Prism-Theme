@@ -19,6 +19,9 @@ body {
 	--h5-weight: var(--font-extrabold);
 	--h6-weight: var(--font-extrabold);
 
+	--list-indent: 1em;
+	--indentation-guide-width: 2px;
+
 	--tag-padding-y: 0;
 	--tag-padding-x: 0.75ch;
 	--tag-border-width: 2px;
@@ -85,8 +88,7 @@ body {
 	--status-bar-background-color-lt: #EBECEF;
 	--status-bar-background-color-dt: #2B2B2B;
 
-	&.theme-light,
-	&.theme-dark {
+	&:is(.theme-light, .theme-dark) {
 		--color-red-base: var(--red100);
 		--color-orange-base: var(--orange100);
 		--color-yellow-base: var(--yellow100);
@@ -132,6 +134,9 @@ body {
 		--color-accent-base-lt: hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) var(--color-accent-l-base-lt));
 		--color-accent-tint-lt: hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) var(--color-accent-l-tint-lt));
 		--color-accent-text-lt: hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) var(--color-accent-l-text-lt));
+
+		--input-shadow: unset;
+		--input-shadow-hover: unset;
 
 		--hue-background-lt:
 			linear-gradient(

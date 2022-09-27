@@ -12,111 +12,93 @@ mark,
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
 
-	.theme-dark.pt-highlight-style-none-dt &,
-	.theme-light.pt-highlight-style-none-lt & {
+	:is(.theme-dark.pt-highlight-style-none-dt &, .theme-light.pt-highlight-style-none-lt &) {
 		padding: 0;
 		font-size: 1em;
 		background-color: transparent;
 		opacity: 1;
 	}
 
-	.theme-dark.pt-highlight-style-border-dt &,
-	.theme-light.pt-highlight-style-border-lt & {
+	:is(.theme-dark.pt-highlight-style-border-dt &,	.theme-light.pt-highlight-style-border-lt &) {
 		background-color: var(--background-primary);
 		border: var(--accent-border-width) solid var(--mark-highlight-dark);
 	}
 
-	.theme-dark.pt-highlight-style-filled-dt &,
-	.theme-light.pt-highlight-style-filled-lt & {
+	:is(.theme-dark.pt-highlight-style-filled-dt &,	.theme-light.pt-highlight-style-filled-lt &) {
 		background-color: var(--mark-highlight-base);
 		border: var(--accent-border-width) solid var(--mark-highlight-base);
 	}
 
-	.theme-dark.pt-highlight-style-borderandfilled-dt &,
-	.theme-light.pt-highlight-style-borderandfilled-lt & {
+	:is(.theme-dark.pt-highlight-style-borderandfilled-dt &, .theme-light.pt-highlight-style-borderandfilled-lt &) {
 		background-color: var(--mark-highlight-base);
 		border: var(--accent-border-width) solid var(--mark-highlight-dark);
 	}
 
-	.theme-light.pt-highlight-text-none-lt &,
-	.theme-dark.pt-highlight-text-none-dt & {
+	:is(.theme-light.pt-highlight-text-none-lt &, .theme-dark.pt-highlight-text-none-dt &) {
 		color: var(--text-normal);
 	}
 
-	.theme-light.pt-highlight-text-color-lt &,
-	.theme-dark.pt-highlight-text-color-dt & {
+	:is(.theme-light.pt-highlight-text-color-lt &, .theme-dark.pt-highlight-text-color-dt &) {
 		color: var(--mark-highlight-text);
 	}
 }
 
 mark {
-	&.red,
-	&.Red {
+	&:is(.red, .Red) {
 		--mark-highlight-base: var(--color-red-base);
 		--mark-highlight-dark: var(--color-red-tint);
 		--mark-highlight-text: var(--color-red-text);
 	}
 
-	&.orange,
-	&.Orange {
+	&:is(.orange, .Orange) {
 		--mark-highlight-base: var(--color-orange-base);
 		--mark-highlight-dark: var(--color-orange-tint);
 		--mark-highlight-text: var(--color-orange-text);
 	}
 
-	&.yellow,
-	&.Yellow {
+	&:is(.yellow, .Yellow) {
 		--mark-highlight-base: var(--color-yellow-base);
 		--mark-highlight-dark: var(--color-yellow-tint);
 		--mark-highlight-text: var(--color-yellow-text);
 	}
 
-	&.green,
-	&.Green {
+	&:is(.green, .Green) {
 		--mark-highlight-base: var(--color-green-base);
 		--mark-highlight-dark: var(--color-green-tint);
 		--mark-highlight-text: var(--color-green-text);
 	}
 
-	&.mint,
-	&.Mint {
+	&:is(.mint, .Mint) {
 		--mark-highlight-base: var(--color-mint-base);
 		--mark-highlight-dark: var(--color-mint-tint);
 		--mark-highlight-text: var(--color-mint-text);
 	}
 
-	&.aqua,
-	&.Aqua,
-	&.cyan,
-	&.Cyan {
+	&:is(.aqua, .Aqua, .cyan, .Cyan) {
 		--mark-highlight-base: var(--color-cyan-base);
 		--mark-highlight-dark: var(--color-cyan-tint);
 		--mark-highlight-text: var(--color-cyan-text);
 	}
 
-	&.blue,
-	&.Blue {
+	&:is(.blue, .Blue) {
 		--mark-highlight-base: var(--color-blue-base);
 		--mark-highlight-dark: var(--color-blue-tint);
 		--mark-highlight-text: var(--color-blue-text);
 	}
 
-	&.purple,
-	&.Purple {
+	&:is(.purple, .Purple) {
 		--mark-highlight-base: var(--color-purple-base);
 		--mark-highlight-dark: var(--color-purple-tint);
 		--mark-highlight-text: var(--color-purple-text);
 	}
 
-	&.pink,
-	&.Pink {
+	&:is(.pink, .Pink) {
 		--mark-highlight-base: var(--color-pink-base);
 		--mark-highlight-dark: var(--color-pink-tint);
 		--mark-highlight-text: var(--color-pink-text);
 	}
 
-	&.grey,
-	&.Grey {
+	&:is(.grey, .Grey) {
 		--mark-highlight-base: var(--color-grey-base);
 		--mark-highlight-dark: var(--color-grey-tint);
 		--mark-highlight-text: var(--color-grey-text);

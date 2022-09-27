@@ -22,42 +22,37 @@
 	border-radius: var(--radius-m);
 }
 
-.nav-files-container,
+:is(.nav-files-container,
 .workspace-leaf-content[data-type="tag"] .tag-container,
 .workspace-leaf-content[data-type="backlink"] .backlink-pane,
 .workspace-leaf-content[data-type="search"] .search-results-children,
 .workspace-leaf-content[data-type="starred"] .item-list,
-.workspace-leaf-content[data-type="dictionary-view"] .contents {
+.workspace-leaf-content[data-type="dictionary-view"] .contents) {
 	padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
-/* #endregion */
 
-/* #region  [Nav Header] Align Left */
-.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content .nav-header,
-.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content .nav-header {
-	justify-content: flex-start;
+.workspace-leaf-content .nav-header {
+	/* Align Left */
+	:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split &, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split &) {
+		justify-content: flex-start;
+	}
+
+	/* Align Center */
+	:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split &, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split &) {
+		justify-content: center;
+	}
+
+	/* Align Right */
+	:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split &, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split &) {
+		justify-content: flex-end;
+	}
 }
-/* #endregion */
 
-/* #region  [Nav Header] Align Center */
-.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content .nav-header,
-.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content .nav-header {
-	justify-content: center;
-}
-/* #endregion */
-
-/* #region  [Nav Header] Align Right */
-.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content .nav-header,
-.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content .nav-header {
-	justify-content: flex-end;
-}
-/* #endregion */
-
-/* #region  [Nav Header] Position Bottom */
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
+/* Position Bottom */
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split,
 .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left,
-.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right {
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) {
 	.nav-header {
 		position: absolute;
 		bottom: calc(4px + var(--scroll-bar-size));

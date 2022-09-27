@@ -1,18 +1,39 @@
 /* #region  [Plugin - Core] Outgoing Links */
-.backlink-pane > .tree-item-self .collapse-icon,
-.outgoing-link-pane > .tree-item-self .collapse-icon {
-	display: block;
-}
-
-.backlink-pane,
-.outgoing-link-pane {
+:is(.backlink-pane, .outgoing-link-pane) {
 	padding: var(--size-4-1);
+
+	.search-result-container .search-result-container {
+		padding: unset;
+		margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
+	}
+
+	> .tree-item-self .collapse-icon {
+		display: block;
+	}
 }
 
-.backlink-pane .search-result-container .search-result-container,
-.outgoing-link-pane .search-result-container .search-result-container {
-	padding: unset;
-	margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
+.embedded-backlinks {
+	.nav-header {
+		height: unset;
+		margin-top: var(--size-4-4);
+		margin-right: var(--size-4-3);
+		background-color: unset;
+		border-bottom: unset;
+	}
+
+	.backlink-pane {
+		padding: var(--size-4-5) var(--size-4-2);
+		border: 1px solid var(--window-border);
+		border-radius: var(--radius-m);
+	}
+
+	.nav-buttons-container {
+		padding: var(--size-4-1);
+		pointer-events: auto;
+		background: var(--background-secondary-blur);
+		border: 1px solid var(--window-border);
+		border-radius: var(--radius-m);
+	}
 }
 
 .outgoing-link-pane .tree-item-self .tree-item-icon {

@@ -2,14 +2,13 @@
 
 /* Setup */
 @use "Fonts/fontFamilyImports.scss"; /* ✅ */
-
-@use "Variables/coreVariables.scss"; /* ✅ Unless more variables introduced / found useful */
+@use "Variables/coreVariables.scss"; /* ✅ */
 
 /* Color Schemes */
-@use "Color Schemes/colorSchemeBird.scss"; /* 🔧 Evaluate the need of all variables. */
-@use "Color Schemes/colorSchemeCoffee.scss"; /* 🔧 Evaluate the need of all variables. */
-@use "Color Schemes/colorSchemeFlower.scss"; /* 🔧 Evaluate the need of all variables. */
-@use "Color Schemes/colorSchemeTree.scss"; /* 🔧 Evaluate the need of all variables. */
+@use "Color Schemes/colorSchemeBird.scss"; /* 🧹 Tweak the colours to final values */
+@use "Color Schemes/colorSchemeCoffee.scss"; /* 🧹 Generate new colour values */
+@use "Color Schemes/colorSchemeFlower.scss"; /* 🧹 Generate new colour values */
+@use "Color Schemes/colorSchemeTree.scss"; /* 🧹 Generate new colour values */
 
 /* Title Bar/Status Bar */
 @use "User Interface/Bars/titleBar.scss"; /* ✅ */
@@ -39,7 +38,7 @@
 @use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; /* ✅ */
 
 /* Editor */
-@use "Editor/editorStyling.scss"; /* ✅ Check for consistency across all modes. */
+@use "Editor/editorStyling.scss"; /* ✅ */
 @use "Editor/callouts.scss"; /* ✅ */
 @use "Editor/progressBar.scss"; /* ✅ */
 
@@ -67,7 +66,7 @@
 
 /* Community Plugins */
 @use "Plugins/Community/styleSettings.scss"; /* ✅ */
-@use "Plugins/Community/kanban.scss"; /* 🧹 Small tweaks needed and remove old code */
+@use "Plugins/Community/kanban.scss"; /* 🧹 Need to fix background types */
 
 /* @use "Plugins/Community/advancedTables.scss"; 🔧 */
 /* @use "Plugins/Community/quickExplorer.scss"; 🔧 */
@@ -95,16 +94,13 @@
 TODO
 - Need to evaluate hover states through out the app due to previous version of the theme implemented them and might be redundant in select areas.
 - Read through the app.css for additional insight and potential improvements for the theme.
-    - Look over all custom variables to see if there are now native replacements (including new ones replacing redundant code).
-- embedded-backlinks / internal-query styling.
-- Make sure that the currently active tab is distinguisable between the active tabs in other panes.
-- Look into var(--text-on-accent);
-- Will need to redo the Mobile side of the theme.
+- Look over all custom variables to see if there are now native replacements (including new ones replacing redundant code).
 - Hide View Header option needs work
-- Replace Background Tertiary custom variable.
 - Update readme with new mono font info. Explore the font features and see if they can be added as options to Style Settings
-- Need to rework how the results in the Unlinked mentions and Search results look.
+- Need to rework how the results in the Unlinked mentions and Search results look. embedded-backlinks / internal-query background; think about doing different shade for sidebar elements too.
+- Will need to redo the Mobile side of the theme.
 
+POTENTIAL ISSUE
 - Codeblocks' background not displaying correctly in callouts (Possibly only in Dark mode?)
 
 Reported Issues

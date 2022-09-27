@@ -1,65 +1,56 @@
 /* #region  [Status Bar] Base */
-.pt-status-bar-position-floating .status-bar {
-	--status-bar-position: absolute;
-	right: 0;
-	left: 0;
-	width: fit-content;
-	margin: 0 auto calc(4px + var(--scroll-bar-size));
-	background: var(--background-secondary-blur);
-	border: 1px solid var(--window-border);
-	border-radius: var(--radius-s);
-	box-shadow: var(--shadow-l);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
-}
+.status-bar {
+	.pt-status-bar-position-floating & {
+		--status-bar-position: absolute;
+		right: 0;
+		left: 0;
+		width: fit-content;
+		margin: 0 auto calc(4px + var(--scroll-bar-size));
+		background: var(--background-secondary-blur);
+		border: 1px solid var(--window-border);
+		border-radius: var(--radius-s);
+		box-shadow: var(--shadow-l);
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
+	}
 
-.pt-status-bar-position-fixed .status-bar {
-	--status-bar-position: relative;
-	padding: 1px var(--size-4-2);
-	border-top: 1px solid var(--window-border);
-	border-radius: unset;
-}
+	.pt-status-bar-position-fixed & {
+		--status-bar-position: relative;
+		padding: 1px var(--size-4-2);
+		border-top: 1px solid var(--window-border);
+		border-radius: unset;
+	}
 
-.pt-status-bar-align-left .status-bar {
-	justify-content: flex-start;
-}
+	.pt-fixed-status-bar-align-left & {
+		justify-content: flex-start;
+	}
 
-.pt-status-bar-align-center .status-bar {
-	justify-content: center;
-}
+	.pt-fixed-status-bar-align-center & {
+		justify-content: center;
+	}
 
-.pt-status-bar-align-right .status-bar {
-	justify-content: flex-end;
-}
-/* #endregion */
+	.pt-fixed-status-bar-align-right & {
+		justify-content: flex-end;
+	}
 
-/* #region  [Status Bar] Solid */
-.theme-light.pt-status-bar-custom-lt div.status-bar {
-	background: var(--status-bar-background-color-lt);
-}
+	.theme-light.pt-status-bar-custom-lt & {
+		background: var(--status-bar-background-color-lt);
+	}
 
-.theme-dark.pt-status-bar-custom-dt div.status-bar {
-	background: var(--status-bar-background-color-dt);
-}
+	.theme-dark.pt-status-bar-custom-dt & {
+		background: var(--status-bar-background-color-dt);
+	}
 
-.theme-light.pt-status-bar-text-light-lt .status-bar {
-	color: var(--background-primary);
-}
+	:is(.theme-light.pt-status-bar-text-light-lt, .theme-dark.pt-status-bar-text-dark-dt) & {
+		color: var(--background-primary);
+	}
 
-.theme-light.pt-status-bar-text-dark-lt .status-bar {
-	color: var(--text-muted);
-}
+	:is(.theme-light.pt-status-bar-text-dark-lt, .theme-dark.pt-status-bar-text-light-dt) & {
+		color: var(--text-muted);
+	}
 
-.theme-dark.pt-status-bar-text-light-dt .status-bar {
-	color: var(--text-muted);
-}
-
-.theme-dark.pt-status-bar-text-dark-dt .status-bar {
-	color: var(--background-primary);
-}
-
-.theme-light.pt-status-bar-text-accent-lt .status-bar,
-.theme-dark.pt-status-bar-text-accent-dt .status-bar {
-	color: var(--interactive-accent-text);
+	:is(.theme-light.pt-status-bar-text-accent-lt, .theme-dark.pt-status-bar-text-accent-dt) & {
+		color: var(--interactive-accent-text);
+	}
 }
 /* #endregion */
