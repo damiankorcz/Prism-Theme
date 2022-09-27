@@ -1,37 +1,35 @@
 /* #region  [Color Scheme - Coffee] Light Theme */
 .theme-light.pt-color-scheme-latte-lt {
-	--color-red-base-hsl:352,70%,83%;
-	--color-orange-base-hsl:18,66%,82%;
-	--color-yellow-base-hsl:35,70%,83%;
-	--color-green-base-hsl:121,37%,81%;
-	--color-mint-base-hsl:149,33%,84%;
-	--color-cyan-base-hsl:180,31%,81%;
-	--color-blue-base-hsl:235,27%,84%;
-	--color-purple-base-hsl:275,38%,82%;
-	--color-pink-base-hsl:325,42%,83%;
-	--color-grey-base-hsl:356,5%,82%;
-
-	--color-red-tint-hsl:352,70%,71%;
-	--color-orange-tint-hsl:18,66%,70%;
-	--color-yellow-tint-hsl:35,70%,65%;
-	--color-green-tint-hsl:121,37%,65%;
-	--color-mint-tint-hsl:149,33%,67%;
-	--color-cyan-tint-hsl:180,31%,64%;
-	--color-blue-tint-hsl:235,27%,71%;
-	--color-purple-tint-hsl:275,38%,70%;
-	--color-pink-tint-hsl:325,42%,69%;
-	--color-grey-tint-hsl:356,5%,65%;
-
-	--color-red-text-hsl:352,53%,55%;
-	--color-orange-text-hsl:18,54%,52%;
-	--color-yellow-text-hsl:35,55%,46%;
-	--color-green-text-hsl:121,45%,43%;
-	--color-mint-text-hsl:149,65%,40%;
-	--color-cyan-text-hsl:180,50%,40%;
-	--color-blue-text-hsl:235,30%,56%;
-	--color-purple-text-hsl:275,36%,52%;
-	--color-pink-text-hsl:325,42%,50%;
-	--color-grey-text-hsl:356,5%,47%;
+	--grey100: hsl(356 5% 82%);
+	--grey200: hsl(356 5% 65%);
+	--grey300: hsl(356 5% 47%);
+	--red100: hsl(352 70% 83%);
+	--red200: hsl(352 70% 71%);
+	--red300: hsl(352 53% 55%);
+	--orange100: hsl(18 66% 82%);
+	--orange200: hsl(18 66% 70%);
+	--orange300: hsl(18 54% 52%);
+	--yellow100: hsl(35 70% 83%);
+	--yellow200: hsl(35 70% 65%);
+	--yellow300: hsl(35 55% 46%);
+	--green100: hsl(121 37% 81%);
+	--green200: hsl(121 37% 65%);
+	--green300: hsl(121 45% 43%);
+	--mint100: hsl(149 33% 84%);
+	--mint200: hsl(149 33% 67%);
+	--mint300: hsl(149 65% 40%);
+	--cyan100: hsl(180 31% 81%);
+	--cyan200: hsl(180 31% 64%);
+	--cyan300: hsl(180 50% 40%);
+	--blue100: hsl(235 27% 84%);
+	--blue200: hsl(235 27% 71%);
+	--blue300: hsl(235 30% 56%);
+	--purple100: hsl(275 38% 82%);
+	--purple200: hsl(275 38% 70%);
+	--purple300: hsl(275 36% 52%);
+	--pink100: hsl(325 42% 83%);
+	--pink200: hsl(325 42% 69%);
+	--pink300: hsl(325 42% 50%);
 
 	--text-normal: hsl(28 32% 18%);
 	--text-muted: hsl(28 32% 35%);
@@ -40,7 +38,7 @@
 	--background-primary: hsl(28 32% 95%);
 	--background-primary-alt: hsl(28 32% 93%);
 	--background-secondary: hsl(28 32% 90%);
-	--background-secondary-blur: hsl(28 32% 90% / 75%);
+	--background-secondary-blur: hsl(28 32% 90% / 80%);
 	--background-secondary-alt: hsl(28 32% 77%);
 
 	--shadow-s: hsl(28 32% 7% / 10%) 0 1px 2px 0;
@@ -50,69 +48,36 @@
 
 /* #region  [Color Scheme - Coffee] Dark Theme */
 .theme-dark.pt-color-scheme-mocha-dt {
-	/* --color-red-base-hsl:352,62%,18%;
-	--color-orange-base-hsl:18,60%,20%;
-	--color-yellow-base-hsl:35,76%,16%;
-	--color-green-base-hsl:121,25%,20%;
-	--color-mint-base-hsl:149,30%,22%;
-	--color-cyan-base-hsl:180,35%,17%;
-	--color-blue-base-hsl:235,30%,21%;
-	--color-purple-base-hsl:275,30%,19%;
-	--color-pink-base-hsl:325,39%,19%;
-	--color-grey-base-hsl:356,5%,20%;
-
-	--color-red-tint-hsl:352,62%,31%;
-	--color-orange-tint-hsl:18,60%,33%;
-	--color-yellow-tint-hsl:35,76%,28%;
-	--color-green-tint-hsl:121,25%,34%;
-	--color-mint-tint-hsl:149,30%,35%;
-	--color-cyan-tint-hsl:180,35%,30%;
-	--color-blue-tint-hsl:235,30%,40%;
-	--color-purple-tint-hsl:275,30%,36%;
-	--color-pink-tint-hsl:325,39%,33%;
-	--color-grey-tint-hsl:356,5%,34%;
-
-	--color-red-text-hsl:352,72%,66%;
-	--color-orange-text-hsl:18,75%,64%;
-	--color-yellow-text-hsl:35,65%,56%;
-	--color-green-text-hsl:121,44%,55%;
-	--color-mint-text-hsl:149,52%,55%;
-	--color-cyan-text-hsl:180,46%,48%;
-	--color-blue-text-hsl:235,60%,75%;
-	--color-purple-text-hsl:275,60%,69%;
-	--color-pink-text-hsl:325,62%,68%;
-	--color-grey-text-hsl:356,5%,69%; */
-
-	--grey100: hsl(0deg, 0%, 21%);
-	--grey200: hsl(0deg, 0%, 38%);
-	--grey300: hsl(0deg, 0%, 59%);
-	--red100: hsl(0deg, 100%, 22%);
-	--red200: hsl(4deg, 51%, 43%);
-	--red300: hsl(6deg, 43%, 64%);
-	--orange100: hsl(2deg, 100%, 22%);
-	--orange200: hsl(23deg, 100%, 33%);
-	--orange300: hsl(28deg, 77%, 51%);
-	--yellow100: hsl(35deg, 100%, 15%);
-	--yellow200: hsl(44deg, 100%, 24%);
-	--yellow300: hsl(49deg, 100%, 35%);
-	--green100: hsl(120deg, 100%, 12%);
-	--green200: hsl(115deg, 52%, 28%);
-	--green300: hsl(114deg, 20%, 54%);
-	--mint100: hsl(156deg, 100%, 12%);
-	--mint200: hsl(164deg, 100%, 22%);
-	--mint300: hsl(168deg, 100%, 33%);
-	--cyan100: hsl(199deg, 100%, 16%);
-	--cyan200: hsl(192deg, 100%, 26%);
-	--cyan300: hsl(192deg, 58%, 47%);
-	--blue100: hsl(227deg, 88%, 30%);
-	--blue200: hsl(222deg, 52%, 46%);
-	--blue300: hsl(221deg, 48%, 65%);
-	--purple100: hsl(265deg, 100%, 31%);
-	--purple200: hsl(259deg, 60%, 54%);
-	--purple300: hsl(253deg, 64%, 72%);
-	--pink100: hsl(320deg, 100%, 21%);
-	--pink200: hsl(319deg, 74%, 40%);
-	--pink300: hsl(325deg, 51%, 65%);
+	--grey100: hsl(356 5% 20%);
+	--grey200: hsl(356 5% 34%);
+	--grey300: hsl(356 5% 69%);
+	--red100: hsl(352 62% 18%);
+	--red200: hsl(352 62% 31%);
+	--red300: hsl(352 72% 66%);
+	--orange100: hsl(18 60% 20%);
+	--orange200: hsl(18 60% 33%);
+	--orange300: hsl(18 75% 64%);
+	--yellow100: hsl(35 76% 16%);
+	--yellow200: hsl(35 76% 28%);
+	--yellow300: hsl(35 65% 56%);
+	--green100: hsl(121 25% 20%);
+	--green200: hsl(121 25% 34%);
+	--green300: hsl(121 44% 55%);
+	--mint100: hsl(149 30% 22%);
+	--mint200: hsl(149 30% 35%);
+	--mint300: hsl(149 52% 55%);
+	--cyan100: hsl(180 35% 17%);
+	--cyan200: hsl(180 35% 30%);
+	--cyan300: hsl(180 46% 48%);
+	--blue100: hsl(235 30% 21%);
+	--blue200: hsl(235 30% 40%);
+	--blue300: hsl(235 60% 75%);
+	--purple100: hsl(275 30% 19%);
+	--purple200: hsl(275 30% 36%);
+	--purple300: hsl(275 60% 69%);
+	--pink100: hsl(325 39% 19%);
+	--pink200: hsl(325 39% 33%);
+	--pink300: hsl(325 62% 68%);
 
 	--text-normal: hsl(28 32% 85%);
 	--text-muted: hsl(28 32% 70%);
@@ -121,7 +86,7 @@
 	--background-primary: hsl(27 30% 13%);
 	--background-primary-alt: hsl(28 32% 15.5%);
 	--background-secondary: hsl(28 32% 9.2%);
-	--background-secondary-blur: hsl(28 32% 9.2% / 75%);
+	--background-secondary-blur: hsl(28 32% 9.2% / 80%);
 	--background-secondary-alt: hsl(28 32% 6.8%);
 
 	--shadow-s: hsl(28 32% 7% / 50%) 0 1px 2px 0;
