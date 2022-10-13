@@ -1,3 +1,5 @@
+> :warning: Please note that the theme is currently being rewritten to support Obsidian 1.0.0+. The current Beta releases are close to final but still have several features not working and unfinished areas. Please withhold submitting issues regarding Beta releases until the official 3.0.0 release of Prism. Thank you!
+
 ![Main Screenshot](https://github.com/damiankorcz/Prism-Theme/blob/main/assets/screenshots/Github%20Hero%20Image.png)
 
 <div align="center">
