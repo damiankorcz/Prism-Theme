@@ -28,7 +28,7 @@
 @use "User Interface/popups.scss"; /* ✅ */
 
 /* @use "User Interface/animations.scss"; 🔧 */
-/* @use "User Interface/mobileToolbar.scss"; 🔧 Will address when Mobile support inline with Desktop changes. */
+/* @use "User Interface/mobileToolbar.scss"; 🔧 Need to look into it */
 
 /* Accent Colors */
 @use "User Interface/Accent Color/accentStyleBase.scss"; /* ✅ */
@@ -92,16 +92,17 @@
 
 /*
 TODO
-- Need to evaluate hover states through out the app due to previous version of the theme implemented them and might be redundant in select areas.
-- Read through the app.css for additional insight and potential improvements for the theme.
-- Look over all custom variables to see if there are now native replacements (including new ones replacing redundant code).
 - Hide View Header option needs work
-- Update readme with new mono font info. Explore the font features and see if they can be added as options to Style Settings
+- Explore the font features and see if they can be added as options to Style Settings
 - Need to rework how the results in the Unlinked mentions and Search results look. embedded-backlinks / internal-query background; think about doing different shade for sidebar elements too.
 - Will need to redo the Mobile side of the theme.
 
 POTENTIAL ISSUE
 - Codeblocks' background not displaying correctly in callouts (Possibly only in Dark mode?)
+
+ISSUES
+- Prompt scroll bar not styling correctly.
+- Hotkey container shouldn't use accent colour (?).
 
 Reported Issues
 Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933
