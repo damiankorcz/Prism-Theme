@@ -3,6 +3,7 @@
 	width: 100%;
 	height: var(--header-height);
 	margin: unset;
+	background-color: var(--background-secondary);
 	border-bottom: 1px solid var(--window-border);
 }
 
@@ -46,5 +47,10 @@
 
 .internal-query .search-result-container {
 	padding: var(--size-4-2) var(--size-4-1);
+}
+
+.search-input-container::before {
+	top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2))/2);
+	left: var(--size-4-3);
 }
 /* #endregion */

@@ -15,7 +15,7 @@
 	.nav-folder-children {
 		padding-left: var(--size-4-1);
 		margin: var(--size-4-1) 0 var(--size-4-1) 10px;
-		border-left: 2px solid var(--window-border);
+		border-left: 1px solid var(--window-border);
 	}
 
 	.nav-folder-title {
@@ -50,5 +50,13 @@
 		border: unset;
 		border-radius: var(--radius-s);
 	}
+}
+
+body:not(.is-grabbing) .nav-file-title.is-being-dragged,
+body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
+.nav-file-title.is-being-dragged,
+.nav-folder-title.is-being-dragged {
+	color: var(--highlight-text-normal);
+	background-color: var(--interactive-accent-base);
 }
 /* #endregion */

@@ -1,12 +1,9 @@
 /* #region  [Plugin - Core] Command Palette */
 .modal-container .prompt {
-	background-color: var(--background-secondary-blur);
 	border: 1px solid var(--window-border);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
 
 	.prompt-results {
-		padding: var(--size-4-2) var(--size-4-2) 0;
+		padding: var(--size-4-2);
 
 		&::-webkit-scrollbar-track {
 			border-radius: var(--radius-s);
@@ -24,6 +21,8 @@
 
 	.prompt-instructions {
 		padding: var(--size-2-1) var(--size-4-2);
+		background-color: var(--background-secondary);
+		border-top: 1px solid var(--window-border);
 	}
 
 	.suggestion-item.mod-complex .suggestion-hotkey {
@@ -31,4 +30,25 @@
 		border-radius: var(--radius-s);
 	}
 }
+
+.prompt-input-container {
+	padding: var(--size-4-2);
+	margin: unset;
+	background-color: var(--background-secondary);
+	border-bottom: 1px solid var(--window-border);
+}
+
+input.prompt-input {
+	height: 40px;
+	padding: 0 var(--size-4-4);
+	border: 1px solid var(--window-border);
+	border-radius: var(--radius-s);
+
+	&:hover,
+	&:focus,
+	&:focus-visible {
+		border: 1px solid var(--window-border);
+	}
+}
+
 /* #endregion */

@@ -33,8 +33,7 @@ body:not(.native-scrollbars) {
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 	::-webkit-scrollbar-thumb {
-		background-color: var(--scroll-bar-thumb) !important;
-		border: 1px solid transparent;
+		border: 1px solid var(--window-border);
 		border-radius: unset;
 	}
 
@@ -42,7 +41,6 @@ body:not(.native-scrollbars) {
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
 	::-webkit-scrollbar-thumb:active,
 	::-webkit-scrollbar-thumb:hover {
-		background-color: var(--interactive-accent-base) !important;
 		border-radius: unset;
 	}
 }

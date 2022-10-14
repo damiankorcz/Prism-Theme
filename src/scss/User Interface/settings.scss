@@ -5,14 +5,16 @@
 		width: 215px;
 		min-width: unset;
 		max-width: unset;
-		padding: 42px 0 0;
+		padding: 0;
 
 		&::before {
-			position: absolute;
+			position: sticky;
 			top: 0;
-			display: inline-flex;
-			width: calc(214px - var(--scroll-bar-size));
+			display: block;
+			width: -webkit-fill-available;
+			width: fill-available;
 			height: 42px;
+			margin-bottom: -1px;
 			content: "";
 			background: var(--background-secondary-blur);
 			border-bottom: 1px solid var(--window-border);
@@ -34,10 +36,17 @@
 			font-size: 14px;
 			font-weight: 600;
 			color: var(--interactive-accent-text);
-			content: "Prism v3.0.0 Beta 7";
-			background: var(--background-secondary);
+			content: "Prism v3.0.0 Beta 8";
 			border: 1px solid var(--window-border);
 			border-radius: var(--radius-s);
+
+			.theme-light & {
+				background-color: var(--background-primary);
+			}
+
+			.theme-dark & {
+				background-color: var(--background-secondary-alt);
+			}
 		}
 	}
 
@@ -67,6 +76,7 @@
 		font-size: var(--font-ui-medium);
 		color: var(--text-normal);
 		text-align: center;
+		background-color: var(--background-secondary);
 		border-top: 1px solid var(--window-border);
 		border-bottom: 1px solid var(--window-border);
 	}
@@ -84,6 +94,12 @@
 
 	:is(.horizontal-tab-content, .vertical-tab-content) {
 		padding: var(--size-4-8);
+	}
+
+	:is(.horizontal-tab-content, .vertical-tab-content, .vertical-tab-header) {
+		.theme-light & {
+			background-color: var(--background-primary);
+		}
 
 		.theme-dark & {
 			background-color: var(--background-secondary-alt);
@@ -348,10 +364,47 @@ body:not(.native-scrollbars) .modal-close-button {
 	font-family: var(--font-interface);
 }
 
+.checkbox-container {
+	height: 24px;
+	background-color: var(--background-secondary);
+	border: 1px solid var(--window-border);
+	box-shadow: unset;
+
+	&::after {
+		border: 1px solid var(--window-border);
+		box-shadow: unset;
+	}
+
+	&.is-enabled {
+		background-color: var(--interactive-accent-base);
+		border-color: var(--interactive-accent-tint);
+
+		&::after {
+			border-color: var(--interactive-accent-tint);
+			transform: translate3d(calc(var(--toggle-width) - var(--toggle-thumb-width) - var(--toggle-border-width) - 4px), 0, 0);
+		}
+	}
+
+	&.mod-small {
+		height: 20px;
+
+		&::after {
+			margin: 1px 0 0;
+			transform: translate3d(1px, 0, 0);
+		}
+
+		&.is-enabled {
+			&::after {
+				transform: translate3d(calc(var(--toggle-s-width) - var(--toggle-s-thumb-width) - var(--toggle-s-border-width) - 1px), 0, 0);
+			}
+		}
+	}
+}
+
 input[type="range"] {
 	width: 125px;
 	height: 0.7em;
-	background-color: var(--background-primary);
+	background-color: var(--background-secondary);
 	border: 1px solid var(--window-border);
 	border-radius: var(--size-2-1);
 

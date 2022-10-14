@@ -35,7 +35,6 @@ body {
 	--background-modifier-error: var(--color-red-text);
 	--background-modifier-border: var(--window-border);
 	--background-modifier-border-focus: var(--interactive-accent-base);
-	--background-modifier-hover: var(--background-primary);
 
 	--checkbox-marker-color: var(--highlight-text-normal);
 	--checklist-done-color: var(--interactive-accent-tint);
@@ -43,11 +42,21 @@ body {
 
 	--blockquote-border-color: var(--window-border);
 
-	--ribbon-background-collapsed: var(--backcground-secondary);
+	--ribbon-background-collapsed: var(--background-secondary);
+
+	--titlebar-background-focused: var(--background-secondary);
 
 	--header-height: 41px;
 	--input-height: 32px;
 	--input-radius: var(--radius-s);
+
+	--toggle-thumb-height: 18px;
+	--toggle-thumb-width: 18px;
+	--toggle-border-width: 1px;
+	--toggle-width: 42px;
+	--toggle-s-thumb-height: 14px;
+	--toggle-s-thumb-width: 14px;
+	--toggle-s-border-width: 4px;
 
 	--callout-padding: 4px;
 	--callout-radius: var(--radius-m);
@@ -73,6 +82,10 @@ body {
 
 	--slider-thumb-radius: var(--size-4-1);
 	--slider-thumb-width: 10px;
+
+	--scrollbar-active-thumb-bg: var(--interactive-accent-base);
+	--scrollbar-bg: var(--background-secondary);
+	--scrollbar-thumb-bg: var(--background-primary);
 
 	--text-on-accent: var(--text-normal);
 
@@ -240,7 +253,6 @@ body {
 		--window-border: var(--background-secondary-alt);
 		--page-background-color: var(--background-primary);
 		--text-selection: var(--background-secondary-alt);
-		--scroll-bar-thumb: var(--background-primary);
 
 		--graph-line-color-lt: var(--background-secondary-alt);
 		--graph-fill-color-lt: var(--color-grey-tint);
@@ -282,6 +294,8 @@ body {
 
 		--checkbox-color: var(--background-primary-alt);
 		--checkbox-border-color: var(--background-secondary-alt);
+
+		--toggle-thumb-color: var(--background-primary);
 
 		&.pt-highlight-text-light-lt {
 			--highlight-text-normal: var(--background-primary);
@@ -391,7 +405,6 @@ body {
 		--window-border: var(--background-primary-alt);
 		--page-background-color: var(--background-secondary);
 		--text-selection: var(--background-primary-alt);
-		--scroll-bar-thumb: var(--background-primary);
 
 		--graph-line-color-dt: var(--background-primary-alt);
 		--graph-fill-color-dt: var(--color-grey-tint);
@@ -433,6 +446,8 @@ body {
 
 		--checkbox-color: var(--background-primary);
 		--checkbox-border-color: var(--background-primary-alt);
+
+		/* --toggle-thumb-color: var(--text-normal); */
 
 		&.pt-highlight-text-light-dt {
 			--highlight-text-normal: var(--text-normal);
