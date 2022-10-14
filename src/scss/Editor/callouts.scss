@@ -38,7 +38,7 @@
 	}
 
 	/* Type 1 */
-	&[data-callout='note'] {
+	&[data-callout="note"] {
 		.callout-title {
 			color: var(--color-grey-text);
 			background-color: var(--color-grey-base);
@@ -50,13 +50,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-grey-base-hsl), 20%)};
+			background-color: hsla(var(--color-grey-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-grey-tint);
 		}
 	}
 
 	/* Type 2 */
-	:is(&[data-callout='abstract'],	&[data-callout='summary'], &[data-callout='tldr']) {
+	:is(&[data-callout="abstract"],	&[data-callout="summary"], &[data-callout="tldr"]) {
 		.callout-title {
 			color: var(--color-cyan-text);
 			background-color: var(--color-cyan-base);
@@ -68,13 +68,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-cyan-base-hsl), 20%)};
+			background-color: hsla(var(--color-cyan-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-cyan-tint);
 		}
 	}
 
 	/* Type 3 */
-	:is(&[data-callout='info'],	&[data-callout='todo']) {
+	:is(&[data-callout="info"],	&[data-callout="todo"]) {
 		.callout-title {
 			color: var(--color-blue-text);
 			background-color: var(--color-blue-base);
@@ -86,13 +86,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-blue-base-hsl), 20%)};
+			background-color: hsla(var(--color-blue-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-blue-tint);
 		}
 	}
 
 	/* Type 4 */
-	:is(&[data-callout='tip'], &[data-callout='hint'], &[data-callout='important']) {
+	:is(&[data-callout="tip"], &[data-callout="hint"], &[data-callout="important"]) {
 		.callout-title {
 			color: var(--color-mint-text);
 			background-color: var(--color-mint-base);
@@ -104,13 +104,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-mint-base-hsl), 20%)};
+			background-color: hsla(var(--color-mint-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-mint-tint);
 		}
 	}
 
 	/* Type 5 */
-	:is(&[data-callout='success'], &[data-callout='check'], &[data-callout='done']) {
+	:is(&[data-callout="success"], &[data-callout="check"], &[data-callout="done"]) {
 		.callout-title {
 			color: var(--color-green-text);
 			background-color: var(--color-green-base);
@@ -122,13 +122,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-green-base-hsl), 20%)};
+			background-color: hsla(var(--color-green-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-green-tint);
 		}
 	}
 
 	/* Type 6 */
-	:is(&[data-callout='question'],	&[data-callout='help'],	&[data-callout='faq']) {
+	:is(&[data-callout="question"],	&[data-callout="help"],	&[data-callout="faq"]) {
 		.callout-title {
 			color: var(--color-yellow-text);
 			background-color: var(--color-yellow-base);
@@ -140,13 +140,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-yellow-base-hsl), 20%)};
+			background-color: hsla(var(--color-yellow-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-yellow-tint);
 		}
 	}
 
 	/* Type 7 */
-	:is(&[data-callout='warning'], &[data-callout='caution'], &[data-callout='attention']) {
+	:is(&[data-callout="warning"], &[data-callout="caution"], &[data-callout="attention"]) {
 		.callout-title {
 			color: var(--color-orange-text);
 			background-color: var(--color-orange-base);
@@ -158,13 +158,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-orange-base-hsl), 20%)};
+			background-color: hsla(var(--color-orange-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-orange-tint);
 		}
 	}
 
 	/* Type 8 */
-	:is(&[data-callout='failure'], &[data-callout='fail'], &[data-callout='missing']) {
+	:is(&[data-callout="failure"], &[data-callout="fail"], &[data-callout="missing"]) {
 		.callout-title {
 			color: var(--color-red-text);
 			background-color: var(--color-red-base);
@@ -176,13 +176,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-red-base-hsl), 20%)};
+			background-color: hsla(var(--color-red-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-red-tint);
 		}
 	}
 
 	/* Type 9 */
-	:is(&[data-callout='danger'], &[data-callout='error']) {
+	:is(&[data-callout="danger"], &[data-callout="error"]) {
 		.callout-title {
 			color: var(--color-red-text);
 			background-color: var(--color-red-base);
@@ -194,13 +194,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-red-base-hsl), 20%)};
+			background-color: hsla(var(--color-red-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-red-tint);
 		}
 	}
 
 	/* Type 10 */
-	&[data-callout='bug'] {
+	&[data-callout="bug"] {
 		.callout-title {
 			color: var(--color-pink-text);
 			background-color: var(--color-pink-base);
@@ -212,13 +212,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-pink-base-hsl), 20%)};
+			background-color: hsla(var(--color-pink-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-pink-tint);
 		}
 	}
 
 	/* Type 11 */
-	&[data-callout='example'] {
+	&[data-callout="example"] {
 		.callout-title {
 			color: var(--color-purple-text);
 			background-color: var(--color-purple-base);
@@ -230,13 +230,13 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-purple-base-hsl), 20%)};
+			background-color: hsla(var(--color-purple-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-purple-tint);
 		}
 	}
 
 	/* Type 12 */
-	:is(&[data-callout='quote'], &[data-callout='cite']) {
+	:is(&[data-callout="quote"], &[data-callout="cite"]) {
 		.callout-title {
 			color: var(--color-grey-text);
 			background-color: var(--color-grey-base);
@@ -248,7 +248,7 @@
 		}
 
 		.callout-content {
-			background-color: #{hsla(var(--color-grey-base-hsl), 20%)};
+			background-color: hsla(var(--color-grey-base-hsl) / var(--callout-background-alpha));
 			border-color: var(--color-grey-tint);
 		}
 	}
