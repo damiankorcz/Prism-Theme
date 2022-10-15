@@ -4,6 +4,7 @@ body:not(.native-scrollbars) {
 	::-webkit-scrollbar {
 		width: var(--scroll-bar-size);
 		height: var(--scroll-bar-size);
+		background-color: var(--background-secondary); /* REMOVE THIS WHEN FIXED IN DEFAULT */
 		border-radius: unset;
 
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
@@ -14,20 +15,6 @@ body:not(.native-scrollbars) {
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 		&:horizontal {
 			border-top: 1px solid var(--window-border);
-		}
-	}
-
-	&.theme-light {
-		.kanban-plugin__scroll-container::-webkit-scrollbar,
-		::-webkit-scrollbar {
-			background: var(--background-secondary);
-		}
-	}
-
-	&.theme-dark {
-		.kanban-plugin__scroll-container::-webkit-scrollbar,
-		::-webkit-scrollbar {
-			background: var(--background-secondary-alt);
 		}
 	}
 

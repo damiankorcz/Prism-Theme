@@ -29,18 +29,27 @@
 	}
 }
 
+.suggestion-item.mod-complex {
+	align-items: center;
+
+	.suggestion-content {
+		overflow: visible;
+	}
+}
+
 .suggestion-prefix {
 	padding: 0 var(--size-4-1);
 	margin-right: var(--size-4-2);
 	font-size: 0.9em;
 	font-weight: 600;
-	background: var(--background-primary);
+	color: var(--interactive-accent-text);
+	background-color: var(--background-secondary);
 	border: 1px solid var(--window-border);
 	border-radius: var(--radius-s);
-	box-shadow: var(--shadow-s);
 
 	&::after {
 		display: none;
 	}
 }
+
 /* #endregion */

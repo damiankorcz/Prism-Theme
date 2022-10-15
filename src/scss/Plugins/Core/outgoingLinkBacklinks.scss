@@ -1,14 +1,34 @@
 /* #region  [Plugin - Core] Outgoing Links */
 :is(.backlink-pane, .outgoing-link-pane) {
-	padding: var(--size-4-1);
+	padding: 0;
+
+	> .search-result-container {
+		padding: var(--size-4-1);
+	}
 
 	.search-result-container .search-result-container {
 		padding: unset;
 		margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
 	}
 
-	> .tree-item-self .collapse-icon {
-		display: block;
+	> .tree-item-self {
+		padding: var(--size-4-1) var(--size-4-2);
+		margin-bottom: -1px;
+		background-color: var(--background-secondary);
+		border-radius: unset;
+
+		&:first-child {
+			border-bottom: 1px solid var(--window-border);
+		}
+
+		&:nth-last-child(2) {
+			border-top: 1px solid var(--window-border);
+			border-bottom: 1px solid var(--window-border);
+		}
+
+		.collapse-icon {
+			display: block;
+		}
 	}
 }
 

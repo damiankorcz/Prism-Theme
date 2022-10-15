@@ -35,6 +35,10 @@ body {
 	--background-modifier-error: var(--color-red-text);
 	--background-modifier-border: var(--window-border);
 	--background-modifier-border-focus: var(--interactive-accent-base);
+	--background-modifier-border-hover: var(--interactive-accent-tint);
+
+	--icon-color-hover: var(--highlight-text-normal);
+	--nav-item-color-hover: var(--highlight-text-normal);
 
 	--checkbox-marker-color: var(--highlight-text-normal);
 	--checklist-done-color: var(--interactive-accent-tint);
@@ -66,6 +70,7 @@ body {
 	--file-header-font-size: var(--font-ui-medium);
 	--vault-name-font-size: var(--font-ui-medium);
 	--status-bar-font-size: var(--font-ui-small);
+	--tab-stacked-font-size: var(--font-ui-medium);
 
 	--modal-width: 85vw;
 	--modal-max-width: 1400px;
@@ -75,7 +80,7 @@ body {
 
 	--drag-ghost-text-color: var(--text-normal);
 
-	--clickable-icon-radius: var(--radius-m);
+	--clickable-icon-radius: var(--radius-s);
 
 	--toggle-radius: var(--size-4-1);
 	--toggle-thumb-radius: 3px;
@@ -84,10 +89,11 @@ body {
 	--slider-thumb-width: 10px;
 
 	--scrollbar-active-thumb-bg: var(--interactive-accent-base);
-	--scrollbar-bg: var(--background-secondary);
 	--scrollbar-thumb-bg: var(--background-primary);
 
 	--text-on-accent: var(--text-normal);
+
+	--prompt-border-color: var(--window-border);
 
 	/* Custom Prism Properties */
 	--blur-intensity: 8px;
@@ -151,6 +157,7 @@ body {
 
 		--input-shadow: unset;
 		--input-shadow-hover: unset;
+		--tab-stacked-shadow: 0;
 
 		--background-modifier-hover: hsla(var(--interactive-accent-base-hsl) / 50%);
 
@@ -295,7 +302,9 @@ body {
 		--checkbox-color: var(--background-primary-alt);
 		--checkbox-border-color: var(--background-secondary-alt);
 
-		--toggle-thumb-color: var(--background-primary);
+		--scrollbar-bg: var(--background-secondary);
+
+		/* --toggle-thumb-color: var(--background-primary); */
 
 		&.pt-highlight-text-light-lt {
 			--highlight-text-normal: var(--background-primary);
@@ -447,7 +456,12 @@ body {
 		--checkbox-color: var(--background-primary);
 		--checkbox-border-color: var(--background-primary-alt);
 
-		/* --toggle-thumb-color: var(--text-normal); */
+		--toggle-thumb-color: var(--text-normal);
+
+		--background-modifier-form-field: var(--background-secondary);
+		--modal-background: var(--background-secondary-alt);
+
+		--scrollbar-bg: var(--background-secondary);
 
 		&.pt-highlight-text-light-dt {
 			--highlight-text-normal: var(--text-normal);

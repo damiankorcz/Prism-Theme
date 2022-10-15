@@ -6,7 +6,12 @@
 	justify-content: center;
 }
 
-:is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+.workspace-tab-header.is-active,
+.nav-action-button.is-active,
+.vertical-tab-nav-item.is-active,
+.nav-file-title.is-active,
+.suggestion-hotkey {
 	color: var(--highlight-text-normal);
 	border: var(--accent-border-width) solid;
 	box-shadow: unset;
@@ -22,7 +27,7 @@ button.mod-cta {
 	color: var(--highlight-text-normal);
 }
 
-:is(button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
+:is(.pcr-button, button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-s);
 }

@@ -1,6 +1,11 @@
 /* #region  [Accent Style] Filled */
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) {
-	:is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active,	.suggestion-hotkey) {
+	.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+	.workspace-tab-header.is-active,
+	.nav-action-button.is-active,
+	.vertical-tab-nav-item.is-active,
+	.nav-file-title.is-active,
+	.suggestion-hotkey {
 		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
@@ -45,7 +50,7 @@
 		}
 	}
 
-	:is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
 		color: var(--text-normal);
 		background-color: var(--color-grey-base);
 		border-color: var(--color-grey-base);

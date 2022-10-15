@@ -5,9 +5,17 @@
 	.prompt-results {
 		padding: var(--size-4-2);
 
+		.theme-light & {
+			background-color: var(--background-primary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
+
 		&::-webkit-scrollbar-track {
-			border-radius: var(--radius-s);
-			box-shadow: var(--shadow-s);
+			margin-left: 1px solid var(--window-border);
+			border-radius: unset;
 
 			.theme-light & {
 				background-color: var(--background-primary);
