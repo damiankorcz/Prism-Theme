@@ -2535,7 +2535,7 @@ settings:
                 value: var(--interactive-accent-text)
             -
                 label: Custom
-                value: var(--text-italic-bold-custom-color-lt)
+                value: var(--text-italic-bold-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-text)
@@ -2774,7 +2774,7 @@ settings:
         level: 2
         collapsed: true
     -
-        id: border-radius
+        id: radius-m
         title: Border Radius Medium (px)
         description: The size of the border radius around larger elements of the UI.
         type: variable-number-slider
@@ -2930,35 +2930,6 @@ settings:
         max: 25
         step: 1
     -
-        id: color-folders
-        title: Colored Folders
-        description: Changes the background of folders in the File Explorer to help with readability.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: pt-color-folders
-        title: Enable Colored Folders
-        type: class-toggle
-        default: false
-    -
-        id: pt-color-folders-text
-        title: Colored Folders Root Folder Text Alignment
-        description: Horizontally aligns the Root Folder Text.
-        type: class-select
-        allowEmpty: false
-        default: pt-color-folders-text-center
-        options:
-            -
-                label: Left
-                value: pt-color-folders-text-left
-            -
-                label: Center
-                value: pt-color-folders-text-center
-            -
-                label: Right
-                value: pt-color-folders-text-right
-    -
         id: custom-vault-banner
         title: Custom Vault Banner
         description: Custom Vault Banner in the File Explorer with a custom icon option.
@@ -3015,13 +2986,6 @@ settings:
         type: variable-text
         default: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E)
     -
-        id: outline
-        title: Outline
-        description: Customisation options for the Outline module.
-        type: heading
-        level: 3
-        collapsed: true
-    -
         id: titlebar
         title: Titlebar
         description: Settings for changing the style of the Titlebar.
@@ -3037,7 +3001,7 @@ settings:
     -
         id: status-bar
         title: Status Bar
-        description: Settings for the Status Bar; Adjust position, Change the order of items, etc.
+        description: Settings for the Status Bar. Adjust position, Change the order of items, etc.
         type: heading
         level: 2
         collapsed: true
@@ -3162,7 +3126,7 @@ settings:
     -
         id: scrollbar
         title: Scrollbar
-        description: Settings for the Scrollbar; Adjust the width, Add Scroll Buttons, etc.
+        description: Settings for the Scrollbar. Adjust the width, Add Scroll Buttons, etc.
         type: heading
         level: 2
         collapsed: true
@@ -3185,7 +3149,7 @@ settings:
     -
         id: kanban-settings
         title: Kanban
-        description: Mgmeyers' Obsidian Kanban Plugin (https://github.com/mgmeyers/obsidian-kanban).
+        description: Mgmeyers Obsidian Kanban Plugin (https://github.com/mgmeyers/obsidian-kanban).
         type: heading
         level: 2
         collapsed: true
@@ -3256,7 +3220,7 @@ settings:
     -
         id: icon-folder-settings
         title: Icon Folder
-        description: Florian Woelki's Icon Folder (https://github.com/FlorianWoelki/obsidian-icon-folder).
+        description: Florian Woelki Icon Folder (https://github.com/FlorianWoelki/obsidian-icon-folder).
         type: heading
         level: 2
         collapsed: true
@@ -3269,7 +3233,7 @@ settings:
     -
         id: icons-settings
         title: Icons
-        description: visini's Icons (https://github.com/visini/obsidian-icons-plugin).
+        description: visini Icons (https://github.com/visini/obsidian-icons-plugin).
         type: heading
         level: 2
         collapsed: true
@@ -3290,12 +3254,6 @@ settings:
         id: pt-disable-blur
         title: Disable Blurred Background Effect
         description: Disables the blur background in all elements that use it by making them opaque.
-        default: false
-        type: class-toggle
-    -
-        id: pt-hide-view-header
-        title: Hide Note Titlebar
-        description: Hides the Note Titlebar until you hover over the top part of a note.
         default: false
         type: class-toggle
     -
@@ -3327,7 +3285,7 @@ settings:
         collapsed: true
     -
         id: support-donate
-        title: Buy Me a Coffee!
+        title: Buy Me a Coffee
         description: https://www.buymeacoffee.com/DamianKorcz
         type: heading
         level: 2
