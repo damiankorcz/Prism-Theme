@@ -15,7 +15,7 @@
 @use "User Interface/Bars/statusBar.scss"; /* ✅ */
 
 /* Sidebar */
-@use "User Interface/Sidebar/tabHeader.scss"; /* 🔧 Need to decide on the style of Stacked Tabs */
+@use "User Interface/Sidebar/tabHeader.scss"; /* ✅ */
 @use "User Interface/Sidebar/tabLabel.scss"; /* ✅ */
 @use "User Interface/Sidebar/navHeader.scss"; /* ✅ */
 
@@ -61,25 +61,25 @@
 @use "Plugins/Theme/markHighlightSystem.scss"; /* ✅ */
 @use "Plugins/Theme/fontFeatures.scss"; /* ✅ */
 
-/* @use "Plugins/Theme/coloredFolders.scss"; ⚠️ Won't be perfect. Might not implement. */
+/* @use "Plugins/Theme/coloredFolders.scss"; ⚠️ Holding out for CSS `:has` */
 /* @use "Plugins/Theme/customIcons.scss"; ⚠️ Might be dropped */
 
 /* Community Plugins */
 @use "Plugins/Community/styleSettings.scss"; /* ✅ */
 @use "Plugins/Community/kanban.scss"; /* 🧹 Need to fix background types */
 @use "Plugins/Community/advancedTables.scss"; /* 🧹 Need to figure out the alignment overwrite */
+@use "Plugins/Community/iconFolder.scss"; /* ✅ */
+@use "Plugins/Community/icons.scss"; /* ✅ */
 
 /* @use "Plugins/Community/quickExplorer.scss"; 🔧 */
 /* @use "Plugins/Community/danglingLinks.scss"; 🔧 */
 /* @use "Plugins/Community/cMenu.scss"; 🔧 */
 /* @use "Plugins/Community/calendar.scss"; 🔧 */
-/* @use "Plugins/Community/iconFolder.scss"; 🔧 */
 /* @use "Plugins/Community/mapView.scss"; 🔧 */
 /* @use "Plugins/Community/emojiToolbar.scss"; 🔧 */
 /* @use "Plugins/Community/reminder.scss"; 🔧 */
 /* @use "Plugins/Community/tagFolder.scss"; 🔧 */
 /* @use "Plugins/Community/dictionary.scss"; 🔧 */
-/* @use "Plugins/Community/icons.scss"; 🔧 */
 /* @use "Plugins/Community/jumpToDate.scss"; 🔧 */
 /* @use "Plugins/Community/hoverEditor.scss"; 🔧 */
 /* @use "Plugins/Community/quietOutline.scss"; 🔧 */
@@ -91,10 +91,18 @@
 @use "Info/pluginCompatibility.scss";
 
 /*
+
+STYLE SETTINGS TO FIX
+- Test All Accent Styles to make sure the look right.
+- Accent Text Color Preset needs some work and consideration.
+- Header Padding Size don't work.
+- Deciede if Coloured Folders is viable. If not remove it from Style Settings.
+- Need to fix Kanban backgrounds.
+- Simplify how Custom Accent Color Tuning works (?)
+
 TODO
-- Hide View Header option needs work
 - Explore the font features and see if they can be added as options to Style Settings
-- Need to rework how the results in the Unlinked mentions and Search results look. embedded-backlinks / internal-query background; think about doing different shade for sidebar elements too.
+- Need to rework how the results in the Unlinked mentions and Search results look. embedded-backlinks / internal-query background.
 - Will need to redo the Mobile side of the theme.
 
 POTENTIAL ISSUE
@@ -107,4 +115,5 @@ ISSUES
 Reported Issues
 Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933
 Syntax Highlighting inconsistency - https://discord.com/channels/686053708261228577/989603365606531104/1020085523177558036
+
 */

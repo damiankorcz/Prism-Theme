@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 8
+    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 9
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -65,6 +65,9 @@ body {
   --background-modifier-error: var(--color-red-text);
   --background-modifier-border: var(--window-border);
   --background-modifier-border-focus: var(--interactive-accent-base);
+  --background-modifier-border-hover: var(--interactive-accent-tint);
+  --icon-color-hover: var(--highlight-text-normal);
+  --nav-item-color-hover: var(--highlight-text-normal);
   --checkbox-marker-color: var(--highlight-text-normal);
   --checklist-done-color: var(--interactive-accent-tint);
   --checkbox-border-color-hover: var(--interactive-accent-tint);
@@ -87,21 +90,22 @@ body {
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
   --status-bar-font-size: var(--font-ui-small);
+  --tab-stacked-font-size: var(--font-ui-medium);
   --modal-width: 85vw;
   --modal-max-width: 1400px;
   --modal-height: 80vh;
   --modal-max-height: 1000px;
   --modal-border-color: var(--window-border);
   --drag-ghost-text-color: var(--text-normal);
-  --clickable-icon-radius: var(--radius-m);
+  --clickable-icon-radius: var(--radius-s);
   --toggle-radius: var(--size-4-1);
   --toggle-thumb-radius: 3px;
   --slider-thumb-radius: var(--size-4-1);
   --slider-thumb-width: 10px;
   --scrollbar-active-thumb-bg: var(--interactive-accent-base);
-  --scrollbar-bg: var(--background-secondary);
   --scrollbar-thumb-bg: var(--background-primary);
   --text-on-accent: var(--text-normal);
+  --prompt-border-color: var(--window-border);
   --blur-intensity: 8px;
   --accent-border-width: 2px;
   --scroll-bar-size: 12px;
@@ -155,6 +159,7 @@ body:is(.theme-light, .theme-dark) {
   --color-accent-text-lt: hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) var(--color-accent-l-text-lt));
   --input-shadow: unset;
   --input-shadow-hover: unset;
+  --tab-stacked-shadow: 0;
   --background-modifier-hover: hsla(var(--interactive-accent-base-hsl) / 50%);
   --hue-background-lt: linear-gradient( to right, hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(30 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(60 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(90 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(120 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(150 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(180 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(210 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(240 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(270 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(300 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(330 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(360 var(--color-accent-s-lt) var(--color-accent-l-base-lt)) );
   --saturation-background-lt: linear-gradient( to right, hsl(var(--color-accent-h-lt) 0% var(--color-accent-l-base-lt)), hsl(var(--color-accent-h-lt) 50% var(--color-accent-l-base-lt)), hsl(var(--color-accent-h-lt) 100% var(--color-accent-l-base-lt)) );
@@ -222,7 +227,7 @@ body.theme-light {
   --blockquote-background-color: var(--background-primary-alt);
   --checkbox-color: var(--background-primary-alt);
   --checkbox-border-color: var(--background-secondary-alt);
-  --toggle-thumb-color: var(--background-primary);
+  --scrollbar-bg: var(--background-secondary);
 }
 body.theme-light.pt-highlight-text-light-lt {
   --highlight-text-normal: var(--background-primary);
@@ -350,6 +355,10 @@ body.theme-dark {
   --blockquote-background-color: var(--background-secondary-alt);
   --checkbox-color: var(--background-primary);
   --checkbox-border-color: var(--background-primary-alt);
+  --toggle-thumb-color: var(--text-normal);
+  --background-modifier-form-field: var(--background-secondary);
+  --modal-background: var(--background-secondary-alt);
+  --scrollbar-bg: var(--background-secondary);
 }
 body.theme-dark.pt-highlight-text-light-dt {
   --highlight-text-normal: var(--text-normal);
@@ -899,7 +908,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   right: 0;
   left: 0;
   width: fit-content;
-  margin: 0 auto calc(4px + var(--scroll-bar-size));
+  margin: 0 auto calc(var(--size-2-3) + var(--scroll-bar-size));
   background: var(--background-secondary-blur);
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
@@ -955,6 +964,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .workspace-tab-header::after {
   display: none;
 }
+.mod-left-split .workspace-tabs .workspace-tab-header-spacer,
+.mod-right-split .workspace-tabs .workspace-tab-header-spacer {
+  display: none;
+}
 .pt-fade-inactive-tabs :not(.mod-active) .workspace-tab-header.is-active:not(.mod-active) {
   opacity: 0.55;
 }
@@ -974,6 +987,9 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace .mod-root .workspace-tab-header-inner::after {
   display: none;
+}
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner-title {
+  color: var(--highlight-text-normal);
 }
 .workspace-tabs .workspace-tab-header-container-inner {
   gap: var(--size-4-1);
@@ -997,6 +1013,9 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   background-color: var(--background-secondary);
   border: unset;
   border-right: 1px solid var(--window-border);
+}
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
+  padding-top: 10px;
 }
 .workspace-split.mod-left-split .workspace-tab-header-container {
 }
@@ -1056,13 +1075,13 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-header {
   position: absolute;
-  bottom: calc(4px + var(--scroll-bar-size));
+  bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
   z-index: var(--layer-popover);
   order: 2;
   width: -webkit-fill-available;
   width: fill-available;
   height: unset;
-  padding: 0 var(--size-4-2);
+  padding: 0 var(--size-4-4);
   pointer-events: none;
   background-color: unset;
   border-bottom: unset;
@@ -1112,7 +1131,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism v3.0.0 Beta 8";
+  content: "Prism v3.0.0 Beta 9";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -1122,10 +1141,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .theme-dark .modal.mod-settings .vertical-tab-header::after {
   background-color: var(--background-secondary-alt);
 }
-.modal.mod-settings .vertical-tab-content {
+.vertical-tab-content {
   height: calc(100% - 43px);
 }
-.modal.mod-settings .vertical-tab-content-container::before {
+.vertical-tab-content-container::before {
   position: relative;
   z-index: var(--layer-status-bar);
   display: block;
@@ -1138,10 +1157,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
-.modal.mod-settings .vertical-tab-header-group {
+.vertical-tab-header-group {
   padding: unset;
 }
-.modal.mod-settings .vertical-tab-header-group-title {
+.vertical-tab-header-group-title {
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   text-align: center;
@@ -1149,30 +1168,37 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   border-top: 1px solid var(--window-border);
   border-bottom: 1px solid var(--window-border);
 }
-.modal.mod-settings .vertical-tab-header-group-items {
+.vertical-tab-header-group-items {
   gap: var(--size-2-1);
   padding: var(--size-4-2);
 }
-.modal.mod-settings .vertical-tab-nav-item {
-  padding: var(--size-2-1) var(--size-4-2);
-  margin-bottom: unset;
-  border: var(--accent-border-width) solid transparent;
-}
-.modal.mod-settings :is(.horizontal-tab-content, .vertical-tab-content) {
+:is(.horizontal-tab-content, .vertical-tab-content) {
   padding: var(--size-4-8);
 }
-.theme-light .modal.mod-settings :is(.horizontal-tab-content, .vertical-tab-content, .vertical-tab-header) {
+.theme-light :is(.horizontal-tab-content, .vertical-tab-content, .vertical-tab-header) {
   background-color: var(--background-primary);
 }
-.theme-dark .modal.mod-settings :is(.horizontal-tab-content, .vertical-tab-content, .vertical-tab-header) {
+.theme-dark :is(.horizontal-tab-content, .vertical-tab-content, .vertical-tab-header) {
   background-color: var(--background-secondary-alt);
 }
-.modal.mod-settings .installed-plugins-container {
+.installed-plugins-container {
   padding-top: var(--size-4-2);
   border-top: unset;
 }
-.modal.mod-settings .plugin-list-plugins:last-child {
+.plugin-list-plugins:last-child {
   padding-top: var(--size-4-1);
+}
+.vertical-tab-nav-item {
+  padding: var(--size-2-1) var(--size-4-2);
+  margin-bottom: unset;
+  color: var(--text-muted);
+  border: var(--accent-border-width) solid transparent;
+}
+@media (hover: hover) {
+  .horizontal-tab-nav-item:hover,
+  .vertical-tab-nav-item:hover {
+    color: var(--icon-color-focused);
+  }
 }
 .modal.mod-image-lightbox {
   width: var(--modal-width);
@@ -1198,6 +1224,12 @@ img.community-theme-lightbox {
 }
 .community-modal-sidebar {
   padding: unset;
+}
+.theme-light .community-modal-sidebar {
+  background-color: var(--background-primary);
+}
+.theme-dark .community-modal-sidebar {
+  background-color: var(--background-secondary-alt);
 }
 .community-modal-info {
   display: grid;
@@ -1348,7 +1380,7 @@ img.community-theme-lightbox {
   border-top: unset;
 }
 .setting-item.setting-item-heading {
-  margin-bottom: var(--size-4-2);
+  margin-bottom: var(--size-4-1);
   border-bottom: 1px solid var(--window-border);
 }
 .setting-item-name {
@@ -1402,6 +1434,7 @@ input[type=range] {
 }
 input[type=range]::-webkit-slider-thumb {
   height: 19px;
+  background-color: var(--toggle-thumb-color);
   box-shadow: unset;
 }
 select.dropdown {
@@ -1459,6 +1492,7 @@ body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar
 body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: var(--scroll-bar-size);
   height: var(--scroll-bar-size);
+  background-color: var(--background-secondary);
   border-radius: unset;
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar:vertical,
@@ -1468,14 +1502,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar:vertical {
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar:horizontal,
 body:not(.native-scrollbars) ::-webkit-scrollbar:horizontal {
   border-top: 1px solid var(--window-border);
-}
-body:not(.native-scrollbars).theme-light .kanban-plugin__scroll-container::-webkit-scrollbar,
-body:not(.native-scrollbars).theme-light ::-webkit-scrollbar {
-  background: var(--background-secondary);
-}
-body:not(.native-scrollbars).theme-dark .kanban-plugin__scroll-container::-webkit-scrollbar,
-body:not(.native-scrollbars).theme-dark ::-webkit-scrollbar {
-  background: var(--background-secondary-alt);
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
@@ -1516,27 +1542,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   border: var(--accent-border-width) solid var(--color-red-tint);
   border-radius: var(--radius-m);
 }
-body.pt-hide-view-header div.workspace-leaf-content div.view-header {
-  height: 1px;
-  border: var(--accent-border-width) solid transparent;
-  box-shadow: unset;
-  transition-delay: 600ms;
-}
-body.pt-hide-view-header div.workspace-leaf-content div.view-header svg {
-  opacity: 0;
-  transition: opacity 200ms;
-  transition-delay: 600ms;
-}
-body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover {
-  height: var(--header-height);
-  transition: all ease 200ms;
-}
-body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
-  display: unset;
-  opacity: 1;
-  transition: opacity 200ms;
-  transition-delay: 200ms;
-}
 :is(.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle) {
   height: calc(var(--divider-vertical-height) - var(--header-height));
 }
@@ -1566,8 +1571,16 @@ body.pt-hide-view-header div.workspace-leaf-content div.view-header:hover svg {
 .view-actions {
   padding-right: var(--size-4-2);
 }
-:is(.is-focused .workspace-leaf.mod-active .view-header-title, .view-header-title) {
+.is-focused .workspace-leaf.mod-active .view-header-title,
+.view-header-title {
   color: var(--interactive-accent-text);
+}
+.is-focused .workspace-leaf.mod-active .view-header-title:hover,
+.view-header-title:hover {
+  color: var(--text-accent-hover);
+}
+.view-header-title-parent .view-header-breadcrumb:hover {
+  color: var(--highlight-text-normal);
 }
 .show-view-header {
   --file-margins: 64px 32px 32px 32px;
@@ -1668,7 +1681,12 @@ div.notice-container div.notice {
   align-items: center;
   justify-content: center;
 }
-:is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+.workspace-tab-header.is-active,
+.nav-action-button.is-active,
+.vertical-tab-nav-item.is-active,
+.nav-file-title.is-active,
+.suggestion-hotkey {
   color: var(--highlight-text-normal);
   border: var(--accent-border-width) solid;
   box-shadow: unset;
@@ -1681,7 +1699,7 @@ div.notice-container div.notice {
 button.mod-cta {
   color: var(--highlight-text-normal);
 }
-:is(button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
+:is(.pcr-button, button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
   border: var(--accent-border-width) solid;
   border-radius: var(--radius-s);
 }
@@ -1696,7 +1714,12 @@ button.mod-cta {
 :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) svg.svg-icon {
   color: var(--highlight-text-normal);
 }
-:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .nav-action-button.is-active,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .suggestion-hotkey {
   background-color: var(--background-primary);
   border-color: transparent;
 }
@@ -1731,12 +1754,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
   color: var(--color-grey-text);
   background-color: var(--background-primary);
   border-color: transparent;
 }
-:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .setting-command-hotkeys .setting-hotkey {
@@ -1768,7 +1791,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover {
   color: var(--interactive-accent-hover);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-action-button.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .suggestion-hotkey {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
@@ -1804,12 +1832,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .setting-command-hotkeys .setting-hotkey {
@@ -1842,7 +1870,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover {
   color: var(--interactive-accent-hover);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-action-button.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .suggestion-hotkey {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -1878,12 +1911,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-base);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .setting-command-hotkeys .setting-hotkey {
@@ -1919,7 +1952,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover {
   color: var(--interactive-accent-hover);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.workspace-tab-header.is-active, .nav-action-button.is-active, .vertical-tab-nav-item.is-active, .nav-file-title.is-active, .suggestion-hotkey) {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-tab-header.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-action-button.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .suggestion-hotkey {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -1956,12 +1994,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2100,10 +2138,8 @@ a.tag:hover {
 }
 .code-block-flair {
   font-weight: 600;
-  background-color: var(--background-secondary-blur);
+  background-color: var(--background-secondary-alt);
   border: 1px solid var(--window-border);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
 }
 :is(.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote, .markdown-rendered blockquote) {
   padding: var(--size-4-2) var(--size-4-4);
@@ -2402,9 +2438,15 @@ a.tag:hover {
 .modal-container .prompt .prompt-results {
   padding: var(--size-4-2);
 }
+.theme-light .modal-container .prompt .prompt-results {
+  background-color: var(--background-primary);
+}
+.theme-dark .modal-container .prompt .prompt-results {
+  background-color: var(--background-secondary-alt);
+}
 .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
-  border-radius: var(--radius-s);
-  box-shadow: var(--shadow-s);
+  margin-left: 1px solid var(--window-border);
+  border-radius: unset;
 }
 .theme-light .modal-container .prompt .prompt-results::-webkit-scrollbar-track {
   background-color: var(--background-primary);
@@ -2462,15 +2504,21 @@ input.prompt-input:focus-visible {
 .suggestion-container .suggestion-item {
   padding: var(--size-4-2);
 }
+.suggestion-item.mod-complex {
+  align-items: center;
+}
+.suggestion-item.mod-complex .suggestion-content {
+  overflow: visible;
+}
 .suggestion-prefix {
   padding: 0 var(--size-4-1);
   margin-right: var(--size-4-2);
   font-size: 0.9em;
   font-weight: 600;
-  background: var(--background-primary);
+  color: var(--interactive-accent-text);
+  background-color: var(--background-secondary);
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
-  box-shadow: var(--shadow-s);
 }
 .suggestion-prefix::after {
   display: none;
@@ -2556,7 +2604,10 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   padding-bottom: var(--size-4-2);
 }
 .graph-control-section .tree-item-children {
-  padding: var(--size-4-1) var(--size-4-2);
+  padding: var(--size-4-1) 0;
+}
+.graph-control-section .setting-item:not(.mod-search-setting) {
+  padding: var(--size-2-3) var(--size-4-2);
 }
 :is(.graph-view.color-fill-unresolved, .graph-view.color-arrow) {
   opacity: 1;
@@ -2637,10 +2688,10 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   background-color: var(--interactive-accent-base);
 }
 .search-result {
-  margin-bottom: var(--size-4-2);
+  margin-bottom: var(--size-4-1);
 }
 .search-result-file-matches {
-  margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
+  margin: var(--size-4-2);
 }
 .theme-dark .search-result-file-matches {
   background-color: var(--background-secondary-alt);
@@ -2712,11 +2763,27 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   display: none;
 }
 :is(.backlink-pane, .outgoing-link-pane) {
+  padding: 0;
+}
+:is(.backlink-pane, .outgoing-link-pane) > .search-result-container {
   padding: var(--size-4-1);
 }
 :is(.backlink-pane, .outgoing-link-pane) .search-result-container .search-result-container {
   padding: unset;
   margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
+}
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
+  padding: var(--size-4-1) var(--size-4-2);
+  margin-bottom: -1px;
+  background-color: var(--background-secondary);
+  border-radius: unset;
+}
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self:first-child {
+  border-bottom: 1px solid var(--window-border);
+}
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self:nth-last-child(2) {
+  border-top: 1px solid var(--window-border);
+  border-bottom: 1px solid var(--window-border);
 }
 :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self .collapse-icon {
   display: block;
@@ -2897,7 +2964,6 @@ mark:is(.grey, .Grey) {
   font-variant: slashed-zero;
 }
 .pt-font-disable-ligatures * {
-  font-feature-settings: "liga" 0;
   font-variant-ligatures: none;
 }
 div.workspace-leaf-content[data-type=style-settings] div.view-content {
@@ -2906,11 +2972,14 @@ div.workspace-leaf-content[data-type=style-settings] div.view-content {
 div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction: row;
 }
+.style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+  margin-left: unset;
+}
 :is(.setting-item.setting-item-heading.style-settings-heading, .style-settings-container .style-settings-heading) {
   border-bottom: unset;
 }
-:is(div.style-settings-heading[data-level="1"] div.setting-item-description, div.style-settings-heading div.setting-item-description) {
-  padding-left: unset;
+.setting-item-heading .setting-item-description {
+  padding-left: var(--size-4-4);
 }
 .setting-item.setting-item-heading.is-collapsed {
   margin-bottom: unset;
@@ -2920,8 +2989,9 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 }
 :is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
   padding-bottom: var(--size-4-2);
-  padding-left: var(--size-4-2);
+  padding-left: var(--size-4-4);
   margin-left: var(--size-4-1);
+  border-left: 1px solid var(--window-border);
 }
 .setting-item.style-settings-heading[data-id=appearance] .style-settings-collapse-indicator::after {
   margin-left: var(--size-4-2);
@@ -3122,7 +3192,7 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 }
 .kanban-plugin__lane-header-wrapper {
   gap: var(--size-4-1);
-  padding: var(--size-4-2);
+  padding: var(--size-4-1) var(--size-4-2);
 }
 .theme-dark .kanban-plugin__item-title-wrapper {
   background: var(--background-secondary-alt);
@@ -3206,6 +3276,12 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 }
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   flex-direction: column;
+}
+.pt-icon-folder-accent .obsidian-icon-folder-icon {
+  color: var(--interactive-accent-text);
+}
+.pt-icons-accent .obsidian-icon {
+  color: var(--interactive-accent-text);
 }
 /*!
 /* @settings
@@ -5744,7 +5820,7 @@ settings:
                 value: var(--interactive-accent-text)
             -
                 label: Custom
-                value: var(--text-italic-bold-custom-color-lt)
+                value: var(--text-italic-bold-custom-color-dt)
             -
                 label: Red
                 value: var(--color-red-text)
@@ -5983,7 +6059,7 @@ settings:
         level: 2
         collapsed: true
     -
-        id: border-radius
+        id: radius-m
         title: Border Radius Medium (px)
         description: The size of the border radius around larger elements of the UI.
         type: variable-number-slider
@@ -6139,35 +6215,6 @@ settings:
         max: 25
         step: 1
     -
-        id: color-folders
-        title: Colored Folders
-        description: Changes the background of folders in the File Explorer to help with readability.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: pt-color-folders
-        title: Enable Colored Folders
-        type: class-toggle
-        default: false
-    -
-        id: pt-color-folders-text
-        title: Colored Folders Root Folder Text Alignment
-        description: Horizontally aligns the Root Folder Text.
-        type: class-select
-        allowEmpty: false
-        default: pt-color-folders-text-center
-        options:
-            -
-                label: Left
-                value: pt-color-folders-text-left
-            -
-                label: Center
-                value: pt-color-folders-text-center
-            -
-                label: Right
-                value: pt-color-folders-text-right
-    -
         id: custom-vault-banner
         title: Custom Vault Banner
         description: Custom Vault Banner in the File Explorer with a custom icon option.
@@ -6224,13 +6271,6 @@ settings:
         type: variable-text
         default: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E)
     -
-        id: outline
-        title: Outline
-        description: Customisation options for the Outline module.
-        type: heading
-        level: 3
-        collapsed: true
-    -
         id: titlebar
         title: Titlebar
         description: Settings for changing the style of the Titlebar.
@@ -6246,7 +6286,7 @@ settings:
     -
         id: status-bar
         title: Status Bar
-        description: Settings for the Status Bar; Adjust position, Change the order of items, etc.
+        description: Settings for the Status Bar. Adjust position, Change the order of items, etc.
         type: heading
         level: 2
         collapsed: true
@@ -6371,7 +6411,7 @@ settings:
     -
         id: scrollbar
         title: Scrollbar
-        description: Settings for the Scrollbar; Adjust the width, Add Scroll Buttons, etc.
+        description: Settings for the Scrollbar. Adjust the width, Add Scroll Buttons, etc.
         type: heading
         level: 2
         collapsed: true
@@ -6394,7 +6434,7 @@ settings:
     -
         id: kanban-settings
         title: Kanban
-        description: Mgmeyers' Obsidian Kanban Plugin (https://github.com/mgmeyers/obsidian-kanban).
+        description: Mgmeyers Obsidian Kanban Plugin (https://github.com/mgmeyers/obsidian-kanban).
         type: heading
         level: 2
         collapsed: true
@@ -6465,7 +6505,7 @@ settings:
     -
         id: icon-folder-settings
         title: Icon Folder
-        description: Florian Woelki's Icon Folder (https://github.com/FlorianWoelki/obsidian-icon-folder).
+        description: Florian Woelki Icon Folder (https://github.com/FlorianWoelki/obsidian-icon-folder).
         type: heading
         level: 2
         collapsed: true
@@ -6478,7 +6518,7 @@ settings:
     -
         id: icons-settings
         title: Icons
-        description: visini's Icons (https://github.com/visini/obsidian-icons-plugin).
+        description: visini Icons (https://github.com/visini/obsidian-icons-plugin).
         type: heading
         level: 2
         collapsed: true
@@ -6499,12 +6539,6 @@ settings:
         id: pt-disable-blur
         title: Disable Blurred Background Effect
         description: Disables the blur background in all elements that use it by making them opaque.
-        default: false
-        type: class-toggle
-    -
-        id: pt-hide-view-header
-        title: Hide Note Titlebar
-        description: Hides the Note Titlebar until you hover over the top part of a note.
         default: false
         type: class-toggle
     -
@@ -6536,7 +6570,7 @@ settings:
         collapsed: true
     -
         id: support-donate
-        title: Buy Me a Coffee!
+        title: Buy Me a Coffee
         description: https://www.buymeacoffee.com/DamianKorcz
         type: heading
         level: 2
