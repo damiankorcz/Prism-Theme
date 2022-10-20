@@ -27,7 +27,6 @@
 @use "User Interface/documentSearch.scss"; /* ✅ */
 @use "User Interface/popups.scss"; /* ✅ */
 
-/* @use "User Interface/animations.scss"; 🔧 */
 /* @use "User Interface/mobileToolbar.scss"; 🔧 Need to look into it */
 
 /* Accent Colors */
@@ -61,9 +60,6 @@
 @use "Plugins/Theme/markHighlightSystem.scss"; /* ✅ */
 @use "Plugins/Theme/fontFeatures.scss"; /* ✅ */
 
-/* @use "Plugins/Theme/coloredFolders.scss"; ⚠️ Holding out for CSS `:has` */
-/* @use "Plugins/Theme/customIcons.scss"; ⚠️ Might be dropped */
-
 /* Community Plugins */
 @use "Plugins/Community/styleSettings.scss"; /* ✅ */
 @use "Plugins/Community/kanban.scss"; /* ✅ */
@@ -73,7 +69,7 @@
 @use "Plugins/Community/calendar.scss"; /* ✅ */
 @use "Plugins/Community/recentFiles.scss"; /* ✅ */
 @use "Plugins/Community/danglingLinks.scss"; /* ✅ */
-@use "Plugins/Community/advancedTables.scss"; /* 🧹 Need to figure out the alignment overwrite */
+@use "Plugins/Community/advancedTables.scss"; /* ✅ */
 @use "Plugins/Community/fileTreeAlternative.scss"; /* 🧹 Needs accent style for selected file */
 
 /* @use "Plugins/Community/quickExplorer.scss"; 🔧 */
@@ -92,6 +88,10 @@
 @use "Info/styleSettingsConfig.scss";
 @use "Info/pluginCompatibility.scss";
 
+
+/* @use "Plugins/Theme/coloredFolders.scss"; ⚠️ Holding out for CSS `:has` */
+/* @use "Plugins/Theme/customIcons.scss"; ❌ Won't reimplement. Left for reference. */
+/* @use "User Interface/animations.scss"; ❌ Won't reimplement. Left for reference. */
 /*
 
 STYLE SETTINGS TO FIX
