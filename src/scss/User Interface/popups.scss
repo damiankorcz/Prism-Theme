@@ -15,12 +15,19 @@
 
 /* #region  [UI] Menu Popup */
 .menu {
-	background: var(--background-secondary-blur);
+	background: var(--background-secondary);
 	border-color: var(--window-border);
 	box-shadow: var(--shadow-l);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
 }
+
+.menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) {
+	color: var(--highlight-text-normal);
+
+	.menu-item-icon {
+		color: var(--highlight-text-normal);
+	}
+}
+
 /* #endregion */
 
 /* #region  [UI] Notification Popup */

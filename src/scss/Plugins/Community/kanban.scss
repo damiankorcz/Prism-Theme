@@ -1,7 +1,16 @@
 /* #region  [Plugin - Community] Kanban Base */
+.kanban-plugin {
+	background-color: unset;
+}
+
 .kanban-plugin__lane-header-wrapper {
 	gap: var(--size-4-1);
 	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.kanban-plugin__lane-wrapper {
+	width: 272px !important;
+	margin-right: var(--size-4-4);
 }
 
 .kanban-plugin__item-title-wrapper {
@@ -10,7 +19,8 @@
 	}
 }
 
-.kanban-plugin__new-item-button {
+button.kanban-plugin__new-item-button {
+	background-color: var(--background-primary);
 	border: 1px solid var(--window-border);
 
 	&:hover {
@@ -28,11 +38,22 @@
 	}
 }
 
+.kanban-plugin__scroll-container.kanban-plugin__vertical {
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary);
+	}
+}
+
 :is(.kanban-plugin__lane-grip, div.kanban-plugin__lane-title-count, .kanban-plugin__lane button.kanban-plugin__lane-settings-button) {
 	margin: unset;
 }
 
 .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+	height: unset;
 	box-shadow: unset;
 }
 
@@ -70,21 +91,31 @@
 	}
 }
 
-.theme-light,
-.theme-dark {
-	// Kanban Item Counter
-	div.kanban-plugin__lane-title-count {
-		display: block;
-		height: fit-content;
-		padding: 0 4px;
-		font-size: 0.75em;
-		font-weight: 600;
-		line-height: 1.5em;
-		color: var(--text-normal);
-		background-color: var(--background-secondary);
-		border: 1px solid var(--window-border);
-		border-radius: var(--radius-s);
+// Kanban Item Counter
+div.kanban-plugin__lane-title-count {
+	display: block;
+	height: fit-content;
+	padding: 0 4px;
+	font-size: 0.75em;
+	font-weight: 600;
+	line-height: 1.5em;
+	color: var(--text-normal);
+	background-color: unset;
+	border-radius: var(--radius-s);
+}
+
+.kanban-plugin__lane-grip,
+.kanban-plugin__lane-settings-button-wrapper {
+	border-radius: var(--radius-s);
+
+	&:hover {
+		color: var(--interactive-accent-hover);
+		background-color: var(--interactive-accent-base);
 	}
+}
+
+.kanban-plugin__lane-grip {
+	padding: var(--size-4-1) 0;
 }
 
 .pt-center-kanban-title-text {
@@ -98,30 +129,7 @@
 }
 
 /* #region  [Plugin - Community] Kanban Background Styles */
-/*
-.theme-light.pt-kanban-background-transparent-lt,
-.theme-dark.pt-kanban-background-transparent-dt {
-	.workspace-split.mod-root .workspace-leaf .workspace-leaf-content[data-type="kanban"] {
-		background-color: transparent;
-	}
-
-	.workspace-leaf-content[data-type="kanban"] .kanban-plugin,
-	.workspace-leaf-content[data-type="kanban"] .view-content {
-		background-color: unset;
-	}
-}
-
-NEEDS DIFFERENT BACKGROUND VARIABLE
-
-.theme-light.pt-kanban-background-dots-plain-lt {
-	.kanban-plugin__board {
-		background-image: radial-gradient(circle, var(--background-color-lt) 1px, rgb(0 0 0 / 0%) 1px);
-		background-attachment: local;
-		background-size: 8px 8px;
-	}
-}
-
-.theme-dark.pt-kanban-background-dots-plain-dt {
+.theme-light.pt-kanban-background-dots-lt {
 	.kanban-plugin__board {
 		background-image: radial-gradient(circle, var(--background-secondary) 1px, rgb(0 0 0 / 0%) 1px);
 		background-attachment: local;
@@ -129,24 +137,15 @@ NEEDS DIFFERENT BACKGROUND VARIABLE
 	}
 }
 
-.theme-light.pt-kanban-background-dots-accent-lt,
-.theme-dark.pt-kanban-background-dots-accent-dt {
+.theme-dark.pt-kanban-background-dots-dt {
 	.kanban-plugin__board {
-		background-image: radial-gradient(circle, var(--interactive-accent-base) 1px, rgb(0 0 0 / 0%) 1px);
+		background-image: radial-gradient(circle, var(--background-secondary) 1px, rgb(0 0 0 / 0%) 1px);
 		background-attachment: local;
 		background-size: 8px 8px;
 	}
 }
 
-.theme-light.pt-kanban-background-grid-plain-lt {
-	.kanban-plugin__board {
-		background-image: linear-gradient(to right, var(--background-color-lt) 1px, transparent 1px), linear-gradient(to bottom, var(--background-color-lt) 1px, transparent 1px);
-		background-attachment: local;
-		background-size: 8px 8px;
-	}
-}
-
-.theme-dark.pt-kanban-background-grid-plain-dt {
+.theme-light.pt-kanban-background-grid-lt {
 	.kanban-plugin__board {
 		background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
 		background-attachment: local;
@@ -154,14 +153,11 @@ NEEDS DIFFERENT BACKGROUND VARIABLE
 	}
 }
 
-.theme-light.pt-kanban-background-grid-accent-lt,
-.theme-dark.pt-kanban-background-grid-accent-dt {
+.theme-dark.pt-kanban-background-grid-dt {
 	.kanban-plugin__board {
-		background-image: linear-gradient(to right, var(--interactive-accent-base) 1px, transparent 1px), linear-gradient(to bottom, var(--interactive-accent-base) 1px, transparent 1px);
+		background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
 		background-attachment: local;
 		background-size: 8px 8px;
 	}
 }
-*/
-
 /* #endregion */

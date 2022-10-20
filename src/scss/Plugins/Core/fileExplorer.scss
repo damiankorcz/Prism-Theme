@@ -23,12 +23,17 @@
 	}
 }
 
+.nav-file-tag {
+	background-color: var(--background-secondary);
+}
+
 /* Indent width */
 :is(.nav-file:not(.mod-root), .nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder) {
 	margin-left: var(--file-explorer-left-margin);
 }
 
 :is(.nav-file-title, .nav-folder-title) {
+	min-height: 23px;
 	padding: 1px var(--size-4-2);
 	border: 2px solid transparent;
 
@@ -36,6 +41,14 @@
 		background-color: var(--interactive-accent-base);
 		border: 2px solid var(--interactive-accent-tint);
 	}
+}
+
+.nav-folder:not(.is-collapsed) > .nav-folder-title {
+	color: var(--text-normal);
+}
+
+body:not(.is-grabbing) .nav-folder-title:hover .collapse-icon svg.svg-icon {
+	color: var(--nav-item-color-hover);
 }
 
 .workspace-leaf.mod-active {

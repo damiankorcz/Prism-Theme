@@ -29,7 +29,16 @@
 		.collapse-icon {
 			display: block;
 		}
+
+		&.is-collapsed:hover,
+		&:hover .collapse-icon svg.svg-icon {
+			color: var(--highlight-text-normal);
+		}
 	}
+}
+
+.tree-item-self.is-clickable:hover svg {
+	color: var(--nav-item-color-hover);
 }
 
 .embedded-backlinks {

@@ -1,52 +1,32 @@
 /* #region  [Plugin - Community] Dangling Links */
 .workspace-leaf-content[data-type="dangling-links"] .view-content {
-	padding: 0 10px 0 0;
+	padding: unset;
 
 	.container {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-
 		h3:first-of-type {
 			display: none;
 		}
 
 		details {
-			background-color: var(--background-secondary);
-			border: 1px solid var(--window-border);
-			border-radius: var(--radius-m);
-			box-shadow: var(--shadow-s);
+			&:first-of-type summary {
+				border-bottom: 1px solid var(--window-border);
+			}
 
-			&:not(:last-child) {
-				margin-bottom: 8px;
+			&:not(:first-of-type) summary {
+				border-top: 1px solid var(--window-border);
+				border-bottom: 1px solid var(--window-border);
+			}
+
+			&:not([open]) {
+				color: var(--text-faint);
 			}
 
 			summary {
 				position: relative;
-				z-index: var(--layer-cover);
-				padding: 5px 5px 5px 15px;
-				margin-bottom: 8px;
-				font-size: 14px;
-				font-weight: 600;
-				background-color: var(--background-tertiary); /* NEEDS CHANGING */
-				border: none;
-				border-bottom-color: transparent;
-				border-radius: var(--radius-m);
-				box-shadow: var(--shadow-s);
-
-				&:hover {
-					color: var(--interactive-accent-text);
-					background-color: var(--background-primary);
-
-					&::marker {
-						color: var(--interactive-accent-hover);
-					}
-				}
-
-				&::marker {
-					color: var(--text-faint);
-				}
+				padding: var(--size-4-1) var(--size-4-2);
+				margin-bottom: -1px;
+				font-size: var(--font-ui-small);
+				background-color: var(--background-secondary);
 			}
 
 			ul {
@@ -54,45 +34,59 @@
 				margin: 8px;
 				font-family: var(--font-text);
 				font-size: 14px;
+				border: 1px solid var(--window-border);
+				border-radius: var(--radius-m);
 
 				li {
 					width: 100%;
-					padding: 2px 5px 2px 10px;
+					padding: var(--size-4-2) var(--size-4-5) var(--size-4-2) var(--size-4-3);
 					color: var(--text-normal);
-					background: var(--background-primary);
-					border: 1px solid var(--window-border);
-					border-radius: var(--radius-s);
+					color: var(--text-muted);
 					box-shadow: var(--shadow-s);
 
-					&:not(:last-child) {
-						margin-bottom: 8px;
+					&:not(:last-of-type) {
+						border-bottom: 1px solid var(--window-border);
+					}
+
+					&:hover {
+						color: var(--text-normal);
+						background-color: var(--text-selection);
 					}
 
 					::marker {
 						display: none;
-					}
-
-					a {
-						font-weight: 600;
 					}
 				}
 			}
 		}
 	}
 
-	details:not([open]) {
-		summary {
-			margin-bottom: unset;
+	.nav-header {
+		gap: var(--size-4-1);
+		color: var(--icon-color);
+
+		:is(.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split &, .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split &) {
+			position: sticky;
+			top: 0;
+			z-index: var(--layer-popover);
 		}
 	}
 
-	details[open] {
-		summary {
-			background-color: var(--background-primary);
+	.nav-action-button {
+		&:hover {
+			color: var(--icon-color-hover);
+			background-color: var(--background-modifier-hover);
+			opacity: var(--icon-opacity-hover);
+		}
 
-			&::marker {
-				color: var(--interactive-accent-text);
-			}
+		svg {
+			width: var(--icon-size);
+			height: var(--icon-size);
+		}
+
+		/* Might be able to address the border and background in the future for consistency */
+		path[stroke-width] {
+			color: var(--interactive-accent-text);
 		}
 	}
 }

@@ -1402,67 +1402,6 @@ settings:
         default: 1.2
         format: em
     -
-        id: header-padding-size
-        title: Header Padding Size
-        description: The additional space above and below the headers.
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: h1-padding-size
-        title: Header 1 (H1) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h2-padding-size
-        title: Header 2 (H2) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h3-padding-size
-        title: Header 3 (H3) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h4-padding-size
-        title: Header 4 (H4) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h5-padding-size
-        title: Header 5 (H5) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h6-padding-size
-        title: Header 6 (H6) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
         id: header-text-color
         title: Header Text Color
         description: Options for changing the color of each header type.
@@ -2925,8 +2864,8 @@ settings:
         description: Increases the Left Margin for Files/Folders in order indent them within another folder.
         type: variable-number-slider
         format: 'px'
-        default: 4
-        min: 1
+        default: 0
+        min: 0
         max: 25
         step: 1
     -
@@ -3171,52 +3110,34 @@ settings:
         description: Change the Light Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-grid-plain-lt
+        default: pt-kanban-background-grid-lt
         options:
             -
                 label: Solid Color
                 value: pt-kanban-background-default-lt
             -
-                label: Transparent
-                value: pt-kanban-background-transparent-lt
+                label: Dots
+                value: pt-kanban-background-dots-lt
             -
-                label: Dots Plain Color
-                value: pt-kanban-background-dots-plain-lt
-            -
-                label: Dots Accent Color
-                value: pt-kanban-background-dots-accent-lt
-            -
-                label: Grid Plain Color
-                value: pt-kanban-background-grid-plain-lt
-            -
-                label: Grid Accent Color
-                value: pt-kanban-background-grid-accent-lt
+                label: Grid
+                value: pt-kanban-background-grid-lt
     -
         id: pt-kanban-background-dt
         title: Dark Theme Kanban Background
         description: Change the Dark Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-grid-plain-dt
+        default: pt-kanban-background-grid-dt
         options:
             -
                 label: Solid Color
                 value: pt-kanban-background-default-dt
             -
-                label: Transparent
-                value: pt-kanban-background-transparent-dt
+                label: Dots
+                value: pt-kanban-background-dots-dt
             -
-                label: Dots Plain Color
-                value: pt-kanban-background-dots-plain-dt
-            -
-                label: Dots Accent Color
-                value: pt-kanban-background-dots-accent-dt
-            -
-                label: Grid Plain Color
-                value: pt-kanban-background-grid-plain-dt
-            -
-                label: Grid Accent Color
-                value: pt-kanban-background-grid-accent-dt
+                label: Grid
+                value: pt-kanban-background-grid-dt
     -
         id: icon-folder-settings
         title: Icon Folder

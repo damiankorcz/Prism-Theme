@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 9
+    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 10
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -72,6 +72,7 @@ body {
   --checklist-done-color: var(--interactive-accent-tint);
   --checkbox-border-color-hover: var(--interactive-accent-tint);
   --blockquote-border-color: var(--window-border);
+  --blockquote-border-thickness: 8px;
   --ribbon-background-collapsed: var(--background-secondary);
   --titlebar-background-focused: var(--background-secondary);
   --header-height: 41px;
@@ -161,6 +162,7 @@ body:is(.theme-light, .theme-dark) {
   --input-shadow-hover: unset;
   --tab-stacked-shadow: 0;
   --background-modifier-hover: hsla(var(--interactive-accent-base-hsl) / 50%);
+  --text-selection: var(--background-modifier-hover);
   --hue-background-lt: linear-gradient( to right, hsl(0 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(30 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(60 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(90 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(120 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(150 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(180 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(210 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(240 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(270 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(300 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(330 var(--color-accent-s-lt) var(--color-accent-l-base-lt)), hsl(360 var(--color-accent-s-lt) var(--color-accent-l-base-lt)) );
   --saturation-background-lt: linear-gradient( to right, hsl(var(--color-accent-h-lt) 0% var(--color-accent-l-base-lt)), hsl(var(--color-accent-h-lt) 50% var(--color-accent-l-base-lt)), hsl(var(--color-accent-h-lt) 100% var(--color-accent-l-base-lt)) );
   --lightness-background-lt: linear-gradient( to right, hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) 0%), hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) 50%), hsl(var(--color-accent-h-lt) var(--color-accent-s-lt) 100%) );
@@ -192,7 +194,6 @@ body:is(.theme-light, .theme-dark).pt-disable-blur {
 body.theme-light {
   --window-border: var(--background-secondary-alt);
   --page-background-color: var(--background-primary);
-  --text-selection: var(--background-secondary-alt);
   --graph-line-color-lt: var(--background-secondary-alt);
   --graph-fill-color-lt: var(--color-grey-tint);
   --graph-fill-focused-color-lt: var(--interactive-accent-tint);
@@ -320,7 +321,6 @@ body.theme-light.pt-accent-color-grey-lt {
 body.theme-dark {
   --window-border: var(--background-primary-alt);
   --page-background-color: var(--background-secondary);
-  --text-selection: var(--background-primary-alt);
   --graph-line-color-dt: var(--background-primary-alt);
   --graph-fill-color-dt: var(--color-grey-tint);
   --graph-fill-focused-color-dt: var(--interactive-accent-tint);
@@ -1059,19 +1059,30 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   padding: 2px;
   border-radius: var(--radius-m);
 }
-:is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=search] .search-results-children, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents) {
-  padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
-}
-.workspace-leaf-content .nav-header {
-}
-:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .workspace-leaf-content .nav-header, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .workspace-leaf-content .nav-header) {
+:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split) .workspace-leaf-content .nav-header {
   justify-content: flex-start;
 }
-:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .workspace-leaf-content .nav-header, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .workspace-leaf-content .nav-header) {
+:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  right: calc(var(--size-2-3) + var(--scroll-bar-size));
+  left: var(--size-2-3);
+  margin-right: auto;
+}
+:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .workspace-leaf-content .nav-header {
   justify-content: center;
 }
-:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .workspace-leaf-content .nav-header, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .workspace-leaf-content .nav-header) {
+:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  right: calc(var(--size-2-3) + var(--scroll-bar-size));
+  left: var(--size-2-3);
+  margin-right: auto;
+  margin-left: auto;
+}
+:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split) .workspace-leaf-content .nav-header {
   justify-content: flex-end;
+}
+:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  right: calc(var(--size-2-3) + var(--scroll-bar-size));
+  left: var(--size-2-3);
+  margin-left: auto;
 }
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-header {
   position: absolute;
@@ -1081,12 +1092,13 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   width: -webkit-fill-available;
   width: fill-available;
   height: unset;
-  padding: 0 var(--size-4-4);
+  padding: 0 calc(var(--size-2-3) + var(--scroll-bar-size)) 0 var(--size-2-3);
   pointer-events: none;
   background-color: unset;
   border-bottom: unset;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-buttons-container {
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-buttons-container,
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
   padding: var(--size-4-1);
   pointer-events: auto;
   background: var(--background-secondary-blur);
@@ -1095,6 +1107,12 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   box-shadow: var(--shadow-l);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  width: fit-content;
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=search] .search-results-children, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container) {
+  padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 .modal.mod-settings .vertical-tab-header {
   flex: none;
@@ -1131,7 +1149,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism v3.0.0 Beta 9";
+  content: "Prism v3.0.0 Beta 10";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -1391,6 +1409,9 @@ body:not(.native-scrollbars) .modal-close-button {
   right: var(--size-4-1);
   z-index: var(--layer-popover);
 }
+.modal-close-button:hover {
+  color: var(--highlight-text-normal);
+}
 .mod-warning {
   color: var(--color-red-text);
 }
@@ -1489,6 +1510,7 @@ select.dropdown option[value*=grey] {
   background-color: var(--color-grey-base);
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar,
+body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar,
 body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: var(--scroll-bar-size);
   height: var(--scroll-bar-size);
@@ -1496,10 +1518,12 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   border-radius: unset;
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar:vertical,
+body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar:vertical,
 body:not(.native-scrollbars) ::-webkit-scrollbar:vertical {
   border-left: 1px solid var(--window-border);
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar:horizontal,
+body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar:horizontal,
 body:not(.native-scrollbars) ::-webkit-scrollbar:horizontal {
   border-top: 1px solid var(--window-border);
 }
@@ -1514,7 +1538,8 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   border-radius: unset;
 }
-.show-view-header .cm-scroller::-webkit-scrollbar-track {
+.show-view-header .cm-scroller::-webkit-scrollbar-track,
+.show-view-header .mod-root .view-content::-webkit-scrollbar-track {
   margin-top: var(--header-height) !important;
 }
 .progress-bar {
@@ -1619,11 +1644,15 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   right: 12px;
 }
 .menu {
-  background: var(--background-secondary-blur);
+  background: var(--background-secondary);
   border-color: var(--window-border);
   box-shadow: var(--shadow-l);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
+}
+.menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) {
+  color: var(--highlight-text-normal);
+}
+.menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) .menu-item-icon {
+  color: var(--highlight-text-normal);
 }
 div.notice-container div.notice {
   font-weight: 600;
@@ -1713,6 +1742,9 @@ button.mod-cta {
 }
 :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) svg.svg-icon {
   color: var(--highlight-text-normal);
+}
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover svg.svg-icon {
+  color: var(--interactive-accent-hover);
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace-tab-header.is-active,
@@ -2041,6 +2073,12 @@ button.mod-cta {
 .theme-dark .workspace-split.mod-root .view-content {
   background-color: var(--background-secondary-alt);
 }
+.show-view-header .workspace-leaf-content[data-type=image] .view-content {
+  padding-top: calc(var(--header-height) + var(--size-4-4));
+}
+.show-view-header .workspace-leaf-content[data-type=pdf] .view-content {
+  padding-top: var(--header-height);
+}
 p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
@@ -2138,12 +2176,22 @@ a.tag:hover {
 }
 .code-block-flair {
   font-weight: 600;
-  background-color: var(--background-secondary-alt);
   border: 1px solid var(--window-border);
+}
+.theme-light .code-block-flair {
+  background-color: var(--background-primary);
+}
+.theme-dark .code-block-flair {
+  background-color: var(--background-secondary-alt);
 }
 :is(.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote, .markdown-rendered blockquote) {
   padding: var(--size-4-2) var(--size-4-4);
-  border-width: 1px 1px 1px 5px;
+  border-top: 1px solid var(--blockquote-border-color);
+  border-right: 1px solid var(--blockquote-border-color);
+  border-bottom: 1px solid var(--blockquote-border-color);
+}
+.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote {
+  padding-left: var(--size-4-6) !important;
 }
 :is(.theme-light.pt-highlight-text-color-lt, .theme-dark.pt-highlight-text-color-dt) span.cm-link {
   color: var(--link-external-color);
@@ -2180,7 +2228,7 @@ a.tag:hover {
 }
 .callout .callout-title-inner {
   padding: var(--size-4-1) 0;
-  margin-left: var(--size-4-1);
+  margin: 0 var(--size-4-1);
 }
 .callout .callout-icon {
   margin: 0 var(--size-4-1) 0 var(--size-4-2);
@@ -2539,16 +2587,26 @@ input.prompt-input:focus-visible {
 .nav-folder.mod-root .nav-folder > .nav-folder-title {
   padding-left: var(--size-4-1);
 }
+.nav-file-tag {
+  background-color: var(--background-secondary);
+}
 :is(.nav-file:not(.mod-root), .nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder) {
   margin-left: var(--file-explorer-left-margin);
 }
 :is(.nav-file-title, .nav-folder-title) {
+  min-height: 23px;
   padding: 1px var(--size-4-2);
   border: 2px solid transparent;
 }
 :is(.nav-file-title, .nav-folder-title).is-being-dragged-over {
   background-color: var(--interactive-accent-base);
   border: 2px solid var(--interactive-accent-tint);
+}
+.nav-folder:not(.is-collapsed) > .nav-folder-title {
+  color: var(--text-normal);
+}
+body:not(.is-grabbing) .nav-folder-title:hover .collapse-icon svg.svg-icon {
+  color: var(--nav-item-color-hover);
 }
 .workspace-leaf.mod-active .nav-folder.has-focus > .nav-folder-title {
   background-color: var(--interactive-accent-base);
@@ -2705,6 +2763,8 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 .internal-query .search-result-container {
   padding: var(--size-4-2) var(--size-4-1);
+  background-color: unset;
+  border-radius: unset;
 }
 .search-input-container::before {
   top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
@@ -2787,6 +2847,13 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self .collapse-icon {
   display: block;
+}
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self.is-collapsed:hover,
+:is(.backlink-pane, .outgoing-link-pane) > .tree-item-self:hover .collapse-icon svg.svg-icon {
+  color: var(--highlight-text-normal);
+}
+.tree-item-self.is-clickable:hover svg {
+  color: var(--nav-item-color-hover);
 }
 .embedded-backlinks .nav-header {
   height: unset;
@@ -3190,17 +3257,25 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 .style-settings-container .setting-item[data-id^=color-accent-l-text-dt] .setting-item-control::before {
   background-color: var(--color-accent-text-dt);
 }
+.kanban-plugin {
+  background-color: unset;
+}
 .kanban-plugin__lane-header-wrapper {
   gap: var(--size-4-1);
   padding: var(--size-4-1) var(--size-4-2);
 }
+.kanban-plugin__lane-wrapper {
+  width: 272px !important;
+  margin-right: var(--size-4-4);
+}
 .theme-dark .kanban-plugin__item-title-wrapper {
   background: var(--background-secondary-alt);
 }
-.kanban-plugin__new-item-button {
+button.kanban-plugin__new-item-button {
+  background-color: var(--background-primary);
   border: 1px solid var(--window-border);
 }
-.kanban-plugin__new-item-button:hover {
+button.kanban-plugin__new-item-button:hover {
   background-color: var(--background-modifier-hover);
 }
 .kanban-plugin__lane-items {
@@ -3211,10 +3286,17 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 .kanban-plugin__lane-items > div {
   margin-top: unset;
 }
+.theme-light .kanban-plugin__scroll-container.kanban-plugin__vertical {
+  background-color: var(--background-primary);
+}
+.theme-dark .kanban-plugin__scroll-container.kanban-plugin__vertical {
+  background-color: var(--background-secondary);
+}
 :is(.kanban-plugin__lane-grip, div.kanban-plugin__lane-title-count, .kanban-plugin__lane button.kanban-plugin__lane-settings-button) {
   margin: unset;
 }
 .kanban-plugin__lane button.kanban-plugin__lane-settings-button {
+  height: unset;
   box-shadow: unset;
 }
 .modal.kanban-plugin__board-settings-modal {
@@ -3245,8 +3327,7 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 .show-view-header .kanban-plugin__board > div {
   padding-top: calc(var(--header-height) + var(--size-4-4));
 }
-.theme-light div.kanban-plugin__lane-title-count,
-.theme-dark div.kanban-plugin__lane-title-count {
+div.kanban-plugin__lane-title-count {
   display: block;
   height: fit-content;
   padding: 0 4px;
@@ -3254,15 +3335,213 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
   font-weight: 600;
   line-height: 1.5em;
   color: var(--text-normal);
-  background-color: var(--background-secondary);
-  border: 1px solid var(--window-border);
+  background-color: unset;
   border-radius: var(--radius-s);
+}
+.kanban-plugin__lane-grip,
+.kanban-plugin__lane-settings-button-wrapper {
+  border-radius: var(--radius-s);
+}
+.kanban-plugin__lane-grip:hover,
+.kanban-plugin__lane-settings-button-wrapper:hover {
+  color: var(--interactive-accent-hover);
+  background-color: var(--interactive-accent-base);
+}
+.kanban-plugin__lane-grip {
+  padding: var(--size-4-1) 0;
 }
 .pt-center-kanban-title-text .kanban-plugin__lane-title {
   align-items: center;
 }
 .pt-disable-kanban-title-count div.kanban-plugin__lane-title-count {
   display: none;
+}
+.theme-light.pt-kanban-background-dots-lt .kanban-plugin__board {
+  background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px);
+  background-attachment: local;
+  background-size: 8px 8px;
+}
+.theme-dark.pt-kanban-background-dots-dt .kanban-plugin__board {
+  background-image: radial-gradient(circle, var(--background-secondary) 1px, rgba(0, 0, 0, 0) 1px);
+  background-attachment: local;
+  background-size: 8px 8px;
+}
+.theme-light.pt-kanban-background-grid-lt .kanban-plugin__board {
+  background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
+  background-attachment: local;
+  background-size: 8px 8px;
+}
+.theme-dark.pt-kanban-background-grid-dt .kanban-plugin__board {
+  background-image: linear-gradient(to right, var(--background-secondary) 1px, transparent 1px), linear-gradient(to bottom, var(--background-secondary) 1px, transparent 1px);
+  background-attachment: local;
+  background-size: 8px 8px;
+}
+.pt-icon-folder-accent .obsidian-icon-folder-icon {
+  color: var(--interactive-accent-text);
+}
+.pt-icons-accent .obsidian-icon {
+  color: var(--interactive-accent-text);
+}
+div#cMenuModalBar {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-l);
+}
+div#cMenuModalBar .cMenuCommandItem {
+  color: var(--text-muted);
+  background-color: transparent;
+}
+div#cMenuModalBar button.cMenuCommandItem:hover {
+  color: var(--highlight-text-normal);
+  background-color: var(--background-modifier-hover);
+}
+div#cMenuModalBar.cMenuGlassAesthetic {
+  background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.pt-status-bar-position-floating div#cMenuModalBar {
+  bottom: calc(var(--size-4-3) + 33px + var(--scroll-bar-size)) !important;
+}
+.pt-status-bar-position-fixed div#cMenuModalBar {
+  bottom: calc(var(--size-2-3) + 26px + var(--scroll-bar-size)) !important;
+}
+.workspace-leaf-content[data-type=calendar] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container {
+  padding: unset;
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .nav {
+  height: var(--header-height);
+  padding: var(--size-4-3);
+  margin: unset;
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container td.svelte-egt0yd {
+  background-color: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8 {
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container th.svelte-pcimu8:first-child {
+  border-right: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container div.today {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .day.svelte-q3wqg9:active,
+.workspace-leaf-content[data-type=calendar] #calendar-container .active.svelte-q3wqg9,
+.workspace-leaf-content[data-type=calendar] #calendar-container .active.today.svelte-q3wqg9 {
+  background-color: var(--interactive-accent-base);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .week-num {
+  font-size: 0.7em;
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .year {
+  color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .dot.filled {
+  fill: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .hollow.task {
+  stroke: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=calendar] #calendar-container .arrow:hover svg,
+.workspace-leaf-content[data-type=calendar] #calendar-container .reset-button:hover {
+  color: var(--highlight-text-normal);
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+}
+.workspace-leaf-content[data-type=recent-files] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=recent-files] .nav-folder.mod-root {
+  height: fit-content;
+  padding: var(--size-4-1);
+}
+.theme-light .workspace-leaf-content[data-type=recent-files] .nav-folder.mod-root {
+  background-color: var(--background-primary);
+}
+.theme-dark .workspace-leaf-content[data-type=recent-files] .nav-folder.mod-root {
+  background-color: var(--background-secondary-alt);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container h3:first-of-type {
+  display: none;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details:first-of-type summary {
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details:not(:first-of-type) summary {
+  border-top: 1px solid var(--window-border);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details:not([open]) {
+  color: var(--text-faint);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details summary {
+  position: relative;
+  padding: var(--size-4-1) var(--size-4-2);
+  margin-bottom: -1px;
+  font-size: var(--font-ui-small);
+  background-color: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul {
+  padding-inline-start: 0;
+  margin: 8px;
+  font-family: var(--font-text);
+  font-size: 14px;
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li {
+  width: 100%;
+  padding: var(--size-4-2) var(--size-4-5) var(--size-4-2) var(--size-4-3);
+  color: var(--text-normal);
+  color: var(--text-muted);
+  box-shadow: var(--shadow-s);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li:not(:last-of-type) {
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li:hover {
+  color: var(--text-normal);
+  background-color: var(--text-selection);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details ul li ::marker {
+  display: none;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .nav-header {
+  gap: var(--size-4-1);
+  color: var(--icon-color);
+}
+:is(.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .view-content .nav-header, .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .view-content .nav-header) {
+  position: sticky;
+  top: 0;
+  z-index: var(--layer-popover);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .nav-action-button {
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .nav-action-button:hover {
+  color: var(--icon-color-hover);
+  background-color: var(--background-modifier-hover);
+  opacity: var(--icon-opacity-hover);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .nav-action-button svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .nav-action-button path[stroke-width] {
+  color: var(--interactive-accent-text);
 }
 .workspace-leaf-content[data-type=advanced-tables-toolbar] {
 }
@@ -3277,11 +3556,115 @@ div.workspace-leaf-content[data-type=style-settings] .view-content .style-settin
 .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   flex-direction: column;
 }
-.pt-icon-folder-accent .obsidian-icon-folder-icon {
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] {
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] > div.view-content {
+  padding: 0;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-pane {
+  resize: unset;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folders-tree-wrapper {
+  padding: unset;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folders-tree-wrapper > .oz-folder-contents {
+  margin-right: var(--size-4-1);
+  margin-bottom: var(--size-4-1);
+  margin-left: 14px !important;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folders-tree-wrapper > .treeview {
+  padding: 0 var(--size-4-1) 0 0;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-contents {
+  padding-left: 0;
+  margin-left: 15px !important;
+  border-left: 1px solid var(--window-border);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-element {
+  margin-left: var(--size-4-1);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-icon-div {
+  padding-left: var(--size-4-1);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folders-action-items,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-flex-container {
+  margin-bottom: unset;
+  background-color: var(--background-secondary-blur);
+  border: unset;
+  border-bottom: 1px solid var(--window-border);
+  border-radius: unset;
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folders-action-items {
+  margin-bottom: var(--size-4-1);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-action-button:hover {
+  color: var(--highlight-text-normal);
+  background-color: var(--background-modifier-hover);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-file-tree-header {
+  margin-top: unset;
+  font-weight: var(--font-medium);
+  background-color: var(--background-secondary-blur);
+  border-bottom: 1px solid var(--window-border);
+  border-radius: unset;
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .file-tree-header-fixed {
+  padding-right: unset;
+  padding-left: unset;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] #file-tree-divider {
+  height: 1px;
+  margin-bottom: unset;
+  background-color: var(--window-border);
+  border-bottom: unset;
+  opacity: 1;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] #file-tree-divider:hover {
+  height: 3px;
+  background-color: var(--divider-color-hover);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file-tag {
+  background-color: unset;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-block {
+  padding-top: unset;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .treeview {
+  margin-bottom: var(--size-2-1);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-explorer-container {
+  padding-right: unset !important;
+  padding-left: unset !important;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .is-folder-active {
   color: var(--interactive-accent-text);
 }
-.pt-icons-accent .obsidian-icon {
-  color: var(--interactive-accent-text);
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .drag-entered,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-element:hover,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file:hover {
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .drag-entered .oz-folder-name,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .drag-entered .oz-nav-file-title,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .drag-entered .oz-nav-file-tag,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-element:hover .oz-folder-name,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-element:hover .oz-nav-file-title,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folder-element:hover .oz-nav-file-tag,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file:hover .oz-folder-name,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file:hover .oz-nav-file-title,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file:hover .oz-nav-file-tag {
+  color: var(--highlight-text-normal);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active .oz-nav-file-tag,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title-content {
+  color: var(--highlight-text-normal);
 }
 /*!
 /* @settings
@@ -4686,67 +5069,6 @@ settings:
         step: 0.05
         default: 1.2
         format: em
-    -
-        id: header-padding-size
-        title: Header Padding Size
-        description: The additional space above and below the headers.
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: h1-padding-size
-        title: Header 1 (H1) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h2-padding-size
-        title: Header 2 (H2) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h3-padding-size
-        title: Header 3 (H3) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h4-padding-size
-        title: Header 4 (H4) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h5-padding-size
-        title: Header 5 (H5) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
-    -
-        id: h6-padding-size
-        title: Header 6 (H6) Padding Size (px)
-        type: variable-number-slider
-        min: 0
-        max: 20
-        step: 1
-        default: 0
-        format: px
     -
         id: header-text-color
         title: Header Text Color
@@ -6210,8 +6532,8 @@ settings:
         description: Increases the Left Margin for Files/Folders in order indent them within another folder.
         type: variable-number-slider
         format: 'px'
-        default: 4
-        min: 1
+        default: 0
+        min: 0
         max: 25
         step: 1
     -
@@ -6456,52 +6778,34 @@ settings:
         description: Change the Light Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-grid-plain-lt
+        default: pt-kanban-background-grid-lt
         options:
             -
                 label: Solid Color
                 value: pt-kanban-background-default-lt
             -
-                label: Transparent
-                value: pt-kanban-background-transparent-lt
+                label: Dots
+                value: pt-kanban-background-dots-lt
             -
-                label: Dots Plain Color
-                value: pt-kanban-background-dots-plain-lt
-            -
-                label: Dots Accent Color
-                value: pt-kanban-background-dots-accent-lt
-            -
-                label: Grid Plain Color
-                value: pt-kanban-background-grid-plain-lt
-            -
-                label: Grid Accent Color
-                value: pt-kanban-background-grid-accent-lt
+                label: Grid
+                value: pt-kanban-background-grid-lt
     -
         id: pt-kanban-background-dt
         title: Dark Theme Kanban Background
         description: Change the Dark Theme background of the Kanban board.
         type: class-select
         allowEmpty: false
-        default: pt-kanban-background-grid-plain-dt
+        default: pt-kanban-background-grid-dt
         options:
             -
                 label: Solid Color
                 value: pt-kanban-background-default-dt
             -
-                label: Transparent
-                value: pt-kanban-background-transparent-dt
+                label: Dots
+                value: pt-kanban-background-dots-dt
             -
-                label: Dots Plain Color
-                value: pt-kanban-background-dots-plain-dt
-            -
-                label: Dots Accent Color
-                value: pt-kanban-background-dots-accent-dt
-            -
-                label: Grid Plain Color
-                value: pt-kanban-background-grid-plain-dt
-            -
-                label: Grid Accent Color
-                value: pt-kanban-background-grid-accent-dt
+                label: Grid
+                value: pt-kanban-background-grid-dt
     -
         id: icon-folder-settings
         title: Icon Folder

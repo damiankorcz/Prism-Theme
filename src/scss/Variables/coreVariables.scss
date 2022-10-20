@@ -45,6 +45,7 @@ body {
 	--checkbox-border-color-hover: var(--interactive-accent-tint);
 
 	--blockquote-border-color: var(--window-border);
+	--blockquote-border-thickness: 8px;
 
 	--ribbon-background-collapsed: var(--background-secondary);
 
@@ -160,6 +161,7 @@ body {
 		--tab-stacked-shadow: 0;
 
 		--background-modifier-hover: hsla(var(--interactive-accent-base-hsl) / 50%);
+		--text-selection: var(--background-modifier-hover);
 
 		--hue-background-lt:
 			linear-gradient(
@@ -259,7 +261,6 @@ body {
 	&.theme-light {
 		--window-border: var(--background-secondary-alt);
 		--page-background-color: var(--background-primary);
-		--text-selection: var(--background-secondary-alt);
 
 		--graph-line-color-lt: var(--background-secondary-alt);
 		--graph-fill-color-lt: var(--color-grey-tint);
@@ -413,7 +414,6 @@ body {
 	&.theme-dark {
 		--window-border: var(--background-primary-alt);
 		--page-background-color: var(--background-secondary);
-		--text-selection: var(--background-primary-alt);
 
 		--graph-line-color-dt: var(--background-primary-alt);
 		--graph-fill-color-dt: var(--color-grey-tint);

@@ -1,6 +1,7 @@
 /* #region  [UI] Scrollbar Base */
 body:not(.native-scrollbars) {
 	.kanban-plugin__scroll-container::-webkit-scrollbar,
+	.prompt-results::-webkit-scrollbar,
 	::-webkit-scrollbar {
 		width: var(--scroll-bar-size);
 		height: var(--scroll-bar-size);
@@ -32,7 +33,8 @@ body:not(.native-scrollbars) {
 	}
 }
 
-.show-view-header .cm-scroller::-webkit-scrollbar-track {
+.show-view-header .cm-scroller::-webkit-scrollbar-track,
+.show-view-header .mod-root .view-content::-webkit-scrollbar-track {
 	margin-top: var(--header-height) !important;
 }
 /* #endregion */
