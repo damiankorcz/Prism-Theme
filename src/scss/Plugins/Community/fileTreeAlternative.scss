@@ -52,6 +52,10 @@
 		margin-bottom: var(--size-4-1);
 	}
 
+	.oz-nav-action-button {
+		color: var(--text-muted);
+	}
+
 	.oz-nav-action-button:hover {
 		color: var(--highlight-text-normal);
 		background-color: var(--background-modifier-hover);
@@ -85,6 +89,31 @@
 		}
 	}
 
+	.oz-file-tree-files {
+		padding: var(--size-4-1) !important;
+	}
+
+	.oz-nav-file {
+		border-radius: var(--radius-s);
+		margin-bottom: var(--size-2-1);
+		border: 2px solid transparent;
+	}
+
+	.oz-nav-file-title {
+		font-size: var(--font-ui-small);
+	}
+
+	div.oz-nav-file.is-active div.oz-nav-file-title,
+	div.oz-nav-file.is-active div.oz-nav-file-title-content {
+		background-color: unset;
+		color: unset;
+		font-weight: var(--font-normal);
+		
+		.oz-nav-file-tag {
+			color: var(--highlight-text-normal);
+		}
+	}
+
 	.oz-nav-file-tag {
 		background-color: unset;
 	}
@@ -95,6 +124,7 @@
 
 	.treeview {
 		margin-bottom: var(--size-2-1);
+		padding: 1px;
 	}
 
 	.oz-explorer-container {
@@ -120,12 +150,12 @@
 	}
 
 	/* Sort this into accent style */
-	div.oz-nav-file.is-active,
+	/* div.oz-nav-file.is-active,
 	div.oz-nav-file.is-active .oz-nav-file-tag,
 	div.oz-nav-file.is-active div.oz-nav-file-title,
 	div.oz-nav-file.is-active div.oz-nav-file-title-content {
 		color: var(--highlight-text-normal);
-	}
+	} */
 
 	/* div#file-tree-divider {
 		height: 6px;
