@@ -9,8 +9,9 @@
 }
 
 :is(.markdown-embed-link, .file-embed-link) {
-	right: 12px;
+	right: calc(var(--scroll-bar-size) + var(--size-4-1));
 }
+
 /* #endregion */
 
 /* #region  [UI] Menu Popup */
@@ -52,10 +53,18 @@ div.notice-container div.notice {
 	display: flex;
 	font-weight: 600;
 	color: var(--text-normal);
-	background: var(--background-secondary);
+	background: var(--background-secondary-alt);
 	border: 1px solid var(--window-border);
 	border-radius: var(--radius-m);
 	box-shadow: var(--shadow-l);
+
+	.theme-light & {
+		background: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background: var(--background-secondary-alt);
+	}
 
 	.tooltip-arrow {
 		margin-top: -1px;

@@ -5,9 +5,14 @@
 	.nav-action-button.is-active,
 	.vertical-tab-nav-item.is-active,
 	.nav-file-title.is-active,
-	.suggestion-hotkey {
+	.suggestion-hotkey,
+	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
 		background-color: var(--background-primary);
 		border-color: transparent;
+
+		&:hover {
+			background-color: var(--background-modifier-hover);
+		}
 	}
 
 	.search-result-file-match-destination-file {
@@ -35,7 +40,8 @@
 		border-color: transparent;
 
 		&:hover {
-			color: var(--interactive-accent-tint);
+			color: var(--interactive-accent-hover);
+			background-color: var(--background-modifier-hover);
 		}
 	}
 
@@ -56,10 +62,11 @@
 
 		&:hover {
 			color: var(--color-grey-tint);
+			background-color: var(--background-modifier-hover);
 		}
 	}
 
-	.setting-command-hotkeys  .setting-hotkey {
+	.setting-command-hotkeys .setting-hotkey {
 		color: var(--color-blue-text);
 		background-color: var(--background-primary);
 		border-color: transparent;
@@ -93,6 +100,7 @@
 
 		&:hover {
 			color: var(--interactive-accent-hover);
+			background-color: var(--background-modifier-hover);
 		}
 	}
 }

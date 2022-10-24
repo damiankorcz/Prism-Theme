@@ -28,7 +28,8 @@
 		justify-content: flex-start;
 	}
 
-	.workspace-leaf-content[data-type="dangling-links"] .nav-header {
+	.workspace-leaf-content[data-type="dangling-links"] .nav-header,
+	.workspace-leaf-content[data-type="dictionary-view"] .nav-buttons-container {
 		right: calc(var(--size-2-3) + var(--scroll-bar-size));
 		left: var(--size-2-3);
 		margin-right: auto;
@@ -41,7 +42,8 @@
 		justify-content: center;
 	}
 
-	.workspace-leaf-content[data-type="dangling-links"] .nav-header {
+	.workspace-leaf-content[data-type="dangling-links"] .nav-header,
+	.workspace-leaf-content[data-type="dictionary-view"] .nav-buttons-container {
 		right: calc(var(--size-2-3) + var(--scroll-bar-size));
 		left: var(--size-2-3);
 		margin-right: auto;
@@ -55,7 +57,8 @@
 		justify-content: flex-end;
 	}
 
-	.workspace-leaf-content[data-type="dangling-links"] .nav-header {
+	.workspace-leaf-content[data-type="dangling-links"] .nav-header,
+	.workspace-leaf-content[data-type="dictionary-view"] .nav-buttons-container {
 		right: calc(var(--size-2-3) + var(--scroll-bar-size));
 		left: var(--size-2-3);
 		margin-left: auto;
@@ -93,6 +96,12 @@
 
 	.workspace-leaf-content[data-type="dangling-links"] .nav-header {
 		width: fit-content;
+	}
+
+	.workspace-leaf-content[data-type="dictionary-view"] .nav-buttons-container {
+		position: fixed;
+		bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
+		z-index: var(--layer-popover);
 	}
 
 	:is(.nav-files-container, .workspace-leaf-content[data-type="tag"] .tag-container, .workspace-leaf-content[data-type="backlink"] .backlink-pane, .workspace-leaf-content[data-type="search"] .search-results-children, .workspace-leaf-content[data-type="starred"] .item-list, .workspace-leaf-content[data-type="dictionary-view"] .contents, .workspace-leaf-content[data-type="dangling-links"] .view-content .container) {

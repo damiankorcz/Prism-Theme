@@ -1,6 +1,5 @@
 /* #region  [Plugin - Theme] Mark Highlight System */
-mark,
-.cm-highlight {
+mark {
 	--mark-highlight-base: var(--interactive-accent-base);
 	--mark-highlight-dark: var(--interactive-accent-tint);
 	--mark-highlight-text: var(--interactive-accent-text);
@@ -20,7 +19,7 @@ mark,
 	}
 
 	:is(.theme-dark.pt-highlight-style-border-dt &,	.theme-light.pt-highlight-style-border-lt &) {
-		background-color: var(--background-primary);
+		background-color: unset;
 		border: var(--accent-border-width) solid var(--mark-highlight-dark);
 	}
 
@@ -41,9 +40,7 @@ mark,
 	:is(.theme-light.pt-highlight-text-color-lt &, .theme-dark.pt-highlight-text-color-dt &) {
 		color: var(--mark-highlight-text);
 	}
-}
 
-mark {
 	&:is(.red, .Red) {
 		--mark-highlight-base: var(--color-red-base);
 		--mark-highlight-dark: var(--color-red-tint);

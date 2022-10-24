@@ -1,13 +1,19 @@
 /* #region  [Accent Style] Border Only */
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) {
+.theme-dark.pt-accent-style-border-dt,
+.theme-light.pt-accent-style-border-lt {
 	.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
 	.workspace-tab-header.is-active,
 	.nav-action-button.is-active,
 	.vertical-tab-nav-item.is-active,
 	.nav-file-title.is-active,
-	.suggestion-hotkey {
-		background-color: var(--background-primary);
+	.suggestion-hotkey,
+	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
+		background-color: unset;
 		border-color: var(--interactive-accent-tint);
+
+		&:hover {
+			background-color: var(--background-modifier-hover);
+		}
 	}
 
 	.search-result-file-match-destination-file {
@@ -32,11 +38,12 @@
 	}
 
 	button.mod-cta {
-		background-color: var(--background-primary);
+		background-color: unset;
 		border-color: var(--interactive-accent-tint);
 
 		&:hover {
 			color: var(--interactive-accent-tint);
+			background-color: var(--background-modifier-hover);
 		}
 	}
 
@@ -90,11 +97,16 @@
 	}
 
 	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
-		background-color: var(--background-primary);
+		background-color: unset;
 		border-color: var(--interactive-accent-tint);
+
+		.clickable-icon:hover {
+			background-color: unset;
+		}
 
 		&:hover {
 			color: var(--interactive-accent-hover);
+			background-color: var(--background-modifier-hover);
 		}
 	}
 }

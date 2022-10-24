@@ -31,7 +31,7 @@
 
 /* Accent Colors */
 @use "User Interface/Accent Color/accentStyleBase.scss"; /* ✅ */
-@use "User Interface/Accent Color/accentStyleTextOnly.scss"; /* ✅ */
+@use "User Interface/Accent Color/accentStylePlain.scss"; /* ✅ */
 @use "User Interface/Accent Color/accentStyleBorderOnly.scss"; /* ✅ */
 @use "User Interface/Accent Color/accentStyleFilled.scss"; /* ✅ */
 @use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; /* ✅ */
@@ -70,14 +70,14 @@
 @use "Plugins/Community/recentFiles.scss"; /* ✅ */
 @use "Plugins/Community/danglingLinks.scss"; /* ✅ */
 @use "Plugins/Community/advancedTables.scss"; /* ✅ */
-@use "Plugins/Community/fileTreeAlternative.scss"; /* 🧹 Needs accent style for selected file */
+@use "Plugins/Community/fileTreeAlternative.scss"; /* ✅ */
+@use "Plugins/Community/quietOutline.scss"; /* ✅ */
+@use "Plugins/Community/mapView.scss"; /* 🔧 Change icon to globe for the tab (?) */
+@use "Plugins/Community/dictionary.scss"; /* 🔧 Issues with the nav header and main container height */
+@use "Plugins/Community/quickExplorer.scss"; /* ✅ */
 
-/* @use "Plugins/Community/quickExplorer.scss"; 🔧 */
-/* @use "Plugins/Community/mapView.scss"; 🔧 */
 /* @use "Plugins/Community/emojiToolbar.scss"; 🔧 */
-/* @use "Plugins/Community/dictionary.scss"; 🔧 */
 /* @use "Plugins/Community/hoverEditor.scss"; 🔧 */
-/* @use "Plugins/Community/quietOutline.scss"; 🔧 */
 
 /* @use "Plugins/Community/reminder.scss"; 🔧 */
 /* @use "Plugins/Community/jumpToDate.scss"; 🔧 */
@@ -88,10 +88,10 @@
 @use "Info/styleSettingsConfig.scss";
 @use "Info/pluginCompatibility.scss";
 
-
 /* @use "Plugins/Theme/coloredFolders.scss"; ⚠️ Holding out for CSS `:has` */
 /* @use "Plugins/Theme/customIcons.scss"; ❌ Won't reimplement. Left for reference. */
 /* @use "User Interface/animations.scss"; ❌ Won't reimplement. Left for reference. */
+
 /*
 
 STYLE SETTINGS TO FIX
@@ -100,8 +100,15 @@ STYLE SETTINGS TO FIX
 
 TODO
 - Mobile theme.
-- Look over the use of var(--background-primary-alt).
 - Backlinks Link button doesn't fit right in Unlinked mentions.
+- Look over the use of var(--background-primary-alt).
+- Sort out --page-background-color variable.
+- In Quick Explorer when you view the Progress Bar Test page the percentage numbers float in the wrong place.
+- Hover effects on toggles and sliders. Dropdown sections in Graph (and elsewhere?)
+- Go over the accent styles and make sure they are consistent and don't have recurring values (put those in base).
+- Re-enable the plugin support list in the repo.
+- Search popup rounded container doesn't go over the scrollbar.
+- Theme and Plugin stores need some attention for consistency. Themes with no readme look odd.
 
 Reported Issues (Turn into Forum reports)
 Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933  Also why the forced HTML styling for text-indent and padding-left?
