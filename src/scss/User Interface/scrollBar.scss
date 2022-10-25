@@ -33,8 +33,20 @@ body:not(.native-scrollbars) {
 	}
 }
 
+::-webkit-scrollbar-track {
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
 .show-view-header .cm-scroller::-webkit-scrollbar-track,
 .show-view-header .mod-root .view-content::-webkit-scrollbar-track {
-	margin-top: var(--header-height) !important;
+	margin-top: calc(var(--header-height) - 1px) !important;
+}
+
+.theme-light,
+.theme-dark {
+	div.suggestion-container .suggestion::-webkit-scrollbar-track {
+		background-color: unset;
+	}
 }
 /* #endregion */

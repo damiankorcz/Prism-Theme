@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 10
+    Prism Theme for Obsidian.md (Version: v3.0.0) Beta 11
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -66,6 +66,7 @@ body {
   --background-modifier-border: var(--window-border);
   --background-modifier-border-focus: var(--interactive-accent-base);
   --background-modifier-border-hover: var(--interactive-accent-tint);
+  --indentation-guide-color: var(--window-border);
   --icon-color-hover: var(--highlight-text-normal);
   --nav-item-color-hover: var(--highlight-text-normal);
   --checkbox-marker-color: var(--highlight-text-normal);
@@ -105,7 +106,7 @@ body {
   --slider-thumb-width: 10px;
   --scrollbar-active-thumb-bg: var(--interactive-accent-base);
   --scrollbar-thumb-bg: var(--background-primary);
-  --text-on-accent: var(--text-normal);
+  --text-on-accent: var(--highlight-text-normal);
   --prompt-border-color: var(--window-border);
   --blur-intensity: 8px;
   --accent-border-width: 2px;
@@ -1062,7 +1063,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 :is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split) .workspace-leaf-content .nav-header {
   justify-content: flex-start;
 }
-:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header,
+:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   right: calc(var(--size-2-3) + var(--scroll-bar-size));
   left: var(--size-2-3);
   margin-right: auto;
@@ -1070,7 +1072,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 :is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .workspace-leaf-content .nav-header {
   justify-content: center;
 }
-:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header,
+:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   right: calc(var(--size-2-3) + var(--scroll-bar-size));
   left: var(--size-2-3);
   margin-right: auto;
@@ -1079,12 +1082,13 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 :is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split) .workspace-leaf-content .nav-header {
   justify-content: flex-end;
 }
-:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header,
+:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   right: calc(var(--size-2-3) + var(--scroll-bar-size));
   left: var(--size-2-3);
   margin-left: auto;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-header {
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .nav-header {
   position: absolute;
   bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
   z-index: var(--layer-popover);
@@ -1097,8 +1101,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   background-color: unset;
   border-bottom: unset;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-buttons-container,
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .nav-buttons-container,
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
   padding: var(--size-4-1);
   pointer-events: auto;
   background: var(--background-secondary-blur);
@@ -1108,10 +1112,15 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dangling-links] .nav-header {
   width: fit-content;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=search] .search-results-children, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container) {
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
+  position: fixed;
+  bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
+  z-index: var(--layer-popover);
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=search] .search-results-children, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container) {
   padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 .modal.mod-settings .vertical-tab-header {
@@ -1149,7 +1158,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism v3.0.0 Beta 10";
+  content: "Prism v3.0.0 Beta 11";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -1251,7 +1260,7 @@ img.community-theme-lightbox {
 }
 .community-modal-info {
   display: grid;
-  grid-template-areas: "info-name button-container button-container" "info-author info-version info-version" "info-repo info-repo info-downloads" "info-desc info-desc info-desc" "seperator seperator seperator" "readme readme readme";
+  grid-template-areas: "info-name info-name button-container button-container" "info-author info-author info-version info-version" "info-repo info-repo info-repo info-downloads" "info-desc info-desc info-desc info-desc" "seperator seperator seperator seperator" "readme readme readme readme";
   row-gap: var(--size-2-1);
   padding: var(--size-4-8) var(--size-4-12);
 }
@@ -1538,9 +1547,17 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   border-radius: unset;
 }
+::-webkit-scrollbar-track {
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
 .show-view-header .cm-scroller::-webkit-scrollbar-track,
 .show-view-header .mod-root .view-content::-webkit-scrollbar-track {
-  margin-top: var(--header-height) !important;
+  margin-top: calc(var(--header-height) - 1px) !important;
+}
+.theme-light div.suggestion-container .suggestion::-webkit-scrollbar-track,
+.theme-dark div.suggestion-container .suggestion::-webkit-scrollbar-track {
+  background-color: unset;
 }
 .progress-bar {
   background-color: var(--background-secondary-blur);
@@ -1641,7 +1658,7 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   border: 1px solid var(--window-border);
 }
 :is(.markdown-embed-link, .file-embed-link) {
-  right: 12px;
+  right: calc(var(--scroll-bar-size) + var(--size-4-1));
 }
 .menu {
   background: var(--background-secondary);
@@ -1669,10 +1686,16 @@ div.notice-container div.notice {
   display: flex;
   font-weight: 600;
   color: var(--text-normal);
-  background: var(--background-secondary);
+  background: var(--background-secondary-alt);
   border: 1px solid var(--window-border);
   border-radius: var(--radius-m);
   box-shadow: var(--shadow-l);
+}
+.theme-light .tooltip {
+  background: var(--background-primary);
+}
+.theme-dark .tooltip {
+  background: var(--background-secondary-alt);
 }
 .tooltip .tooltip-arrow {
   margin-top: -1px;
@@ -1715,7 +1738,8 @@ div.notice-container div.notice {
 .nav-action-button.is-active,
 .vertical-tab-nav-item.is-active,
 .nav-file-title.is-active,
-.suggestion-hotkey {
+.suggestion-hotkey,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
   color: var(--highlight-text-normal);
   border: var(--accent-border-width) solid;
   box-shadow: unset;
@@ -1743,6 +1767,9 @@ button.mod-cta {
 :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) svg.svg-icon {
   color: var(--highlight-text-normal);
 }
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) .clickable-icon:hover {
+  background-color: unset;
+}
 :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover svg.svg-icon {
   color: var(--interactive-accent-hover);
 }
@@ -1751,9 +1778,19 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .nav-file-title.is-active,
-:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .suggestion-hotkey {
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .suggestion-hotkey,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
   background-color: var(--background-primary);
   border-color: transparent;
+}
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active:hover,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace-tab-header.is-active:hover,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .nav-action-button.is-active:hover,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .vertical-tab-nav-item.is-active:hover,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .nav-file-title.is-active:hover,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .suggestion-hotkey:hover,
+:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active:hover {
+  background-color: var(--background-modifier-hover);
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .search-result-file-match-destination-file {
   color: var(--text-normal);
@@ -1776,7 +1813,8 @@ button.mod-cta {
   border-color: transparent;
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) button.mod-cta:hover {
-  color: var(--interactive-accent-tint);
+  color: var(--interactive-accent-hover);
+  background-color: var(--background-modifier-hover);
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
   color: var(--color-red-text);
@@ -1793,6 +1831,7 @@ button.mod-cta {
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
+  background-color: var(--background-modifier-hover);
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) .setting-command-hotkeys .setting-hotkey {
   color: var(--color-blue-text);
@@ -1822,92 +1861,142 @@ button.mod-cta {
 }
 :is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover {
   color: var(--interactive-accent-hover);
+  background-color: var(--background-modifier-hover);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-tab-header.is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-action-button.is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .vertical-tab-nav-item.is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-file-title.is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .suggestion-hotkey {
-  background-color: var(--background-primary);
+.theme-dark.pt-accent-style-border-dt .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+.theme-dark.pt-accent-style-border-dt .workspace-tab-header.is-active,
+.theme-dark.pt-accent-style-border-dt .nav-action-button.is-active,
+.theme-dark.pt-accent-style-border-dt .vertical-tab-nav-item.is-active,
+.theme-dark.pt-accent-style-border-dt .nav-file-title.is-active,
+.theme-dark.pt-accent-style-border-dt .suggestion-hotkey,
+.theme-dark.pt-accent-style-border-dt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
+.theme-light.pt-accent-style-border-lt .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
+.theme-light.pt-accent-style-border-lt .workspace-tab-header.is-active,
+.theme-light.pt-accent-style-border-lt .nav-action-button.is-active,
+.theme-light.pt-accent-style-border-lt .vertical-tab-nav-item.is-active,
+.theme-light.pt-accent-style-border-lt .nav-file-title.is-active,
+.theme-light.pt-accent-style-border-lt .suggestion-hotkey,
+.theme-light.pt-accent-style-border-lt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
+  background-color: unset;
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .search-result-file-match-destination-file {
+.theme-dark.pt-accent-style-border-dt .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active:hover,
+.theme-dark.pt-accent-style-border-dt .workspace-tab-header.is-active:hover,
+.theme-dark.pt-accent-style-border-dt .nav-action-button.is-active:hover,
+.theme-dark.pt-accent-style-border-dt .vertical-tab-nav-item.is-active:hover,
+.theme-dark.pt-accent-style-border-dt .nav-file-title.is-active:hover,
+.theme-dark.pt-accent-style-border-dt .suggestion-hotkey:hover,
+.theme-dark.pt-accent-style-border-dt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active:hover,
+.theme-light.pt-accent-style-border-lt .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active:hover,
+.theme-light.pt-accent-style-border-lt .workspace-tab-header.is-active:hover,
+.theme-light.pt-accent-style-border-lt .nav-action-button.is-active:hover,
+.theme-light.pt-accent-style-border-lt .vertical-tab-nav-item.is-active:hover,
+.theme-light.pt-accent-style-border-lt .nav-file-title.is-active:hover,
+.theme-light.pt-accent-style-border-lt .suggestion-hotkey:hover,
+.theme-light.pt-accent-style-border-lt .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active:hover {
+  background-color: var(--background-modifier-hover);
+}
+.theme-dark.pt-accent-style-border-dt .search-result-file-match-destination-file,
+.theme-light.pt-accent-style-border-lt .search-result-file-match-destination-file {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .search-result-file-match-destination-file:hover {
+.theme-dark.pt-accent-style-border-dt .search-result-file-match-destination-file:hover,
+.theme-light.pt-accent-style-border-lt .search-result-file-match-destination-file:hover {
   color: var(--interactive-accent-hover);
   background-color: var(--background-secondary);
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .search-result-file-match-replace-button {
+.theme-dark.pt-accent-style-border-dt .search-result-file-match-replace-button,
+.theme-light.pt-accent-style-border-lt .search-result-file-match-replace-button {
   background-color: var(--background-primary);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .search-result-file-match-replace-button:hover {
+.theme-dark.pt-accent-style-border-dt .search-result-file-match-replace-button:hover,
+.theme-light.pt-accent-style-border-lt .search-result-file-match-replace-button:hover {
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) button.mod-cta {
-  background-color: var(--background-primary);
+.theme-dark.pt-accent-style-border-dt button.mod-cta,
+.theme-light.pt-accent-style-border-lt button.mod-cta {
+  background-color: unset;
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) button.mod-cta:hover {
+.theme-dark.pt-accent-style-border-dt button.mod-cta:hover,
+.theme-light.pt-accent-style-border-lt button.mod-cta:hover {
   color: var(--interactive-accent-tint);
+  background-color: var(--background-modifier-hover);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
+.theme-dark.pt-accent-style-border-dt :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]),
+.theme-light.pt-accent-style-border-lt :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
   color: var(--text-normal);
   background-color: var(--background-primary);
   border-color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
+.theme-dark.pt-accent-style-border-dt :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover,
+.theme-light.pt-accent-style-border-lt :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+.theme-dark.pt-accent-style-border-dt :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button),
+.theme-light.pt-accent-style-border-lt :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+.theme-dark.pt-accent-style-border-dt :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover,
+.theme-light.pt-accent-style-border-lt :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .setting-command-hotkeys .setting-hotkey {
+.theme-dark.pt-accent-style-border-dt .setting-command-hotkeys .setting-hotkey,
+.theme-light.pt-accent-style-border-lt .setting-command-hotkeys .setting-hotkey {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-blue-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .setting-command-hotkeys .setting-hotkey.mod-empty {
+.theme-dark.pt-accent-style-border-dt .setting-command-hotkeys .setting-hotkey.mod-empty,
+.theme-light.pt-accent-style-border-lt .setting-command-hotkeys .setting-hotkey.mod-empty {
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .setting-command-hotkeys .setting-hotkey.has-conflict {
+.theme-dark.pt-accent-style-border-dt .setting-command-hotkeys .setting-hotkey.has-conflict,
+.theme-light.pt-accent-style-border-lt .setting-command-hotkeys .setting-hotkey.has-conflict {
   border-color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.flair.mod-pop, .community-item .flair) {
+.theme-dark.pt-accent-style-border-dt :is(.flair.mod-pop, .community-item .flair),
+.theme-light.pt-accent-style-border-lt :is(.flair.mod-pop, .community-item .flair) {
   color: var(--text-normal);
   background-color: var(--background-secondary);
   border-color: var(--color-green-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) button.copy-code-button {
+.theme-dark.pt-accent-style-border-dt button.copy-code-button,
+.theme-light.pt-accent-style-border-lt button.copy-code-button {
   color: var(--text-normal);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) button.copy-code-button:hover {
+.theme-dark.pt-accent-style-border-dt button.copy-code-button:hover,
+.theme-light.pt-accent-style-border-lt button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
-  background-color: var(--background-primary);
+.theme-dark.pt-accent-style-border-dt :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left),
+.theme-light.pt-accent-style-border-lt :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
+  background-color: unset;
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover {
+.theme-dark.pt-accent-style-border-dt :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) .clickable-icon:hover,
+.theme-light.pt-accent-style-border-lt :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) .clickable-icon:hover {
+  background-color: unset;
+}
+.theme-dark.pt-accent-style-border-dt :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover,
+.theme-light.pt-accent-style-border-lt :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left):hover {
   color: var(--interactive-accent-hover);
+  background-color: var(--background-modifier-hover);
 }
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-tab-header.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-file-title.is-active,
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .suggestion-hotkey {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .suggestion-hotkey,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -1989,7 +2078,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-file-title.is-active,
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .suggestion-hotkey {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .suggestion-hotkey,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2033,6 +2123,7 @@ button.mod-cta {
 }
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
   color: var(--color-grey-tint);
+  background-color: var(--background-modifier-hover);
 }
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .setting-command-hotkeys .setting-hotkey {
   color: var(--text-normal);
@@ -2392,12 +2483,14 @@ a.tag:hover {
   background-color: hsla(var(--color-grey-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress) {
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress {
   height: 15px;
   vertical-align: middle;
 }
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::before {
-  position: fixed;
+.markdown-rendered progress::before,
+.markdown-source-view.is-live-preview progress::before {
+  position: absolute;
   width: inherit;
   height: inherit;
   font-family: var(--font-editor);
@@ -2407,55 +2500,63 @@ a.tag:hover {
   text-align: center;
   content: attr(value) " %";
 }
-.theme-light :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::before {
+.theme-light .markdown-rendered progress::before,
+.theme-light .markdown-source-view.is-live-preview progress::before {
   text-shadow:
     -1px -1px 0 hsla(0deg, 0%, 100%, 0.5),
     1px -1px 0 hsla(0deg, 0%, 100%, 0.5),
     -1px 1px 0 hsla(0deg, 0%, 100%, 0.5),
     1px 1px 0 hsla(0deg, 0%, 100%, 0.5);
 }
-.theme-dark :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::before {
+.theme-dark .markdown-rendered progress::before,
+.theme-dark .markdown-source-view.is-live-preview progress::before {
   text-shadow:
     -1px -1px 0 hsla(0deg, 0%, 0%, 0.5),
     1px -1px 0 hsla(0deg, 0%, 0%, 0.5),
     -1px 1px 0 hsla(0deg, 0%, 0%, 0.5),
     1px 1px 0 hsla(0deg, 0%, 0%, 0.5);
 }
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::-webkit-progress-bar {
+.markdown-rendered progress::-webkit-progress-bar,
+.markdown-source-view.is-live-preview progress::-webkit-progress-bar {
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
-.theme-light :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::-webkit-progress-bar {
+.theme-light .markdown-rendered progress::-webkit-progress-bar,
+.theme-light .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
   background-color: var(--background-secondary);
 }
-.theme-dark :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::-webkit-progress-bar {
+.theme-dark .markdown-rendered progress::-webkit-progress-bar,
+.theme-dark .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
   background-color: var(--background-secondary-alt);
 }
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)::-webkit-progress-value {
+.markdown-rendered progress::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress::-webkit-progress-value {
   border: 1px solid;
   border-color: transparent;
   border-radius: var(--radius-s);
 }
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="0"]::-webkit-progress-value {
+.markdown-rendered progress[value="0"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="0"]::-webkit-progress-value {
   border: unset;
 }
-:is(:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="0"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="1"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="2"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="3"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="4"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="5"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="6"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="7"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="8"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="9"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="10"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="11"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="12"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="13"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="14"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="15"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="16"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="17"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="18"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="19"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="20"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="21"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="22"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="23"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="24"])::-webkit-progress-value {
+:is(.markdown-rendered progress[value="0"], .markdown-rendered progress[value="1"], .markdown-rendered progress[value="2"], .markdown-rendered progress[value="3"], .markdown-rendered progress[value="4"], .markdown-rendered progress[value="5"], .markdown-rendered progress[value="6"], .markdown-rendered progress[value="7"], .markdown-rendered progress[value="8"], .markdown-rendered progress[value="9"], .markdown-rendered progress[value="10"], .markdown-rendered progress[value="11"], .markdown-rendered progress[value="12"], .markdown-rendered progress[value="13"], .markdown-rendered progress[value="14"], .markdown-rendered progress[value="15"], .markdown-rendered progress[value="16"], .markdown-rendered progress[value="17"], .markdown-rendered progress[value="18"], .markdown-rendered progress[value="19"], .markdown-rendered progress[value="20"], .markdown-rendered progress[value="21"], .markdown-rendered progress[value="22"], .markdown-rendered progress[value="23"], .markdown-rendered progress[value="24"], .markdown-source-view.is-live-preview progress[value="0"], .markdown-source-view.is-live-preview progress[value="1"], .markdown-source-view.is-live-preview progress[value="2"], .markdown-source-view.is-live-preview progress[value="3"], .markdown-source-view.is-live-preview progress[value="4"], .markdown-source-view.is-live-preview progress[value="5"], .markdown-source-view.is-live-preview progress[value="6"], .markdown-source-view.is-live-preview progress[value="7"], .markdown-source-view.is-live-preview progress[value="8"], .markdown-source-view.is-live-preview progress[value="9"], .markdown-source-view.is-live-preview progress[value="10"], .markdown-source-view.is-live-preview progress[value="11"], .markdown-source-view.is-live-preview progress[value="12"], .markdown-source-view.is-live-preview progress[value="13"], .markdown-source-view.is-live-preview progress[value="14"], .markdown-source-view.is-live-preview progress[value="15"], .markdown-source-view.is-live-preview progress[value="16"], .markdown-source-view.is-live-preview progress[value="17"], .markdown-source-view.is-live-preview progress[value="18"], .markdown-source-view.is-live-preview progress[value="19"], .markdown-source-view.is-live-preview progress[value="20"], .markdown-source-view.is-live-preview progress[value="21"], .markdown-source-view.is-live-preview progress[value="22"], .markdown-source-view.is-live-preview progress[value="23"], .markdown-source-view.is-live-preview progress[value="24"])::-webkit-progress-value {
   background-color: var(--color-red-base);
   border-color: var(--color-red-tint);
 }
-:is(:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="25"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="26"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="27"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="28"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="29"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="30"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="31"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="32"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="33"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="34"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="35"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="36"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="37"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="38"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="39"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="40"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="41"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="42"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="43"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="44"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="45"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="46"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="47"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="48"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="49"])::-webkit-progress-value {
+:is(.markdown-rendered progress[value="25"], .markdown-rendered progress[value="26"], .markdown-rendered progress[value="27"], .markdown-rendered progress[value="28"], .markdown-rendered progress[value="29"], .markdown-rendered progress[value="30"], .markdown-rendered progress[value="31"], .markdown-rendered progress[value="32"], .markdown-rendered progress[value="33"], .markdown-rendered progress[value="34"], .markdown-rendered progress[value="35"], .markdown-rendered progress[value="36"], .markdown-rendered progress[value="37"], .markdown-rendered progress[value="38"], .markdown-rendered progress[value="39"], .markdown-rendered progress[value="40"], .markdown-rendered progress[value="41"], .markdown-rendered progress[value="42"], .markdown-rendered progress[value="43"], .markdown-rendered progress[value="44"], .markdown-rendered progress[value="45"], .markdown-rendered progress[value="46"], .markdown-rendered progress[value="47"], .markdown-rendered progress[value="48"], .markdown-rendered progress[value="49"], .markdown-source-view.is-live-preview progress[value="25"], .markdown-source-view.is-live-preview progress[value="26"], .markdown-source-view.is-live-preview progress[value="27"], .markdown-source-view.is-live-preview progress[value="28"], .markdown-source-view.is-live-preview progress[value="29"], .markdown-source-view.is-live-preview progress[value="30"], .markdown-source-view.is-live-preview progress[value="31"], .markdown-source-view.is-live-preview progress[value="32"], .markdown-source-view.is-live-preview progress[value="33"], .markdown-source-view.is-live-preview progress[value="34"], .markdown-source-view.is-live-preview progress[value="35"], .markdown-source-view.is-live-preview progress[value="36"], .markdown-source-view.is-live-preview progress[value="37"], .markdown-source-view.is-live-preview progress[value="38"], .markdown-source-view.is-live-preview progress[value="39"], .markdown-source-view.is-live-preview progress[value="40"], .markdown-source-view.is-live-preview progress[value="41"], .markdown-source-view.is-live-preview progress[value="42"], .markdown-source-view.is-live-preview progress[value="43"], .markdown-source-view.is-live-preview progress[value="44"], .markdown-source-view.is-live-preview progress[value="45"], .markdown-source-view.is-live-preview progress[value="46"], .markdown-source-view.is-live-preview progress[value="47"], .markdown-source-view.is-live-preview progress[value="48"], .markdown-source-view.is-live-preview progress[value="49"])::-webkit-progress-value {
   background-color: var(--color-orange-base);
   border-color: var(--color-orange-tint);
 }
-:is(:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="50"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="51"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="52"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="53"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="54"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="55"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="56"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="57"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="58"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="59"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="60"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="61"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="62"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="63"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="64"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="65"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="66"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="67"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="68"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="69"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="70"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="71"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="72"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="73"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="74"])::-webkit-progress-value {
+:is(.markdown-rendered progress[value="50"], .markdown-rendered progress[value="51"], .markdown-rendered progress[value="52"], .markdown-rendered progress[value="53"], .markdown-rendered progress[value="54"], .markdown-rendered progress[value="55"], .markdown-rendered progress[value="56"], .markdown-rendered progress[value="57"], .markdown-rendered progress[value="58"], .markdown-rendered progress[value="59"], .markdown-rendered progress[value="60"], .markdown-rendered progress[value="61"], .markdown-rendered progress[value="62"], .markdown-rendered progress[value="63"], .markdown-rendered progress[value="64"], .markdown-rendered progress[value="65"], .markdown-rendered progress[value="66"], .markdown-rendered progress[value="67"], .markdown-rendered progress[value="68"], .markdown-rendered progress[value="69"], .markdown-rendered progress[value="70"], .markdown-rendered progress[value="71"], .markdown-rendered progress[value="72"], .markdown-rendered progress[value="73"], .markdown-rendered progress[value="74"], .markdown-source-view.is-live-preview progress[value="50"], .markdown-source-view.is-live-preview progress[value="51"], .markdown-source-view.is-live-preview progress[value="52"], .markdown-source-view.is-live-preview progress[value="53"], .markdown-source-view.is-live-preview progress[value="54"], .markdown-source-view.is-live-preview progress[value="55"], .markdown-source-view.is-live-preview progress[value="56"], .markdown-source-view.is-live-preview progress[value="57"], .markdown-source-view.is-live-preview progress[value="58"], .markdown-source-view.is-live-preview progress[value="59"], .markdown-source-view.is-live-preview progress[value="60"], .markdown-source-view.is-live-preview progress[value="61"], .markdown-source-view.is-live-preview progress[value="62"], .markdown-source-view.is-live-preview progress[value="63"], .markdown-source-view.is-live-preview progress[value="64"], .markdown-source-view.is-live-preview progress[value="65"], .markdown-source-view.is-live-preview progress[value="66"], .markdown-source-view.is-live-preview progress[value="67"], .markdown-source-view.is-live-preview progress[value="68"], .markdown-source-view.is-live-preview progress[value="69"], .markdown-source-view.is-live-preview progress[value="70"], .markdown-source-view.is-live-preview progress[value="71"], .markdown-source-view.is-live-preview progress[value="72"], .markdown-source-view.is-live-preview progress[value="73"], .markdown-source-view.is-live-preview progress[value="74"])::-webkit-progress-value {
   background-color: var(--color-yellow-base);
   border-color: var(--color-yellow-tint);
 }
-:is(:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="75"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="76"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="77"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="78"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="79"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="80"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="81"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="82"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="83"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="84"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="85"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="86"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="87"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="88"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="89"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="90"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="91"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="92"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="93"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="94"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="95"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="96"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="97"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="98"], :is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="99"])::-webkit-progress-value {
+:is(.markdown-rendered progress[value="75"], .markdown-rendered progress[value="76"], .markdown-rendered progress[value="77"], .markdown-rendered progress[value="78"], .markdown-rendered progress[value="79"], .markdown-rendered progress[value="80"], .markdown-rendered progress[value="81"], .markdown-rendered progress[value="82"], .markdown-rendered progress[value="83"], .markdown-rendered progress[value="84"], .markdown-rendered progress[value="85"], .markdown-rendered progress[value="86"], .markdown-rendered progress[value="87"], .markdown-rendered progress[value="88"], .markdown-rendered progress[value="89"], .markdown-rendered progress[value="90"], .markdown-rendered progress[value="91"], .markdown-rendered progress[value="92"], .markdown-rendered progress[value="93"], .markdown-rendered progress[value="94"], .markdown-rendered progress[value="95"], .markdown-rendered progress[value="96"], .markdown-rendered progress[value="97"], .markdown-rendered progress[value="98"], .markdown-rendered progress[value="99"], .markdown-source-view.is-live-preview progress[value="75"], .markdown-source-view.is-live-preview progress[value="76"], .markdown-source-view.is-live-preview progress[value="77"], .markdown-source-view.is-live-preview progress[value="78"], .markdown-source-view.is-live-preview progress[value="79"], .markdown-source-view.is-live-preview progress[value="80"], .markdown-source-view.is-live-preview progress[value="81"], .markdown-source-view.is-live-preview progress[value="82"], .markdown-source-view.is-live-preview progress[value="83"], .markdown-source-view.is-live-preview progress[value="84"], .markdown-source-view.is-live-preview progress[value="85"], .markdown-source-view.is-live-preview progress[value="86"], .markdown-source-view.is-live-preview progress[value="87"], .markdown-source-view.is-live-preview progress[value="88"], .markdown-source-view.is-live-preview progress[value="89"], .markdown-source-view.is-live-preview progress[value="90"], .markdown-source-view.is-live-preview progress[value="91"], .markdown-source-view.is-live-preview progress[value="92"], .markdown-source-view.is-live-preview progress[value="93"], .markdown-source-view.is-live-preview progress[value="94"], .markdown-source-view.is-live-preview progress[value="95"], .markdown-source-view.is-live-preview progress[value="96"], .markdown-source-view.is-live-preview progress[value="97"], .markdown-source-view.is-live-preview progress[value="98"], .markdown-source-view.is-live-preview progress[value="99"])::-webkit-progress-value {
   background-color: var(--color-green-base);
   border-color: var(--color-green-tint);
 }
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress)[value="100"]::-webkit-progress-value {
+.markdown-rendered progress[value="100"]::-webkit-progress-value,
+.markdown-source-view.is-live-preview progress[value="100"]::-webkit-progress-value {
   background-color: var(--color-blue-base);
   border-color: var(--color-blue-tint);
 }
@@ -2558,6 +2659,9 @@ input.prompt-input:focus-visible {
 .suggestion-item.mod-complex .suggestion-content {
   overflow: visible;
 }
+.suggestion-item.is-selected {
+  color: var(--highlight-text-normal);
+}
 .suggestion-prefix {
   padding: 0 var(--size-4-1);
   margin-right: var(--size-4-2);
@@ -2644,7 +2748,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   background: var(--background-secondary-blur);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
-  border: 1px solid var(--background-modifier-border);
+  border: 1px solid var(--window-border);
 }
 .graph-controls :not(.is-close) {
   max-height: calc(100% - 25px);
@@ -2761,6 +2865,9 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   width: 14px;
   height: 14px;
 }
+.search-result-file-match-replace-button {
+  padding: 0 var(--size-4-1);
+}
 .internal-query .search-result-container {
   padding: var(--size-4-2) var(--size-4-1);
   background-color: unset;
@@ -2769,6 +2876,35 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .search-input-container::before {
   top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
   left: var(--size-4-3);
+}
+.suggestion-container.mod-search-suggestion {
+  background-color: unset;
+  border-radius: unset;
+}
+.suggestion-container.mod-search-suggestion .suggestion {
+  padding: unset;
+  border-radius: unset;
+}
+.theme-light .suggestion-container.mod-search-suggestion .suggestion {
+  background-color: var(--background-primary);
+}
+.theme-dark .suggestion-container.mod-search-suggestion .suggestion {
+  background-color: var(--background-secondary-alt);
+}
+.suggestion-container.mod-search-suggestion .suggestion .suggestion-item:not(.mod-group) {
+  margin: 0 var(--size-4-1) var(--size-2-1);
+}
+.suggestion-container.mod-search-suggestion .suggestion .suggestion-item:not(.mod-group):last-of-type {
+  margin-bottom: var(--size-4-1);
+}
+.suggestion-container.mod-search-suggestion .suggestion .suggestion-item.mod-group {
+  padding: var(--size-4-1) var(--size-4-1) var(--size-4-1) var(--size-4-2);
+  margin-bottom: var(--size-4-1);
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.suggestion-container.mod-search-suggestion .suggestion .search-suggest-item.mod-group:not(:first-child) {
+  margin: var(--size-4-1) 0;
 }
 .workspace-leaf-content[data-type=starred] .item-list {
   padding-top: var(--size-4-1);
@@ -2932,8 +3068,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 1;
 }
-mark,
-.cm-highlight {
+mark {
   --mark-highlight-base: var(--interactive-accent-base);
   --mark-highlight-dark: var(--interactive-accent-tint);
   --mark-highlight-text: var(--interactive-accent-text);
@@ -2944,28 +3079,28 @@ mark,
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-:is(.theme-dark.pt-highlight-style-none-dt mark, .theme-light.pt-highlight-style-none-lt mark, .theme-dark.pt-highlight-style-none-dt .cm-highlight, .theme-light.pt-highlight-style-none-lt .cm-highlight) {
+:is(.theme-dark.pt-highlight-style-none-dt mark, .theme-light.pt-highlight-style-none-lt mark) {
   padding: 0;
   font-size: 1em;
   background-color: transparent;
   opacity: 1;
 }
-:is(.theme-dark.pt-highlight-style-border-dt mark, .theme-light.pt-highlight-style-border-lt mark, .theme-dark.pt-highlight-style-border-dt .cm-highlight, .theme-light.pt-highlight-style-border-lt .cm-highlight) {
-  background-color: var(--background-primary);
+:is(.theme-dark.pt-highlight-style-border-dt mark, .theme-light.pt-highlight-style-border-lt mark) {
+  background-color: unset;
   border: var(--accent-border-width) solid var(--mark-highlight-dark);
 }
-:is(.theme-dark.pt-highlight-style-filled-dt mark, .theme-light.pt-highlight-style-filled-lt mark, .theme-dark.pt-highlight-style-filled-dt .cm-highlight, .theme-light.pt-highlight-style-filled-lt .cm-highlight) {
+:is(.theme-dark.pt-highlight-style-filled-dt mark, .theme-light.pt-highlight-style-filled-lt mark) {
   background-color: var(--mark-highlight-base);
   border: var(--accent-border-width) solid var(--mark-highlight-base);
 }
-:is(.theme-dark.pt-highlight-style-borderandfilled-dt mark, .theme-light.pt-highlight-style-borderandfilled-lt mark, .theme-dark.pt-highlight-style-borderandfilled-dt .cm-highlight, .theme-light.pt-highlight-style-borderandfilled-lt .cm-highlight) {
+:is(.theme-dark.pt-highlight-style-borderandfilled-dt mark, .theme-light.pt-highlight-style-borderandfilled-lt mark) {
   background-color: var(--mark-highlight-base);
   border: var(--accent-border-width) solid var(--mark-highlight-dark);
 }
-:is(.theme-light.pt-highlight-text-none-lt mark, .theme-dark.pt-highlight-text-none-dt mark, .theme-light.pt-highlight-text-none-lt .cm-highlight, .theme-dark.pt-highlight-text-none-dt .cm-highlight) {
+:is(.theme-light.pt-highlight-text-none-lt mark, .theme-dark.pt-highlight-text-none-dt mark) {
   color: var(--text-normal);
 }
-:is(.theme-light.pt-highlight-text-color-lt mark, .theme-dark.pt-highlight-text-color-dt mark, .theme-light.pt-highlight-text-color-lt .cm-highlight, .theme-dark.pt-highlight-text-color-dt .cm-highlight) {
+:is(.theme-light.pt-highlight-text-color-lt mark, .theme-dark.pt-highlight-text-color-dt mark) {
   color: var(--mark-highlight-text);
 }
 mark:is(.red, .Red) {
@@ -3543,18 +3678,37 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=dangling-links] .view-content .nav-action-button path[stroke-width] {
   color: var(--interactive-accent-text);
 }
-.workspace-leaf-content[data-type=advanced-tables-toolbar] {
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
+  bottom: unset;
+  flex-wrap: wrap;
+  column-gap: var(--size-4-1);
+  justify-content: flex-start;
+  padding: unset;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
 }
-.workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
-  padding: 0;
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
+  height: fit-content;
+  padding: unset;
 }
-.workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content > div {
-  display: block;
-  width: 100%;
-  height: 100%;
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content > div {
+  min-height: -webkit-fill-available;
 }
-.workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
-  flex-direction: column;
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-buttons-container {
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+  box-shadow: unset;
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .widget-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-action-button:hover {
+  background-color: var(--background-modifier-hover);
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-action-button:hover .widget-icon {
+  fill: var(--highlight-text-normal);
 }
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] {
 }
@@ -3599,6 +3753,9 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-folders-action-items {
   margin-bottom: var(--size-4-1);
 }
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-action-button {
+  color: var(--text-muted);
+}
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-action-button:hover {
   color: var(--highlight-text-normal);
   background-color: var(--background-modifier-hover);
@@ -3627,6 +3784,27 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   height: 3px;
   background-color: var(--divider-color-hover);
 }
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-file-tree-files {
+  padding: var(--size-4-1) !important;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file {
+  border-radius: var(--radius-s);
+  margin-bottom: var(--size-2-1);
+  border: 2px solid transparent;
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file-title {
+  font-size: var(--font-ui-small);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title-content {
+  background-color: unset;
+  color: unset;
+  font-weight: var(--font-normal);
+}
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title .oz-nav-file-tag,
+.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title-content .oz-nav-file-tag {
+  color: var(--highlight-text-normal);
+}
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file-tag {
   background-color: unset;
 }
@@ -3635,6 +3813,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .treeview {
   margin-bottom: var(--size-2-1);
+  padding: 1px;
 }
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-explorer-container {
   padding-right: unset !important;
@@ -3660,11 +3839,294 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-file:hover .oz-nav-file-tag {
   color: var(--highlight-text-normal);
 }
-.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active .oz-nav-file-tag,
-.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title,
-.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active div.oz-nav-file-title-content {
+.workspace-leaf-content[data-type=quiet-outline] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=quiet-outline] .function-bar {
+  height: var(--header-height);
+  padding: var(--size-4-1) var(--size-4-2);
+  margin-bottom: unset;
+  background-color: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-button {
+  width: 32px;
+  height: 32px;
+  background-color: unset;
+  border-radius: var(--radius-m);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__icon svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted) !important;
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__border,
+.workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__state-border {
+  display: none;
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-input {
+  height: 32px;
+  border-radius: var(--radius-s);
+}
+.theme-light .workspace-leaf-content[data-type=quiet-outline] .n-input {
+  background: var(--background-primary);
+}
+.theme-dark .workspace-leaf-content[data-type=quiet-outline] .n-input {
+  background: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__border {
+  border: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-input:not(.n-input--disabled):hover .n-input__state-border,
+.workspace-leaf-content[data-type=quiet-outline] .n-input:not(.n-input--disabled).n-input--focus .n-input__state-border {
+  border: 1px solid var(--interactive-accent-tint);
+  box-shadow: unset;
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__placeholder {
+  display: none;
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input {
+  caret-color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input::placeholder {
+  color: var(--text-faint);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider {
+  padding: var(--size-4-4);
+  margin: unset !important;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail {
+  background-color: var(--background-secondary-alt);
+  border: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail .n-slider-rail__fill {
+  background-color: var(--interactive-accent-tint);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot {
+  background-color: var(--background-primary);
+  border: 2px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot.n-slider-dot--active {
+  border: 2px solid var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-handles .n-slider-handle {
+  background-color: var(--background-primary);
+  border: 2px solid var(--interactive-accent-tint);
+}
+.n-tree .n-tree-node {
+  height: 23px;
+}
+.n-slider-handle-indicator {
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
+}
+.theme-light .n-slider-handle-indicator {
+  background: var(--background-primary);
+}
+.theme-dark .n-slider-handle-indicator {
+  background: var(--background-secondary-alt);
+}
+.quiet-outline .n-tree-node-indent {
+  flex: 0 0 12px !important;
+}
+.quiet-outline .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover {
+  background-color: var(--background-modifier-hover);
+}
+.quiet-outline .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover p {
   color: var(--highlight-text-normal);
+}
+.quiet-outline .n-tree {
+  padding: var(--size-4-1);
+}
+.quiet-outline .level-2 .n-tree-node-indent,
+.quiet-outline .level-3 .n-tree-node-indent:first-child,
+.quiet-outline .level-4 .n-tree-node-indent:first-child,
+.quiet-outline .level-5 .n-tree-node-indent:first-child,
+.quiet-outline .level-6 .n-tree-node-indent:first-child {
+  border-right: 1px solid var(--color-orange-tint);
+}
+.quiet-outline .level-3 .n-tree-node-indent,
+.quiet-outline .level-4 .n-tree-node-indent:nth-child(2),
+.quiet-outline .level-5 .n-tree-node-indent:nth-child(2),
+.quiet-outline .level-6 .n-tree-node-indent:nth-child(2) {
+  border-right: 1px solid var(--color-yellow-tint);
+}
+.quiet-outline .level-4 .n-tree-node-indent,
+.quiet-outline .level-5 .n-tree-node-indent:nth-child(3),
+.quiet-outline .level-6 .n-tree-node-indent:nth-child(3) {
+  border-right: 1px solid var(--color-green-tint);
+}
+.quiet-outline .level-5 .n-tree-node-indent,
+.quiet-outline .level-6 .n-tree-node-indent:nth-child(4) {
+  border-right: 1px solid var(--color-blue-tint);
+}
+.quiet-outline .level-6 .n-tree-node-indent {
+  border-right: 1px solid var(--color-purple-tint);
+}
+.status-bar-item.left-region {
+  padding: unset;
+}
+#quick-explorer {
+  padding: 0 var(--size-4-2);
+}
+body.is-frameless.is-hidden-frameless:not(.qe-hide-breadcrumbs) .status-bar,
+body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
+  position: var(--status-bar-position);
+}
+#quick-explorer .explorable.selected,
+#quick-explorer .explorable:hover,
+.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected {
+  background-color: var(--background-modifier-hover);
+}
+.view-header-breadcrumb.is-exploring,
+.view-header-title-parent.is-exploring::before {
+  color: var(--highlight-accent-text);
+}
+.view-header-title-parent::before {
+  display: none;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-files-container {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root {
+  padding: var(--size-4-1);
+}
+.workspace-leaf-content[data-type=tagfolder-view] .tagfolder-quantity .itemscount {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  background-color: unset;
+}
+.workspace-leaf-content[data-type=tagfolder-view] .search-input-container {
+  position: sticky;
+  top: 0;
+  z-index: var(--layer-popover);
+  display: flex;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder-title-content:hover div.tagfolder-quantity span {
+  background-color: unset;
+}
+.workspace-leaf-content[data-type=map] .leaflet-control:not(.leaflet-control-attribution) {
+  padding: var(--size-4-1);
+  background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
+}
+.workspace-leaf-content[data-type=map] .leaflet-control-zoom a:hover,
+.workspace-leaf-content[data-type=map] .leaflet-bar.leaflet-control a:hover {
+  color: var(--highlight-text-normal);
+  background-color: var(--background-modifier-hover);
+  border-radius: var(--radius-s);
+}
+.workspace-leaf-content[data-type=map] .leaflet-bar a {
+  color: var(--text-muted);
+  background-color: unset;
+  border-bottom: unset;
+}
+.workspace-leaf-content[data-type=map] .leaflet-control-attribution {
+  padding: var(--size-2-1) var(--size-4-1);
+  color: var(--text-muted);
+  background: var(--background-secondary-blur);
+  border-top: 1px solid var(--window-border);
+  border-left: 1px solid var(--window-border);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.workspace-leaf-content[data-type=map] .leaflet-control-attribution a {
+  color: var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=map] .leaflet-control-attribution a:hover {
+  color: var(--text-accent-hover);
+}
+.workspace-leaf-content[data-type=map] .map-view-graph-controls {
+  padding: var(--size-4-2);
+  background: var(--background-secondary-blur);
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+}
+.workspace-leaf-content[data-type=map] .search-input-container {
+  display: flex;
+}
+.workspace-leaf-content[data-type=map] .graph-control-follow-div {
+  display: flex;
+  align-items: center;
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:first-of-type .graph-control-content {
+  padding-top: var(--size-4-1);
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .graph-control-content {
+  padding: var(--size-4-3) var(--size-4-2) var(--size-2-3);
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .graph-control-content > *:not(:last-child) {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.workspace-leaf-content[data-type=map] .leaflet-popup-content-wrapper,
+.workspace-leaf-content[data-type=map] .leaflet-popup-tip {
+  color: var(--text-normal);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-s);
+}
+.workspace-leaf-content[data-type=dictionary-view] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .search-input-container {
+  display: flex;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5.svelte-17ilbu5 {
+  padding: unset;
+  margin-top: unset;
+  background-color: unset;
+  border-radius: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5.svelte-17ilbu5 h3 {
+  padding: var(--size-4-1) var(--size-4-2);
+  margin: -1px 0 0;
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-medium);
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--window-border);
+  border-bottom: 1px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z,
+.workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
+  margin: var(--size-4-2);
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
+}
+.theme-light .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z,
+.theme-light .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
+  background-color: var(--background-primary);
+}
+.theme-dark .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z,
+.theme-dark .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
+  background-color: var(--background-secondary-alt);
+}
+.workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts .mark {
+  box-shadow: inset 0 -2px var(--interactive-accent-text);
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener.svelte-5jhpts.svelte-5jhpts {
+  padding: var(--size-4-1) var(--size-4-2);
+}
+.workspace-leaf-content[data-type=dictionary-view] .definition.svelte-5jhpts.svelte-5jhpts {
+  padding: var(--size-4-2) var(--size-4-4);
+}
+.workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5.svelte-17ilbu5 {
+  height: 100%;
 }
 /*!
 /* @settings
@@ -6632,7 +7094,7 @@ settings:
         description: Change the Horizontal Alignment of the Fixed Status Bar.
         type: class-select
         allowEmpty: false
-        default: pt-status-bar-align-center
+        default: pt-fixed-status-bar-align-center
         options:
             -
                 label: Left

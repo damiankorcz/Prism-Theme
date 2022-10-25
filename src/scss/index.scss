@@ -72,17 +72,16 @@
 @use "Plugins/Community/advancedTables.scss"; /* ✅ */
 @use "Plugins/Community/fileTreeAlternative.scss"; /* ✅ */
 @use "Plugins/Community/quietOutline.scss"; /* ✅ */
+@use "Plugins/Community/quickExplorer.scss"; /* ✅ */
+@use "Plugins/Community/tagFolder.scss"; /* ✅ */
 @use "Plugins/Community/mapView.scss"; /* 🔧 Change icon to globe for the tab (?) */
 @use "Plugins/Community/dictionary.scss"; /* 🔧 Issues with the nav header and main container height */
-@use "Plugins/Community/quickExplorer.scss"; /* ✅ */
 
 /* @use "Plugins/Community/emojiToolbar.scss"; 🔧 */
 /* @use "Plugins/Community/hoverEditor.scss"; 🔧 */
 
 /* @use "Plugins/Community/reminder.scss"; 🔧 */
 /* @use "Plugins/Community/jumpToDate.scss"; 🔧 */
-
-/* @use "Plugins/Community/tagFolder.scss"; 🔧 */
 
 /* Config Files */
 @use "Info/styleSettingsConfig.scss";
@@ -99,16 +98,14 @@ STYLE SETTINGS TO FIX
 - Accent Text Color Preset needs some work and consideration.
 
 TODO
-- Mobile theme.
-- Backlinks Link button doesn't fit right in Unlinked mentions.
-- Look over the use of var(--background-primary-alt).
-- Sort out --page-background-color variable.
-- In Quick Explorer when you view the Progress Bar Test page the percentage numbers float in the wrong place.
-- Hover effects on toggles and sliders. Dropdown sections in Graph (and elsewhere?)
-- Go over the accent styles and make sure they are consistent and don't have recurring values (put those in base).
-- Re-enable the plugin support list in the repo.
-- Search popup rounded container doesn't go over the scrollbar.
 - Theme and Plugin stores need some attention for consistency. Themes with no readme look odd.
+- Go over the accent styles and make sure they are consistent and don't have recurring values (put those in base).
+- Sort out --page-background-color variable.
+- Look over the use of var(--background-primary-alt).
+- Mobile theme.
+- Re-enable the plugin support list in the repo. Make sure Hub plugins list is up to date.
+
+- Hover effects on toggles and sliders (mostly an issue with Dark theme). Dropdown sections in Graph (and elsewhere?)
 
 Reported Issues (Turn into Forum reports)
 Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933  Also why the forced HTML styling for text-indent and padding-left?

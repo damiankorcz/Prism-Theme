@@ -1,10 +1,11 @@
 /* #region  [Editor] - Progress Bar */
-:is(.markdown-rendered progress, .markdown-source-view.is-live-preview progress) {
+.markdown-rendered progress,
+.markdown-source-view.is-live-preview progress {
 	height: 15px;
 	vertical-align: middle;
 
 	&::before {
-		position: fixed;
+		position: absolute;
 		width: inherit;
 		height: inherit;
 		font-family: var(--font-editor);
