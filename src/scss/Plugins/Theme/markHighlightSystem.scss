@@ -1,5 +1,5 @@
 /* #region  [Plugin - Theme] Mark Highlight System */
-mark {
+mark[class] {
 	--mark-highlight-base: var(--interactive-accent-base);
 	--mark-highlight-dark: var(--interactive-accent-tint);
 	--mark-highlight-text: var(--interactive-accent-text);
@@ -10,6 +10,11 @@ mark {
 	border-radius: var(--radius-s);
 	-webkit-box-decoration-break: clone;
 	box-decoration-break: clone;
+
+	.external-link {
+		background-position-x: calc(100% - 1px);
+		background-position-y: 2px;
+	}
 
 	:is(.theme-dark.pt-highlight-style-none-dt &, .theme-light.pt-highlight-style-none-lt &) {
 		padding: 0;

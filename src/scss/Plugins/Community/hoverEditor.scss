@@ -1,53 +1,34 @@
 /* #region  [Plugin - Community] Hover Editor */
-.popover.hover-popover {
-	border: 1px solid var(--window-border);
-	border-radius: var(--radius-m);
-	box-shadow: var(--shadow-l);
+.hover-editor {
+	--he-title-bar-active-fg: var(--interactive-accent-text);
+	--he-title-bar-active-pinned-bg: var(--background-secondary);
+	--he-title-bar-inactive-bg: var(--background-secondary);
+	--he-title-bar-inactive-pinned-bg: var(--background-secondary);
+
+	&.show-navbar .view-header {
+		border-bottom: 1px solid var(--window-border);
+	}
+
+	&.is-pinned {
+		border-color: var(--interactive-accent-tint);
+	}
+
+	.view-header .view-header-icon {
+		margin-right: unset;
+	}
+
+	.view-content {
+		height: 100%;
+	}
 
 	.popover-titlebar {
-		border-radius: var(--radius-m);
-		box-shadow: var(--shadow-s);
+		padding: var(--size-2-1) 0;
+		border-bottom: 1px solid var(--window-border);
 	}
 
-	.popover-content {
-		border-radius: var(--radius-m);
-	}
-
-	&.is-pinned.is-pinned {
-		div.popover-titlebar {
-			background-color: var(--background-primary);
-		}
-		div.popover-title::after {
-			background: linear-gradient(to right, transparent, var(--background-primary));
-		}
-
-		&.is-active {
-			border: 1px solid var(--interactive-accent-base);
-
-			div.popover-titlebar {
-				background-color: var(--background-primary);
-			}
-			div.popover-title::after {
-				background: linear-gradient(to right, transparent, var(--background-primary));
-			}
-		}
-	}
-
-	.popover-action,
-	.popover-header-icon {
-		color: var(--text-muted);
-	}
-
-	.mod-show-navbar svg {
-		body & {
-			transform: rotate(0deg);
-		}
-	}
-
-	.mod-show-navbar.is-active svg {
-		body & {
-			transform: rotate(180deg);
-		}
+	:is(.popover-action, .mod-pin-popover) {
+		padding: 0 var(--size-2-1);
 	}
 }
+
 /* #endregion */

@@ -39,6 +39,19 @@
 		}
 	}
 
+	&.is-mobile .mod-left .workspace-drawer-header::before {
+		display: block;
+		width: 32px;
+		height: 48px;
+		margin-right: var(--size-4-5);
+		content: "";
+		background-image: var(--custom-vault-banner-icon-url);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		border-radius: unset;
+	}
+
 	&.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
 		justify-content: flex-start;
 	}

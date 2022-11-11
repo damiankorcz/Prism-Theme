@@ -1,6 +1,6 @@
 /* #region  [Accent Style] Border Only */
-.theme-dark.pt-accent-style-border-dt,
-.theme-light.pt-accent-style-border-lt {
+:is(.theme-dark.pt-accent-style-border-dt,
+.theme-light.pt-accent-style-border-lt) {
 	.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
 	.workspace-tab-header.is-active,
 	.nav-action-button.is-active,
@@ -8,12 +8,8 @@
 	.nav-file-title.is-active,
 	.suggestion-hotkey,
 	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
-		background-color: unset;
+		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-tint);
-
-		&:hover {
-			background-color: var(--background-modifier-hover);
-		}
 	}
 
 	.search-result-file-match-destination-file {
@@ -38,12 +34,11 @@
 	}
 
 	button.mod-cta {
-		background-color: unset;
+		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-tint);
 
 		&:hover {
 			color: var(--interactive-accent-tint);
-			background-color: var(--background-modifier-hover);
 		}
 	}
 
@@ -59,7 +54,7 @@
 
 	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
 		color: var(--text-normal);
-		background-color: var(--background-secondary);
+		background-color: var(--background-primary);
 		border-color: var(--color-grey-tint);
 
 		&:hover {
@@ -69,7 +64,7 @@
 
 	.setting-command-hotkeys .setting-hotkey {
 		color: var(--text-normal);
-		background-color: var(--background-secondary);
+		background-color: var(--background-primary);
 		border-color: var(--color-blue-tint);
 
 		&.mod-empty {
@@ -96,8 +91,8 @@
 		}
 	}
 
-	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
-		background-color: unset;
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-tint);
 
 		.clickable-icon:hover {
@@ -106,7 +101,17 @@
 
 		&:hover {
 			color: var(--interactive-accent-hover);
-			background-color: var(--background-modifier-hover);
+		}
+	}
+}
+
+:is(.theme-dark.pt-accent-style-border-dt.is-mobile.is-phone, .theme-light.pt-accent-style-border-lt.is-mobile.is-phone) {
+	.modal.mod-settings .vertical-tab-nav-item {
+		border-color: transparent;
+
+		&.is-active {
+			background-color: var(--background-primary);
+			border-color: var(--interactive-accent-tint);
 		}
 	}
 }

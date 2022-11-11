@@ -58,7 +58,6 @@ p {
 }
 
 .cm-s-obsidian .cm-hashtag {
-	font-family: var(--font-text);
 	font-weight: 600;
 	vertical-align: middle;
 }
@@ -101,17 +100,27 @@ p {
 		margin: 1em 0;
 	}
 
-	.cm-indent::before {
-		transform: translateX(0.4em);
-	}
-
-	:is(.cm-formatting-list-ul,	.cm-formatting-list-ol) {
-		padding-right: 0.3em;
-	}
-
 	.cm-foldPlaceholder {
 		color: var(--interactive-accent-text);
 	}
+
+	.cm-formatting-list-ul {
+		padding-inline-end: 0.4em;
+	}
+
+	.cm-indent::before {
+		transform: translateX(0);
+	}
+}
+
+.markdown-preview-view th,
+.table-view-table > thead > tr > th,
+.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
+	padding: var(--size-2-2) var(--size-4-2);
+}
+
+.markdown-rendered thead tr:first-child > th {
+	font-weight: var(--font-semibold);
 }
 
 /* Reading Specific */
@@ -174,6 +183,11 @@ a.tag {
 	padding-left: var(--size-4-6) !important;
 }
 
+.file-embed.mod-empty {
+	border: 1px solid var(--window-border);
+	border-radius: var(--radius-s);
+}
+
 :is(.theme-light.pt-highlight-text-color-lt, .theme-dark.pt-highlight-text-color-dt) {
 	span.cm-link {
 		color: var(--link-external-color);
@@ -181,10 +195,21 @@ a.tag {
 
 	span.cm-hmd-internal-link {
 		color: var(--link-color);
+
+		&:hover {
+			color: var(--link-color-hover);
+		}
 	}
 }
 
 .markdown-rendered {
+	&.show-indentation-guide {
+		li > ul::before,
+		li > ol::before {
+			left: -13px;
+		}
+	}
+
 	mark .internal-link {
 		.theme-light & {
 			color: var(--link-internal-color-lt);
@@ -199,111 +224,36 @@ a.tag {
 		border: 1px solid var(--window-border);
 	}
 
+	button.copy-code-button {
+		padding: var(--size-2-1) var(--size-4-1);
+		margin: var(--size-4-1);
+	}
+
 	:is(h1, h2, h3, h4, h5, h6) {
 		margin: 0;
 	}
+}
 
-	&.show-indentation-guide {
-		:is(li > ul::before, li > ol::before) {
-			left: -13px;
+.cm-s-obsidian {
+	.cm-hmd-frontmatter {
+		color: var(--color-blue);
+
+		&.cm-atom,
+		&.cm-meta {
+			color: var(--text-faint);
+		}
+
+		&.cm-keyword {
+			color: var(--color-red);
+		}
+
+		&.cm-number {
+			color: var(--color-green);
+		}
+
+		&.cm-def {
+			color: var(--text-faint);
 		}
 	}
 }
-
 /* #endregion */
-
-/* #region  [Editor] Text Selection */
-/*
-.theme-light {
-	::selection,
-	.markdown-source-view.mod-cm6 .cm-selection,
-	div.view-header-title::selection {
-		color: var(--text-normal);
-		background-color: var(--text-selection);
-	}
-}
-
-.theme-dark {
-	::selection,
-	.markdown-source-view.mod-cm6 .cm-selection,
-	div.view-header-title::selection {
-		color: var(--text-normal);
-		background-color: var(--text-selection);
-	}
-}
-
-mark::selection,
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection {
-	color: var(--text-normal);
-}
-
-.is-flashing,
-.is-flashing *,
-.cm-s-obsidian span.obsidian-search-match-highlight {
-	color: var(--text-normal);
-	background-color: var(--interactive-accent-base);
-	border-radius: var(--radius-s);
-}
-*/
-/* #endregion */
-
-/*
-.markdown-embed,
-.file-embed,
-.markdown-source-view .markdown-embed,
-.markdown-source-view .file-embed {
-	border: 1px solid var(--window-border);
-	border-radius: var(--radius-s);
-}
-
-.markdown-embed-link,
-.file-embed-link {
-	top: 2px;
-	right: 2px;
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	padding: 4px;
-	color: var(--text-muted);
-}
-
-.markdown-embed-content > div.markdown-preview-view,
-.markdown-source-view .markdown-embed,
-.markdown-source-view .file-embed {
-	background-color: var(--page-background-color);
-}
-
-.markdown-embed .markdown-preview-sizer.markdown-preview-section {
-	height: fit-content;
-	min-height: unset !important;
-	padding: unset !important;
-}
-
-.markdown-embed-link:hover,
-.file-embed-link:hover {
-	color: var(--interactive-accent-hover);
-}
-
-.markdown-embed .markdown-preview-section h3[data-heading] {
-	margin: unset;
-	color: var(--text-normal);
-	background: unset !important;
-	border: unset !important;
-}
-
-.markdown-source-view .markdown-embed,
-.markdown-source-view .file-embed {
-	padding: unset;
-	margin: 10px 0;
-}
-
-.markdown-embed .markdown-preview-view {
-	padding: 10px;
-}
-*/

@@ -1,13 +1,32 @@
 /* #region  [Plugins - Community] Dictionary */
 .workspace-leaf-content[data-type="dictionary-view"] {
 	.view-content {
+		display: flex;
+		flex-flow: column;
 		padding: unset;
+		background-color: var(--background-secondary);
 	}
 
 	.search-input-container {
 		display: flex;
+		margin-top: -1px;
 		background-color: var(--background-secondary);
+		border-top: 1px solid var(--window-border);
 		border-bottom: 1px solid var(--window-border);
+	}
+
+	.nav-buttons-container {
+		min-height: var(--header-height);
+		padding: var(--size-4-2);
+	}
+
+	.nav-action-button:not(.is-active) {
+		color: var(--text-muted);
+
+		&:hover {
+			color: var(--highlight-text-normal);
+			background-color: var(--background-modifier-hover);
+		}
 	}
 
 	.container.svelte-17ilbu5.svelte-17ilbu5 {
@@ -24,6 +43,18 @@
 			background-color: var(--background-secondary);
 			border-top: 1px solid var(--window-border);
 			border-bottom: 1px solid var(--window-border);
+		}
+	}
+
+	.contents.svelte-17ilbu5.svelte-17ilbu5 {
+		height: 100%;
+
+		.theme-light & {
+			background-color: var(--background-primary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
 		}
 	}
 
@@ -56,10 +87,6 @@
 
 	.definition.svelte-5jhpts.svelte-5jhpts {
 		padding: var(--size-4-2) var(--size-4-4);
-	}
-
-	.contents.svelte-17ilbu5.svelte-17ilbu5 {
-		height: 100%;
 	}
 }
 /* #endregion */

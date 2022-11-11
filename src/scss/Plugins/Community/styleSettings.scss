@@ -2,10 +2,34 @@
 div.workspace-leaf-content[data-type="style-settings"] {
 	div.view-content {
 		padding: var(--file-margins);
+
+		body.is-mobile & {
+			padding: 32px 16px;
+		}
 	}
 
 	.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-		flex-direction: row;
+		body:not(.is-mobile) & {
+			flex-direction: row;
+		}
+	}
+}
+
+.setting-item.setting-item-heading.style-settings-heading {
+	padding: var(--size-4-2);
+
+	&:hover {
+		color: var(--highlight-text-normal);
+		background-color: var(--background-modifier-hover);
+		border-radius: var(--radius-m);
+	}
+}
+
+.style-settings-container .setting-item {
+	padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-4);
+
+	.is-phone & {
+		margin-top: unset;
 	}
 }
 
@@ -27,47 +51,39 @@ div.workspace-leaf-content[data-type="style-settings"] {
 
 .style-settings-container > .setting-item:last-of-type {
 	padding-bottom: unset;
+	margin-bottom: var(--size-4-4);
 }
 
 :is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
-	padding-bottom: var(--size-4-2);
-	padding-left: var(--size-4-4);
-	margin-left: var(--size-4-1);
+	padding-left: var(--size-4-1);
+	margin-left: var(--size-4-3);
 	border-left: 1px solid var(--window-border);
 }
 /* #endregion */
 
 /* #region  [Plugin - Community] Style Settings Header Icons */
-.setting-item.style-settings-heading[data-id="appearance"] {
-	.style-settings-collapse-indicator::after {
-		margin-left: var(--size-4-2);
-		content: "🎨";
-	}
+.setting-item.style-settings-heading[data-id="appearance"] .style-settings-collapse-indicator::after {
+	margin-left: var(--size-4-2);
+	content: "🎨";
 }
 
-.setting-item.style-settings-heading[data-id="editor"] {
-	.style-settings-collapse-indicator::after {
-		margin-left: var(--size-4-2);
-		content: "📝";
-	}
+.setting-item.style-settings-heading[data-id="editor"] .style-settings-collapse-indicator::after {
+	margin-left: var(--size-4-2);
+	content: "📝";
 }
 
-.setting-item.style-settings-heading[data-id="user-interface"] {
-	.style-settings-collapse-indicator::after {
-		margin-left: var(--size-4-2);
-		content: "👆";
-	}
+.setting-item.style-settings-heading[data-id="user-interface"] .style-settings-collapse-indicator::after {
+	margin-left: var(--size-4-2);
+	content: "👆";
 }
 
-.setting-item.style-settings-heading[data-id="plugins"] {
-	.style-settings-collapse-indicator::after {
-		margin-left: var(--size-4-2);
-		content: "🧩";
-	}
+.setting-item.style-settings-heading[data-id="plugins"] .style-settings-collapse-indicator::after {
+	margin-left: var(--size-4-2);
+	content: "🧩";
 }
 
 .setting-item.style-settings-heading[data-id="feature-toggles"] {
-	border-bottom: unset;
+	margin-bottom: var(--size-4-2);
 
 	.style-settings-collapse-indicator::after {
 		margin-left: var(--size-4-2);
@@ -75,11 +91,60 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-.style-settings-heading[data-id="support"] {
+.style-settings-heading[data-id="prism-wiki"] {
+	margin-top: 10px;
 	margin-bottom: 0;
 	pointer-events: none;
 	cursor: text;
 	border-top: 2px solid var(--window-border);
+
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+
+	.setting-item-name::before {
+		display: inline-block;
+		width: 20px;
+		height: fit-content;
+		padding-right: 8px;
+		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-weight: initial;
+		color: unset;
+		content: "📖";
+	}
+
+	.setting-item-description {
+		padding-left: var(--size-4-1);
+	}
+}
+
+.setting-item.style-settings-heading[data-id="prism-wiki-link"] {
+	padding: unset;
+	margin-bottom: 0;
+	cursor: default;
+
+	&:hover {
+		background-color: unset;
+	}
+
+	.setting-item-name,
+	.setting-item-control,
+	.style-settings-collapse-indicator {
+		display: none;
+	}
+
+	.setting-item-description {
+		color: var(--interactive-accent-text);
+		cursor: text;
+		user-select: all;
+	}
+}
+
+.style-settings-heading[data-id="support"] {
+	margin-bottom: 0;
+	pointer-events: none;
+	cursor: text;
 
 	:is(.setting-item-control, .style-settings-collapse-indicator) {
 		display: none;
@@ -95,6 +160,10 @@ div.workspace-leaf-content[data-type="style-settings"] {
 		color: unset;
 		content: "❤️";
 	}
+
+	.setting-item-description {
+		padding-left: var(--size-4-1);
+	}
 }
 
 :is(.style-settings-heading[data-id="support-star-repo"], .style-settings-heading[data-id="support-submit-issue"], .style-settings-heading[data-id="support-donate"], .style-settings-heading[data-id="prism-wiki-link"]) {
@@ -106,11 +175,13 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-.setting-item.style-settings-heading[data-id="support-star-repo"] {
+.setting-item.style-settings-heading[data-id="support-star-repo"],
+.setting-item.style-settings-heading[data-id="support-submit-issue"],
+.setting-item.style-settings-heading[data-id="support-donate"] {
 	cursor: default;
 
-	&:hover div.setting-item-name {
-		color: var(--text-normal);
+	&:hover {
+		background-color: unset;
 	}
 
 	.setting-item-name::before {
@@ -121,7 +192,6 @@ div.workspace-leaf-content[data-type="style-settings"] {
 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		content: "⭐";
 	}
 
 	.setting-item-description {
@@ -131,166 +201,16 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-.setting-item.style-settings-heading[data-id="support-submit-issue"] {
-	cursor: default;
-
-	&:hover div.setting-item-name {
-		color: var(--text-normal);
-	}
-
-	.setting-item-name::before {
-		display: inline-block;
-		width: 20px;
-		height: fit-content;
-		padding-right: 8px;
-		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		content: "⚠️";
-	}
-
-	.setting-item-description {
-		color: var(--interactive-accent-text);
-		cursor: text;
-		user-select: all;
-	}
+.setting-item.style-settings-heading[data-id="support-star-repo"] .setting-item-name::before {
+	content: "⭐";
 }
 
-.setting-item.style-settings-heading[data-id="support-donate"] {
-	cursor: default;
-
-	&:hover div.setting-item-name {
-		color: var(--text-normal);
-	}
-
-	.setting-item-name::before {
-		display: inline-block;
-		width: 20px;
-		height: fit-content;
-		padding-right: 8px;
-		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		content: "☕";
-	}
-
-	.setting-item-description {
-		color: var(--interactive-accent-text);
-		cursor: text;
-		user-select: all;
-	}
+.setting-item.style-settings-heading[data-id="support-submit-issue"] .setting-item-name::before {
+	content: "⚠️";
 }
-/* #endregion */
 
-/* #region  [Plugin - Community] Style Settings Custom Accent Color Sliders */
-.style-settings-container .setting-item {
-	&:is([data-id*="color-accent-h-"], [data-id*="color-accent-s-"], [data-id*="color-accent-l-base-"], [data-id*="color-accent-l-tint-"], [data-id*="color-accent-l-text-"]) {
-		.setting-item-control::before {
-			width: 1.5em;
-			height: 1.5em;
-			margin-right: 8px;
-			content: " ";
-			border: 1px solid var(--window-border);
-			border-radius: var(--radius-s);
-		}
-
-		input.slider {
-			width: 150px;
-			height: 1.5em;
-
-			&::-webkit-slider-thumb {
-				width: 4px;
-				height: 1.75em;
-				margin-top: -3px;
-				border: 1px solid var(--window-border);
-				-webkit-appearance: none;
-			}
-		}
-
-		.theme-light & {
-			input.slider::-webkit-slider-thumb {
-				background-color: var(--background-primary);
-			}
-		}
-
-		.theme-dark & {
-			input.slider::-webkit-slider-thumb {
-				background-color: var(--text-normal);
-			}
-		}
-	}
-
-	&:is([data-id^="color-accent-h-lt"]) {
-		input.slider {
-			background: var(--hue-background-lt);
-		}
-
-		.setting-item-control::before {
-			background-color: var(--color-accent-base-lt);
-		}
-	}
-
-	&:is([data-id^="color-accent-s-lt"]) {
-		input.slider {
-			background: var(--saturation-background-lt);
-		}
-
-		.setting-item-control::before {
-			background-color: var(--color-accent-base-lt);
-		}
-	}
-
-	&:is([data-id^="color-accent-l-base-lt"], [data-id^="color-accent-l-tint-lt"], [data-id^="color-accent-l-text-lt"]) input.slider {
-		background: var(--lightness-background-lt);
-	}
-
-	&[data-id^="color-accent-l-base-lt"] .setting-item-control::before {
-		background-color: var(--color-accent-base-lt);
-	}
-
-	&[data-id^="color-accent-l-tint-lt"] .setting-item-control::before {
-		background-color: var(--color-accent-tint-lt);
-	}
-
-	&[data-id^="color-accent-l-text-lt"] .setting-item-control::before {
-		background-color: var(--color-accent-text-lt);
-	}
-
-	&:is([data-id^="color-accent-h-dt"]) {
-		input.slider {
-			background: var(--hue-background-dt);
-		}
-
-		.setting-item-control::before {
-			background-color: var(--color-accent-base-dt);
-		}
-	}
-
-	&:is([data-id^="color-accent-s-dt"]) {
-		input.slider {
-			background: var(--saturation-background-dt);
-		}
-
-		.setting-item-control::before {
-			background-color: var(--color-accent-base-dt);
-		}
-	}
-
-	&:is([data-id^="color-accent-l-base-dt"], [data-id^="color-accent-l-tint-dt"], [data-id^="color-accent-l-text-dt"]) input.slider {
-		background: var(--lightness-background-dt);
-	}
-
-	&[data-id^="color-accent-l-base-dt"] .setting-item-control::before {
-		background-color: var(--color-accent-base-dt);
-	}
-
-	&[data-id^="color-accent-l-tint-dt"] .setting-item-control::before {
-		background-color: var(--color-accent-tint-dt);
-	}
-
-	&[data-id^="color-accent-l-text-dt"] .setting-item-control::before {
-		background-color: var(--color-accent-text-dt);
-	}
+.setting-item.style-settings-heading[data-id="support-donate"] .setting-item-name::before {
+	content: "☕";
 }
 /* #endregion */
 

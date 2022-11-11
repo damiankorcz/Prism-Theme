@@ -19,6 +19,10 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	}
 }
 
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+	left: -1px;
+}
+
 .workspace-tabs .workspace-leaf {
 	.theme-light & {
 		background-color: var(--background-primary);
@@ -34,6 +38,7 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 :is(.is-focused .workspace-leaf.mod-active .view-header, .view-header) {
 	position: fixed;
 	width: 100%;
+	padding: 0 var(--size-4-2);
 	background: var(--background-secondary-blur);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
@@ -44,16 +49,8 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border-bottom: 1px solid var(--window-border);
 }
 
-.view-header-nav-buttons {
-	padding-left: var(--size-4-2);
-}
-
 .view-header-title-container::after {
 	display: none;
-}
-
-.view-actions {
-	padding-right: var(--size-4-2);
 }
 
 .is-focused .workspace-leaf.mod-active .view-header-title,
@@ -70,7 +67,7 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 .show-view-header {
-	--file-margins: 64px 32px 32px 32px;
+	--file-margins: 64px 32px;
 }
 /* #endregion */
 

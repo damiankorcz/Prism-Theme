@@ -4,10 +4,14 @@
 	border: var(--accent-border-width) solid transparent;
 	border-radius: var(--radius-m);
 
+	.workspace-tab-header-inner-close-button:hover svg {
+		color: var(--interactive-accent-hover);
+	}
+
 	&.is-active {
 		border-radius: var(--radius-m);
 
-		&:hover svg {
+		&:hover .workspace-tab-header-inner-icon svg {
 			color: var(--interactive-accent-hover);
 		}
 

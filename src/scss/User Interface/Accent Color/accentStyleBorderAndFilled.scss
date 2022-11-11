@@ -59,7 +59,6 @@
 
 		&:hover {
 			color: var(--color-grey-tint);
-			background-color: var(--background-modifier-hover);
 		}
 	}
 
@@ -95,12 +94,23 @@
 		}
 	}
 
-	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
 		background-color: var(--interactive-accent-base);
 		border-color: var(--interactive-accent-tint);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
+		}
+	}
+}
+
+:is(.theme-dark.pt-accent-style-borderandfilled-dt.is-mobile.is-phone, .theme-light.pt-accent-style-borderandfilled-lt.is-mobile.is-phone) {
+	.modal.mod-settings .vertical-tab-nav-item {
+		border-color: transparent;
+
+		&.is-active {
+			background-color: var(--interactive-accent-base);
+			border-color: var(--interactive-accent-tint);
 		}
 	}
 }

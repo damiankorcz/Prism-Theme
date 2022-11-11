@@ -1,5 +1,5 @@
 /* #region  [Accent Style] Text Only */
-:is(.theme-dark.pt-accent-style-text-dt, .theme-light.pt-accent-style-text-lt) {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) {
 	.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
 	.workspace-tab-header.is-active,
 	.nav-action-button.is-active,
@@ -8,11 +8,7 @@
 	.suggestion-hotkey,
 	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
 		background-color: var(--background-primary);
-		border-color: transparent;
-
-		&:hover {
-			background-color: var(--background-modifier-hover);
-		}
+		border-color: var(--window-border);
 	}
 
 	.search-result-file-match-destination-file {
@@ -37,18 +33,17 @@
 
 	button.mod-cta {
 		background-color: var(--background-primary);
-		border-color: transparent;
+		border-color: var(--window-border);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
-			background-color: var(--background-modifier-hover);
 		}
 	}
 
 	:is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
 		color: var(--color-red-text);
 		background-color: var(--background-primary);
-		border-color: transparent;
+		border-color: var(--window-border);
 
 		&:hover {
 			color: var(--color-red-tint);
@@ -58,18 +53,17 @@
 	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
 		color: var(--color-grey-text);
 		background-color: var(--background-primary);
-		border-color: transparent;
+		border-color: var(--window-border);
 
 		&:hover {
 			color: var(--color-grey-tint);
-			background-color: var(--background-modifier-hover);
 		}
 	}
 
 	.setting-command-hotkeys .setting-hotkey {
 		color: var(--color-blue-text);
 		background-color: var(--background-primary);
-		border-color: transparent;
+		border-color: var(--window-border);
 
 		&.mod-empty {
 			color: var(--text-normal);
@@ -83,24 +77,33 @@
 	:is(.flair.mod-pop, .community-item .flair) {
 		color: var(--color-green-text);
 		background-color: var(--background-secondary);
-		border-color: transparent;
+		border-color: var(--window-border);
 	}
 
 	button.copy-code-button {
-		border-color: transparent;
+		border-color: var(--window-border);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
 		}
 	}
 
-	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
 		background-color: var(--background-primary);
-		border-color: transparent;
+		border-color: var(--window-border);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
-			background-color: var(--background-modifier-hover);
+		}
+	}
+}
+
+:is(.theme-dark.pt-accent-style-plain-dt.is-mobile.is-phone, .theme-light.pt-accent-style-plain-lt.is-mobile.is-phone) {
+	.modal.mod-settings .vertical-tab-nav-item {
+		border-color: transparent;
+
+		&.is-active {
+			border-color: var(--window-border);
 		}
 	}
 }

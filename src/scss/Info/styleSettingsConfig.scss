@@ -52,7 +52,7 @@ settings:
         options:
             -
                 label: Plain
-                value: pt-accent-style-text-lt
+                value: pt-accent-style-plain-lt
             -
                 label: Border
                 value: pt-accent-style-border-lt
@@ -134,59 +134,34 @@ settings:
     -
         id: color-accent-custom-lt
         title: Custom Accent Color Tuning
-        description: Make sure you selected 'Custom' in Accent Color Preset for this to work. The default Lightness values should net good results for most Hues. Tweak them to your preference.
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work.
         type: heading
         level: 4
         collapsed: true
     -
-        id: color-accent-h-lt
-        title: Custom Accent Base Color Hue
-        description: Changes the the Hue of the Base color.
-        type: variable-number-slider
-        default: 0
-        min: 0
-        max: 360
-        step: 1
+        id: color-accent-base-lt
+        title: Custom Accent Base Color
+        description: Accent Base Color should ideally be the lightest of the 3.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: 'var(--red100)'
     -
-        id: color-accent-s-lt
-        title: Custom Accent Base Color Saturation
-        description: Changes the Saturation of the Base Color.
-        type: variable-number-slider
-        format: '%'
-        default: 60
-        min: 0
-        max: 100
-        step: 1
+        id: color-accent-tint-lt
+        title: Custom Accent Tint Color
+        description: Accent Tint Color should ideally be between Base and Text in terms of lightness.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: 'var(--red200)'
     -
-        id: color-accent-l-base-lt
-        title: Custom Accent Base Color Lightness
-        description: Base Color Lightness should ideally be the lighteest of the 3.
-        type: variable-number-slider
-        format: '%'
-        default: 82
-        min: 0
-        max: 100
-        step: 1
-    -
-        id: color-accent-l-tint-lt
-        title: Custom Accent Tint Color Lightness
-        description: Tint Color Lightness should ideally be between Base and Text.
-        type: variable-number-slider
-        format: '%'
-        default: 67
-        min: 0
-        max: 100
-        step: 1
-    -
-        id: color-accent-l-text-lt
-        title: Custom Accent Text Color Lightness
-        description: Text Color Lightness should ideally be the darkest of the 3.
-        type: variable-number-slider
-        format: '%'
-        default: 42
-        min: 0
-        max: 100
-        step: 1
+        id: color-accent-text-lt
+        title: Custom Accent Text Color
+        description: Accent Text Color Lightness should ideally be the darkest of the 3.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: 'var(--red300)'
     -
         id: accent-colors-styles-dt
         title: Dark Theme
@@ -222,7 +197,7 @@ settings:
         options:
             -
                 label: Plain
-                value: pt-accent-style-text-dt
+                value: pt-accent-style-plain-dt
             -
                 label: Border
                 value: pt-accent-style-border-dt
@@ -304,59 +279,34 @@ settings:
     -
         id: color-accent-custom-dt
         title: Custom Accent Color Tuning
-        description: Make sure you selected 'Custom' in Accent Color Preset for this to work. The default Lightness values should net good results for most Hues. Tweak them to your preference.
+        description: Make sure you selected 'Custom' in Accent Color Preset for this to work.
         type: heading
         level: 4
         collapsed: true
     -
-        id: color-accent-h-dt
-        title: Custom Accent Base Color Hue
-        description: Changes the the Hue of the Base color.
-        type: variable-number-slider
-        default: 0
-        min: 0
-        max: 360
-        step: 1
+        id: color-accent-base-dt
+        title: Custom Accent Base Color
+        description: Accent Base Color should ideally be the darkest of the 3.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: 'var(--red100)'
     -
-        id: color-accent-s-dt
-        title: Custom Accent Base Color Saturation
-        description: Changes the Saturation of the Base Color.
-        type: variable-number-slider
-        format: '%'
-        default: 50
-        min: 0
-        max: 100
-        step: 1
+        id: color-accent-tint-dt
+        title: Custom Accent Tint Color
+        description: Accent Tint Color should ideally be between Base and Text in terms of lightness.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: 'var(--red200)'
     -
-        id: color-accent-l-base-dt
-        title: Custom Accent Base Color Lightness
-        description: Base Color Lightness should ideally be the darkest of the 3.
-        type: variable-number-slider
-        format: '%'
-        default: 20
-        min: 0
-        max: 100
-        step: 1
-    -
-        id: color-accent-l-tint-dt
-        title: Custom Accent Tint Color Lightness
-        description: Tint Color Lightness should ideally be between Base and Text.
-        type: variable-number-slider
-        format: '%'
-        default: 40
-        min: 0
-        max: 100
-        step: 1
-    -
-        id: color-accent-l-text-dt
-        title: Custom Accent Text Color Lightness
-        description: Text Color Lightness should ideally be the lightest of the 3.
-        type: variable-number-slider
-        format: '%'
-        default: 65
-        min: 0
-        max: 100
-        step: 1
+        id: color-accent-text-dt
+        title: Custom Accent Text Color
+        description: Accent Text Color Lightness should ideally be the lightest of the 3.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: 'var(--red300)'
     -
         id: graph-view-colors
         title: Graph Color Customisation
@@ -1348,6 +1298,15 @@ settings:
         level: 3
         collapsed: true
     -
+        id: inline-title-size
+        title: Inline Title Font Size (em)
+        type: variable-number-slider
+        min: 0.5
+        max: 5
+        step: 0.05
+        default: 2.2
+        format: em
+    -
         id: h1-size
         title: Header 1 (H1) Font Size (em)
         type: variable-number-slider
@@ -1414,6 +1373,60 @@ settings:
         type: heading
         level: 4
         collapsed: true
+    -
+        id: inline-title-color-lt
+        title: Inline Title Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--inline-title-color-custom-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: inline-title-color-custom-lt
+        title: Inline Title Custom Text Color
+        description: Make sure you selected 'Custom' in Light Theme Inline Title Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
     -
         id: h1-text-color-lt
         title: Header 1 (H1) Text Color Preset
@@ -1744,6 +1757,60 @@ settings:
         type: heading
         level: 4
         collapsed: true
+    -
+        id: inline-title-color-dt
+        title: Inline Title Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--inline-title-color-custom-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: inline-title-color-custom-dt
+        title: Inline Title Custom Text Color
+        description: Make sure you selected 'Custom' in Light Theme Inline Title Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
     -
         id: h1-text-color-dt
         title: Header 1 (H1) Text Color Preset
@@ -2953,6 +3020,9 @@ settings:
         default: pt-status-bar-position-floating
         options:
             -
+                label: Hidden
+                value: pt-status-bar-position-hidden
+            -
                 label: Floating
                 value: pt-status-bar-position-floating
             -
@@ -3183,6 +3253,19 @@ settings:
         description: Fades out inactive UI tabs to help distinguish the currently active tab.
         default: false
         type: class-toggle
+    -
+        id: prism-wiki
+        title: Prism Wiki
+        description: Visit the Wiki section of the GitHub Repository for additional detailed descriptions for theme specific features and customisation options.
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: prism-wiki-link
+        description: https://github.com/damiankorcz/Prism-Theme/wiki
+        type: heading
+        level: 2
+        collapsed: true
     -
         id: support
         title: Support the Development of Prism

@@ -1,15 +1,19 @@
 /* #region  [Plugin - Community] Advanced Tables */
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split) {
+:is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) {
 	.workspace-leaf-content[data-type="advanced-tables-toolbar"] {
 		.nav-header {
 			bottom: unset;
 			flex-wrap: wrap;
 			column-gap: var(--size-4-1);
 			justify-content: flex-start;
-			padding: unset;
+			height: unset;
+			padding: var(--size-4-1);
 			background-color: var(--background-secondary);
 			border-bottom: 1px solid var(--window-border);
+
+			.is-phone & {
+				gap: var(--size-4-4);
+			}
 		}
 
 		.view-content {
@@ -22,10 +26,15 @@
 		}
 
 		.nav-buttons-container {
+			padding: unset;
 			background-color: unset;
 			border: unset;
 			border-radius: unset;
 			box-shadow: unset;
+
+			.is-phone & {
+				padding: var(--size-4-1);
+			}
 		}
 
 		.widget-icon {

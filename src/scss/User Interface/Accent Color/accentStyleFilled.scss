@@ -93,12 +93,22 @@
 		}
 	}
 
-	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
 		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 
 		&:hover {
 			color: var(--interactive-accent-hover);
+		}
+	}
+}
+
+:is(.theme-dark.pt-accent-style-filled-dt.is-mobile.is-phone, .theme-light.pt-accent-style-filled-lt.is-mobile.is-phone) {
+	.modal.mod-settings .vertical-tab-nav-item {
+		border-color: transparent;
+
+		&.is-active {
+			background-color: var(--interactive-accent-base);
 		}
 	}
 }

@@ -1,14 +1,14 @@
 /* #region  [Plugin - Core] Graph Base */
 .graph-controls-button {
 	:is(&.mod-close, &.mod-reset) {
-		top: var(--size-4-2);
+		top: var(--size-2-3);
 	}
 }
 
 .view-content {
 	:is(.workspace-leaf-content[data-type="graph"] &, .workspace-leaf-content[data-type="localgraph"] &) {
 		.theme-light & {
-			background-color: var(--page-background-color);
+			background-color: var(--background-primary);
 		}
 
 		.theme-dark & {
@@ -50,6 +50,13 @@
 
 	&:last-child .tree-item-children {
 		padding-bottom: var(--size-4-2);
+	}
+
+	> .tree-item-self:hover {
+		background-color: var(--background-modifier-hover);
+		* {
+			color: var(--highlight-text-normal);
+		}
 	}
 
 	.tree-item-children {

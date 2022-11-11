@@ -51,6 +51,18 @@ body:not(.is-grabbing) .nav-folder-title:hover .collapse-icon svg.svg-icon {
 	color: var(--nav-item-color-hover);
 }
 
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover {
+	color: var(--interactive-accent-hover);
+}
+
+.mod-active .workspace-tab-header.is-active:hover {
+	.workspace-tab-header-inner-icon,
+	.workspace-tab-header-inner-title {
+		color: var(--interactive-accent-hover);
+	}
+}
+
 .workspace-leaf.mod-active {
 	.nav-folder.has-focus > .nav-folder-title {
 		background-color: var(--interactive-accent-base);

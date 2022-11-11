@@ -1,7 +1,14 @@
 /* #region  [UI] File Preview Popover */
 .popover {
-	background-color: var(--page-background-color);
 	box-shadow: var(--shadow-l);
+
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
 
 	&.hover-popover {
 		border: 1px solid var(--window-border);

@@ -1,87 +1,82 @@
 @use "Info/license.scss";
 
 /* Setup */
-@use "Fonts/fontFamilyImports.scss"; /* ✅ */
-@use "Variables/coreVariables.scss"; /* ✅ */
+@use "Fonts/fontFamilyImports.scss";
+@use "Variables/coreVariables.scss";
 
 /* Color Schemes */
-@use "Color Schemes/colorSchemeBird.scss"; /* 🧹 Tweak the colours to final values */
-@use "Color Schemes/colorSchemeCoffee.scss"; /* 🧹 Generate new colour values */
-@use "Color Schemes/colorSchemeFlower.scss"; /* 🧹 Generate new colour values */
-@use "Color Schemes/colorSchemeTree.scss"; /* 🧹 Generate new colour values */
+@use "Color Schemes/colorSchemeBird.scss";
+@use "Color Schemes/colorSchemeCoffee.scss";
+@use "Color Schemes/colorSchemeFlower.scss";
+@use "Color Schemes/colorSchemeTree.scss";
 
 /* Title Bar/Status Bar */
-@use "User Interface/Bars/titleBar.scss"; /* ✅ */
-@use "User Interface/Bars/statusBar.scss"; /* ✅ */
+@use "User Interface/Bars/titleBar.scss";
+@use "User Interface/Bars/statusBar.scss";
 
 /* Sidebar */
-@use "User Interface/Sidebar/tabHeader.scss"; /* ✅ */
-@use "User Interface/Sidebar/tabLabel.scss"; /* ✅ */
-@use "User Interface/Sidebar/navHeader.scss"; /* ✅ */
+@use "User Interface/Sidebar/tabHeader.scss";
+@use "User Interface/Sidebar/tabLabel.scss";
+@use "User Interface/Sidebar/navHeader.scss";
 
 /* Other User Interface Elements */
-@use "User Interface/settings.scss"; /* ✅ */
-@use "User Interface/scrollBar.scss"; /* ✅ */
-@use "User Interface/startup.scss"; /* ✅ */
-@use "User Interface/workspace.scss"; /* ✅ */
-@use "User Interface/documentSearch.scss"; /* ✅ */
-@use "User Interface/popups.scss"; /* ✅ */
-
-/* @use "User Interface/mobileToolbar.scss"; 🔧 Need to look into it */
+@use "User Interface/mobileAdjustments.scss";
+@use "User Interface/settings.scss";
+@use "User Interface/scrollBar.scss";
+@use "User Interface/startup.scss";
+@use "User Interface/workspace.scss";
+@use "User Interface/documentSearch.scss";
+@use "User Interface/popups.scss";
 
 /* Accent Colors */
-@use "User Interface/Accent Color/accentStyleBase.scss"; /* ✅ */
-@use "User Interface/Accent Color/accentStylePlain.scss"; /* ✅ */
-@use "User Interface/Accent Color/accentStyleBorderOnly.scss"; /* ✅ */
-@use "User Interface/Accent Color/accentStyleFilled.scss"; /* ✅ */
-@use "User Interface/Accent Color/accentStyleBorderAndFilled.scss"; /* ✅ */
+@use "User Interface/Accent Color/accentStyleBase.scss";
+@use "User Interface/Accent Color/accentStylePlain.scss";
+@use "User Interface/Accent Color/accentStyleBorderOnly.scss";
+@use "User Interface/Accent Color/accentStyleFilled.scss";
+@use "User Interface/Accent Color/accentStyleBorderAndFilled.scss";
 
 /* Editor */
-@use "Editor/editorStyling.scss"; /* ✅ */
-@use "Editor/callouts.scss"; /* ✅ */
-@use "Editor/progressBar.scss"; /* ✅ */
-
-/* @use "Editor/vim.scss"; 🔧 */
+@use "Editor/editorStyling.scss";
+@use "Editor/callouts.scss";
+@use "Editor/progressBar.scss";
+@use "Editor/vim.scss";
 
 /* Core Plugins */
-@use "Plugins/Core/audio.scss"; /* ✅ */
-@use "Plugins/Core/commandPalette.scss"; /* ✅ */
-@use "Plugins/Core/slashCommands.scss"; /* ✅ */
-@use "Plugins/Core/fileExplorer.scss"; /* ✅ */
-@use "Plugins/Core/graph.scss"; /* ✅ */
-@use "Plugins/Core/outline.scss"; /* ✅ */
-@use "Plugins/Core/search.scss"; /* ✅ */
-@use "Plugins/Core/starred.scss"; /* ✅ */
-@use "Plugins/Core/tags.scss"; /* ✅ */
-@use "Plugins/Core/outgoingLinkBacklinks.scss"; /* ✅ */
+@use "Plugins/Core/audio.scss";
+@use "Plugins/Core/commandPalette.scss";
+@use "Plugins/Core/slashCommands.scss";
+@use "Plugins/Core/fileExplorer.scss";
+@use "Plugins/Core/graph.scss";
+@use "Plugins/Core/outline.scss";
+@use "Plugins/Core/search.scss";
+@use "Plugins/Core/starred.scss";
+@use "Plugins/Core/tags.scss";
+@use "Plugins/Core/outgoingLinkBacklinks.scss";
 
 /* Theme Plugins */
-@use "Plugins/Theme/customVaultBanner.scss"; /* ✅ */
-@use "Plugins/Theme/markHighlightSystem.scss"; /* ✅ */
-@use "Plugins/Theme/fontFeatures.scss"; /* ✅ */
+@use "Plugins/Theme/customVaultBanner.scss";
+@use "Plugins/Theme/markHighlightSystem.scss";
+@use "Plugins/Theme/fontFeatures.scss";
 
 /* Community Plugins */
-@use "Plugins/Community/styleSettings.scss"; /* ✅ */
-@use "Plugins/Community/kanban.scss"; /* ✅ */
-@use "Plugins/Community/iconFolder.scss"; /* ✅ */
-@use "Plugins/Community/icons.scss"; /* ✅ */
-@use "Plugins/Community/cMenu.scss"; /* ✅ */
-@use "Plugins/Community/calendar.scss"; /* ✅ */
-@use "Plugins/Community/recentFiles.scss"; /* ✅ */
-@use "Plugins/Community/danglingLinks.scss"; /* ✅ */
-@use "Plugins/Community/advancedTables.scss"; /* ✅ */
-@use "Plugins/Community/fileTreeAlternative.scss"; /* ✅ */
-@use "Plugins/Community/quietOutline.scss"; /* ✅ */
-@use "Plugins/Community/quickExplorer.scss"; /* ✅ */
-@use "Plugins/Community/tagFolder.scss"; /* ✅ */
-@use "Plugins/Community/mapView.scss"; /* 🔧 Change icon to globe for the tab (?) */
-@use "Plugins/Community/dictionary.scss"; /* 🔧 Issues with the nav header and main container height */
-
-/* @use "Plugins/Community/emojiToolbar.scss"; 🔧 */
-/* @use "Plugins/Community/hoverEditor.scss"; 🔧 */
-
-/* @use "Plugins/Community/reminder.scss"; 🔧 */
-/* @use "Plugins/Community/jumpToDate.scss"; 🔧 */
+@use "Plugins/Community/styleSettings.scss";
+@use "Plugins/Community/kanban.scss";
+@use "Plugins/Community/iconFolder.scss";
+@use "Plugins/Community/icons.scss";
+@use "Plugins/Community/cMenu.scss";
+@use "Plugins/Community/calendar.scss";
+@use "Plugins/Community/recentFiles.scss";
+@use "Plugins/Community/danglingLinks.scss";
+@use "Plugins/Community/advancedTables.scss";
+@use "Plugins/Community/fileTreeAlternative.scss";
+@use "Plugins/Community/quietOutline.scss";
+@use "Plugins/Community/quickExplorer.scss";
+@use "Plugins/Community/tagFolder.scss";
+@use "Plugins/Community/mapView.scss";
+@use "Plugins/Community/dictionary.scss";
+@use "Plugins/Community/hoverEditor.scss";
+@use "Plugins/Community/emojiToolbar.scss";
+@use "Plugins/Community/jumpToDate.scss"; /* 🔧 WIP */
 
 /* Config Files */
 @use "Info/styleSettingsConfig.scss";
@@ -90,25 +85,3 @@
 /* @use "Plugins/Theme/coloredFolders.scss"; ⚠️ Holding out for CSS `:has` */
 /* @use "Plugins/Theme/customIcons.scss"; ❌ Won't reimplement. Left for reference. */
 /* @use "User Interface/animations.scss"; ❌ Won't reimplement. Left for reference. */
-
-/*
-
-STYLE SETTINGS TO FIX
-- Test All Accent Styles to make sure they look right.
-- Accent Text Color Preset needs some work and consideration.
-
-TODO
-- Theme and Plugin stores need some attention for consistency. Themes with no readme look odd.
-- Go over the accent styles and make sure they are consistent and don't have recurring values (put those in base).
-- Sort out --page-background-color variable.
-- Look over the use of var(--background-primary-alt).
-- Mobile theme.
-- Re-enable the plugin support list in the repo. Make sure Hub plugins list is up to date.
-
-- Hover effects on toggles and sliders (mostly an issue with Dark theme). Dropdown sections in Graph (and elsewhere?)
-
-Reported Issues (Turn into Forum reports)
-Blockquote border thickness variable name: https://discord.com/channels/686053708261228577/989603365606531104/1018203322513100933  Also why the forced HTML styling for text-indent and padding-left?
-Syntax Highlighting inconsistency - https://discord.com/channels/686053708261228577/989603365606531104/1020085523177558036
-
-*/

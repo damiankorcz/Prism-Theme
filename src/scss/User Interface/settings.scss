@@ -1,58 +1,69 @@
 /* #region  [UI] Settings */
-.modal.mod-settings {
-	.vertical-tab-header {
-		flex: none;
-		width: 215px;
-		min-width: unset;
-		max-width: unset;
-		padding: 0;
+.modal.mod-settings .vertical-tab-header {
+	flex: none;
+	width: 215px;
+	min-width: unset;
+	max-width: unset;
+	padding: 0;
+}
 
-		&::before {
-			position: sticky;
-			top: 0;
-			display: block;
-			width: -webkit-fill-available;
-			width: fill-available;
-			height: 42px;
-			margin-bottom: -1px;
-			content: "";
-			background: var(--background-secondary-blur);
-			border-bottom: 1px solid var(--window-border);
-			-webkit-backdrop-filter: blur(var(--blur-intensity));
-			backdrop-filter: blur(var(--blur-intensity));
-		}
+.modal.mod-settings .vertical-tab-header::before {
+	position: sticky;
+	top: 0;
+	display: block;
+	width: -webkit-fill-available;
+	width: fill-available;
+	height: 42px;
+	margin-bottom: -1px;
+	content: "";
+	background: var(--background-secondary-blur);
+	border-bottom: 1px solid var(--window-border);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
+}
 
-		&::after {
-			position: absolute;
-			top: var(--size-4-2);
-			left: var(--size-4-2);
-			display: inline-flex;
-			flex-direction: column;
-			align-content: center;
-			justify-content: center;
-			width: fit-content;
-			height: 24px;
-			padding: 0 8px;
-			font-size: 14px;
-			font-weight: 600;
-			color: var(--interactive-accent-text);
-			content: "Prism v3.0.0 Beta 11";
-			border: 1px solid var(--window-border);
-			border-radius: var(--radius-s);
+.is-phone .modal.mod-settings .modal-title::after,
+.modal.mod-settings .vertical-tab-header::after {
+	position: absolute;
+	top: var(--size-4-2);
+	left: var(--size-4-2);
+	display: inline-flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	width: fit-content;
+	height: 24px;
+	padding: 0 8px;
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--interactive-accent-text);
+	content: "Prism 3.0.0";
+	border: 1px solid var(--window-border);
+	border-radius: var(--radius-s);
+}
 
-			.theme-light & {
-				background-color: var(--background-primary);
-			}
+.theme-light.is-phone .modal.mod-settings .modal-title::after,
+.theme-light .modal.mod-settings .vertical-tab-header::after {
+	background-color: var(--background-primary);
+}
 
-			.theme-dark & {
-				background-color: var(--background-secondary-alt);
-			}
-		}
-	}
+.theme-dark.is-phone .modal.mod-settings .modal-title::after,
+.theme-dark .modal.mod-settings .vertical-tab-header::after {
+	background-color: var(--background-secondary-alt);
+}
+
+.is-phone .modal.mod-settings .modal-title::after {
+	top: 9px;
+	left: 50px;
 }
 
 .vertical-tab-content {
 	height: calc(100% - 43px);
+}
+
+.is-tablet.theme-dark .community-item,
+.is-tablet.theme-dark .vertical-tab-content {
+	background-color: var(--background-secondary-alt);
 }
 
 .vertical-tab-content-container::before {
@@ -166,15 +177,6 @@ img.community-theme-lightbox {
 }
 
 .community-modal-info {
-	display: grid;
-	grid-template-areas:
-		"info-name info-name button-container button-container"
-		"info-author info-author info-version info-version"
-		"info-repo info-repo info-repo info-downloads"
-		"info-desc info-desc info-desc info-desc"
-		"seperator seperator seperator seperator"
-		"readme readme readme readme";
-	row-gap: var(--size-2-1);
 	padding: var(--size-4-8) var(--size-4-12);
 
 	hr {
@@ -183,173 +185,66 @@ img.community-theme-lightbox {
 	}
 }
 
+.community-modal-info-name {
+	margin-bottom: var(--size-4-2);
+}
+
+.community-modal-info-downloads {
+	margin-top: unset;
+}
+
 .community-modal-button-container {
 	display: flex;
-	grid-area: button-container;
+	flex-wrap: wrap;
 	gap: var(--size-4-2);
-	justify-content: flex-end;
-	margin: unset;
+	margin: var(--size-4-2) 0;
 
 	button {
 		margin-right: unset;
 	}
 }
 
-.community-modal-info-name {
-	display: flex;
-	grid-area: info-name;
-	align-items: center;
-	margin-bottom: unset;
-}
-
-.community-modal-info-downloads {
-	display: flex;
-	grid-area: info-downloads;
-	align-items: center;
-	justify-content: flex-end;
-	margin-top: unset;
-	font-weight: 500;
-}
-
-.community-modal-info-author {
-	display: flex;
-	grid-area: info-author;
-	align-items: center;
-	justify-content: left;
-	font-weight: 500;
-
-	a {
-		margin-left: var(--size-4-1);
-	}
-}
-
-.community-modal-info-version {
-	display: flex;
-	grid-area: info-version;
-	align-items: center;
-	justify-content: flex-end;
-	font-weight: 500;
-}
-
-.community-modal-info-repo {
-	display: flex;
-	grid-area: info-repo;
-	align-items: center;
-	justify-content: flex-start;
-	font-weight: 500;
-}
-
-.community-modal-info-desc {
-	grid-area: info-desc;
-}
-
-.community-modal-readme {
-	grid-area: readme;
-}
-
 .community-item {
-	.modal.mod-community-theme & {
-		display: grid;
-		grid-template-areas:
-			"item-name item-name"
-			"item-author item-downloads"
-			"item-screenshot item-screenshot";
+	padding: var(--size-4-2);
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
 	}
 
-	.modal.mod-community-plugin & {
-		display: grid;
-		grid-template-areas:
-			"item-name item-name"
-			"item-author item-downloads"
-			"item-desc item-desc";
+	&.is-selected,
+	&.is-selected:hover {
+		background-color: var(--background-modifier-hover);
 	}
 }
 
 .community-item-name {
 	display: inline-flex;
-	grid-area: item-name;
-	font-weight: var(--font-semibold);
-}
-
-.community-item-author {
-	grid-area: item-author;
-	font-weight: 500;
-}
-
-.community-item-downloads {
-	display: flex;
-	grid-area: item-downloads;
-	justify-content: flex-end;
-	margin-bottom: unset;
-	font-weight: 500;
 }
 
 .community-item-screenshot {
-	grid-area: item-screenshot;
-	margin-top: var(--size-4-2);
 	image-rendering: unset;
-}
-
-.community-item-desc {
-	grid-area: item-desc;
 }
 
 .community-item .flair {
 	height: fit-content;
-	margin-left: auto;
 }
 
 .community-modal-controls {
-	position: absolute;
-	display: flex;
-	gap: var(--size-4-3);
-	align-items: center;
-	width: 100%;
-	height: 43px;
 	background-color: var(--background-secondary);
-	border-bottom: 1px solid var(--window-border);
 
-	.community-modal-search-summary {
-		display: inline-flex;
-		width: fit-content;
-		padding: 0 var(--size-4-1) 0;
+	.setting-item:first-child {
+		padding-left: unset;
+		margin-bottom: unset;
 	}
 
-	.setting-item {
-		display: inline-flex;
-		padding: unset;
-
-		&:first-child {
-			margin-bottom: unset;
-		}
+	input {
+		width: 100%;
+		padding-right: unset;
 	}
 }
 
 .modal-setting-nav-bar {
-	position: absolute;
-	height: 0;
-	padding: 0 var(--size-4-2);
-	border-bottom: unset;
-
-	.clickable-icon {
-		width: 30px;
-		height: 30px;
-		padding: var(--size-4-1);
-		margin-top: var(--size-4-2);
-
-		svg.svg-icon {
-			width: 28px;
-			height: 28px;
-		}
-	}
-}
-
-.community-modal-search-results-wrapper {
-	border-top: unset;
-}
-
-:is(.community-modal-search-results-wrapper, .community-modal-details) {
-	margin-top: 43px;
+	background-color: var(--background-secondary);
 }
 
 .setting-item {
@@ -366,7 +261,7 @@ img.community-theme-lightbox {
 	font-weight: var(--font-medium);
 }
 
-body:not(.native-scrollbars) .modal-close-button {
+body:not(.native-scrollbars, .is-phone) .modal-close-button {
 	top: var(--size-4-1);
 	right: var(--size-4-1);
 	z-index: var(--layer-popover);
@@ -389,6 +284,10 @@ body:not(.native-scrollbars) .modal-close-button {
 	background-color: var(--background-secondary);
 	border: 1px solid var(--window-border);
 	box-shadow: unset;
+
+	&:hover {
+		border-color: var(--interactive-accent-tint);
+	}
 
 	&::after {
 		border: 1px solid var(--window-border);
@@ -428,6 +327,10 @@ input[type="range"] {
 	border: 1px solid var(--window-border);
 	border-radius: var(--size-2-1);
 
+	&:hover {
+		border-color: var(--interactive-accent-tint);
+	}
+
 	&::-webkit-slider-thumb {
 		height: 19px;
 		background-color: var(--toggle-thumb-color);
@@ -437,10 +340,21 @@ input[type="range"] {
 
 select.dropdown {
 	font-family: var(--font-interface);
-	background-color: var(--background-primary);
 	border: 1px solid var(--window-border);
 	border-radius: var(--radius-s);
 	box-shadow: var(--shadow-s);
+
+	.theme-light & {
+		background-color: white;
+	}
+
+	.theme-dark & {
+		background-color: var(--background-primary);
+	}
+
+	&:hover {
+		border-color: var(--interactive-accent-tint);
+	}
 
 	option[value*="accent"]:not([value*="accent-style"]):not([value*="accent-color"]) {
 		color: var(--interactive-accent-text);

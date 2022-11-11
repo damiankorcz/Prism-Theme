@@ -18,6 +18,14 @@
 	box-shadow: unset;
 }
 
+.is-mobile.is-phone .modal.mod-settings .vertical-tab-nav-item:last-child {
+	border-bottom: var(--accent-border-width) solid;
+}
+
+.nav-action-button.is-active:hover {
+	color: var(--interactive-accent-hover);
+}
+
 :is(.search-result-file-match-destination-file, .search-result-file-match-replace-button) {
 	color: var(--text-normal);
 	border: var(--accent-border-width) solid;
@@ -37,7 +45,7 @@ button.mod-cta {
 	padding: var(--size-2-1) var(--size-2-2);
 }
 
-:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left) {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
 	color: var(--highlight-text-normal);
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-m);

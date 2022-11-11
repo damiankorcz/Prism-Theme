@@ -20,11 +20,16 @@
 }
 
 button.kanban-plugin__new-item-button {
-	background-color: var(--background-primary);
 	border: 1px solid var(--window-border);
 
 	&:hover {
 		background-color: var(--background-modifier-hover);
+	}
+}
+
+.kanban-plugin__item-form .kanban-plugin__item-input-wrapper {
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
 	}
 }
 
@@ -44,7 +49,7 @@ button.kanban-plugin__new-item-button {
 	}
 
 	.theme-dark & {
-		background-color: var(--background-secondary);
+		background-color: var(--background-secondary-alt);
 	}
 }
 
@@ -86,9 +91,13 @@ button.kanban-plugin__new-item-button {
 .kanban-plugin__board > div {
 	padding: var(--size-4-4);
 
-	.show-view-header & {
+	.show-view-header > div:not(.popover) & {
 		padding-top: calc(var(--header-height) + var(--size-4-4));
 	}
+}
+
+.kanban-plugin__markdown-preview-view > div > * {
+	overflow-x: unset;
 }
 
 // Kanban Item Counter
