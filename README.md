@@ -7,26 +7,44 @@
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE"><img src="https://img.shields.io/github/license/damiankorcz/Obsidian-Prism?color=%23A31F34&style=for-the-badge&labelColor=%23252525&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAV0lEQVQ4jWNkYGBgqOie85+BDNBRmsLIAuO0lySTpLmyZy4DAwMDAxM5NiMDig1gQReo7JnL0F6SDHciOkD3KoYBMAXEhsmoCwaDCwY+JVIvKeMKNEIAAB9dK8YXTwb/AAAAAElFTkSuQmCC" /></a>
 	<br />
 	<br />
-	<a href="https://www.buymeacoffee.com/DamianKorcz"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee!&emoji=&slug=DamianKorcz&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+	<a href="https://www.buymeacoffee.com/DamianKorcz"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee!&emoji=&slug=DamianKorcz&button_colour=D7BB00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
 	<br />
 </div>
 
 # ✨ Key Features 
-## Platforms
+## Complete Platform Support
+
 ![Platforms](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Platforms.png)
 
-## Light Colour Schemes
+Prism is designed to work across all platforms and operating systems Obsidian is available on (Desktop, Phone and Tablet).
+
+## 4 Light Colour Schemes
+
 ![Light Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Light%20Colour%20Schemes.png)
 
-## Dark Colour Schemes
+***(Front to Back: Swan, Latte, Periwinkle and Pistachio)***
+
+## 4 Dark Colour Schemes
+
 ![Dark Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Dark%20Colour%20Schemes.png)
 
-## 4 Accent Styles and 10 Preset Accent Colours
+***(Front to Back: Raven, Mocha, Indigo and Pine)***
+
+## 4 Accent Styles and 10 Preset Colours + Option for Custom Colours
+
 ![Accent Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Accent%20Styles%20and%20Colours.png)
 
+***(Top Row: Accent Styles, Last 2 Rows: Available Colours + Custom Option)***
+
 ## Highlight System based on the `<mark>` tag
+
+The Highlight System comes with 4 different styles and an option to change the text colour independently from the other adjustments.<br />
+Colors available = Red, Orange, Yellow, Green, Mint, Cyan, Blue, Purple, Pink and Grey.<br />
+*Usage Example: `<mark class="red">Your Red text</mark>`*
+
 ![Mark Highlight Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Mark%20Highlight%20Styles%20and%20Colours.png)
 
+***(Start to Finish: None, Border, Filled, Border & Filled, Text Colour option)***
 
 ## UI customisation including position, alignment and modification of various elements.
 
