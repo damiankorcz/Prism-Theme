@@ -11,20 +11,30 @@
 	<br />
 </div>
 
-## ✨ Key Features 
-- 8 Hand Crafted Light / Dark Colour Schemes.
-- 4 Accent Styles and 10 Preset Accent Colours.
-- Highlight System based on the `<mark>` tag.
-- UI customisation including position, alignment and modification of various elements.
-- Independent options for the Light and Dark variants.
+# ✨ Key Features 
+## Platforms
+![Platforms](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Platforms.png)
+
+## Light Colour Schemes
+![Light Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Light%20Colour%20Schemes.png)
+
+## Dark Colour Schemes
+![Dark Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Dark%20Colour%20Schemes.png)
+
+## 4 Accent Styles and 10 Preset Accent Colours
+![Accent Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Accent%20Styles%20and%20Colours.png)
+
+## Highlight System based on the `<mark>` tag
+![Mark Highlight Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Mark%20Highlight%20Styles%20and%20Colours.png)
+
+
+## UI customisation including position, alignment and modification of various elements.
 
 ... and plenty more available in Style Settings!
 
 
-## 📸 Screenshots
-
-## 🚀 Getting Started
-### Install the Style Settings Plugin **(⚠️Required)**
+# 🚀 Getting Started
+## Install the Style Settings Plugin **(⚠️Required)**
 1. Open Obsidian and go to Settings.
 2. Click on the Community plugins tab.
 3. Click on the `Browse` button.
@@ -32,7 +42,7 @@
 5. Click the `Install` button.
 6. Click the `Enable` button once the plugin is finished installing.
 
-###  Install the Prism Theme
+##  Install the Prism Theme
 1. Open Obsidian and go to Settings.
 2. Click on the Appearance tab.
 3. Click the `Manage` button.
@@ -44,23 +54,23 @@
 I highly recommend for you to go through the options available in the Style Settings to make the theme fit you just right!
 
 
-## 🧩 Supported Plugins
+# 🧩 Supported Plugins
 Checkout the full list in the [**Supported Plugins**](https://github.com/damiankorcz/Obsidian-Prism#-Supported-Plugins) section of the Wiki. These plugins have been checked to work correctly and might have additional settings in Style Settings.
 
 If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
 
 
-## ✂️ Snippets
+# ✂️ Snippets
 Theme features which you can import as snippets into Obsidian are located in the [**Snippets Folder**](https://github.com/damiankorcz/Prism-Theme/tree/main/src/snippets). These features have been requested by users for use in other themes and for additional interoperability between themes.
 
 
-## 📖 Wiki
+# 📖 Wiki
 The theme has a Wiki which includes additional detailed descriptions for theme specific features and customisation options.
 
 This can be found here: [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki).
 
 
-## 🛠 Contributing
+# 🛠 Contributing
 Currently the theme is being designed for desktop and mobile use (Phone and Tablet). The theme has been tested on Windows 11 and Android Phone/Tablet.
 
 If you want to provide specific feedback or report an issue please use [**Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues).
@@ -70,7 +80,7 @@ Although I don't prohibit pull requests, the theme is quite complex with a lot o
 Otherwise you are welcome to contact me through the channels mentioned below to discuss anything regarding the theme.
 
 
-## 📬 Contact
+# 📬 Contact
 Feel free to reach out to me via the Official Obsidian Discord Channel: 
 
 <a href="https://discord.gg/veuWUTm"><img alt="Discord" src="https://img.shields.io/discord/686053708261228577?color=%235865F2&label=Obsidian%20Members%20Group%20%28OMG%29&labelColor=%23252525&logo=discord&style=for-the-badge"></a> <a href="https://discordapp.com/users/Damikiller37#6130/"><img src="https://img.shields.io/badge/Discord-Damikiller37%236130-%235865F2?style=for-the-badge&labelColor=%23252525&logo=discord" /></a>
@@ -81,7 +91,7 @@ Let me know how you use the theme over at Prism's Obsidian Forum Thread:
 
 
 
-## 📣 Acknowledgments
+# 📣 Acknowledgments
 Special thanks to the following people:
 - The developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
 - [**@mgmeyers**](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
@@ -90,7 +100,7 @@ Special thanks to the following people:
 - On recommendation from [**@valentine195**](https://github.com/valentine195) - Esbuild config is based on [**@jdanielmourao**](https://github.com/jdanielmourao)'s [**Sanctum theme**](https://github.com/jdanielmourao/obsidian-sanctum) setup.
 - The Obsidian Community over at Discord for endless inspiration to improve the theme!
 
-## 📝 License
+# 📝 License
 The Theme contains Base64 embedded versions of the following fonts:
 - [**Source Sans**](https://github.com/adobe-fonts/source-sans) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md)
 - [**JetBrains Mono**](https://github.com/JetBrains/JetBrainsMono) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt)
