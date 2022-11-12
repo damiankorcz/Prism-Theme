@@ -1239,6 +1239,62 @@ settings:
         opacity: false
         default: '#4C3AB6'
     -
+        id: custom-vault-banner
+        title: Custom Vault Banner
+        description: Custom Vault Banner in the File Explorer with a custom icon option.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pt-custom-vault-banner
+        title: Enable Custom Vault Banner
+        description: Enables the Custom Vault Banner in the File Explorer.
+        type: class-toggle
+        default: true
+    -
+        id: custom-vault-banner-horizontal-align
+        title: Custom Vault Banner Alignment
+        description: Horizontally aligns the Custom Vault Banner content.
+        type: class-select
+        allowEmpty: false
+        default: pt-custom-vault-banner-justify-content-center
+        options:
+            -
+                label: Left
+                value: pt-custom-vault-banner-justify-content-left
+            -
+                label: Center
+                value: pt-custom-vault-banner-justify-content-center
+            -
+                label: Right
+                value: pt-custom-vault-banner-justify-content-right
+    -
+        id: custom-vault-banner-order
+        title: Custom Vault Banner Order
+        description: Select the order in which the content appears in the Custom Vault Banner.
+        type: class-select
+        allowEmpty: false
+        default: pt-custom-vault-banner-order-ltr
+        options:
+            -
+                label: Left to Right
+                value: pt-custom-vault-banner-order-ltr
+            -
+                label: Right to Left
+                value: pt-custom-vault-banner-order-rtl
+    -
+        id: pt-custom-vault-banner-sticky
+        title: Custom Vault Banner Sticky
+        description: Make the Custom Vault Banner stick to the top of the File Explorer.
+        type: class-toggle
+        default: true
+    -
+        id: custom-vault-banner-icon-url
+        title: Vault Banner Icon (URL)
+        description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
+        type: variable-text
+        default: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E)
+    -
         id: editor
         title: Editor
         description: Settings for elements inside the Editor / Preview area of Obsidian.
@@ -2935,62 +2991,6 @@ settings:
         min: 0
         max: 25
         step: 1
-    -
-        id: custom-vault-banner
-        title: Custom Vault Banner
-        description: Custom Vault Banner in the File Explorer with a custom icon option.
-        type: heading
-        level: 4
-        collapsed: true
-    -
-        id: pt-custom-vault-banner
-        title: Enable Custom Vault Banner
-        description: Enables the Custom Vault Banner in the File Explorer.
-        type: class-toggle
-        default: true
-    -
-        id: custom-vault-banner-horizontal-align
-        title: Custom Vault Banner Alignment
-        description: Horizontally aligns the Custom Vault Banner content.
-        type: class-select
-        allowEmpty: false
-        default: pt-custom-vault-banner-justify-content-center
-        options:
-            -
-                label: Left
-                value: pt-custom-vault-banner-justify-content-left
-            -
-                label: Center
-                value: pt-custom-vault-banner-justify-content-center
-            -
-                label: Right
-                value: pt-custom-vault-banner-justify-content-right
-    -
-        id: custom-vault-banner-order
-        title: Custom Vault Banner Order
-        description: Select the order in which the content appears in the Custom Vault Banner.
-        type: class-select
-        allowEmpty: false
-        default: pt-custom-vault-banner-order-ltr
-        options:
-            -
-                label: Left to Right
-                value: pt-custom-vault-banner-order-ltr
-            -
-                label: Right to Left
-                value: pt-custom-vault-banner-order-rtl
-    -
-        id: pt-custom-vault-banner-sticky
-        title: Custom Vault Banner Sticky
-        description: Make the Custom Vault Banner stick to the top of the File Explorer.
-        type: class-toggle
-        default: true
-    -
-        id: custom-vault-banner-icon-url
-        title: Vault Banner Icon (URL)
-        description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
-        type: variable-text
-        default: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E)
     -
         id: titlebar
         title: Titlebar
