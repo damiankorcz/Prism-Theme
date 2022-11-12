@@ -1,13 +1,13 @@
 /* #region  [Accent Style] Border Only */
-:is(.theme-dark.pt-accent-style-border-dt,
-.theme-light.pt-accent-style-border-lt) {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) {
 	.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header.is-active,
 	.workspace-tab-header.is-active,
 	.nav-action-button.is-active,
 	.vertical-tab-nav-item.is-active,
 	.nav-file-title.is-active,
 	.suggestion-hotkey,
-	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
+	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
+	.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
 		background-color: var(--background-primary);
 		border-color: var(--interactive-accent-tint);
 	}
@@ -105,7 +105,7 @@
 	}
 }
 
-:is(.theme-dark.pt-accent-style-border-dt.is-mobile.is-phone, .theme-light.pt-accent-style-border-lt.is-mobile.is-phone) {
+:is(.theme-dark.pt-accent-style-border-dt.is-mobile, .theme-light.pt-accent-style-border-lt.is-mobile) {
 	.modal.mod-settings .vertical-tab-nav-item {
 		border-color: transparent;
 

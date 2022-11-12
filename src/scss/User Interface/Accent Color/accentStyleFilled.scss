@@ -6,7 +6,8 @@
 	.vertical-tab-nav-item.is-active,
 	.nav-file-title.is-active,
 	.suggestion-hotkey,
-	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active {
+	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
+	.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
 		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
@@ -103,7 +104,7 @@
 	}
 }
 
-:is(.theme-dark.pt-accent-style-filled-dt.is-mobile.is-phone, .theme-light.pt-accent-style-filled-lt.is-mobile.is-phone) {
+:is(.theme-dark.pt-accent-style-filled-dt.is-mobile, .theme-light.pt-accent-style-filled-lt.is-mobile) {
 	.modal.mod-settings .vertical-tab-nav-item {
 		border-color: transparent;
 

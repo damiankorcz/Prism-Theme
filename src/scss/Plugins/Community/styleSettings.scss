@@ -25,11 +25,15 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-.style-settings-container .setting-item {
-	padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-4);
+.style-settings-container {
+	padding-bottom: unset;
 
-	.is-phone & {
-		margin-top: unset;
+	.setting-item {
+		padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-4);
+
+		.is-phone & {
+			margin-top: unset;
+		}
 	}
 }
 
