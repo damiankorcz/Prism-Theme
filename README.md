@@ -1,4 +1,4 @@
-![Main Screenshot](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Github%20Hero%20Image.png)
+![Main Screenshot](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Github%20Hero%20Image.png)
 
 <div align="center">
 	<a href="https://github.com/damiankorcz/Obsidian-Prism/releases"><img src="https://img.shields.io/github/v/release/damiankorcz/Obsidian-Prism?style=for-the-badge&color=%23A47B61&labelColor=%23252525&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAA1klEQVRIiWNgoDFgXJjpXU5LC1gYGP930NYCBgYGfV1NBn1dTaoafPHydYaLl68zMFHVVCyA5hawMDAgvEMbCxj/dzIwMNgw/Ge0FhMVpoqhr16/ZWBg/H+UgYHhCCMDAwPDwiyvBgYGhvq4qCCqWLBo2ToGBgaGxvhp2xroEwf4wKvXbxhevX6HVU5MTJhBTAR/sBK04P6DJww3b9/DKqeupkS5BeamBgzmpgaElOEEQz+jjVowagHlACWjQQsp6lvwj4npANO/f1Q1+B8T0wGqGogLAADmITOhp5zsqQAAAABJRU5ErkJggg==" /></a>
@@ -11,28 +11,29 @@
 	<br />
 </div>
 
+
 # ✨ Key Features 
 ## Complete Platform Support
 
-![Platforms](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Platforms.png)
+![Platforms](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Platforms.png)
 
 Prism is designed to work across all platforms and operating systems Obsidian is available on (Desktop, Phone and Tablet).
 
 ## 4 Light Colour Schemes
 
-![Light Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Light%20Colour%20Schemes.png)
+![Light Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Light%20Colour%20Schemes.png)
 
 ***(Front to Back: Swan, Latte, Periwinkle and Pistachio)***
 
 ## 4 Dark Colour Schemes
 
-![Dark Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Dark%20Colour%20Schemes.png)
+![Dark Colour Schemes](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Dark%20Colour%20Schemes.png)
 
 ***(Front to Back: Raven, Mocha, Indigo and Pine)***
 
 ## 4 Accent Styles and 10 Preset Colours + Option for Custom Colours
 
-![Accent Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Accent%20Styles%20and%20Colours.png)
+![Accent Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Accent%20Styles%20and%20Colours.png)
 
 ***(Top Row: Accent Styles, Last 2 Rows: Available Colours + Custom Option)***
 
@@ -42,13 +43,14 @@ The Highlight System comes with 4 different styles and an option to change the t
 Colors available = Red, Orange, Yellow, Green, Mint, Cyan, Blue, Purple, Pink and Grey.<br />
 *Usage Example: `<mark class="red">Your Red text</mark>`*
 
-![Mark Highlight Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Mark%20Highlight%20Styles%20and%20Colours.png)
+![Mark Highlight Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Mark%20Highlight%20Styles%20and%20Colours.png)
 
 ***(Start to Finish: None, Border, Filled, Border & Filled, Text Colour option)***
 
-## UI customisation including position, alignment and modification of various elements.
+## Customisation Options
+Options for position, alignment, modification of various elements and plenty more available via the Style Settings plugin!
 
-... and plenty more available in Style Settings!
+![Style Settings](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/3.0.0/assets/screenshots/Style%20Settings.png)
 
 
 # 🚀 Getting Started
@@ -67,8 +69,6 @@ Colors available = Red, Orange, Yellow, Green, Mint, Cyan, Blue, Purple, Pink an
 4. In the `Filter...`  Search Box, search for `Prism`.
 5. Click the `Install and use` button.
 
-
-	
 I highly recommend for you to go through the options available in the Style Settings to make the theme fit you just right!
 
 
@@ -108,7 +108,6 @@ Let me know how you use the theme over at Prism's Obsidian Forum Thread:
 <a href="https://forum.obsidian.md/t/theme-prism/36493"><img src="https://img.shields.io/badge/Prism%20Forum%20Thread-%23483699?style=for-the-badge&labelColor=%23252525&logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+Cjxzdmcgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29tLyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyOyI+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQyIiB0cmFuc2Zvcm09Im1hdHJpeCgxLjU4NzMsMCwwLDEsLTI5LjM2NTEsMCkiPgogICAgICAgIDxyZWN0IHg9IjE4LjUiIHk9IjAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIxMDAiIHN0eWxlPSJmaWxsOm5vbmU7Ii8+CiAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMC42MywwLDAsMSwyOS41OTk4LC0wLjI1NjU0MSkiPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDQuNjEsMEwxMi45MSwxNy41MkwwLDQ1LjQ1TDE5LjU3LDkwLjQ3TDQ3LjM1LDEwMEw1Mi40NCw4OS44TDYzLDI2LjM5TDQ0LjYxLDBaIiBzdHlsZT0iZmlsbDpyZ2IoNTIsMzIsMTQwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNjMsMjYuMzlMNDMuNDQsMTQuNDFMMTYuNDMsMzUuN0w0Ny4zNSwxMDBMNTIuNDQsODkuOEw2MywyNi4zOVoiIHN0eWxlPSJmaWxsOnVybCgjX0xpbmVhcjEpO2ZpbGwtcnVsZTpub256ZXJvOyIvPgogICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDxnIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLDEsMC44ODEyMTYsMC4yNTY1NDEpIj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik02MywyNi4zOUw0NC42MSwwTDQzLjQ0LDE0LjQxTDYzLDI2LjM5WiIgc3R5bGU9ImZpbGw6cmdiKDE3NSwxNTksMjQ0KTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwxLDAuODgxMjE2LDAuMjU2NTQxKSI+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDMuNDQsMTQuNDFMNDQuNjEsMEwxMi45MSwxNy41MkwxNi40MywzNS43TDQzLjQ0LDE0LjQxWiIgc3R5bGU9ImZpbGw6cmdiKDc0LDU1LDE2MCk7ZmlsbC1ydWxlOm5vbnplcm87Ii8+CiAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMSwwLjg4MTIxNiwwLjI1NjU0MSkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTE2LjQzLDM1LjdMMTkuNTcsOTAuNDdMNDcuMzUsMTAwTDE2LjQzLDM1LjdaIiBzdHlsZT0iZmlsbDpyZ2IoNzQsNTUsMTYwKTtmaWxsLXJ1bGU6bm9uemVybzsiLz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iX0xpbmVhcjEiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgtMzEuNTksLTc1LjQ5LDc1LjQ5LC0zMS41OSw2MC40NCw4MC41NikiPjxzdG9wIG9mZnNldD0iMCIgc3R5bGU9InN0b3AtY29sb3I6cmdiKDEwOCw4NiwyMDQpO3N0b3Atb3BhY2l0eToxIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdHlsZT0ic3RvcC1jb2xvcjpyZ2IoMTUxLDEzMywyMjkpO3N0b3Atb3BhY2l0eToxIi8+PC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KPC9zdmc+Cg==" /></a>
 
 
-
 # 📣 Acknowledgments
 Special thanks to the following people:
 - The developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
@@ -118,9 +117,12 @@ Special thanks to the following people:
 - On recommendation from [**@valentine195**](https://github.com/valentine195) - Esbuild config is based on [**@jdanielmourao**](https://github.com/jdanielmourao)'s [**Sanctum theme**](https://github.com/jdanielmourao/obsidian-sanctum) setup.
 - The Obsidian Community over at Discord for endless inspiration to improve the theme!
 
+
 # 📝 License
 The Theme contains Base64 embedded versions of the following fonts:
 - [**Source Sans**](https://github.com/adobe-fonts/source-sans) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md)
 - [**JetBrains Mono**](https://github.com/JetBrains/JetBrainsMono) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt)
+
+The default Vault Banner Icon `Opened Folder icon` has been sourced from [**Icons8**](https://icons8.com/icon/21094/opened-folder)
 
 The Theme code is distributed under the MIT License. See [**LICENCE**](https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE) for more information.
