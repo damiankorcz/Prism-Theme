@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: 3.0.0)
+    Prism Theme for Obsidian.md (Version: 3.0.1)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1402,7 +1402,7 @@ body.is-mobile .mod-root .view-content::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.0.0";
+  content: "Prism 3.0.1";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -2337,10 +2337,10 @@ p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
 }
-.theme-light :is(em strong, .cm-em.cm-strong) {
+.theme-light :is(em strong, strong em, .cm-em.cm-strong) {
   color: var(--text-italic-bold-color-lt);
 }
-.theme-dark :is(em strong, .cm-em.cm-strong) {
+.theme-dark :is(em strong, strong em, .cm-em.cm-strong) {
   color: var(--text-italic-bold-color-dt);
 }
 :is(.cm-inline-code, .cm-math) {
