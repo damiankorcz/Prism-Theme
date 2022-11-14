@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: 3.0.1)
+    Prism Theme for Obsidian.md (Version: 3.0.2)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1402,7 +1402,7 @@ body.is-mobile .mod-root .view-content::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.0.1";
+  content: "Prism 3.0.2";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -2394,7 +2394,7 @@ p {
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder {
   color: var(--interactive-accent-text);
 }
-.markdown-source-view.mod-cm6 .cm-formatting-list-ul {
+.markdown-source-view.mod-cm6 .list-bullet {
   padding-inline-end: 0.4em;
 }
 .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -2543,147 +2543,147 @@ a.tag:hover {
   border-bottom-right-radius: var(--radius-m);
   border-bottom-left-radius: var(--radius-m);
 }
-.callout[data-callout=note] .callout-title {
+.callout[data-callout=note] > .callout-title {
   color: var(--color-grey-text);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-.callout[data-callout=note] .callout-icon .svg-icon {
+.callout[data-callout=note] > .callout-title .callout-icon .svg-icon {
   color: var(--color-grey-text);
 }
-.callout[data-callout=note] .callout-content {
+.callout[data-callout=note] > .callout-content {
   background-color: hsla(var(--color-grey-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
-:is(.callout[data-callout=abstract], .callout[data-callout=summary], .callout[data-callout=tldr]) .callout-title {
+.callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title {
   color: var(--color-cyan-text);
   background-color: var(--color-cyan-base);
   border-color: var(--color-cyan-tint);
 }
-:is(.callout[data-callout=abstract], .callout[data-callout=summary], .callout[data-callout=tldr]) .callout-icon .svg-icon {
+.callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-cyan-text);
 }
-:is(.callout[data-callout=abstract], .callout[data-callout=summary], .callout[data-callout=tldr]) .callout-content {
+.callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-content {
   background-color: hsla(var(--color-cyan-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-cyan-tint);
 }
-:is(.callout[data-callout=info], .callout[data-callout=todo]) .callout-title {
+.callout:is([data-callout=info], [data-callout=todo]) > .callout-title {
   color: var(--color-blue-text);
   background-color: var(--color-blue-base);
   border-color: var(--color-blue-tint);
 }
-:is(.callout[data-callout=info], .callout[data-callout=todo]) .callout-icon .svg-icon {
+.callout:is([data-callout=info], [data-callout=todo]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-blue-text);
 }
-:is(.callout[data-callout=info], .callout[data-callout=todo]) .callout-content {
+.callout:is([data-callout=info], [data-callout=todo]) > .callout-content {
   background-color: hsla(var(--color-blue-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-blue-tint);
 }
-:is(.callout[data-callout=tip], .callout[data-callout=hint], .callout[data-callout=important]) .callout-title {
+.callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title {
   color: var(--color-mint-text);
   background-color: var(--color-mint-base);
   border-color: var(--color-mint-tint);
 }
-:is(.callout[data-callout=tip], .callout[data-callout=hint], .callout[data-callout=important]) .callout-icon .svg-icon {
+.callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-mint-text);
 }
-:is(.callout[data-callout=tip], .callout[data-callout=hint], .callout[data-callout=important]) .callout-content {
+.callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-content {
   background-color: hsla(var(--color-mint-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-mint-tint);
 }
-:is(.callout[data-callout=success], .callout[data-callout=check], .callout[data-callout=done]) .callout-title {
+.callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title {
   color: var(--color-green-text);
   background-color: var(--color-green-base);
   border-color: var(--color-green-tint);
 }
-:is(.callout[data-callout=success], .callout[data-callout=check], .callout[data-callout=done]) .callout-icon .svg-icon {
+.callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-green-text);
 }
-:is(.callout[data-callout=success], .callout[data-callout=check], .callout[data-callout=done]) .callout-content {
+.callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-content {
   background-color: hsla(var(--color-green-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-green-tint);
 }
-:is(.callout[data-callout=question], .callout[data-callout=help], .callout[data-callout=faq]) .callout-title {
+.callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title {
   color: var(--color-yellow-text);
   background-color: var(--color-yellow-base);
   border-color: var(--color-yellow-tint);
 }
-:is(.callout[data-callout=question], .callout[data-callout=help], .callout[data-callout=faq]) .callout-icon .svg-icon {
+.callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-yellow-text);
 }
-:is(.callout[data-callout=question], .callout[data-callout=help], .callout[data-callout=faq]) .callout-content {
+.callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-content {
   background-color: hsla(var(--color-yellow-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-yellow-tint);
 }
-:is(.callout[data-callout=warning], .callout[data-callout=caution], .callout[data-callout=attention]) .callout-title {
+.callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title {
   color: var(--color-orange-text);
   background-color: var(--color-orange-base);
   border-color: var(--color-orange-tint);
 }
-:is(.callout[data-callout=warning], .callout[data-callout=caution], .callout[data-callout=attention]) .callout-icon .svg-icon {
+.callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-orange-text);
 }
-:is(.callout[data-callout=warning], .callout[data-callout=caution], .callout[data-callout=attention]) .callout-content {
+.callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-content {
   background-color: hsla(var(--color-orange-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-orange-tint);
 }
-:is(.callout[data-callout=failure], .callout[data-callout=fail], .callout[data-callout=missing]) .callout-title {
+.callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title {
   color: var(--color-red-text);
   background-color: var(--color-red-base);
   border-color: var(--color-red-tint);
 }
-:is(.callout[data-callout=failure], .callout[data-callout=fail], .callout[data-callout=missing]) .callout-icon .svg-icon {
+.callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-red-text);
 }
-:is(.callout[data-callout=failure], .callout[data-callout=fail], .callout[data-callout=missing]) .callout-content {
+.callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-content {
   background-color: hsla(var(--color-red-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-red-tint);
 }
-:is(.callout[data-callout=danger], .callout[data-callout=error]) .callout-title {
+.callout:is([data-callout=danger], [data-callout=error]) > .callout-title {
   color: var(--color-red-text);
   background-color: var(--color-red-base);
   border-color: var(--color-red-tint);
 }
-:is(.callout[data-callout=danger], .callout[data-callout=error]) .callout-icon .svg-icon {
+.callout:is([data-callout=danger], [data-callout=error]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-red-text);
 }
-:is(.callout[data-callout=danger], .callout[data-callout=error]) .callout-content {
+.callout:is([data-callout=danger], [data-callout=error]) > .callout-content {
   background-color: hsla(var(--color-red-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-red-tint);
 }
-.callout[data-callout=bug] .callout-title {
+.callout[data-callout=bug] > .callout-title {
   color: var(--color-pink-text);
   background-color: var(--color-pink-base);
   border-color: var(--color-pink-tint);
 }
-.callout[data-callout=bug] .callout-icon .svg-icon {
+.callout[data-callout=bug] > .callout-title .callout-icon .svg-icon {
   color: var(--color-pink-text);
 }
-.callout[data-callout=bug] .callout-content {
+.callout[data-callout=bug] > .callout-content {
   background-color: hsla(var(--color-pink-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-pink-tint);
 }
-.callout[data-callout=example] .callout-title {
+.callout[data-callout=example] > .callout-title {
   color: var(--color-purple-text);
   background-color: var(--color-purple-base);
   border-color: var(--color-purple-tint);
 }
-.callout[data-callout=example] .callout-icon .svg-icon {
+.callout[data-callout=example] > .callout-title .callout-icon .svg-icon {
   color: var(--color-purple-text);
 }
-.callout[data-callout=example] .callout-content {
+.callout[data-callout=example] > .callout-content {
   background-color: hsla(var(--color-purple-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-purple-tint);
 }
-:is(.callout[data-callout=quote], .callout[data-callout=cite]) .callout-title {
+.callout:is([data-callout=quote], [data-callout=cite]) > .callout-title {
   color: var(--color-grey-text);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-:is(.callout[data-callout=quote], .callout[data-callout=cite]) .callout-icon .svg-icon {
+.callout:is([data-callout=quote], [data-callout=cite]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-grey-text);
 }
-:is(.callout[data-callout=quote], .callout[data-callout=cite]) .callout-content {
+.callout:is([data-callout=quote], [data-callout=cite]) > .callout-content {
   background-color: hsla(var(--color-grey-base-hsl)/var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
