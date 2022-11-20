@@ -143,25 +143,25 @@ settings:
         title: Custom Accent Base Color
         description: Accent Base Color should ideally be the lightest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red100)'
+        default: '#FF0000'
     -
         id: color-accent-tint-lt
         title: Custom Accent Tint Color
         description: Accent Tint Color should ideally be between Base and Text in terms of lightness.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red200)'
+        default: '#FF0000'
     -
         id: color-accent-text-lt
         title: Custom Accent Text Color
         description: Accent Text Color Lightness should ideally be the darkest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red300)'
+        default: '#FF0000'
     -
         id: accent-colors-styles-dt
         title: Dark Theme
@@ -288,25 +288,25 @@ settings:
         title: Custom Accent Base Color
         description: Accent Base Color should ideally be the darkest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red100)'
+        default: '#FF0000'
     -
         id: color-accent-tint-dt
         title: Custom Accent Tint Color
         description: Accent Tint Color should ideally be between Base and Text in terms of lightness.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red200)'
+        default: '#FF0000'
     -
         id: color-accent-text-dt
         title: Custom Accent Text Color
         description: Accent Text Color Lightness should ideally be the lightest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red300)'
+        default: '#FF0000'
     -
         id: graph-view-colors
         title: Graph Color Customisation
@@ -2371,50 +2371,50 @@ settings:
         title: Internal Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-internal-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-internal-custom-color-lt
         title: Internal Link Custom Color
         description: Make sure you selected 'Custom' in Light Theme Internal Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
@@ -2422,50 +2422,50 @@ settings:
         title: External Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-external-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-external-custom-color-lt
         title: External Link Custom Color
         description: Make sure you selected 'Custom' in Light Theme External Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
@@ -2641,50 +2641,50 @@ settings:
         title: Internal Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-internal-custom-color-dt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-internal-custom-color-dt
         title: Internal Link Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Internal Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
@@ -2692,50 +2692,50 @@ settings:
         title: External Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-external-custom-color-dt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-external-custom-color-dt
         title: External Link Custom Color
         description: Make sure you selected 'Custom' in Dark Theme External Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -

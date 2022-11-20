@@ -109,38 +109,38 @@ body {
 	--status-bar-background-color-dt: #2B2B2B;
 
 	&:is(.theme-light, .theme-dark) {
-		--color-red-base: var(--red100);
-		--color-orange-base: var(--orange100);
-		--color-yellow-base: var(--yellow100);
-		--color-green-base: var(--green100);
-		--color-mint-base: var(--mint100);
-		--color-cyan-base: var(--cyan100);
-		--color-blue-base: var(--blue100);
-		--color-purple-base: var(--purple100);
-		--color-pink-base: var(--pink100);
-		--color-grey-base: var(--grey100);
+		--color-grey-base: hsl(var(--color-grey-base-hsl));
+		--color-red-base: hsl(var(--color-red-base-hsl));
+		--color-orange-base: hsl(var(--color-orange-base-hsl));
+		--color-yellow-base: hsl(var(--color-yellow-base-hsl));
+		--color-green-base: hsl(var(--color-green-base-hsl));
+		--color-mint-base: hsl(var(--color-mint-base-hsl));
+		--color-cyan-base: hsl(var(--color-cyan-base-hsl));
+		--color-blue-base: hsl(var(--color-blue-base-hsl));
+		--color-purple-base: hsl(var(--color-purple-base-hsl));
+		--color-pink-base: hsl(var(--color-pink-base-hsl));
 
-		--color-red-tint: var(--red200);
-		--color-orange-tint: var(--orange200);
-		--color-yellow-tint: var(--yellow200);
-		--color-green-tint: var(--green200);
-		--color-mint-tint: var(--mint200);
-		--color-cyan-tint: var(--cyan200);
-		--color-blue-tint: var(--blue200);
-		--color-purple-tint: var(--purple200);
-		--color-pink-tint: var(--pink200);
-		--color-grey-tint: var(--grey200);
+		--color-grey-tint: hsl(var(--color-grey-tint-hsl));
+		--color-red-tint: hsl(var(--color-red-tint-hsl));
+		--color-orange-tint: hsl(var(--color-orange-tint-hsl));
+		--color-yellow-tint: hsl(var(--color-yellow-tint-hsl));
+		--color-green-tint: hsl(var(--color-green-tint-hsl));
+		--color-mint-tint: hsl(var(--color-mint-tint-hsl));
+		--color-cyan-tint: hsl(var(--color-cyan-tint-hsl));
+		--color-blue-tint: hsl(var(--color-blue-tint-hsl));
+		--color-purple-tint: hsl(var(--color-purple-tint-hsl));
+		--color-pink-tint: hsl(var(--color-pink-tint-hsl));
 
-		--color-red-text: var(--red300);
-		--color-orange-text: var(--orange300);
-		--color-yellow-text: var(--yellow300);
-		--color-green-text: var(--green300);
-		--color-mint-text: var(--mint300);
-		--color-cyan-text: var(--cyan300);
-		--color-blue-text: var(--blue300);
-		--color-purple-text: var(--purple300);
-		--color-pink-text: var(--pink300);
-		--color-grey-text: var(--grey300);
+		--color-grey-text: hsl(var(--color-grey-text-hsl));
+		--color-red-text: hsl(var(--color-red-text-hsl));
+		--color-orange-text: hsl(var(--color-orange-text-hsl));
+		--color-yellow-text: hsl(var(--color-yellow-text-hsl));
+		--color-green-text: hsl(var(--color-green-text-hsl));
+		--color-mint-text: hsl(var(--color-mint-text-hsl));
+		--color-cyan-text: hsl(var(--color-cyan-text-hsl));
+		--color-blue-text: hsl(var(--color-blue-text-hsl));
+		--color-purple-text: hsl(var(--color-purple-text-hsl));
+		--color-pink-text: hsl(var(--color-pink-text-hsl));
 
 		--color-red: var(--color-red-text);
 		--color-green: var(--color-green-text);
@@ -151,13 +151,13 @@ body {
 		--color-purple: var(--color-purple-text);
 		--color-pink: var(--color-pink-text);
 
-		--color-accent-base-lt: var(--red100);
-		--color-accent-tint-lt: var(--red200);
-		--color-accent-text-lt: var(--red300);
+		--color-accent-base-lt: var(--color-red-base-hsl);
+		--color-accent-tint-lt: var(--color-red-tint-hsl);
+		--color-accent-text-lt: var(--color-red-text-hsl);
 
-		--color-accent-base-dt: var(--red100);
-		--color-accent-tint-dt: var(--red200);
-		--color-accent-text-dt: var(--red300);
+		--color-accent-base-dt: var(--color-red-base-hsl);
+		--color-accent-tint-dt: var(--color-red-tint-hsl);
+		--color-accent-text-dt: var(--color-red-text-hsl);
 
 		--input-shadow: unset;
 		--input-shadow-hover: unset;
@@ -206,14 +206,19 @@ body {
 		--text-bold-color-lt: var(--text-normal);
 		--text-italic-color-lt: var(--text-normal);
 		--text-italic-bold-color-lt: var(--text-normal);
-		--link-internal-color-lt: var(--interactive-accent-text);
-		--link-external-color-lt: var(--interactive-accent-text);
+		--link-internal-color-lt: var(--interactive-accent-text-hsl);
+		--link-external-color-lt: var(--interactive-accent-text-hsl);
 
 		--bold-color: var(--text-bold-color-lt);
 		--italic-color: var(--text-italic-color-lt);
-		--link-color: var(--link-internal-color-lt);
-		--link-unresolved-color: var(--link-internal-color-lt);
-		--link-external-color: var(--link-external-color-lt);
+
+		--link-color: hsl(var(--link-internal-color-lt));
+		--link-color-hover: hsla(var(--link-internal-color-lt) / 60%);
+
+		--link-external-color: hsl(var(--link-external-color-lt));
+		--link-external-color-hover: hsla(var(--link-external-color-lt) / 60%);
+
+		--link-unresolved-color: hsl(var(--link-internal-color-lt));
 		--inline-title-color: var(--inline-title-color-lt);
 
 		--code-background: var(--background-primary);
@@ -241,14 +246,17 @@ body {
 		}
 
 		&.pt-accent-color-custom-lt {
-			--interactive-accent-base: var(--color-accent-base-lt);
-			--interactive-accent-tint: var(--color-accent-tint-lt);
-			--interactive-accent-text: var(--color-accent-text-lt);
-			--interactive-accent-hover: var(--color-accent-tint-lt);
+			--interactive-accent-base-hsl: var(--color-accent-base-lt);
+			--interactive-accent-text-hsl: var(--color-accent-text-lt);
+			--interactive-accent-base: hsl(var(--color-accent-base-lt));
+			--interactive-accent-tint: hsl(var(--color-accent-tint-lt));
+			--interactive-accent-text: hsl(var(--color-accent-text-lt));
+			--interactive-accent-hover: hsl(var(--color-accent-tint-lt));
 		}
 
 		&.pt-accent-color-red-lt {
 			--interactive-accent-base-hsl: var(--color-red-base-hsl);
+			--interactive-accent-text-hsl: var(--color-red-text-hsl);
 			--interactive-accent-base: var(--color-red-base);
 			--interactive-accent-tint: var(--color-red-tint);
 			--interactive-accent-text: var(--color-red-text);
@@ -257,6 +265,7 @@ body {
 
 		&.pt-accent-color-orange-lt {
 			--interactive-accent-base-hsl: var(--color-orange-base-hsl);
+			--interactive-accent-text-hsl: var(--color-orange-text-hsl);
 			--interactive-accent-base: var(--color-orange-base);
 			--interactive-accent-tint: var(--color-orange-tint);
 			--interactive-accent-text: var(--color-orange-text);
@@ -265,6 +274,7 @@ body {
 
 		&.pt-accent-color-yellow-lt {
 			--interactive-accent-base-hsl: var(--color-yellow-base-hsl);
+			--interactive-accent-text-hsl: var(--color-yellow-text-hsl);
 			--interactive-accent-base: var(--color-yellow-base);
 			--interactive-accent-tint: var(--color-yellow-tint);
 			--interactive-accent-text: var(--color-yellow-text);
@@ -273,6 +283,7 @@ body {
 
 		&.pt-accent-color-green-lt {
 			--interactive-accent-base-hsl: var(--color-green-base-hsl);
+			--interactive-accent-text-hsl: var(--color-green-text-hsl);
 			--interactive-accent-base: var(--color-green-base);
 			--interactive-accent-tint: var(--color-green-tint);
 			--interactive-accent-text: var(--color-green-text);
@@ -281,6 +292,7 @@ body {
 
 		&.pt-accent-color-mint-lt {
 			--interactive-accent-base-hsl: var(--color-mint-base-hsl);
+			--interactive-accent-text-hsl: var(--color-mint-text-hsl);
 			--interactive-accent-base: var(--color-mint-base);
 			--interactive-accent-tint: var(--color-mint-tint);
 			--interactive-accent-text: var(--color-mint-text);
@@ -289,6 +301,7 @@ body {
 
 		&.pt-accent-color-cyan-lt {
 			--interactive-accent-base-hsl: var(--color-cyan-base-hsl);
+			--interactive-accent-text-hsl: var(--color-cyan-text-hsl);
 			--interactive-accent-base: var(--color-cyan-base);
 			--interactive-accent-tint: var(--color-cyan-tint);
 			--interactive-accent-text: var(--color-cyan-text);
@@ -297,6 +310,7 @@ body {
 
 		&.pt-accent-color-blue-lt {
 			--interactive-accent-base-hsl: var(--color-blue-base-hsl);
+			--interactive-accent-text-hsl: var(--color-blue-text-hsl);
 			--interactive-accent-base: var(--color-blue-base);
 			--interactive-accent-tint: var(--color-blue-tint);
 			--interactive-accent-text: var(--color-blue-text);
@@ -305,6 +319,7 @@ body {
 
 		&.pt-accent-color-purple-lt {
 			--interactive-accent-base-hsl: var(--color-purple-base-hsl);
+			--interactive-accent-text-hsl: var(--color-purple-text-hsl);
 			--interactive-accent-base: var(--color-purple-base);
 			--interactive-accent-tint: var(--color-purple-tint);
 			--interactive-accent-text: var(--color-purple-text);
@@ -313,6 +328,7 @@ body {
 
 		&.pt-accent-color-pink-lt {
 			--interactive-accent-base-hsl: var(--color-pink-base-hsl);
+			--interactive-accent-text-hsl: var(--color-pink-text-hsl);
 			--interactive-accent-base: var(--color-pink-base);
 			--interactive-accent-tint: var(--color-pink-tint);
 			--interactive-accent-text: var(--color-pink-text);
@@ -321,6 +337,7 @@ body {
 
 		&.pt-accent-color-grey-lt {
 			--interactive-accent-base-hsl: var(--color-grey-base-hsl);
+			--interactive-accent-text-hsl: var(--color-grey-text-hsl);
 			--interactive-accent-base: var(--color-grey-base);
 			--interactive-accent-tint: var(--color-grey-tint);
 			--interactive-accent-text: var(--color-grey-text);
@@ -357,15 +374,20 @@ body {
 		--text-bold-color-dt: var(--text-normal);
 		--text-italic-color-dt: var(--text-normal);
 		--text-italic-bold-color-dt: var(--text-normal);
-		--link-internal-color-dt: var(--interactive-accent-text);
-		--link-external-color-dt: var(--interactive-accent-text);
-		--inline-title-color: var(--inline-title-color-dt);
+		--link-internal-color-dt: var(--interactive-accent-text-hsl);
+		--link-external-color-dt: var(--interactive-accent-text-hsl);
 
 		--bold-color: var(--text-bold-color-dt);
 		--italic-color: var(--text-italic-color-dt);
-		--link-color: var(--link-internal-color-dt);
-		--link-unresolved-color: var(--link-internal-color-dt);
-		--link-external-color: var(--link-external-color-dt);
+
+		--link-color: hsl(var(--link-internal-color-dt));
+		--link-color-hover: hsla(var(--link-internal-color-dt) / 60%);
+
+		--link-external-color: hsl(var(--link-external-color-dt));
+		--link-external-color-hover: hsla(var(--link-external-color-dt) / 60%);
+
+		--link-unresolved-color: hsl(var(--link-internal-color-dt));
+		--inline-title-color: var(--inline-title-color-dt);
 
 		--code-background: var(--background-secondary-alt);
 		--blockquote-background-color: var(--background-secondary-alt);
@@ -397,14 +419,17 @@ body {
 		}
 
 		&.pt-accent-color-custom-dt {
-			--interactive-accent-base: var(--color-accent-base-dt);
-			--interactive-accent-tint: var(--color-accent-tint-dt);
-			--interactive-accent-text: var(--color-accent-text-dt);
-			--interactive-accent-hover: var(--color-accent-tint-dt);
+			--interactive-accent-base-hsl: var(--color-accent-base-dt);
+			--interactive-accent-text-hsl: var(--color-accent-text-dt);
+			--interactive-accent-base: hsl(var(--color-accent-base-dt));
+			--interactive-accent-tint: hsl(var(--color-accent-tint-dt));
+			--interactive-accent-text: hsl(var(--color-accent-text-dt));
+			--interactive-accent-hover: hsl(var(--color-accent-tint-dt));
 		}
 
 		&.pt-accent-color-red-dt {
 			--interactive-accent-base-hsl: var(--color-red-base-hsl);
+			--interactive-accent-text-hsl: var(--color-red-text-hsl);
 			--interactive-accent-base: var(--color-red-base);
 			--interactive-accent-tint: var(--color-red-tint);
 			--interactive-accent-text: var(--color-red-text);
@@ -413,6 +438,7 @@ body {
 
 		&.pt-accent-color-orange-dt {
 			--interactive-accent-base-hsl: var(--color-orange-base-hsl);
+			--interactive-accent-text-hsl: var(--color-orange-text-hsl);
 			--interactive-accent-base: var(--color-orange-base);
 			--interactive-accent-tint: var(--color-orange-tint);
 			--interactive-accent-text: var(--color-orange-text);
@@ -421,6 +447,7 @@ body {
 
 		&.pt-accent-color-yellow-dt {
 			--interactive-accent-base-hsl: var(--color-yellow-base-hsl);
+			--interactive-accent-text-hsl: var(--color-yellow-text-hsl);
 			--interactive-accent-base: var(--color-yellow-base);
 			--interactive-accent-tint: var(--color-yellow-tint);
 			--interactive-accent-text: var(--color-yellow-text);
@@ -429,6 +456,7 @@ body {
 
 		&.pt-accent-color-green-dt {
 			--interactive-accent-base-hsl: var(--color-green-base-hsl);
+			--interactive-accent-text-hsl: var(--color-green-text-hsl);
 			--interactive-accent-base: var(--color-green-base);
 			--interactive-accent-tint: var(--color-green-tint);
 			--interactive-accent-text: var(--color-green-text);
@@ -437,6 +465,7 @@ body {
 
 		&.pt-accent-color-mint-dt {
 			--interactive-accent-base-hsl: var(--color-mint-base-hsl);
+			--interactive-accent-text-hsl: var(--color-mint-text-hsl);
 			--interactive-accent-base: var(--color-mint-base);
 			--interactive-accent-tint: var(--color-mint-tint);
 			--interactive-accent-text: var(--color-mint-text);
@@ -445,6 +474,7 @@ body {
 
 		&.pt-accent-color-cyan-dt {
 			--interactive-accent-base-hsl: var(--color-cyan-base-hsl);
+			--interactive-accent-text-hsl: var(--color-cyan-text-hsl);
 			--interactive-accent-base: var(--color-cyan-base);
 			--interactive-accent-tint: var(--color-cyan-tint);
 			--interactive-accent-text: var(--color-cyan-text);
@@ -453,6 +483,7 @@ body {
 
 		&.pt-accent-color-blue-dt {
 			--interactive-accent-base-hsl: var(--color-blue-base-hsl);
+			--interactive-accent-text-hsl: var(--color-blue-text-hsl);
 			--interactive-accent-base: var(--color-blue-base);
 			--interactive-accent-tint: var(--color-blue-tint);
 			--interactive-accent-text: var(--color-blue-text);
@@ -461,6 +492,7 @@ body {
 
 		&.pt-accent-color-purple-dt {
 			--interactive-accent-base-hsl: var(--color-purple-base-hsl);
+			--interactive-accent-text-hsl: var(--color-purple-text-hsl);
 			--interactive-accent-base: var(--color-purple-base);
 			--interactive-accent-tint: var(--color-purple-tint);
 			--interactive-accent-text: var(--color-purple-text);
@@ -469,6 +501,7 @@ body {
 
 		&.pt-accent-color-pink-dt {
 			--interactive-accent-base-hsl: var(--color-pink-base-hsl);
+			--interactive-accent-text-hsl: var(--color-pink-text-hsl);
 			--interactive-accent-base: var(--color-pink-base);
 			--interactive-accent-tint: var(--color-pink-tint);
 			--interactive-accent-text: var(--color-pink-text);
@@ -477,6 +510,7 @@ body {
 
 		&.pt-accent-color-grey-dt {
 			--interactive-accent-base-hsl: var(--color-grey-base-hsl);
+			--interactive-accent-text-hsl: var(--color-grey-text-hsl);
 			--interactive-accent-base: var(--color-grey-base);
 			--interactive-accent-tint: var(--color-grey-tint);
 			--interactive-accent-text: var(--color-grey-text);

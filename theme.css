@@ -18,6 +18,374 @@
 
     Copyright (c) 2021-2022 Damian Korcz <https://github.com/damiankorcz>
 */
+.theme-light.pt-color-scheme-swan-lt {
+  --color-grey-base-hsl: 0 0% 84%;
+  --color-red-base-hsl: 7 80% 88%;
+  --color-orange-base-hsl: 25 79% 84%;
+  --color-yellow-base-hsl: 47 57% 77%;
+  --color-green-base-hsl: 115 35% 81%;
+  --color-mint-base-hsl: 156 37% 81%;
+  --color-cyan-base-hsl: 192 39% 83%;
+  --color-blue-base-hsl: 222 62% 88%;
+  --color-purple-base-hsl: 251 62% 90%;
+  --color-pink-base-hsl: 327 56% 88%;
+  --color-grey-tint-hsl: 0 0% 67%;
+  --color-red-tint-hsl: 6 70% 74%;
+  --color-orange-tint-hsl: 27 74% 64%;
+  --color-yellow-tint-hsl: 48 68% 47%;
+  --color-green-tint-hsl: 115 34% 60%;
+  --color-mint-tint-hsl: 159 39% 57%;
+  --color-cyan-tint-hsl: 192 40% 63%;
+  --color-blue-tint-hsl: 222 57% 74%;
+  --color-purple-tint-hsl: 252 60% 77%;
+  --color-pink-tint-hsl: 326 50% 73%;
+  --color-grey-text-hsl: 0 0% 49%;
+  --color-red-text-hsl: 4 62% 55%;
+  --color-orange-text-hsl: 32 100% 37%;
+  --color-yellow-text-hsl: 48 100% 30%;
+  --color-green-text-hsl: 116 71% 33%;
+  --color-mint-text-hsl: 165 100% 28%;
+  --color-cyan-text-hsl: 191 75% 36%;
+  --color-blue-text-hsl: 223 54% 58%;
+  --color-purple-text-hsl: 255 56% 63%;
+  --color-pink-text-hsl: 323 46% 55%;
+  --text-normal: hsl(0 0% 25%);
+  --text-muted: hsl(0 0% 40%);
+  --text-faint: hsl(0 0% 50%);
+  --background-primary: hsl(0 0% 100%);
+  --background-primary-alt: hsl(0 0% 96.5%);
+  --background-secondary: hsl(0 0% 94%);
+  --background-secondary-blur: hsl(0 0% 94% / 80%);
+  --background-secondary-alt: hsl(0 0% 80%);
+  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(0 0% 0% / 3%) 0 1px 2px,
+    hsl(0 0% 0% / 3%) 0 2px 4px,
+    hsl(0 0% 0% / 3%) 0 4px 8px,
+    hsl(0 0% 0% / 3%) 0 8px 16px;
+}
+.theme-dark.pt-color-scheme-raven-dt {
+  --color-grey-base-hsl: 0 0% 18%;
+  --color-red-base-hsl: 0 46% 22%;
+  --color-orange-base-hsl: 20 52% 19%;
+  --color-yellow-base-hsl: 40 45% 16%;
+  --color-green-base-hsl: 122 40% 15%;
+  --color-mint-base-hsl: 163 51% 14%;
+  --color-cyan-base-hsl: 195 43% 16%;
+  --color-blue-base-hsl: 228 39% 23%;
+  --color-purple-base-hsl: 268 43% 24%;
+  --color-pink-base-hsl: 328 41% 21%;
+  --color-grey-tint-hsl: 0 0% 37%;
+  --color-red-tint-hsl: 0 41% 43%;
+  --color-orange-tint-hsl: 9 45% 37%;
+  --color-yellow-tint-hsl: 39 39% 32%;
+  --color-green-tint-hsl: 121 34% 31%;
+  --color-mint-tint-hsl: 163 43% 29%;
+  --color-cyan-tint-hsl: 195 37% 33%;
+  --color-blue-tint-hsl: 227 39% 46%;
+  --color-purple-tint-hsl: 266 33% 45%;
+  --color-pink-tint-hsl: 328 38% 42%;
+  --color-grey-text-hsl: 0 0% 57%;
+  --color-red-text-hsl: 0 51% 65%;
+  --color-orange-text-hsl: 19 43% 58%;
+  --color-yellow-text-hsl: 40 37% 50%;
+  --color-green-text-hsl: 122 32% 49%;
+  --color-mint-text-hsl: 163 39% 46%;
+  --color-cyan-text-hsl: 195 38% 52%;
+  --color-blue-text-hsl: 228 39% 65%;
+  --color-purple-text-hsl: 264 29% 64%;
+  --color-pink-text-hsl: 331 32% 63%;
+  --text-normal: hsl(0 0% 85%);
+  --text-muted: hsl(0 0% 70%);
+  --text-faint: hsl(0 0% 60%);
+  --background-primary: hsl(0 0% 13%);
+  --background-primary-alt: hsl(0 0% 18%);
+  --background-secondary: hsl(0 0% 8.5%);
+  --background-secondary-blur: hsl(0 0% 8.5% / 80%);
+  --background-secondary-alt: hsl(0 0% 5%);
+  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(0 0% 0% / 5%) 0 1px 2px,
+    hsl(0 0% 0% / 5%) 0 2px 4px,
+    hsl(0 0% 0% / 5%) 0 4px 8px,
+    hsl(0 0% 0% / 5%) 0 8px 16px;
+}
+.theme-light.pt-color-scheme-latte-lt {
+  --color-grey-base-hsl: 0 0% 84%;
+  --color-red-base-hsl: 7 80% 88%;
+  --color-orange-base-hsl: 25 79% 84%;
+  --color-yellow-base-hsl: 47 57% 77%;
+  --color-green-base-hsl: 115 35% 81%;
+  --color-mint-base-hsl: 156 37% 81%;
+  --color-cyan-base-hsl: 192 39% 83%;
+  --color-blue-base-hsl: 222 62% 88%;
+  --color-purple-base-hsl: 251 62% 90%;
+  --color-pink-base-hsl: 327 56% 88%;
+  --color-grey-tint-hsl: 0 0% 67%;
+  --color-red-tint-hsl: 6 70% 74%;
+  --color-orange-tint-hsl: 27 74% 64%;
+  --color-yellow-tint-hsl: 48 68% 47%;
+  --color-green-tint-hsl: 115 34% 60%;
+  --color-mint-tint-hsl: 159 39% 57%;
+  --color-cyan-tint-hsl: 192 40% 63%;
+  --color-blue-tint-hsl: 222 57% 74%;
+  --color-purple-tint-hsl: 252 60% 77%;
+  --color-pink-tint-hsl: 326 50% 73%;
+  --color-grey-text-hsl: 0 0% 49%;
+  --color-red-text-hsl: 4 62% 55%;
+  --color-orange-text-hsl: 32 100% 37%;
+  --color-yellow-text-hsl: 48 100% 30%;
+  --color-green-text-hsl: 116 71% 33%;
+  --color-mint-text-hsl: 165 100% 28%;
+  --color-cyan-text-hsl: 191 75% 36%;
+  --color-blue-text-hsl: 223 54% 58%;
+  --color-purple-text-hsl: 255 56% 63%;
+  --color-pink-text-hsl: 323 46% 55%;
+  --text-normal: hsl(28 32% 18%);
+  --text-muted: hsl(28 32% 35%);
+  --text-faint: hsl(28 32% 50%);
+  --background-primary: hsl(28 32% 95%);
+  --background-primary-alt: hsl(28 32% 93%);
+  --background-secondary: hsl(28 32% 90%);
+  --background-secondary-blur: hsl(28 32% 90% / 80%);
+  --background-secondary-alt: hsl(28 32% 77%);
+  --shadow-s: hsl(28 32% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(28 32% 7% / 4%) 0 1px 2px,
+    hsl(28 32% 7% / 4%) 0 2px 4px,
+    hsl(28 32% 7% / 4%) 0 4px 8px,
+    hsl(28 32% 7% / 4%) 0 8px 16px;
+}
+.theme-dark.pt-color-scheme-mocha-dt {
+  --color-grey-base-hsl: 0 0% 18%;
+  --color-red-base-hsl: 0 53% 22%;
+  --color-orange-base-hsl: 21 59% 18%;
+  --color-yellow-base-hsl: 41 57% 15%;
+  --color-green-base-hsl: 123 50% 14%;
+  --color-mint-base-hsl: 166 74% 12%;
+  --color-cyan-base-hsl: 194 54% 15%;
+  --color-blue-base-hsl: 228 45% 23%;
+  --color-purple-base-hsl: 268 49% 25%;
+  --color-pink-base-hsl: 328 48% 21%;
+  --color-grey-tint-hsl: 0 0% 37%;
+  --color-red-tint-hsl: 0 47% 44%;
+  --color-orange-tint-hsl: 20 52% 36%;
+  --color-yellow-tint-hsl: 41 48% 30%;
+  --color-green-tint-hsl: 123 43% 29%;
+  --color-mint-tint-hsl: 164 62% 26%;
+  --color-cyan-tint-hsl: 194 47% 32%;
+  --color-blue-tint-hsl: 228 45% 47%;
+  --color-purple-tint-hsl: 266 37% 47%;
+  --color-pink-tint-hsl: 327 44% 42%;
+  --color-grey-text-hsl: 0 0% 57%;
+  --color-red-text-hsl: 0 60% 66%;
+  --color-orange-text-hsl: 20 48% 58%;
+  --color-yellow-text-hsl: 41 45% 47%;
+  --color-green-text-hsl: 123 40% 46%;
+  --color-mint-text-hsl: 164 53% 42%;
+  --color-cyan-text-hsl: 194 44% 50%;
+  --color-blue-text-hsl: 228 44% 65%;
+  --color-purple-text-hsl: 263 34% 65%;
+  --color-pink-text-hsl: 331 37% 63%;
+  --text-normal: hsl(28 32% 85%);
+  --text-muted: hsl(28 32% 70%);
+  --text-faint: hsl(28 32% 60%);
+  --background-primary: hsl(27 30% 13%);
+  --background-primary-alt: hsl(28 32% 18.5%);
+  --background-secondary: hsl(28 32% 9%);
+  --background-secondary-blur: hsl(28 32% 9% / 80%);
+  --background-secondary-alt: hsl(28 32% 6.8%);
+  --shadow-s: hsl(28 32% 7% / 50%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(28 32% 7% / 50%) 0 1px 2px,
+    hsl(28 32% 7% / 50%) 0 2px 4px,
+    hsl(28 32% 7% / 50%) 0 4px 8px,
+    hsl(28 32% 7% / 50%) 0 8px 16px;
+}
+.theme-light.pt-color-scheme-periwinkle-lt {
+  --color-grey-base-hsl: 0 0% 84%;
+  --color-red-base-hsl: 8 84% 88%;
+  --color-orange-base-hsl: 26 81% 83%;
+  --color-yellow-base-hsl: 46 59% 77%;
+  --color-green-base-hsl: 113 37% 81%;
+  --color-mint-base-hsl: 157 41% 80%;
+  --color-cyan-base-hsl: 193 42% 82%;
+  --color-blue-base-hsl: 221 65% 88%;
+  --color-purple-base-hsl: 250 69% 90%;
+  --color-pink-base-hsl: 328 58% 88%;
+  --color-grey-tint-hsl: 0 0% 67%;
+  --color-red-tint-hsl: 7 75% 74%;
+  --color-orange-tint-hsl: 28 77% 63%;
+  --color-yellow-tint-hsl: 50 100% 40%;
+  --color-green-tint-hsl: 114 36% 59%;
+  --color-mint-tint-hsl: 160 41% 56%;
+  --color-cyan-tint-hsl: 193 42% 62%;
+  --color-blue-tint-hsl: 220 63% 74%;
+  --color-purple-tint-hsl: 252 66% 78%;
+  --color-pink-tint-hsl: 325 53% 73%;
+  --color-grey-text-hsl: 0 0% 49%;
+  --color-red-text-hsl: 5 66% 55%;
+  --color-orange-text-hsl: 31 100% 38%;
+  --color-yellow-text-hsl: 47 100% 30%;
+  --color-green-text-hsl: 114 96% 29%;
+  --color-mint-text-hsl: 165 100% 28%;
+  --color-cyan-text-hsl: 189 100% 32%;
+  --color-blue-text-hsl: 222 59% 58%;
+  --color-purple-text-hsl: 256 62% 64%;
+  --color-pink-text-hsl: 323 49% 55%;
+  --text-normal: hsl(225 35% 30%);
+  --text-muted: hsl(225 35% 40%);
+  --text-faint: hsl(225 35% 50%);
+  --background-primary: hsl(225 35% 95%);
+  --background-primary-alt: hsl(225 35% 93%);
+  --background-secondary: hsl(225 35% 90%);
+  --background-secondary-blur: hsl(225 35% 90% / 80%);
+  --background-secondary-alt: hsl(225 35% 79%);
+  --shadow-s: hsl(225 35% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(225 35% 7% / 4%) 0 1px 2px,
+    hsl(225 35% 7% / 4%) 0 2px 4px,
+    hsl(225 35% 7% / 4%) 0 4px 8px,
+    hsl(225 35% 7% / 4%) 0 8px 16px;
+}
+.theme-dark.pt-color-scheme-indigo-dt {
+  --color-grey-base-hsl: 0 0% 18%;
+  --color-red-base-hsl: 0 53% 22%;
+  --color-orange-base-hsl: 21 59% 19%;
+  --color-yellow-base-hsl: 41 55% 15%;
+  --color-green-base-hsl: 122 49% 15%;
+  --color-mint-base-hsl: 166 74% 12%;
+  --color-cyan-base-hsl: 194 54% 15%;
+  --color-blue-base-hsl: 228 44% 24%;
+  --color-purple-base-hsl: 268 49% 25%;
+  --color-pink-base-hsl: 327 49% 21%;
+  --color-grey-tint-hsl: 0 0% 37%;
+  --color-red-tint-hsl: 0 47% 44%;
+  --color-orange-tint-hsl: 20 53% 36%;
+  --color-yellow-tint-hsl: 41 48% 30%;
+  --color-green-tint-hsl: 123 43% 29%;
+  --color-mint-tint-hsl: 165 61% 26%;
+  --color-cyan-tint-hsl: 194 47% 32%;
+  --color-blue-tint-hsl: 227 44% 47%;
+  --color-purple-tint-hsl: 267 37% 47%;
+  --color-pink-tint-hsl: 327 43% 42%;
+  --color-grey-text-hsl: 0 0% 58%;
+  --color-red-text-hsl: 0 60% 66%;
+  --color-orange-text-hsl: 20 49% 58%;
+  --color-yellow-text-hsl: 41 46% 48%;
+  --color-green-text-hsl: 123 40% 46%;
+  --color-mint-text-hsl: 164 53% 42%;
+  --color-cyan-text-hsl: 194 44% 50%;
+  --color-blue-text-hsl: 228 44% 65%;
+  --color-purple-text-hsl: 264 34% 65%;
+  --color-pink-text-hsl: 330 37% 63%;
+  --text-normal: hsl(245 30% 85%);
+  --text-muted: hsl(245 30% 70%);
+  --text-faint: hsl(245 30% 65%);
+  --background-primary: hsl(245 30% 16%);
+  --background-primary-alt: hsl(245 30% 25%);
+  --background-secondary: hsl(245 30% 12%);
+  --background-secondary-blur: hsl(245 30% 12% / 80%);
+  --background-secondary-alt: hsl(245 30% 8.5%);
+  --shadow-s: hsl(245 30% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(245 30% 7% / 10%) 0 1px 2px,
+    hsl(245 30% 7% / 10%) 0 2px 4px,
+    hsl(245 30% 7% / 10%) 0 4px 8px,
+    hsl(245 30% 7% / 10%) 0 8px 16px;
+}
+.theme-light.pt-color-scheme-pistachio-lt {
+  --color-grey-base-hsl: 0 0% 84%;
+  --color-red-base-hsl: 7 80% 88%;
+  --color-orange-base-hsl: 25 79% 84%;
+  --color-yellow-base-hsl: 47 57% 77%;
+  --color-green-base-hsl: 115 35% 81%;
+  --color-mint-base-hsl: 156 37% 81%;
+  --color-cyan-base-hsl: 192 39% 83%;
+  --color-blue-base-hsl: 222 62% 88%;
+  --color-purple-base-hsl: 251 62% 90%;
+  --color-pink-base-hsl: 327 56% 88%;
+  --color-grey-tint-hsl: 0 0% 67%;
+  --color-red-tint-hsl: 6 70% 74%;
+  --color-orange-tint-hsl: 27 74% 64%;
+  --color-yellow-tint-hsl: 48 68% 47%;
+  --color-green-tint-hsl: 115 34% 60%;
+  --color-mint-tint-hsl: 159 39% 57%;
+  --color-cyan-tint-hsl: 192 40% 63%;
+  --color-blue-tint-hsl: 222 57% 74%;
+  --color-purple-tint-hsl: 252 60% 77%;
+  --color-pink-tint-hsl: 326 50% 73%;
+  --color-grey-text-hsl: 0 0% 49%;
+  --color-red-text-hsl: 4 62% 55%;
+  --color-orange-text-hsl: 32 100% 37%;
+  --color-yellow-text-hsl: 48 100% 30%;
+  --color-green-text-hsl: 116 71% 33%;
+  --color-mint-text-hsl: 165 100% 28%;
+  --color-cyan-text-hsl: 191 75% 36%;
+  --color-blue-text-hsl: 223 54% 58%;
+  --color-purple-text-hsl: 255 56% 63%;
+  --color-pink-text-hsl: 323 46% 55%;
+  --text-normal: hsl(135 35% 20%);
+  --text-muted: hsl(135 35% 30%);
+  --text-faint: hsl(135 35% 40%);
+  --background-primary: hsl(135 35% 95.5%);
+  --background-primary-alt: hsl(135 35% 93%);
+  --background-secondary: hsl(135 35% 90.5%);
+  --background-secondary-blur: hsl(135 35% 90.5% / 80%);
+  --background-secondary-alt: hsl(135 35% 75%);
+  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(135 35% 7% / 4%) 0 1px 2px,
+    hsl(135 35% 7% / 4%) 0 2px 4px,
+    hsl(135 35% 7% / 4%) 0 4px 8px,
+    hsl(135 35% 7% / 4%) 0 8px 16px;
+}
+.theme-dark.pt-color-scheme-pine-dt {
+  --color-grey-base-hsl: 0 0% 18%;
+  --color-red-base-hsl: 0 53% 22%;
+  --color-orange-base-hsl: 21 59% 18%;
+  --color-yellow-base-hsl: 41 55% 15%;
+  --color-green-base-hsl: 122 49% 15%;
+  --color-mint-base-hsl: 166 74% 12%;
+  --color-cyan-base-hsl: 194 54% 15%;
+  --color-blue-base-hsl: 228 44% 24%;
+  --color-purple-base-hsl: 268 49% 25%;
+  --color-pink-base-hsl: 328 48% 21%;
+  --color-grey-tint-hsl: 0 0% 37%;
+  --color-red-tint-hsl: 0 47% 44%;
+  --color-orange-tint-hsl: 20 53% 36%;
+  --color-yellow-tint-hsl: 41 48% 30%;
+  --color-green-tint-hsl: 123 43% 29%;
+  --color-mint-tint-hsl: 165 61% 26%;
+  --color-cyan-tint-hsl: 194 47% 32%;
+  --color-blue-tint-hsl: 227 45% 47%;
+  --color-purple-tint-hsl: 267 37% 47%;
+  --color-pink-tint-hsl: 327 43% 42%;
+  --color-grey-text-hsl: 0 0% 57%;
+  --color-red-text-hsl: 0 60% 66%;
+  --color-orange-text-hsl: 20 49% 58%;
+  --color-yellow-text-hsl: 41 46% 48%;
+  --color-green-text-hsl: 123 40% 46%;
+  --color-mint-text-hsl: 164 53% 42%;
+  --color-cyan-text-hsl: 194 44% 50%;
+  --color-blue-text-hsl: 228 44% 65%;
+  --color-purple-text-hsl: 264 34% 65%;
+  --color-pink-text-hsl: 330 37% 63%;
+  --text-normal: hsl(135 35% 85%);
+  --text-muted: hsl(135 35% 70%);
+  --text-faint: hsl(135 35% 60%);
+  --background-primary: hsl(135 35% 12%);
+  --background-primary-alt: hsl(135 35% 17%);
+  --background-secondary: hsl(135 35% 9%);
+  --background-secondary-blur: hsl(135 35% 9% / 80%);
+  --background-secondary-alt: hsl(135 35% 6%);
+  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
+  --shadow-l:
+    hsl(135 35% 7% / 10%) 0 1px 2px,
+    hsl(135 35% 7% / 10%) 0 2px 4px,
+    hsl(135 35% 7% / 10%) 0 4px 8px,
+    hsl(135 35% 7% / 10%) 0 8px 16px;
+}
 /*! Source Sans - Distributed under the SIL Open Font Licence 1.1 - https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md */
 @font-face {
   font-family: "Source Sans 3";
@@ -127,36 +495,36 @@ body {
   --status-bar-background-color-dt: #2B2B2B;
 }
 body:is(.theme-light, .theme-dark) {
-  --color-red-base: var(--red100);
-  --color-orange-base: var(--orange100);
-  --color-yellow-base: var(--yellow100);
-  --color-green-base: var(--green100);
-  --color-mint-base: var(--mint100);
-  --color-cyan-base: var(--cyan100);
-  --color-blue-base: var(--blue100);
-  --color-purple-base: var(--purple100);
-  --color-pink-base: var(--pink100);
-  --color-grey-base: var(--grey100);
-  --color-red-tint: var(--red200);
-  --color-orange-tint: var(--orange200);
-  --color-yellow-tint: var(--yellow200);
-  --color-green-tint: var(--green200);
-  --color-mint-tint: var(--mint200);
-  --color-cyan-tint: var(--cyan200);
-  --color-blue-tint: var(--blue200);
-  --color-purple-tint: var(--purple200);
-  --color-pink-tint: var(--pink200);
-  --color-grey-tint: var(--grey200);
-  --color-red-text: var(--red300);
-  --color-orange-text: var(--orange300);
-  --color-yellow-text: var(--yellow300);
-  --color-green-text: var(--green300);
-  --color-mint-text: var(--mint300);
-  --color-cyan-text: var(--cyan300);
-  --color-blue-text: var(--blue300);
-  --color-purple-text: var(--purple300);
-  --color-pink-text: var(--pink300);
-  --color-grey-text: var(--grey300);
+  --color-grey-base: hsl(var(--color-grey-base-hsl));
+  --color-red-base: hsl(var(--color-red-base-hsl));
+  --color-orange-base: hsl(var(--color-orange-base-hsl));
+  --color-yellow-base: hsl(var(--color-yellow-base-hsl));
+  --color-green-base: hsl(var(--color-green-base-hsl));
+  --color-mint-base: hsl(var(--color-mint-base-hsl));
+  --color-cyan-base: hsl(var(--color-cyan-base-hsl));
+  --color-blue-base: hsl(var(--color-blue-base-hsl));
+  --color-purple-base: hsl(var(--color-purple-base-hsl));
+  --color-pink-base: hsl(var(--color-pink-base-hsl));
+  --color-grey-tint: hsl(var(--color-grey-tint-hsl));
+  --color-red-tint: hsl(var(--color-red-tint-hsl));
+  --color-orange-tint: hsl(var(--color-orange-tint-hsl));
+  --color-yellow-tint: hsl(var(--color-yellow-tint-hsl));
+  --color-green-tint: hsl(var(--color-green-tint-hsl));
+  --color-mint-tint: hsl(var(--color-mint-tint-hsl));
+  --color-cyan-tint: hsl(var(--color-cyan-tint-hsl));
+  --color-blue-tint: hsl(var(--color-blue-tint-hsl));
+  --color-purple-tint: hsl(var(--color-purple-tint-hsl));
+  --color-pink-tint: hsl(var(--color-pink-tint-hsl));
+  --color-grey-text: hsl(var(--color-grey-text-hsl));
+  --color-red-text: hsl(var(--color-red-text-hsl));
+  --color-orange-text: hsl(var(--color-orange-text-hsl));
+  --color-yellow-text: hsl(var(--color-yellow-text-hsl));
+  --color-green-text: hsl(var(--color-green-text-hsl));
+  --color-mint-text: hsl(var(--color-mint-text-hsl));
+  --color-cyan-text: hsl(var(--color-cyan-text-hsl));
+  --color-blue-text: hsl(var(--color-blue-text-hsl));
+  --color-purple-text: hsl(var(--color-purple-text-hsl));
+  --color-pink-text: hsl(var(--color-pink-text-hsl));
   --color-red: var(--color-red-text);
   --color-green: var(--color-green-text);
   --color-orange: var(--color-orange-text);
@@ -165,12 +533,12 @@ body:is(.theme-light, .theme-dark) {
   --color-blue: var(--color-blue-text);
   --color-purple: var(--color-purple-text);
   --color-pink: var(--color-pink-text);
-  --color-accent-base-lt: var(--red100);
-  --color-accent-tint-lt: var(--red200);
-  --color-accent-text-lt: var(--red300);
-  --color-accent-base-dt: var(--red100);
-  --color-accent-tint-dt: var(--red200);
-  --color-accent-text-dt: var(--red300);
+  --color-accent-base-lt: var(--color-red-base-hsl);
+  --color-accent-tint-lt: var(--color-red-tint-hsl);
+  --color-accent-text-lt: var(--color-red-text-hsl);
+  --color-accent-base-dt: var(--color-red-base-hsl);
+  --color-accent-tint-dt: var(--color-red-tint-hsl);
+  --color-accent-text-dt: var(--color-red-text-hsl);
   --input-shadow: unset;
   --input-shadow-hover: unset;
   --tab-stacked-shadow: 0;
@@ -210,13 +578,15 @@ body.theme-light {
   --text-bold-color-lt: var(--text-normal);
   --text-italic-color-lt: var(--text-normal);
   --text-italic-bold-color-lt: var(--text-normal);
-  --link-internal-color-lt: var(--interactive-accent-text);
-  --link-external-color-lt: var(--interactive-accent-text);
+  --link-internal-color-lt: var(--interactive-accent-text-hsl);
+  --link-external-color-lt: var(--interactive-accent-text-hsl);
   --bold-color: var(--text-bold-color-lt);
   --italic-color: var(--text-italic-color-lt);
-  --link-color: var(--link-internal-color-lt);
-  --link-unresolved-color: var(--link-internal-color-lt);
-  --link-external-color: var(--link-external-color-lt);
+  --link-color: hsl(var(--link-internal-color-lt));
+  --link-color-hover: hsla(var(--link-internal-color-lt) / 60%);
+  --link-external-color: hsl(var(--link-external-color-lt));
+  --link-external-color-hover: hsla(var(--link-external-color-lt) / 60%);
+  --link-unresolved-color: hsl(var(--link-internal-color-lt));
   --inline-title-color: var(--inline-title-color-lt);
   --code-background: var(--background-primary);
   --blockquote-background-color: var(--background-primary);
@@ -237,13 +607,16 @@ body.theme-light.pt-highlight-text-custom-lt {
   --highlight-text-normal: var(--highlight-text-accent-custom-lt);
 }
 body.theme-light.pt-accent-color-custom-lt {
-  --interactive-accent-base: var(--color-accent-base-lt);
-  --interactive-accent-tint: var(--color-accent-tint-lt);
-  --interactive-accent-text: var(--color-accent-text-lt);
-  --interactive-accent-hover: var(--color-accent-tint-lt);
+  --interactive-accent-base-hsl: var(--color-accent-base-lt);
+  --interactive-accent-text-hsl: var(--color-accent-text-lt);
+  --interactive-accent-base: hsl(var(--color-accent-base-lt));
+  --interactive-accent-tint: hsl(var(--color-accent-tint-lt));
+  --interactive-accent-text: hsl(var(--color-accent-text-lt));
+  --interactive-accent-hover: hsl(var(--color-accent-tint-lt));
 }
 body.theme-light.pt-accent-color-red-lt {
   --interactive-accent-base-hsl: var(--color-red-base-hsl);
+  --interactive-accent-text-hsl: var(--color-red-text-hsl);
   --interactive-accent-base: var(--color-red-base);
   --interactive-accent-tint: var(--color-red-tint);
   --interactive-accent-text: var(--color-red-text);
@@ -251,6 +624,7 @@ body.theme-light.pt-accent-color-red-lt {
 }
 body.theme-light.pt-accent-color-orange-lt {
   --interactive-accent-base-hsl: var(--color-orange-base-hsl);
+  --interactive-accent-text-hsl: var(--color-orange-text-hsl);
   --interactive-accent-base: var(--color-orange-base);
   --interactive-accent-tint: var(--color-orange-tint);
   --interactive-accent-text: var(--color-orange-text);
@@ -258,6 +632,7 @@ body.theme-light.pt-accent-color-orange-lt {
 }
 body.theme-light.pt-accent-color-yellow-lt {
   --interactive-accent-base-hsl: var(--color-yellow-base-hsl);
+  --interactive-accent-text-hsl: var(--color-yellow-text-hsl);
   --interactive-accent-base: var(--color-yellow-base);
   --interactive-accent-tint: var(--color-yellow-tint);
   --interactive-accent-text: var(--color-yellow-text);
@@ -265,6 +640,7 @@ body.theme-light.pt-accent-color-yellow-lt {
 }
 body.theme-light.pt-accent-color-green-lt {
   --interactive-accent-base-hsl: var(--color-green-base-hsl);
+  --interactive-accent-text-hsl: var(--color-green-text-hsl);
   --interactive-accent-base: var(--color-green-base);
   --interactive-accent-tint: var(--color-green-tint);
   --interactive-accent-text: var(--color-green-text);
@@ -272,6 +648,7 @@ body.theme-light.pt-accent-color-green-lt {
 }
 body.theme-light.pt-accent-color-mint-lt {
   --interactive-accent-base-hsl: var(--color-mint-base-hsl);
+  --interactive-accent-text-hsl: var(--color-mint-text-hsl);
   --interactive-accent-base: var(--color-mint-base);
   --interactive-accent-tint: var(--color-mint-tint);
   --interactive-accent-text: var(--color-mint-text);
@@ -279,6 +656,7 @@ body.theme-light.pt-accent-color-mint-lt {
 }
 body.theme-light.pt-accent-color-cyan-lt {
   --interactive-accent-base-hsl: var(--color-cyan-base-hsl);
+  --interactive-accent-text-hsl: var(--color-cyan-text-hsl);
   --interactive-accent-base: var(--color-cyan-base);
   --interactive-accent-tint: var(--color-cyan-tint);
   --interactive-accent-text: var(--color-cyan-text);
@@ -286,6 +664,7 @@ body.theme-light.pt-accent-color-cyan-lt {
 }
 body.theme-light.pt-accent-color-blue-lt {
   --interactive-accent-base-hsl: var(--color-blue-base-hsl);
+  --interactive-accent-text-hsl: var(--color-blue-text-hsl);
   --interactive-accent-base: var(--color-blue-base);
   --interactive-accent-tint: var(--color-blue-tint);
   --interactive-accent-text: var(--color-blue-text);
@@ -293,6 +672,7 @@ body.theme-light.pt-accent-color-blue-lt {
 }
 body.theme-light.pt-accent-color-purple-lt {
   --interactive-accent-base-hsl: var(--color-purple-base-hsl);
+  --interactive-accent-text-hsl: var(--color-purple-text-hsl);
   --interactive-accent-base: var(--color-purple-base);
   --interactive-accent-tint: var(--color-purple-tint);
   --interactive-accent-text: var(--color-purple-text);
@@ -300,6 +680,7 @@ body.theme-light.pt-accent-color-purple-lt {
 }
 body.theme-light.pt-accent-color-pink-lt {
   --interactive-accent-base-hsl: var(--color-pink-base-hsl);
+  --interactive-accent-text-hsl: var(--color-pink-text-hsl);
   --interactive-accent-base: var(--color-pink-base);
   --interactive-accent-tint: var(--color-pink-tint);
   --interactive-accent-text: var(--color-pink-text);
@@ -307,6 +688,7 @@ body.theme-light.pt-accent-color-pink-lt {
 }
 body.theme-light.pt-accent-color-grey-lt {
   --interactive-accent-base-hsl: var(--color-grey-base-hsl);
+  --interactive-accent-text-hsl: var(--color-grey-text-hsl);
   --interactive-accent-base: var(--color-grey-base);
   --interactive-accent-tint: var(--color-grey-tint);
   --interactive-accent-text: var(--color-grey-text);
@@ -337,14 +719,16 @@ body.theme-dark {
   --text-bold-color-dt: var(--text-normal);
   --text-italic-color-dt: var(--text-normal);
   --text-italic-bold-color-dt: var(--text-normal);
-  --link-internal-color-dt: var(--interactive-accent-text);
-  --link-external-color-dt: var(--interactive-accent-text);
-  --inline-title-color: var(--inline-title-color-dt);
+  --link-internal-color-dt: var(--interactive-accent-text-hsl);
+  --link-external-color-dt: var(--interactive-accent-text-hsl);
   --bold-color: var(--text-bold-color-dt);
   --italic-color: var(--text-italic-color-dt);
-  --link-color: var(--link-internal-color-dt);
-  --link-unresolved-color: var(--link-internal-color-dt);
-  --link-external-color: var(--link-external-color-dt);
+  --link-color: hsl(var(--link-internal-color-dt));
+  --link-color-hover: hsla(var(--link-internal-color-dt) / 60%);
+  --link-external-color: hsl(var(--link-external-color-dt));
+  --link-external-color-hover: hsla(var(--link-external-color-dt) / 60%);
+  --link-unresolved-color: hsl(var(--link-internal-color-dt));
+  --inline-title-color: var(--inline-title-color-dt);
   --code-background: var(--background-secondary-alt);
   --blockquote-background-color: var(--background-secondary-alt);
   --checkbox-color: var(--background-primary);
@@ -367,13 +751,16 @@ body.theme-dark.pt-highlight-text-custom-dt {
   --highlight-text-normal: var(--highlight-text-accent-custom-dt);
 }
 body.theme-dark.pt-accent-color-custom-dt {
-  --interactive-accent-base: var(--color-accent-base-dt);
-  --interactive-accent-tint: var(--color-accent-tint-dt);
-  --interactive-accent-text: var(--color-accent-text-dt);
-  --interactive-accent-hover: var(--color-accent-tint-dt);
+  --interactive-accent-base-hsl: var(--color-accent-base-dt);
+  --interactive-accent-text-hsl: var(--color-accent-text-dt);
+  --interactive-accent-base: hsl(var(--color-accent-base-dt));
+  --interactive-accent-tint: hsl(var(--color-accent-tint-dt));
+  --interactive-accent-text: hsl(var(--color-accent-text-dt));
+  --interactive-accent-hover: hsl(var(--color-accent-tint-dt));
 }
 body.theme-dark.pt-accent-color-red-dt {
   --interactive-accent-base-hsl: var(--color-red-base-hsl);
+  --interactive-accent-text-hsl: var(--color-red-text-hsl);
   --interactive-accent-base: var(--color-red-base);
   --interactive-accent-tint: var(--color-red-tint);
   --interactive-accent-text: var(--color-red-text);
@@ -381,6 +768,7 @@ body.theme-dark.pt-accent-color-red-dt {
 }
 body.theme-dark.pt-accent-color-orange-dt {
   --interactive-accent-base-hsl: var(--color-orange-base-hsl);
+  --interactive-accent-text-hsl: var(--color-orange-text-hsl);
   --interactive-accent-base: var(--color-orange-base);
   --interactive-accent-tint: var(--color-orange-tint);
   --interactive-accent-text: var(--color-orange-text);
@@ -388,6 +776,7 @@ body.theme-dark.pt-accent-color-orange-dt {
 }
 body.theme-dark.pt-accent-color-yellow-dt {
   --interactive-accent-base-hsl: var(--color-yellow-base-hsl);
+  --interactive-accent-text-hsl: var(--color-yellow-text-hsl);
   --interactive-accent-base: var(--color-yellow-base);
   --interactive-accent-tint: var(--color-yellow-tint);
   --interactive-accent-text: var(--color-yellow-text);
@@ -395,6 +784,7 @@ body.theme-dark.pt-accent-color-yellow-dt {
 }
 body.theme-dark.pt-accent-color-green-dt {
   --interactive-accent-base-hsl: var(--color-green-base-hsl);
+  --interactive-accent-text-hsl: var(--color-green-text-hsl);
   --interactive-accent-base: var(--color-green-base);
   --interactive-accent-tint: var(--color-green-tint);
   --interactive-accent-text: var(--color-green-text);
@@ -402,6 +792,7 @@ body.theme-dark.pt-accent-color-green-dt {
 }
 body.theme-dark.pt-accent-color-mint-dt {
   --interactive-accent-base-hsl: var(--color-mint-base-hsl);
+  --interactive-accent-text-hsl: var(--color-mint-text-hsl);
   --interactive-accent-base: var(--color-mint-base);
   --interactive-accent-tint: var(--color-mint-tint);
   --interactive-accent-text: var(--color-mint-text);
@@ -409,6 +800,7 @@ body.theme-dark.pt-accent-color-mint-dt {
 }
 body.theme-dark.pt-accent-color-cyan-dt {
   --interactive-accent-base-hsl: var(--color-cyan-base-hsl);
+  --interactive-accent-text-hsl: var(--color-cyan-text-hsl);
   --interactive-accent-base: var(--color-cyan-base);
   --interactive-accent-tint: var(--color-cyan-tint);
   --interactive-accent-text: var(--color-cyan-text);
@@ -416,6 +808,7 @@ body.theme-dark.pt-accent-color-cyan-dt {
 }
 body.theme-dark.pt-accent-color-blue-dt {
   --interactive-accent-base-hsl: var(--color-blue-base-hsl);
+  --interactive-accent-text-hsl: var(--color-blue-text-hsl);
   --interactive-accent-base: var(--color-blue-base);
   --interactive-accent-tint: var(--color-blue-tint);
   --interactive-accent-text: var(--color-blue-text);
@@ -423,6 +816,7 @@ body.theme-dark.pt-accent-color-blue-dt {
 }
 body.theme-dark.pt-accent-color-purple-dt {
   --interactive-accent-base-hsl: var(--color-purple-base-hsl);
+  --interactive-accent-text-hsl: var(--color-purple-text-hsl);
   --interactive-accent-base: var(--color-purple-base);
   --interactive-accent-tint: var(--color-purple-tint);
   --interactive-accent-text: var(--color-purple-text);
@@ -430,6 +824,7 @@ body.theme-dark.pt-accent-color-purple-dt {
 }
 body.theme-dark.pt-accent-color-pink-dt {
   --interactive-accent-base-hsl: var(--color-pink-base-hsl);
+  --interactive-accent-text-hsl: var(--color-pink-text-hsl);
   --interactive-accent-base: var(--color-pink-base);
   --interactive-accent-tint: var(--color-pink-tint);
   --interactive-accent-text: var(--color-pink-text);
@@ -437,458 +832,11 @@ body.theme-dark.pt-accent-color-pink-dt {
 }
 body.theme-dark.pt-accent-color-grey-dt {
   --interactive-accent-base-hsl: var(--color-grey-base-hsl);
+  --interactive-accent-text-hsl: var(--color-grey-text-hsl);
   --interactive-accent-base: var(--color-grey-base);
   --interactive-accent-tint: var(--color-grey-tint);
   --interactive-accent-text: var(--color-grey-text);
   --interactive-accent-hover: var(--color-grey-tint);
-}
-.theme-light.pt-color-scheme-swan-lt {
-  --grey100: hsl(0 0% 84%);
-  --grey200: hsl(0 0% 67%);
-  --grey300: hsl(0 0% 49%);
-  --red100: hsl(7 80% 88%);
-  --red200: hsl(6 70% 74%);
-  --red300: hsl(4 62% 55%);
-  --orange100: hsl(25 79% 84%);
-  --orange200: hsl(27 74% 64%);
-  --orange300: hsl(32 100% 37%);
-  --yellow100: hsl(47 57% 77%);
-  --yellow200: hsl(48 68% 47%);
-  --yellow300: hsl(48 100% 30%);
-  --green100: hsl(115 35% 81%);
-  --green200: hsl(115 34% 60%);
-  --green300: hsl(116 71% 33%);
-  --mint100: hsl(156 37% 81%);
-  --mint200: hsl(159 39% 57%);
-  --mint300: hsl(165 100% 28%);
-  --cyan100: hsl(192 39% 83%);
-  --cyan200: hsl(192 40% 63%);
-  --cyan300: hsl(191 75% 36%);
-  --blue100: hsl(222 62% 88%);
-  --blue200: hsl(222 57% 74%);
-  --blue300: hsl(223 54% 58%);
-  --purple100: hsl(251 62% 90%);
-  --purple200: hsl(252 60% 77%);
-  --purple300: hsl(255 56% 63%);
-  --pink100: hsl(327 56% 88%);
-  --pink200: hsl(326 50% 73%);
-  --pink300: hsl(323 46% 55%);
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 7 80% 88%;
-  --color-orange-base-hsl: 25 79% 84%;
-  --color-yellow-base-hsl: 47 57% 77%;
-  --color-green-base-hsl: 115 35% 81%;
-  --color-mint-base-hsl: 156 37% 81%;
-  --color-cyan-base-hsl: 192 39% 83%;
-  --color-blue-base-hsl: 222 62% 88%;
-  --color-purple-base-hsl: 251 62% 90%;
-  --color-pink-base-hsl: 327 56% 88%;
-  --text-normal: hsl(0 0% 25%);
-  --text-muted: hsl(0 0% 40%);
-  --text-faint: hsl(0 0% 50%);
-  --background-primary: hsl(0 0% 100%);
-  --background-primary-alt: hsl(0 0% 96.5%);
-  --background-secondary: hsl(0 0% 94%);
-  --background-secondary-blur: hsl(0 0% 94% / 80%);
-  --background-secondary-alt: hsl(0 0% 80%);
-  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(0 0% 0% / 3%) 0 1px 2px,
-    hsl(0 0% 0% / 3%) 0 2px 4px,
-    hsl(0 0% 0% / 3%) 0 4px 8px,
-    hsl(0 0% 0% / 3%) 0 8px 16px;
-}
-.theme-dark.pt-color-scheme-raven-dt {
-  --grey100: hsl(0 0% 18%);
-  --grey200: hsl(0 0% 37%);
-  --grey300: hsl(0 0% 57%);
-  --red100: hsl(0 46% 22%);
-  --red200: hsl(0 41% 43%);
-  --red300: hsl(0 51% 65%);
-  --orange100: hsl(20 52% 19%);
-  --orange200: hsl(19 45% 37%);
-  --orange300: hsl(19 43% 58%);
-  --yellow100: hsl(40 45% 16%);
-  --yellow200: hsl(39 39% 32%);
-  --yellow300: hsl(40 37% 50%);
-  --green100: hsl(122 40% 15%);
-  --green200: hsl(121 34% 31%);
-  --green300: hsl(122 32% 49%);
-  --mint100: hsl(163 51% 14%);
-  --mint200: hsl(163 43% 29%);
-  --mint300: hsl(163 39% 46%);
-  --cyan100: hsl(195 43% 16%);
-  --cyan200: hsl(195 37% 33%);
-  --cyan300: hsl(195 38% 52%);
-  --blue100: hsl(228 39% 23%);
-  --blue200: hsl(227 39% 46%);
-  --blue300: hsl(228 39% 65%);
-  --purple100: hsl(268 43% 24%);
-  --purple200: hsl(266 33% 45%);
-  --purple300: hsl(264 29% 64%);
-  --pink100: hsl(328 41% 21%);
-  --pink200: hsl(328 38% 42%);
-  --pink300: hsl(331 32% 63%);
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 46% 22%;
-  --color-orange-base-hsl: 20 52% 19%;
-  --color-yellow-base-hsl: 40 45% 16%;
-  --color-green-base-hsl: 122 40% 15%;
-  --color-mint-base-hsl: 163 51% 14%;
-  --color-cyan-base-hsl: 195 43% 16%;
-  --color-blue-base-hsl: 228 39% 23%;
-  --color-purple-base-hsl: 268 43% 24%;
-  --color-pink-base-hsl: 328 41% 21%;
-  --text-normal: hsl(0 0% 85%);
-  --text-muted: hsl(0 0% 70%);
-  --text-faint: hsl(0 0% 60%);
-  --background-primary: hsl(0 0% 13%);
-  --background-primary-alt: hsl(0 0% 18%);
-  --background-secondary: hsl(0 0% 8.5%);
-  --background-secondary-blur: hsl(0 0% 8.5% / 80%);
-  --background-secondary-alt: hsl(0 0% 5%);
-  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(0 0% 0% / 5%) 0 1px 2px,
-    hsl(0 0% 0% / 5%) 0 2px 4px,
-    hsl(0 0% 0% / 5%) 0 4px 8px,
-    hsl(0 0% 0% / 5%) 0 8px 16px;
-}
-.theme-light.pt-color-scheme-latte-lt {
-  --grey100: hsl(0 0% 84%);
-  --grey200: hsl(0 0% 67%);
-  --grey300: hsl(0 0% 49%);
-  --red100: hsl(7 80% 88%);
-  --red200: hsl(6 70% 74%);
-  --red300: hsl(4 62% 55%);
-  --orange100: hsl(25 79% 84%);
-  --orange200: hsl(27 74% 64%);
-  --orange300: hsl(32 100% 37%);
-  --yellow100: hsl(47 57% 77%);
-  --yellow200: hsl(48 68% 47%);
-  --yellow300: hsl(48 100% 30%);
-  --green100: hsl(115 35% 81%);
-  --green200: hsl(115 34% 60%);
-  --green300: hsl(116 71% 33%);
-  --mint100: hsl(156 37% 81%);
-  --mint200: hsl(159 39% 57%);
-  --mint300: hsl(165 100% 28%);
-  --cyan100: hsl(192 39% 83%);
-  --cyan200: hsl(192 40% 63%);
-  --cyan300: hsl(191 75% 36%);
-  --blue100: hsl(222 62% 88%);
-  --blue200: hsl(222 57% 74%);
-  --blue300: hsl(223 54% 58%);
-  --purple100: hsl(251 62% 90%);
-  --purple200: hsl(252 60% 77%);
-  --purple300: hsl(255 56% 63%);
-  --pink100: hsl(327 56% 88%);
-  --pink200: hsl(326 50% 73%);
-  --pink300: hsl(323 46% 55%);
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 7 80% 88%;
-  --color-orange-base-hsl: 25 79% 84%;
-  --color-yellow-base-hsl: 47 57% 77%;
-  --color-green-base-hsl: 115 35% 81%;
-  --color-mint-base-hsl: 156 37% 81%;
-  --color-cyan-base-hsl: 192 39% 83%;
-  --color-blue-base-hsl: 222 62% 88%;
-  --color-purple-base-hsl: 251 62% 90%;
-  --color-pink-base-hsl: 327 56% 88%;
-  --text-normal: hsl(28 32% 18%);
-  --text-muted: hsl(28 32% 35%);
-  --text-faint: hsl(28 32% 50%);
-  --background-primary: hsl(28 32% 95%);
-  --background-primary-alt: hsl(28 32% 93%);
-  --background-secondary: hsl(28 32% 90%);
-  --background-secondary-blur: hsl(28 32% 90% / 80%);
-  --background-secondary-alt: hsl(28 32% 77%);
-  --shadow-s: hsl(28 32% 7% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(28 32% 7% / 4%) 0 1px 2px,
-    hsl(28 32% 7% / 4%) 0 2px 4px,
-    hsl(28 32% 7% / 4%) 0 4px 8px,
-    hsl(28 32% 7% / 4%) 0 8px 16px;
-}
-.theme-dark.pt-color-scheme-mocha-dt {
-  --grey100: hsl(0 0% 18%);
-  --grey200: hsl(0 0% 37%);
-  --grey300: hsl(0 0% 57%);
-  --red100: hsl(0 53% 22%);
-  --red200: hsl(0 47% 44%);
-  --red300: hsl(0 60% 66%);
-  --orange100: hsl(21 59% 18%);
-  --orange200: hsl(20 52% 36%);
-  --orange300: hsl(20 48% 58%);
-  --yellow100: hsl(41 57% 15%);
-  --yellow200: hsl(41 48% 30%);
-  --yellow300: hsl(41 45% 47%);
-  --green100: hsl(123 50% 14%);
-  --green200: hsl(123 43% 29%);
-  --green300: hsl(123 40% 46%);
-  --mint100: hsl(166 74% 12%);
-  --mint200: hsl(164 62% 26%);
-  --mint300: hsl(164 53% 42%);
-  --cyan100: hsl(194 54% 15%);
-  --cyan200: hsl(194 47% 32%);
-  --cyan300: hsl(194 44% 50%);
-  --blue100: hsl(228 45% 23%);
-  --blue200: hsl(228 45% 47%);
-  --blue300: hsl(228 44% 65%);
-  --purple100: hsl(268 49% 25%);
-  --purple200: hsl(266 37% 47%);
-  --purple300: hsl(263 34% 65%);
-  --pink100: hsl(328 48% 21%);
-  --pink200: hsl(327 44% 42%);
-  --pink300: hsl(331 37% 63%);
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 53% 22%;
-  --color-orange-base-hsl: 21 59% 18%;
-  --color-yellow-base-hsl: 41 57% 15%;
-  --color-green-base-hsl: 123 50% 14%;
-  --color-mint-base-hsl: 166 74% 12%;
-  --color-cyan-base-hsl: 194 54% 15%;
-  --color-blue-base-hsl: 228 45% 23%;
-  --color-purple-base-hsl: 268 49% 25%;
-  --color-pink-base-hsl: 328 48% 21%;
-  --text-normal: hsl(28 32% 85%);
-  --text-muted: hsl(28 32% 70%);
-  --text-faint: hsl(28 32% 60%);
-  --background-primary: hsl(27 30% 13%);
-  --background-primary-alt: hsl(28 32% 18.5%);
-  --background-secondary: hsl(28 32% 9%);
-  --background-secondary-blur: hsl(28 32% 9% / 80%);
-  --background-secondary-alt: hsl(28 32% 6.8%);
-  --shadow-s: hsl(28 32% 7% / 50%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(28 32% 7% / 50%) 0 1px 2px,
-    hsl(28 32% 7% / 50%) 0 2px 4px,
-    hsl(28 32% 7% / 50%) 0 4px 8px,
-    hsl(28 32% 7% / 50%) 0 8px 16px;
-}
-.theme-light.pt-color-scheme-periwinkle-lt {
-  --grey100: hsl(0 0% 84%);
-  --grey200: hsl(0 0% 67%);
-  --grey300: hsl(0 0% 49%);
-  --red100: hsl(8 84% 88%);
-  --red200: hsl(7 75% 74%);
-  --red300: hsl(5 66% 55%);
-  --orange100: hsl(26 81% 83%);
-  --orange200: hsl(28 77% 63%);
-  --orange300: hsl(31 100% 38%);
-  --yellow100: hsl(46 59% 77%);
-  --yellow200: hsl(50 100% 40%);
-  --yellow300: hsl(47 100% 30%);
-  --green100: hsl(113 37% 81%);
-  --green200: hsl(114 36% 59%);
-  --green300: hsl(114 96% 29%);
-  --mint100: hsl(157 41% 80%);
-  --mint200: hsl(160 41% 56%);
-  --mint300: hsl(165 100% 28%);
-  --cyan100: hsl(193 42% 82%);
-  --cyan200: hsl(193 42% 62%);
-  --cyan300: hsl(189 100% 32%);
-  --blue100: hsl(221 65% 88%);
-  --blue200: hsl(220 63% 74%);
-  --blue300: hsl(222 59% 58%);
-  --purple100: hsl(250 69% 90%);
-  --purple200: hsl(252 66% 78%);
-  --purple300: hsl(256 62% 64%);
-  --pink100: hsl(328 58% 88%);
-  --pink200: hsl(325 53% 73%);
-  --pink300: hsl(323 49% 55%);
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 8 84% 88%;
-  --color-orange-base-hsl: 26 81% 83%;
-  --color-yellow-base-hsl: 46 59% 77%;
-  --color-green-base-hsl: 113 37% 81%;
-  --color-mint-base-hsl: 157 41% 80%;
-  --color-cyan-base-hsl: 193 42% 82%;
-  --color-blue-base-hsl: 221 65% 88%;
-  --color-purple-base-hsl: 250 69% 90%;
-  --color-pink-base-hsl: 328 58% 88%;
-  --text-normal: hsl(225 35% 30%);
-  --text-muted: hsl(225 35% 40%);
-  --text-faint: hsl(225 35% 50%);
-  --background-primary: hsl(225 35% 95%);
-  --background-primary-alt: hsl(225 35% 93%);
-  --background-secondary: hsl(225 35% 90%);
-  --background-secondary-blur: hsl(225 35% 90% / 80%);
-  --background-secondary-alt: hsl(225 35% 79%);
-  --shadow-s: hsl(225 35% 7% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(225 35% 7% / 4%) 0 1px 2px,
-    hsl(225 35% 7% / 4%) 0 2px 4px,
-    hsl(225 35% 7% / 4%) 0 4px 8px,
-    hsl(225 35% 7% / 4%) 0 8px 16px;
-}
-.theme-dark.pt-color-scheme-indigo-dt {
-  --grey100: hsl(0 0% 18%);
-  --grey200: hsl(0 0% 37%);
-  --grey300: hsl(0 0% 58%);
-  --red100: hsl(0 53% 22%);
-  --red200: hsl(0 47% 44%);
-  --red300: hsl(0 60% 66%);
-  --orange100: hsl(21 59% 18%);
-  --orange200: hsl(20 53% 36%);
-  --orange300: hsl(20 49% 58%);
-  --yellow100: hsl(41 55% 15%);
-  --yellow200: hsl(41 48% 30%);
-  --yellow300: hsl(41 46% 48%);
-  --green100: hsl(122 49% 15%);
-  --green200: hsl(123 43% 29%);
-  --green300: hsl(123 40% 46%);
-  --mint100: hsl(166 74% 12%);
-  --mint200: hsl(165 61% 26%);
-  --mint300: hsl(164 53% 42%);
-  --cyan100: hsl(194 54% 15%);
-  --cyan200: hsl(194 47% 32%);
-  --cyan300: hsl(194 44% 50%);
-  --blue100: hsl(228 44% 24%);
-  --blue200: hsl(227 44% 47%);
-  --blue300: hsl(228 44% 65%);
-  --purple100: hsl(268 49% 25%);
-  --purple200: hsl(267 37% 47%);
-  --purple300: hsl(264 34% 65%);
-  --pink100: hsl(327 49% 21%);
-  --pink200: hsl(327 43% 42%);
-  --pink300: hsl(330 37% 63%);
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 53% 22%;
-  --color-orange-base-hsl: 21 59% 19%;
-  --color-yellow-base-hsl: 41 55% 15%;
-  --color-green-base-hsl: 122 49% 15%;
-  --color-mint-base-hsl: 166 74% 12%;
-  --color-cyan-base-hsl: 194 54% 15%;
-  --color-blue-base-hsl: 228 44% 24%;
-  --color-purple-base-hsl: 268 49% 25%;
-  --color-pink-base-hsl: 327 49% 21%;
-  --text-normal: hsl(245 30% 85%);
-  --text-muted: hsl(245 30% 70%);
-  --text-faint: hsl(245 30% 65%);
-  --background-primary: hsl(245 30% 16%);
-  --background-primary-alt: hsl(245 30% 25%);
-  --background-secondary: hsl(245 30% 12%);
-  --background-secondary-blur: hsl(245 30% 12% / 80%);
-  --background-secondary-alt: hsl(245 30% 8.5%);
-  --shadow-s: hsl(245 30% 7% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(245 30% 7% / 10%) 0 1px 2px,
-    hsl(245 30% 7% / 10%) 0 2px 4px,
-    hsl(245 30% 7% / 10%) 0 4px 8px,
-    hsl(245 30% 7% / 10%) 0 8px 16px;
-}
-.theme-light.pt-color-scheme-pistachio-lt {
-  --grey100: hsl(0 0% 84%);
-  --grey200: hsl(0 0% 67%);
-  --grey300: hsl(0 0% 49%);
-  --red100: hsl(7 80% 88%);
-  --red200: hsl(6 70% 74%);
-  --red300: hsl(4 62% 55%);
-  --orange100: hsl(25 79% 84%);
-  --orange200: hsl(27 74% 64%);
-  --orange300: hsl(32 100% 37%);
-  --yellow100: hsl(47 57% 77%);
-  --yellow200: hsl(48 68% 47%);
-  --yellow300: hsl(48 100% 30%);
-  --green100: hsl(115 35% 81%);
-  --green200: hsl(115 34% 60%);
-  --green300: hsl(116 71% 33%);
-  --mint100: hsl(156 37% 81%);
-  --mint200: hsl(159 39% 57%);
-  --mint300: hsl(165 100% 28%);
-  --cyan100: hsl(192 39% 83%);
-  --cyan200: hsl(192 40% 63%);
-  --cyan300: hsl(191 75% 36%);
-  --blue100: hsl(222 62% 88%);
-  --blue200: hsl(222 57% 74%);
-  --blue300: hsl(223 54% 58%);
-  --purple100: hsl(251 62% 90%);
-  --purple200: hsl(252 60% 77%);
-  --purple300: hsl(255 56% 63%);
-  --pink100: hsl(327 56% 88%);
-  --pink200: hsl(326 50% 73%);
-  --pink300: hsl(323 46% 55%);
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 7 80% 88%;
-  --color-orange-base-hsl: 25 79% 84%;
-  --color-yellow-base-hsl: 47 57% 77%;
-  --color-green-base-hsl: 115 35% 81%;
-  --color-mint-base-hsl: 156 37% 81%;
-  --color-cyan-base-hsl: 192 39% 83%;
-  --color-blue-base-hsl: 222 62% 88%;
-  --color-purple-base-hsl: 251 62% 90%;
-  --color-pink-base-hsl: 327 56% 88%;
-  --text-normal: hsl(135 35% 20%);
-  --text-muted: hsl(135 35% 30%);
-  --text-faint: hsl(135 35% 40%);
-  --background-primary: hsl(135 35% 95.5%);
-  --background-primary-alt: hsl(135 35% 93%);
-  --background-secondary: hsl(135 35% 90.5%);
-  --background-secondary-blur: hsl(135 35% 90.5% / 80%);
-  --background-secondary-alt: hsl(135 35% 75%);
-  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(135 35% 7% / 4%) 0 1px 2px,
-    hsl(135 35% 7% / 4%) 0 2px 4px,
-    hsl(135 35% 7% / 4%) 0 4px 8px,
-    hsl(135 35% 7% / 4%) 0 8px 16px;
-}
-.theme-dark.pt-color-scheme-pine-dt {
-  --grey100: hsl(0 0% 18%);
-  --grey200: hsl(0 0% 37%);
-  --grey300: hsl(0 0% 57%);
-  --red100: hsl(0 53% 22%);
-  --red200: hsl(0 47% 44%);
-  --red300: hsl(0 60% 66%);
-  --orange100: hsl(21 59% 18%);
-  --orange200: hsl(20 53% 36%);
-  --orange300: hsl(20 49% 58%);
-  --yellow100: hsl(41 55% 15%);
-  --yellow200: hsl(41 48% 30%);
-  --yellow300: hsl(41 46% 48%);
-  --green100: hsl(122 49% 15%);
-  --green200: hsl(123 43% 29%);
-  --green300: hsl(123 40% 46%);
-  --mint100: hsl(166 74% 12%);
-  --mint200: hsl(165 61% 26%);
-  --mint300: hsl(164 53% 42%);
-  --cyan100: hsl(194 54% 15%);
-  --cyan200: hsl(194 47% 32%);
-  --cyan300: hsl(194 44% 50%);
-  --blue100: hsl(228 44% 24%);
-  --blue200: hsl(227 45% 47%);
-  --blue300: hsl(228 44% 65%);
-  --purple100: hsl(268 49% 25%);
-  --purple200: hsl(267 37% 47%);
-  --purple300: hsl(264 34% 65%);
-  --pink100: hsl(328 48% 21%);
-  --pink200: hsl(327 43% 42%);
-  --pink300: hsl(330 37% 63%);
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 53% 22%;
-  --color-orange-base-hsl: 21 59% 18%;
-  --color-yellow-base-hsl: 41 55% 15%;
-  --color-green-base-hsl: 122 49% 15%;
-  --color-mint-base-hsl: 166 74% 12%;
-  --color-cyan-base-hsl: 194 54% 15%;
-  --color-blue-base-hsl: 228 44% 24%;
-  --color-purple-base-hsl: 268 49% 25%;
-  --color-pink-base-hsl: 328 48% 21%;
-  --text-normal: hsl(135 35% 85%);
-  --text-muted: hsl(135 35% 70%);
-  --text-faint: hsl(135 35% 60%);
-  --background-primary: hsl(135 35% 12%);
-  --background-primary-alt: hsl(135 35% 17%);
-  --background-secondary: hsl(135 35% 9%);
-  --background-secondary-blur: hsl(135 35% 9% / 80%);
-  --background-secondary-alt: hsl(135 35% 6%);
-  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
-  --shadow-l:
-    hsl(135 35% 7% / 10%) 0 1px 2px,
-    hsl(135 35% 7% / 10%) 0 2px 4px,
-    hsl(135 35% 7% / 10%) 0 4px 8px,
-    hsl(135 35% 7% / 10%) 0 8px 16px;
 }
 body.pt-titlebar-hide-text .titlebar .titlebar-text {
   display: none;
@@ -2519,6 +2467,12 @@ a.tag:hover {
   align-items: center;
   min-height: 36px;
   border: 2px solid;
+  border-radius: var(--radius-m);
+}
+.callout .callout-title:empty + .callout-content {
+  padding: var(--size-4-1) var(--size-4-3);
+  border-top-style: solid;
+  border-top-width: 1px;
   border-radius: var(--radius-m);
 }
 .callout .callout-title-inner {
@@ -4746,25 +4700,25 @@ settings:
         title: Custom Accent Base Color
         description: Accent Base Color should ideally be the lightest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red100)'
+        default: '#FF0000'
     -
         id: color-accent-tint-lt
         title: Custom Accent Tint Color
         description: Accent Tint Color should ideally be between Base and Text in terms of lightness.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red200)'
+        default: '#FF0000'
     -
         id: color-accent-text-lt
         title: Custom Accent Text Color
         description: Accent Text Color Lightness should ideally be the darkest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red300)'
+        default: '#FF0000'
     -
         id: accent-colors-styles-dt
         title: Dark Theme
@@ -4891,25 +4845,25 @@ settings:
         title: Custom Accent Base Color
         description: Accent Base Color should ideally be the darkest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red100)'
+        default: '#FF0000'
     -
         id: color-accent-tint-dt
         title: Custom Accent Tint Color
         description: Accent Tint Color should ideally be between Base and Text in terms of lightness.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red200)'
+        default: '#FF0000'
     -
         id: color-accent-text-dt
         title: Custom Accent Text Color
         description: Accent Text Color Lightness should ideally be the lightest of the 3.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
-        default: 'var(--red300)'
+        default: '#FF0000'
     -
         id: graph-view-colors
         title: Graph Color Customisation
@@ -6974,50 +6928,50 @@ settings:
         title: Internal Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-internal-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-internal-custom-color-lt
         title: Internal Link Custom Color
         description: Make sure you selected 'Custom' in Light Theme Internal Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
@@ -7025,50 +6979,50 @@ settings:
         title: External Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-external-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-external-custom-color-lt
         title: External Link Custom Color
         description: Make sure you selected 'Custom' in Light Theme External Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
@@ -7244,50 +7198,50 @@ settings:
         title: Internal Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-internal-custom-color-dt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-internal-custom-color-dt
         title: Internal Link Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Internal Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
@@ -7295,50 +7249,50 @@ settings:
         title: External Link Color Preset
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-text-hsl)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-text-hsl)
             -
                 label: Custom
                 value: var(--link-external-custom-color-dt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-text-hsl)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-text-hsl)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-text-hsl)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-text-hsl)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-text-hsl)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-text-hsl)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-text-hsl)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-text-hsl)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-text-hsl)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-text-hsl)
     -
         id: link-external-custom-color-dt
         title: External Link Custom Color
         description: Make sure you selected 'Custom' in Dark Theme External Link Color Preset for this to work.
         type: variable-color
-        format: hsl
+        format: hsl-values
         opacity: false
         default: '#2B2B2B'
     -
