@@ -19,372 +19,1092 @@
     Copyright (c) 2021-2022 Damian Korcz <https://github.com/damiankorcz>
 */
 .theme-light.pt-color-scheme-swan-lt {
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 7 80% 88%;
-  --color-orange-base-hsl: 25 79% 84%;
-  --color-yellow-base-hsl: 47 57% 77%;
-  --color-green-base-hsl: 115 35% 81%;
-  --color-mint-base-hsl: 156 37% 81%;
-  --color-cyan-base-hsl: 192 39% 83%;
-  --color-blue-base-hsl: 222 62% 88%;
-  --color-purple-base-hsl: 251 62% 90%;
-  --color-pink-base-hsl: 327 56% 88%;
-  --color-grey-tint-hsl: 0 0% 67%;
-  --color-red-tint-hsl: 6 70% 74%;
-  --color-orange-tint-hsl: 27 74% 64%;
-  --color-yellow-tint-hsl: 48 68% 47%;
-  --color-green-tint-hsl: 115 34% 60%;
-  --color-mint-tint-hsl: 159 39% 57%;
-  --color-cyan-tint-hsl: 192 40% 63%;
-  --color-blue-tint-hsl: 222 57% 74%;
-  --color-purple-tint-hsl: 252 60% 77%;
-  --color-pink-tint-hsl: 326 50% 73%;
-  --color-grey-text-hsl: 0 0% 49%;
-  --color-red-text-hsl: 4 62% 55%;
-  --color-orange-text-hsl: 32 100% 37%;
-  --color-yellow-text-hsl: 48 100% 30%;
-  --color-green-text-hsl: 116 71% 33%;
-  --color-mint-text-hsl: 165 100% 28%;
-  --color-cyan-text-hsl: 191 75% 36%;
-  --color-blue-text-hsl: 223 54% 58%;
-  --color-purple-text-hsl: 255 56% 63%;
-  --color-pink-text-hsl: 323 46% 55%;
-  --text-normal: hsl(0 0% 25%);
-  --text-muted: hsl(0 0% 40%);
-  --text-faint: hsl(0 0% 50%);
-  --background-primary: hsl(0 0% 100%);
-  --background-primary-alt: hsl(0 0% 96.5%);
-  --background-secondary: hsl(0 0% 94%);
-  --background-secondary-blur: hsl(0 0% 94% / 80%);
-  --background-secondary-alt: hsl(0 0% 80%);
-  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    84%;
+  --color-red-base-hsl:
+    7,
+    80%,
+    88%;
+  --color-orange-base-hsl:
+    25,
+    79%,
+    84%;
+  --color-yellow-base-hsl:
+    47,
+    57%,
+    77%;
+  --color-green-base-hsl:
+    115,
+    35%,
+    81%;
+  --color-mint-base-hsl:
+    156,
+    37%,
+    81%;
+  --color-cyan-base-hsl:
+    192,
+    39%,
+    83%;
+  --color-blue-base-hsl:
+    222,
+    62%,
+    88%;
+  --color-purple-base-hsl:
+    251,
+    62%,
+    90%;
+  --color-pink-base-hsl:
+    327,
+    56%,
+    88%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    67%;
+  --color-red-tint-hsl:
+    6,
+    70%,
+    74%;
+  --color-orange-tint-hsl:
+    27,
+    74%,
+    64%;
+  --color-yellow-tint-hsl:
+    48,
+    68%,
+    47%;
+  --color-green-tint-hsl:
+    115,
+    34%,
+    60%;
+  --color-mint-tint-hsl:
+    159,
+    39%,
+    57%;
+  --color-cyan-tint-hsl:
+    192,
+    40%,
+    63%;
+  --color-blue-tint-hsl:
+    222,
+    57%,
+    74%;
+  --color-purple-tint-hsl:
+    252,
+    60%,
+    77%;
+  --color-pink-tint-hsl:
+    326,
+    50%,
+    73%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    49%;
+  --color-red-text-hsl:
+    4,
+    62%,
+    55%;
+  --color-orange-text-hsl:
+    32,
+    100%,
+    37%;
+  --color-yellow-text-hsl:
+    48,
+    100%,
+    30%;
+  --color-green-text-hsl:
+    116,
+    71%,
+    33%;
+  --color-mint-text-hsl:
+    165,
+    100%,
+    28%;
+  --color-cyan-text-hsl:
+    191,
+    75%,
+    36%;
+  --color-blue-text-hsl:
+    223,
+    54%,
+    58%;
+  --color-purple-text-hsl:
+    255,
+    56%,
+    63%;
+  --color-pink-text-hsl:
+    323,
+    46%,
+    55%;
+  --text-normal: hsl(0, 0%, 25%);
+  --text-muted: hsl(0, 0%, 40%);
+  --text-faint: hsl(0, 0%, 50%);
+  --background-primary: hsl(0, 0%, 100%);
+  --background-primary-alt: hsl(0, 0%, 96.5%);
+  --background-secondary: hsl(0, 0%, 94%);
+  --background-secondary-blur: hsla(0, 0%, 94%, 80%);
+  --background-secondary-alt: hsl(0, 0%, 80%);
+  --shadow-s: hsla(0, 0%, 0%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(0 0% 0% / 3%) 0 1px 2px,
-    hsl(0 0% 0% / 3%) 0 2px 4px,
-    hsl(0 0% 0% / 3%) 0 4px 8px,
-    hsl(0 0% 0% / 3%) 0 8px 16px;
+    hsla(0, 0%, 0%, 3%) 0 1px 2px,
+    hsla(0, 0%, 0%, 3%) 0 2px 4px,
+    hsla(0, 0%, 0%, 3%) 0 4px 8px,
+    hsla(0, 0%, 0%, 3%) 0 8px 16px;
 }
 .theme-dark.pt-color-scheme-raven-dt {
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 46% 22%;
-  --color-orange-base-hsl: 20 52% 19%;
-  --color-yellow-base-hsl: 40 45% 16%;
-  --color-green-base-hsl: 122 40% 15%;
-  --color-mint-base-hsl: 163 51% 14%;
-  --color-cyan-base-hsl: 195 43% 16%;
-  --color-blue-base-hsl: 228 39% 23%;
-  --color-purple-base-hsl: 268 43% 24%;
-  --color-pink-base-hsl: 328 41% 21%;
-  --color-grey-tint-hsl: 0 0% 37%;
-  --color-red-tint-hsl: 0 41% 43%;
-  --color-orange-tint-hsl: 9 45% 37%;
-  --color-yellow-tint-hsl: 39 39% 32%;
-  --color-green-tint-hsl: 121 34% 31%;
-  --color-mint-tint-hsl: 163 43% 29%;
-  --color-cyan-tint-hsl: 195 37% 33%;
-  --color-blue-tint-hsl: 227 39% 46%;
-  --color-purple-tint-hsl: 266 33% 45%;
-  --color-pink-tint-hsl: 328 38% 42%;
-  --color-grey-text-hsl: 0 0% 57%;
-  --color-red-text-hsl: 0 51% 65%;
-  --color-orange-text-hsl: 19 43% 58%;
-  --color-yellow-text-hsl: 40 37% 50%;
-  --color-green-text-hsl: 122 32% 49%;
-  --color-mint-text-hsl: 163 39% 46%;
-  --color-cyan-text-hsl: 195 38% 52%;
-  --color-blue-text-hsl: 228 39% 65%;
-  --color-purple-text-hsl: 264 29% 64%;
-  --color-pink-text-hsl: 331 32% 63%;
-  --text-normal: hsl(0 0% 85%);
-  --text-muted: hsl(0 0% 70%);
-  --text-faint: hsl(0 0% 60%);
-  --background-primary: hsl(0 0% 13%);
-  --background-primary-alt: hsl(0 0% 18%);
-  --background-secondary: hsl(0 0% 8.5%);
-  --background-secondary-blur: hsl(0 0% 8.5% / 80%);
-  --background-secondary-alt: hsl(0 0% 5%);
-  --shadow-s: hsl(0 0% 0% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    18%;
+  --color-red-base-hsl:
+    0,
+    46%,
+    22%;
+  --color-orange-base-hsl:
+    20,
+    52%,
+    19%;
+  --color-yellow-base-hsl:
+    40,
+    45%,
+    16%;
+  --color-green-base-hsl:
+    122,
+    40%,
+    15%;
+  --color-mint-base-hsl:
+    163,
+    51%,
+    14%;
+  --color-cyan-base-hsl:
+    195,
+    43%,
+    16%;
+  --color-blue-base-hsl:
+    228,
+    39%,
+    23%;
+  --color-purple-base-hsl:
+    268,
+    43%,
+    24%;
+  --color-pink-base-hsl:
+    328,
+    41%,
+    21%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    37%;
+  --color-red-tint-hsl:
+    0,
+    41%,
+    43%;
+  --color-orange-tint-hsl:
+    9,
+    45%,
+    37%;
+  --color-yellow-tint-hsl:
+    39,
+    39%,
+    32%;
+  --color-green-tint-hsl:
+    121,
+    34%,
+    31%;
+  --color-mint-tint-hsl:
+    163,
+    43%,
+    29%;
+  --color-cyan-tint-hsl:
+    195,
+    37%,
+    33%;
+  --color-blue-tint-hsl:
+    227,
+    39%,
+    46%;
+  --color-purple-tint-hsl:
+    266,
+    33%,
+    45%;
+  --color-pink-tint-hsl:
+    328,
+    38%,
+    42%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    57%;
+  --color-red-text-hsl:
+    0,
+    51%,
+    65%;
+  --color-orange-text-hsl:
+    19,
+    43%,
+    58%;
+  --color-yellow-text-hsl:
+    40,
+    37%,
+    50%;
+  --color-green-text-hsl:
+    122,
+    32%,
+    49%;
+  --color-mint-text-hsl:
+    163,
+    39%,
+    46%;
+  --color-cyan-text-hsl:
+    195,
+    38%,
+    52%;
+  --color-blue-text-hsl:
+    228,
+    39%,
+    65%;
+  --color-purple-text-hsl:
+    264,
+    29%,
+    64%;
+  --color-pink-text-hsl:
+    331,
+    32%,
+    63%;
+  --text-normal: hsl(0, 0%, 85%);
+  --text-muted: hsl(0, 0%, 70%);
+  --text-faint: hsl(0, 0%, 60%);
+  --background-primary: hsl(0, 0%, 13%);
+  --background-primary-alt: hsl(0, 0%, 18%);
+  --background-secondary: hsl(0, 0%, 8.5%);
+  --background-secondary-blur: hsla(0, 0%, 8.5%, 80%);
+  --background-secondary-alt: hsl(0, 0%, 5%);
+  --shadow-s: hsla(0, 0%, 0%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(0 0% 0% / 5%) 0 1px 2px,
-    hsl(0 0% 0% / 5%) 0 2px 4px,
-    hsl(0 0% 0% / 5%) 0 4px 8px,
-    hsl(0 0% 0% / 5%) 0 8px 16px;
+    hsla(0, 0%, 0%, 5%) 0 1px 2px,
+    hsla(0, 0%, 0%, 5%) 0 2px 4px,
+    hsla(0, 0%, 0%, 5%) 0 4px 8px,
+    hsla(0, 0%, 0%, 5%) 0 8px 16px;
 }
 .theme-light.pt-color-scheme-latte-lt {
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 7 80% 88%;
-  --color-orange-base-hsl: 25 79% 84%;
-  --color-yellow-base-hsl: 47 57% 77%;
-  --color-green-base-hsl: 115 35% 81%;
-  --color-mint-base-hsl: 156 37% 81%;
-  --color-cyan-base-hsl: 192 39% 83%;
-  --color-blue-base-hsl: 222 62% 88%;
-  --color-purple-base-hsl: 251 62% 90%;
-  --color-pink-base-hsl: 327 56% 88%;
-  --color-grey-tint-hsl: 0 0% 67%;
-  --color-red-tint-hsl: 6 70% 74%;
-  --color-orange-tint-hsl: 27 74% 64%;
-  --color-yellow-tint-hsl: 48 68% 47%;
-  --color-green-tint-hsl: 115 34% 60%;
-  --color-mint-tint-hsl: 159 39% 57%;
-  --color-cyan-tint-hsl: 192 40% 63%;
-  --color-blue-tint-hsl: 222 57% 74%;
-  --color-purple-tint-hsl: 252 60% 77%;
-  --color-pink-tint-hsl: 326 50% 73%;
-  --color-grey-text-hsl: 0 0% 49%;
-  --color-red-text-hsl: 4 62% 55%;
-  --color-orange-text-hsl: 32 100% 37%;
-  --color-yellow-text-hsl: 48 100% 30%;
-  --color-green-text-hsl: 116 71% 33%;
-  --color-mint-text-hsl: 165 100% 28%;
-  --color-cyan-text-hsl: 191 75% 36%;
-  --color-blue-text-hsl: 223 54% 58%;
-  --color-purple-text-hsl: 255 56% 63%;
-  --color-pink-text-hsl: 323 46% 55%;
-  --text-normal: hsl(28 32% 18%);
-  --text-muted: hsl(28 32% 35%);
-  --text-faint: hsl(28 32% 50%);
-  --background-primary: hsl(28 32% 95%);
-  --background-primary-alt: hsl(28 32% 93%);
-  --background-secondary: hsl(28 32% 90%);
-  --background-secondary-blur: hsl(28 32% 90% / 80%);
-  --background-secondary-alt: hsl(28 32% 77%);
-  --shadow-s: hsl(28 32% 7% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    84%;
+  --color-red-base-hsl:
+    7,
+    80%,
+    88%;
+  --color-orange-base-hsl:
+    25,
+    79%,
+    84%;
+  --color-yellow-base-hsl:
+    47,
+    57%,
+    77%;
+  --color-green-base-hsl:
+    115,
+    35%,
+    81%;
+  --color-mint-base-hsl:
+    156,
+    37%,
+    81%;
+  --color-cyan-base-hsl:
+    192,
+    39%,
+    83%;
+  --color-blue-base-hsl:
+    222,
+    62%,
+    88%;
+  --color-purple-base-hsl:
+    251,
+    62%,
+    90%;
+  --color-pink-base-hsl:
+    327,
+    56%,
+    88%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    67%;
+  --color-red-tint-hsl:
+    6,
+    70%,
+    74%;
+  --color-orange-tint-hsl:
+    27,
+    74%,
+    64%;
+  --color-yellow-tint-hsl:
+    48,
+    68%,
+    47%;
+  --color-green-tint-hsl:
+    115,
+    34%,
+    60%;
+  --color-mint-tint-hsl:
+    159,
+    39%,
+    57%;
+  --color-cyan-tint-hsl:
+    192,
+    40%,
+    63%;
+  --color-blue-tint-hsl:
+    222,
+    57%,
+    74%;
+  --color-purple-tint-hsl:
+    252,
+    60%,
+    77%;
+  --color-pink-tint-hsl:
+    326,
+    50%,
+    73%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    49%;
+  --color-red-text-hsl:
+    4,
+    62%,
+    55%;
+  --color-orange-text-hsl:
+    32,
+    100%,
+    37%;
+  --color-yellow-text-hsl:
+    48,
+    100%,
+    30%;
+  --color-green-text-hsl:
+    116,
+    71%,
+    33%;
+  --color-mint-text-hsl:
+    165,
+    100%,
+    28%;
+  --color-cyan-text-hsl:
+    191,
+    75%,
+    36%;
+  --color-blue-text-hsl:
+    223,
+    54%,
+    58%;
+  --color-purple-text-hsl:
+    255,
+    56%,
+    63%;
+  --color-pink-text-hsl:
+    323,
+    46%,
+    55%;
+  --text-normal: hsl(28, 32%, 18%);
+  --text-muted: hsl(28, 32%, 35%);
+  --text-faint: hsl(28, 32%, 50%);
+  --background-primary: hsl(28, 32%, 95%);
+  --background-primary-alt: hsl(28, 32%, 93%);
+  --background-secondary: hsl(28, 32%, 90%);
+  --background-secondary-blur: hsla(28, 32%, 90%, 80%);
+  --background-secondary-alt: hsl(28, 32%, 77%);
+  --shadow-s: hsla(28, 32%, 7%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(28 32% 7% / 4%) 0 1px 2px,
-    hsl(28 32% 7% / 4%) 0 2px 4px,
-    hsl(28 32% 7% / 4%) 0 4px 8px,
-    hsl(28 32% 7% / 4%) 0 8px 16px;
+    hsla(28, 32%, 7%, 4%) 0 1px 2px,
+    hsla(28, 32%, 7%, 4%) 0 2px 4px,
+    hsla(28, 32%, 7%, 4%) 0 4px 8px,
+    hsla(28, 32%, 7%, 4%) 0 8px 16px;
 }
 .theme-dark.pt-color-scheme-mocha-dt {
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 53% 22%;
-  --color-orange-base-hsl: 21 59% 18%;
-  --color-yellow-base-hsl: 41 57% 15%;
-  --color-green-base-hsl: 123 50% 14%;
-  --color-mint-base-hsl: 166 74% 12%;
-  --color-cyan-base-hsl: 194 54% 15%;
-  --color-blue-base-hsl: 228 45% 23%;
-  --color-purple-base-hsl: 268 49% 25%;
-  --color-pink-base-hsl: 328 48% 21%;
-  --color-grey-tint-hsl: 0 0% 37%;
-  --color-red-tint-hsl: 0 47% 44%;
-  --color-orange-tint-hsl: 20 52% 36%;
-  --color-yellow-tint-hsl: 41 48% 30%;
-  --color-green-tint-hsl: 123 43% 29%;
-  --color-mint-tint-hsl: 164 62% 26%;
-  --color-cyan-tint-hsl: 194 47% 32%;
-  --color-blue-tint-hsl: 228 45% 47%;
-  --color-purple-tint-hsl: 266 37% 47%;
-  --color-pink-tint-hsl: 327 44% 42%;
-  --color-grey-text-hsl: 0 0% 57%;
-  --color-red-text-hsl: 0 60% 66%;
-  --color-orange-text-hsl: 20 48% 58%;
-  --color-yellow-text-hsl: 41 45% 47%;
-  --color-green-text-hsl: 123 40% 46%;
-  --color-mint-text-hsl: 164 53% 42%;
-  --color-cyan-text-hsl: 194 44% 50%;
-  --color-blue-text-hsl: 228 44% 65%;
-  --color-purple-text-hsl: 263 34% 65%;
-  --color-pink-text-hsl: 331 37% 63%;
-  --text-normal: hsl(28 32% 85%);
-  --text-muted: hsl(28 32% 70%);
-  --text-faint: hsl(28 32% 60%);
-  --background-primary: hsl(27 30% 13%);
-  --background-primary-alt: hsl(28 32% 18.5%);
-  --background-secondary: hsl(28 32% 9%);
-  --background-secondary-blur: hsl(28 32% 9% / 80%);
-  --background-secondary-alt: hsl(28 32% 6.8%);
-  --shadow-s: hsl(28 32% 7% / 50%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    18%;
+  --color-red-base-hsl:
+    0,
+    53%,
+    22%;
+  --color-orange-base-hsl:
+    21,
+    59%,
+    18%;
+  --color-yellow-base-hsl:
+    41,
+    57%,
+    15%;
+  --color-green-base-hsl:
+    123,
+    50%,
+    14%;
+  --color-mint-base-hsl:
+    166,
+    74%,
+    12%;
+  --color-cyan-base-hsl:
+    194,
+    54%,
+    15%;
+  --color-blue-base-hsl:
+    228,
+    45%,
+    23%;
+  --color-purple-base-hsl:
+    268,
+    49%,
+    25%;
+  --color-pink-base-hsl:
+    328,
+    48%,
+    21%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    37%;
+  --color-red-tint-hsl:
+    0,
+    47%,
+    44%;
+  --color-orange-tint-hsl:
+    20,
+    52%,
+    36%;
+  --color-yellow-tint-hsl:
+    41,
+    48%,
+    30%;
+  --color-green-tint-hsl:
+    123,
+    43%,
+    29%;
+  --color-mint-tint-hsl:
+    164,
+    62%,
+    26%;
+  --color-cyan-tint-hsl:
+    194,
+    47%,
+    32%;
+  --color-blue-tint-hsl:
+    228,
+    45%,
+    47%;
+  --color-purple-tint-hsl:
+    266,
+    37%,
+    47%;
+  --color-pink-tint-hsl:
+    327,
+    44%,
+    42%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    57%;
+  --color-red-text-hsl:
+    0,
+    60%,
+    66%;
+  --color-orange-text-hsl:
+    20,
+    48%,
+    58%;
+  --color-yellow-text-hsl:
+    41,
+    45%,
+    47%;
+  --color-green-text-hsl:
+    123,
+    40%,
+    46%;
+  --color-mint-text-hsl:
+    164,
+    53%,
+    42%;
+  --color-cyan-text-hsl:
+    194,
+    44%,
+    50%;
+  --color-blue-text-hsl:
+    228,
+    44%,
+    65%;
+  --color-purple-text-hsl:
+    263,
+    34%,
+    65%;
+  --color-pink-text-hsl:
+    331,
+    37%,
+    63%;
+  --text-normal: hsl(28, 32%, 85%);
+  --text-muted: hsl(28, 32%, 70%);
+  --text-faint: hsl(28, 32%, 60%);
+  --background-primary: hsl(27, 30%, 13%);
+  --background-primary-alt: hsl(28, 32%, 18.5%);
+  --background-secondary: hsl(28, 32%, 9%);
+  --background-secondary-blur: hsla(28, 32%, 9%, 80%);
+  --background-secondary-alt: hsl(28, 32%, 6.8%);
+  --shadow-s: hsla(28, 32%, 7%, 50%) 0 1px 2px 0;
   --shadow-l:
-    hsl(28 32% 7% / 50%) 0 1px 2px,
-    hsl(28 32% 7% / 50%) 0 2px 4px,
-    hsl(28 32% 7% / 50%) 0 4px 8px,
-    hsl(28 32% 7% / 50%) 0 8px 16px;
+    hsla(28, 32%, 7%, 50%) 0 1px 2px,
+    hsla(28, 32%, 7%, 50%) 0 2px 4px,
+    hsla(28, 32%, 7%, 50%) 0 4px 8px,
+    hsla(28, 32%, 7%, 50%) 0 8px 16px;
 }
 .theme-light.pt-color-scheme-periwinkle-lt {
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 8 84% 88%;
-  --color-orange-base-hsl: 26 81% 83%;
-  --color-yellow-base-hsl: 46 59% 77%;
-  --color-green-base-hsl: 113 37% 81%;
-  --color-mint-base-hsl: 157 41% 80%;
-  --color-cyan-base-hsl: 193 42% 82%;
-  --color-blue-base-hsl: 221 65% 88%;
-  --color-purple-base-hsl: 250 69% 90%;
-  --color-pink-base-hsl: 328 58% 88%;
-  --color-grey-tint-hsl: 0 0% 67%;
-  --color-red-tint-hsl: 7 75% 74%;
-  --color-orange-tint-hsl: 28 77% 63%;
-  --color-yellow-tint-hsl: 50 100% 40%;
-  --color-green-tint-hsl: 114 36% 59%;
-  --color-mint-tint-hsl: 160 41% 56%;
-  --color-cyan-tint-hsl: 193 42% 62%;
-  --color-blue-tint-hsl: 220 63% 74%;
-  --color-purple-tint-hsl: 252 66% 78%;
-  --color-pink-tint-hsl: 325 53% 73%;
-  --color-grey-text-hsl: 0 0% 49%;
-  --color-red-text-hsl: 5 66% 55%;
-  --color-orange-text-hsl: 31 100% 38%;
-  --color-yellow-text-hsl: 47 100% 30%;
-  --color-green-text-hsl: 114 96% 29%;
-  --color-mint-text-hsl: 165 100% 28%;
-  --color-cyan-text-hsl: 189 100% 32%;
-  --color-blue-text-hsl: 222 59% 58%;
-  --color-purple-text-hsl: 256 62% 64%;
-  --color-pink-text-hsl: 323 49% 55%;
-  --text-normal: hsl(225 35% 30%);
-  --text-muted: hsl(225 35% 40%);
-  --text-faint: hsl(225 35% 50%);
-  --background-primary: hsl(225 35% 95%);
-  --background-primary-alt: hsl(225 35% 93%);
-  --background-secondary: hsl(225 35% 90%);
-  --background-secondary-blur: hsl(225 35% 90% / 80%);
-  --background-secondary-alt: hsl(225 35% 79%);
-  --shadow-s: hsl(225 35% 7% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    84%;
+  --color-red-base-hsl:
+    8,
+    84%,
+    88%;
+  --color-orange-base-hsl:
+    26,
+    81%,
+    83%;
+  --color-yellow-base-hsl:
+    46,
+    59%,
+    77%;
+  --color-green-base-hsl:
+    113,
+    37%,
+    81%;
+  --color-mint-base-hsl:
+    157,
+    41%,
+    80%;
+  --color-cyan-base-hsl:
+    193,
+    42%,
+    82%;
+  --color-blue-base-hsl:
+    221,
+    65%,
+    88%;
+  --color-purple-base-hsl:
+    250,
+    69%,
+    90%;
+  --color-pink-base-hsl:
+    328,
+    58%,
+    88%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    67%;
+  --color-red-tint-hsl:
+    7,
+    75%,
+    74%;
+  --color-orange-tint-hsl:
+    28,
+    77%,
+    63%;
+  --color-yellow-tint-hsl:
+    50,
+    100%,
+    40%;
+  --color-green-tint-hsl:
+    114,
+    36%,
+    59%;
+  --color-mint-tint-hsl:
+    160,
+    41%,
+    56%;
+  --color-cyan-tint-hsl:
+    193,
+    42%,
+    62%;
+  --color-blue-tint-hsl:
+    220,
+    63%,
+    74%;
+  --color-purple-tint-hsl:
+    252,
+    66%,
+    78%;
+  --color-pink-tint-hsl:
+    325,
+    53%,
+    73%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    49%;
+  --color-red-text-hsl:
+    5,
+    66%,
+    55%;
+  --color-orange-text-hsl:
+    31,
+    100%,
+    38%;
+  --color-yellow-text-hsl:
+    47,
+    100%,
+    30%;
+  --color-green-text-hsl:
+    114,
+    96%,
+    29%;
+  --color-mint-text-hsl:
+    165,
+    100%,
+    28%;
+  --color-cyan-text-hsl:
+    189,
+    100%,
+    32%;
+  --color-blue-text-hsl:
+    222,
+    59%,
+    58%;
+  --color-purple-text-hsl:
+    256,
+    62%,
+    64%;
+  --color-pink-text-hsl:
+    323,
+    49%,
+    55%;
+  --text-normal: hsl(225, 35%, 30%);
+  --text-muted: hsl(225, 35%, 40%);
+  --text-faint: hsl(225, 35%, 50%);
+  --background-primary: hsl(225, 35%, 95%);
+  --background-primary-alt: hsl(225, 35%, 93%);
+  --background-secondary: hsl(225, 35%, 90%);
+  --background-secondary-blur: hsla(225, 35%, 90%, 80%);
+  --background-secondary-alt: hsl(225, 35%, 79%);
+  --shadow-s: hsla(225, 35%, 7%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(225 35% 7% / 4%) 0 1px 2px,
-    hsl(225 35% 7% / 4%) 0 2px 4px,
-    hsl(225 35% 7% / 4%) 0 4px 8px,
-    hsl(225 35% 7% / 4%) 0 8px 16px;
+    hsla(225, 35%, 7%, 4%) 0 1px 2px,
+    hsla(225, 35%, 7%, 4%) 0 2px 4px,
+    hsla(225, 35%, 7%, 4%) 0 4px 8px,
+    hsla(225, 35%, 7%, 4%) 0 8px 16px;
 }
 .theme-dark.pt-color-scheme-indigo-dt {
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 53% 22%;
-  --color-orange-base-hsl: 21 59% 19%;
-  --color-yellow-base-hsl: 41 55% 15%;
-  --color-green-base-hsl: 122 49% 15%;
-  --color-mint-base-hsl: 166 74% 12%;
-  --color-cyan-base-hsl: 194 54% 15%;
-  --color-blue-base-hsl: 228 44% 24%;
-  --color-purple-base-hsl: 268 49% 25%;
-  --color-pink-base-hsl: 327 49% 21%;
-  --color-grey-tint-hsl: 0 0% 37%;
-  --color-red-tint-hsl: 0 47% 44%;
-  --color-orange-tint-hsl: 20 53% 36%;
-  --color-yellow-tint-hsl: 41 48% 30%;
-  --color-green-tint-hsl: 123 43% 29%;
-  --color-mint-tint-hsl: 165 61% 26%;
-  --color-cyan-tint-hsl: 194 47% 32%;
-  --color-blue-tint-hsl: 227 44% 47%;
-  --color-purple-tint-hsl: 267 37% 47%;
-  --color-pink-tint-hsl: 327 43% 42%;
-  --color-grey-text-hsl: 0 0% 58%;
-  --color-red-text-hsl: 0 60% 66%;
-  --color-orange-text-hsl: 20 49% 58%;
-  --color-yellow-text-hsl: 41 46% 48%;
-  --color-green-text-hsl: 123 40% 46%;
-  --color-mint-text-hsl: 164 53% 42%;
-  --color-cyan-text-hsl: 194 44% 50%;
-  --color-blue-text-hsl: 228 44% 65%;
-  --color-purple-text-hsl: 264 34% 65%;
-  --color-pink-text-hsl: 330 37% 63%;
-  --text-normal: hsl(245 30% 85%);
-  --text-muted: hsl(245 30% 70%);
-  --text-faint: hsl(245 30% 65%);
-  --background-primary: hsl(245 30% 16%);
-  --background-primary-alt: hsl(245 30% 25%);
-  --background-secondary: hsl(245 30% 12%);
-  --background-secondary-blur: hsl(245 30% 12% / 80%);
-  --background-secondary-alt: hsl(245 30% 8.5%);
-  --shadow-s: hsl(245 30% 7% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    18%;
+  --color-red-base-hsl:
+    0,
+    53%,
+    22%;
+  --color-orange-base-hsl:
+    21,
+    59%,
+    19%;
+  --color-yellow-base-hsl:
+    41,
+    55%,
+    15%;
+  --color-green-base-hsl:
+    122,
+    49%,
+    15%;
+  --color-mint-base-hsl:
+    166,
+    74%,
+    12%;
+  --color-cyan-base-hsl:
+    194,
+    54%,
+    15%;
+  --color-blue-base-hsl:
+    228,
+    44%,
+    24%;
+  --color-purple-base-hsl:
+    268,
+    49%,
+    25%;
+  --color-pink-base-hsl:
+    327,
+    49%,
+    21%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    37%;
+  --color-red-tint-hsl:
+    0,
+    47%,
+    44%;
+  --color-orange-tint-hsl:
+    20,
+    53%,
+    36%;
+  --color-yellow-tint-hsl:
+    41,
+    48%,
+    30%;
+  --color-green-tint-hsl:
+    123,
+    43%,
+    29%;
+  --color-mint-tint-hsl:
+    165,
+    61%,
+    26%;
+  --color-cyan-tint-hsl:
+    194,
+    47%,
+    32%;
+  --color-blue-tint-hsl:
+    227,
+    44%,
+    47%;
+  --color-purple-tint-hsl:
+    267,
+    37%,
+    47%;
+  --color-pink-tint-hsl:
+    327,
+    43%,
+    42%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    58%;
+  --color-red-text-hsl:
+    0,
+    60%,
+    66%;
+  --color-orange-text-hsl:
+    20,
+    49%,
+    58%;
+  --color-yellow-text-hsl:
+    41,
+    46%,
+    48%;
+  --color-green-text-hsl:
+    123,
+    40%,
+    46%;
+  --color-mint-text-hsl:
+    164,
+    53%,
+    42%;
+  --color-cyan-text-hsl:
+    194,
+    44%,
+    50%;
+  --color-blue-text-hsl:
+    228,
+    44%,
+    65%;
+  --color-purple-text-hsl:
+    264,
+    34%,
+    65%;
+  --color-pink-text-hsl:
+    330,
+    37%,
+    63%;
+  --text-normal: hsl(245, 30%, 85%);
+  --text-muted: hsl(245, 30%, 70%);
+  --text-faint: hsl(245, 30%, 65%);
+  --background-primary: hsl(245, 30%, 16%);
+  --background-primary-alt: hsl(245, 30%, 25%);
+  --background-secondary: hsl(245, 30%, 12%);
+  --background-secondary-blur: hsla(245, 30%, 12%, 80%);
+  --background-secondary-alt: hsl(245, 30%, 8.5%);
+  --shadow-s: hsla(245, 30%, 7%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(245 30% 7% / 10%) 0 1px 2px,
-    hsl(245 30% 7% / 10%) 0 2px 4px,
-    hsl(245 30% 7% / 10%) 0 4px 8px,
-    hsl(245 30% 7% / 10%) 0 8px 16px;
+    hsla(245, 30%, 7%, 10%) 0 1px 2px,
+    hsla(245, 30%, 7%, 10%) 0 2px 4px,
+    hsla(245, 30%, 7%, 10%) 0 4px 8px,
+    hsla(245, 30%, 7%, 10%) 0 8px 16px;
 }
 .theme-light.pt-color-scheme-pistachio-lt {
-  --color-grey-base-hsl: 0 0% 84%;
-  --color-red-base-hsl: 7 80% 88%;
-  --color-orange-base-hsl: 25 79% 84%;
-  --color-yellow-base-hsl: 47 57% 77%;
-  --color-green-base-hsl: 115 35% 81%;
-  --color-mint-base-hsl: 156 37% 81%;
-  --color-cyan-base-hsl: 192 39% 83%;
-  --color-blue-base-hsl: 222 62% 88%;
-  --color-purple-base-hsl: 251 62% 90%;
-  --color-pink-base-hsl: 327 56% 88%;
-  --color-grey-tint-hsl: 0 0% 67%;
-  --color-red-tint-hsl: 6 70% 74%;
-  --color-orange-tint-hsl: 27 74% 64%;
-  --color-yellow-tint-hsl: 48 68% 47%;
-  --color-green-tint-hsl: 115 34% 60%;
-  --color-mint-tint-hsl: 159 39% 57%;
-  --color-cyan-tint-hsl: 192 40% 63%;
-  --color-blue-tint-hsl: 222 57% 74%;
-  --color-purple-tint-hsl: 252 60% 77%;
-  --color-pink-tint-hsl: 326 50% 73%;
-  --color-grey-text-hsl: 0 0% 49%;
-  --color-red-text-hsl: 4 62% 55%;
-  --color-orange-text-hsl: 32 100% 37%;
-  --color-yellow-text-hsl: 48 100% 30%;
-  --color-green-text-hsl: 116 71% 33%;
-  --color-mint-text-hsl: 165 100% 28%;
-  --color-cyan-text-hsl: 191 75% 36%;
-  --color-blue-text-hsl: 223 54% 58%;
-  --color-purple-text-hsl: 255 56% 63%;
-  --color-pink-text-hsl: 323 46% 55%;
-  --text-normal: hsl(135 35% 20%);
-  --text-muted: hsl(135 35% 30%);
-  --text-faint: hsl(135 35% 40%);
-  --background-primary: hsl(135 35% 95.5%);
-  --background-primary-alt: hsl(135 35% 93%);
-  --background-secondary: hsl(135 35% 90.5%);
-  --background-secondary-blur: hsl(135 35% 90.5% / 80%);
-  --background-secondary-alt: hsl(135 35% 75%);
-  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    84%;
+  --color-red-base-hsl:
+    7,
+    80%,
+    88%;
+  --color-orange-base-hsl:
+    25,
+    79%,
+    84%;
+  --color-yellow-base-hsl:
+    47,
+    57%,
+    77%;
+  --color-green-base-hsl:
+    115,
+    35%,
+    81%;
+  --color-mint-base-hsl:
+    156,
+    37%,
+    81%;
+  --color-cyan-base-hsl:
+    192,
+    39%,
+    83%;
+  --color-blue-base-hsl:
+    222,
+    62%,
+    88%;
+  --color-purple-base-hsl:
+    251,
+    62%,
+    90%;
+  --color-pink-base-hsl:
+    327,
+    56%,
+    88%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    67%;
+  --color-red-tint-hsl:
+    6,
+    70%,
+    74%;
+  --color-orange-tint-hsl:
+    27,
+    74%,
+    64%;
+  --color-yellow-tint-hsl:
+    48,
+    68%,
+    47%;
+  --color-green-tint-hsl:
+    115,
+    34%,
+    60%;
+  --color-mint-tint-hsl:
+    159,
+    39%,
+    57%;
+  --color-cyan-tint-hsl:
+    192,
+    40%,
+    63%;
+  --color-blue-tint-hsl:
+    222,
+    57%,
+    74%;
+  --color-purple-tint-hsl:
+    252,
+    60%,
+    77%;
+  --color-pink-tint-hsl:
+    326,
+    50%,
+    73%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    49%;
+  --color-red-text-hsl:
+    4,
+    62%,
+    55%;
+  --color-orange-text-hsl:
+    32,
+    100%,
+    37%;
+  --color-yellow-text-hsl:
+    48,
+    100%,
+    30%;
+  --color-green-text-hsl:
+    116,
+    71%,
+    33%;
+  --color-mint-text-hsl:
+    165,
+    100%,
+    28%;
+  --color-cyan-text-hsl:
+    191,
+    75%,
+    36%;
+  --color-blue-text-hsl:
+    223,
+    54%,
+    58%;
+  --color-purple-text-hsl:
+    255,
+    56%,
+    63%;
+  --color-pink-text-hsl:
+    323,
+    46%,
+    55%;
+  --text-normal: hsl(135, 35%, 20%);
+  --text-muted: hsl(135, 35%, 30%);
+  --text-faint: hsl(135, 35%, 40%);
+  --background-primary: hsl(135, 35%, 95.5%);
+  --background-primary-alt: hsl(135, 35%, 93%);
+  --background-secondary: hsl(135, 35%, 90.5%);
+  --background-secondary-blur: hsla(135, 35%, 90.5%, 80%);
+  --background-secondary-alt: hsl(135, 35%, 75%);
+  --shadow-s: hsla(135, 35%, 7%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(135 35% 7% / 4%) 0 1px 2px,
-    hsl(135 35% 7% / 4%) 0 2px 4px,
-    hsl(135 35% 7% / 4%) 0 4px 8px,
-    hsl(135 35% 7% / 4%) 0 8px 16px;
+    hsla(135, 35%, 7%, 4%) 0 1px 2px,
+    hsla(135, 35%, 7%, 4%) 0 2px 4px,
+    hsla(135, 35%, 7%, 4%) 0 4px 8px,
+    hsla(135, 35%, 7%, 4%) 0 8px 16px;
 }
 .theme-dark.pt-color-scheme-pine-dt {
-  --color-grey-base-hsl: 0 0% 18%;
-  --color-red-base-hsl: 0 53% 22%;
-  --color-orange-base-hsl: 21 59% 18%;
-  --color-yellow-base-hsl: 41 55% 15%;
-  --color-green-base-hsl: 122 49% 15%;
-  --color-mint-base-hsl: 166 74% 12%;
-  --color-cyan-base-hsl: 194 54% 15%;
-  --color-blue-base-hsl: 228 44% 24%;
-  --color-purple-base-hsl: 268 49% 25%;
-  --color-pink-base-hsl: 328 48% 21%;
-  --color-grey-tint-hsl: 0 0% 37%;
-  --color-red-tint-hsl: 0 47% 44%;
-  --color-orange-tint-hsl: 20 53% 36%;
-  --color-yellow-tint-hsl: 41 48% 30%;
-  --color-green-tint-hsl: 123 43% 29%;
-  --color-mint-tint-hsl: 165 61% 26%;
-  --color-cyan-tint-hsl: 194 47% 32%;
-  --color-blue-tint-hsl: 227 45% 47%;
-  --color-purple-tint-hsl: 267 37% 47%;
-  --color-pink-tint-hsl: 327 43% 42%;
-  --color-grey-text-hsl: 0 0% 57%;
-  --color-red-text-hsl: 0 60% 66%;
-  --color-orange-text-hsl: 20 49% 58%;
-  --color-yellow-text-hsl: 41 46% 48%;
-  --color-green-text-hsl: 123 40% 46%;
-  --color-mint-text-hsl: 164 53% 42%;
-  --color-cyan-text-hsl: 194 44% 50%;
-  --color-blue-text-hsl: 228 44% 65%;
-  --color-purple-text-hsl: 264 34% 65%;
-  --color-pink-text-hsl: 330 37% 63%;
-  --text-normal: hsl(135 35% 85%);
-  --text-muted: hsl(135 35% 70%);
-  --text-faint: hsl(135 35% 60%);
-  --background-primary: hsl(135 35% 12%);
-  --background-primary-alt: hsl(135 35% 17%);
-  --background-secondary: hsl(135 35% 9%);
-  --background-secondary-blur: hsl(135 35% 9% / 80%);
-  --background-secondary-alt: hsl(135 35% 6%);
-  --shadow-s: hsl(135 35% 7% / 10%) 0 1px 2px 0;
+  --color-grey-base-hsl:
+    0,
+    0%,
+    18%;
+  --color-red-base-hsl:
+    0,
+    53%,
+    22%;
+  --color-orange-base-hsl:
+    21,
+    59%,
+    18%;
+  --color-yellow-base-hsl:
+    41,
+    55%,
+    15%;
+  --color-green-base-hsl:
+    122,
+    49%,
+    15%;
+  --color-mint-base-hsl:
+    166,
+    74%,
+    12%;
+  --color-cyan-base-hsl:
+    194,
+    54%,
+    15%;
+  --color-blue-base-hsl:
+    228,
+    44%,
+    24%;
+  --color-purple-base-hsl:
+    268,
+    49%,
+    25%;
+  --color-pink-base-hsl:
+    328,
+    48%,
+    21%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    37%;
+  --color-red-tint-hsl:
+    0,
+    47%,
+    44%;
+  --color-orange-tint-hsl:
+    20,
+    53%,
+    36%;
+  --color-yellow-tint-hsl:
+    41,
+    48%,
+    30%;
+  --color-green-tint-hsl:
+    123,
+    43%,
+    29%;
+  --color-mint-tint-hsl:
+    165,
+    61%,
+    26%;
+  --color-cyan-tint-hsl:
+    194,
+    47%,
+    32%;
+  --color-blue-tint-hsl:
+    227,
+    45%,
+    47%;
+  --color-purple-tint-hsl:
+    267,
+    37%,
+    47%;
+  --color-pink-tint-hsl:
+    327,
+    43%,
+    42%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    57%;
+  --color-red-text-hsl:
+    0,
+    60%,
+    66%;
+  --color-orange-text-hsl:
+    20,
+    49%,
+    58%;
+  --color-yellow-text-hsl:
+    41,
+    46%,
+    48%;
+  --color-green-text-hsl:
+    123,
+    40%,
+    46%;
+  --color-mint-text-hsl:
+    164,
+    53%,
+    42%;
+  --color-cyan-text-hsl:
+    194,
+    44%,
+    50%;
+  --color-blue-text-hsl:
+    228,
+    44%,
+    65%;
+  --color-purple-text-hsl:
+    264,
+    34%,
+    65%;
+  --color-pink-text-hsl:
+    330,
+    37%,
+    63%;
+  --text-normal: hsl(135, 35%, 85%);
+  --text-muted: hsl(135, 35%, 70%);
+  --text-faint: hsl(135, 35%, 60%);
+  --background-primary: hsl(135, 35%, 12%);
+  --background-primary-alt: hsl(135, 35%, 17%);
+  --background-secondary: hsl(135, 35%, 9%);
+  --background-secondary-blur: hsla(135, 35%, 9%, 80%);
+  --background-secondary-alt: hsl(135, 35%, 6%);
+  --shadow-s: hsla(135, 35%, 7%, 10%) 0 1px 2px 0;
   --shadow-l:
-    hsl(135 35% 7% / 10%) 0 1px 2px,
-    hsl(135 35% 7% / 10%) 0 2px 4px,
-    hsl(135 35% 7% / 10%) 0 4px 8px,
-    hsl(135 35% 7% / 10%) 0 8px 16px;
+    hsla(135, 35%, 7%, 10%) 0 1px 2px,
+    hsla(135, 35%, 7%, 10%) 0 2px 4px,
+    hsla(135, 35%, 7%, 10%) 0 4px 8px,
+    hsla(135, 35%, 7%, 10%) 0 8px 16px;
 }
 /*! Source Sans - Distributed under the SIL Open Font Licence 1.1 - https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md */
 @font-face {
@@ -542,7 +1262,7 @@ body:is(.theme-light, .theme-dark) {
   --input-shadow: unset;
   --input-shadow-hover: unset;
   --tab-stacked-shadow: 0;
-  --background-modifier-hover: hsla(var(--interactive-accent-base-hsl) / 60%);
+  --background-modifier-hover: hsla(var(--interactive-accent-base-hsl), 50%);
   --text-selection: var(--background-modifier-hover);
   --text-highlight-bg: var(--interactive-accent-base);
   --interactive-accent: var(--interactive-accent-tint);
@@ -583,9 +1303,9 @@ body.theme-light {
   --bold-color: var(--text-bold-color-lt);
   --italic-color: var(--text-italic-color-lt);
   --link-color: hsl(var(--link-internal-color-lt));
-  --link-color-hover: hsla(var(--link-internal-color-lt) / 60%);
+  --link-color-hover: hsla(var(--link-internal-color-lt), 60%);
   --link-external-color: hsl(var(--link-external-color-lt));
-  --link-external-color-hover: hsla(var(--link-external-color-lt) / 60%);
+  --link-external-color-hover: hsla(var(--link-external-color-lt), 60%);
   --link-unresolved-color: hsl(var(--link-internal-color-lt));
   --inline-title-color: var(--inline-title-color-lt);
   --code-background: var(--background-primary);
@@ -724,9 +1444,9 @@ body.theme-dark {
   --bold-color: var(--text-bold-color-dt);
   --italic-color: var(--text-italic-color-dt);
   --link-color: hsl(var(--link-internal-color-dt));
-  --link-color-hover: hsla(var(--link-internal-color-dt) / 60%);
+  --link-color-hover: hsla(var(--link-internal-color-dt), 60%);
   --link-external-color: hsl(var(--link-external-color-dt));
-  --link-external-color-hover: hsla(var(--link-external-color-dt) / 60%);
+  --link-external-color-hover: hsla(var(--link-external-color-dt), 60%);
   --link-unresolved-color: hsl(var(--link-internal-color-dt));
   --inline-title-color: var(--inline-title-color-dt);
   --code-background: var(--background-secondary-alt);
@@ -1101,7 +1821,7 @@ body.is-mobile.theme-light .workspace-drawer-tab-options {
   background-color: var(--background-primary);
 }
 body.is-mobile.theme-dark {
-  --background-modifier-hover: hsla(var(--interactive-accent-base-hsl) / 60%);
+  --background-modifier-hover: hsla(var(--interactive-accent-base-hsl), 60%);
   --background-modifier-form-field: var(--background-secondary-alt);
 }
 body.is-mobile.theme-dark .workspace-leaf-content,
@@ -2506,7 +3226,7 @@ a.tag:hover {
   color: var(--color-grey-text);
 }
 .callout[data-callout=note] > .callout-content {
-  background-color: hsla(var(--color-grey-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-grey-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
 .callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title {
@@ -2518,7 +3238,7 @@ a.tag:hover {
   color: var(--color-cyan-text);
 }
 .callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-content {
-  background-color: hsla(var(--color-cyan-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-cyan-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-cyan-tint);
 }
 .callout:is([data-callout=info], [data-callout=todo]) > .callout-title {
@@ -2530,7 +3250,7 @@ a.tag:hover {
   color: var(--color-blue-text);
 }
 .callout:is([data-callout=info], [data-callout=todo]) > .callout-content {
-  background-color: hsla(var(--color-blue-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-blue-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-blue-tint);
 }
 .callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title {
@@ -2542,7 +3262,7 @@ a.tag:hover {
   color: var(--color-mint-text);
 }
 .callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-content {
-  background-color: hsla(var(--color-mint-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-mint-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-mint-tint);
 }
 .callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title {
@@ -2554,7 +3274,7 @@ a.tag:hover {
   color: var(--color-green-text);
 }
 .callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-content {
-  background-color: hsla(var(--color-green-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-green-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-green-tint);
 }
 .callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title {
@@ -2566,7 +3286,7 @@ a.tag:hover {
   color: var(--color-yellow-text);
 }
 .callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-content {
-  background-color: hsla(var(--color-yellow-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-yellow-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-yellow-tint);
 }
 .callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title {
@@ -2578,7 +3298,7 @@ a.tag:hover {
   color: var(--color-orange-text);
 }
 .callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-content {
-  background-color: hsla(var(--color-orange-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-orange-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-orange-tint);
 }
 .callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title {
@@ -2590,7 +3310,7 @@ a.tag:hover {
   color: var(--color-red-text);
 }
 .callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-content {
-  background-color: hsla(var(--color-red-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-red-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-red-tint);
 }
 .callout:is([data-callout=danger], [data-callout=error]) > .callout-title {
@@ -2602,7 +3322,7 @@ a.tag:hover {
   color: var(--color-red-text);
 }
 .callout:is([data-callout=danger], [data-callout=error]) > .callout-content {
-  background-color: hsla(var(--color-red-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-red-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-red-tint);
 }
 .callout[data-callout=bug] > .callout-title {
@@ -2614,7 +3334,7 @@ a.tag:hover {
   color: var(--color-pink-text);
 }
 .callout[data-callout=bug] > .callout-content {
-  background-color: hsla(var(--color-pink-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-pink-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-pink-tint);
 }
 .callout[data-callout=example] > .callout-title {
@@ -2626,7 +3346,7 @@ a.tag:hover {
   color: var(--color-purple-text);
 }
 .callout[data-callout=example] > .callout-content {
-  background-color: hsla(var(--color-purple-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-purple-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-purple-tint);
 }
 .callout:is([data-callout=quote], [data-callout=cite]) > .callout-title {
@@ -2638,7 +3358,7 @@ a.tag:hover {
   color: var(--color-grey-text);
 }
 .callout:is([data-callout=quote], [data-callout=cite]) > .callout-content {
-  background-color: hsla(var(--color-grey-base-hsl)/var(--callout-background-alpha));
+  background-color: hsla(var(--color-grey-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
 .markdown-rendered progress,
