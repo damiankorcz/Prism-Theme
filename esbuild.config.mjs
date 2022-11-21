@@ -26,6 +26,7 @@ esbuild.build({
     watch: !prod,
     logLevel: "info",
     outfile: prod ? fileProd : fileDev,
+    // minify: true,
     plugins: [
         sassPlugin({
             cache: true,
