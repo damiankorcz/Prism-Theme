@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: 3.0.4)
+    Prism Theme for Obsidian.md (Version: 3.1.0)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1187,8 +1187,6 @@ body {
   --toggle-s-thumb-height: 14px;
   --toggle-s-thumb-width: 14px;
   --toggle-s-border-width: 4px;
-  --callout-padding: 4px;
-  --callout-radius: var(--radius-m);
   --divider-color-hover: var(--interactive-accent-tint);
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
@@ -1259,6 +1257,10 @@ body:is(.theme-light, .theme-dark) {
   --color-accent-base-dt: var(--color-red-base-hsl);
   --color-accent-tint-dt: var(--color-red-tint-hsl);
   --color-accent-text-dt: var(--color-red-text-hsl);
+  --color-accent-hsl: var(--interactive-accent-text-hsl);
+  --color-accent: var(--interactive-accent-text);
+  --color-accent-1: var(--interactive-accent-tint);
+  --color-accent-2: var(--interactive-accent-base);
   --input-shadow: unset;
   --input-shadow-hover: unset;
   --tab-stacked-shadow: 0;
@@ -2070,7 +2072,7 @@ body.is-mobile .mod-root .view-content::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.0.4";
+  content: "Prism 3.1.0";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -2201,6 +2203,12 @@ img.community-theme-lightbox {
 }
 .community-modal-button-container button {
   margin-right: unset;
+}
+.theme-light .community-modal-search-results-wrapper {
+  background-color: var(--background-primary);
+}
+.theme-dark .community-modal-search-results-wrapper {
+  background-color: var(--background-secondary-alt);
 }
 .community-item {
   padding: var(--size-4-2);
@@ -2399,10 +2407,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   margin-bottom: -1px;
   box-shadow: unset;
 }
-.show-view-header .mod-root .cm-scroller::-webkit-scrollbar-track,
-.show-view-header .mod-root .view-content::-webkit-scrollbar-track {
-  margin-top: calc(var(--header-height) - 1px) !important;
-}
 .theme-light div.suggestion-container .suggestion::-webkit-scrollbar-track,
 .theme-dark div.suggestion-container .suggestion::-webkit-scrollbar-track {
   background-color: unset;
@@ -2445,12 +2449,9 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   background-color: var(--background-secondary-alt);
 }
 :is(.is-focused .workspace-leaf.mod-active .view-header, .view-header) {
-  position: fixed;
   width: 100%;
   padding: 0 var(--size-4-2);
-  background: var(--background-secondary-blur);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
+  background: var(--background-secondary);
 }
 .workspace-tabs .view-header {
   margin: unset;
@@ -2469,9 +2470,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 .view-header-title-parent .view-header-breadcrumb:hover {
   color: var(--highlight-text-normal);
-}
-.show-view-header {
-  --file-margins: 64px 32px;
 }
 :is(.workspace-ribbon.mod-left, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) .sidebar-toggle-button {
   width: fit-content;
@@ -2995,12 +2993,6 @@ button.mod-cta {
 .theme-dark .workspace-split.mod-root .view-content {
   background-color: var(--background-secondary-alt);
 }
-.show-view-header .workspace-leaf-content[data-type=image] .view-content {
-  padding-top: calc(var(--header-height) + var(--size-4-4));
-}
-.show-view-header .workspace-leaf-content[data-type=pdf] .view-content {
-  padding-top: var(--header-height);
-}
 p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
@@ -3177,10 +3169,14 @@ a.tag:hover {
 .cm-s-obsidian .cm-hmd-frontmatter.cm-def {
   color: var(--text-faint);
 }
-.callout {
+body:not(.pt-disable-callout-styling) {
+  --callout-padding: 4px;
+  --callout-radius: var(--radius-m);
+}
+body:not(.pt-disable-callout-styling) .callout {
   background-color: unset;
 }
-.callout .callout-title {
+body:not(.pt-disable-callout-styling) .callout .callout-title {
   position: relative;
   z-index: 5;
   gap: unset;
@@ -3189,26 +3185,26 @@ a.tag:hover {
   border: 2px solid;
   border-radius: var(--radius-m);
 }
-.callout .callout-title:empty + .callout-content {
+body:not(.pt-disable-callout-styling) .callout .callout-title:empty + .callout-content {
   padding: var(--size-4-1) var(--size-4-3);
   border-top-style: solid;
   border-top-width: 1px;
   border-radius: var(--radius-m);
 }
-.callout .callout-title-inner {
+body:not(.pt-disable-callout-styling) .callout .callout-title-inner {
   padding: var(--size-4-1) 0;
   margin: 0 var(--size-4-1);
 }
-.callout .callout-icon {
+body:not(.pt-disable-callout-styling) .callout .callout-icon {
   margin: 0 var(--size-4-1) 0 var(--size-4-2);
   border-radius: var(--radius-m);
 }
-.callout .callout-fold {
+body:not(.pt-disable-callout-styling) .callout .callout-fold {
   display: flex;
   align-self: center;
   margin-left: auto;
 }
-.callout .callout-content {
+body:not(.pt-disable-callout-styling) .callout .callout-content {
   padding: var(--size-4-5) var(--size-4-3) var(--size-4-1) var(--size-4-3);
   margin-top: -16px;
   border-right: 1px solid;
@@ -3217,147 +3213,147 @@ a.tag:hover {
   border-bottom-right-radius: var(--radius-m);
   border-bottom-left-radius: var(--radius-m);
 }
-.callout[data-callout=note] > .callout-title {
+body:not(.pt-disable-callout-styling) .callout[data-callout=note] > .callout-title {
   color: var(--color-grey-text);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-.callout[data-callout=note] > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout[data-callout=note] > .callout-title .callout-icon .svg-icon {
   color: var(--color-grey-text);
 }
-.callout[data-callout=note] > .callout-content {
+body:not(.pt-disable-callout-styling) .callout[data-callout=note] > .callout-content {
   background-color: hsla(var(--color-grey-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
-.callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title {
   color: var(--color-cyan-text);
   background-color: var(--color-cyan-base);
   border-color: var(--color-cyan-tint);
 }
-.callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-cyan-text);
 }
-.callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=abstract], [data-callout=summary], [data-callout=tldr]) > .callout-content {
   background-color: hsla(var(--color-cyan-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-cyan-tint);
 }
-.callout:is([data-callout=info], [data-callout=todo]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=info], [data-callout=todo]) > .callout-title {
   color: var(--color-blue-text);
   background-color: var(--color-blue-base);
   border-color: var(--color-blue-tint);
 }
-.callout:is([data-callout=info], [data-callout=todo]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=info], [data-callout=todo]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-blue-text);
 }
-.callout:is([data-callout=info], [data-callout=todo]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=info], [data-callout=todo]) > .callout-content {
   background-color: hsla(var(--color-blue-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-blue-tint);
 }
-.callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title {
   color: var(--color-mint-text);
   background-color: var(--color-mint-base);
   border-color: var(--color-mint-tint);
 }
-.callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-mint-text);
 }
-.callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=tip], [data-callout=hint], [data-callout=important]) > .callout-content {
   background-color: hsla(var(--color-mint-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-mint-tint);
 }
-.callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title {
   color: var(--color-green-text);
   background-color: var(--color-green-base);
   border-color: var(--color-green-tint);
 }
-.callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-green-text);
 }
-.callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=success], [data-callout=check], [data-callout=done]) > .callout-content {
   background-color: hsla(var(--color-green-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-green-tint);
 }
-.callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title {
   color: var(--color-yellow-text);
   background-color: var(--color-yellow-base);
   border-color: var(--color-yellow-tint);
 }
-.callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-yellow-text);
 }
-.callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=question], [data-callout=help], [data-callout=faq]) > .callout-content {
   background-color: hsla(var(--color-yellow-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-yellow-tint);
 }
-.callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title {
   color: var(--color-orange-text);
   background-color: var(--color-orange-base);
   border-color: var(--color-orange-tint);
 }
-.callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-orange-text);
 }
-.callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=warning], [data-callout=caution], [data-callout=attention]) > .callout-content {
   background-color: hsla(var(--color-orange-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-orange-tint);
 }
-.callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title {
   color: var(--color-red-text);
   background-color: var(--color-red-base);
   border-color: var(--color-red-tint);
 }
-.callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-red-text);
 }
-.callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=failure], [data-callout=fail], [data-callout=missing]) > .callout-content {
   background-color: hsla(var(--color-red-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-red-tint);
 }
-.callout:is([data-callout=danger], [data-callout=error]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=danger], [data-callout=error]) > .callout-title {
   color: var(--color-red-text);
   background-color: var(--color-red-base);
   border-color: var(--color-red-tint);
 }
-.callout:is([data-callout=danger], [data-callout=error]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=danger], [data-callout=error]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-red-text);
 }
-.callout:is([data-callout=danger], [data-callout=error]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=danger], [data-callout=error]) > .callout-content {
   background-color: hsla(var(--color-red-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-red-tint);
 }
-.callout[data-callout=bug] > .callout-title {
+body:not(.pt-disable-callout-styling) .callout[data-callout=bug] > .callout-title {
   color: var(--color-pink-text);
   background-color: var(--color-pink-base);
   border-color: var(--color-pink-tint);
 }
-.callout[data-callout=bug] > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout[data-callout=bug] > .callout-title .callout-icon .svg-icon {
   color: var(--color-pink-text);
 }
-.callout[data-callout=bug] > .callout-content {
+body:not(.pt-disable-callout-styling) .callout[data-callout=bug] > .callout-content {
   background-color: hsla(var(--color-pink-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-pink-tint);
 }
-.callout[data-callout=example] > .callout-title {
+body:not(.pt-disable-callout-styling) .callout[data-callout=example] > .callout-title {
   color: var(--color-purple-text);
   background-color: var(--color-purple-base);
   border-color: var(--color-purple-tint);
 }
-.callout[data-callout=example] > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout[data-callout=example] > .callout-title .callout-icon .svg-icon {
   color: var(--color-purple-text);
 }
-.callout[data-callout=example] > .callout-content {
+body:not(.pt-disable-callout-styling) .callout[data-callout=example] > .callout-content {
   background-color: hsla(var(--color-purple-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-purple-tint);
 }
-.callout:is([data-callout=quote], [data-callout=cite]) > .callout-title {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-callout=cite]) > .callout-title {
   color: var(--color-grey-text);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-.callout:is([data-callout=quote], [data-callout=cite]) > .callout-title .callout-icon .svg-icon {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-callout=cite]) > .callout-title .callout-icon .svg-icon {
   color: var(--color-grey-text);
 }
-.callout:is([data-callout=quote], [data-callout=cite]) > .callout-content {
+body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-callout=cite]) > .callout-content {
   background-color: hsla(var(--color-grey-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
@@ -3649,12 +3645,6 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .graph-controls :not(.is-close) {
   max-height: calc(100% - 25px);
 }
-.show-view-header .workspace-split.mod-root .graph-controls {
-  top: calc(var(--header-height) + var(--size-4-3));
-}
-.show-view-header .workspace-split.mod-root .graph-controls:not(.is-close) {
-  max-height: calc(100% - var(--header-height) - 25px);
-}
 .graph-control-section {
   padding: var(--size-4-2);
 }
@@ -3937,6 +3927,43 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .outgoing-link-pane .tree-item-self .tree-item-icon {
   margin-right: var(--size-4-2);
 }
+.theme-dark .canvas-wrapper,
+.theme-dark .canvas-node-content {
+  background-color: var(--background-secondary-alt);
+}
+.canvas-controls-group,
+.canvas-card-menu,
+.canvas-menu {
+  gap: var(--size-4-1);
+  padding: var(--size-4-1);
+  background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
+  border-radius: var(--radius-m);
+}
+.canvas-card-menu {
+  border: 1px solid var(--window-border);
+}
+.canvas-controls button,
+button.canvas-menu-item {
+  padding: var(--size-2-3);
+  background-color: unset;
+  border: unset;
+  border-radius: var(--radius-s);
+}
+.canvas-controls button:hover,
+button.canvas-menu-item:hover {
+  color: var(--nav-item-color-hover);
+  background-color: var(--background-modifier-hover);
+}
+.canvas-card-menu .canvas-card-menu-button {
+  padding: var(--size-4-1);
+  color: var(--text-muted);
+}
+.canvas-card-menu .canvas-card-menu-button svg {
+  width: 24px;
+  height: 24px;
+}
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
   align-items: center;
   min-width: -webkit-fill-available;
@@ -4004,94 +4031,109 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 1;
 }
-mark[class] {
+body:not(.pt-disable-mark-highlight-styling) mark[class] {
   --mark-highlight-base: var(--interactive-accent-base);
-  --mark-highlight-dark: var(--interactive-accent-tint);
+  --mark-highlight-tint: var(--interactive-accent-tint);
   --mark-highlight-text: var(--interactive-accent-text);
-  padding: 0 3px;
-  font-size: var(--font-smallest);
   font-weight: 600;
+  background-color: transparent;
   border-radius: var(--radius-s);
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-mark[class] .external-link {
+body:not(.pt-disable-mark-highlight-styling) mark[class] .external-link {
   background-position-x: calc(100% - 1px);
   background-position-y: 2px;
 }
-:is(.theme-dark.pt-highlight-style-none-dt mark[class], .theme-light.pt-highlight-style-none-lt mark[class]) {
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.red, .Red) {
+  --mark-highlight-base: var(--color-red-base);
+  --mark-highlight-tint: var(--color-red-tint);
+  --mark-highlight-text: var(--color-red-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.orange, .Orange) {
+  --mark-highlight-base: var(--color-orange-base);
+  --mark-highlight-tint: var(--color-orange-tint);
+  --mark-highlight-text: var(--color-orange-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.yellow, .Yellow) {
+  --mark-highlight-base: var(--color-yellow-base);
+  --mark-highlight-tint: var(--color-yellow-tint);
+  --mark-highlight-text: var(--color-yellow-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.green, .Green) {
+  --mark-highlight-base: var(--color-green-base);
+  --mark-highlight-tint: var(--color-green-tint);
+  --mark-highlight-text: var(--color-green-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.mint, .Mint) {
+  --mark-highlight-base: var(--color-mint-base);
+  --mark-highlight-tint: var(--color-mint-tint);
+  --mark-highlight-text: var(--color-mint-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.aqua, .Aqua, .cyan, .Cyan) {
+  --mark-highlight-base: var(--color-cyan-base);
+  --mark-highlight-tint: var(--color-cyan-tint);
+  --mark-highlight-text: var(--color-cyan-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.blue, .Blue) {
+  --mark-highlight-base: var(--color-blue-base);
+  --mark-highlight-tint: var(--color-blue-tint);
+  --mark-highlight-text: var(--color-blue-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.purple, .Purple) {
+  --mark-highlight-base: var(--color-purple-base);
+  --mark-highlight-tint: var(--color-purple-tint);
+  --mark-highlight-text: var(--color-purple-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.pink, .Pink) {
+  --mark-highlight-base: var(--color-pink-base);
+  --mark-highlight-tint: var(--color-pink-tint);
+  --mark-highlight-text: var(--color-pink-text);
+}
+body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.grey, .Grey) {
+  --mark-highlight-base: var(--color-grey-base);
+  --mark-highlight-tint: var(--color-grey-tint);
+  --mark-highlight-text: var(--color-grey-text);
+}
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-default-dt mark[class], body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-default-lt mark[class]),
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-default-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-default-lt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-border-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-border-lt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-filled-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-filled-lt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-default) {
   padding: 0;
   font-size: 1em;
-  background-color: transparent;
+  border: unset;
   opacity: 1;
 }
-:is(.theme-dark.pt-highlight-style-border-dt mark[class], .theme-light.pt-highlight-style-border-lt mark[class]) {
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-border-dt mark[class], body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-border-lt mark[class]),
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-default-dt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-default-lt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-border-dt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-border-lt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-filled-dt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-filled-lt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-border, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-border) {
+  padding: 0 3px;
+  font-size: var(--font-smallest);
   background-color: unset;
-  border: var(--accent-border-width) solid var(--mark-highlight-dark);
+  border: var(--accent-border-width) solid var(--mark-highlight-tint);
 }
-:is(.theme-dark.pt-highlight-style-filled-dt mark[class], .theme-light.pt-highlight-style-filled-lt mark[class]) {
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-filled-dt mark[class], body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-filled-lt mark[class]),
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-default-dt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-default-lt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-border-dt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-border-lt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-filled-dt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-filled-lt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-filled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-filled) {
+  padding: 0 3px;
+  font-size: var(--font-smallest);
   background-color: var(--mark-highlight-base);
   border: var(--accent-border-width) solid var(--mark-highlight-base);
 }
-:is(.theme-dark.pt-highlight-style-borderandfilled-dt mark[class], .theme-light.pt-highlight-style-borderandfilled-lt mark[class]) {
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-borderandfilled-dt mark[class], body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-borderandfilled-lt mark[class]),
+:is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-default-dt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-default-lt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-border-dt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-border-lt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-filled-dt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-filled-lt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-borderandfilled, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-borderandfilled) {
+  padding: 0 3px;
+  font-size: var(--font-smallest);
   background-color: var(--mark-highlight-base);
-  border: var(--accent-border-width) solid var(--mark-highlight-dark);
+  border: var(--accent-border-width) solid var(--mark-highlight-tint);
 }
-:is(.theme-light.pt-highlight-text-none-lt mark[class], .theme-dark.pt-highlight-text-none-dt mark[class]) {
+:is(body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-text-default-lt mark[class], body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-text-default-dt mark[class]),
+:is(body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-text-default-lt mark[class].mark-text-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-text-default-dt mark[class]).mark-text-default,
+body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-text-color-lt mark[class].mark-text-default,
+body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-text-color-dt mark[class].mark-text-default {
   color: var(--text-normal);
 }
-:is(.theme-light.pt-highlight-text-color-lt mark[class], .theme-dark.pt-highlight-text-color-dt mark[class]) {
+:is(body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-text-color-lt mark[class], body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-text-color-dt mark[class]),
+:is(body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-text-default-lt mark[class].mark-text-color, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-text-default-dt mark[class]).mark-text-color,
+body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-text-color-lt mark[class].mark-text-color,
+body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-text-color-dt mark[class].mark-text-color {
   color: var(--mark-highlight-text);
-}
-mark[class]:is(.red, .Red) {
-  --mark-highlight-base: var(--color-red-base);
-  --mark-highlight-dark: var(--color-red-tint);
-  --mark-highlight-text: var(--color-red-text);
-}
-mark[class]:is(.orange, .Orange) {
-  --mark-highlight-base: var(--color-orange-base);
-  --mark-highlight-dark: var(--color-orange-tint);
-  --mark-highlight-text: var(--color-orange-text);
-}
-mark[class]:is(.yellow, .Yellow) {
-  --mark-highlight-base: var(--color-yellow-base);
-  --mark-highlight-dark: var(--color-yellow-tint);
-  --mark-highlight-text: var(--color-yellow-text);
-}
-mark[class]:is(.green, .Green) {
-  --mark-highlight-base: var(--color-green-base);
-  --mark-highlight-dark: var(--color-green-tint);
-  --mark-highlight-text: var(--color-green-text);
-}
-mark[class]:is(.mint, .Mint) {
-  --mark-highlight-base: var(--color-mint-base);
-  --mark-highlight-dark: var(--color-mint-tint);
-  --mark-highlight-text: var(--color-mint-text);
-}
-mark[class]:is(.aqua, .Aqua, .cyan, .Cyan) {
-  --mark-highlight-base: var(--color-cyan-base);
-  --mark-highlight-dark: var(--color-cyan-tint);
-  --mark-highlight-text: var(--color-cyan-text);
-}
-mark[class]:is(.blue, .Blue) {
-  --mark-highlight-base: var(--color-blue-base);
-  --mark-highlight-dark: var(--color-blue-tint);
-  --mark-highlight-text: var(--color-blue-text);
-}
-mark[class]:is(.purple, .Purple) {
-  --mark-highlight-base: var(--color-purple-base);
-  --mark-highlight-dark: var(--color-purple-tint);
-  --mark-highlight-text: var(--color-purple-text);
-}
-mark[class]:is(.pink, .Pink) {
-  --mark-highlight-base: var(--color-pink-base);
-  --mark-highlight-dark: var(--color-pink-tint);
-  --mark-highlight-text: var(--color-pink-text);
-}
-mark[class]:is(.grey, .Grey) {
-  --mark-highlight-base: var(--color-grey-base);
-  --mark-highlight-dark: var(--color-grey-tint);
-  --mark-highlight-text: var(--color-grey-text);
 }
 .pt-font-alt-a * {
   font-feature-settings: "ss03";
@@ -4366,9 +4408,6 @@ button.kanban-plugin__new-item-button:hover {
 .kanban-plugin__board > div {
   padding: var(--size-4-4);
 }
-.show-view-header > div:not(.popover) .kanban-plugin__board > div {
-  padding-top: calc(var(--header-height) + var(--size-4-4));
-}
 .kanban-plugin__markdown-preview-view > div > * {
   overflow-x: unset;
 }
@@ -4588,15 +4627,19 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   bottom: unset;
   flex-wrap: wrap;
-  column-gap: var(--size-4-1);
+  gap: var(--size-4-1);
   justify-content: flex-start;
   height: unset;
   padding: var(--size-4-1);
-  background-color: var(--background-secondary);
-  border-bottom: 1px solid var(--window-border);
 }
 .is-phone :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-header {
   gap: var(--size-4-4);
+}
+:is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .advanced-tables-buttons > div:first-child {
+  display: none;
+}
+:is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .advanced-tables-row-label {
+  width: fit-content;
 }
 :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .view-content {
   height: fit-content;
@@ -4606,14 +4649,8 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   min-height: -webkit-fill-available;
 }
 :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-buttons-container {
-  padding: unset;
-  background-color: unset;
-  border: unset;
-  border-radius: unset;
+  margin: unset;
   box-shadow: unset;
-}
-.is-phone :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-buttons-container {
-  padding: var(--size-4-1);
 }
 :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .widget-icon {
   width: var(--icon-size);
@@ -8036,8 +8073,8 @@ settings:
         default: pt-highlight-style-borderandfilled-lt
         options:
             -
-                label: None
-                value: pt-highlight-style-none-lt
+                label: Default
+                value: pt-highlight-style-default-lt
             -
                 label: Border
                 value: pt-highlight-style-border-lt
@@ -8055,8 +8092,8 @@ settings:
         default: pt-highlight-text-color-lt
         options:
             -
-                label: None
-                value: pt-highlight-text-none-lt
+                label: Default
+                value: pt-highlight-text-default-lt
             -
                 label: Color
                 value: pt-highlight-text-color-lt
@@ -8074,8 +8111,8 @@ settings:
         default: pt-highlight-style-borderandfilled-dt
         options:
             -
-                label: None
-                value: pt-highlight-style-none-dt
+                label: Default
+                value: pt-highlight-style-default-dt
             -
                 label: Border
                 value: pt-highlight-style-border-dt
@@ -8093,8 +8130,8 @@ settings:
         default: pt-highlight-text-color-dt
         options:
             -
-                label: None
-                value: pt-highlight-text-none-dt
+                label: Default
+                value: pt-highlight-text-default-dt
             -
                 label: Color
                 value: pt-highlight-text-color-dt
@@ -8531,6 +8568,18 @@ settings:
         default: false
         type: class-toggle
     -
+        id: pt-disable-callout-styling
+        title: Disable Prism Callout Styling
+        description: This option removes the custom Callout Styling introduced with Prism and reverts to a completely default look. This should be used if you prefer the default callout styling or have CSS Snippets that use it's customisation options.
+        default: false
+        type: class-toggle
+    -
+        id: pt-disable-mark-highlight-styling
+        title: Disable Mark Highlight Styling
+        description: This option removes the custom Callout Styling introduced with Prism and reverts to a completely default look. This should be used if you prefer the default callout styling or have CSS Snippets that use it's customisation options.
+        default: false
+        type: class-toggle
+    -
         id: prism-wiki
         title: Prism Wiki
         description: Visit the Wiki section of the GitHub Repository for additional detailed descriptions for theme specific features and customisation options.
@@ -8587,6 +8636,7 @@ settings:
 core:
 - audio-recorder
 - backlink
+- canvas
 - command-palette
 - daily-notes
 - file-explorer
