@@ -1,0 +1,49 @@
+/* #region  [Plugin - Core] Canvas */
+.canvas-wrapper,
+.canvas-node-content {
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
+}
+
+.canvas-controls-group,
+.canvas-card-menu,
+.canvas-menu {
+	gap: var(--size-4-1);
+	padding: var(--size-4-1);
+	background: var(--background-secondary-blur);
+	-webkit-backdrop-filter: blur(var(--blur-intensity));
+	backdrop-filter: blur(var(--blur-intensity));
+	border-radius: var(--radius-m);
+}
+
+.canvas-card-menu {
+	border: 1px solid var(--window-border);
+}
+
+.canvas-controls button,
+button.canvas-menu-item {
+	padding: var(--size-2-3);
+	background-color: unset;
+	border: unset;
+	border-radius: var(--radius-s);
+
+	&:hover {
+		color: var(--nav-item-color-hover);
+		background-color: var(--background-modifier-hover);
+	}
+}
+
+.canvas-card-menu .canvas-card-menu-button {
+	padding: var(--size-4-1);
+	color: var(--text-muted);
+
+	svg {
+		width: 24px;
+		height: 24px;
+	}
+}
+/* #endregion */
+
+/* .workspace-leaf-content[data-type="canvas"] {
+} */
