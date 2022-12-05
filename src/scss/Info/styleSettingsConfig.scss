@@ -2759,8 +2759,8 @@ settings:
         default: pt-highlight-style-borderandfilled-lt
         options:
             -
-                label: None
-                value: pt-highlight-style-none-lt
+                label: Default
+                value: pt-highlight-style-default-lt
             -
                 label: Border
                 value: pt-highlight-style-border-lt
@@ -2778,8 +2778,8 @@ settings:
         default: pt-highlight-text-color-lt
         options:
             -
-                label: None
-                value: pt-highlight-text-none-lt
+                label: Default
+                value: pt-highlight-text-default-lt
             -
                 label: Color
                 value: pt-highlight-text-color-lt
@@ -2797,8 +2797,8 @@ settings:
         default: pt-highlight-style-borderandfilled-dt
         options:
             -
-                label: None
-                value: pt-highlight-style-none-dt
+                label: Default
+                value: pt-highlight-style-default-dt
             -
                 label: Border
                 value: pt-highlight-style-border-dt
@@ -2816,8 +2816,8 @@ settings:
         default: pt-highlight-text-color-dt
         options:
             -
-                label: None
-                value: pt-highlight-text-none-dt
+                label: Default
+                value: pt-highlight-text-default-dt
             -
                 label: Color
                 value: pt-highlight-text-color-dt
@@ -3256,6 +3256,12 @@ settings:
     -
         id: pt-disable-callout-styling
         title: Disable Prism Callout Styling
+        description: This option removes the custom Callout Styling introduced with Prism and reverts to a completely default look. This should be used if you prefer the default callout styling or have CSS Snippets that use it's customisation options.
+        default: false
+        type: class-toggle
+    -
+        id: pt-disable-mark-highlight-styling
+        title: Disable Mark Highlight Styling
         description: This option removes the custom Callout Styling introduced with Prism and reverts to a completely default look. This should be used if you prefer the default callout styling or have CSS Snippets that use it's customisation options.
         default: false
         type: class-toggle
