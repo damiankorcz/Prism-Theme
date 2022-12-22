@@ -271,14 +271,17 @@ img.community-theme-lightbox {
 	font-weight: var(--font-medium);
 }
 
-body:not(.native-scrollbars, .is-phone) .modal-close-button {
-	top: var(--size-4-1);
-	right: var(--size-4-1);
+.modal-close-button {
 	z-index: var(--layer-popover);
-}
 
-.modal-close-button:hover {
-	color: var(--highlight-text-normal);
+	&:hover {
+		color: var(--highlight-text-normal);
+	}
+
+	body:not(.native-scrollbars, .is-phone) & {
+		top: var(--size-4-1);
+		right: var(--size-4-1);
+	}
 }
 
 .mod-warning {
