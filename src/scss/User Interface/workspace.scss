@@ -65,7 +65,7 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 /* #endregion */
 
 /* #region  [UI] Workspace Ribbon */
-:is(.workspace-ribbon.mod-left, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) {
+:is(.workspace-ribbon.mod-left, .workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) {
 	.sidebar-toggle-button {
 		width: fit-content;
 		height: calc(var(--header-height) - 9px);
@@ -74,5 +74,11 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 		border: 2px solid transparent;
 		border-radius: var(--radius-m);
 	}
+}
+/* #endregion */
+
+/* #region  [UI] macOS Sidebar Toggle Button fix  */
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+	padding-right: 2px;
 }
 /* #endregion */
