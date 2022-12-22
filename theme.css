@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: 3.1.0)
+    Prism Theme for Obsidian.md (Version: 3.1.1)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1206,7 +1206,6 @@ body {
   --blur-intensity: 8px;
   --accent-border-width: 2px;
   --scroll-bar-size: 12px;
-  --callout-background-alpha: 20%;
   --custom-vault-banner-icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --mark-highlight-base: var(--color-yellow-base);
   --status-bar-background-color-lt: #EBECEF;
@@ -1632,10 +1631,6 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace-tab-header::before,
 .workspace-tab-header::after {
-  display: none;
-}
-.mod-left-split .workspace-tabs .workspace-tab-header-spacer,
-.mod-right-split .workspace-tabs .workspace-tab-header-spacer {
   display: none;
 }
 .pt-fade-inactive-tabs :not(.mod-active) .workspace-tab-header.is-active:not(.mod-active) {
@@ -2072,7 +2067,7 @@ body.is-mobile .mod-root .view-content::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.1.0";
+  content: "Prism 3.1.1";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -2254,13 +2249,15 @@ img.community-theme-lightbox {
 .setting-item-name {
   font-weight: var(--font-medium);
 }
-body:not(.native-scrollbars, .is-phone) .modal-close-button {
-  top: var(--size-4-1);
-  right: var(--size-4-1);
+.modal-close-button {
   z-index: var(--layer-popover);
 }
 .modal-close-button:hover {
   color: var(--highlight-text-normal);
+}
+body:not(.native-scrollbars, .is-phone) .modal-close-button {
+  top: var(--size-4-1);
+  right: var(--size-4-1);
 }
 .mod-warning {
   color: var(--color-red-text);
@@ -2402,6 +2399,9 @@ body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
   border-radius: unset;
 }
+body:not(.native-scrollbars) ::-webkit-scrollbar-corner {
+  background-color: var(--window-border);
+}
 ::-webkit-scrollbar-track {
   margin-top: -1px;
   margin-bottom: -1px;
@@ -2471,13 +2471,16 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 .view-header-title-parent .view-header-breadcrumb:hover {
   color: var(--highlight-text-normal);
 }
-:is(.workspace-ribbon.mod-left, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) .sidebar-toggle-button {
+:is(.workspace-ribbon.mod-left, .workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) .sidebar-toggle-button {
   width: fit-content;
   height: calc(var(--header-height) - 9px);
   padding: 2px;
   margin: 4px;
   border: 2px solid transparent;
   border-radius: var(--radius-m);
+}
+.mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
+  padding-right: 2px;
 }
 :is(.mod-active .document-search-container, .document-search-container) {
   position: relative;
@@ -3172,6 +3175,7 @@ a.tag:hover {
 body:not(.pt-disable-callout-styling) {
   --callout-padding: 4px;
   --callout-radius: var(--radius-m);
+  --callout-background-alpha: 20%;
 }
 body:not(.pt-disable-callout-styling) .callout {
   background-color: unset;
@@ -3927,22 +3931,31 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .outgoing-link-pane .tree-item-self .tree-item-icon {
   margin-right: var(--size-4-2);
 }
+body {
+  --canvas-color: var(--color-grey-tint-hsl);
+  --canvas-background-color: var(--color-grey-base-hsl);
+  --canvas-highlight-color: var(--color-grey-text-hsl);
+}
+body.theme-dark {
+  --canvas-color: var(--color-grey-tint-hsl);
+}
+.canvas-group-label {
+  font-weight: var(--font-semibold);
+}
 .theme-dark .canvas-wrapper,
 .theme-dark .canvas-node-content {
   background-color: var(--background-secondary-alt);
 }
 .canvas-controls-group,
+.canvas-menu,
 .canvas-card-menu,
-.canvas-menu {
+.theme-dark .canvas-card-menu {
   gap: var(--size-4-1);
   padding: var(--size-4-1);
   background: var(--background-secondary-blur);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
   border-radius: var(--radius-m);
-}
-.canvas-card-menu {
-  border: 1px solid var(--window-border);
 }
 .canvas-controls button,
 button.canvas-menu-item {
@@ -3956,6 +3969,131 @@ button.canvas-menu-item:hover {
   color: var(--nav-item-color-hover);
   background-color: var(--background-modifier-hover);
 }
+.canvas-node-container {
+  border: 4px solid rgb(var(--canvas-color));
+}
+.mod-canvas-color-1 {
+  --canvas-color: var(--color-red-tint-hsl);
+  --canvas-background-color: var(--color-red-base-hsl);
+  --canvas-highlight-color: var(--color-red-text-hsl);
+}
+.mod-canvas-color-2 {
+  --canvas-color: var(--color-orange-tint-hsl);
+  --canvas-background-color: var(--color-orange-base-hsl);
+  --canvas-highlight-color: var(--color-orange-text-hsl);
+}
+.mod-canvas-color-3 {
+  --canvas-color: var(--color-yellow-tint-hsl);
+  --canvas-background-color: var(--color-yellow-base-hsl);
+  --canvas-highlight-color: var(--color-yellow-text-hsl);
+}
+.mod-canvas-color-4 {
+  --canvas-color: var(--color-green-tint-hsl);
+  --canvas-background-color: var(--color-green-base-hsl);
+  --canvas-highlight-color: var(--color-green-text-hsl);
+}
+.mod-canvas-color-5 {
+  --canvas-color: var(--color-cyan-tint-hsl);
+  --canvas-background-color: var(--color-cyan-base-hsl);
+  --canvas-highlight-color: var(--color-cyan-text-hsl);
+}
+.mod-canvas-color-6 {
+  --canvas-color: var(--color-purple-tint-hsl);
+  --canvas-background-color: var(--color-purple-base-hsl);
+  --canvas-highlight-color: var(--color-purple-text-hsl);
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+.canvas-node:not(.is-themed) {
+  --shadow-border-themed-inset: inset 0 0 0 1px hsl(var(--canvas-color));
+  --shadow-border-themed: 0 0 0 2px hsl(var(--canvas-color));
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) .canvas-node-placeholder::after,
+.canvas-node:not(.is-themed) .canvas-node-placeholder::after {
+  background-color: hsla(var(--canvas-color), 20%);
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) .canvas-node-container,
+.canvas-node:not(.is-themed) .canvas-node-container {
+  border: 4px solid hsl(var(--canvas-color));
+}
+.theme-light .canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6):not(.canvas-node-group) .canvas-node-container,
+.theme-light .canvas-node:not(.is-themed):not(.canvas-node-group) .canvas-node-container {
+  background-color: var(--background-primary);
+}
+.theme-dark .canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6):not(.canvas-node-group) .canvas-node-container,
+.theme-dark .canvas-node:not(.is-themed):not(.canvas-node-group) .canvas-node-container {
+  background-color: var(--background-secondary-alt);
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) .canvas-node-content,
+.canvas-node:not(.is-themed) .canvas-node-content {
+  background-color: hsla(var(--canvas-background-color), 20%);
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6).canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]) {
+  background-color: hsl(var(--canvas-highlight-color));
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6).canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]).mod-foreground-light,
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6).canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]).mod-foreground-dark {
+  color: var(--background-primary);
+}
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6).is-selected.is-themed .canvas-node-container,
+.canvas-node:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6).is-focused.is-themed .canvas-node-container {
+  border-color: hsl(var(--canvas-highlight-color));
+}
+.canvas-node:not(.is-themed).canvas-node-group .canvas-group-label:not([contenteditable=true]) {
+  color: var(--background-primary);
+  background-color: hsl(var(--canvas-highlight-color));
+}
+.canvas-node:not(.is-themed).is-selected .canvas-node-container,
+.canvas-node:not(.is-themed).is-focused .canvas-node-container {
+  border-color: hsl(var(--canvas-highlight-color));
+}
+.canvas-color-picker-item:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+.canvas-color-picker-item:first-child {
+  background-color: hsl(var(--canvas-color));
+}
+.canvas-color-picker-item:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6):hover,
+.canvas-color-picker-item:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6).is-active,
+.canvas-color-picker-item:first-child:hover,
+.canvas-color-picker-item:first-child.is-active {
+  box-shadow: 0 0 0 2px hsl(var(--canvas-color));
+}
+.canvas-minimap rect:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+.canvas-minimap rect:not(.is-themed) {
+  fill: hsl(var(--canvas-color));
+  stroke: hsl(var(--canvas-color));
+}
+.theme-light .canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]).mod-foreground-light {
+  color: var(--background-primary);
+}
+.theme-dark .canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]).mod-foreground-light {
+  color: var(--text-normal);
+}
+.canvas-edges g:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) path.canvas-display-path,
+.canvas-edges g:not(.is-themed) path.canvas-display-path {
+  stroke: hsl(var(--canvas-highlight-color));
+}
+.canvas-edges g:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) polyline.canvas-path-end,
+.canvas-edges g:not(.is-themed) polyline.canvas-path-end {
+  fill: hsl(var(--canvas-highlight-color));
+  stroke: hsl(var(--canvas-highlight-color));
+}
+.canvas-edges g.is-focused path.canvas-interaction-path,
+.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
+  stroke: hsla(var(--canvas-highlight-color), 10%);
+}
+.canvas-minimap path:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+.canvas-minimap path:not(.is-themed) {
+  stroke: hsl(var(--canvas-highlight-color));
+}
+.canvas-card-menu {
+  top: var(--size-4-2);
+  bottom: unset;
+  left: var(--size-4-2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--window-border);
+  transform: unset;
+}
 .canvas-card-menu .canvas-card-menu-button {
   padding: var(--size-4-1);
   color: var(--text-muted);
@@ -3963,6 +4101,9 @@ button.canvas-menu-item:hover {
 .canvas-card-menu .canvas-card-menu-button svg {
   width: 24px;
   height: 24px;
+}
+.canvas-card-menu .canvas-card-menu-button.mod-draggable:hover svg {
+  transform: translateX(4px);
 }
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
   align-items: center;
