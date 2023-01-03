@@ -263,35 +263,20 @@ body.is-mobile {
 	&.theme-dark .prompt {
 		background-color: var(--background-secondary-alt);
 	}
-	.mod-root .cm-scroller::-webkit-scrollbar-track,
+	/* .mod-root .cm-scroller::-webkit-scrollbar-track,
 	.mod-root .view-content::-webkit-scrollbar-track {
 		margin-bottom: calc(48px - 1px) !important;
-	}
+	} */
 }
 
 .mobile-toolbar {
-	position: absolute;
-	bottom: 0;
-	z-index: var(--layer-cover);
-	display: flex;
-	align-self: center;
-	width: fit-content;
-	max-width: -webkit-fill-available;
-	max-width: fill-available;
-	height: unset;
-	margin: 4px;
-	background-color: unset;
-	border: unset;
+	padding: var(--size-4-1);
+	background-color: var(--background-secondary);
+	border-top: 1px solid var(--window-border);
 }
 
 .mobile-toolbar-options-container {
 	padding: unset;
-	background-color: var(--background-secondary-blur);
-	border: 1px solid var(--window-border);
-	border-radius: var(--radius-m);
-	box-shadow: var(--shadow-l);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
 }
 
 .mobile-toolbar-option :hover {
