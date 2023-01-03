@@ -263,16 +263,17 @@ body.is-mobile {
 	&.theme-dark .prompt {
 		background-color: var(--background-secondary-alt);
 	}
-	/* .mod-root .cm-scroller::-webkit-scrollbar-track,
-	.mod-root .view-content::-webkit-scrollbar-track {
-		margin-bottom: calc(48px - 1px) !important;
-	} */
 }
 
 .mobile-toolbar {
 	padding: var(--size-4-1);
 	background-color: var(--background-secondary);
 	border-top: 1px solid var(--window-border);
+}
+
+/* Padding fix for Commander due to forced height */
+.AT-multirow .mobile-toolbar {
+	padding: 0 var(--size-4-1);
 }
 
 .mobile-toolbar-options-container {
