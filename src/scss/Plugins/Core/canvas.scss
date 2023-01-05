@@ -20,20 +20,24 @@ body {
 	}
 }
 
-.canvas-controls-group,
+.canvas-control-item {
+	background-color: unset;
+}
+
+.canvas-control-group,
 .canvas-menu,
 .canvas-card-menu,
 .theme-dark .canvas-card-menu {
 	gap: var(--size-4-1);
 	padding: var(--size-4-1);
-	background: var(--background-secondary-blur);
+	background-color: var(--background-secondary-blur);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 	border-radius: var(--radius-m);
 }
 
-.canvas-controls button,
-button.canvas-menu-item {
+.canvas-control-item,
+.canvas-card-menu-button {
 	padding: var(--size-2-3);
 	background-color: unset;
 	border: unset;
