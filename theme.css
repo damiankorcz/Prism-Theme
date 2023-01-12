@@ -1,5 +1,5 @@
 /*!
-    Prism Theme for Obsidian.md (Version: 3.1.1)
+    Prism Theme for Obsidian.md (Version: 3.2.0)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1152,8 +1152,8 @@ body {
   --h4-weight: var(--font-extrabold);
   --h5-weight: var(--font-extrabold);
   --h6-weight: var(--font-extrabold);
-  --list-indent: 1.25em;
-  --list-bullet-size: 6px;
+  --list-indent: 1.4em;
+  --list-bullet-size: 0.35em;
   --indentation-guide-width: 2px;
   --tag-padding-y: 0;
   --tag-padding-x: 0.75ch;
@@ -1203,6 +1203,10 @@ body {
   --scrollbar-thumb-bg: var(--background-primary);
   --text-on-accent: var(--highlight-text-normal);
   --prompt-border-color: var(--window-border);
+  --embed-border-top: 1px solid var(--window-border);
+  --embed-border-bottom: 1px solid var(--window-border);
+  --embed-border-right: 1px solid var(--window-border);
+  --embed-padding: unset;
   --blur-intensity: 8px;
   --accent-border-width: 2px;
   --scroll-bar-size: 12px;
@@ -1992,32 +1996,16 @@ body.is-mobile .view-header .view-action {
 body.is-mobile.theme-dark .prompt {
   background-color: var(--background-secondary-alt);
 }
-body.is-mobile .mod-root .cm-scroller::-webkit-scrollbar-track,
-body.is-mobile .mod-root .view-content::-webkit-scrollbar-track {
-  margin-bottom: 47px !important;
-}
 .mobile-toolbar {
-  position: absolute;
-  bottom: 0;
-  z-index: var(--layer-cover);
-  display: flex;
-  align-self: center;
-  width: fit-content;
-  max-width: -webkit-fill-available;
-  max-width: fill-available;
-  height: unset;
-  margin: 4px;
-  background-color: unset;
-  border: unset;
+  padding: var(--size-4-1);
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--window-border);
+}
+.AT-multirow .mobile-toolbar {
+  padding: 0 var(--size-4-1);
 }
 .mobile-toolbar-options-container {
   padding: unset;
-  background-color: var(--background-secondary-blur);
-  border: 1px solid var(--window-border);
-  border-radius: var(--radius-m);
-  box-shadow: var(--shadow-l);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
 }
 .mobile-toolbar-option :hover {
   color: var(--interactive-accent-tint);
@@ -2067,7 +2055,7 @@ body.is-mobile .mod-root .view-content::-webkit-scrollbar-track {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.1.1";
+  content: "Prism 3.2.0";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -2482,9 +2470,20 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
   padding-right: 2px;
 }
+.pt-collapsed-pinned-tab .workspace .mod-root .workspace-tab-header[data-type=markdown]:has(.mod-pinned) .workspace-tab-header-inner-icon,
+.pt-collapsed-pinned-tab .workspace .mod-root .workspace-tab-header[data-type=empty]:has(.mod-pinned) .workspace-tab-header-inner-icon {
+  display: flex;
+}
+.pt-collapsed-pinned-tab .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
+  display: none;
+}
+.pt-collapsed-pinned-tab .workspace .mod-root .workspace-tab-header:has(.mod-pinned),
+.pt-collapsed-pinned-tab .workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
+  flex: unset;
+  width: fit-content;
+  min-width: unset;
+}
 :is(.mod-active .document-search-container, .document-search-container) {
-  position: relative;
-  right: var(--scroll-bar-size);
   height: var(--header-height);
   padding: var(--size-4-1) 0;
   margin: unset;
@@ -2508,9 +2507,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 .popover.hover-popover {
   border: 1px solid var(--window-border);
-}
-:is(.markdown-embed-link, .file-embed-link) {
-  right: calc(var(--scroll-bar-size) + var(--size-4-1));
 }
 .menu {
   background: var(--background-secondary);
@@ -3000,11 +2996,25 @@ p {
   margin-block-start: 0.5em;
   margin-block-end: 0.5em;
 }
+.cm-s-obsidian span.cm-formatting-highlight.cm-em:not(.cm-strong),
+.cm-s-obsidian span.cm-highlight.cm-em:not(.cm-strong),
+.cm-s-obsidian span.cm-quote.cm-em:not(.cm-strong) {
+  color: var(--italic-color);
+}
+.cm-s-obsidian span.cm-formatting-highlight.cm-strong:not(.cm-em),
+.cm-s-obsidian span.cm-highlight.cm-strong:not(.cm-em),
+.cm-s-obsidian span.cm-quote.cm-strong:not(.cm-em) {
+  color: var(--bold-color);
+}
 .theme-light :is(em strong, strong em, .cm-em.cm-strong) {
   color: var(--text-italic-bold-color-lt);
 }
 .theme-dark :is(em strong, strong em, .cm-em.cm-strong) {
   color: var(--text-italic-bold-color-dt);
+}
+.cm-strikethrough,
+del {
+  color: var(--text-muted);
 }
 :is(.cm-inline-code, .cm-math) {
   padding: 0 var(--size-4-1);
@@ -3051,18 +3061,6 @@ p {
 :is(code[class*=language-], pre[class*=language-]) {
   line-height: var(--line-height-tight);
 }
-.markdown-source-view.mod-cm6 .cm-embed-block pre {
-  margin: 1em 0;
-}
-.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
-  color: var(--interactive-accent-text);
-}
-.markdown-source-view.mod-cm6 .list-bullet {
-  padding-inline-end: 0.4em;
-}
-.markdown-source-view.mod-cm6 .cm-indent::before {
-  transform: translateX(0);
-}
 .markdown-preview-view th,
 .table-view-table > thead > tr > th,
 .markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th {
@@ -3070,9 +3068,6 @@ p {
 }
 .markdown-rendered thead tr:first-child > th {
   font-weight: var(--font-semibold);
-}
-.markdown-source-view.mod-cm6 .HyperMD-list-line .task-list-label {
-  margin-left: -6px;
 }
 .cm-s-obsidian span.cm-formatting-task {
   font-family: var(--font-text);
@@ -3101,6 +3096,8 @@ a.tag:hover {
 }
 :is(.markdown-preview-view, .markdown-rendered) :is(code, kbd) {
   padding: 0 var(--size-4-1);
+  font-family: var(--font-monospace);
+  font-size: var(--code-size);
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -3123,10 +3120,6 @@ a.tag:hover {
 .markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote {
   padding-left: var(--size-4-6) !important;
 }
-.file-embed.mod-empty {
-  border: 1px solid var(--window-border);
-  border-radius: var(--radius-s);
-}
 :is(.theme-light.pt-highlight-text-color-lt, .theme-dark.pt-highlight-text-color-dt) span.cm-link {
   color: var(--link-external-color);
 }
@@ -3136,9 +3129,41 @@ a.tag:hover {
 :is(.theme-light.pt-highlight-text-color-lt, .theme-dark.pt-highlight-text-color-dt) span.cm-hmd-internal-link:hover {
   color: var(--link-color-hover);
 }
-.markdown-rendered.show-indentation-guide li > ul::before,
-.markdown-rendered.show-indentation-guide li > ol::before {
-  left: -13px;
+.markdown-source-view.mod-cm6 {
+  --list-bullet-transform: translateX(0.15em);
+}
+.markdown-source-view.mod-cm6 .cm-embed-block pre {
+  margin: 1em 0;
+}
+.markdown-source-view.mod-cm6 .cm-indent::before {
+  width: 2px;
+}
+.markdown-source-view.mod-cm6 .cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
+  padding-right: 0.7em;
+}
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+  padding-right: 0.25rem;
+}
+.list-bullet {
+  padding-right: 0.6em;
+}
+ul > li.task-list-item .task-list-item-checkbox {
+  margin-inline-start: calc(var(--checkbox-size) * -1.2);
+}
+.markdown-rendered {
+  --list-bullet-transform: translateX(0.3em);
+}
+.markdown-rendered .list-collapse-indicator {
+  padding-right: 1em;
+  margin-left: -2.35em;
+}
+.markdown-rendered ul > li.task-list-item > .list-collapse-indicator {
+  padding-right: 1em;
+  margin-left: -2.4em;
+}
+.markdown-rendered.show-indentation-guide li > ol::before,
+.markdown-rendered.show-indentation-guide li > ul::before {
+  left: -0.75em;
 }
 .theme-light .markdown-rendered mark .internal-link {
   color: var(--link-internal-color-lt);
@@ -3171,6 +3196,32 @@ a.tag:hover {
 }
 .cm-s-obsidian .cm-hmd-frontmatter.cm-def {
   color: var(--text-faint);
+}
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed,
+.internal-embed.is-loaded:not(.image-embed) {
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+  overflow: auto;
+}
+.embed-title {
+  position: sticky;
+  top: 0;
+  z-index: var(--layer-cover);
+  width: 100%;
+  padding: var(--size-4-2) var(--size-4-4);
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+.file-embed.mod-empty {
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-s);
+}
+:is(.markdown-embed-link, .file-embed-link) {
+  top: var(--size-4-2);
+  right: var(--size-4-2);
+  z-index: var(--layer-cover);
 }
 body:not(.pt-disable-callout-styling) {
   --callout-padding: 4px;
@@ -3361,11 +3412,13 @@ body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-ca
   background-color: hsla(var(--color-grey-base-hsl), var(--callout-background-alpha));
   border-color: var(--color-grey-tint);
 }
+.markdown-preview-view progress,
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress {
   height: 15px;
   vertical-align: middle;
 }
+.markdown-preview-view progress::before,
 .markdown-rendered progress::before,
 .markdown-source-view.is-live-preview progress::before {
   position: absolute;
@@ -3378,6 +3431,7 @@ body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-ca
   text-align: center;
   content: attr(value) " %";
 }
+.theme-light .markdown-preview-view progress::before,
 .theme-light .markdown-rendered progress::before,
 .theme-light .markdown-source-view.is-live-preview progress::before {
   text-shadow:
@@ -3386,6 +3440,7 @@ body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-ca
     -1px 1px 0 hsla(0deg, 0%, 100%, 0.5),
     1px 1px 0 hsla(0deg, 0%, 100%, 0.5);
 }
+.theme-dark .markdown-preview-view progress::before,
 .theme-dark .markdown-rendered progress::before,
 .theme-dark .markdown-source-view.is-live-preview progress::before {
   text-shadow:
@@ -3394,45 +3449,51 @@ body:not(.pt-disable-callout-styling) .callout:is([data-callout=quote], [data-ca
     -1px 1px 0 hsla(0deg, 0%, 0%, 0.5),
     1px 1px 0 hsla(0deg, 0%, 0%, 0.5);
 }
+.markdown-preview-view progress::-webkit-progress-bar,
 .markdown-rendered progress::-webkit-progress-bar,
 .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
+.theme-light .markdown-preview-view progress::-webkit-progress-bar,
 .theme-light .markdown-rendered progress::-webkit-progress-bar,
 .theme-light .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
   background-color: var(--background-secondary);
 }
+.theme-dark .markdown-preview-view progress::-webkit-progress-bar,
 .theme-dark .markdown-rendered progress::-webkit-progress-bar,
 .theme-dark .markdown-source-view.is-live-preview progress::-webkit-progress-bar {
   background-color: var(--background-secondary-alt);
 }
+.markdown-preview-view progress::-webkit-progress-value,
 .markdown-rendered progress::-webkit-progress-value,
 .markdown-source-view.is-live-preview progress::-webkit-progress-value {
   border: 1px solid;
   border-color: transparent;
   border-radius: var(--radius-s);
 }
+.markdown-preview-view progress[value="0"]::-webkit-progress-value,
 .markdown-rendered progress[value="0"]::-webkit-progress-value,
 .markdown-source-view.is-live-preview progress[value="0"]::-webkit-progress-value {
   border: unset;
 }
-:is(.markdown-rendered progress[value="0"], .markdown-rendered progress[value="1"], .markdown-rendered progress[value="2"], .markdown-rendered progress[value="3"], .markdown-rendered progress[value="4"], .markdown-rendered progress[value="5"], .markdown-rendered progress[value="6"], .markdown-rendered progress[value="7"], .markdown-rendered progress[value="8"], .markdown-rendered progress[value="9"], .markdown-rendered progress[value="10"], .markdown-rendered progress[value="11"], .markdown-rendered progress[value="12"], .markdown-rendered progress[value="13"], .markdown-rendered progress[value="14"], .markdown-rendered progress[value="15"], .markdown-rendered progress[value="16"], .markdown-rendered progress[value="17"], .markdown-rendered progress[value="18"], .markdown-rendered progress[value="19"], .markdown-rendered progress[value="20"], .markdown-rendered progress[value="21"], .markdown-rendered progress[value="22"], .markdown-rendered progress[value="23"], .markdown-rendered progress[value="24"], .markdown-source-view.is-live-preview progress[value="0"], .markdown-source-view.is-live-preview progress[value="1"], .markdown-source-view.is-live-preview progress[value="2"], .markdown-source-view.is-live-preview progress[value="3"], .markdown-source-view.is-live-preview progress[value="4"], .markdown-source-view.is-live-preview progress[value="5"], .markdown-source-view.is-live-preview progress[value="6"], .markdown-source-view.is-live-preview progress[value="7"], .markdown-source-view.is-live-preview progress[value="8"], .markdown-source-view.is-live-preview progress[value="9"], .markdown-source-view.is-live-preview progress[value="10"], .markdown-source-view.is-live-preview progress[value="11"], .markdown-source-view.is-live-preview progress[value="12"], .markdown-source-view.is-live-preview progress[value="13"], .markdown-source-view.is-live-preview progress[value="14"], .markdown-source-view.is-live-preview progress[value="15"], .markdown-source-view.is-live-preview progress[value="16"], .markdown-source-view.is-live-preview progress[value="17"], .markdown-source-view.is-live-preview progress[value="18"], .markdown-source-view.is-live-preview progress[value="19"], .markdown-source-view.is-live-preview progress[value="20"], .markdown-source-view.is-live-preview progress[value="21"], .markdown-source-view.is-live-preview progress[value="22"], .markdown-source-view.is-live-preview progress[value="23"], .markdown-source-view.is-live-preview progress[value="24"])::-webkit-progress-value {
+:is(.markdown-preview-view progress[value="0"], .markdown-preview-view progress[value="1"], .markdown-preview-view progress[value="2"], .markdown-preview-view progress[value="3"], .markdown-preview-view progress[value="4"], .markdown-preview-view progress[value="5"], .markdown-preview-view progress[value="6"], .markdown-preview-view progress[value="7"], .markdown-preview-view progress[value="8"], .markdown-preview-view progress[value="9"], .markdown-preview-view progress[value="10"], .markdown-preview-view progress[value="11"], .markdown-preview-view progress[value="12"], .markdown-preview-view progress[value="13"], .markdown-preview-view progress[value="14"], .markdown-preview-view progress[value="15"], .markdown-preview-view progress[value="16"], .markdown-preview-view progress[value="17"], .markdown-preview-view progress[value="18"], .markdown-preview-view progress[value="19"], .markdown-preview-view progress[value="20"], .markdown-preview-view progress[value="21"], .markdown-preview-view progress[value="22"], .markdown-preview-view progress[value="23"], .markdown-preview-view progress[value="24"], .markdown-rendered progress[value="0"], .markdown-rendered progress[value="1"], .markdown-rendered progress[value="2"], .markdown-rendered progress[value="3"], .markdown-rendered progress[value="4"], .markdown-rendered progress[value="5"], .markdown-rendered progress[value="6"], .markdown-rendered progress[value="7"], .markdown-rendered progress[value="8"], .markdown-rendered progress[value="9"], .markdown-rendered progress[value="10"], .markdown-rendered progress[value="11"], .markdown-rendered progress[value="12"], .markdown-rendered progress[value="13"], .markdown-rendered progress[value="14"], .markdown-rendered progress[value="15"], .markdown-rendered progress[value="16"], .markdown-rendered progress[value="17"], .markdown-rendered progress[value="18"], .markdown-rendered progress[value="19"], .markdown-rendered progress[value="20"], .markdown-rendered progress[value="21"], .markdown-rendered progress[value="22"], .markdown-rendered progress[value="23"], .markdown-rendered progress[value="24"], .markdown-source-view.is-live-preview progress[value="0"], .markdown-source-view.is-live-preview progress[value="1"], .markdown-source-view.is-live-preview progress[value="2"], .markdown-source-view.is-live-preview progress[value="3"], .markdown-source-view.is-live-preview progress[value="4"], .markdown-source-view.is-live-preview progress[value="5"], .markdown-source-view.is-live-preview progress[value="6"], .markdown-source-view.is-live-preview progress[value="7"], .markdown-source-view.is-live-preview progress[value="8"], .markdown-source-view.is-live-preview progress[value="9"], .markdown-source-view.is-live-preview progress[value="10"], .markdown-source-view.is-live-preview progress[value="11"], .markdown-source-view.is-live-preview progress[value="12"], .markdown-source-view.is-live-preview progress[value="13"], .markdown-source-view.is-live-preview progress[value="14"], .markdown-source-view.is-live-preview progress[value="15"], .markdown-source-view.is-live-preview progress[value="16"], .markdown-source-view.is-live-preview progress[value="17"], .markdown-source-view.is-live-preview progress[value="18"], .markdown-source-view.is-live-preview progress[value="19"], .markdown-source-view.is-live-preview progress[value="20"], .markdown-source-view.is-live-preview progress[value="21"], .markdown-source-view.is-live-preview progress[value="22"], .markdown-source-view.is-live-preview progress[value="23"], .markdown-source-view.is-live-preview progress[value="24"])::-webkit-progress-value {
   background-color: var(--color-red-base);
   border-color: var(--color-red-tint);
 }
-:is(.markdown-rendered progress[value="25"], .markdown-rendered progress[value="26"], .markdown-rendered progress[value="27"], .markdown-rendered progress[value="28"], .markdown-rendered progress[value="29"], .markdown-rendered progress[value="30"], .markdown-rendered progress[value="31"], .markdown-rendered progress[value="32"], .markdown-rendered progress[value="33"], .markdown-rendered progress[value="34"], .markdown-rendered progress[value="35"], .markdown-rendered progress[value="36"], .markdown-rendered progress[value="37"], .markdown-rendered progress[value="38"], .markdown-rendered progress[value="39"], .markdown-rendered progress[value="40"], .markdown-rendered progress[value="41"], .markdown-rendered progress[value="42"], .markdown-rendered progress[value="43"], .markdown-rendered progress[value="44"], .markdown-rendered progress[value="45"], .markdown-rendered progress[value="46"], .markdown-rendered progress[value="47"], .markdown-rendered progress[value="48"], .markdown-rendered progress[value="49"], .markdown-source-view.is-live-preview progress[value="25"], .markdown-source-view.is-live-preview progress[value="26"], .markdown-source-view.is-live-preview progress[value="27"], .markdown-source-view.is-live-preview progress[value="28"], .markdown-source-view.is-live-preview progress[value="29"], .markdown-source-view.is-live-preview progress[value="30"], .markdown-source-view.is-live-preview progress[value="31"], .markdown-source-view.is-live-preview progress[value="32"], .markdown-source-view.is-live-preview progress[value="33"], .markdown-source-view.is-live-preview progress[value="34"], .markdown-source-view.is-live-preview progress[value="35"], .markdown-source-view.is-live-preview progress[value="36"], .markdown-source-view.is-live-preview progress[value="37"], .markdown-source-view.is-live-preview progress[value="38"], .markdown-source-view.is-live-preview progress[value="39"], .markdown-source-view.is-live-preview progress[value="40"], .markdown-source-view.is-live-preview progress[value="41"], .markdown-source-view.is-live-preview progress[value="42"], .markdown-source-view.is-live-preview progress[value="43"], .markdown-source-view.is-live-preview progress[value="44"], .markdown-source-view.is-live-preview progress[value="45"], .markdown-source-view.is-live-preview progress[value="46"], .markdown-source-view.is-live-preview progress[value="47"], .markdown-source-view.is-live-preview progress[value="48"], .markdown-source-view.is-live-preview progress[value="49"])::-webkit-progress-value {
+:is(.markdown-preview-view progress[value="25"], .markdown-preview-view progress[value="26"], .markdown-preview-view progress[value="27"], .markdown-preview-view progress[value="28"], .markdown-preview-view progress[value="29"], .markdown-preview-view progress[value="30"], .markdown-preview-view progress[value="31"], .markdown-preview-view progress[value="32"], .markdown-preview-view progress[value="33"], .markdown-preview-view progress[value="34"], .markdown-preview-view progress[value="35"], .markdown-preview-view progress[value="36"], .markdown-preview-view progress[value="37"], .markdown-preview-view progress[value="38"], .markdown-preview-view progress[value="39"], .markdown-preview-view progress[value="40"], .markdown-preview-view progress[value="41"], .markdown-preview-view progress[value="42"], .markdown-preview-view progress[value="43"], .markdown-preview-view progress[value="44"], .markdown-preview-view progress[value="45"], .markdown-preview-view progress[value="46"], .markdown-preview-view progress[value="47"], .markdown-preview-view progress[value="48"], .markdown-preview-view progress[value="49"], .markdown-rendered progress[value="25"], .markdown-rendered progress[value="26"], .markdown-rendered progress[value="27"], .markdown-rendered progress[value="28"], .markdown-rendered progress[value="29"], .markdown-rendered progress[value="30"], .markdown-rendered progress[value="31"], .markdown-rendered progress[value="32"], .markdown-rendered progress[value="33"], .markdown-rendered progress[value="34"], .markdown-rendered progress[value="35"], .markdown-rendered progress[value="36"], .markdown-rendered progress[value="37"], .markdown-rendered progress[value="38"], .markdown-rendered progress[value="39"], .markdown-rendered progress[value="40"], .markdown-rendered progress[value="41"], .markdown-rendered progress[value="42"], .markdown-rendered progress[value="43"], .markdown-rendered progress[value="44"], .markdown-rendered progress[value="45"], .markdown-rendered progress[value="46"], .markdown-rendered progress[value="47"], .markdown-rendered progress[value="48"], .markdown-rendered progress[value="49"], .markdown-source-view.is-live-preview progress[value="25"], .markdown-source-view.is-live-preview progress[value="26"], .markdown-source-view.is-live-preview progress[value="27"], .markdown-source-view.is-live-preview progress[value="28"], .markdown-source-view.is-live-preview progress[value="29"], .markdown-source-view.is-live-preview progress[value="30"], .markdown-source-view.is-live-preview progress[value="31"], .markdown-source-view.is-live-preview progress[value="32"], .markdown-source-view.is-live-preview progress[value="33"], .markdown-source-view.is-live-preview progress[value="34"], .markdown-source-view.is-live-preview progress[value="35"], .markdown-source-view.is-live-preview progress[value="36"], .markdown-source-view.is-live-preview progress[value="37"], .markdown-source-view.is-live-preview progress[value="38"], .markdown-source-view.is-live-preview progress[value="39"], .markdown-source-view.is-live-preview progress[value="40"], .markdown-source-view.is-live-preview progress[value="41"], .markdown-source-view.is-live-preview progress[value="42"], .markdown-source-view.is-live-preview progress[value="43"], .markdown-source-view.is-live-preview progress[value="44"], .markdown-source-view.is-live-preview progress[value="45"], .markdown-source-view.is-live-preview progress[value="46"], .markdown-source-view.is-live-preview progress[value="47"], .markdown-source-view.is-live-preview progress[value="48"], .markdown-source-view.is-live-preview progress[value="49"])::-webkit-progress-value {
   background-color: var(--color-orange-base);
   border-color: var(--color-orange-tint);
 }
-:is(.markdown-rendered progress[value="50"], .markdown-rendered progress[value="51"], .markdown-rendered progress[value="52"], .markdown-rendered progress[value="53"], .markdown-rendered progress[value="54"], .markdown-rendered progress[value="55"], .markdown-rendered progress[value="56"], .markdown-rendered progress[value="57"], .markdown-rendered progress[value="58"], .markdown-rendered progress[value="59"], .markdown-rendered progress[value="60"], .markdown-rendered progress[value="61"], .markdown-rendered progress[value="62"], .markdown-rendered progress[value="63"], .markdown-rendered progress[value="64"], .markdown-rendered progress[value="65"], .markdown-rendered progress[value="66"], .markdown-rendered progress[value="67"], .markdown-rendered progress[value="68"], .markdown-rendered progress[value="69"], .markdown-rendered progress[value="70"], .markdown-rendered progress[value="71"], .markdown-rendered progress[value="72"], .markdown-rendered progress[value="73"], .markdown-rendered progress[value="74"], .markdown-source-view.is-live-preview progress[value="50"], .markdown-source-view.is-live-preview progress[value="51"], .markdown-source-view.is-live-preview progress[value="52"], .markdown-source-view.is-live-preview progress[value="53"], .markdown-source-view.is-live-preview progress[value="54"], .markdown-source-view.is-live-preview progress[value="55"], .markdown-source-view.is-live-preview progress[value="56"], .markdown-source-view.is-live-preview progress[value="57"], .markdown-source-view.is-live-preview progress[value="58"], .markdown-source-view.is-live-preview progress[value="59"], .markdown-source-view.is-live-preview progress[value="60"], .markdown-source-view.is-live-preview progress[value="61"], .markdown-source-view.is-live-preview progress[value="62"], .markdown-source-view.is-live-preview progress[value="63"], .markdown-source-view.is-live-preview progress[value="64"], .markdown-source-view.is-live-preview progress[value="65"], .markdown-source-view.is-live-preview progress[value="66"], .markdown-source-view.is-live-preview progress[value="67"], .markdown-source-view.is-live-preview progress[value="68"], .markdown-source-view.is-live-preview progress[value="69"], .markdown-source-view.is-live-preview progress[value="70"], .markdown-source-view.is-live-preview progress[value="71"], .markdown-source-view.is-live-preview progress[value="72"], .markdown-source-view.is-live-preview progress[value="73"], .markdown-source-view.is-live-preview progress[value="74"])::-webkit-progress-value {
+:is(.markdown-preview-view progress[value="50"], .markdown-preview-view progress[value="51"], .markdown-preview-view progress[value="52"], .markdown-preview-view progress[value="53"], .markdown-preview-view progress[value="54"], .markdown-preview-view progress[value="55"], .markdown-preview-view progress[value="56"], .markdown-preview-view progress[value="57"], .markdown-preview-view progress[value="58"], .markdown-preview-view progress[value="59"], .markdown-preview-view progress[value="60"], .markdown-preview-view progress[value="61"], .markdown-preview-view progress[value="62"], .markdown-preview-view progress[value="63"], .markdown-preview-view progress[value="64"], .markdown-preview-view progress[value="65"], .markdown-preview-view progress[value="66"], .markdown-preview-view progress[value="67"], .markdown-preview-view progress[value="68"], .markdown-preview-view progress[value="69"], .markdown-preview-view progress[value="70"], .markdown-preview-view progress[value="71"], .markdown-preview-view progress[value="72"], .markdown-preview-view progress[value="73"], .markdown-preview-view progress[value="74"], .markdown-rendered progress[value="50"], .markdown-rendered progress[value="51"], .markdown-rendered progress[value="52"], .markdown-rendered progress[value="53"], .markdown-rendered progress[value="54"], .markdown-rendered progress[value="55"], .markdown-rendered progress[value="56"], .markdown-rendered progress[value="57"], .markdown-rendered progress[value="58"], .markdown-rendered progress[value="59"], .markdown-rendered progress[value="60"], .markdown-rendered progress[value="61"], .markdown-rendered progress[value="62"], .markdown-rendered progress[value="63"], .markdown-rendered progress[value="64"], .markdown-rendered progress[value="65"], .markdown-rendered progress[value="66"], .markdown-rendered progress[value="67"], .markdown-rendered progress[value="68"], .markdown-rendered progress[value="69"], .markdown-rendered progress[value="70"], .markdown-rendered progress[value="71"], .markdown-rendered progress[value="72"], .markdown-rendered progress[value="73"], .markdown-rendered progress[value="74"], .markdown-source-view.is-live-preview progress[value="50"], .markdown-source-view.is-live-preview progress[value="51"], .markdown-source-view.is-live-preview progress[value="52"], .markdown-source-view.is-live-preview progress[value="53"], .markdown-source-view.is-live-preview progress[value="54"], .markdown-source-view.is-live-preview progress[value="55"], .markdown-source-view.is-live-preview progress[value="56"], .markdown-source-view.is-live-preview progress[value="57"], .markdown-source-view.is-live-preview progress[value="58"], .markdown-source-view.is-live-preview progress[value="59"], .markdown-source-view.is-live-preview progress[value="60"], .markdown-source-view.is-live-preview progress[value="61"], .markdown-source-view.is-live-preview progress[value="62"], .markdown-source-view.is-live-preview progress[value="63"], .markdown-source-view.is-live-preview progress[value="64"], .markdown-source-view.is-live-preview progress[value="65"], .markdown-source-view.is-live-preview progress[value="66"], .markdown-source-view.is-live-preview progress[value="67"], .markdown-source-view.is-live-preview progress[value="68"], .markdown-source-view.is-live-preview progress[value="69"], .markdown-source-view.is-live-preview progress[value="70"], .markdown-source-view.is-live-preview progress[value="71"], .markdown-source-view.is-live-preview progress[value="72"], .markdown-source-view.is-live-preview progress[value="73"], .markdown-source-view.is-live-preview progress[value="74"])::-webkit-progress-value {
   background-color: var(--color-yellow-base);
   border-color: var(--color-yellow-tint);
 }
-:is(.markdown-rendered progress[value="75"], .markdown-rendered progress[value="76"], .markdown-rendered progress[value="77"], .markdown-rendered progress[value="78"], .markdown-rendered progress[value="79"], .markdown-rendered progress[value="80"], .markdown-rendered progress[value="81"], .markdown-rendered progress[value="82"], .markdown-rendered progress[value="83"], .markdown-rendered progress[value="84"], .markdown-rendered progress[value="85"], .markdown-rendered progress[value="86"], .markdown-rendered progress[value="87"], .markdown-rendered progress[value="88"], .markdown-rendered progress[value="89"], .markdown-rendered progress[value="90"], .markdown-rendered progress[value="91"], .markdown-rendered progress[value="92"], .markdown-rendered progress[value="93"], .markdown-rendered progress[value="94"], .markdown-rendered progress[value="95"], .markdown-rendered progress[value="96"], .markdown-rendered progress[value="97"], .markdown-rendered progress[value="98"], .markdown-rendered progress[value="99"], .markdown-source-view.is-live-preview progress[value="75"], .markdown-source-view.is-live-preview progress[value="76"], .markdown-source-view.is-live-preview progress[value="77"], .markdown-source-view.is-live-preview progress[value="78"], .markdown-source-view.is-live-preview progress[value="79"], .markdown-source-view.is-live-preview progress[value="80"], .markdown-source-view.is-live-preview progress[value="81"], .markdown-source-view.is-live-preview progress[value="82"], .markdown-source-view.is-live-preview progress[value="83"], .markdown-source-view.is-live-preview progress[value="84"], .markdown-source-view.is-live-preview progress[value="85"], .markdown-source-view.is-live-preview progress[value="86"], .markdown-source-view.is-live-preview progress[value="87"], .markdown-source-view.is-live-preview progress[value="88"], .markdown-source-view.is-live-preview progress[value="89"], .markdown-source-view.is-live-preview progress[value="90"], .markdown-source-view.is-live-preview progress[value="91"], .markdown-source-view.is-live-preview progress[value="92"], .markdown-source-view.is-live-preview progress[value="93"], .markdown-source-view.is-live-preview progress[value="94"], .markdown-source-view.is-live-preview progress[value="95"], .markdown-source-view.is-live-preview progress[value="96"], .markdown-source-view.is-live-preview progress[value="97"], .markdown-source-view.is-live-preview progress[value="98"], .markdown-source-view.is-live-preview progress[value="99"])::-webkit-progress-value {
+:is(.markdown-preview-view progress[value="75"], .markdown-preview-view progress[value="76"], .markdown-preview-view progress[value="77"], .markdown-preview-view progress[value="78"], .markdown-preview-view progress[value="79"], .markdown-preview-view progress[value="80"], .markdown-preview-view progress[value="81"], .markdown-preview-view progress[value="82"], .markdown-preview-view progress[value="83"], .markdown-preview-view progress[value="84"], .markdown-preview-view progress[value="85"], .markdown-preview-view progress[value="86"], .markdown-preview-view progress[value="87"], .markdown-preview-view progress[value="88"], .markdown-preview-view progress[value="89"], .markdown-preview-view progress[value="90"], .markdown-preview-view progress[value="91"], .markdown-preview-view progress[value="92"], .markdown-preview-view progress[value="93"], .markdown-preview-view progress[value="94"], .markdown-preview-view progress[value="95"], .markdown-preview-view progress[value="96"], .markdown-preview-view progress[value="97"], .markdown-preview-view progress[value="98"], .markdown-preview-view progress[value="99"], .markdown-rendered progress[value="75"], .markdown-rendered progress[value="76"], .markdown-rendered progress[value="77"], .markdown-rendered progress[value="78"], .markdown-rendered progress[value="79"], .markdown-rendered progress[value="80"], .markdown-rendered progress[value="81"], .markdown-rendered progress[value="82"], .markdown-rendered progress[value="83"], .markdown-rendered progress[value="84"], .markdown-rendered progress[value="85"], .markdown-rendered progress[value="86"], .markdown-rendered progress[value="87"], .markdown-rendered progress[value="88"], .markdown-rendered progress[value="89"], .markdown-rendered progress[value="90"], .markdown-rendered progress[value="91"], .markdown-rendered progress[value="92"], .markdown-rendered progress[value="93"], .markdown-rendered progress[value="94"], .markdown-rendered progress[value="95"], .markdown-rendered progress[value="96"], .markdown-rendered progress[value="97"], .markdown-rendered progress[value="98"], .markdown-rendered progress[value="99"], .markdown-source-view.is-live-preview progress[value="75"], .markdown-source-view.is-live-preview progress[value="76"], .markdown-source-view.is-live-preview progress[value="77"], .markdown-source-view.is-live-preview progress[value="78"], .markdown-source-view.is-live-preview progress[value="79"], .markdown-source-view.is-live-preview progress[value="80"], .markdown-source-view.is-live-preview progress[value="81"], .markdown-source-view.is-live-preview progress[value="82"], .markdown-source-view.is-live-preview progress[value="83"], .markdown-source-view.is-live-preview progress[value="84"], .markdown-source-view.is-live-preview progress[value="85"], .markdown-source-view.is-live-preview progress[value="86"], .markdown-source-view.is-live-preview progress[value="87"], .markdown-source-view.is-live-preview progress[value="88"], .markdown-source-view.is-live-preview progress[value="89"], .markdown-source-view.is-live-preview progress[value="90"], .markdown-source-view.is-live-preview progress[value="91"], .markdown-source-view.is-live-preview progress[value="92"], .markdown-source-view.is-live-preview progress[value="93"], .markdown-source-view.is-live-preview progress[value="94"], .markdown-source-view.is-live-preview progress[value="95"], .markdown-source-view.is-live-preview progress[value="96"], .markdown-source-view.is-live-preview progress[value="97"], .markdown-source-view.is-live-preview progress[value="98"], .markdown-source-view.is-live-preview progress[value="99"])::-webkit-progress-value {
   background-color: var(--color-green-base);
   border-color: var(--color-green-tint);
 }
+.markdown-preview-view progress[value="100"]::-webkit-progress-value,
 .markdown-rendered progress[value="100"]::-webkit-progress-value,
 .markdown-source-view.is-live-preview progress[value="100"]::-webkit-progress-value {
   background-color: var(--color-blue-base);
@@ -3837,7 +3898,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .tree-item .tree-item-self {
   align-items: center;
   width: 100%;
-  padding: 1px var(--size-4-1) 1px var(--size-4-2);
+  padding: 1px var(--size-4-1) 1px var(--size-4-1);
   border: 2px solid transparent;
 }
 .tree-item-self {
@@ -3946,26 +4007,29 @@ body.theme-dark {
 .theme-dark .canvas-node-content {
   background-color: var(--background-secondary-alt);
 }
-.canvas-controls-group,
+.canvas-control-item {
+  background-color: unset;
+}
+.canvas-control-group,
 .canvas-menu,
 .canvas-card-menu,
 .theme-dark .canvas-card-menu {
   gap: var(--size-4-1);
   padding: var(--size-4-1);
-  background: var(--background-secondary-blur);
+  background-color: var(--background-secondary-blur);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
   border-radius: var(--radius-m);
 }
-.canvas-controls button,
-button.canvas-menu-item {
+.canvas-control-item,
+.canvas-card-menu-button {
   padding: var(--size-2-3);
   background-color: unset;
   border: unset;
   border-radius: var(--radius-s);
 }
-.canvas-controls button:hover,
-button.canvas-menu-item:hover {
+.canvas-control-item:hover,
+.canvas-card-menu-button:hover {
   color: var(--nav-item-color-hover);
   background-color: var(--background-modifier-hover);
 }
@@ -4071,8 +4135,8 @@ button.canvas-menu-item:hover {
 .canvas-edges g:not(.is-themed) path.canvas-display-path {
   stroke: hsl(var(--canvas-highlight-color));
 }
-.canvas-edges g:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) polyline.canvas-path-end,
-.canvas-edges g:not(.is-themed) polyline.canvas-path-end {
+.canvas-edges g:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) polygon.canvas-path-end,
+.canvas-edges g:not(.is-themed) polygon.canvas-path-end {
   fill: hsl(var(--canvas-highlight-color));
   stroke: hsl(var(--canvas-highlight-color));
 }
@@ -4240,6 +4304,7 @@ body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.grey, .Grey) {
 :is(body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-default-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-default-lt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-border-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-border-lt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-filled-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-filled-lt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-default, body:not(.pt-disable-mark-highlight-styling).theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-default) {
   padding: 0;
   font-size: 1em;
+  background-color: unset;
   border: unset;
   opacity: 1;
 }
@@ -5452,6 +5517,16 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+.settings-search-container .vertical-tab-header-group-items {
+  padding: unset;
+  background-color: var(--background-secondary);
+}
+.settings-search-container .settings-search-input {
+  padding: unset;
+}
+.settings-search-container .search-input-container::before {
+  top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 }
 /*!
 /* @settings
@@ -8697,15 +8772,15 @@ settings:
         level: 1
         collapsed: true
     -
-        id: pt-disable-blur
-        title: Disable Blurred Background Effect
-        description: Disables the blur background in all elements that use it by making them opaque.
-        default: false
-        type: class-toggle
-    -
         id: pt-fade-inactive-tabs
         title: Fade Inactive Tabs
         description: Fades out inactive UI tabs to help distinguish the currently active tab.
+        default: false
+        type: class-toggle
+    -
+        id: pt-disable-blur
+        title: Disable Blurred Background Effect
+        description: Disables the blur background in all elements that use it by making them opaque.
         default: false
         type: class-toggle
     -
@@ -8718,6 +8793,12 @@ settings:
         id: pt-disable-mark-highlight-styling
         title: Disable Mark Highlight Styling
         description: This option removes the Prism Mark Highlight Styling (reverts to default look). This will be handy for those that already use a different <mark> tag based highlighting system. 
+        default: false
+        type: class-toggle
+    -
+        id: pt-collapsed-pinned-tab
+        title: Collapsed Pinned Tabs
+        description: This option removes the title from pinned tabs and adds back the default file icon for the markdown files. Helps reduce the horizontal space wasted by pinned tabs. You can still see the title when you hover over the icon. NOTE - This option requires Installer Version 1.1.9+ due to use of CSS `has()`. Also, might not work on certain Mobile clients.
         default: false
         type: class-toggle
     -
@@ -8822,4 +8903,5 @@ community:
 - obsidian-quiet-outline
 - recent-files-obsidian
 - file-tree-alternative
+- settings-search
 */
