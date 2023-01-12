@@ -82,3 +82,25 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	padding-right: 2px;
 }
 /* #endregion */
+
+/* #region  [UI] Collapsed Pinned Tabs  */
+.pt-collapsed-pinned-tab {
+	.workspace .mod-root .workspace-tab-header[data-type="markdown"],
+	.workspace .mod-root .workspace-tab-header[data-type="empty"] {
+		&:has(.mod-pinned) .workspace-tab-header-inner-icon {
+			display: flex;
+		}
+	}
+
+	.workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner-title {
+		display: none;
+	}
+
+	.workspace .mod-root .workspace-tab-header:has(.mod-pinned),
+	.workspace-tab-header:has(.mod-pinned) .workspace-tab-header-inner {
+		flex: unset;
+		width: fit-content;
+		min-width: unset;
+	}
+}
+/* #endregion */
