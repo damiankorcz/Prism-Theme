@@ -86,7 +86,7 @@ The theme has a [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) whic
 
 
 # 🗺️ Theme Roadmap
-To rack all the features I have planned, actively working on and what is coming in the next release take a look at the [**Prism Theme Roadmap**](https://github.com/users/damiankorcz/projects/5).
+To track all the features I have planned, actively working on and what is coming in the next release take a look at the [**Prism Theme Roadmap**](https://github.com/users/damiankorcz/projects/5).
 
 
 # 🛠 Contributing
