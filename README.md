@@ -85,6 +85,10 @@ Theme features which you can import as snippets into Obsidian are located in the
 The theme has a [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) which includes additional detailed descriptions for theme specific features and customisation options.
 
 
+# 🗺️ Theme Roadmap
+To rack all the features I have planned, actively working on and what is coming in the next release take a look at the [**Prism Theme Roadmap**](https://github.com/users/damiankorcz/projects/5).
+
+
 # 🛠 Contributing
 Currently the theme is being designed for desktop and mobile use (Phone and Tablet). The theme has been tested on Windows 11 and Android Phone/Tablet.
 
