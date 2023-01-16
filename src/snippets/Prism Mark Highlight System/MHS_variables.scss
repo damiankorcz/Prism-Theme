@@ -1,0 +1,108 @@
+body {
+	--accent-border-width: 2px;
+
+	&.theme-light {
+		--color-grey-base-hsl: 0, 0%, 84%;
+		--color-red-base-hsl: 7, 80%, 88%;
+		--color-orange-base-hsl: 25, 79%, 84%;
+		--color-yellow-base-hsl: 47, 57%, 77%;
+		--color-green-base-hsl: 115, 35%, 81%;
+		--color-mint-base-hsl: 156, 37%, 81%;
+		--color-cyan-base-hsl: 192, 39%, 83%;
+		--color-blue-base-hsl: 222, 62%, 88%;
+		--color-purple-base-hsl: 251, 62%, 90%;
+		--color-pink-base-hsl: 327, 56%, 88%;
+
+		--color-grey-tint-hsl: 0, 0%, 67%;
+		--color-red-tint-hsl: 6, 70%, 74%;
+		--color-orange-tint-hsl: 27, 74%, 64%;
+		--color-yellow-tint-hsl: 48, 68%, 47%;
+		--color-green-tint-hsl: 115, 34%, 60%;
+		--color-mint-tint-hsl: 159, 39%, 57%;
+		--color-cyan-tint-hsl: 192, 40%, 63%;
+		--color-blue-tint-hsl: 222, 57%, 74%;
+		--color-purple-tint-hsl: 252, 60%, 77%;
+		--color-pink-tint-hsl: 326, 50%, 73%;
+
+		--color-grey-text-hsl: 0, 0%, 49%;
+		--color-red-text-hsl: 4, 62%, 55%;
+		--color-orange-text-hsl: 32, 100%, 37%;
+		--color-yellow-text-hsl: 48, 100%, 30%;
+		--color-green-text-hsl: 116, 71%, 33%;
+		--color-mint-text-hsl: 165, 100%, 28%;
+		--color-cyan-text-hsl: 191, 75%, 36%;
+		--color-blue-text-hsl: 223, 54%, 58%;
+		--color-purple-text-hsl: 255, 56%, 63%;
+		--color-pink-text-hsl: 323, 46%, 55%;
+	}
+
+	&.theme-dark {
+		--color-grey-base-hsl: 0, 0%, 18%;
+		--color-red-base-hsl: 0, 46%, 22%;
+		--color-orange-base-hsl: 20, 52%, 19%;
+		--color-yellow-base-hsl: 40, 45%, 16%;
+		--color-green-base-hsl: 122, 40%, 15%;
+		--color-mint-base-hsl: 163, 51%, 14%;
+		--color-cyan-base-hsl: 195, 43%, 16%;
+		--color-blue-base-hsl: 228, 39%, 23%;
+		--color-purple-base-hsl: 268, 43%, 24%;
+		--color-pink-base-hsl: 328, 41%, 21%;
+
+		--color-grey-tint-hsl: 0, 0%, 37%;
+		--color-red-tint-hsl: 0, 41%, 43%;
+		--color-orange-tint-hsl: 9, 45%, 37%;
+		--color-yellow-tint-hsl: 39, 39%, 32%;
+		--color-green-tint-hsl: 121, 34%, 31%;
+		--color-mint-tint-hsl: 163, 43%, 29%;
+		--color-cyan-tint-hsl: 195, 37%, 33%;
+		--color-blue-tint-hsl: 227, 39%, 46%;
+		--color-purple-tint-hsl: 266, 33%, 45%;
+		--color-pink-tint-hsl: 328, 38%, 42%;
+
+		--color-grey-text-hsl: 0, 0%, 57%;
+		--color-red-text-hsl: 0, 51%, 65%;
+		--color-orange-text-hsl: 19, 43%, 58%;
+		--color-yellow-text-hsl: 40, 37%, 50%;
+		--color-green-text-hsl: 122, 32%, 49%;
+		--color-mint-text-hsl: 163, 39%, 46%;
+		--color-cyan-text-hsl: 195, 38%, 52%;
+		--color-blue-text-hsl: 228, 39%, 65%;
+		--color-purple-text-hsl: 264, 29%, 64%;
+		--color-pink-text-hsl: 331, 32%, 63%;
+	}
+
+	&:is(.theme-light, .theme-dark) {
+		--color-grey-base: hsl(var(--color-grey-base-hsl));
+		--color-red-base: hsl(var(--color-red-base-hsl));
+		--color-orange-base: hsl(var(--color-orange-base-hsl));
+		--color-yellow-base: hsl(var(--color-yellow-base-hsl));
+		--color-green-base: hsl(var(--color-green-base-hsl));
+		--color-mint-base: hsl(var(--color-mint-base-hsl));
+		--color-cyan-base: hsl(var(--color-cyan-base-hsl));
+		--color-blue-base: hsl(var(--color-blue-base-hsl));
+		--color-purple-base: hsl(var(--color-purple-base-hsl));
+		--color-pink-base: hsl(var(--color-pink-base-hsl));
+
+		--color-grey-tint: hsl(var(--color-grey-tint-hsl));
+		--color-red-tint: hsl(var(--color-red-tint-hsl));
+		--color-orange-tint: hsl(var(--color-orange-tint-hsl));
+		--color-yellow-tint: hsl(var(--color-yellow-tint-hsl));
+		--color-green-tint: hsl(var(--color-green-tint-hsl));
+		--color-mint-tint: hsl(var(--color-mint-tint-hsl));
+		--color-cyan-tint: hsl(var(--color-cyan-tint-hsl));
+		--color-blue-tint: hsl(var(--color-blue-tint-hsl));
+		--color-purple-tint: hsl(var(--color-purple-tint-hsl));
+		--color-pink-tint: hsl(var(--color-pink-tint-hsl));
+
+		--color-grey-text: hsl(var(--color-grey-text-hsl));
+		--color-red-text: hsl(var(--color-red-text-hsl));
+		--color-orange-text: hsl(var(--color-orange-text-hsl));
+		--color-yellow-text: hsl(var(--color-yellow-text-hsl));
+		--color-green-text: hsl(var(--color-green-text-hsl));
+		--color-mint-text: hsl(var(--color-mint-text-hsl));
+		--color-cyan-text: hsl(var(--color-cyan-text-hsl));
+		--color-blue-text: hsl(var(--color-blue-text-hsl));
+		--color-purple-text: hsl(var(--color-purple-text-hsl));
+		--color-pink-text: hsl(var(--color-pink-text-hsl));
+	}
+}

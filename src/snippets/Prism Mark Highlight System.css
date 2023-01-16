@@ -1,43 +1,44 @@
-/* #region  [Info] License */
-/*
+/*!
     Prism Mark Highlight System for Obsidian.md
-    > Snippet Extracted from the Prism Theme for Obsidian.md
+    > Snippet of an extracted feature from the Prism Theme for Obsidian.md
 
-    Version: v1.1.0
+    Version: v2.0.0
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
     Distributed under the MIT License. See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
-    Copyright (c) 2022 Damian Korcz <https://github.com/damiankorcz>
+    Copyright (c) 2022-2023 Damian Korcz <https://github.com/damiankorcz>
 */
-/* #endregion */
-/* #region   */
+/*!
 /* @settings
-name: Prism Mark Highlight System v1.1.0
+name: Prism Mark Highlight System v2.0.0
 id: obsidian-prism-mark-highlight-system
 settings:
     -
         id: mark-highlight-styles
         title: Mark Highlight
-        description: Adjusts the style used by the <mark> tag highlight system. Colors available = red, orange, yellow, green, mint, aqua, blue, purple, pink and grey. e.g. <mark class="red">Your text</mark>
+        description: Adjusts the style used by the <mark> tag highlight system. Colors available = red, orange, yellow, green, mint, cyan, blue, purple, pink and grey. e.g. <mark class="red">Your Red text</mark>
         type: heading
         level: 1
+        collapsed: false
+    -
+        id: mark-highlight-light-theme
+        title: Light Theme
+        type: heading
+        level: 2
         collapsed: true
     -
         id: light-mark-highlight-style
-        title: Light Theme Mark Highlight Style
+        title: Mark Highlight Style
         type: class-select
         allowEmpty: false
         default: pt-highlight-style-borderandfilled-lt
         options:
             -
-                label: Text Only
-                value: pt-highlight-style-text-lt
+                label: Default
+                value: pt-highlight-style-default-lt
             -
-                label: Border Only
+                label: Border
                 value: pt-highlight-style-border-lt
-            -
-                label: Border & Text
-                value: pt-highlight-style-borderandtext-lt
             -
                 label: Filled
                 value: pt-highlight-style-filled-lt
@@ -45,21 +46,37 @@ settings:
                 label: Border & Filled
                 value: pt-highlight-style-borderandfilled-lt
     -
+        id: light-mark-highlight-text-color-preset
+        title: Mark Highlight Text Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-color-lt
+        options:
+            -
+                label: Default
+                value: pt-highlight-text-default-lt
+            -
+                label: Color
+                value: pt-highlight-text-color-lt
+    -
+        id: mark-highlight-dark-theme
+        title: Dark Theme
+        type: heading
+        level: 2
+        collapsed: true
+    -
         id: dark-mark-highlight-style
-        title: Dark Theme Mark Highlight Style
+        title: Mark Highlight Style
         type: class-select
         allowEmpty: false
         default: pt-highlight-style-borderandfilled-dt
         options:
             -
-                label: Text Only
-                value: pt-highlight-style-text-dt
+                label: Default
+                value: pt-highlight-style-default-dt
             -
-                label: Border Only
+                label: Border
                 value: pt-highlight-style-border-dt
-            -
-                label: Border & Text
-                value: pt-highlight-style-borderandtext-dt
             -
                 label: Filled
                 value: pt-highlight-style-filled-dt
@@ -67,381 +84,400 @@ settings:
                 label: Border & Filled
                 value: pt-highlight-style-borderandfilled-dt
     -
+        id: dark-mark-highlight-text-color-preset
+        title: Mark Highlight Text Color Preset
+        type: class-select
+        allowEmpty: false
+        default: pt-highlight-text-color-dt
+        options:
+            -
+                label: Default
+                value: pt-highlight-text-default-dt
+            -
+                label: Color
+                value: pt-highlight-text-color-dt
 */
-/* #endregion */
-/* #region  Base Variables */
-:root {
-	--border-size: 2px;
-	--radius-s: 4px;
-
-	/* Base Colors */
-	--color-desaturate-lt: 20%;
-	--color-darken-lt: 15%;
-	--color-darken-text-lt: 45%;
-	--color-desaturate-dt: 50%;
-	--color-darken-dt: 15%;
-	--color-darken-text-dt: 20%;
-
-	/* Base red: #FFBBBB */
-	--color-red-h: 0;
-	--color-red-s: 100%;
-	--color-red-l: 87%;
-
-	/* Base orange: #FFDCB1 */
-	--color-orange-h: 33;
-	--color-orange-s: 100%;
-	--color-orange-l: 85%;
-
-	/* Base yellow: #FEEDB7 */
-	--color-yellow-h: 46;
-	--color-yellow-s: 97%;
-	--color-yellow-l: 86%;
-
-	/* Base green: #CFFFC5 */
-	--color-green-h: 110;
-	--color-green-s: 100%;
-	--color-green-l: 89%;
-
-	/* Base mint: #BAFBE2 */
-	--color-mint-h: 157;
-	--color-mint-s: 89%;
-	--color-mint-l: 86%;
-
-	/* Base aqua: #ADF8FF */
-	--color-aqua-h: 185;
-	--color-aqua-s: 100%;
-	--color-aqua-l: 83%;
-
-	/* Base blue: #ADCDFF */
-	--color-blue-h: 217;
-	--color-blue-s: 100%;
-	--color-blue-l: 84%;
-
-	/* Base purple: #C5BBFF */
-	--color-purple-h: 249;
-	--color-purple-s: 100%;
-	--color-purple-l: 87%;
-
-	/* Base pink: #FFCFFF */
-	--color-pink-h: 300;
-	--color-pink-s: 100%;
-	--color-pink-l: 91%;
-
-	/* Base grey: #EDEEEF */
-	--color-grey-h: 210;
-	--color-grey-s: 6%;
-	--color-grey-l: 93%;
+body {
+  --accent-border-width: 2px;
 }
-
-/* #endregion */
-/* #region  Light Theme Variables */
-.theme-light {
-	--mark-background: hsl(0 0% 100%);
-	--highlight-text-normal: hsl(0 0% 20%);
-	--highlight-default: var(--color-yellow);
-
-	/* Light Theme Color Adjustments */
-	--color-yellow-s-desaturated: calc(var(--color-yellow-s) - var(--color-desaturate-lt));
-	--color-green-s-desaturated: calc(var(--color-green-s) - var(--color-desaturate-lt));
-	--color-mint-s-desaturated: calc(var(--color-mint-s) - var(--color-desaturate-lt));
-	--color-aqua-s-desaturated: calc(var(--color-aqua-s) - var(--color-desaturate-lt));
-	--color-pink-s-desaturated: calc(var(--color-pink-s) - var(--color-desaturate-lt));
-	--color-red-l-darkened: calc(var(--color-red-l) - var(--color-darken-lt));
-	--color-orange-l-darkened: calc(var(--color-orange-l) - var(--color-darken-lt));
-	--color-yellow-l-darkened: calc(var(--color-yellow-l) - var(--color-darken-lt));
-	--color-green-l-darkened: calc(var(--color-green-l) - var(--color-darken-lt));
-	--color-mint-l-darkened: calc(var(--color-mint-l) - var(--color-darken-lt));
-	--color-aqua-l-darkened: calc(var(--color-aqua-l) - var(--color-darken-lt));
-	--color-blue-l-darkened: calc(var(--color-blue-l) - var(--color-darken-lt));
-	--color-purple-l-darkened: calc(var(--color-purple-l) - var(--color-darken-lt));
-	--color-pink-l-darkened: calc(var(--color-pink-l) - var(--color-darken-lt));
-	--color-grey-l-darkened: calc(var(--color-grey-l) - var(--color-darken-lt));
-	--color-red-l-darkened-text: calc(var(--color-red-l) - var(--color-darken-text-lt));
-	--color-orange-l-darkened-text: calc(var(--color-orange-l) - var(--color-darken-text-lt));
-	--color-yellow-l-darkened-text: calc(var(--color-yellow-l) - var(--color-darken-text-lt));
-	--color-green-l-darkened-text: calc(var(--color-green-l) - var(--color-darken-text-lt));
-	--color-mint-l-darkened-text: calc(var(--color-mint-l) - var(--color-darken-text-lt));
-	--color-aqua-l-darkened-text: calc(var(--color-aqua-l) - var(--color-darken-text-lt));
-	--color-blue-l-darkened-text: calc(var(--color-blue-l) - var(--color-darken-text-lt));
-	--color-purple-l-darkened-text: calc(var(--color-purple-l) - var(--color-darken-text-lt));
-	--color-pink-l-darkened-text: calc(var(--color-pink-l) - var(--color-darken-text-lt));
-	--color-grey-l-darkened-text: calc(var(--color-grey-l) - var(--color-darken-text-lt));
-
-	/* Light Theme Base Colors */
-	--color-red: hsl(var(--color-red-h) var(--color-red-s) var(--color-red-l));
-	--color-orange: hsl(var(--color-orange-h) var(--color-orange-s) var(--color-orange-l));
-	--color-yellow: hsl(var(--color-yellow-h) var(--color-yellow-s-desaturated) var(--color-yellow-l));
-	--color-green: hsl(var(--color-green-h) var(--color-green-s-desaturated) var(--color-green-l));
-	--color-mint: hsl(var(--color-mint-h) var(--color-mint-s-desaturated) var(--color-mint-l));
-	--color-aqua: hsl(var(--color-aqua-h) var(--color-aqua-s-desaturated) var(--color-aqua-l));
-	--color-blue: hsl(var(--color-blue-h) var(--color-blue-s) var(--color-blue-l));
-	--color-purple: hsl(var(--color-purple-h) var(--color-purple-s) var(--color-purple-l));
-	--color-pink: hsl(var(--color-pink-h) var(--color-pink-s-desaturated) var(--color-pink-l));
-	--color-grey: hsl(var(--color-grey-h) var(--color-grey-s) var(--color-grey-l));
-
-	/* Light Theme Dark Colors */
-	--color-dark-red: hsl(var(--color-red-h) var(--color-red-s) var(--color-red-l-darkened));
-	--color-dark-orange: hsl(var(--color-orange-h) var(--color-orange-s) var(--color-orange-l-darkened));
-	--color-dark-yellow: hsl(var(--color-yellow-h) var(--color-yellow-s-desaturated) var(--color-yellow-l-darkened));
-	--color-dark-green: hsl(var(--color-green-h) var(--color-green-s-desaturated) var(--color-green-l-darkened));
-	--color-dark-mint: hsl(var(--color-mint-h) var(--color-mint-s-desaturated) var(--color-mint-l-darkened));
-	--color-dark-aqua: hsl(var(--color-aqua-h) var(--color-aqua-s-desaturated) var(--color-aqua-l-darkened));
-	--color-dark-blue: hsl(var(--color-blue-h) var(--color-blue-s) var(--color-blue-l-darkened));
-	--color-dark-purple: hsl(var(--color-purple-h) var(--color-purple-s) var(--color-purple-l-darkened));
-	--color-dark-pink: hsl(var(--color-pink-h) var(--color-pink-s-desaturated) var(--color-pink-l-darkened));
-	--color-dark-grey: hsl(var(--color-grey-h) var(--color-grey-s) var(--color-grey-l-darkened));
-
-	/* Light Theme Text Colors */
-	--color-text-red: hsl(var(--color-red-h) var(--color-red-s) var(--color-red-l-darkened-text));
-	--color-text-orange: hsl(var(--color-orange-h) var(--color-orange-s) var(--color-orange-l-darkened-text));
-	--color-text-yellow: hsl(var(--color-yellow-h) var(--color-yellow-s-desaturated) var(--color-yellow-l-darkened-text));
-	--color-text-green: hsl(var(--color-green-h) var(--color-green-s-desaturated) var(--color-green-l-darkened-text));
-	--color-text-mint: hsl(var(--color-mint-h) var(--color-mint-s-desaturated) var(--color-mint-l-darkened-text));
-	--color-text-aqua: hsl(var(--color-aqua-h) var(--color-aqua-s-desaturated) var(--color-aqua-l-darkened-text));
-	--color-text-blue: hsl(var(--color-blue-h) var(--color-blue-s) var(--color-blue-l-darkened-text));
-	--color-text-purple: hsl(var(--color-purple-h) var(--color-purple-s) var(--color-purple-l-darkened-text));
-	--color-text-pink: hsl(var(--color-pink-h) var(--color-pink-s-desaturated) var(--color-pink-l-darkened-text));
-	--color-text-grey: hsl(var(--color-grey-h) var(--color-grey-s) var(--color-grey-l-darkened-text));
+body.theme-light {
+  --color-grey-base-hsl:
+    0,
+    0%,
+    84%;
+  --color-red-base-hsl:
+    7,
+    80%,
+    88%;
+  --color-orange-base-hsl:
+    25,
+    79%,
+    84%;
+  --color-yellow-base-hsl:
+    47,
+    57%,
+    77%;
+  --color-green-base-hsl:
+    115,
+    35%,
+    81%;
+  --color-mint-base-hsl:
+    156,
+    37%,
+    81%;
+  --color-cyan-base-hsl:
+    192,
+    39%,
+    83%;
+  --color-blue-base-hsl:
+    222,
+    62%,
+    88%;
+  --color-purple-base-hsl:
+    251,
+    62%,
+    90%;
+  --color-pink-base-hsl:
+    327,
+    56%,
+    88%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    67%;
+  --color-red-tint-hsl:
+    6,
+    70%,
+    74%;
+  --color-orange-tint-hsl:
+    27,
+    74%,
+    64%;
+  --color-yellow-tint-hsl:
+    48,
+    68%,
+    47%;
+  --color-green-tint-hsl:
+    115,
+    34%,
+    60%;
+  --color-mint-tint-hsl:
+    159,
+    39%,
+    57%;
+  --color-cyan-tint-hsl:
+    192,
+    40%,
+    63%;
+  --color-blue-tint-hsl:
+    222,
+    57%,
+    74%;
+  --color-purple-tint-hsl:
+    252,
+    60%,
+    77%;
+  --color-pink-tint-hsl:
+    326,
+    50%,
+    73%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    49%;
+  --color-red-text-hsl:
+    4,
+    62%,
+    55%;
+  --color-orange-text-hsl:
+    32,
+    100%,
+    37%;
+  --color-yellow-text-hsl:
+    48,
+    100%,
+    30%;
+  --color-green-text-hsl:
+    116,
+    71%,
+    33%;
+  --color-mint-text-hsl:
+    165,
+    100%,
+    28%;
+  --color-cyan-text-hsl:
+    191,
+    75%,
+    36%;
+  --color-blue-text-hsl:
+    223,
+    54%,
+    58%;
+  --color-purple-text-hsl:
+    255,
+    56%,
+    63%;
+  --color-pink-text-hsl:
+    323,
+    46%,
+    55%;
 }
-
-/* #endregion */
-/* #region  Dark Theme Variables */
-.theme-dark {
-	--mark-background: hsl(0 0% 22%);
-	--highlight-text-normal: hsl(270 2% 8%);
-	--highlight-default: var(--color-yellow);
-
-	/* Dark Theme Color Adjustments */
-	--color-red-s-desaturated: calc(var(--color-red-s) - var(--color-desaturate-dt));
-	--color-orange-s-desaturated: calc(var(--color-orange-s) - var(--color-desaturate-dt));
-	--color-yellow-s-desaturated: calc(var(--color-yellow-s) - var(--color-desaturate-dt));
-	--color-green-s-desaturated: calc(var(--color-green-s) - var(--color-desaturate-dt));
-	--color-mint-s-desaturated: calc(var(--color-mint-s) - var(--color-desaturate-dt));
-	--color-aqua-s-desaturated: calc(var(--color-aqua-s) - var(--color-desaturate-dt));
-	--color-blue-s-desaturated: calc(var(--color-blue-s) - var(--color-desaturate-dt));
-	--color-purple-s-desaturated: calc(var(--color-purple-s) - var(--color-desaturate-dt));
-	--color-pink-s-desaturated: calc(var(--color-pink-s) - var(--color-desaturate-dt));
-	--color-grey-s-desaturated: calc(var(--color-grey-s) - var(--color-desaturate-dt));
-	--color-red-l-darkened: calc(var(--color-red-l) - var(--color-darken-dt));
-	--color-orange-l-darkened: calc(var(--color-orange-l) - var(--color-darken-dt));
-	--color-yellow-l-darkened: calc(var(--color-yellow-l) - var(--color-darken-dt));
-	--color-green-l-darkened: calc(var(--color-green-l) - var(--color-darken-dt));
-	--color-mint-l-darkened: calc(var(--color-mint-l) - var(--color-darken-dt));
-	--color-aqua-l-darkened: calc(var(--color-aqua-l) - var(--color-darken-dt));
-	--color-blue-l-darkened: calc(var(--color-blue-l) - var(--color-darken-dt));
-	--color-purple-l-darkened: calc(var(--color-purple-l) - var(--color-darken-dt));
-	--color-pink-l-darkened: calc(var(--color-pink-l) - var(--color-darken-dt));
-	--color-grey-l-darkened: calc(var(--color-grey-l) - var(--color-darken-dt));
-	--color-red-l-darkened2x: calc(var(--color-red-l) - var(--color-darken-dt) * 2);
-	--color-orange-l-darkened2x: calc(var(--color-orange-l) - var(--color-darken-dt) * 2);
-	--color-yellow-l-darkened2x: calc(var(--color-yellow-l) - var(--color-darken-dt) * 2);
-	--color-green-l-darkened2x: calc(var(--color-green-l) - var(--color-darken-dt) * 2);
-	--color-mint-l-darkened2x: calc(var(--color-mint-l) - var(--color-darken-dt) * 2);
-	--color-aqua-l-darkened2x: calc(var(--color-aqua-l) - var(--color-darken-dt) * 2);
-	--color-blue-l-darkened2x: calc(var(--color-blue-l) - var(--color-darken-dt) * 2);
-	--color-purple-l-darkened2x: calc(var(--color-purple-l) - var(--color-darken-dt) * 2);
-	--color-pink-l-darkened2x: calc(var(--color-pink-l) - var(--color-darken-dt) * 2);
-	--color-grey-l-darkened2x: calc(var(--color-grey-l) - var(--color-darken-dt) * 2);
-	--color-red-l-darkened-text: calc(var(--color-red-l) - var(--color-darken-text-dt));
-	--color-orange-l-darkened-text: calc(var(--color-orange-l) - var(--color-darken-text-dt));
-	--color-yellow-l-darkened-text: calc(var(--color-yellow-l) - var(--color-darken-text-dt));
-	--color-green-l-darkened-text: calc(var(--color-green-l) - var(--color-darken-text-dt));
-	--color-mint-l-darkened-text: calc(var(--color-mint-l) - var(--color-darken-text-dt));
-	--color-aqua-l-darkened-text: calc(var(--color-aqua-l) - var(--color-darken-text-dt));
-	--color-blue-l-darkened-text: calc(var(--color-blue-l) - var(--color-darken-text-dt));
-	--color-purple-l-darkened-text: calc(var(--color-purple-l) - var(--color-darken-text-dt));
-	--color-pink-l-darkened-text: calc(var(--color-pink-l) - var(--color-darken-text-dt));
-	--color-grey-l-darkened-text: calc(var(--color-grey-l) - var(--color-darken-text-dt));
-
-	/* Dark Theme Base Colors */
-	--color-red: hsl(var(--color-red-h) var(--color-red-s-desaturated) var(--color-red-l-darkened));
-	--color-orange: hsl(var(--color-orange-h) var(--color-orange-s-desaturated) var(--color-orange-l-darkened));
-	--color-yellow: hsl(var(--color-yellow-h) var(--color-yellow-s-desaturated) var(--color-yellow-l-darkened));
-	--color-green: hsl(var(--color-green-h) var(--color-green-s-desaturated) var(--color-green-l-darkened));
-	--color-mint: hsl(var(--color-mint-h) var(--color-mint-s-desaturated) var(--color-mint-l-darkened));
-	--color-aqua: hsl(var(--color-aqua-h) var(--color-aqua-s-desaturated) var(--color-aqua-l-darkened));
-	--color-blue: hsl(var(--color-blue-h) var(--color-blue-s-desaturated) var(--color-blue-l-darkened));
-	--color-purple: hsl(var(--color-purple-h) var(--color-purple-s-desaturated) var(--color-purple-l-darkened));
-	--color-pink: hsl(var(--color-pink-h) var(--color-pink-s-desaturated) var(--color-pink-l-darkened));
-	--color-grey: hsl(var(--color-grey-h) var(--color-grey-s-desaturated) var(--color-grey-l-darkened));
-
-	/* Dark Theme Dark Colors */
-	--color-dark-red: hsl(var(--color-red-h) var(--color-red-s-desaturated) var(--color-red-l-darkened2x));
-	--color-dark-orange: hsl(var(--color-orange-h) var(--color-orange-s-desaturated) var(--color-orange-l-darkened2x));
-	--color-dark-yellow: hsl(var(--color-yellow-h) var(--color-yellow-s-desaturated) var(--color-yellow-l-darkened2x));
-	--color-dark-green: hsl(var(--color-green-h) var(--color-green-s-desaturated) var(--color-green-l-darkened2x));
-	--color-dark-mint: hsl(var(--color-mint-h) var(--color-mint-s-desaturated) var(--color-mint-l-darkened2x));
-	--color-dark-aqua: hsl(var(--color-aqua-h) var(--color-aqua-s-desaturated) var(--color-aqua-l-darkened2x));
-	--color-dark-blue: hsl(var(--color-blue-h) var(--color-blue-s-desaturated) var(--color-blue-l-darkened2x));
-	--color-dark-purple: hsl(var(--color-purple-h) var(--color-purple-s-desaturated) var(--color-purple-l-darkened2x));
-	--color-dark-pink: hsl(var(--color-pink-h) var(--color-pink-s-desaturated) var(--color-pink-l-darkened2x));
-	--color-dark-grey: hsl(var(--color-grey-h) var(--color-grey-s-desaturated) var(--color-grey-l-darkened2x));
-
-	/* Dark Theme Text Colors */
-	--color-text-red: hsl(var(--color-red-h) var(--color-red-s-desaturated) var(--color-red-l-darkened-text));
-	--color-text-orange: hsl(var(--color-orange-h) var(--color-orange-s-desaturated) var(--color-orange-l-darkened-text));
-	--color-text-yellow: hsl(var(--color-yellow-h) var(--color-yellow-s-desaturated) var(--color-yellow-l-darkened-text));
-	--color-text-green: hsl(var(--color-green-h) var(--color-green-s-desaturated) var(--color-green-l-darkened-text));
-	--color-text-mint: hsl(var(--color-mint-h) var(--color-mint-s-desaturated) var(--color-mint-l-darkened-text));
-	--color-text-aqua: hsl(var(--color-aqua-h) var(--color-aqua-s-desaturated) var(--color-aqua-l-darkened-text));
-	--color-text-blue: hsl(var(--color-blue-h) var(--color-blue-s-desaturated) var(--color-blue-l-darkened-text));
-	--color-text-purple: hsl(var(--color-purple-h) var(--color-purple-s-desaturated) var(--color-purple-l-darkened-text));
-	--color-text-pink: hsl(var(--color-pink-h) var(--color-pink-s-desaturated) var(--color-pink-l-darkened-text));
-	--color-text-grey: hsl(var(--color-grey-h) var(--color-grey-s-desaturated) var(--color-grey-l-darkened-text));
+body.theme-dark {
+  --color-grey-base-hsl:
+    0,
+    0%,
+    18%;
+  --color-red-base-hsl:
+    0,
+    46%,
+    22%;
+  --color-orange-base-hsl:
+    20,
+    52%,
+    19%;
+  --color-yellow-base-hsl:
+    40,
+    45%,
+    16%;
+  --color-green-base-hsl:
+    122,
+    40%,
+    15%;
+  --color-mint-base-hsl:
+    163,
+    51%,
+    14%;
+  --color-cyan-base-hsl:
+    195,
+    43%,
+    16%;
+  --color-blue-base-hsl:
+    228,
+    39%,
+    23%;
+  --color-purple-base-hsl:
+    268,
+    43%,
+    24%;
+  --color-pink-base-hsl:
+    328,
+    41%,
+    21%;
+  --color-grey-tint-hsl:
+    0,
+    0%,
+    37%;
+  --color-red-tint-hsl:
+    0,
+    41%,
+    43%;
+  --color-orange-tint-hsl:
+    9,
+    45%,
+    37%;
+  --color-yellow-tint-hsl:
+    39,
+    39%,
+    32%;
+  --color-green-tint-hsl:
+    121,
+    34%,
+    31%;
+  --color-mint-tint-hsl:
+    163,
+    43%,
+    29%;
+  --color-cyan-tint-hsl:
+    195,
+    37%,
+    33%;
+  --color-blue-tint-hsl:
+    227,
+    39%,
+    46%;
+  --color-purple-tint-hsl:
+    266,
+    33%,
+    45%;
+  --color-pink-tint-hsl:
+    328,
+    38%,
+    42%;
+  --color-grey-text-hsl:
+    0,
+    0%,
+    57%;
+  --color-red-text-hsl:
+    0,
+    51%,
+    65%;
+  --color-orange-text-hsl:
+    19,
+    43%,
+    58%;
+  --color-yellow-text-hsl:
+    40,
+    37%,
+    50%;
+  --color-green-text-hsl:
+    122,
+    32%,
+    49%;
+  --color-mint-text-hsl:
+    163,
+    39%,
+    46%;
+  --color-cyan-text-hsl:
+    195,
+    38%,
+    52%;
+  --color-blue-text-hsl:
+    228,
+    39%,
+    65%;
+  --color-purple-text-hsl:
+    264,
+    29%,
+    64%;
+  --color-pink-text-hsl:
+    331,
+    32%,
+    63%;
 }
-
-/* #endregion */
-/*
-  ==========================================================================
-  Mark Highlight System
-  ==========================================================================
-*/
-/* Adjusts the line height for lines of text that include the Mark Highlight so that it's contained in the line */
-/* .markdown-preview-view mark {
-        line-height: 1.6;
-    } */
-/* #region  [Plugin - Theme] Mark Highlight Color Presets */
-mark.red,
-mark.Red {
-	--highlight-default: var(--color-red);
-	--dark-highlight-default: var(--color-dark-red);
-	--text-highlight-default: var(--color-text-red);
+body:is(.theme-light, .theme-dark) {
+  --color-grey-base: hsl(var(--color-grey-base-hsl));
+  --color-red-base: hsl(var(--color-red-base-hsl));
+  --color-orange-base: hsl(var(--color-orange-base-hsl));
+  --color-yellow-base: hsl(var(--color-yellow-base-hsl));
+  --color-green-base: hsl(var(--color-green-base-hsl));
+  --color-mint-base: hsl(var(--color-mint-base-hsl));
+  --color-cyan-base: hsl(var(--color-cyan-base-hsl));
+  --color-blue-base: hsl(var(--color-blue-base-hsl));
+  --color-purple-base: hsl(var(--color-purple-base-hsl));
+  --color-pink-base: hsl(var(--color-pink-base-hsl));
+  --color-grey-tint: hsl(var(--color-grey-tint-hsl));
+  --color-red-tint: hsl(var(--color-red-tint-hsl));
+  --color-orange-tint: hsl(var(--color-orange-tint-hsl));
+  --color-yellow-tint: hsl(var(--color-yellow-tint-hsl));
+  --color-green-tint: hsl(var(--color-green-tint-hsl));
+  --color-mint-tint: hsl(var(--color-mint-tint-hsl));
+  --color-cyan-tint: hsl(var(--color-cyan-tint-hsl));
+  --color-blue-tint: hsl(var(--color-blue-tint-hsl));
+  --color-purple-tint: hsl(var(--color-purple-tint-hsl));
+  --color-pink-tint: hsl(var(--color-pink-tint-hsl));
+  --color-grey-text: hsl(var(--color-grey-text-hsl));
+  --color-red-text: hsl(var(--color-red-text-hsl));
+  --color-orange-text: hsl(var(--color-orange-text-hsl));
+  --color-yellow-text: hsl(var(--color-yellow-text-hsl));
+  --color-green-text: hsl(var(--color-green-text-hsl));
+  --color-mint-text: hsl(var(--color-mint-text-hsl));
+  --color-cyan-text: hsl(var(--color-cyan-text-hsl));
+  --color-blue-text: hsl(var(--color-blue-text-hsl));
+  --color-purple-text: hsl(var(--color-purple-text-hsl));
+  --color-pink-text: hsl(var(--color-pink-text-hsl));
 }
-
-mark.orange,
-mark.Orange {
-	--highlight-default: var(--color-orange);
-	--dark-highlight-default: var(--color-dark-orange);
-	--text-highlight-default: var(--color-text-orange);
+body mark[class] {
+  --mark-highlight-base: var(--color-yellow-base);
+  --mark-highlight-tint: var(--color-yellow-tint);
+  --mark-highlight-text: var(--color-yellow-text);
+  font-weight: 600;
+  background-color: transparent;
+  border-radius: var(--radius-s);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
-
-mark.yellow,
-mark.Yellow {
-	--highlight-default: var(--color-yellow);
-	--dark-highlight-default: var(--color-dark-yellow);
-	--text-highlight-default: var(--color-text-yellow);
+body mark[class] .external-link {
+  background-position-x: calc(100% - 1px);
+  background-position-y: 2px;
 }
-
-mark.green,
-mark.Green {
-	--highlight-default: var(--color-green);
-	--dark-highlight-default: var(--color-dark-green);
-	--text-highlight-default: var(--color-text-green);
+body mark[class]:is(.red, .Red) {
+  --mark-highlight-base: var(--color-red-base);
+  --mark-highlight-tint: var(--color-red-tint);
+  --mark-highlight-text: var(--color-red-text);
 }
-
-mark.mint,
-mark.Mint {
-	--highlight-default: var(--color-mint);
-	--dark-highlight-default: var(--color-dark-mint);
-	--text-highlight-default: var(--color-text-mint);
+body mark[class]:is(.orange, .Orange) {
+  --mark-highlight-base: var(--color-orange-base);
+  --mark-highlight-tint: var(--color-orange-tint);
+  --mark-highlight-text: var(--color-orange-text);
 }
-
-mark.aqua,
-mark.Aqua {
-	--highlight-default: var(--color-aqua);
-	--dark-highlight-default: var(--color-dark-aqua);
-	--text-highlight-default: var(--color-text-aqua);
+body mark[class]:is(.yellow, .Yellow) {
+  --mark-highlight-base: var(--color-yellow-base);
+  --mark-highlight-tint: var(--color-yellow-tint);
+  --mark-highlight-text: var(--color-yellow-text);
 }
-
-mark.blue,
-mark.Blue {
-	--highlight-default: var(--color-blue);
-	--dark-highlight-default: var(--color-dark-blue);
-	--text-highlight-default: var(--color-text-blue);
+body mark[class]:is(.green, .Green) {
+  --mark-highlight-base: var(--color-green-base);
+  --mark-highlight-tint: var(--color-green-tint);
+  --mark-highlight-text: var(--color-green-text);
 }
-
-mark.purple,
-mark.Purple {
-	--highlight-default: var(--color-purple);
-	--dark-highlight-default: var(--color-dark-purple);
-	--text-highlight-default: var(--color-text-purple);
+body mark[class]:is(.mint, .Mint) {
+  --mark-highlight-base: var(--color-mint-base);
+  --mark-highlight-tint: var(--color-mint-tint);
+  --mark-highlight-text: var(--color-mint-text);
 }
-
-mark.pink,
-mark.Pink {
-	--highlight-default: var(--color-pink);
-	--dark-highlight-default: var(--color-dark-pink);
-	--text-highlight-default: var(--color-text-pink);
+body mark[class]:is(.aqua, .Aqua, .cyan, .Cyan) {
+  --mark-highlight-base: var(--color-cyan-base);
+  --mark-highlight-tint: var(--color-cyan-tint);
+  --mark-highlight-text: var(--color-cyan-text);
 }
-
-mark.grey,
-mark.Grey {
-	--highlight-default: var(--color-grey);
-	--dark-highlight-default: var(--color-dark-grey);
-	--text-highlight-default: var(--color-text-grey);
+body mark[class]:is(.blue, .Blue) {
+  --mark-highlight-base: var(--color-blue-base);
+  --mark-highlight-tint: var(--color-blue-tint);
+  --mark-highlight-text: var(--color-blue-text);
 }
-
-/* #endregion */
-/* #region  [Plugin - Theme} Mark Highlight Styles */
-.theme-dark.pt-highlight-style-text-dt .markdown-preview-view mark,
-.theme-dark.pt-highlight-style-text-dt .cm-line span.cm-html-embed mark,
-.theme-light.pt-highlight-style-text-lt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-text-lt .cm-line span.cm-html-embed mark {
-	margin: 0;
-	font-size: 0.875em;
-	font-weight: 600;
-	color: var(--text-highlight-default);
-	background-color: transparent;
-	border-radius: var(--radius-s);
-	opacity: 1;
+body mark[class]:is(.purple, .Purple) {
+  --mark-highlight-base: var(--color-purple-base);
+  --mark-highlight-tint: var(--color-purple-tint);
+  --mark-highlight-text: var(--color-purple-text);
 }
-
-.theme-dark.pt-highlight-style-border-dt .markdown-preview-view mark,
-.theme-dark.pt-highlight-style-border-dt .cm-line span.cm-html-embed mark,
-.theme-light.pt-highlight-style-border-lt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-border-lt .cm-line span.cm-html-embed mark {
-	padding: 0 5px;
-	font-size: 0.875em;
-	font-weight: 600;
-	background-color: var(--mark-background);
-	border: var(--border-size) solid var(--dark-highlight-default);
-	border-radius: var(--radius-s);
-	-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
+body mark[class]:is(.pink, .Pink) {
+  --mark-highlight-base: var(--color-pink-base);
+  --mark-highlight-tint: var(--color-pink-tint);
+  --mark-highlight-text: var(--color-pink-text);
 }
-
-.theme-dark.pt-highlight-style-borderandtext-dt .markdown-preview-view mark,
-.theme-dark.pt-highlight-style-borderandtext-dt .cm-line span.cm-html-embed mark,
-.theme-light.pt-highlight-style-borderandtext-lt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-borderandtext-lt .cm-line span.cm-html-embed mark {
-	padding: 0 5px;
-	font-size: 0.875em;
-	font-weight: 600;
-	color: var(--text-highlight-default);
-	background-color: var(--mark-background);
-	border: var(--border-size) solid var(--dark-highlight-default);
-	border-radius: var(--radius-s);
-	-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
+body mark[class]:is(.grey, .Grey) {
+  --mark-highlight-base: var(--color-grey-base);
+  --mark-highlight-tint: var(--color-grey-tint);
+  --mark-highlight-text: var(--color-grey-text);
 }
-
-.theme-dark.pt-highlight-style-filled-dt .markdown-preview-view mark,
-.theme-dark.pt-highlight-style-filled-dt .cm-line span.cm-html-embed mark,
-.theme-light.pt-highlight-style-filled-lt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-filled-lt .cm-line span.cm-html-embed mark {
-	padding: 2px 7px;
-	font-size: 0.875em;
-	font-weight: 600;
-	color: var(--highlight-text-normal);
-	background-color: var(--highlight-default);
-	border-radius: var(--radius-s);
-	-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
+:is(body.theme-dark.pt-highlight-style-default-dt mark[class], body.theme-light.pt-highlight-style-default-lt mark[class]),
+:is(body.theme-dark.pt-highlight-style-default-dt mark[class].mark-default, body.theme-light.pt-highlight-style-default-lt mark[class].mark-default, body.theme-dark.pt-highlight-style-border-dt mark[class].mark-default, body.theme-light.pt-highlight-style-border-lt mark[class].mark-default, body.theme-dark.pt-highlight-style-filled-dt mark[class].mark-default, body.theme-light.pt-highlight-style-filled-lt mark[class].mark-default, body.theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-default, body.theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-default) {
+  padding: 0;
+  font-size: 1em;
+  background-color: unset;
+  border: unset;
+  opacity: 1;
 }
-
-.theme-dark.pt-highlight-style-borderandfilled-dt .markdown-preview-view mark,
-.theme-dark.pt-highlight-style-borderandfilled-dt .cm-line span.cm-html-embed mark,
-.theme-light.pt-highlight-style-borderandfilled-lt .markdown-preview-view mark,
-.theme-light.pt-highlight-style-borderandfilled-lt .cm-line span.cm-html-embed mark {
-	padding: 0 5px;
-	font-size: 0.875em;
-	font-weight: 600;
-	color: var(--highlight-text-normal);
-	background-color: var(--highlight-default);
-	border: var(--border-size) solid var(--dark-highlight-default);
-	border-radius: var(--radius-s);
-	-webkit-box-decoration-break: clone;
-	box-decoration-break: clone;
+:is(body.theme-dark.pt-highlight-style-border-dt mark[class], body.theme-light.pt-highlight-style-border-lt mark[class]),
+:is(body.theme-dark.pt-highlight-style-default-dt mark[class].mark-border, body.theme-light.pt-highlight-style-default-lt mark[class].mark-border, body.theme-dark.pt-highlight-style-border-dt mark[class].mark-border, body.theme-light.pt-highlight-style-border-lt mark[class].mark-border, body.theme-dark.pt-highlight-style-filled-dt mark[class].mark-border, body.theme-light.pt-highlight-style-filled-lt mark[class].mark-border, body.theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-border, body.theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-border) {
+  padding: 0 3px;
+  font-size: var(--font-smallest);
+  background-color: unset;
+  border: var(--accent-border-width) solid var(--mark-highlight-tint);
 }
-
-/* #endregion */
+:is(body.theme-dark.pt-highlight-style-filled-dt mark[class], body.theme-light.pt-highlight-style-filled-lt mark[class]),
+:is(body.theme-dark.pt-highlight-style-default-dt mark[class].mark-filled, body.theme-light.pt-highlight-style-default-lt mark[class].mark-filled, body.theme-dark.pt-highlight-style-border-dt mark[class].mark-filled, body.theme-light.pt-highlight-style-border-lt mark[class].mark-filled, body.theme-dark.pt-highlight-style-filled-dt mark[class].mark-filled, body.theme-light.pt-highlight-style-filled-lt mark[class].mark-filled, body.theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-filled, body.theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-filled) {
+  padding: 0 3px;
+  font-size: var(--font-smallest);
+  background-color: var(--mark-highlight-base);
+  border: var(--accent-border-width) solid var(--mark-highlight-base);
+}
+:is(body.theme-dark.pt-highlight-style-borderandfilled-dt mark[class], body.theme-light.pt-highlight-style-borderandfilled-lt mark[class]),
+:is(body.theme-dark.pt-highlight-style-default-dt mark[class].mark-borderandfilled, body.theme-light.pt-highlight-style-default-lt mark[class].mark-borderandfilled, body.theme-dark.pt-highlight-style-border-dt mark[class].mark-borderandfilled, body.theme-light.pt-highlight-style-border-lt mark[class].mark-borderandfilled, body.theme-dark.pt-highlight-style-filled-dt mark[class].mark-borderandfilled, body.theme-light.pt-highlight-style-filled-lt mark[class].mark-borderandfilled, body.theme-dark.pt-highlight-style-borderandfilled-dt mark[class].mark-borderandfilled, body.theme-light.pt-highlight-style-borderandfilled-lt mark[class].mark-borderandfilled) {
+  padding: 0 3px;
+  font-size: var(--font-smallest);
+  background-color: var(--mark-highlight-base);
+  border: var(--accent-border-width) solid var(--mark-highlight-tint);
+}
+:is(body.theme-light.pt-highlight-text-default-lt mark[class], body.theme-dark.pt-highlight-text-default-dt mark[class]),
+:is(body.theme-light.pt-highlight-text-default-lt mark[class].mark-text-default, body.theme-dark.pt-highlight-text-default-dt mark[class]).mark-text-default,
+body.theme-light.pt-highlight-text-color-lt mark[class].mark-text-default,
+body.theme-dark.pt-highlight-text-color-dt mark[class].mark-text-default {
+  color: var(--text-normal);
+}
+:is(body.theme-light.pt-highlight-text-color-lt mark[class], body.theme-dark.pt-highlight-text-color-dt mark[class]),
+:is(body.theme-light.pt-highlight-text-default-lt mark[class].mark-text-color, body.theme-dark.pt-highlight-text-default-dt mark[class]).mark-text-color,
+body.theme-light.pt-highlight-text-color-lt mark[class].mark-text-color,
+body.theme-dark.pt-highlight-text-color-dt mark[class].mark-text-color {
+  color: var(--mark-highlight-text);
+}
