@@ -28,4 +28,3 @@ const context = await esbuild.context({
     ]
 })
 await context.watch();
-await context.dispose();
