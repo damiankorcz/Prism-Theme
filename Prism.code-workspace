@@ -28,9 +28,9 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "ESBuild - Dev",
+				"label": "ESBuild - Dev Theme",
 				"type": "shell",
-				"command": "npm run dev",
+				"command": "npm run devTheme",
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -40,9 +40,27 @@
 				}
 			},
 			{
-				"label": "ESBuild - Build",
+				"label": "ESBuild - Build Theme",
 				"type": "shell",
-				"command": "npm run build",
+				"command": "npm run buildTheme",
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				}
+			},
+			{
+				"label": "ESBuild - Dev MHS Snippet",
+				"type": "shell",
+				"command": "npm run devSnipMHS",
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				}
+			},
+			{
+				"label": "ESBuild - Build MHS Snippet",
+				"type": "shell",
+				"command": "npm run buildSnipMHS",
 				"group": {
 					"kind": "build",
 					"isDefault": true

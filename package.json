@@ -4,21 +4,23 @@
   "description": "A Highly-Customisable & Elegant Light/Dark Theme for Obsidian.md",
   "author": "Damian Korcz",
   "license": "MIT",
-  "homepage": "https://github.com/damiankorcz/Obsidian-Prism#readme",
+  "homepage": "https://github.com/damiankorcz/Obsidian-Prism",
   "scripts": {
-    "dev": "node ./esbuild.config.mjs",
-    "build": "node ./esbuild.config.mjs production"
+    "devTheme": "node ./build/devTheme.config.mjs",
+    "buildTheme": "node ./build/buildTheme.config.mjs",
+    "devSnipMHS": "node ./build/devSnipMHS.config.mjs",
+    "buildSnipMHS": "node ./build/buildSnipMHS.config.mjs"
   },
   "devDependencies": {
-    "dotenv": "^16.0.0",
-    "esbuild": "^0.14.38",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.17.0",
     "esbuild-plugin-time": "^1.0.0",
-    "esbuild-sass-plugin": "^2.2.6",
-    "postcss": "^8.4.12",
-    "stylelint": "^14.7.0",
-    "stylelint-config-recess-order": "^3.0.0",
-    "stylelint-config-recommended": "^7.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
-    "stylelint-no-unsupported-browser-features": "^5.0.3"
+    "esbuild-sass-plugin": "^2.4.5",
+    "postcss": "^8.4.21",
+    "stylelint": "^14.16.1",
+    "stylelint-config-recess-order": "^3.1.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
+    "stylelint-no-unsupported-browser-features": "^6.0.1"
   }
 }
