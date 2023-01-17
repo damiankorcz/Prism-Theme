@@ -43,10 +43,15 @@ del {
 	color: var(--text-muted);
 }
 
-:is(.cm-inline-code, .cm-math) {
+:is(.cm-inline-code:not(.cm-formatting-code), .cm-math) {
 	padding: 0 var(--size-4-1);
 	border: 1px solid var(--window-border);
 	border-radius: var(--radius-s);
+}
+
+.cm-s-obsidian .cm-formatting-code.cm-inline-code {
+	font-family: var(--font-text);
+	font-size: var(--font-text-size);
 }
 
 .cm-s-obsidian span.cm-formatting-highlight.cm-inline-code,
