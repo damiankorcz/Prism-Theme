@@ -46,8 +46,12 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border-bottom: 1px solid var(--window-border);
 }
 
-.view-header-title-container::after {
-	display: none;
+.view-header-title-container {
+	height: var(--header-height);
+
+	&::after {
+		display: none;
+	}
 }
 
 .is-focused .workspace-leaf.mod-active .view-header-title,
