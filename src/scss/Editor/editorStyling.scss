@@ -238,11 +238,15 @@ ul > li.task-list-item .task-list-item-checkbox {
 
 	mark .internal-link {
 		.theme-light & {
-			color: var(--link-internal-color-lt);
+			color: hsl(var(--link-internal-color-lt));
 		}
 
 		.theme-dark & {
-			color: var(--link-internal-color-dt);
+			color: hsl(var(--link-internal-color-dt));
+		}
+
+		&:hover {
+			color: var(--link-color-hover);
 		}
 	}
 
