@@ -2992,6 +2992,29 @@ settings:
         max: 25
         step: 1
     -
+        id: pt-file-explorer-folder-icon
+        title: Enable Folder Dropdown Icon
+        description: Replaces the Arrow dropdown icon with a Folder icon (different icons for closed and open folders).
+        default: false
+        type: class-toggle
+    -
+        id: pt-file-explorer-folder-icon-color
+        title: Folder Dropdown Icon Color
+        description: Different presets for the Folder Dropdown Icon Color. Make sure to enable the option above `Enable Folder Dropdown Icon` for this to apply.
+        type: class-select
+        allowEmpty: false
+        default: pt-file-explorer-folder-icon-default
+        options:
+            -
+                label: Default
+                value: pt-file-explorer-folder-icon-default
+            -
+                label: Accent Color
+                value: pt-file-explorer-folder-icon-accent
+            -
+                label: Accent Color on Open Folders
+                value: pt-file-explorer-folder-icon-active
+    -
         id: titlebar
         title: Titlebar
         description: Settings for changing the style of the Titlebar.
