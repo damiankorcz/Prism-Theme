@@ -37,6 +37,8 @@ p {
 }
 
 .cm-strikethrough,
+.cm-s-obsidian span.cm-formatting-highlight.cm-strikethrough,
+.cm-s-obsidian span.cm-highlight.cm-strikethrough,
 del {
 	color: var(--text-muted);
 }
@@ -45,6 +47,11 @@ del {
 	padding: 0 var(--size-4-1);
 	border: 1px solid var(--window-border);
 	border-radius: var(--radius-s);
+}
+
+.cm-s-obsidian span.cm-formatting-highlight.cm-inline-code,
+.cm-s-obsidian span.cm-highlight.cm-inline-code {
+	color: var(--code-normal);
 }
 
 :is(.HyperMD-codeblock.HyperMD-codeblock-begin, .cm-s-obsidian div.HyperMD-codeblock-begin-bg) {
