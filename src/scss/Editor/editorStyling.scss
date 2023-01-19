@@ -43,6 +43,31 @@ del {
 	color: var(--text-muted);
 }
 
+/* :is(.cm-inline-code, .cm-math) {
+	border-width: 1px;
+	border-color: var(--background-modifier-border);
+	border-style: solid none;
+}
+
+.cm-inline-code:not(.cm-formatting-code) {
+	padding: 0 var(--size-4-1);
+}
+
+.cm-formatting-code:first-child,
+:not(.cm-inline-code) + .cm-inline-code,
+.cm-formatting-code + .cm-formatting-code {
+	border-left-style: solid;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+:not(.cm-inline-code) + .cm-inline-code:not(.cm-formatting-code),
+.cm-inline-code:not(.cm-formatting-code) + .cm-formatting-code {
+	border-right-style: solid;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+} */
+
 :is(.cm-inline-code:not(.cm-formatting-code), .cm-math) {
 	padding: 0 var(--size-4-1);
 	border: 1px solid var(--window-border);
