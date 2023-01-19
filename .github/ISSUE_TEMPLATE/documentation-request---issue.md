@@ -1,7 +1,7 @@
 ---
 name: Documentation Request / Issue
 about: Suggest improvements for the documentation and/or describe issues found
-title: "[Documentation]"
+title: ''
 labels: Documentation
 assignees: damiankorcz
 
