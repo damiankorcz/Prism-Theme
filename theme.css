@@ -2445,6 +2445,9 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   margin: unset;
   border-bottom: 1px solid var(--window-border);
 }
+.view-header-title-container {
+  height: var(--header-height);
+}
 .view-header-title-container::after {
   display: none;
 }
@@ -3013,13 +3016,23 @@ p {
   color: var(--text-italic-bold-color-dt);
 }
 .cm-strikethrough,
+.cm-s-obsidian span.cm-formatting-highlight.cm-strikethrough,
+.cm-s-obsidian span.cm-highlight.cm-strikethrough,
 del {
   color: var(--text-muted);
 }
-:is(.cm-inline-code, .cm-math) {
+:is(.cm-inline-code:not(.cm-formatting-code), .cm-math) {
   padding: 0 var(--size-4-1);
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
+}
+.cm-s-obsidian .cm-formatting-code.cm-inline-code {
+  font-family: var(--font-text);
+  font-size: var(--font-text-size);
+}
+.cm-s-obsidian span.cm-formatting-highlight.cm-inline-code,
+.cm-s-obsidian span.cm-highlight.cm-inline-code {
+  color: var(--code-normal);
 }
 :is(.HyperMD-codeblock.HyperMD-codeblock-begin, .cm-s-obsidian div.HyperMD-codeblock-begin-bg) {
   border-top: 1px solid var(--window-border);
@@ -3166,10 +3179,13 @@ ul > li.task-list-item .task-list-item-checkbox {
   left: -0.75em;
 }
 .theme-light .markdown-rendered mark .internal-link {
-  color: var(--link-internal-color-lt);
+  color: hsl(var(--link-internal-color-lt));
 }
 .theme-dark .markdown-rendered mark .internal-link {
-  color: var(--link-internal-color-dt);
+  color: hsl(var(--link-internal-color-dt));
+}
+.markdown-rendered mark .internal-link:hover {
+  color: var(--link-color-hover);
 }
 .markdown-rendered pre {
   border: 1px solid var(--window-border);
@@ -3641,7 +3657,9 @@ input.prompt-input:focus-visible {
   padding-left: var(--size-4-1);
 }
 .nav-file-tag {
+  height: 15px;
   background-color: var(--background-secondary);
+  border: 1px solid var(--window-border);
 }
 :is(.nav-file:not(.mod-root), .nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder) {
   margin-left: var(--file-explorer-left-margin);
@@ -3685,6 +3703,57 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .nav-folder-title.is-being-dragged {
   color: var(--highlight-text-normal);
   background-color: var(--interactive-accent-base);
+}
+.pt-file-explorer-folder-icon {
+}
+.pt-file-explorer-folder-icon .nav-folder-title-content {
+  display: flex;
+  align-items: center;
+}
+.pt-file-explorer-folder-icon .nav-folder-collapse-indicator {
+  margin-right: 5px;
+}
+.pt-file-explorer-folder-icon .nav-folder.mod-root .nav-folder > .nav-folder-title:not([data-path="/"]) {
+  padding-left: var(--size-2-1);
+}
+.pt-file-explorer-folder-icon .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon {
+  display: inline-flex;
+  width: 17px;
+  height: -webkit-fill-available;
+  height: fill-available;
+  content: " ";
+  stroke-width: unset;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 17px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'%3E%3C/path%3E%3C/svg%3E");
+}
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon {
+  background-color: var(--text-muted);
+}
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon {
+  background-color: var(--interactive-accent-text);
+}
+.pt-file-explorer-folder-icon .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
+  display: inline-flex;
+  width: 17px;
+  height: -webkit-fill-available;
+  height: fill-available;
+  content: " ";
+  stroke-width: unset;
+  transform: rotate(0);
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 17px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'%3E%3C/path%3E%3C/svg%3E");
+}
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
+  background-color: var(--text-muted);
+}
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
+  background-color: var(--interactive-accent-text);
 }
 :is(.graph-controls-button.mod-close, .graph-controls-button.mod-reset) {
   top: var(--size-2-3);
@@ -8524,6 +8593,29 @@ settings:
         min: 0
         max: 25
         step: 1
+    -
+        id: pt-file-explorer-folder-icon
+        title: Enable Folder Dropdown Icon
+        description: Replaces the Arrow dropdown icon with a Folder icon (different icons for closed and open folders).
+        default: false
+        type: class-toggle
+    -
+        id: pt-file-explorer-folder-icon-color
+        title: Folder Dropdown Icon Color
+        description: Different presets for the Folder Dropdown Icon Color. Make sure to enable the option above `Enable Folder Dropdown Icon` for this to apply.
+        type: class-select
+        allowEmpty: false
+        default: pt-file-explorer-folder-icon-default
+        options:
+            -
+                label: Default
+                value: pt-file-explorer-folder-icon-default
+            -
+                label: Accent Color
+                value: pt-file-explorer-folder-icon-accent
+            -
+                label: Accent Color on Open Folders
+                value: pt-file-explorer-folder-icon-active
     -
         id: titlebar
         title: Titlebar
