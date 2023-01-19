@@ -26,3 +26,8 @@ jobs:
     - run: npm ci
     - run: npm run buildTheme --if-present
     - run: npm run buildSnipMHS --if-present
+    - name: Pushing the Built Files
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+          commit_message: Automated Build of Theme and Snippet files
+          branch: development
