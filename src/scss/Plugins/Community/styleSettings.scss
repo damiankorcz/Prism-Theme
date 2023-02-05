@@ -15,6 +15,10 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
+.setting-item .search-input-container::before {
+	top: calc((var(--input-height) - var(--search-icon-size))/2);
+}
+
 .setting-item.setting-item-heading.style-settings-heading {
 	padding: var(--size-4-2);
 
@@ -55,7 +59,7 @@ div.workspace-leaf-content[data-type="style-settings"] {
 
 .style-settings-container > .setting-item:last-of-type {
 	padding-bottom: unset;
-	margin-bottom: var(--size-4-4);
+	margin-bottom: var(--size-4-2);
 }
 
 :is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
@@ -99,60 +103,11 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-.style-settings-heading[data-id="prism-wiki"] {
-	margin-top: 10px;
-	margin-bottom: 0;
-	pointer-events: none;
-	cursor: text;
-	border-top: 2px solid var(--window-border);
-
-	.setting-item-control,
-	.style-settings-collapse-indicator {
-		display: none;
-	}
-
-	.setting-item-name::before {
-		display: inline-block;
-		width: 20px;
-		height: fit-content;
-		padding-right: 8px;
-		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
-		content: "📖";
-	}
-
-	.setting-item-description {
-		padding-left: var(--size-4-1);
-	}
-}
-
-.setting-item.style-settings-heading[data-id="prism-wiki-link"] {
-	padding: unset;
-	margin-bottom: 0;
-	cursor: default;
-
-	&:hover {
-		background-color: unset;
-	}
-
-	.setting-item-name,
-	.setting-item-control,
-	.style-settings-collapse-indicator {
-		display: none;
-	}
-
-	.setting-item-description {
-		color: var(--interactive-accent-text);
-		cursor: text;
-		user-select: all;
-	}
-}
-
 .style-settings-heading[data-id="support"] {
+	justify-content: center;
 	margin-bottom: 0;
+	text-align: center;
 	pointer-events: none;
-	cursor: text;
 
 	:is(.setting-item-control, .style-settings-collapse-indicator) {
 		display: none;
@@ -174,53 +129,63 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-:is(.style-settings-heading[data-id="support-star-repo"], .style-settings-heading[data-id="support-submit-issue"], .style-settings-heading[data-id="support-donate"], .style-settings-heading[data-id="prism-wiki-link"]) {
-	padding-bottom: 0;
+.setting-item.style-settings-heading[data-id=theme-info] {
+	justify-content: center;
+	padding-top: var(--size-4-4);
 	margin-bottom: 0;
+	text-align: center;
+	pointer-events: none;
+	border-top: 2px solid var(--window-border);
 
 	:is(.setting-item-control, .style-settings-collapse-indicator) {
 		display: none;
-	}
-}
-
-.setting-item.style-settings-heading[data-id="support-star-repo"],
-.setting-item.style-settings-heading[data-id="support-submit-issue"],
-.setting-item.style-settings-heading[data-id="support-donate"] {
-	cursor: default;
-
-	&:hover {
-		background-color: unset;
 	}
 
 	.setting-item-name::before {
 		display: inline-block;
 		width: 20px;
 		height: fit-content;
-		padding-right: var(--size-4-2);
+		padding-right: 8px;
 		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
+		content: "📖";
 	}
 
 	.setting-item-description {
-		color: var(--interactive-accent-text);
-		cursor: text;
-		user-select: all;
+		padding-left: var(--size-4-1);
 	}
 }
 
-.setting-item.style-settings-heading[data-id="support-star-repo"] .setting-item-name::before {
-	content: "⭐";
+.setting-item.style-settings-info-text[data-id="prism-info-links"],
+.setting-item.style-settings-info-text[data-id="support-links"] {
+	text-align: center;
+
+	.setting-item-control {
+		display: none;
+	}
+
+	p {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-4-2);
+		justify-content: center;
+	}
+
+	a:hover {
+		.theme-light & {
+			filter: brightness(1.2);
+		}
+
+		.theme-dark & {
+			filter: brightness(0.8);
+		}
+	}
 }
 
-.setting-item.style-settings-heading[data-id="support-submit-issue"] .setting-item-name::before {
-	content: "⚠️";
+:is(.style-settings-heading[data-level="0"] + .style-settings-container:nth-last-child(-n+3), .style-settings-container:nth-last-child(-n+3)) {
+	border-left: unset;
 }
-
-.setting-item.style-settings-heading[data-id="support-donate"] .setting-item-name::before {
-	content: "☕";
-}
-/* #endregion */
 
 /*
 .style-settings-heading[data-id="color-folders"] {
