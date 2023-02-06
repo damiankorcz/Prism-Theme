@@ -103,10 +103,9 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
+.setting-item.style-settings-heading[data-id="theme-info"],
 .style-settings-heading[data-id="support"] {
-	justify-content: center;
 	margin-bottom: 0;
-	text-align: center;
 	pointer-events: none;
 
 	:is(.setting-item-control, .style-settings-collapse-indicator) {
@@ -118,10 +117,9 @@ div.workspace-leaf-content[data-type="style-settings"] {
 		width: 20px;
 		height: fit-content;
 		padding-right: 8px;
-		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
+		font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "EmojiOne Color", "Android Emoji", sans-serif;
 		font-weight: initial;
 		color: unset;
-		content: "❤️";
 	}
 
 	.setting-item-description {
@@ -129,62 +127,135 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 }
 
-.setting-item.style-settings-heading[data-id=theme-info] {
-	justify-content: center;
+.setting-item.style-settings-heading[data-id="theme-info"] {
 	padding-top: var(--size-4-4);
-	margin-bottom: 0;
-	text-align: center;
-	pointer-events: none;
 	border-top: 2px solid var(--window-border);
 
-	:is(.setting-item-control, .style-settings-collapse-indicator) {
-		display: none;
-	}
-
 	.setting-item-name::before {
-		display: inline-block;
-		width: 20px;
-		height: fit-content;
-		padding-right: 8px;
-		font-family: "Segoe UI Emoji", "Apple Color Emoji", sans-serif;
-		font-weight: initial;
-		color: unset;
 		content: "📖";
-	}
-
-	.setting-item-description {
-		padding-left: var(--size-4-1);
 	}
 }
 
-.setting-item.style-settings-info-text[data-id="prism-info-links"],
-.setting-item.style-settings-info-text[data-id="support-links"] {
-	text-align: center;
+.style-settings-heading[data-id="support"] .setting-item-name::before {
+	content: "❤️";
+}
 
+.setting-item.style-settings-info-text[data-id="theme-info-buttons"],
+.setting-item.style-settings-info-text[data-id="support-buttons"] {
+	padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-4);
+
+	.setting-item-name,
 	.setting-item-control {
 		display: none;
 	}
 
-	p {
+	.setting-item-description.style-settings-markdown {
 		display: flex;
-		flex-wrap: wrap;
 		gap: var(--size-4-2);
-		justify-content: center;
 	}
 
-	a:hover {
-		.theme-light & {
-			filter: brightness(1.2);
-		}
-
-		.theme-dark & {
-			filter: brightness(0.8);
-		}
+	.styleSettingsButtonEmoji {
+		margin-right: var(--size-4-2);
+		font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "EmojiOne Color", "Android Emoji", sans-serif;
 	}
 }
 
-:is(.style-settings-heading[data-level="0"] + .style-settings-container:nth-last-child(-n+3), .style-settings-container:nth-last-child(-n+3)) {
-	border-left: unset;
+.styleSettingsButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	height: var(--input-height);
+	font-size: var(--font-ui-medium);
+	font-weight: var(--input-font-weight);
+	border: var(--accent-border-width) solid;
+	border-radius: var(--radius-s);
+
+	a {
+		width: 100%;
+		height: 100%;
+		padding: var(--size-4-1) var(--size-4-3);
+		text-decoration-line: unset;
+		vertical-align: baseline;
+	}
+
+	&.prism-wiki {
+		background-color: var(--color-blue-base);
+		border-color: var(--color-blue-tint);
+
+		a {
+			color: var(--color-blue-text);
+
+			&:hover {
+				color: var(--color-blue-tint);
+			}
+		}
+	}
+
+	&.prism-roadmap {
+		background-color: var(--color-green-base);
+		border-color: var(--color-green-tint);
+
+		a {
+			color: var(--color-green-text);
+
+			&:hover {
+				color: var(--color-green-tint);
+			}
+		}
+	}
+
+	&.prism-releases {
+		background-color: var(--color-orange-base);
+		border-color: var(--color-orange-tint);
+
+		a {
+			color: var(--color-orange-text);
+
+			&:hover {
+				color: var(--color-orange-tint);
+			}
+		}
+	}
+
+	&.prism-star {
+		background-color: var(--color-grey-base);
+		border-color: var(--color-grey-tint);
+
+		a {
+			color: var(--color-grey-text);
+
+			&:hover {
+				color: var(--color-grey-tint);
+			}
+		}
+	}
+
+	&.prism-issue {
+		background-color: var(--color-red-base);
+		border-color: var(--color-red-tint);
+
+		a {
+			color: var(--color-red-text);
+
+			&:hover {
+				color: var(--color-red-tint);
+			}
+		}
+	}
+
+	&.prism-coffee {
+		background-color: var(--color-yellow-base);
+		border-color: var(--color-yellow-tint);
+
+		a {
+			color: var(--color-yellow-text);
+
+			&:hover {
+				color: var(--color-yellow-tint);
+			}
+		}
+	}
 }
 
 /*
