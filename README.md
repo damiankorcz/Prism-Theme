@@ -72,29 +72,29 @@ I highly recommend for you to go through the options available in the Style Sett
 
 
 # 🧩 Supported Plugins
-Checkout the full list in the [**Supported Plugins**](https://github.com/damiankorcz/Prism-Theme/wiki/Supported-Plugins) section of the Wiki. These plugins have been checked to work correctly and might have additional settings in Style Settings.
+Checkout the full list in the [Supported Plugins](https://github.com/damiankorcz/Prism-Theme/wiki/Supported-Plugins) section of the Wiki. These plugins have been checked to work correctly and might have additional settings in Style Settings.
 
-If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [**Submit an Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
+If you have any issues with the plugins mentioned above or would like another plugin to be supported by the theme [Submit an Issue](https://github.com/damiankorcz/Obsidian-Prism/issues) regarding it.
 
 
 # ✂️ Snippets
-Theme features which you can import as snippets into Obsidian are located in the [**Snippets Folder**](https://github.com/damiankorcz/Prism-Theme/tree/main/src/snippets). These features have been requested by users for use in other themes and for additional interoperability between themes.
+Theme features which you can import as snippets into Obsidian are located in the [Snippets Folder](https://github.com/damiankorcz/Prism-Theme/tree/main/src/snippets). These features have been requested by users for use in other themes and for additional interoperability between themes.
 
 
 # 📖 Wiki
-The theme has a [**Wiki**](https://github.com/damiankorcz/Prism-Theme/wiki) which includes additional detailed descriptions for theme specific features and customisation options.
+The theme has a [Wiki](https://github.com/damiankorcz/Prism-Theme/wiki) which includes additional detailed descriptions for theme specific features and customisation options.
 
 
 # 🗺️ Theme Roadmap
-To track all the features I have planned, actively working on and what is coming in the next release take a look at the [**Prism Theme Roadmap**](https://github.com/users/damiankorcz/projects/5).
+To track all the features I have planned, actively working on and what is coming in the next release take a look at the [Prism Theme Roadmap](https://github.com/users/damiankorcz/projects/5).
 
 
 # 🛠 Contributing
 Currently the theme is being designed for desktop and mobile use (Phone and Tablet). The theme has been tested on Windows 11 and Android Phone/Tablet.
 
-If you want to provide specific feedback or report an issue please use [**Issues**](https://github.com/damiankorcz/Obsidian-Prism/issues).
+If you want to provide specific feedback or report an issue please use [Issues](https://github.com/damiankorcz/Obsidian-Prism/issues).
 
-Although I don't prohibit pull requests, the theme is quite complex with a lot of intricate setup to keep in mind when adding features. I'd recommend submitting an [**Issue**](https://github.com/damiankorcz/Obsidian-Prism/issues) if you encounter any. I'll try my best to stay on top of the most pressing ones!
+Although I don't prohibit pull requests, the theme is quite complex with a lot of intricate setup to keep in mind when adding features. I'd recommend submitting an [Issue](https://github.com/damiankorcz/Obsidian-Prism/issues) if you encounter any. I'll try my best to stay on top of the most pressing ones!
 
 Otherwise you are welcome to contact me through the channels mentioned below to discuss anything regarding the theme.
 
@@ -111,19 +111,19 @@ Let me know how you use the theme over at Prism's Obsidian Forum Thread:
 
 # 📣 Acknowledgments
 Special thanks to the following people:
-- The developers of [**Obsidian.md**](https://obsidian.md/) ([**@ericaxu**](https://github.com/ericaxu) and [**@Lishid**](https://github.com/Lishid)) for providing an amazing tool free of charge!
-- [**@mgmeyers**](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
-- [**@chrisgrieser**](https://github.com/chrisgrieser) for the Hue slider gradient code.
-- [**@tingmelvin**](https://github.com/tingmelvin) for helping me debug issues.
-- On recommendation from [**@valentine195**](https://github.com/valentine195) - Esbuild config is based on [**@jdanielmourao**](https://github.com/jdanielmourao)'s [**Sanctum theme**](https://github.com/jdanielmourao/obsidian-sanctum) setup.
+- The developers of [Obsidian.md](https://obsidian.md/) for providing an amazing tool free of charge!
+- [@mgmeyers](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
+- [@chrisgrieser](https://github.com/chrisgrieser) for the Hue slider gradient code.
+- [@tingmelvin](https://github.com/tingmelvin) for helping me debug issues.
+- On recommendation from [@valentine195](https://github.com/valentine195) - Esbuild config was originally based on [@jdanielmourao](https://github.com/jdanielmourao)'s [Sanctum theme](https://github.com/jdanielmourao/obsidian-sanctum) setup.
 - The Obsidian Community over at Discord for endless inspiration to improve the theme!
 
 
 # 📝 License
 The Theme contains Base64 embedded versions of the following fonts:
-- [**Source Sans**](https://github.com/adobe-fonts/source-sans) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md)
-- [**JetBrains Mono**](https://github.com/JetBrains/JetBrainsMono) - Distributed under the [**SIL Open Font License 1.1**](https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt)
+- [Source Sans](https://github.com/adobe-fonts/source-sans) - Distributed under the [SIL Open Font License 1.1](https://github.com/adobe-fonts/source-sans/blob/release/LICENSE.md)
+- [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) - Distributed under the [SIL Open Font License 1.1](https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt)
 
-The default Vault Banner Icon `Opened Folder icon` has been sourced from [**Icons8**](https://icons8.com/icon/21094/opened-folder).
+The default Vault Banner Icon `Opened Folder icon` has been sourced from [Icons8](https://icons8.com/icon/21094/opened-folder).
 
-The Theme code is distributed under the MIT License. See [**LICENCE**](https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE) for more information.
+The Theme code is distributed under the MIT License. See [LICENCE](https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE) for more information.

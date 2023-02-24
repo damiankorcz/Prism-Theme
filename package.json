@@ -6,21 +6,18 @@
   "license": "MIT",
   "homepage": "https://github.com/damiankorcz/Obsidian-Prism",
   "scripts": {
-    "devTheme": "node ./build/devTheme.config.mjs",
+    "devTheme": "sass --watch --no-charset --no-source-map --color \"src/scss/index.scss\" \"D:/OneDrive/Obsidian/Theme Test/.obsidian/themes/PrismDev.css\"",
+    "devSnipMHS": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Mark Highlight System/MHS_index.scss\" \"src/snippets/Prism Mark Highlight System.css\"",
     "buildTheme": "node ./build/buildTheme.config.mjs",
-    "devSnipMHS": "node ./build/devSnipMHS.config.mjs",
     "buildSnipMHS": "node ./build/buildSnipMHS.config.mjs"
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
-    "esbuild": "^0.17.1",
-    "esbuild-plugin-time": "^1.0.0",
-    "esbuild-sass-plugin": "^2.4.5",
-    "postcss": "^8.4.21",
-    "stylelint": "^14.16.1",
-    "stylelint-config-recess-order": "^3.1.0",
-    "stylelint-config-recommended": "^9.0.0",
-    "stylelint-declaration-block-no-ignored-properties": "^2.6.0",
-    "stylelint-no-unsupported-browser-features": "^6.0.1"
+    "sass": "^1.58.3",
+    "stylelint": "^15.2.0",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recommended": "^10.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "stylelint-no-unsupported-browser-features": "^6.1.0"
   }
 }
