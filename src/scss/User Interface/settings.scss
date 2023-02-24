@@ -5,11 +5,16 @@
 	min-width: unset;
 	max-width: unset;
 	padding: 0;
+
+	&::-webkit-scrollbar-thumb {
+		border-right: unset;
+	}
 }
 
 .modal.mod-settings .vertical-tab-header::before {
 	position: sticky;
 	top: 0;
+	z-index: var(--layer-cover);
 	display: block;
 	width: -webkit-fill-available;
 	width: fill-available;
@@ -27,6 +32,7 @@
 	position: absolute;
 	top: var(--size-4-2);
 	left: var(--size-4-2);
+	z-index: var(--layer-sidedock);
 	display: inline-flex;
 	flex-direction: column;
 	align-content: center;
