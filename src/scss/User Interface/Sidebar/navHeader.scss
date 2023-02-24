@@ -1,4 +1,4 @@
-/* #region  [Nav Header] Base */
+// [Nav Header] Base
 .nav-header {
 	display: flex;
 	height: var(--header-height);
@@ -26,7 +26,7 @@
 	border-radius: var(--radius-m);
 }
 
-/* Align Left */
+// Align Left
 :is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-align-left .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-align-left .workspace-drawer.mod-right) {
 	.workspace-leaf-content .nav-header {
 		justify-content: flex-start;
@@ -40,7 +40,7 @@
 	}
 }
 
-/* Align Center */
+// Align Center
 :is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split , .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-align-center .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-align-center .workspace-drawer.mod-right) {
 	.workspace-leaf-content .nav-header {
 		justify-content: center;
@@ -55,7 +55,7 @@
 	}
 }
 
-/* Align Right */
+// Align Right
 :is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-align-right .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-align-right .workspace-drawer.mod-right) {
 	.workspace-leaf-content .nav-header {
 		justify-content: flex-end;
@@ -69,12 +69,12 @@
 	}
 }
 
-/* Position Top */
+// Position Top
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) {
 	order: unset;
 }
 
-/* Position Bottom */
+// Position Bottom
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) {
 	.nav-header {
@@ -118,4 +118,3 @@
 		padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 	}
 }
-/* #endregion */

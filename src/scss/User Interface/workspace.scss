@@ -1,5 +1,5 @@
-/* #region  [UI] Workspace */
-/* Warning prompt to install Style Settings */
+// [UI] Workspace
+// Warning prompt to install Style Settings
 body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	display: block;
 	width: -webkit-fill-avaliable;
@@ -32,9 +32,8 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 		background-color: var(--background-secondary-alt);
 	}
 }
-/* #endregion */
 
-/* #region  [UI] View Header */
+// [UI] View Header
 :is(.is-focused .workspace-leaf.mod-active .view-header, .view-header) {
 	width: 100%;
 	padding: 0 var(--size-4-2);
@@ -66,9 +65,8 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 .view-header-title-parent .view-header-breadcrumb:hover {
 	color: var(--highlight-text-normal);
 }
-/* #endregion */
 
-/* #region  [UI] Workspace Ribbon */
+// [UI] Workspace Ribbon
 :is(.workspace-ribbon.mod-left, .workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) {
 	.sidebar-toggle-button {
 		width: fit-content;
@@ -79,15 +77,13 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 		border-radius: var(--radius-m);
 	}
 }
-/* #endregion */
 
-/* #region  [UI] macOS Sidebar Toggle Button fix  */
+// [UI] macOS Sidebar Toggle Button fix
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
 	padding-right: 2px;
 }
-/* #endregion */
 
-/* #region  [UI] Collapsed Pinned Tabs  */
+// [UI] Collapsed Pinned Tabs
 .pt-collapsed-pinned-tab {
 	.workspace .mod-root .workspace-tab-header[data-type="markdown"],
 	.workspace .mod-root .workspace-tab-header[data-type="empty"] {
@@ -107,4 +103,3 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 		min-width: unset;
 	}
 }
-/* #endregion */

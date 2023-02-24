@@ -71,7 +71,8 @@ body {
 		--color-pink-text-hsl: 331, 32%, 63%;
 	}
 
-	&:is(.theme-light, .theme-dark) {
+	&.theme-light,
+	&.theme-dark {
 		--color-grey-base: hsl(var(--color-grey-base-hsl));
 		--color-red-base: hsl(var(--color-red-base-hsl));
 		--color-orange-base: hsl(var(--color-orange-base-hsl));
