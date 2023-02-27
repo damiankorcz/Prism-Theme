@@ -430,7 +430,7 @@ body {
   --checklist-done-color: var(--interactive-accent-tint);
   --checkbox-border-color-hover: var(--interactive-accent-tint);
   --blockquote-border-color: var(--window-border);
-  --blockquote-border-thickness: 8px;
+  --blockquote-border-thickness: 4px;
   --ribbon-background-collapsed: var(--background-secondary);
   --titlebar-background-focused: var(--background-secondary);
   --header-height: 41px;
@@ -2010,7 +2010,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .nav-file-title.is-active,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .canvas-help .setting-hotkey {
   background-color: var(--background-primary);
   border-color: var(--window-border);
 }
@@ -2097,7 +2098,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-file-title.is-active,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .canvas-help .setting-hotkey {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
@@ -2190,7 +2192,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-file-title.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .canvas-help .setting-hotkey {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -2282,7 +2285,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-file-title.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .canvas-help .setting-hotkey {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2520,17 +2524,20 @@ a.tag:hover {
   border: 1px solid var(--window-border);
 }
 .theme-light .code-block-flair {
-  background-color: var(--background-primary);
+  background-color: var(--background-primary-alt);
 }
 .theme-dark .code-block-flair {
-  background-color: var(--background-secondary-alt);
+  background-color: var(--background-secondary);
 }
 
 :is(.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote, .markdown-rendered blockquote) {
   padding: var(--size-4-2) var(--size-4-4);
-  border-top: 1px solid var(--blockquote-border-color);
-  border-right: 1px solid var(--blockquote-border-color);
-  border-bottom: 1px solid var(--blockquote-border-color);
+}
+.theme-light :is(.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote, .markdown-rendered blockquote) {
+  background-color: var(--background-primary-alt);
+}
+.theme-dark :is(.markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote, .markdown-rendered blockquote) {
+  background-color: var(--background-secondary);
 }
 
 .markdown-source-view.mod-cm6.is-live-preview .cm-content .HyperMD-quote {
@@ -3548,7 +3555,6 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 
 .search-input-container::before {
-  top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
   left: var(--size-4-4);
 }
 
@@ -4095,10 +4101,6 @@ body.is-mobile div.workspace-leaf-content[data-type=style-settings] div.view-con
 }
 body:not(.is-mobile) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction: row;
-}
-
-.setting-item .search-input-container::before {
-  top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 }
 
 .setting-item.setting-item-heading.style-settings-heading {
@@ -5350,6 +5352,9 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 }
 .settings-search-container .search-input-container::before {
   top: calc((var(--input-height) - var(--search-icon-size)) / 2);
+}
+.settings-search-container .vertical-tab-nav-item {
+  border: unset;
 }
 
 /* @settings
