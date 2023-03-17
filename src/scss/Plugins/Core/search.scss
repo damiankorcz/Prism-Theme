@@ -1,25 +1,28 @@
 // [Plugins - Core] Search
-.nav-header ~ .search-input-container {
-	width: 100%;
-	height: var(--header-height);
-	margin: unset;
-	background-color: var(--background-secondary);
-	border-bottom: 1px solid var(--window-border);
-
-	.workspace-drawer & {
-		width: 100%;
-		height: unset;
-	}
-}
-
-.search-input-container input {
-	width: -webkit-fill-available;
-	width: fill-available;
-	margin: var(--size-4-1);
-}
-
 .search-result-container {
 	padding: var(--size-4-1);
+}
+
+.search-row {
+	padding: var(--size-4-2) var(--size-4-2) var(--size-4-1) var(--size-4-2);
+	margin: unset;
+	background-color: var(--background-secondary);
+}
+
+.search-info-container {
+	background-color: var(--background-secondary);
+}
+
+.search-results-info {
+	padding: var(--size-4-1) var(--size-4-2) var(--size-4-2) var(--size-4-2);
+	margin: unset;
+	background-color: var(--background-secondary);
+}
+
+.search-params {
+	padding: var(--size-4-1) var(--size-4-4);
+	margin: unset;
+	background-color: var(--background-secondary);
 }
 
 .search-result-file-matched-text {
@@ -41,27 +44,10 @@
 	}
 }
 
-.search-result-hover-button {
-	padding: var(--size-2-1);
-
-	svg.svg-icon {
-		width: 14px;
-		height: 14px;
-	}
-}
-
-.search-result-file-match-replace-button {
-	padding: 0 var(--size-4-1);
-}
-
 .internal-query .search-result-container {
 	padding: var(--size-4-2) var(--size-4-1);
 	background-color: unset;
 	border-radius: unset;
-}
-
-.search-input-container::before {
-	left: var(--size-4-4);
 }
 
 .suggestion-container.mod-search-suggestion {
