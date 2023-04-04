@@ -1868,10 +1868,10 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 .menu {
+  padding: var(--size-4-1);
   background: var(--background-secondary);
   border-color: var(--window-border);
   box-shadow: var(--shadow-l);
-  padding: var(--size-4-1);
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) {
@@ -1953,6 +1953,7 @@ div.notice-container div.notice {
 .nav-action-button.is-active,
 .vertical-tab-nav-item.is-active,
 .nav-file-title.is-active,
+.tree-item-self.is-active,
 .suggestion-hotkey,
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
@@ -2013,6 +2014,7 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .tree-item-self.is-active,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
@@ -2102,6 +2104,7 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .tree-item-self.is-active,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
@@ -2197,6 +2200,7 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .tree-item-self.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
@@ -2291,6 +2295,7 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-action-button.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .vertical-tab-nav-item.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .nav-file-title.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .tree-item-self.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .suggestion-hotkey,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
@@ -2654,6 +2659,13 @@ ul > li.task-list-item .task-list-item-checkbox {
   padding: var(--size-4-2) var(--size-4-4);
   background-color: var(--background-secondary);
   border-bottom: 1px solid var(--window-border);
+}
+
+.internal-embed.internal-embed.canvas-embed, .internal-embed.pdf-embed {
+  border: 1px solid var(--window-border);
+}
+.internal-embed .markdown-embed-content {
+  padding: var(--size-4-4);
 }
 
 .file-embed.mod-empty {
@@ -3281,6 +3293,9 @@ input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-vis
 .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children {
   padding: 0 var(--size-4-1);
 }
+.workspace-leaf-content[data-type=file-explorer] .tree-item .tree-item-self {
+  padding-left: var(--size-4-2);
+}
 
 .nav-folder.mod-root .nav-folder > .nav-folder-children {
   padding-left: var(--size-4-1);
@@ -3509,24 +3524,28 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 
 .search-row {
-  padding: var(--size-4-2) var(--size-4-2) var(--size-4-1) var(--size-4-2);
+  padding: var(--size-4-1);
   margin: unset;
   background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
 }
 
 .search-info-container {
   background-color: var(--background-secondary);
 }
 
-.search-results-info {
-  padding: var(--size-4-1) var(--size-4-2) var(--size-4-2) var(--size-4-2);
-  margin: unset;
-  background-color: var(--background-secondary);
-}
-
 .search-params {
   padding: var(--size-4-1) var(--size-4-4);
   margin: unset;
+  margin-top: -1px;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+}
+
+.search-results-info {
+  padding: var(--size-4-1) var(--size-4-2) var(--size-4-2) var(--size-4-2);
+  margin: unset;
+  margin-top: -1px;
   background-color: var(--background-secondary);
 }
 
@@ -3915,6 +3934,10 @@ body.theme-dark {
 .workspace-leaf-content[data-type=bookmarks] .tree-item-icon {
   width: unset;
   padding-right: var(--size-4-1);
+}
+
+body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-self.is-active:hover {
+  color: var(--interactive-accent-hover);
 }
 
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
