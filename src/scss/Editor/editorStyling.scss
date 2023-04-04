@@ -351,9 +351,16 @@ ul > li.task-list-item .task-list-item-checkbox {
 	border-bottom: 1px solid var(--window-border);
 }
 
-// .markdown-embed-content {
-// 	padding: var(--size-4-4);
-// }
+.internal-embed {
+	&.internal-embed.canvas-embed,
+	&.pdf-embed {
+		border: 1px solid var(--window-border);
+	} 
+
+	.markdown-embed-content {
+		padding: var(--size-4-4);
+	}	
+}
 
 .file-embed.mod-empty {
 	border: 1px solid var(--window-border);
