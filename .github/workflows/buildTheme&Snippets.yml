@@ -13,19 +13,22 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [19.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [16.x]
 
     steps:
     - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 7
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run buildTheme --if-present
-    - run: npm run buildSnipMHS --if-present
+        cache: 'pnpm'
+    - name: Install dependencies
+      run: pnpm install
+    - run: pnpm run buildTheme --if-present
+    - run: pnpm run buildSnipMHS --if-present
     - name: Pushing the Built Files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
