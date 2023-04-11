@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.2.2)
+    Prism Theme for Obsidian.md (Version: 3.2.3)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -14,7 +14,8 @@
     - JetBrains Mono - Distributed under the SIL Open Font License 1.1
     (https://github.com/JetBrains/JetBrainsMono/blob/master/OFL.txt)
 
-    Theme Code is distributed under the MIT License. See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
+    Theme Code is distributed under the MIT License.
+    See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
 
     Copyright (c) 2021-2022 Damian Korcz <https://github.com/damiankorcz>
 */
@@ -955,6 +956,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header:not(.is-active) .workspace-tab-header-inner {
   padding-top: 10px;
+  margin-left: -1px;
+  border-left: 1px solid var(--window-border);
 }
 
 .pt-tab-label-left-sidebar-left .workspace-split.mod-left-split .workspace-tab-header-container {
@@ -1352,7 +1355,7 @@ body.is-mobile.theme-dark .prompt {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.2.2";
+  content: "Prism 3.2.3";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -4913,6 +4916,9 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input input::placeholder {
   color: var(--text-faint);
 }
+.workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__input-el {
+  height: 32px;
+}
 .workspace-leaf-content[data-type=quiet-outline] .n-slider {
   padding: var(--size-4-4);
   margin: unset !important;
@@ -4938,10 +4944,6 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border: 2px solid var(--interactive-accent-tint);
 }
 
-.n-tree .n-tree-node {
-  height: 23px;
-}
-
 .n-slider-handle-indicator {
   border: 1px solid var(--window-border);
   border-radius: var(--radius-m);
@@ -4953,6 +4955,9 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   background: var(--background-secondary-alt);
 }
 
+.quiet-outline {
+  padding-bottom: unset;
+}
 .quiet-outline .n-tree-node-indent {
   flex: 0 0 12px !important;
 }
@@ -4964,6 +4969,9 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .quiet-outline .n-tree {
   padding: var(--size-4-1);
+}
+.quiet-outline .n-tree .n-tree-node.n-tree-node--highlight .n-tree-node-content .n-tree-node-content__text {
+  border-bottom: unset;
 }
 .quiet-outline .level-2 .n-tree-node-indent,
 .quiet-outline .level-3 .n-tree-node-indent:first-child,
@@ -4989,6 +4997,14 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .quiet-outline .level-6 .n-tree-node-indent {
   border-right: 1px solid var(--color-purple-tint);
+}
+.quiet-outline code {
+  z-index: 10;
+  padding: var(--size-4-1) var(--size-4-2);
+  margin-top: -1px;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border);
+  border-radius: unset;
 }
 
 .status-bar-item.left-region {
