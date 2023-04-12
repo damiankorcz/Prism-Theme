@@ -17,6 +17,14 @@
 		background-color: unset;
 		border-radius: var(--radius-m);
 
+		&:hover {
+			background-color: var(--interactive-accent-base);
+
+			.n-button__icon svg {
+				color: var(--interactive-accent-text) !important;
+			}
+		}
+
 		.n-button__icon {
 			svg {
 				display: flex;
@@ -41,7 +49,7 @@
 		}
 
 		.theme-dark & {
-			background: var(--background-secondary);
+			background: var(--background-secondary-alt);
 		}
 
 		.n-input__border {
@@ -78,7 +86,7 @@
 		border-bottom: 1px solid var(--window-border);
 
 		.n-slider-rail {
-			background-color: var(--background-secondary-alt);
+			background-color: var(--background-secondary);
 			border: 1px solid var(--window-border);
 
 			.n-slider-rail__fill {
@@ -89,6 +97,11 @@
 		.n-slider-dots .n-slider-dot {
 			background-color: var(--background-primary);
 			border: 2px solid var(--window-border);
+
+			&:hover {
+				background-color: var(--interactive-accent-base);
+				border-color: var(--interactive-accent-text);
+			}
 
 			&.n-slider-dot--active {
 				border: 2px solid var(--interactive-accent-text);
