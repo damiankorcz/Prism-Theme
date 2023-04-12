@@ -1545,6 +1545,7 @@ img.community-theme-lightbox {
 .community-modal-controls .setting-item:first-child {
   padding-left: unset;
   margin-bottom: unset;
+  margin-left: var(--size-4-2);
 }
 .community-modal-controls input {
   width: 100%;
@@ -4880,6 +4881,12 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   background-color: unset;
   border-radius: var(--radius-m);
 }
+.workspace-leaf-content[data-type=quiet-outline] .n-button:hover {
+  background-color: var(--interactive-accent-base);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-button:hover .n-button__icon svg {
+  color: var(--interactive-accent-text) !important;
+}
 .workspace-leaf-content[data-type=quiet-outline] .n-button .n-button__icon svg {
   display: flex;
   align-items: center;
@@ -4898,7 +4905,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   background: var(--background-primary);
 }
 .theme-dark .workspace-leaf-content[data-type=quiet-outline] .n-input {
-  background: var(--background-secondary);
+  background: var(--background-secondary-alt);
 }
 .workspace-leaf-content[data-type=quiet-outline] .n-input .n-input__border {
   border: 1px solid var(--window-border);
@@ -4926,7 +4933,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border-bottom: 1px solid var(--window-border);
 }
 .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail {
-  background-color: var(--background-secondary-alt);
+  background-color: var(--background-secondary);
   border: 1px solid var(--window-border);
 }
 .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-rail .n-slider-rail__fill {
@@ -4935,6 +4942,10 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot {
   background-color: var(--background-primary);
   border: 2px solid var(--window-border);
+}
+.workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot:hover {
+  background-color: var(--interactive-accent-base);
+  border-color: var(--interactive-accent-text);
 }
 .workspace-leaf-content[data-type=quiet-outline] .n-slider .n-slider-dots .n-slider-dot.n-slider-dot--active {
   border: 2px solid var(--interactive-accent-text);
