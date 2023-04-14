@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.2.3)
+    Prism Theme for Obsidian.md (Version: 3.2.4)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1355,7 +1355,7 @@ body.is-mobile.theme-dark .prompt {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.2.3";
+  content: "Prism 3.2.4";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -1694,6 +1694,10 @@ select.dropdown option[value*=pink] {
 select.dropdown option[value*=grey] {
   color: var(--color-grey-text);
   background-color: var(--color-grey-base);
+}
+
+.search-input-container::before {
+  left: var(--size-4-3);
 }
 
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar,
@@ -3337,7 +3341,9 @@ input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-vis
 body:not(.is-grabbing) .nav-folder-title:hover .collapse-icon svg.svg-icon {
   color: var(--nav-item-color-hover);
 }
-
+body:not(.is-grabbing) .item-list .nav-file-title:hover .nav-file-icon {
+  color: var(--interactive-accent-text);
+}
 body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .nav-folder-title.is-active:hover {
   color: var(--interactive-accent-hover);
@@ -3410,6 +3416,9 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon, .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
   background-color: var(--text-muted);
+}
+.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon, .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon {
+  background-color: var(--interactive-accent-text);
 }
 .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
   background-color: var(--interactive-accent-text);
@@ -3939,8 +3948,17 @@ body.theme-dark {
   width: unset;
   padding-right: var(--size-4-1);
 }
+.workspace-leaf-content[data-type=bookmarks] .view-content {
+  padding: var(--size-4-1);
+}
 
+body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-self.is-active .tree-item-icon {
+  color: var(--interactive-accent-text);
+}
 body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-self.is-active:hover {
+  color: var(--interactive-accent-hover);
+}
+body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-self.is-active.is-clickable:hover svg {
   color: var(--interactive-accent-hover);
 }
 
@@ -8749,13 +8767,8 @@ settings:
     -
         id: prism-theme
         title: Prism Theme Class
-        type: class-select
-        allowEmpty: false
-        default: prism-theme
-        options:
-            -
-                label: Prism theme
-                value: prism-theme
+        type: class-toggle
+        default: true
 */
 /* @plugins
 core:
