@@ -53,13 +53,19 @@
 	color: var(--text-normal);
 }
 
-body:not(.is-grabbing) .nav-folder-title:hover .collapse-icon svg.svg-icon {
-	color: var(--nav-item-color-hover);
-}
-
-body:not(.is-grabbing) .nav-file-title.is-active:hover,
-body:not(.is-grabbing) .nav-folder-title.is-active:hover {
-	color: var(--interactive-accent-hover);
+body:not(.is-grabbing) {
+	.nav-folder-title:hover .collapse-icon svg.svg-icon {
+		color: var(--nav-item-color-hover);
+	}
+	
+	.item-list .nav-file-title:hover .nav-file-icon {
+		color: var(--interactive-accent-text);
+	}
+	
+	.nav-file-title.is-active:hover,
+	.nav-folder-title.is-active:hover {
+		color: var(--interactive-accent-hover);
+	}
 }
 
 .mod-active .workspace-tab-header.is-active:hover {
@@ -141,9 +147,17 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'%3E%3C/path%3E%3C/svg%3E");
 	}
 
-	&.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
-	&.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
-		background-color: var(--text-muted);
+	&.pt-file-explorer-folder-icon-active,
+	&.pt-file-explorer-folder-icon-default {
+		.nav-folder.is-collapsed {
+			.collapse-icon svg.svg-icon {
+				background-color: var(--text-muted);
+			}
+
+			&:hover .collapse-icon svg.svg-icon {
+				background-color: var(--interactive-accent-text);
+			}
+		}
 	}
 
 	&.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon {

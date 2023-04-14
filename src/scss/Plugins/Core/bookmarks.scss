@@ -18,6 +18,17 @@
 	}
 }
 
-body:not(.is-grabbing) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active:hover {
-	color: var(--interactive-accent-hover);
+body:not(.is-grabbing) .workspace-leaf-content[data-type="bookmarks"] .tree-item-self.is-active {
+
+	.tree-item-icon {
+		color: var(--interactive-accent-text);
+	}
+
+	&:hover {
+		color: var(--interactive-accent-hover);
+	}
+
+	&.is-clickable:hover svg {
+		color: var(--interactive-accent-hover);
+	}
 }
