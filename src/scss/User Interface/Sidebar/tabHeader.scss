@@ -26,10 +26,6 @@
 	}
 }
 
-.pt-fade-inactive-tabs :not(.mod-active) .workspace-tab-header.is-active:not(.mod-active) {
-	opacity: 0.55;
-}
-
 .workspace-tab-header-container {
 	padding-right: unset;
 	padding-left: 1px;
@@ -77,6 +73,11 @@
 	margin-right: unset;
 }
 
+// [Sidebar] Tab Header - Fade Inactive Tabs
+.pt-fade-inactive-tabs :not(.mod-active) .workspace-tab-header.is-active:not(.mod-active) {
+	opacity: 0.55;
+}
+
 // [Sidebar] Tab Header - Stacked Tabs
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
 	.workspace-tab-header {
@@ -92,30 +93,36 @@
 	}
 }
 
-// [Sidebar] Tab Header - Tab Alignment
+// [Main Workspace] Tab Header - Tab Alignment
 // Left
-.mod-root .workspace-tab-header-container-inner {
-	margin-left: var(--size-4-1);
-}
+.mod-root {
+	.workspace-tab-header-container-inner {
+		margin-left: var(--size-4-1);
+	}
 
-.mod-root .workspace-tab-header-new-tab {
-	margin-right: auto;
+	.workspace-tab-header-new-tab {
+		margin-right: auto;
+	}
 }
 
 // Center
-.pt-tab-header-center .mod-root .workspace-tab-header-container-inner {
-	margin-left: auto;
-}
+.pt-tab-header-center .mod-root {
+	.workspace-tab-header-container-inner {
+		margin-left: auto;
+	}
 
-.pt-tab-header-center .mod-root .workspace-tab-header-new-tab {
-	margin-right: auto;
+	.workspace-tab-header-new-tab {
+		margin-right: auto;
+	}
 }
 
 // Right
-.pt-tab-header-right .mod-root .workspace-tab-header-container-inner {
-	margin-left: auto;
-}
+.pt-tab-header-right .mod-root {
+	.workspace-tab-header-container-inner {
+		margin-left: auto;
+	}
 
-.pt-tab-header-right .mod-root .workspace-tab-header-new-tab {
-	margin-right: var(--size-4-1);
+	.workspace-tab-header-new-tab {
+		margin-right: var(--size-4-1);
+	}
 }
