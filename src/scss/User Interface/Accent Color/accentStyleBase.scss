@@ -14,7 +14,8 @@
 .tree-item-self.is-active,
 .suggestion-hotkey,
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
+.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
+.pdf-outline-view .tree-item-self.mod-active {
 	color: var(--highlight-text-normal);
 	border: var(--accent-border-width) solid;
 	box-shadow: unset;
@@ -39,7 +40,9 @@ button.mod-cta {
 }
 
 :is(.pcr-button, button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]),
-.clickable-icon[aria-label="Search settings"] {
+.clickable-icon[aria-label="Search settings"],
+.pdf-toolbar-button,
+.input-right-decorator.clickable-icon {
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-s);
 }
@@ -48,7 +51,8 @@ button.mod-cta {
 	padding: var(--size-2-1) var(--size-2-2);
 }
 
-:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
 	color: var(--highlight-text-normal);
 	border: var(--accent-border-width) solid;
 	border-radius: var(--radius-m);
@@ -68,6 +72,7 @@ button.mod-cta {
 	}
 }
 
-.clickable-icon[aria-label="Search settings"] {
+.clickable-icon[aria-label="Search settings"],
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"] {
 	border-color: transparent;
 }

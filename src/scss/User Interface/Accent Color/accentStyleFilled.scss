@@ -10,7 +10,8 @@
 	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 	.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 	.canvas-help .setting-hotkey,
-	.clickable-icon[aria-label="Search settings"].is-active {
+	.clickable-icon[aria-label="Search settings"].is-active,
+	.pdf-outline-view .tree-item-self.mod-active {
 		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 	}
@@ -55,7 +56,7 @@
 		}
 	}
 
-	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
 		color: var(--text-normal);
 		background-color: var(--color-grey-base);
 		border-color: var(--color-grey-base);
@@ -97,7 +98,8 @@
 		}
 	}
 
-	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,	.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+	.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
 		background-color: var(--interactive-accent-base);
 		border-color: transparent;
 

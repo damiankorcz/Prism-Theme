@@ -1,0 +1,36 @@
+// [Plugins - Core] PDF Viewer
+.pdf-toolbar {
+    padding: var(--size-4-1) var(--size-4-2);
+    background-color: var(--background-secondary);
+}
+
+.pdf-sidebar-container,
+.pdf-container {
+    .theme-light & {
+        background-color: var(--background-primary);
+    }
+    .theme-dark & {
+        background-color: var(--background-secondary-alt);
+    }
+}
+
+.pdf-sidebar-container {
+    .thumbnail.selected > .thumbnailSelectionRing {
+        background-color: var(--interactive-accent-tint);
+    }
+    .thumbnail:hover > .thumbnailSelectionRing {
+        background-color: var(--interactive-accent-base);
+    }
+}
+
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"] {
+    border: 2px solid transparent;
+}
+
+.pdf-outline-view .tree-item-self:not(.mod-collapsible) {
+    padding-left: var(--size-4-1);
+}
+
+.pdf-findbar-settings {
+    background-color: var(--background-secondary);
+}
