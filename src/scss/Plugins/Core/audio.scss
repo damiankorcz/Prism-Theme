@@ -1,32 +1,27 @@
 // [Plugins - Core] Audio
-.theme-light {
-	&.pt-color-scheme-swan-lt audio {
-		filter: brightness(100%) contrast(115%);
-	}
-
-	&.pt-color-scheme-latte-lt audio {
-		filter: invert(-94%) sepia(4%) saturate(828%) hue-rotate(320deg) brightness(107%) contrast(93%);
-	}
-
-	&.pt-color-scheme-periwinkle-lt audio {
-		filter: invert(-98%) sepia(1%) saturate(3004%) hue-rotate(187deg) brightness(96%) contrast(101%);
-	}
-
-	&.pt-color-scheme-pistachio-lt audio {
-		filter: invert(-96%) sepia(4%) saturate(313%) hue-rotate(80deg) brightness(103%) contrast(94%);
-	}
+audio::-webkit-media-controls-panel {
+	background-color: var(--background-secondary);
+	border-radius: var(--radius-s);
 }
 
-.theme-dark {
-	&.pt-color-scheme-mocha-dt audio {
-		filter: sepia(10%) saturate(115%);
-	}
+audio::-webkit-media-controls-mute-button:hover,
+audio::-webkit-media-controls-play-button:hover {
+	background-color: var(--interactive-accent-base);
+	border-radius: var(--radius-s);
+	opacity: 1;
+}
 
-	&.pt-color-scheme-indigo-dt audio {
-		filter: invert(-10%) sepia(10%) saturate(2635%) hue-rotate(205deg) brightness(94%) contrast(97%);
-	}
+audio::-webkit-media-controls-volume-slider {
+	padding-right: var(--size-4-2);
+}
 
-	&.pt-color-scheme-pine-dt audio {
-		filter: invert(-11%) sepia(15%) saturate(1727%) hue-rotate(82deg) brightness(91%) contrast(91%);
-	}
+audio::-webkit-media-controls-current-time-display {
+	margin-left: var(--size-4-3);
+	font-family: var(--font-interface);
+	color: var(--text-normal);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+	font-family: var(--font-interface);
+	color: var(--text-normal);
 }
