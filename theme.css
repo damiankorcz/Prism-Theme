@@ -876,6 +876,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   color: var(--interactive-accent-text);
 }
 
+.status-bar-item.mod-clickable:hover {
+  color: var(--interactive-accent-text);
+}
+
 .workspace-tab-header {
   padding: 0 var(--size-4-2);
   border: var(--accent-border-width) solid transparent;
@@ -897,10 +901,6 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   display: none;
 }
 
-.pt-fade-inactive-tabs :not(.mod-active) .workspace-tab-header.is-active:not(.mod-active) {
-  opacity: 0.55;
-}
-
 .workspace-tab-header-container {
   padding-right: unset;
   padding-left: 1px;
@@ -915,11 +915,9 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   padding: 0 var(--size-4-1) 0 var(--size-4-2);
 }
 
+.workspace-split .workspace-tab-header-spacer,
+.workspace .mod-root .workspace-tab-header-inner::after,
 .workspace-tab-header-inner-close-button::after {
-  display: none;
-}
-
-.workspace .mod-root .workspace-tab-header-inner::after {
   display: none;
 }
 
@@ -949,6 +947,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   margin-right: unset;
 }
 
+.pt-fade-inactive-tabs :not(.mod-active) .workspace-tab-header.is-active:not(.mod-active) {
+  opacity: 0.55;
+}
+
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
   background-color: var(--background-secondary);
   border: unset;
@@ -958,6 +960,27 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   padding-top: 10px;
   margin-left: -1px;
   border-left: 1px solid var(--window-border);
+}
+
+.mod-root .workspace-tab-header-container-inner {
+  margin-left: var(--size-4-1);
+}
+.mod-root .workspace-tab-header-new-tab {
+  margin-right: auto;
+}
+
+.pt-tab-header-center .mod-root .workspace-tab-header-container-inner {
+  margin-left: auto;
+}
+.pt-tab-header-center .mod-root .workspace-tab-header-new-tab {
+  margin-right: auto;
+}
+
+.pt-tab-header-right .mod-root .workspace-tab-header-container-inner {
+  margin-left: auto;
+}
+.pt-tab-header-right .mod-root .workspace-tab-header-new-tab {
+  margin-right: var(--size-4-1);
 }
 
 .pt-tab-label-left-sidebar-left .workspace-split.mod-left-split .workspace-tab-header-container {
@@ -1964,7 +1987,8 @@ div.notice-container div.notice {
 .tree-item-self.is-active,
 .suggestion-hotkey,
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
-.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin {
+.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
+.pdf-outline-view .tree-item-self.mod-active {
   color: var(--highlight-text-normal);
   border: var(--accent-border-width) solid;
   box-shadow: unset;
@@ -1989,7 +2013,9 @@ button.mod-cta {
 }
 
 :is(.pcr-button, button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]),
-.clickable-icon[aria-label="Search settings"] {
+.clickable-icon[aria-label="Search settings"],
+.pdf-toolbar-button,
+.input-right-decorator.clickable-icon {
   border: var(--accent-border-width) solid;
   border-radius: var(--radius-s);
 }
@@ -1998,22 +2024,27 @@ button.mod-cta {
   padding: var(--size-2-1) var(--size-2-2);
 }
 
-:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
   color: var(--highlight-text-normal);
   border: var(--accent-border-width) solid;
   border-radius: var(--radius-m);
 }
-:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) svg.svg-icon {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) svg.svg-icon,
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active svg.svg-icon {
   color: var(--highlight-text-normal);
 }
-:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) .clickable-icon:hover {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) .clickable-icon:hover,
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active .clickable-icon:hover {
   background-color: unset;
 }
-:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover svg.svg-icon {
+:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover svg.svg-icon,
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active:hover svg.svg-icon {
   color: var(--interactive-accent-hover);
 }
 
-.clickable-icon[aria-label="Search settings"] {
+.clickable-icon[aria-label="Search settings"],
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"] {
   border-color: transparent;
 }
 
@@ -2027,7 +2058,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .canvas-help .setting-hotkey,
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .clickable-icon[aria-label="Search settings"].is-active {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .clickable-icon[aria-label="Search settings"].is-active,
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .pdf-outline-view .tree-item-self.mod-active {
   background-color: var(--background-primary);
   border-color: var(--window-border);
 }
@@ -2062,12 +2094,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
   color: var(--color-grey-text);
   background-color: var(--background-primary);
   border-color: var(--window-border);
 }
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2092,11 +2124,13 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) button.copy-code-button:hover {
   color: var(--interactive-accent-hover);
 }
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
   background-color: var(--background-primary);
   border-color: var(--window-border);
 }
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover,
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active:hover {
   color: var(--interactive-accent-hover);
 }
 
@@ -2117,7 +2151,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .canvas-help .setting-hotkey,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .clickable-icon[aria-label="Search settings"].is-active {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .clickable-icon[aria-label="Search settings"].is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-outline-view .tree-item-self.mod-active {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
@@ -2153,12 +2188,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
   color: var(--text-normal);
   background-color: var(--background-primary);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2184,14 +2219,17 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) .clickable-icon:hover {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) .clickable-icon:hover,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active .clickable-icon:hover {
   background-color: unset;
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active:hover {
   color: var(--interactive-accent-hover);
 }
 
@@ -2213,7 +2251,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .canvas-help .setting-hotkey,
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .clickable-icon[aria-label="Search settings"].is-active {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .clickable-icon[aria-label="Search settings"].is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .pdf-outline-view .tree-item-self.mod-active {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -2249,12 +2288,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-base);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2283,11 +2322,13 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active:hover {
   color: var(--interactive-accent-hover);
 }
 
@@ -2308,7 +2349,9 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .canvas-help .setting-hotkey,
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .clickable-icon[aria-label="Search settings"].is-active {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .clickable-icon[aria-label="Search settings"].is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .pdf-outline-view .tree-item-self.mod-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .input-right-decorator.clickable-icon.is-active {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2345,12 +2388,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button) {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button):hover {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2379,11 +2422,13 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) button.copy-code-button:hover {
   color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active) {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active):hover,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active:hover {
   color: var(--interactive-accent-hover);
 }
 
@@ -3171,27 +3216,31 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
   outline: solid 1px var(--color-red-tint);
 }
 
-.theme-light.pt-color-scheme-swan-lt audio {
-  filter: brightness(100%) contrast(115%);
-}
-.theme-light.pt-color-scheme-latte-lt audio {
-  filter: invert(-94%) sepia(4%) saturate(828%) hue-rotate(320deg) brightness(107%) contrast(93%);
-}
-.theme-light.pt-color-scheme-periwinkle-lt audio {
-  filter: invert(-98%) sepia(1%) saturate(3004%) hue-rotate(187deg) brightness(96%) contrast(101%);
-}
-.theme-light.pt-color-scheme-pistachio-lt audio {
-  filter: invert(-96%) sepia(4%) saturate(313%) hue-rotate(80deg) brightness(103%) contrast(94%);
+audio::-webkit-media-controls-panel {
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
 }
 
-.theme-dark.pt-color-scheme-mocha-dt audio {
-  filter: sepia(10%) saturate(115%);
+audio::-webkit-media-controls-mute-button:hover,
+audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--interactive-accent-base);
+  border-radius: var(--radius-s);
+  opacity: 1;
 }
-.theme-dark.pt-color-scheme-indigo-dt audio {
-  filter: invert(-10%) sepia(10%) saturate(2635%) hue-rotate(205deg) brightness(94%) contrast(97%);
+
+audio::-webkit-media-controls-volume-slider {
+  padding-right: var(--size-4-2);
 }
-.theme-dark.pt-color-scheme-pine-dt audio {
-  filter: invert(-11%) sepia(15%) saturate(1727%) hue-rotate(82deg) brightness(91%) contrast(91%);
+
+audio::-webkit-media-controls-current-time-display {
+  margin-left: var(--size-4-3);
+  font-family: var(--font-interface);
+  color: var(--text-normal);
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  font-family: var(--font-interface);
+  color: var(--text-normal);
 }
 
 .modal-container .prompt {
@@ -3616,24 +3665,8 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   margin: var(--size-4-1) 0;
 }
 
-.workspace-leaf-content[data-type=starred] .item-list {
-  padding-top: var(--size-4-1);
-  padding-right: var(--size-4-1);
-  padding-left: var(--size-4-1);
-}
-.workspace-leaf-content[data-type=starred] .item-list::after {
-  height: calc(38px + 2 * var(--scroll-bar-size));
-  content: "";
-}
-.workspace-leaf-content[data-type=starred] .item-list .nav-file {
-  margin-left: unset;
-}
-.workspace-leaf-content[data-type=starred] .item-list .nav-file .nav-file-title {
-  padding-left: var(--size-4-1);
-}
-.workspace-leaf-content[data-type=starred] .nav-file-icon {
-  padding-right: var(--size-4-1);
-  margin: unset;
+.input-right-decorator.clickable-icon {
+  border-color: transparent;
 }
 
 .tag-container {
@@ -3960,6 +3993,39 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
 }
 body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-self.is-active.is-clickable:hover svg {
   color: var(--interactive-accent-hover);
+}
+
+.pdf-toolbar {
+  padding: var(--size-4-1) var(--size-4-2);
+  background-color: var(--background-secondary);
+}
+
+.theme-light .pdf-sidebar-container,
+.theme-light .pdf-container {
+  background-color: var(--background-primary);
+}
+.theme-dark .pdf-sidebar-container,
+.theme-dark .pdf-container {
+  background-color: var(--background-secondary-alt);
+}
+
+.pdf-sidebar-container .thumbnail.selected > .thumbnailSelectionRing {
+  background-color: var(--interactive-accent-tint);
+}
+.pdf-sidebar-container .thumbnail:hover > .thumbnailSelectionRing {
+  background-color: var(--interactive-accent-base);
+}
+
+.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"] {
+  border: 2px solid transparent;
+}
+
+.pdf-outline-view .tree-item-self:not(.mod-collapsible) {
+  padding-left: var(--size-4-1);
+}
+
+.pdf-findbar-settings {
+  background-color: var(--background-secondary);
 }
 
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
@@ -8304,9 +8370,9 @@ settings:
         max: 20
         step: 1
     -
-        id: sidebar-elements
-        title: Sidebar Elements
-        description: Settings for positioning, alignment, etc. of different UI elements within the Sidebars.
+        id: sidebar-and-main-workspace-elements
+        title: Sidebar and Main Workspace Elements
+        description: Settings for positioning, alignment, etc. of different UI elements within the Sidebars and the Main Workspace.
         type: heading
         level: 2
         collapsed: true
@@ -8420,6 +8486,30 @@ settings:
             -
                 label: Right
                 value: pt-nav-header-right-sidebar-align-right
+    -
+        id: tab-header
+        title: Tab Header
+        description: Settings for alignment of the Tab Header.
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: tab-header-alignment
+        title: Tab Header Alignment
+        description: Horizontal Alignment of the Tab Headers in the Main Workspace.
+        type: class-select
+        allowEmpty: false
+        default: pt-tab-header-left
+        options:
+            -
+                label: Left
+                value: pt-tab-header-left
+            -
+                label: Center
+                value: pt-tab-header-center
+            -
+                label: Right
+                value: pt-tab-header-right
     -
         id: file-explorer
         title: File Explorer
