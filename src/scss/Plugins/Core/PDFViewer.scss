@@ -15,8 +15,14 @@
 }
 
 .pdf-sidebar-container {
-    .thumbnail.selected > .thumbnailSelectionRing {
-        background-color: var(--interactive-accent-tint);
+    .thumbnail.selected {
+        > .thumbnailSelectionRing {
+            background-color: var(--interactive-accent-tint);
+        }
+
+        &::after {
+            color: var(--interactive-accent-text);
+        }
     }
     .thumbnail:hover > .thumbnailSelectionRing {
         background-color: var(--interactive-accent-base);
@@ -33,4 +39,11 @@
 
 .pdf-findbar-settings {
     background-color: var(--background-secondary);
+}
+
+.annotationLayer .linkAnnotation > a:hover,
+.annotationLayer .buttonWidgetAnnotation.pushButton > a:hover {
+    background: var(--interactive-accent-tint);
+    box-shadow: unset;
+    opacity: 0.4;
 }
