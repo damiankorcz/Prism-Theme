@@ -1378,7 +1378,7 @@ body.is-mobile.theme-dark .prompt {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.2.4";
+  content: "Prism 3.2.5";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -4012,6 +4012,9 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
 .pdf-sidebar-container .thumbnail.selected > .thumbnailSelectionRing {
   background-color: var(--interactive-accent-tint);
 }
+.pdf-sidebar-container .thumbnail.selected::after {
+  color: var(--interactive-accent-text);
+}
 .pdf-sidebar-container .thumbnail:hover > .thumbnailSelectionRing {
   background-color: var(--interactive-accent-base);
 }
@@ -4026,6 +4029,13 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
 
 .pdf-findbar-settings {
   background-color: var(--background-secondary);
+}
+
+.annotationLayer .linkAnnotation > a:hover,
+.annotationLayer .buttonWidgetAnnotation.pushButton > a:hover {
+  background: var(--interactive-accent-tint);
+  box-shadow: unset;
+  opacity: 0.4;
 }
 
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
