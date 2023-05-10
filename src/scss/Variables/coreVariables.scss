@@ -110,6 +110,9 @@ body {
 	--status-bar-background-color-lt: #EBECEF;
 	--status-bar-background-color-dt: #2B2B2B;
 
+	--pdf-shadow: unset;
+	--pdf-thumbnail-shadow: unset;
+
 	&:is(.theme-light, .theme-dark) {
 		--color-grey-base: hsl(var(--color-grey-base-hsl));
 		--color-red-base: hsl(var(--color-red-base-hsl));
@@ -235,6 +238,9 @@ body {
 		--checkbox-border-color: var(--background-secondary-alt);
 
 		--scrollbar-bg: var(--background-secondary);
+
+		--pdf-background: var(--background-primary);
+		--pdf-sidebar-background: var(--background-primary);
 
 		&.pt-highlight-text-light-lt {
 			--highlight-text-normal: var(--background-primary);
@@ -408,6 +414,9 @@ body {
 		--modal-background: var(--background-secondary-alt);
 
 		--scrollbar-bg: var(--background-secondary);
+
+		--pdf-background: var(--background-secondary-alt);
+		--pdf-sidebar-background: var(--background-secondary-alt);
 
 		&.pt-highlight-text-light-dt {
 			--highlight-text-normal: var(--text-normal);
