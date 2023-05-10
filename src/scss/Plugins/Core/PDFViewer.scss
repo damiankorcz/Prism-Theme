@@ -115,4 +115,12 @@
 	box-shadow: unset;
 	opacity: 0.4;
 }
+
+// https://mwichary.medium.com/dark-theme-in-a-day-3518dde2955a
+.pt-pdf-dark-theme.theme-dark {
+	.pdf-viewer .canvasWrapper,
+	.pdf-sidebar-container img.thumbnailImage {
+		filter: invert(1) hue-rotate(180deg) saturate(100%);
+		mix-blend-mode: screen;
+	}
 }
