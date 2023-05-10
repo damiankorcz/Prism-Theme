@@ -470,6 +470,8 @@ body {
   --mark-highlight-base: var(--color-yellow-base);
   --status-bar-background-color-lt: #EBECEF;
   --status-bar-background-color-dt: #2B2B2B;
+  --pdf-shadow: unset;
+  --pdf-thumbnail-shadow: unset;
 }
 body:is(.theme-light, .theme-dark) {
   --color-grey-base: hsl(var(--color-grey-base-hsl));
@@ -574,6 +576,8 @@ body.theme-light {
   --checkbox-color: var(--background-primary-alt);
   --checkbox-border-color: var(--background-secondary-alt);
   --scrollbar-bg: var(--background-secondary);
+  --pdf-background: var(--background-primary);
+  --pdf-sidebar-background: var(--background-primary);
 }
 body.theme-light.pt-highlight-text-light-lt {
   --highlight-text-normal: var(--background-primary);
@@ -718,6 +722,8 @@ body.theme-dark {
   --background-modifier-form-field: var(--background-secondary-alt);
   --modal-background: var(--background-secondary-alt);
   --scrollbar-bg: var(--background-secondary);
+  --pdf-background: var(--background-secondary-alt);
+  --pdf-sidebar-background: var(--background-secondary-alt);
 }
 body.theme-dark.pt-highlight-text-light-dt {
   --highlight-text-normal: var(--text-normal);
@@ -1370,7 +1376,7 @@ body.is-mobile.theme-dark .prompt {
   z-index: var(--layer-sidedock);
   display: inline-flex;
   flex-direction: column;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   width: fit-content;
   height: 24px;
@@ -1480,7 +1486,7 @@ body.is-mobile.theme-dark .prompt {
 }
 .modal.mod-image-lightbox .modal-content {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   height: 100%;
   padding: var(--size-4-2);
@@ -4000,23 +4006,77 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
   background-color: var(--background-secondary);
 }
 
-.theme-light .pdf-sidebar-container,
-.theme-light .pdf-container {
-  background-color: var(--background-primary);
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4-4);
+  margin-top: var(--size-4-4);
+  margin-bottom: var(--size-4-4);
 }
-.theme-dark .pdf-sidebar-container,
-.theme-dark .pdf-container {
-  background-color: var(--background-secondary-alt);
+.pdf-viewer .page {
+  overflow: hidden;
+  border: 1px solid var(--window-border);
+  border-radius: var(--radius-m);
 }
 
-.pdf-sidebar-container .thumbnail.selected > .thumbnailSelectionRing {
-  background-color: var(--interactive-accent-tint);
+.pdf-sidebar-container .pdf-thumbnail-view {
+  gap: var(--size-4-2);
+  padding: var(--size-4-2);
+}
+.pdf-sidebar-container .thumbnailSelectionRing {
+  display: flex;
+  padding: unset;
+  border: 1px solid var(--window-border);
+}
+.pdf-sidebar-container .thumbnail {
+  padding: var(--size-4-1);
+  border: 2px solid transparent;
+  border-radius: var(--radius-s);
+}
+.pdf-sidebar-container .thumbnail::after {
+  right: var(--size-4-3);
+  bottom: var(--size-4-3);
+  z-index: 99;
+  border: 1px solid var(--window-border);
+}
+.pdf-sidebar-container .thumbnail::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  padding: 5px;
+  content: "";
+  background: transparent;
+  -webkit-mask: linear-gradient(#FFF 0 0) content-box, linear-gradient(#FFF 0 0);
+  mask: linear-gradient(#FFF 0 0) content-box, linear-gradient(#FFF 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.pdf-sidebar-container .thumbnail:hover {
+  border-color: var(--interactive-accent-base);
+}
+.pdf-sidebar-container .thumbnail:hover::before {
+  background: var(--interactive-accent-base);
+}
+.pdf-sidebar-container .thumbnail:hover::after {
+  color: var(--highlight-text-normal);
+}
+.pdf-sidebar-container .thumbnail:hover > .thumbnailSelectionRing {
+  background-color: unset;
+}
+.pdf-sidebar-container .thumbnail.selected {
+  border-color: var(--interactive-accent-tint);
+}
+.pdf-sidebar-container .thumbnail.selected::before {
+  background: var(--interactive-accent-base);
 }
 .pdf-sidebar-container .thumbnail.selected::after {
   color: var(--interactive-accent-text);
 }
-.pdf-sidebar-container .thumbnail:hover > .thumbnailSelectionRing {
-  background-color: var(--interactive-accent-base);
+.pdf-sidebar-container .thumbnail.selected:hover::before {
+  background: var(--background-modifier-hover);
+}
+.pdf-sidebar-container .thumbnail.selected > .thumbnailSelectionRing {
+  background-color: unset;
 }
 
 .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"] {
@@ -4036,6 +4096,12 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
   background: var(--interactive-accent-tint);
   box-shadow: unset;
   opacity: 0.4;
+}
+
+.pt-pdf-dark-theme.theme-dark .pdf-viewer .canvasWrapper,
+.pt-pdf-dark-theme.theme-dark .pdf-sidebar-container img.thumbnailImage {
+  filter: invert(1) hue-rotate(180deg) saturate(100%);
+  mix-blend-mode: screen;
 }
 
 .pt-custom-vault-banner .nav-folder-title[data-path="/"] {
@@ -8838,6 +8904,12 @@ settings:
         id: pt-collapsed-pinned-tab
         title: Collapsed Pinned Tabs
         description: This option removes the title from pinned tabs and adds back the default file icon for the markdown files. Helps reduce the horizontal space wasted by pinned tabs. You can still see the title when you hover over the icon. NOTE - This option requires Installer Version 1.1.9+ due to use of CSS `has()`. Also, might not work on certain Mobile clients.
+        default: false
+        type: class-toggle
+    -
+        id: pt-pdf-dark-theme
+        title: Enable PDF Dark Theme
+        description: This option adds styling to the PDF pages by blending in with the colour scheme in Dark mode; making it more eye friendly. This isn't a perfect solution. Note that some images might look inverted and colours be a different shade compared to the original file.
         default: false
         type: class-toggle
     -
