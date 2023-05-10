@@ -102,7 +102,7 @@ Otherwise you are welcome to contact me through the channels mentioned below to 
 # 📬 Contact
 Feel free to reach out to me via the Official Obsidian Discord Channel: 
 
-<a href="https://discord.gg/veuWUTm"><img alt="Discord" src="https://img.shields.io/discord/686053708261228577?color=%235865F2&label=Obsidian%20Members%20Group%20%28OMG%29&labelColor=%23252525&logo=discord&style=for-the-badge"></a> <a href="https://discordapp.com/users/Damikiller37#6130/"><img src="https://img.shields.io/badge/Discord-Damikiller37%236130-%235865F2?style=for-the-badge&labelColor=%23252525&logo=discord" /></a>
+<a href="https://discord.gg/veuWUTm"><img alt="Discord" src="https://img.shields.io/discord/686053708261228577?color=%235865F2&label=Obsidian%20Members%20Group%20%28OMG%29&labelColor=%23252525&logo=discord&style=for-the-badge"></a>
 
 Let me know how you use the theme over at Prism's Obsidian Forum Thread:
 
