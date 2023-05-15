@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.2.5)
+    Prism Theme for Obsidian.md (Version: 3.2.6)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -416,6 +416,7 @@ body {
   --tag-border-width: 2px;
   --tag-size: var(--font-smallest);
   --file-folding-offset: 20px;
+  --nav-item-padding: var(--size-2-1) var(--size-4-2) var(--size-2-1) var(--size-4-6);
   --text-error: var(--color-red-text);
   --text-accent: var(--interactive-accent-text);
   --icon-color-focused: var(--interactive-accent-text);
@@ -1109,7 +1110,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   min-height: unset;
 }
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .bookmarks-container) {
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div) {
   padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 
@@ -1384,7 +1385,7 @@ body.is-mobile.theme-dark .prompt {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.2.5";
+  content: "Prism 3.2.6";
   border: 1px solid var(--window-border);
   border-radius: var(--radius-s);
 }
@@ -3351,42 +3352,24 @@ input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-vis
 .workspace-leaf-content[data-type=file-explorer] .nav-files-container {
   padding-top: unset;
   padding-right: unset;
-  padding-left: unset;
+  padding-left: var(--size-4-1);
 }
 .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children {
-  padding: 0 var(--size-4-1);
-}
-.workspace-leaf-content[data-type=file-explorer] .tree-item .tree-item-self {
-  padding-left: var(--size-4-2);
+  padding: var(--size-4-1);
 }
 
-.nav-folder.mod-root .nav-folder > .nav-folder-children {
-  padding-left: var(--size-4-1);
-  margin: var(--size-4-1) 0 var(--size-4-1) 10px;
-  border-left: 1px solid var(--window-border);
+.tree-item-children:empty {
+  display: none;
 }
-.nav-folder.mod-root .nav-folder > .nav-folder-title {
-  padding-left: var(--size-4-1);
+
+.tree-item-self {
+  border: 2px solid transparent;
 }
 
 .nav-file-tag {
   height: 15px;
   background-color: var(--background-secondary);
   border: 1px solid var(--window-border);
-}
-
-:is(.nav-file:not(.mod-root), .nav-folder:not(.mod-root) > .nav-folder-children > .nav-folder) {
-  margin-left: var(--file-explorer-left-margin);
-}
-
-:is(.nav-file-title, .nav-folder-title) {
-  min-height: 23px;
-  padding: 1px var(--size-4-2);
-  border: 2px solid transparent;
-}
-:is(.nav-file-title, .nav-folder-title).is-being-dragged-over {
-  background-color: var(--interactive-accent-base);
-  border: 2px solid var(--interactive-accent-tint);
 }
 
 .nav-folder:not(.is-collapsed) > .nav-folder-title {
@@ -3428,16 +3411,6 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   background-color: var(--interactive-accent-base);
 }
 
-.pt-file-explorer-folder-icon .nav-folder-title-content {
-  display: flex;
-  align-items: center;
-}
-.pt-file-explorer-folder-icon .nav-folder-collapse-indicator {
-  margin-right: 5px;
-}
-.pt-file-explorer-folder-icon .nav-folder.mod-root .nav-folder > .nav-folder-title:not([data-path="/"]) {
-  padding-left: var(--size-2-1);
-}
 .pt-file-explorer-folder-icon .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon {
   display: inline-flex;
   width: 17px;
@@ -3582,9 +3555,8 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .outline {
   padding: var(--size-4-1);
 }
-
-.tree-item > .tree-item-children .tree-item {
-  margin-left: var(--file-explorer-left-margin);
+.outline .tree-item-children > div:first-child {
+  display: none;
 }
 
 .search-result-container {
@@ -3678,39 +3650,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 .tag-container {
   padding: var(--size-4-1);
 }
-.tag-container > div > .tree-item > .tree-item-children .tree-item {
-  margin-left: var(--file-explorer-left-margin);
-}
 .tag-container .tree-item-children > div:first-child {
-  display: none;
-}
-
-.tree-item .tree-item-self {
-  align-items: center;
-  width: 100%;
-  padding: 1px var(--size-4-1) 1px var(--size-4-1);
-  border: 2px solid transparent;
-}
-
-.tree-item-self {
-  align-items: center;
-}
-
-.tree-item-flair {
-  padding: 1px 2px;
-}
-
-.tree-item-self .tree-item-icon {
-  width: 16px;
-  padding-inline-end: unset;
-}
-
-.tree-item-children {
-  padding-left: var(--size-4-1);
-  margin: var(--size-4-1) 0 var(--size-4-1) 10px;
-  border-left: 1px solid var(--window-border);
-}
-.tree-item-children:empty {
   display: none;
 }
 
@@ -3728,7 +3668,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
 }
 :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
-  padding: var(--size-4-1) var(--size-4-2);
+  padding-left: var(--size-4-6);
   margin-bottom: -1px;
   background-color: var(--background-secondary);
   border-radius: unset;
@@ -3976,13 +3916,6 @@ body.theme-dark {
   transform: translateX(4px);
 }
 
-.workspace-leaf-content[data-type=bookmarks] .bookmarks-container {
-  flex-grow: 1;
-  padding-top: var(--size-4-1);
-  padding-right: var(--size-4-1);
-  padding-left: var(--size-4-1);
-  overflow-y: auto;
-}
 .workspace-leaf-content[data-type=bookmarks] .tree-item-icon {
   width: unset;
   padding-right: var(--size-4-1);
@@ -4111,6 +4044,7 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
   height: var(--header-height);
   padding: 0 10px;
   margin-bottom: unset;
+  margin-left: -4px;
   line-height: 16px;
   overflow-wrap: break-word;
   white-space: unset;
