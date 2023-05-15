@@ -2,41 +2,8 @@
 .tag-container {
 	padding: var(--size-4-1);
 
-	> div > .tree-item > .tree-item-children .tree-item {
-		margin-left: var(--file-explorer-left-margin);
-	}
-
+	// Removes the dot that appears when the heading has no children. Same in Outline.
 	.tree-item-children > div:first-child {
-		display: none;
-	}
-}
-
-.tree-item .tree-item-self {
-	align-items: center;
-	width: 100%;
-	padding: 1px var(--size-4-1) 1px var(--size-4-1);
-	border: 2px solid transparent;
-}
-
-.tree-item-self {
-	align-items: center;
-}
-
-.tree-item-flair {
-	padding: 1px 2px;
-}
-
-.tree-item-self .tree-item-icon {
-	width: 16px;
-	padding-inline-end: unset;
-}
-
-.tree-item-children {
-	padding-left: var(--size-4-1);
-	margin: var(--size-4-1) 0 var(--size-4-1) 10px;
-	border-left: 1px solid var(--window-border);
-
-	&:empty {
 		display: none;
 	}
 }
