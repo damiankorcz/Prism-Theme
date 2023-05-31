@@ -1,0 +1,117 @@
+// [Color Scheme - Fruit] Light Theme
+.theme-light.pt-color-scheme-peach-lt {
+	// The color variables below are comma separated HSL values. This format is necessary for using these
+	// variables down the line in the theme and being able to create variants with varying alpha values (HSLA).
+	
+	// Base colours are used for the backgrounds in the accented color areas.
+	--color-grey-base-hsl:     0,  0%, 88%;
+	--color-red-base-hsl:      7,  96%, 91%;
+	--color-orange-base-hsl:  27,  88%, 87%;
+	--color-yellow-base-hsl:  42,  92%, 80%;
+	--color-green-base-hsl:  101,  52%, 83%;
+	--color-mint-base-hsl:   153,  64%, 81%;
+	--color-cyan-base-hsl:   185,  64%, 83%;
+	--color-blue-base-hsl:   220,  83%, 91%;
+	--color-purple-base-hsl: 251,  94%, 93%;
+	--color-pink-base-hsl:   328,  86%, 92%;
+
+	// Tint colours are used for the borders in the accented color areas.
+	--color-grey-tint-hsl:     0,   0%, 70%;
+	--color-red-tint-hsl:      7,  85%, 76%;
+	--color-orange-tint-hsl:  28,  82%, 65%;
+	--color-yellow-tint-hsl:  43,  66%, 55%;
+	--color-green-tint-hsl:   97,  52%, 53%;
+	--color-mint-tint-hsl:   160,  62%, 49%;
+	--color-cyan-tint-hsl:   184,  61%, 52%;
+	--color-blue-tint-hsl:   220,  79%, 76%;
+	--color-purple-tint-hsl: 253,  89%, 82%;
+	--color-pink-tint-hsl:   326,  75%, 77%;
+
+	// Text colours are used for the Text in the accented color areas and other Text areas which use the theme colours
+	// e.g. Syntax Highlighting, Mark Highlight System, etc.
+	--color-grey-text-hsl:     0,   0%, 49%;
+	--color-red-text-hsl:      3,  73%, 54%;
+	--color-orange-text-hsl:  31, 100%, 37%;
+	--color-yellow-text-hsl:  39,  70%, 37%;
+	--color-green-text-hsl:   93, 100%, 28%;
+	--color-mint-text-hsl:   160, 100%, 28%;
+	--color-cyan-text-hsl:   184, 100%, 29%;
+	--color-blue-text-hsl:   221,  73%, 58%;
+	--color-purple-text-hsl: 258,  81%, 65%;
+	--color-pink-text-hsl:   320,  66%, 52%;
+
+	// Default theme variable overwrites for different shades of text used in the editor and around the UI.
+	--text-normal: hsl(3, 55%, 15%);
+	--text-muted:  hsl(3, 55%, 20%);
+	--text-faint:  hsl(3, 55%, 35%);
+
+	// Default theme variable overwrites for the UI background colours.
+	--background-primary:        hsl(3, 55%, 98%);
+	--background-primary-alt:    hsl(3, 55%, 93%);
+	--background-secondary:      hsl(3, 55%, 93%);
+	--background-secondary-blur: hsla(3, 55%, 92%, 80%); // Custom variable based on the one above for UI areas which use the frosted effect.
+	--background-secondary-alt:  hsl(3, 55%, 74%);
+
+	// Default theme variable overwrites for shadows used on modals and popups.
+	--shadow-s: hsla(3, 55%, 7%, 10%) 0 1px 2px 0;
+	--shadow-l: hsla(3, 55%, 7%, 4%) 0 1px 2px, hsla(3, 55%, 7%, 4%) 0 2px 4px, hsla(3, 55%, 7%, 4%) 0 4px 8px, hsla(3, 55%, 7%, 4%) 0 8px 16px;
+}
+
+// [Color Scheme - Fruit] Dark Theme
+.theme-dark.pt-color-scheme-cherry-dt {
+	// The color variables below are comma separated HSL values. This format is necessary for using these
+	// variables down the line in the theme and being able to create variants with varying alpha values (HSLA).
+
+	// Base colours are used for the backgrounds in the accented color areas.
+	--color-grey-base-hsl:     0,   0%, 15%;
+	--color-red-base-hsl:      2,  52%, 18%;
+	--color-orange-base-hsl:  27,  61%, 14%;
+	--color-yellow-base-hsl:  43,  68%, 11%;
+	--color-green-base-hsl:  124,  50%, 12%;
+	--color-mint-base-hsl:   165,  80%, 10%;
+	--color-cyan-base-hsl:   195,  60%, 13%;
+	--color-blue-base-hsl:   225,  48%, 19%;
+	--color-purple-base-hsl: 272,  45%, 19%;
+	--color-pink-base-hsl:   327,  52%, 18%;
+
+	// Tint colours are used for the borders in the accented color areas.
+	--color-grey-tint-hsl:     0,   0%, 41%;
+	--color-red-tint-hsl:      4,  46%, 47%;
+	--color-orange-tint-hsl:  26,  49%, 38%;
+	--color-yellow-tint-hsl:  43,  53%, 32%;
+	--color-green-tint-hsl:  123,  39%, 33%;
+	--color-mint-tint-hsl:   164,  61%, 29%;
+	--color-cyan-tint-hsl:   196,  48%, 36%;
+	--color-blue-tint-hsl:   225,  42%, 50%;
+	--color-purple-tint-hsl: 272,  42%, 51%;
+	--color-pink-tint-hsl:   326,  44%, 46%;
+
+	// Text colours are used for the Text in the accented color areas and other Text areas which use the theme colours
+	// e.g. Syntax Highlighting, Mark Highlight System, etc.
+	--color-grey-text-hsl:     0,   0%, 69%;
+	--color-red-text-hsl:      5,  70%, 75%;
+	--color-orange-text-hsl:  25,  82%, 66%;
+	--color-yellow-text-hsl:  43,  61%, 55%;
+	--color-green-text-hsl:  122,  48%, 57%;
+	--color-mint-text-hsl:   165,  56%, 50%;
+	--color-cyan-text-hsl:   196,  69%, 61%;
+	--color-blue-text-hsl:   226,  56%, 76%;
+	--color-purple-text-hsl: 267,  48%, 76%;
+	--color-pink-text-hsl:   331,  59%, 75%;
+
+	// Default theme variable overwrites for different shades of text used in the editor and around the UI.
+	--text-normal: hsl(2, 48%, 95%);
+	--text-muted:  hsl(2, 48%, 90%);
+	--text-faint:  hsl(2, 48%, 85%);
+
+	// Default theme variable overwrites for the UI background colours.
+	--background-primary:        hsl(2, 48%, 28%);
+	--background-primary-alt:    hsl(2, 48%, 35%);
+	--background-secondary:      hsl(2, 48%, 16%);
+	--background-secondary-blur: hsla(2, 48%, 17%, 80%); // Custom variable based on the one above for UI areas which use the frosted effect.
+	--background-secondary-alt:  hsl(2, 48%, 9%);
+
+	// Default theme variable overwrites for shadows used on modals and popups.
+	--shadow-s: hsla(2, 48%, 7%, 10%) 0 1px 2px 0;
+	--shadow-l: hsla(2, 48%, 7%, 10%) 0 1px 2px, hsla(2, 48%, 7%, 10%) 0 2px 4px, hsla(2, 48%, 7%, 10%) 0 4px 8px, hsla(2, 48%, 7%, 10%) 0 8px 16px;
+}
