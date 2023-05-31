@@ -58,10 +58,11 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	margin-bottom: var(--size-4-2);
 }
 
+// Vertical lines
 :is(.style-settings-heading[data-level="0"] + .style-settings-container, .style-settings-container) {
 	padding-left: var(--size-4-1);
 	margin-left: var(--size-4-3);
-	border-left: 1px solid var(--window-border);
+	border-left: 1px solid var(--window-border-color);
 }
 
 // [Plugins - Community] Style Settings Header Icons
@@ -124,7 +125,7 @@ div.workspace-leaf-content[data-type="style-settings"] {
 
 .setting-item.style-settings-heading[data-id="theme-info"] {
 	padding-top: var(--size-4-4);
-	border-top: 2px solid var(--window-border);
+	border-top: 2px solid var(--window-border-color);
 
 	.setting-item-name::before {
 		content: "📖";
@@ -269,7 +270,7 @@ div.workspace-leaf-content[data-type="style-settings"] {
 // 			color: var(--text-normal);
 // 			content: "🚧 Work in progress";
 // 			background: var(--background-primary);
-// 			border: 1px solid var(--window-border);
+// 			border: var(--window-border);
 // 			border-radius: var(--radius-s);
 // 			box-shadow: var(--shadow-s);
 // 		}

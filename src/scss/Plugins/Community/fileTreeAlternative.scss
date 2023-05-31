@@ -25,7 +25,7 @@
 	.oz-folder-contents {
 		padding-left: 0;
 		margin-left: 15px !important;
-		border-left: 1px solid var(--window-border);
+		border-left: var(--window-border);
 	}
 
 	.oz-folder-element {
@@ -42,7 +42,7 @@
 		margin-bottom: unset;
 		background-color: var(--background-secondary-blur);
 		border: unset;
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
 		border-radius: unset;
 		-webkit-backdrop-filter: blur(var(--blur-intensity));
 		backdrop-filter: blur(var(--blur-intensity));
@@ -76,7 +76,7 @@
 		margin-top: unset;
 		font-weight: var(--font-medium);
 		background-color: var(--background-secondary-blur);
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
 		border-radius: unset;
 		-webkit-backdrop-filter: blur(var(--blur-intensity));
 		backdrop-filter: blur(var(--blur-intensity));
@@ -106,9 +106,14 @@
 	#file-tree-divider {
 		height: 1px;
 		margin-bottom: unset;
-		background-color: var(--window-border);
+		background-color: var(--window-border-color);
 		border-bottom: unset;
 		opacity: 1;
+
+		.pt-color-scheme-style-minimal-lt &,
+		.pt-color-scheme-style-minimal-dt & {
+			background-color: transparent;
+		}
 
 		&:hover {
 			height: 3px;
@@ -116,6 +121,8 @@
 		}
 	}
 
+	#file-tree-divider-horizontal {
+		border-right: 1px solid var(--window-border-color);
 	.oz-file-tree-files {
 		padding: var(--size-4-1) !important;
 	}

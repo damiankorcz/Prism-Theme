@@ -9,12 +9,12 @@
 
 		details {
 			&:first-of-type summary {
-				border-bottom: 1px solid var(--window-border);
+				border-bottom: var(--window-border);
 			}
 
 			&:not(:first-of-type) summary {
-				border-top: 1px solid var(--window-border);
-				border-bottom: 1px solid var(--window-border);
+				border-top: var(--window-border);
+				border-bottom: var(--window-border);
 			}
 
 			&:not([open]) {
@@ -34,7 +34,7 @@
 				margin: 8px;
 				font-family: var(--font-text);
 				font-size: 14px;
-				border: 1px solid var(--window-border);
+				border: 1px solid var(--window-border-color);
 				border-radius: var(--radius-m);
 
 				li {
@@ -45,7 +45,7 @@
 					box-shadow: var(--shadow-s);
 
 					&:not(:last-of-type) {
-						border-bottom: 1px solid var(--window-border);
+						border-bottom: 1px solid var(--window-border-color);
 					}
 
 					&:hover {

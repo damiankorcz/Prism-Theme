@@ -4,9 +4,10 @@
 	--he-title-bar-active-pinned-bg: var(--background-secondary);
 	--he-title-bar-inactive-bg: var(--background-secondary);
 	--he-title-bar-inactive-pinned-bg: var(--background-secondary);
+	--he-title-bar-height: 32px;
 
 	&.show-navbar .view-header {
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
 	}
 
 	&.is-pinned {
@@ -22,8 +23,8 @@
 	}
 
 	.popover-titlebar {
-		padding: var(--size-2-1) 0;
-		border-bottom: 1px solid var(--window-border);
+		padding: var(--size-4-1) 0;
+		border-bottom: var(--window-border);
 	}
 
 	:is(.popover-action, .mod-pin-popover) {

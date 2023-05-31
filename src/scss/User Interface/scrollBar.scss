@@ -10,18 +10,18 @@ body:not(.native-scrollbars) {
 
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 		&:vertical {
-			border-left: 1px solid var(--window-border);
+			border-left: var(--window-border);
 		}
 
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 		&:horizontal {
-			border-top: 1px solid var(--window-border);
+			border-top: var(--window-border);
 		}
 	}
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
 	::-webkit-scrollbar-thumb {
-		border: 1px solid var(--window-border);
+		border: var(--window-border);
 		border-radius: unset;
 	}
 
@@ -33,7 +33,7 @@ body:not(.native-scrollbars) {
 	}
 
 	::-webkit-scrollbar-corner {
-		background-color: var(--window-border);
+		background-color: var(--window-border-color);
 	}
 }
 

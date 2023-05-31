@@ -11,7 +11,7 @@
 	}
 
 	&.hover-popover {
-		border: 1px solid var(--window-border);
+		border: var(--window-border);
 	}
 }
 
@@ -19,7 +19,7 @@
 .menu {
 	padding: var(--size-4-1);
 	background: var(--background-secondary);
-	border-color: var(--window-border);
+	border-color: var(--window-border-color);
 	box-shadow: var(--shadow-l);
 }
 
@@ -52,7 +52,7 @@ div.notice-container div.notice {
 	font-weight: 600;
 	color: var(--text-normal);
 	background: var(--background-secondary-alt);
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 	border-radius: var(--radius-m);
 	box-shadow: var(--shadow-l);
 
@@ -66,25 +66,25 @@ div.notice-container div.notice {
 
 	.tooltip-arrow {
 		margin-top: -1px;
-		border-bottom-color: var(--window-border);
+		border-bottom-color: var(--window-border-color);
 	}
 
 	&.mod-top .tooltip-arrow {
 		margin-top: unset;
 		margin-top: 1px;
-		border-top-color: var(--window-border);
+		border-top-color: var(--window-border-color);
 	}
 
 	&.mod-right .tooltip-arrow {
 		margin-top: unset;
 		margin-left: -6px;
-		border-right-color: var(--window-border);
+		border-right-color: var(--window-border-color);
 	}
 
 	&.mod-left .tooltip-arrow {
 		margin-top: unset;
 		margin-left: -2px;
-		border-left-color: var(--window-border);
+		border-left-color: var(--window-border-color);
 	}
 
 	&.mod-error {
@@ -97,7 +97,7 @@ div.notice-container div.notice {
 // [UI] Drag Ghost
 .drag-ghost {
 	background: var(--background-secondary);
-	border: 2px solid var(--window-border);
+	border: 2px solid var(--window-border-color);
 	box-shadow: var(--shadow-l);
 	animation: pop-down 200ms forwards ease-in-out;
 }

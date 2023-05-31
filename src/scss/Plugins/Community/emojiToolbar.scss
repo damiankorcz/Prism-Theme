@@ -1,10 +1,12 @@
 // [Plugins - Community] Emoji Toolbar
 .emoji-mart-bar {
 	background-color: var(--background-secondary);
-	border-bottom-color: var(--window-border);
+	border-bottom-color: var(--window-border-color);
 
 	&:last-child {
-		border-top-color: var(--window-border);
+		border-top-color: var(--window-border-color);
+	}
+}
 	}
 }
 
@@ -13,7 +15,7 @@
 	padding: var(--size-4-1);
 	margin-top: unset;
 	background-color: var(--background-secondary);
-	border-bottom: 1px solid var(--window-border);
+	border-bottom: var(--window-border);
 }
 
 .emoji-mart-search-icon {
@@ -26,7 +28,7 @@
 
 .emoji-mart-category-label {
 	background-color: var(--background-secondary-blur);
-	border-bottom: 1px solid var(--window-border);
+	border-bottom: var(--window-border);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 

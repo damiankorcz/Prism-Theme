@@ -53,7 +53,7 @@
 		}
 
 		.n-input__border {
-			border: 1px solid var(--window-border);
+			border: 1px solid var(--window-border-color);
 		}
 
 		&:not(.n-input--disabled):hover .n-input__state-border,
@@ -83,11 +83,11 @@
 		padding: var(--size-4-4);
 		margin: unset !important;
 		background-color: var(--background-secondary);
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
 
 		.n-slider-rail {
 			background-color: var(--background-secondary);
-			border: 1px solid var(--window-border);
+			border: 1px solid var(--window-border-color);
 
 			.n-slider-rail__fill {
 				background-color: var(--interactive-accent-tint);
@@ -96,7 +96,7 @@
 
 		.n-slider-dots .n-slider-dot {
 			background-color: var(--background-primary);
-			border: 2px solid var(--window-border);
+			border: 2px solid var(--window-border-color);
 
 			&:hover {
 				background-color: var(--interactive-accent-base);
@@ -116,7 +116,7 @@
 }
 
 .n-slider-handle-indicator {
-	border: 1px solid var(--window-border);
+	border: var(--window-border);
 	border-radius: var(--radius-m);
 
 	.theme-light & {
@@ -186,7 +186,7 @@
 		padding: var(--size-4-1) var(--size-4-2);
 		margin-top: -1px;
 		background-color: var(--background-secondary);
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
 		border-radius: unset;
 	}
 }

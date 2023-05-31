@@ -1,6 +1,6 @@
 // [Plugins - Core] Command Palette
 .modal-container .prompt {
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 
 	.prompt-results {
 		padding: var(--size-4-2);
@@ -14,7 +14,7 @@
 		}
 
 		&::-webkit-scrollbar-track {
-			margin-left: 1px solid var(--window-border);
+			margin-left: var(--window-border);
 			border-radius: unset;
 
 			.theme-light & {
@@ -30,7 +30,7 @@
 	.prompt-instructions {
 		padding: var(--size-2-1) var(--size-4-2);
 		background-color: var(--background-secondary);
-		border-top: 1px solid var(--window-border);
+		border-top: var(--window-border);
 	}
 
 	.suggestion-item.mod-complex .suggestion-hotkey {
@@ -43,18 +43,26 @@
 	padding: var(--size-4-2);
 	margin: unset;
 	background-color: var(--background-secondary);
-	border-bottom: 1px solid var(--window-border);
+	border-bottom: var(--window-border);
 }
 
 input.prompt-input {
 	height: 40px;
 	padding: 0 var(--size-4-4);
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);;
 	border-radius: var(--radius-s);
+
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
 
 	&:hover,
 	&:focus,
 	&:focus-visible {
-		border: 1px solid var(--window-border);
+		border: 1px solid var(--window-border-color);;
 	}
 }

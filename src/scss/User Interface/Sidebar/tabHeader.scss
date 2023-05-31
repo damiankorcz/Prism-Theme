@@ -29,6 +29,7 @@
 .workspace-tab-header-container {
 	padding-right: unset;
 	padding-left: 1px;
+	border-bottom: var(--window-border);
 }
 
 .workspace .mod-root .workspace-tab-header {
@@ -83,12 +84,12 @@
 	.workspace-tab-header {
 		background-color: var(--background-secondary);
 		border: unset;
-		border-right: 1px solid var(--window-border);
+		border-right: var(--window-border);
 
 		&:not(.is-active) .workspace-tab-header-inner {
 			padding-top: 10px;
 			margin-left: -1px;
-			border-left: 1px solid var(--window-border);
+			border-left: var(--window-border);
 		}
 	}
 }

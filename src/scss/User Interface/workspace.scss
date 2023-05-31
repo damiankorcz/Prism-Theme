@@ -13,16 +13,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border-radius: var(--radius-m);
 }
 
-.workspace-leaf-resize-handle {
-	:is(.workspace-split.mod-vertical > * > &, .workspace-split.mod-left-split > &,	.workspace-split.mod-right-split > &) {
-		height: calc(var(--divider-vertical-height) - var(--header-height));
-	}
-}
-
-.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-	left: -1px;
-}
-
 .workspace-tabs .workspace-leaf {
 	.theme-light & {
 		background-color: var(--background-primary);
@@ -33,6 +23,33 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	}
 }
 
+// Vertical and Horizontal Resize Handles
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+	left: -1px;
+}
+
+.workspace-leaf-resize-handle {
+	:is(.workspace-split.mod-vertical > * > &, .workspace-split.mod-left-split > &,	.workspace-split.mod-right-split > &) {
+		height: calc(var(--divider-vertical-height) - var(--header-height));
+	}
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:not(:hover) {
+	border-bottom: var(--window-border);
+}
+
+.workspace-split.mod-vertical > * >,
+.workspace-split.mod-left-split > {
+	.workspace-leaf-resize-handle:not(:hover) {
+		border-right: var(--window-border);
+	}
+}
+
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:not(:hover) {
+	border-left: var(--window-border);
+}
+
+
 // [UI] View Header
 :is(.is-focused .workspace-leaf.mod-active .view-header, .view-header) {
 	width: 100%;
@@ -42,7 +59,7 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 
 .workspace-tabs .view-header {
 	margin: unset;
-	border-bottom: 1px solid var(--window-border);
+	border-bottom: var(--window-border);
 }
 
 .view-header-title-container {
@@ -76,6 +93,18 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 		border: 2px solid transparent;
 		border-radius: var(--radius-m);
 	}
+}
+
+.workspace-ribbon.mod-left::before {
+	border-bottom: var(--window-border);
+}
+
+.pt-color-scheme-style-minimal-dt .workspace-ribbon.mod-left.is-collapsed {
+	border-right-color: transparent;
+}
+
+.workspace-ribbon {
+	border-right: var(--window-border);
 }
 
 // [UI] macOS Sidebar Toggle Button fix

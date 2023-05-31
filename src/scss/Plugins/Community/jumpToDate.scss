@@ -1,17 +1,23 @@
 // [Plugins - Community] Jump To Date
 .flatpickr-calendar {
 	background-color: var(--background-secondary);
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 	border-radius: var(--radius-m);
 	box-shadow: var(--shadow-l);
 
 	&.arrowTop::before {
-		border-bottom-color: var(--window-border);
+		border-bottom-color: var(--window-border-color);
+	}
+
+	.flatpickr-innerContainer {
+		border-radius: var(--radius-m);
 	}
 
 	.flatpickr-months {
 		background: var(--background-secondary);
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
+		border-top-left-radius: var(--radius-m);
+		border-top-right-radius: var(--radius-m);
 
 		.flatpickr-prev-month,
 		.flatpickr-next-month {
@@ -50,7 +56,7 @@
 		color: var(--text-normal);
 		text-align: center;
 		background-color: var(--background-secondary);
-		border: 1px solid var(--window-border);
+		border: var(--window-border);
 		border-radius: var(--radius-s);
 	}
 
@@ -119,7 +125,7 @@
 	}
 
 	.flatpickr-weekdays {
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: var(--window-border);
 
 		span.flatpickr-weekday {
 			font-size: 10px;

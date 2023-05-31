@@ -22,12 +22,12 @@
 		border-radius: unset;
 
 		&:first-child {
-			border-bottom: 1px solid var(--window-border);
+			border-bottom: var(--window-border);
 		}
 
 		&:nth-last-child(2) {
-			border-top: 1px solid var(--window-border);
-			border-bottom: 1px solid var(--window-border);
+			border-top: var(--window-border);
+			border-bottom: var(--window-border);
 		}
 
 		.collapse-icon {
@@ -64,7 +64,7 @@
 
 	.backlink-pane {
 		padding: unset;
-		border: 1px solid var(--window-border);
+		border: var(--window-border);
 
 		> .tree-item-self {
 			width: unset;
@@ -78,7 +78,7 @@
 		padding: var(--size-4-1);
 		pointer-events: auto;
 		background: var(--background-secondary-blur);
-		border: 1px solid var(--window-border);
+		border: var(--window-border);
 		border-radius: var(--radius-m);
 		box-shadow: var(--shadow-l);
 		-webkit-backdrop-filter: blur(var(--blur-intensity));

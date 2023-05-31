@@ -13,7 +13,7 @@
 	.clickable-icon[aria-label="Search settings"].is-active,
 	.pdf-outline-view .tree-item-self.mod-active {
 		background-color: var(--background-primary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 	}
 
 	.search-result-file-match-destination-file {
@@ -38,7 +38,7 @@
 
 	button.mod-cta {
 		background-color: var(--background-primary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
@@ -48,7 +48,7 @@
 	:is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
 		color: var(--color-red-text);
 		background-color: var(--background-primary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 
 		&:hover {
 			color: var(--color-red-tint);
@@ -58,7 +58,7 @@
 	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
 		color: var(--color-grey-text);
 		background-color: var(--background-primary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 
 		&:hover {
 			color: var(--color-grey-tint);
@@ -68,7 +68,7 @@
 	.setting-command-hotkeys .setting-hotkey {
 		color: var(--color-blue-text);
 		background-color: var(--background-primary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 
 		&.mod-empty {
 			color: var(--text-normal);
@@ -82,11 +82,11 @@
 	:is(.flair.mod-pop, .community-item .flair) {
 		color: var(--color-green-text);
 		background-color: var(--background-secondary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 	}
 
 	button.copy-code-button {
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
@@ -96,7 +96,7 @@
 	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
 	.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
 		background-color: var(--background-primary);
-		border-color: var(--window-border);
+		border-color: var(--window-border-color);
 
 		&:hover {
 			color: var(--interactive-accent-hover);
@@ -109,7 +109,7 @@
 		border-color: transparent;
 
 		&.is-active {
-			border-color: var(--window-border);
+			border-color: var(--window-border-color);
 		}
 	}
 }

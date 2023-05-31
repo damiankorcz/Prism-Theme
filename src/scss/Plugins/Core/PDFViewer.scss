@@ -2,6 +2,7 @@
 .pdf-toolbar {
 	padding: var(--size-4-1) var(--size-4-2);
 	background-color: var(--background-secondary);
+	border-bottom: var(--window-border);
 }
 
 .pdf-viewer {
@@ -13,12 +14,14 @@
 
 	.page {
 		overflow: hidden;
-		border: 1px solid var(--window-border);
+		border: 1px solid var(--window-border-color);
 		border-radius: var(--radius-m);
 	}
 }
 
 .pdf-sidebar-container {
+	border-right: var(--window-border);
+
 	.pdf-thumbnail-view {
 		gap: var(--size-4-2);
 		padding: var(--size-4-2);
@@ -27,7 +30,7 @@
 	.thumbnailSelectionRing {
 		display: flex;
 		padding: unset;
-		border: 1px solid var(--window-border);
+		border: var(--window-border);
 	}
 
 	.thumbnail {
@@ -40,7 +43,7 @@
 			right: var(--size-4-3);
 			bottom: var(--size-4-3);
 			z-index: 99;
-			border: 1px solid var(--window-border);
+			border: 1px solid var(--window-border-color);
 		}
 
 		// Cutout around the page to prevent issues when using the filter

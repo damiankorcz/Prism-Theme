@@ -5,26 +5,26 @@
 	min-width: unset;
 	max-width: unset;
 	padding: 0;
+	border-right: var(--window-border);
 
 	&::-webkit-scrollbar-thumb {
 		border-right: unset;
 	}
-}
-
-.modal.mod-settings .vertical-tab-header::before {
-	position: sticky;
-	top: 0;
-	z-index: var(--layer-cover);
-	display: block;
-	width: -webkit-fill-available;
-	width: fill-available;
-	height: 42px;
-	margin-bottom: -1px;
-	content: "";
-	background: var(--background-secondary-blur);
-	border-bottom: 1px solid var(--window-border);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
+	&::before {
+		position: sticky;
+		top: 0;
+		z-index: var(--layer-cover);
+		display: block;
+		width: -webkit-fill-available;
+		width: fill-available;
+		height: 42px;
+		margin-bottom: -1px;
+		content: "";
+		background: var(--background-secondary-blur);
+		border-bottom: var(--window-border);
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
+	}
 }
 
 .is-phone .modal.mod-settings .modal-title::after,
@@ -44,7 +44,7 @@
 	font-weight: 600;
 	color: var(--interactive-accent-text);
 	content: "Prism 3.2.6";
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 	border-radius: var(--radius-s);
 }
 
@@ -81,7 +81,7 @@
 	height: 42px;
 	content: "";
 	background: var(--background-secondary-blur);
-	border-bottom: 1px solid var(--window-border);
+	border-bottom: var(--window-border);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
 }
@@ -95,8 +95,8 @@
 	color: var(--text-normal);
 	text-align: center;
 	background-color: var(--background-secondary);
-	border-top: 1px solid var(--window-border);
-	border-bottom: 1px solid var(--window-border);
+	border-top: var(--window-border);
+	border-bottom: var(--window-border);
 }
 
 .vertical-tab-header-group-items {
@@ -211,6 +211,8 @@ img.community-theme-lightbox {
 }
 
 .community-modal-search-results-wrapper {
+	border-top: var(--window-border);
+
 	.theme-light & {
 		background-color: var(--background-primary);
 	}
@@ -270,7 +272,7 @@ img.community-theme-lightbox {
 
 	&.setting-item-heading {
 		margin-bottom: var(--size-4-1);
-		border-bottom: 1px solid var(--window-border);
+		border-bottom: 1px solid var(--window-border-color);
 	}
 }
 
@@ -302,7 +304,7 @@ img.community-theme-lightbox {
 .checkbox-container {
 	height: 24px;
 	background-color: var(--background-secondary);
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 	box-shadow: unset;
 
 	&:hover {
@@ -310,7 +312,7 @@ img.community-theme-lightbox {
 	}
 
 	&::after {
-		border: 1px solid var(--window-border);
+		border: 1px solid var(--window-border-color);
 		box-shadow: unset;
 	}
 
@@ -344,7 +346,7 @@ input[type="range"] {
 	width: 125px;
 	height: 0.7em;
 	background-color: var(--background-secondary);
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 	border-radius: var(--size-2-1);
 
 	&:hover {
@@ -360,7 +362,7 @@ input[type="range"] {
 
 select.dropdown {
 	font-family: var(--font-interface);
-	border: 1px solid var(--window-border);
+	border: 1px solid var(--window-border-color);
 	border-radius: var(--radius-s);
 	box-shadow: var(--shadow-s);
 
