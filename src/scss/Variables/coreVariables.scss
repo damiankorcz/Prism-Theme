@@ -95,13 +95,12 @@ body {
 
 	--prompt-border-color: var(--window-border-color);
 
-	--embed-border-top: var(--window-border);
-	--embed-border-bottom: var(--window-border);
-	--embed-border-right: var(--window-border);
 	--embed-border-top: 1px solid var(--window-border-color);
 	--embed-border-bottom: 1px solid var(--window-border-color);
 	--embed-border-right: 1px solid var(--window-border-color);
 	--embed-padding: unset;
+
+	--code-comment: var(--color-grey-text);
 
 	// Custom Prism Properties
 	--blur-intensity: 8px;
@@ -247,6 +246,17 @@ body {
 
 		--pdf-background: var(--background-primary);
 		--pdf-sidebar-background: var(--background-primary);
+
+		&.pt-color-scheme-style-border-only-lt {
+			--background-secondary: var(--background-primary);
+			--background-secondary-blur: var(--background-primary);
+		}
+
+		&.pt-color-scheme-style-minimal-lt {
+			--background-secondary: var(--background-primary);
+			--background-secondary-blur: var(--background-primary);
+			--window-border: 1px solid transparent;
+		}
 
 		&.pt-highlight-text-light-lt {
 			--highlight-text-normal: var(--background-primary);
@@ -423,6 +433,17 @@ body {
 
 		--pdf-background: var(--background-secondary-alt);
 		--pdf-sidebar-background: var(--background-secondary-alt);
+
+		&.pt-color-scheme-style-border-only-dt {
+			--background-secondary: var(--background-secondary-alt);
+			--background-secondary-blur: var(--background-secondary-alt);
+		}
+
+		&.pt-color-scheme-style-minimal-dt {
+			--background-secondary: var(--background-secondary-alt);
+			--background-secondary-blur: var(--background-secondary-alt);
+			--window-border: 1px solid transparent;
+		}
 
 		&.pt-highlight-text-light-dt {
 			--highlight-text-normal: var(--text-normal);

@@ -50,6 +50,23 @@ settings:
                 label: Custom
                 value: pt-color-scheme-custom-lt
     -
+        id: color-scheme-style-lt
+        title: Color Scheme Style
+        description: Adjusts the style used by the main elements in the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-color-scheme-style-default-lt
+        options:
+            -
+                label: Default
+                value: pt-color-scheme-style-default-lt
+            -
+                label: Border Only
+                value: pt-color-scheme-style-border-only-lt
+            -
+                label: Minimal
+                value: pt-color-scheme-style-minimal-lt
+    -
         id: accent-style-lt
         title: Accent Style
         description: Adjusts the style used by the Accented elements in the UI.
@@ -164,7 +181,7 @@ settings:
     -
         id: color-accent-text-lt
         title: Custom Accent Text Color
-        description: Accent Text Color Lightness should ideally be the darkest of the 3.
+        description: Accent Text Color should ideally be the darkest of the 3.
         type: variable-color
         format: hsl-values
         opacity: false
@@ -221,6 +238,23 @@ settings:
             -
                 label: Border & Filled
                 value: pt-accent-style-borderandfilled-dt
+    -
+        id: color-scheme-style-dt
+        title: Color Scheme Style
+        description: Adjusts the style used by the main elements in the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-color-scheme-style-default-dt
+        options:
+            -
+                label: Default
+                value: pt-color-scheme-style-default-dt
+            -
+                label: Border Only
+                value: pt-color-scheme-style-border-only-dt
+            -
+                label: Minimal
+                value: pt-color-scheme-style-minimal-dt
     -
         id: dark-accent-color-preset
         title: Accent Color Preset
@@ -316,7 +350,7 @@ settings:
     -
         id: color-accent-text-dt
         title: Custom Accent Text Color
-        description: Accent Text Color Lightness should ideally be the lightest of the 3.
+        description: Accent Text Color should ideally be the lightest of the 3.
         type: variable-color
         format: hsl-values
         opacity: false

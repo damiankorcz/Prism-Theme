@@ -1,11 +1,23 @@
-// [Plugins - Community] Style Settings
+// [Plugins - Community] Tag Folder
 .workspace-leaf-content[data-type="tagfolder-view"] {
 	.nav-files-container {
 		padding: unset;
 	}
 
 	.nav-folder.mod-root {
-		padding: var(--size-4-1);
+		> .nav-folder-title {
+			align-items: center;
+			justify-content: center;
+			height: var(--header-height);
+			padding: 0 var(--size-4-2);
+			background-color: var(--background-secondary);
+			border-bottom: var(--window-border);
+			border-radius: unset;
+		}
+
+		> .tree-item-children {
+			padding: var(--size-4-1);
+		}
 	}
 
 	.tagfolder-quantity .itemscount {

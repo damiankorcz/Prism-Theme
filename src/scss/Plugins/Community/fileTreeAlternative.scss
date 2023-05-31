@@ -122,13 +122,25 @@
 	}
 
 	#file-tree-divider-horizontal {
+		width: 1px;
+		margin-right: unset;
+		margin-left: unset;
 		border-right: 1px solid var(--window-border-color);
+		opacity: unset;
+
+		&:hover {
+			width: 3px;
+			background-color: var(--divider-color-hover);
+		}
+	}
+
 	.oz-file-tree-files {
 		padding: var(--size-4-1) !important;
 	}
 
 	.oz-nav-file {
 		margin-bottom: var(--size-2-1);
+		margin-left: unset;
 		border: 2px solid transparent;
 		border-radius: var(--radius-s);
 	}

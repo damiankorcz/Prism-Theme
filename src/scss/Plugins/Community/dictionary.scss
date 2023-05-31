@@ -9,10 +9,11 @@
 
 	.search-input-container {
 		display: flex;
-		margin-top: -1px;
+		align-items: center;
+		justify-content: center;
+		height: var(--header-height);
+		padding: var(--size-4-1);
 		background-color: var(--background-secondary);
-		border-top: 1px solid var(--window-border);
-		border-bottom: 1px solid var(--window-border);
 		border-bottom: var(--window-border);
 	}
 
@@ -61,8 +62,14 @@
 
 	.main.svelte-1ufvm6z.svelte-1ufvm6z,
 	.main.svelte-5jhpts.svelte-5jhpts {
-		margin: var(--size-4-2);
+		padding: unset;
+		margin: var(--size-4-1);
 		border-radius: var(--radius-m);
+
+		audio {
+			padding: 0 var(--size-4-2);
+			margin: var(--size-4-2) 0;
+		}
 
 		.theme-light & {
 			background-color: var(--background-primary);
@@ -74,6 +81,7 @@
 	}
 
 	.container.svelte-17ilbu5:nth-child(2) .main.svelte-5jhpts {
+		margin: var(--size-4-2);
 		border: 1px solid var(--window-border-color);
 	}
 
