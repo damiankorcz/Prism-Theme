@@ -1299,7 +1299,7 @@ body.is-mobile.is-phone .setting-item-control input {
   margin: var(--size-4-1);
 }
 body.is-mobile.is-phone .modal.mod-sidebar-layout .modal-title {
-  border-bottom: 1px solid var(--window-border);
+  border-bottom: var(--window-border);
 }
 body.is-mobile.is-phone .community-modal-search-results {
   gap: var(--size-4-2);
@@ -1340,7 +1340,7 @@ body.is-mobile .workspace-drawer {
 }
 body.is-mobile .workspace-drawer:not(.is-pinned) {
   margin: var(--size-4-2);
-  border: 1px solid var(--window-border);
+  border: var(--window-border);
 }
 body.is-mobile .workspace-drawer.is-pinned .workspace-drawer-header {
   padding-top: var(--size-4-2);
@@ -1354,12 +1354,12 @@ body.is-mobile .nav-buttons-container {
 }
 body.is-mobile .workspace-drawer-ribbon {
   background-color: var(--background-secondary);
-  border-right: 1px solid var(--window-border);
+  border-right: var(--window-border);
 }
 body.is-mobile .workspace-drawer-header,
 body.is-mobile .workspace-drawer-active-tab-header {
   background-color: var(--background-secondary);
-  border-bottom: 1px solid var(--window-border);
+  border-bottom: var(--window-border);
 }
 body.is-mobile .workspace-drawer-active-tab-header {
   padding: var(--size-4-3) var(--size-4-5);
@@ -1385,13 +1385,13 @@ body.is-mobile .menu {
   margin-bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
   margin-left: calc(var(--safe-area-inset-left) + var(--size-4-2));
   background-color: var(--background-secondary-blur);
-  border: 1px solid var(--window-border);
+  border: var(--window-border);
   border-radius: var(--radius-m);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
 body.is-mobile .modal {
-  border: 1px solid var(--window-border);
+  border: var(--window-border);
 }
 body.is-mobile .modal.mod-settings .vertical-tab-nav-item {
   border-bottom: var(--accent-border-width) solid transparent;
@@ -1423,7 +1423,7 @@ body.is-mobile.theme-dark .prompt {
 .mobile-toolbar {
   padding: var(--size-4-1);
   background-color: var(--background-secondary);
-  border-top: 1px solid var(--window-border);
+  border-top: var(--window-border);
 }
 
 .AT-multirow .mobile-toolbar {
@@ -1440,7 +1440,7 @@ body.is-mobile.theme-dark .prompt {
 
 .mobile-navbar {
   background: var(--background-secondary-blur);
-  border-top: 1px solid var(--window-border);
+  border-top: var(--window-border);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
 }
@@ -1915,9 +1915,13 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   border-radius: var(--radius-m);
 }
 
+.theme-light .workspace,
+.theme-light .workspace-split.mod-root,
 .theme-light .workspace-tabs .workspace-leaf {
   background-color: var(--background-primary);
 }
+.theme-dark .workspace,
+.theme-dark .workspace-split.mod-root,
 .theme-dark .workspace-tabs .workspace-leaf {
   background-color: var(--background-secondary-alt);
 }
@@ -1926,10 +1930,21 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
   left: -1px;
 }
 
-:is(.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, .workspace-split.mod-left-split > .workspace-leaf-resize-handle, .workspace-split.mod-right-split > .workspace-leaf-resize-handle) {
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
   height: calc(var(--divider-vertical-height) - var(--header-height));
 }
+body.is-frameless:not(.is-hidden-frameless) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle, body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+body.is-frameless:not(.is-hidden-frameless) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+body.is-frameless:not(.is-hidden-frameless) .workspace-split.mod-right-split > .workspace-leaf-resize-handle,
+body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  height: var(--divider-vertical-height);
+}
 
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:not(:hover) {
   border-bottom: var(--window-border);
 }
@@ -4369,6 +4384,90 @@ body:not(.pt-disable-mark-highlight-styling) mark[class]:is(.grey, .Grey) {
   font-variant-ligatures: none;
 }
 
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .status-bar,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .view-header,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-root .workspace-tab-header-container,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed, body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar, body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .status-bar,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .view-header,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-root .workspace-tab-header-container,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-left-split,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-right-split,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-left.is-collapsed,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only:not(.native-scrollbars) ::-webkit-scrollbar,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only:not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .status-bar,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .view-header,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-root .workspace-tab-header-container,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar-thumb,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .status-bar,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .view-header,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-root .workspace-tab-header-container,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-left-split,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-right-split,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-left.is-collapsed,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only:not(.native-scrollbars) ::-webkit-scrollbar,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+  opacity: var(--fade-away-opacity);
+  transition: opacity 250ms;
+  transition-delay: var(--fade-away-delay);
+}
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .status-bar:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .view-header:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-root .workspace-tab-header-container:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed:hover, body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar:hover, body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .status-bar:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .view-header:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-root .workspace-tab-header-container:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-left-split:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-right-split:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-left.is-collapsed:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only:not(.native-scrollbars) ::-webkit-scrollbar:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .status-bar:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .view-header:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-root .workspace-tab-header-container:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window):not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .status-bar:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .view-header:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-root .workspace-tab-header-container:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-left-split:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-right-split:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-left.is-collapsed:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only:not(.native-scrollbars) ::-webkit-scrollbar:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover {
+  opacity: unset;
+  transition: opacity 50ms;
+}
+
 div.workspace-leaf-content[data-type=style-settings] div.view-content {
   padding: var(--file-margins);
   padding-bottom: calc(var(--size-4-8) + var(--scroll-bar-size));
@@ -5417,6 +5516,9 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   background-color: var(--background-secondary);
   border-bottom: var(--window-border);
 }
+.pt-nav-header-left-sidebar-position-top .workspace-leaf-content[data-type=dictionary-view] .search-input-container, .pt-nav-header-right-sidebar-position-top .workspace-leaf-content[data-type=dictionary-view] .search-input-container {
+  border-top: var(--window-border);
+}
 .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   min-height: var(--header-height);
   padding: var(--size-4-2);
@@ -5461,7 +5563,6 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z audio,
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts audio {
   padding: 0 var(--size-4-2);
-  margin: var(--size-4-2) 0;
 }
 .theme-light .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z,
 .theme-light .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
@@ -5481,11 +5582,15 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts .mark {
   box-shadow: inset 0 -2px var(--interactive-accent-text);
 }
-.workspace-leaf-content[data-type=dictionary-view] .opener.svelte-5jhpts.svelte-5jhpts {
+.workspace-leaf-content[data-type=dictionary-view] .opener.svelte-5jhpts.svelte-5jhpts,
+.workspace-leaf-content[data-type=dictionary-view] .opener.svelte-1ufvm6z {
   padding: var(--size-4-1) var(--size-4-2);
 }
 .workspace-leaf-content[data-type=dictionary-view] .definition.svelte-5jhpts.svelte-5jhpts {
   padding: var(--size-4-2) var(--size-4-4);
+}
+.workspace-leaf-content[data-type=dictionary-view] .search-input-container::before {
+  top: unset;
 }
 
 .hover-editor {
@@ -7051,6 +7156,59 @@ settings:
         description: Customise the Vault Banner Icon. Insert a URL to an image in between the brackets of 'url()'.
         type: variable-text
         default: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E)
+    -
+        id: focused-mode
+        title: Focused Mode
+        description: Focused Mode fades away UI distractions so you can better focus on your notes.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pt-focused-mode
+        title: Enable Focused Mode
+        description:
+        default: false
+        type: class-toggle
+        addCommand: true
+    -
+        id: focused-mode-style
+        title: Focused Mode Style
+        description: Select the type of Focused Mode you want to use.
+        type: class-select
+        allowEmpty: false
+        default: pt-focused-style-main-only
+        options:
+            -
+                label: Main Window Only
+                value: pt-focused-style-main-only
+            -
+                label: Popout Windows Only
+                value: pt-focused-style-popout-only
+            -
+                label: Main and Popout Windows
+                value: pt-focused-style-main-and-popout-only
+    -
+        id: fade-away-opacity
+        title: Fade Away Opacity
+        description: Set the opacity value (%) you'd like the UI to fade to.
+        type: variable-number-slider
+        level: 2
+        min: 0
+        max: 100
+        step: 1
+        default: 25
+        format: '%'
+    -
+        id: fade-away-delay
+        title: Fade Away Delay
+        description: Set the delay value (ms) you'd like the UI to stay active after being hovered over.
+        type: variable-number-slider
+        level: 2
+        min: 0
+        max: 4000
+        step: 50
+        default: 850
+        format: 'ms'
     -
         id: editor
         title: Editor
