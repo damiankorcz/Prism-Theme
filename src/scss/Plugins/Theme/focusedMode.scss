@@ -1,0 +1,25 @@
+// [Plugins - Theme] Focused Mode
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window),
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window),
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only {
+	.status-bar,
+	.workspace-ribbon,
+	.view-header,
+	.workspace-split.mod-root .workspace-tab-header-container,
+	.workspace-split.mod-horizontal.mod-left-split,
+	.workspace-split.mod-horizontal.mod-right-split,
+	.workspace-ribbon.mod-left.is-collapsed,
+	.workspace-ribbon.mod-right.is-collapsed,
+	&:not(.native-scrollbars) ::-webkit-scrollbar,
+	&:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
+		opacity: var(--fade-away-opacity);
+		transition: opacity 250ms;
+		transition-delay: var(--fade-away-delay);
+
+		&:hover {
+			opacity: unset;
+			transition: opacity 50ms;
+		}
+	}
+}
