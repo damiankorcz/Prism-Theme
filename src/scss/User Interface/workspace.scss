@@ -13,6 +13,8 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border-radius: var(--radius-m);
 }
 
+.workspace,
+.workspace-split.mod-root,
 .workspace-tabs .workspace-leaf {
 	.theme-light & {
 		background-color: var(--background-primary);
@@ -28,12 +30,22 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	left: -1px;
 }
 
-.workspace-leaf-resize-handle {
-	:is(.workspace-split.mod-vertical > * > &, .workspace-split.mod-left-split > &,	.workspace-split.mod-right-split > &) {
+// Changes the resize handles to not overlap the tab area
+.workspace-split.mod-vertical > * >,
+.workspace-split.mod-left-split >,
+.workspace-split.mod-right-split > {
+	.workspace-leaf-resize-handle {
 		height: calc(var(--divider-vertical-height) - var(--header-height));
+
+		body.is-frameless:not(.is-hidden-frameless) &,
+		body:not(.is-frameless, .is-hidden-frameless) & {
+			height: var(--divider-vertical-height);
+		}
 	}
 }
 
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:not(:hover) {
 	border-bottom: var(--window-border);
 }
@@ -48,7 +60,6 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle:not(:hover) {
 	border-left: var(--window-border);
 }
-
 
 // [UI] View Header
 :is(.is-focused .workspace-leaf.mod-active .view-header, .view-header) {
