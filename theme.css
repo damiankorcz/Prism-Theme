@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.2.6)
+    Prism Theme for Obsidian.md (Version: 3.3.0)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1492,7 +1492,7 @@ body.is-mobile.theme-dark .prompt {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.2.6";
+  content: "Prism 3.3.0";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -3608,22 +3608,29 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   background-color: var(--interactive-accent-text);
 }
 
-:is(.graph-controls-button.mod-close, .graph-controls-button.mod-reset) {
-  top: var(--size-2-3);
+.graph-controls-button.mod-close {
+  top: 0;
+  right: var(--size-4-1);
+  padding: var(--size-2-1);
 }
 
-.theme-light :is(.workspace-leaf-content[data-type=graph] .view-content, .workspace-leaf-content[data-type=localgraph] .view-content) {
+.graph-controls-button.mod-reset {
+  top: 0;
+  padding: var(--size-2-1);
+  right: var(--size-4-8);
+}
+
+.theme-light .workspace-leaf-content[data-type=graph] .view-content,
+.theme-light .workspace-leaf-content[data-type=localgraph] .view-content,
+.theme-light .graph-controls {
   background-color: var(--background-primary);
 }
-.theme-dark :is(.workspace-leaf-content[data-type=graph] .view-content, .workspace-leaf-content[data-type=localgraph] .view-content) {
+.theme-dark .workspace-leaf-content[data-type=graph] .view-content,
+.theme-dark .workspace-leaf-content[data-type=localgraph] .view-content,
+.theme-dark .graph-controls {
   background-color: var(--background-secondary-alt);
 }
 
-.graph-controls {
-  background: var(--background-secondary-blur);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
-}
 .graph-controls.is-close {
   padding: var(--size-4-1);
   background: var(--background-secondary-blur);
@@ -3631,12 +3638,16 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   backdrop-filter: blur(var(--blur-intensity));
   border: 1px solid var(--window-border-color);
 }
-.graph-controls :not(.is-close) {
-  max-height: calc(100% - 25px);
+.graph-controls .tree-item-self {
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--window-border-color);
+  border-radius: unset;
+  padding-left: var(--size-4-6);
+  margin-bottom: -1px;
 }
 
 .graph-control-section {
-  padding: var(--size-4-2);
+  padding: unset;
 }
 .graph-control-section:last-child .tree-item-children {
   padding-bottom: var(--size-4-2);
@@ -3648,7 +3659,7 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   color: var(--highlight-text-normal);
 }
 .graph-control-section .tree-item-children {
-  padding: var(--size-4-1) 0;
+  padding: var(--size-4-2);
 }
 .graph-control-section .setting-item:not(.mod-search-setting) {
   padding: var(--size-2-3) var(--size-4-2);
@@ -4470,7 +4481,7 @@ body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only:not(
 
 div.workspace-leaf-content[data-type=style-settings] div.view-content {
   padding: var(--file-margins);
-  padding-bottom: calc(var(--size-4-8) + var(--scroll-bar-size));
+  padding-bottom: calc(48px + var(--scroll-bar-size));
 }
 body.is-mobile div.workspace-leaf-content[data-type=style-settings] div.view-content {
   padding: 32px 16px;
@@ -4946,15 +4957,42 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border-top: var(--window-border);
   border-bottom: var(--window-border);
 }
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details[open] summary::before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details:not([open]) {
   color: var(--text-faint);
 }
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details:hover summary {
+  color: var(--nav-item-color-hover);
+  background-color: var(--nav-item-background-hover);
+  font-weight: var(--nav-item-weight-hover);
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details:hover summary::before {
+  background-color: var(--nav-item-color-hover);
+}
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details summary {
   position: relative;
+  display: flex;
   padding: var(--size-4-1) var(--size-4-2);
   margin-bottom: -1px;
   font-size: var(--font-ui-small);
   background-color: var(--background-secondary);
+  list-style-type: none;
+}
+.workspace-leaf-content[data-type=dangling-links] .view-content .container details summary::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  -webkit-mask-size: 15px;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  margin-right: var(--size-4-1);
 }
 .workspace-leaf-content[data-type=dangling-links] .view-content .container details ul {
   padding-inline-start: 0;
@@ -5097,7 +5135,7 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   width: 26px;
   height: 26px;
   margin-left: unset;
-  color: var(--text-muted);
+  color: var(--text-faint);
 }
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] .oz-nav-action-button:hover {
   color: var(--highlight-text-normal);
@@ -5365,12 +5403,9 @@ div#cMenuModalBar.cMenuGlassAesthetic {
   border-right: 1px solid var(--color-purple-tint);
 }
 .quiet-outline code {
-  z-index: 10;
-  padding: var(--size-4-1) var(--size-4-2);
-  margin-top: -1px;
-  background-color: var(--background-secondary);
-  border-bottom: var(--window-border);
-  border-radius: unset;
+  padding: 0 var(--size-4-1);
+  border: 1px solid var(--window-border-color);
+  border-radius: var(--radius-s);
 }
 
 .status-bar-item.left-region {
@@ -5416,7 +5451,9 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 .workspace-leaf-content[data-type=tagfolder-view] .nav-folder.mod-root > .tree-item-children {
   padding: var(--size-4-1);
 }
-.workspace-leaf-content[data-type=tagfolder-view] .tagfolder-quantity .itemscount {
+.workspace-leaf-content[data-type=tagfolder-view] .tagfolder-quantity .itemscount,
+.workspace-leaf-content[data-type=tagfolder-view] .nav-folder-title.svelte-m9l3qf:hover .tagfolder-quantity span.svelte-m9l3qf,
+.workspace-leaf-content[data-type=tagfolder-view] .nav-file-title.svelte-m9l3qf:hover .taglist .tags.svelte-m9l3qf {
   font-size: var(--font-ui-smaller);
   color: var(--text-faint);
   background-color: unset;
@@ -5433,6 +5470,14 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   background-color: unset;
 }
 
+.theme-light .workspace-leaf-content[data-type=map] .leaflet-container,
+.theme-light .workspace-leaf-content[data-type=map] .map-view-graph-controls {
+  background-color: var(--background-primary) !important;
+}
+.theme-dark .workspace-leaf-content[data-type=map] .leaflet-container,
+.theme-dark .workspace-leaf-content[data-type=map] .map-view-graph-controls {
+  background-color: var(--background-secondary-alt) !important;
+}
 .workspace-leaf-content[data-type=map] .leaflet-control:not(.leaflet-control-attribution) {
   padding: var(--size-4-1);
   background: var(--background-secondary-blur);
@@ -5468,12 +5513,61 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   color: var(--text-accent-hover);
 }
 .workspace-leaf-content[data-type=map] .map-view-graph-controls {
-  padding: var(--size-4-2);
-  background: var(--background-secondary-blur);
+  padding: unset;
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-m);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
+  overflow-y: hidden;
+}
+.workspace-leaf-content[data-type=map] .graph-control-div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: unset;
+  margin-bottom: -1px;
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:first-of-type .graph-control-content {
+  padding: var(--size-4-1);
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .graph-control-content {
+  padding: var(--size-4-2);
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .graph-control-content > *:not(:last-child) {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.workspace-leaf-content[data-type=map] .lbl-triangle {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  -webkit-mask-size: 15px;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  margin-right: var(--size-4-1);
+}
+.workspace-leaf-content[data-type=map] .lbl-toggle {
+  padding: var(--size-4-1) var(--size-4-2);
+  width: -webkit-fill-available;
+  width: fill-available;
+  border-bottom: var(--window-border);
+  background-color: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=map] .lbl-toggle:hover {
+  color: var(--nav-item-color-hover);
+  background-color: var(--nav-item-background-hover);
+  font-weight: var(--nav-item-weight-hover);
+}
+.workspace-leaf-content[data-type=map] .lbl-toggle:hover::before {
+  background-color: var(--nav-item-color-hover);
+}
+.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .lbl-toggle {
+  border-top: var(--window-border);
+}
+.workspace-leaf-content[data-type=map] .controls-toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg);
+  top: 0px;
 }
 .workspace-leaf-content[data-type=map] .search-input-container {
   display: flex;
@@ -5481,17 +5575,6 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 .workspace-leaf-content[data-type=map] .graph-control-follow-div {
   display: flex;
   align-items: center;
-}
-.workspace-leaf-content[data-type=map] .graph-control-div:first-of-type .graph-control-content {
-  padding-top: var(--size-4-1);
-}
-.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .graph-control-content {
-  padding: var(--size-4-3) var(--size-4-2) var(--size-2-3);
-}
-.workspace-leaf-content[data-type=map] .graph-control-div:not(:first-of-type) .graph-control-content > *:not(:last-child) {
-  display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 8px;
 }
 .workspace-leaf-content[data-type=map] .leaflet-popup-content-wrapper,
 .workspace-leaf-content[data-type=map] .leaflet-popup-tip {
@@ -5530,13 +5613,13 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   color: var(--highlight-text-normal);
   background-color: var(--background-modifier-hover);
 }
-.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5.svelte-17ilbu5 {
+.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5 {
   padding: unset;
   margin-top: unset;
   background-color: unset;
   border-radius: unset;
 }
-.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5.svelte-17ilbu5 h3 {
+.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5 h3 {
   padding: var(--size-4-1) var(--size-4-2);
   margin: -1px 0 0;
   font-size: var(--font-ui-small);
@@ -5545,24 +5628,25 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   border-top: var(--window-border);
   border-bottom: var(--window-border);
 }
-.workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5.svelte-17ilbu5 {
+.workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5 {
   height: 100%;
 }
-.theme-light .workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5.svelte-17ilbu5 {
+.theme-light .workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5 {
   background-color: var(--background-primary);
 }
-.theme-dark .workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5.svelte-17ilbu5 {
+.theme-dark .workspace-leaf-content[data-type=dictionary-view] .contents.svelte-17ilbu5 {
   background-color: var(--background-secondary-alt);
 }
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z,
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
   padding: unset;
-  margin: var(--size-4-1);
-  border-radius: var(--radius-m);
+  border-radius: unset;
+  margin-bottom: unset;
 }
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z audio,
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts audio {
   padding: 0 var(--size-4-2);
+  margin: --size-4-2 0;
 }
 .theme-light .workspace-leaf-content[data-type=dictionary-view] .main.svelte-1ufvm6z.svelte-1ufvm6z,
 .theme-light .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
@@ -5572,19 +5656,56 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 .theme-dark .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
   background-color: var(--background-secondary-alt);
 }
-.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5:nth-child(2) .main.svelte-5jhpts {
+.workspace-leaf-content[data-type=dictionary-view] .container.svelte-17ilbu5:nth-child(2) .main.svelte-5jhpts > div:nth-child(2) {
   margin: var(--size-4-2);
   border: 1px solid var(--window-border-color);
+  border-radius: var(--radius-m);
 }
-.workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts.svelte-5jhpts {
+.workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts {
   padding: unset;
 }
 .workspace-leaf-content[data-type=dictionary-view] .main.svelte-5jhpts .mark {
   box-shadow: inset 0 -2px var(--interactive-accent-text);
 }
-.workspace-leaf-content[data-type=dictionary-view] .opener.svelte-5jhpts.svelte-5jhpts,
-.workspace-leaf-content[data-type=dictionary-view] .opener.svelte-1ufvm6z {
+.workspace-leaf-content[data-type=dictionary-view] .main:first-of-type .opener {
+  margin-top: -1px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener {
+  background-color: var(--background-secondary);
   padding: var(--size-4-1) var(--size-4-2);
+  display: flex;
+  align-items: center;
+  border-top: var(--window-border);
+  border-bottom: var(--window-border);
+  font-size: var(--font-ui-small);
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener:not([open]) {
+  margin-bottom: -1px;
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener:hover {
+  color: var(--nav-item-color-hover);
+  background-color: var(--nav-item-background-hover);
+  font-weight: var(--nav-item-weight-hover);
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener:hover .tree-item-icon svg {
+  background-color: var(--nav-item-color-hover);
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener .tree-item-icon svg {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  -webkit-mask-size: 15px;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  margin-right: var(--size-4-1);
+}
+.workspace-leaf-content[data-type=dictionary-view] .opener .tree-item-icon::after, .workspace-leaf-content[data-type=dictionary-view] .opener .tree-item-icon::before,
+.workspace-leaf-content[data-type=dictionary-view] .opener .tree-item-icon svg path {
+  display: none;
 }
 .workspace-leaf-content[data-type=dictionary-view] .definition.svelte-5jhpts.svelte-5jhpts {
   padding: var(--size-4-2) var(--size-4-4);
@@ -7159,14 +7280,15 @@ settings:
     -
         id: focused-mode
         title: Focused Mode
-        description: Focused Mode fades away UI distractions so you can better focus on your notes.
+        markdown: true
+        description: Focused Mode fades away UI distractions so you can better focus on your notes. Look in the Prism Wiki for a guide.
         type: heading
         level: 2
         collapsed: true
     -
         id: pt-focused-mode
         title: Enable Focused Mode
-        description:
+        description: This toggle can be bound to a hotkey! Look for `Style Settings Toggle Enable Focused Mode` in `Settings -> Hotkeys Tab` to bind it.
         default: false
         type: class-toggle
         addCommand: true
