@@ -1,27 +1,30 @@
 // [Plugins - Core] Graph Base
-.graph-controls-button {
-	:is(&.mod-close, &.mod-reset) {
-		top: var(--size-2-3);
-	}
+
+.graph-controls-button.mod-close {
+	top: 0;
+	right: var(--size-4-1);
+	padding: var(--size-2-1);
 }
 
-.view-content {
-	:is(.workspace-leaf-content[data-type="graph"] &, .workspace-leaf-content[data-type="localgraph"] &) {
-		.theme-light & {
-			background-color: var(--background-primary);
-		}
+.graph-controls-button.mod-reset {
+	top: 0;
+	padding: var(--size-2-1);
+	right: var(--size-4-8);
+}
 
-		.theme-dark & {
-			background-color: var(--background-secondary-alt);
-		}
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="localgraph"] .view-content,
+.graph-controls {
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
 	}
 }
 
 .graph-controls {
-	background: var(--background-secondary-blur);
-	-webkit-backdrop-filter: blur(var(--blur-intensity));
-	backdrop-filter: blur(var(--blur-intensity));
-
 	&.is-close {
 		padding: var(--size-4-1);
 		background: var(--background-secondary-blur);
@@ -30,13 +33,17 @@
 		border: 1px solid var(--window-border-color);
 	}
 
-	:not(.is-close) {
-		max-height: calc(100% - 25px);
+	.tree-item-self {
+		background-color: var(--background-secondary);
+		border-bottom: 1px solid var(--window-border-color);
+		border-radius: unset;
+		padding-left: var(--size-4-6); 
+		margin-bottom: -1px;
 	}
 }
 
 .graph-control-section {
-	padding: var(--size-4-2);
+	padding: unset;
 
 	&:last-child .tree-item-children {
 		padding-bottom: var(--size-4-2);
@@ -50,7 +57,7 @@
 	}
 
 	.tree-item-children {
-		padding: var(--size-4-1) 0;
+		padding: var(--size-4-2);
 	}
 
 	.setting-item:not(.mod-search-setting) {
