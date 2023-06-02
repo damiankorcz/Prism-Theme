@@ -36,7 +36,7 @@
 		}
 	}
 
-	.container.svelte-17ilbu5.svelte-17ilbu5 {
+	.container.svelte-17ilbu5 {
 		padding: unset;
 		margin-top: unset;
 		background-color: unset;
@@ -53,7 +53,7 @@
 		}
 	}
 
-	.contents.svelte-17ilbu5.svelte-17ilbu5 {
+	.contents.svelte-17ilbu5 {
 		height: 100%;
 
 		.theme-light & {
@@ -68,11 +68,12 @@
 	.main.svelte-1ufvm6z.svelte-1ufvm6z,
 	.main.svelte-5jhpts.svelte-5jhpts {
 		padding: unset;
-		margin: var(--size-4-1);
-		border-radius: var(--radius-m);
+		border-radius: unset;
+		margin-bottom: unset;
 
 		audio {
 			padding: 0 var(--size-4-2);
+			margin: (--size-4-2) 0;
 		}
 
 		.theme-light & {
@@ -84,22 +85,69 @@
 		}
 	}
 
-	.container.svelte-17ilbu5:nth-child(2) .main.svelte-5jhpts {
+	.container.svelte-17ilbu5:nth-child(2) .main.svelte-5jhpts > div:nth-child(2) {
 		margin: var(--size-4-2);
 		border: 1px solid var(--window-border-color);
+		border-radius: var(--radius-m);
 	}
 
-	.main.svelte-5jhpts.svelte-5jhpts {
+	.main.svelte-5jhpts {
 		padding: unset;
+
+		.mark {
+			box-shadow: inset 0 -2px var(--interactive-accent-text);
+		}
 	}
 
-	.main.svelte-5jhpts .mark {
-		box-shadow: inset 0 -2px var(--interactive-accent-text);
+	// Overlaps the borders when collapsed
+	.main:first-of-type .opener {
+		margin-top: -1px;
 	}
 
-	.opener.svelte-5jhpts.svelte-5jhpts,
-	.opener.svelte-1ufvm6z {
+	.opener {
+		background-color: var(--background-secondary);
 		padding: var(--size-4-1) var(--size-4-2);
+		display: flex;
+		align-items: center;
+		border-top: var(--window-border);
+		border-bottom: var(--window-border);
+
+		&:not([open]) {
+			margin-bottom: -1px;
+		}
+
+		&:hover {
+			color: var(--nav-item-color-hover);
+			background-color: var(--nav-item-background-hover);
+			font-weight: var(--nav-item-weight-hover);
+
+			.tree-item-icon svg {
+				background-color: var(--nav-item-color-hover);
+			}
+		}
+
+		// Replaces the dropdown icon with one that matches others in Obsidian
+		.tree-item-icon {
+			svg {
+				content: '';
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				background-color: var(--text-muted);
+				-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+				mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+				-webkit-mask-size: 15px;
+				-webkit-mask-position: center;
+				-webkit-mask-repeat: no-repeat;
+				margin-right: var(--size-4-1);
+			}
+
+			&::after,
+			&::before,
+			svg path {
+				display: none;
+			}
+		}
 	}
 
 	.definition.svelte-5jhpts.svelte-5jhpts {
