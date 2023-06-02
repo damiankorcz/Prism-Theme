@@ -17,16 +17,49 @@
 				border-bottom: var(--window-border);
 			}
 
+			// Rotates the image to match
+			&[open]	summary::before {
+				-webkit-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+
 			&:not([open]) {
 				color: var(--text-faint);
 			}
 
+			&:hover summary {
+				color: var(--nav-item-color-hover);
+				background-color: var(--nav-item-background-hover);
+				font-weight: var(--nav-item-weight-hover);
+
+				&::before {
+					background-color: var(--nav-item-color-hover);
+				}
+			}
+
 			summary {
 				position: relative;
+				display: flex;
 				padding: var(--size-4-1) var(--size-4-2);
 				margin-bottom: -1px;
 				font-size: var(--font-ui-small);
 				background-color: var(--background-secondary);
+				list-style-type: none; // Disables the default marker which was used as a dropdown icon
+
+				// Replaces the dropdown icon with one that matches others in Obsidian
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					background-color: var(--text-muted);
+					-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+					mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+					-webkit-mask-size: 15px;
+					-webkit-mask-position: center;
+					-webkit-mask-repeat: no-repeat;
+					margin-right: var(--size-4-1);
+				}
 			}
 
 			ul {
