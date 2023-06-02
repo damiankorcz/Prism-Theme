@@ -1,5 +1,16 @@
 // [Plugins - Community] Map View
 .workspace-leaf-content[data-type="map"] {
+	.leaflet-container,
+	.map-view-graph-controls {
+		.theme-light & {
+			background-color: var(--background-primary) !important;
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt) !important;
+		}
+	}
+
 	.leaflet-control:not(.leaflet-control-attribution) {
 		padding: var(--size-4-1);
 		background: var(--background-secondary-blur);
@@ -43,12 +54,72 @@
 	}
 
 	.map-view-graph-controls {
-		padding: var(--size-4-2);
-		background: var(--background-secondary-blur);
+		padding: unset;
 		border: 1px solid var(--window-border-color);
 		border-radius: var(--radius-m);
-		-webkit-backdrop-filter: blur(var(--blur-intensity));
-		backdrop-filter: blur(var(--blur-intensity));
+		overflow-y: hidden;
+	}
+
+	.graph-control-div {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: unset;
+		margin-bottom: -1px;
+
+		&:first-of-type .graph-control-content {
+			padding: var(--size-4-1);
+		}
+
+		&:not(:first-of-type) .graph-control-content {
+			padding: var(--size-4-2);
+
+			> *:not(:last-child) {
+				display: inline-block;
+				margin-right: 8px;
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	// Replaces the dropdown icon with one that matches others in Obsidian
+	.lbl-triangle {
+		content: '';
+		width: 15px;
+		height: 15px;
+		background-color: var(--text-muted);
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+		mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+		-webkit-mask-size: 15px;
+		-webkit-mask-position: center;
+		-webkit-mask-repeat: no-repeat;
+		margin-right: var(--size-4-1);
+	}
+
+	.lbl-toggle {
+		padding: var(--size-4-1) var(--size-4-2);
+		width: -webkit-fill-available;
+		width: fill-available;
+		border-bottom: var(--window-border);
+		background-color: var(--background-secondary);
+
+		&:hover {
+			color: var(--nav-item-color-hover);
+			background-color: var(--nav-item-background-hover);
+			font-weight: var(--nav-item-weight-hover);
+
+			&::before {
+				background-color: var(--nav-item-color-hover);
+			}
+		}
+	}
+
+	.graph-control-div:not(:first-of-type) .lbl-toggle {
+		border-top: var(--window-border);
+	}
+
+	.controls-toggle:checked + .lbl-toggle::before {
+		transform: rotate(90deg);
+		top: 0px;
 	}
 
 	.search-input-container {
@@ -60,21 +131,6 @@
 		align-items: center;
 	}
 
-	.graph-control-div {
-		&:first-of-type .graph-control-content {
-			padding-top: var(--size-4-1);
-		}
-
-		&:not(:first-of-type) .graph-control-content {
-			padding: var(--size-4-3) var(--size-4-2) var(--size-2-3);
-
-			> *:not(:last-child) {
-				display: inline-block;
-				margin-right: 8px;
-				margin-bottom: 8px;
-			}
-		}
-	}
 
 	.leaflet-popup-content-wrapper,
 	.leaflet-popup-tip {
