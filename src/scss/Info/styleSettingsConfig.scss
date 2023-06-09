@@ -75,6 +75,9 @@ settings:
         default: pt-accent-style-borderandfilled-lt
         options:
             -
+                label: Minimal
+                value: pt-accent-style-minimal-lt
+            -
                 label: Plain
                 value: pt-accent-style-plain-lt
             -
@@ -219,26 +222,6 @@ settings:
                 label: Custom
                 value: pt-color-scheme-custom-dt
     -
-        id: accent-style-dt
-        title: Accent Style
-        description: Adjusts the style used by the Accented elements in the UI.
-        type: class-select
-        allowEmpty: false
-        default: pt-accent-style-borderandfilled-dt
-        options:
-            -
-                label: Plain
-                value: pt-accent-style-plain-dt
-            -
-                label: Border
-                value: pt-accent-style-border-dt
-            -
-                label: Filled
-                value: pt-accent-style-filled-dt
-            -
-                label: Border & Filled
-                value: pt-accent-style-borderandfilled-dt
-    -
         id: color-scheme-style-dt
         title: Color Scheme Style
         description: Adjusts the style used by the main elements in the UI.
@@ -255,6 +238,29 @@ settings:
             -
                 label: Minimal
                 value: pt-color-scheme-style-minimal-dt
+    -
+        id: accent-style-dt
+        title: Accent Style
+        description: Adjusts the style used by the Accented elements in the UI.
+        type: class-select
+        allowEmpty: false
+        default: pt-accent-style-borderandfilled-dt
+        options:
+            -
+                label: Minimal
+                value: pt-accent-style-minimal-dt
+            -
+                label: Plain
+                value: pt-accent-style-plain-dt
+            -
+                label: Border
+                value: pt-accent-style-border-dt
+            -
+                label: Filled
+                value: pt-accent-style-filled-dt
+            -
+                label: Border & Filled
+                value: pt-accent-style-borderandfilled-dt
     -
         id: dark-accent-color-preset
         title: Accent Color Preset
@@ -1345,7 +1351,6 @@ settings:
     -
         id: focused-mode
         title: Focused Mode
-        markdown: true
         description: Focused Mode fades away UI distractions so you can better focus on your notes. Look in the Prism Wiki for a guide.
         type: heading
         level: 2
@@ -1354,8 +1359,8 @@ settings:
         id: pt-focused-mode
         title: Enable Focused Mode
         description: This toggle can be bound to a hotkey! Look for `Style Settings Toggle Enable Focused Mode` in `Settings -> Hotkeys Tab` to bind it.
-        default: false
         type: class-toggle
+        default: false
         addCommand: true
     -
         id: focused-mode-style
