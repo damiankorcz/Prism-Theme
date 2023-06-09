@@ -5,56 +5,57 @@
 
 	// Base colours are used for the backgrounds in the accented color areas.
 	--color-grey-base-hsl:     0,   0%, 90%;
-	--color-red-base-hsl:      7,  84%, 93%;
-	--color-orange-base-hsl:  26,  81%, 90%;
-	--color-yellow-base-hsl:  41,  87%, 85%;
-	--color-green-base-hsl:  101,  47%, 87%;
-	--color-mint-base-hsl:   153,  59%, 86%;
-	--color-cyan-base-hsl:   184,  57%, 86%;
-	--color-blue-base-hsl:   221,  74%, 93%;
+	--color-red-base-hsl:      7,  85%, 92%;
+	--color-orange-base-hsl:  25,  81%, 90%;
+	--color-yellow-base-hsl:  41,  88%, 84%;
+	--color-green-base-hsl:  101,  47%, 86%;
+	--color-mint-base-hsl:   153,  61%, 85%;
+	--color-cyan-base-hsl:   184,  58%, 86%;
+	--color-blue-base-hsl:   220,  75%, 92%;
 	--color-purple-base-hsl: 252,  81%, 94%;
-	--color-pink-base-hsl:   327,  73%, 93%;
+	--color-pink-base-hsl:   329,  73%, 93%;
 
 	// Tint colours are used for the borders in the accented color areas.
 	--color-grey-tint-hsl:     0,   0%, 73%;
-	--color-red-tint-hsl:      8,  77%, 78%;
-	--color-orange-tint-hsl:  27,  76%, 69%;
-	--color-yellow-tint-hsl:  43,  64%, 59%;
+	--color-red-tint-hsl:      7,  77%, 78%;
+	--color-orange-tint-hsl:  27,  75%, 70%;
+	--color-yellow-tint-hsl:  43,  65%, 59%;
 	--color-green-tint-hsl:   99,  48%, 60%;
-	--color-mint-tint-hsl:   158,  55%, 56%;
+	--color-mint-tint-hsl:   158,  56%, 56%;
 	--color-cyan-tint-hsl:   184,  58%, 58%;
-	--color-blue-tint-hsl:   219,  70%, 78%;
-	--color-purple-tint-hsl: 252,  76%, 82%;
-	--color-pink-tint-hsl:   326,  67%, 78%;
+	--color-blue-tint-hsl:   220,  70%, 78%;
+	--color-purple-tint-hsl: 253,  75%, 83%;
+	--color-pink-tint-hsl:   327,  67%, 79%;
 
 	// Text colours are used for the Text in the accented color areas and other Text areas which use the theme colours
 	// e.g. Syntax Highlighting, Mark Highlight System, etc.
-	--color-grey-text-hsl:     0,   0%, 51%;
-	--color-red-text-hsl:      5,  66%, 58%;
-	--color-orange-text-hsl:  31,  82%, 42%;
-	--color-yellow-text-hsl:  38,  53%, 43%;
-	--color-green-text-hsl:   95,  67%, 35%;
-	--color-mint-text-hsl:   163, 100%, 29%;
-	--color-cyan-text-hsl:   184, 100%, 30%;
-	--color-blue-text-hsl:   221,  65%, 60%;
-	--color-purple-text-hsl: 257,  71%, 67%;
-	--color-pink-text-hsl:   322,  60%, 57%;
+	--color-grey-text-hsl:     0,   0%, 47%;
+	--color-red-text-hsl:      3,  64%, 53%;
+	--color-orange-text-hsl:  33, 100%, 35%;
+	--color-yellow-text-hsl:  37,  55%, 39%;
+	--color-green-text-hsl:   91,  93%, 27%;
+	--color-mint-text-hsl:   162, 100%, 27%;
+	--color-cyan-text-hsl:   184, 100%, 28%;
+	--color-blue-text-hsl:   221,  64%, 56%;
+	--color-purple-text-hsl: 257,  69%, 63%;
+	--color-pink-text-hsl:   321,  57%, 51%;
 
 	// Default theme variable overwrites for different shades of text used in the editor and around the UI.
-	--text-normal: hsl(28, 42%, 15%);
-	--text-muted:  hsl(28, 42%, 20%);
-	--text-faint:  hsl(28, 42%, 35%);
+	--text-normal-hsl: 28, 42%, 15%;
+	--text-muted-hsl:  28, 42%, 20%;
+	--text-faint-hsl:  28, 42%, 35%;
 
 	// Default theme variable overwrites for the UI background colours.
-	--background-primary:        hsl(28, 42%, 98%);
-	--background-primary-alt:    hsl(28, 42%, 93%);
-	--background-secondary:      hsl(28, 42%, 90%);;
-	--background-secondary-blur: hsla(28, 42%, 89%, 80%); // Custom variable based on the one above for UI areas which use the frosted effect.
-	--background-secondary-alt:  hsl(28, 42%, 66%);
+	--background-primary-hsl:        28, 42%, 98%;
+	--background-primary-alt-hsl:    28, 42%, 93%;
+	--background-secondary-hsl:      28, 42%, 90%;
+	--background-secondary-blur-hsl: 28, 42%, 88%;
+	--background-secondary-alt-hsl:  28, 42%, 66%;
 
 	// Default theme variable overwrites for shadows used on modals and popups.
-	--shadow-s: hsla(28, 42%, 7%, 10%) 0 1px 2px 0;
-	--shadow-l: hsla(28, 42%, 7%, 4%) 0 1px 2px, hsla(28, 42%, 7%, 4%) 0 2px 4px, hsla(28, 42%, 7%, 4%) 0 4px 8px, hsla(28, 42%, 7%, 4%) 0 8px 16px;
+	--shadow-color-hsl: 28, 42%, 7%;
+	--shadow-s: hsla(var(--shadow-color-hsl), 10%) 0 1px 2px 0;
+	--shadow-l: hsla(var(--shadow-color-hsl), 4%) 0 1px 2px, hsla(var(--shadow-color-hsl), 4%) 0 2px 4px, hsla(var(--shadow-color-hsl), 4%) 0 4px 8px, hsla(var(--shadow-color-hsl), 4%) 0 6px 12px;
 }
 
 // [Color Scheme - Coffee] Dark Theme
@@ -63,55 +64,56 @@
 	// variables down the line in the theme and being able to create variants with varying alpha values (HSLA).
 
 	// Base colours are used for the backgrounds in the accented color areas.
-	--color-grey-base-hsl:     0,   0%, 15%;
-	--color-red-base-hsl:      2,  54%, 18%;
-	--color-orange-base-hsl:  26,  66%, 14%;
-	--color-yellow-base-hsl:  44,  75%, 11%;
-	--color-green-base-hsl:  124,  55%, 11%;
-	--color-mint-base-hsl:   165,  87%,  9%;
-	--color-cyan-base-hsl:   195,  65%, 12%;
-	--color-blue-base-hsl:   224,  51%, 19%;
-	--color-purple-base-hsl: 271,  48%, 20%;
-	--color-pink-base-hsl:   325,  56%, 18%;
+	--color-grey-base-hsl:     0,  0%, 17%;
+	--color-red-base-hsl:      2, 50%, 20%;
+	--color-orange-base-hsl:  26, 58%, 16%;
+	--color-yellow-base-hsl:  43, 64%, 13%;
+	--color-green-base-hsl:  122, 47%, 13%;
+	--color-mint-base-hsl:   165, 75%, 11%;
+	--color-cyan-base-hsl:   196, 57%, 15%;
+	--color-blue-base-hsl:   225, 47%, 21%;
+	--color-purple-base-hsl: 271, 45%, 22%;
+	--color-pink-base-hsl:   326, 50%, 20%;
 
 	// Tint colours are used for the borders in the accented color areas.
-	--color-grey-tint-hsl:     0,   0%, 41%;
-	--color-red-tint-hsl:      4,  49%, 47%;
-	--color-orange-tint-hsl:  26,  53%, 38%;
-	--color-yellow-tint-hsl:  43,  59%, 31%;
-	--color-green-tint-hsl:  124,  43%, 32%;
-	--color-mint-tint-hsl:   166,  72%, 27%;
-	--color-cyan-tint-hsl:   195,  52%, 35%;
-	--color-blue-tint-hsl:   225,  43%, 50%;
-	--color-purple-tint-hsl: 271,  45%, 52%;
-	--color-pink-tint-hsl:   326,  47%, 46%;
+	--color-grey-tint-hsl:     0,  0%, 41%;
+	--color-red-tint-hsl:      4, 46%, 47%;
+	--color-orange-tint-hsl:  26, 49%, 38%;
+	--color-yellow-tint-hsl:  43, 53%, 32%;
+	--color-green-tint-hsl:  123, 39%, 33%;
+	--color-mint-tint-hsl:   164, 61%, 29%;
+	--color-cyan-tint-hsl:   195, 47%, 36%;
+	--color-blue-tint-hsl:   225, 42%, 50%;
+	--color-purple-tint-hsl: 271, 41%, 51%;
+	--color-pink-tint-hsl:   326, 44%, 46%;
 
 	// Text colours are used for the Text in the accented color areas and other Text areas which use the theme colours
 	// e.g. Syntax Highlighting, Mark Highlight System, etc.
-	--color-grey-text-hsl:     0,   0%, 69%;
-	--color-red-text-hsl:      4,  74%, 76%;
-	--color-orange-text-hsl:  25,  85%, 66%;
-	--color-yellow-text-hsl:  44,  63%, 54%;
-	--color-green-text-hsl:  124,  51%, 55%;
-	--color-mint-text-hsl:   166,  68%, 46%;
-	--color-cyan-text-hsl:   196,  73%, 60%;
-	--color-blue-text-hsl:   226,  61%, 76%;
-	--color-purple-text-hsl: 267,  52%, 76%;
-	--color-pink-text-hsl:   330,  64%, 75%;
+	--color-grey-text-hsl:     0,  0%, 63%;
+	--color-red-text-hsl:      4, 70%, 70%;
+	--color-orange-text-hsl:  26, 67%, 59%;
+	--color-yellow-text-hsl:  43, 50%, 50%;
+	--color-green-text-hsl:  122, 39%, 52%;
+	--color-mint-text-hsl:   165, 56%, 45%;
+	--color-cyan-text-hsl:   196, 55%, 55%;
+	--color-blue-text-hsl:   225, 56%, 70%;
+	--color-purple-text-hsl: 268, 48%, 71%;
+	--color-pink-text-hsl:   329, 61%, 70%;
 
 	// Default theme variable overwrites for different shades of text used in the editor and around the UI.
-	--text-normal: hsl(27, 40%, 95%);
-	--text-muted:  hsl(27, 40%, 85%);
-	--text-faint:  hsl(27, 40%, 75%);
+	--text-normal-hsl: 25, 40%, 88%;
+	--text-muted-hsl:  25, 40%, 83%;
+	--text-faint-hsl:  25, 40%, 78%;
 
 	// Default theme variable overwrites for the UI background colours.
-	--background-primary:        hsl(27, 40%, 15%);
-	--background-primary-alt:    hsl(27, 40%, 34%);
-	--background-secondary:      hsl(27, 40%, 13%);
-	--background-secondary-blur: hsla(27, 40%, 14%, 80%); // Custom variable based on the one above for UI areas which use the frosted effect.
-	--background-secondary-alt:  hsl(27, 40%, 8%);
+	--background-primary-hsl:        25, 40%, 18%;
+	--background-primary-alt-hsl:    25, 40%, 28%;
+	--background-secondary-hsl:      25, 40%, 12%;
+	--background-secondary-blur-hsl: 25, 40%, 13%;
+	--background-secondary-alt-hsl:  25, 40%,  8%;
 
 	// Default theme variable overwrites for shadows used on modals and popups.
-	--shadow-s: hsla(27, 40%, 7%, 50%) 0 1px 2px 0;
-	--shadow-l: hsla(27, 40%, 7%, 50%) 0 1px 2px, hsla(27, 40%, 7%, 50%) 0 2px 4px, hsla(27, 40%, 7%, 50%) 0 4px 8px, hsla(27, 40%, 7%, 50%) 0 8px 16px;
+	--shadow-color-hsl: 25, 40%, 7%;
+	--shadow-s: hsla(var(--shadow-color-hsl), 50%) 0 1px 2px 0;
+	--shadow-l: hsla(var(--shadow-color-hsl), 50%) 0 1px 2px, hsla(var(--shadow-color-hsl), 50%) 0 2px 4px, hsla(var(--shadow-color-hsl), 50%) 0 4px 8px, hsla(var(--shadow-color-hsl), 50%) 0 6px 12px;
 }
