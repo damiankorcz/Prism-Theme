@@ -269,3 +269,21 @@ body:not(.pt-disable-callout-styling) {
 		}
 	}
 }
+
+// Specific styling for the unconventional use of the callout in Release Notes
+.release-notes-view .callout[data-callout] > {
+	.callout-title {
+		color: var(--color-grey-text);
+		background-color: var(--color-grey-base);
+		border-color: var(--color-grey-tint);
+
+		.callout-icon .svg-icon {
+			color: var(--color-grey-text);
+		}
+	}
+
+	.callout-content {
+		background-color: hsla(var(--color-grey-base-hsl), var(--callout-background-alpha));
+		border-color: var(--color-grey-tint);
+	}
+}
