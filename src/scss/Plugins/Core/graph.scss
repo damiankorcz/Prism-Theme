@@ -1,5 +1,4 @@
 // [Plugins - Core] Graph Base
-
 .graph-controls-button.mod-close {
 	top: 0;
 	right: var(--size-4-1);
@@ -8,8 +7,8 @@
 
 .graph-controls-button.mod-reset {
 	top: 0;
-	padding: var(--size-2-1);
 	right: var(--size-4-8);
+	padding: var(--size-2-1);
 }
 
 .workspace-leaf-content[data-type="graph"] .view-content,
@@ -25,6 +24,10 @@
 }
 
 .graph-controls {
+	// Replaces set width with min width so that when everything is collapsed it can take less space
+	width: unset;
+	min-width: var(--graph-controls-width);
+
 	&.is-close {
 		padding: var(--size-4-1);
 		background: var(--background-secondary-blur);
@@ -34,11 +37,11 @@
 	}
 
 	.tree-item-self {
+		padding-left: var(--size-4-6);
+		margin-bottom: -1px;
 		background-color: var(--background-secondary);
 		border-bottom: 1px solid var(--window-border-color);
 		border-radius: unset;
-		padding-left: var(--size-4-6); 
-		margin-bottom: -1px;
 	}
 }
 
