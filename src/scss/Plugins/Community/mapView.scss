@@ -61,8 +61,10 @@
 	}
 
 	.graph-control-div {
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
+		// white-space: nowrap;
+		position: relative;
 		padding-bottom: unset;
 		margin-bottom: -1px;
 
@@ -81,11 +83,14 @@
 		}
 	}
 
-	// Replaces the dropdown icon with one that matches others in Obsidian
+	// Replaces the dropdown icon with one that matches others in Obsidian. Overlaps the toggle and isn't clickable anymore since the toggle spans the whole width and the click function does the same thing.
 	.lbl-triangle {
+		position: absolute;
 		content: '';
 		width: 15px;
 		height: 15px;
+		top: var(--size-2-3);
+		left: var(--size-2-3);
 		background-color: var(--text-muted);
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
 		mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
@@ -93,12 +98,13 @@
 		-webkit-mask-position: center;
 		-webkit-mask-repeat: no-repeat;
 		margin-right: var(--size-4-1);
+		pointer-events: none;
 	}
 
 	.lbl-toggle {
-		padding: var(--size-4-1) var(--size-4-2);
-		width: -webkit-fill-available;
-		width: fill-available;
+		padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
+		display: inline-block;
+		width: 100%;
 		border-bottom: var(--window-border);
 		background-color: var(--background-secondary);
 
@@ -110,6 +116,7 @@
 			&::before {
 				background-color: var(--nav-item-color-hover);
 			}
+
 		}
 	}
 
