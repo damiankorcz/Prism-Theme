@@ -5,7 +5,6 @@ body:not(.native-scrollbars) {
 	::-webkit-scrollbar {
 		width: var(--scroll-bar-size);
 		height: var(--scroll-bar-size);
-		background-color: var(--background-secondary);
 		border-radius: unset;
 
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
@@ -23,6 +22,28 @@ body:not(.native-scrollbars) {
 	::-webkit-scrollbar-thumb {
 		border: var(--window-border);
 		border-radius: unset;
+	}
+
+	&.theme-light {
+		.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
+		::-webkit-scrollbar-thumb {
+			background-color: var(--background-primary-alt);
+
+			&:hover {
+				background-color: var(--interactive-accent-base);
+			}
+		}
+	}
+
+	&.theme-dark {
+		.kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
+		::-webkit-scrollbar-thumb {
+			background-color: var(--background-secondary);
+
+			&:hover {
+				background-color: var(--interactive-accent-base);
+			}
+		}
 	}
 
 	.kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
