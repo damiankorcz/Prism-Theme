@@ -19,7 +19,8 @@
 
     Copyright (c) 2021-2023 Damian Korcz <https://github.com/damiankorcz>
 */
-.theme-light.pt-color-scheme-swan-lt {
+.theme-light.pt-color-scheme-swan-lt,
+.theme-light:not(.css-settings-manager) {
   --color-grey-base-hsl: 0, 0%, 90%;
   --color-red-base-hsl: 7, 90%, 92%;
   --color-orange-base-hsl: 26, 85%, 89%;
@@ -63,7 +64,8 @@
   --shadow-l: hsla(var(--shadow-color-hsl), 3%) 0 1px 2px, hsla(var(--shadow-color-hsl), 3%) 0 2px 4px, hsla(var(--shadow-color-hsl), 3%) 0 4px 8px, hsla(var(--shadow-color-hsl), 3%) 0 6px 12px;
 }
 
-.theme-dark.pt-color-scheme-raven-dt {
+.theme-dark.pt-color-scheme-raven-dt,
+.theme-dark:not(.css-settings-manager) {
   --color-grey-base-hsl: 0, 0%, 16%;
   --color-red-base-hsl: 2, 55%, 19%;
   --color-orange-base-hsl: 26, 65%, 15%;
@@ -94,9 +96,9 @@
   --color-blue-text-hsl: 226, 61%, 72%;
   --color-purple-text-hsl: 268, 52%, 72%;
   --color-pink-text-hsl: 329, 65%, 71%;
-  --text-normal-hsl: 0, 0%, 88%;
-  --text-muted-hsl: 0, 0%, 83%;
-  --text-faint-hsl: 0, 0%, 78%;
+  --text-normal-hsl: 0, 0%, 90%;
+  --text-muted-hsl: 0, 0%, 85%;
+  --text-faint-hsl: 0, 0%, 80%;
   --background-primary-hsl: 0, 0%, 22%;
   --background-primary-alt-hsl: 0, 0%, 30%;
   --background-secondary-hsl: 0, 0%, 12%;
@@ -142,7 +144,7 @@
   --text-muted-hsl: 28, 42%, 20%;
   --text-faint-hsl: 28, 42%, 35%;
   --background-primary-hsl: 28, 42%, 98%;
-  --background-primary-alt-hsl: 28, 42%, 93%;
+  --background-primary-alt-hsl: 28, 42%, 94%;
   --background-secondary-hsl: 28, 42%, 90%;
   --background-secondary-blur-hsl: 28, 42%, 88%;
   --background-secondary-alt-hsl: 28, 42%, 66%;
@@ -182,9 +184,9 @@
   --color-blue-text-hsl: 225, 56%, 70%;
   --color-purple-text-hsl: 268, 48%, 71%;
   --color-pink-text-hsl: 329, 61%, 70%;
-  --text-normal-hsl: 25, 40%, 88%;
-  --text-muted-hsl: 25, 40%, 83%;
-  --text-faint-hsl: 25, 40%, 78%;
+  --text-normal-hsl: 25, 40%, 90%;
+  --text-muted-hsl: 25, 40%, 85%;
+  --text-faint-hsl: 25, 40%, 80%;
   --background-primary-hsl: 25, 40%, 18%;
   --background-primary-alt-hsl: 25, 40%, 28%;
   --background-secondary-hsl: 25, 40%, 12%;
@@ -197,15 +199,15 @@
 
 .theme-light.pt-color-scheme-periwinkle-lt {
   --color-grey-base-hsl: 0, 0%, 90%;
-  --color-red-base-hsl: 7, 100%, 93%;
-  --color-orange-base-hsl: 27, 88%, 90%;
-  --color-yellow-base-hsl: 41, 90%, 84%;
-  --color-green-base-hsl: 102, 51%, 86%;
-  --color-mint-base-hsl: 152, 64%, 85%;
-  --color-cyan-base-hsl: 185, 63%, 86%;
-  --color-blue-base-hsl: 221, 84%, 93%;
-  --color-purple-base-hsl: 249, 100%, 95%;
-  --color-pink-base-hsl: 329, 83%, 93%;
+  --color-red-base-hsl: 6, 100%, 93%;
+  --color-orange-base-hsl: 26, 89%, 89%;
+  --color-yellow-base-hsl: 41, 91%, 83%;
+  --color-green-base-hsl: 102, 52%, 85%;
+  --color-mint-base-hsl: 153, 64%, 84%;
+  --color-cyan-base-hsl: 184, 63%, 85%;
+  --color-blue-base-hsl: 221, 85%, 92%;
+  --color-purple-base-hsl: 250, 100%, 94%;
+  --color-pink-base-hsl: 328, 84%, 93%;
   --color-grey-tint-hsl: 0, 0%, 73%;
   --color-red-tint-hsl: 6, 85%, 78%;
   --color-orange-tint-hsl: 27, 82%, 69%;
@@ -216,23 +218,23 @@
   --color-blue-tint-hsl: 219, 78%, 78%;
   --color-purple-tint-hsl: 253, 90%, 84%;
   --color-pink-tint-hsl: 326, 76%, 79%;
-  --color-grey-text-hsl: 0, 0%, 51%;
-  --color-red-text-hsl: 4, 74%, 58%;
-  --color-orange-text-hsl: 32, 100%, 39%;
-  --color-yellow-text-hsl: 40, 67%, 40%;
-  --color-green-text-hsl: 92, 100%, 29%;
-  --color-mint-text-hsl: 161, 100%, 29%;
-  --color-cyan-text-hsl: 184, 100%, 30%;
-  --color-blue-text-hsl: 221, 73%, 60%;
-  --color-purple-text-hsl: 257, 82%, 68%;
-  --color-pink-text-hsl: 321, 67%, 57%;
+  --color-grey-text-hsl: 0, 0%, 47%;
+  --color-red-text-hsl: 1, 72%, 52%;
+  --color-orange-text-hsl: 30, 100%, 36%;
+  --color-yellow-text-hsl: 39, 70%, 36%;
+  --color-green-text-hsl: 95, 100%, 26%;
+  --color-mint-text-hsl: 160, 100%, 26%;
+  --color-cyan-text-hsl: 185, 100%, 28%;
+  --color-blue-text-hsl: 221, 72%, 56%;
+  --color-purple-text-hsl: 259, 81%, 64%;
+  --color-pink-text-hsl: 319, 66%, 49%;
   --text-normal-hsl: 221, 55%, 15%;
   --text-muted-hsl: 221, 55%, 20%;
   --text-faint-hsl: 221, 55%, 35%;
   --background-primary-hsl: 221, 55%, 98%;
   --background-primary-alt-hsl: 221, 55%, 95%;
-  --background-secondary-hsl: 221, 55%, 93%;
-  --background-secondary-blur-hsl: 221, 55%, 92%;
+  --background-secondary-hsl: 221, 55%, 92%;
+  --background-secondary-blur-hsl: 221, 55%, 91%;
   --background-secondary-alt-hsl: 221, 55%, 72%;
   --shadow-color-hsl: 221, 55%, 7%;
   --shadow-s: hsla(var(--shadow-color-hsl), 10%) 0 1px 2px 0;
@@ -318,7 +320,7 @@
   --text-muted-hsl: 101, 35%, 20%;
   --text-faint-hsl: 101, 35%, 35%;
   --background-primary-hsl: 101, 35%, 99%;
-  --background-primary-alt-hsl: 101, 35%, 93%;
+  --background-primary-alt-hsl: 101, 35%, 95%;
   --background-secondary-hsl: 101, 35%, 91%;
   --background-secondary-blur-hsl: 101, 35%, 90%;
   --background-secondary-alt-hsl: 101, 35%, 62%;
@@ -405,8 +407,8 @@
   --text-normal-hsl: 3, 55%, 15%;
   --text-muted-hsl: 3, 55%, 20%;
   --text-faint-hsl: 3, 55%, 35%;
-  --background-primary-hsl: 3, 55%, 97%;
-  --background-primary-alt-hsl: 3, 55%, 93%;
+  --background-primary-hsl: 3, 55%, 98%;
+  --background-primary-alt-hsl: 3, 55%, 95%;
   --background-secondary-hsl: 3, 55%, 93%;
   --background-secondary-blur-hsl: 3, 55%, 92%;
   --background-secondary-alt-hsl: 3, 55%, 74%;
@@ -565,7 +567,7 @@ body {
   --slider-thumb-radius: var(--size-4-1);
   --slider-thumb-width: 10px;
   --scrollbar-active-thumb-bg: var(--interactive-accent-base);
-  --scrollbar-thumb-bg: var(--background-primary);
+  --scrollbar-thumb-bg: var(--background-primary-alt);
   --text-on-accent: var(--highlight-text-normal);
   --prompt-border-color: var(--window-border-color);
   --embed-border-top: 1px solid var(--window-border-color);
@@ -693,7 +695,7 @@ body.theme-light {
   --link-internal-color-lt: var(--interactive-accent-text-hsl);
   --link-external-color-lt: var(--interactive-accent-text-hsl);
 }
-body.theme-light.pt-color-scheme-style-border-only-lt {
+body.theme-light.pt-color-scheme-style-border-lt {
   --background-secondary: var(--background-primary);
   --background-secondary-blur: var(--background-primary);
 }
@@ -848,7 +850,7 @@ body.theme-dark {
   --h5-text-color-dt: var(--text-normal);
   --h6-text-color-dt: var(--text-normal);
 }
-body.theme-dark.pt-color-scheme-style-border-only-dt {
+body.theme-dark.pt-color-scheme-style-border-dt {
   --background-secondary: var(--background-secondary-alt);
   --background-secondary-blur: var(--background-secondary-alt);
 }
@@ -1870,7 +1872,6 @@ body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar,
 body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: var(--scroll-bar-size);
   height: var(--scroll-bar-size);
-  background-color: var(--background-secondary);
   border-radius: unset;
   /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
   /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
@@ -1889,6 +1890,22 @@ body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar
 body:not(.native-scrollbars) ::-webkit-scrollbar-thumb {
   border: var(--window-border);
   border-radius: unset;
+}
+body:not(.native-scrollbars).theme-light .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
+body:not(.native-scrollbars).theme-light ::-webkit-scrollbar-thumb {
+  background-color: var(--background-primary-alt);
+}
+body:not(.native-scrollbars).theme-light .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
+body:not(.native-scrollbars).theme-light ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--interactive-accent-base);
+}
+body:not(.native-scrollbars).theme-dark .kanban-plugin__scroll-container::-webkit-scrollbar-thumb,
+body:not(.native-scrollbars).theme-dark ::-webkit-scrollbar-thumb {
+  background-color: var(--background-secondary);
+}
+body:not(.native-scrollbars).theme-dark .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
+body:not(.native-scrollbars).theme-dark ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--interactive-accent-base);
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:active,
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb:hover,
@@ -2263,7 +2280,8 @@ button.mod-cta {
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) button.mod-cta {
   background-color: transparent;
-  border-color: transparent;
+  border-color: var(--window-border-color);
+  border-width: 1px;
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) button.mod-cta:hover {
   color: var(--interactive-accent-hover);
@@ -2271,7 +2289,7 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]) {
   color: var(--color-red-text);
   background-color: transparent;
-  border-color: transparent;
+  border-color: var(--window-border-color);
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
@@ -2279,7 +2297,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
   color: var(--color-grey-text);
   background-color: transparent;
-  border-color: transparent;
+  border-color: var(--window-border-color);
+  border-width: 1px;
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
   color: var(--color-grey-tint);
@@ -2287,7 +2306,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .setting-command-hotkeys .setting-hotkey {
   color: var(--color-blue-text);
   background-color: transparent;
-  border-color: transparent;
+  border-color: var(--window-border-color);
+  border-width: 1px;
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .setting-command-hotkeys .setting-hotkey.mod-empty {
   color: var(--text-normal);
@@ -2298,10 +2318,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.flair.mod-pop, .community-item .flair) {
   color: var(--color-green-text);
   background-color: transparent;
-  border-color: transparent;
+  border-color: var(--window-border-color);
+  border-width: 1px;
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) button.copy-code-button {
-  border-color: transparent;
+  border-color: var(--window-border-color);
+  border-width: 1px;
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) button.copy-code-button:hover {
   color: var(--interactive-accent-hover);
@@ -2944,7 +2966,7 @@ ul > li.task-list-item .task-list-item-checkbox {
   color: var(--link-color-hover);
 }
 .markdown-rendered pre {
-  border: var(--window-border);
+  border: 1px solid var(--window-border-color);
 }
 .markdown-rendered button.copy-code-button {
   padding: var(--size-2-1) var(--size-4-1);
@@ -5636,8 +5658,7 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   overflow-y: hidden;
 }
 .workspace-leaf-content[data-type=map] .graph-control-div {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   padding-bottom: unset;
   margin-bottom: -1px;
 }
@@ -5653,9 +5674,12 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   margin-bottom: 8px;
 }
 .workspace-leaf-content[data-type=map] .lbl-triangle {
+  position: absolute;
   content: "";
   width: 15px;
   height: 15px;
+  top: var(--size-2-3);
+  left: var(--size-2-3);
   background-color: var(--text-muted);
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevron-right'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
@@ -5663,11 +5687,12 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   margin-right: var(--size-4-1);
+  pointer-events: none;
 }
 .workspace-leaf-content[data-type=map] .lbl-toggle {
-  padding: var(--size-4-1) var(--size-4-2);
-  width: -webkit-fill-available;
-  width: fill-available;
+  padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
+  display: inline-block;
+  width: 100%;
   border-bottom: var(--window-border);
   background-color: var(--background-secondary);
 }
@@ -6107,17 +6132,17 @@ settings:
         description: Adjusts the style used by the main elements in the UI.
         type: class-select
         allowEmpty: false
-        default: pt-color-scheme-style-default-lt
+        default: pt-color-scheme-style-two-tone-and-border-lt
         options:
-            -
-                label: Default
-                value: pt-color-scheme-style-default-lt
-            -
-                label: Border Only
-                value: pt-color-scheme-style-border-only-lt
             -
                 label: Minimal
                 value: pt-color-scheme-style-minimal-lt
+            -
+                label: Border
+                value: pt-color-scheme-style-border-lt
+            -
+                label: Two Tone & Border
+                value: pt-color-scheme-style-two-tone-and-border-lt
     -
         id: accent-style-lt
         title: Accent Style
@@ -6279,17 +6304,17 @@ settings:
         description: Adjusts the style used by the main elements in the UI.
         type: class-select
         allowEmpty: false
-        default: pt-color-scheme-style-default-dt
+        default: pt-color-scheme-style-two-tone-and-border-dt
         options:
-            -
-                label: Default
-                value: pt-color-scheme-style-default-dt
-            -
-                label: Border Only
-                value: pt-color-scheme-style-border-only-dt
             -
                 label: Minimal
                 value: pt-color-scheme-style-minimal-dt
+            -
+                label: Border
+                value: pt-color-scheme-style-border-dt
+            -
+                label: Two Tone & Border
+                value: pt-color-scheme-style-two-tone-and-border-dt
     -
         id: accent-style-dt
         title: Accent Style
