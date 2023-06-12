@@ -31,7 +31,13 @@ Prism is designed to work across all platforms and operating systems Obsidian is
 
 ***(Front to Back: Raven, Mocha, Indigo, Pine and Cherry)***
 
-## 🌈 4 Accent Styles and 10 Preset Colours + Option for Custom Colours
+## 📚 3 Colour Scheme Styles
+
+![Colour Scheme Styles]()
+
+***()***
+
+## 🌈 5 Accent Styles and 10 Preset Colours + Option for Custom Colours
 
 ![Accent Styles and Colours](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Accent%20Styles%20and%20Colours.png)
 
