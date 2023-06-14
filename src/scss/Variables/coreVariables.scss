@@ -59,8 +59,8 @@ body {
 	--background-modifier-border-focus: var(--interactive-accent-base);
 	--background-modifier-border-hover: var(--interactive-accent-tint);
 
-	--indentation-guide-color: var(--window-border-color);
 	--indentation-guide-color-active: var(--interactive-accent-tint);
+	--nav-item-children-margin-left: 13px;
 
 	--icon-color-hover: var(--highlight-text-normal);
 	--nav-item-color-hover: var(--highlight-text-normal);
@@ -244,7 +244,7 @@ body {
 		--inline-title-color: var(--inline-title-color-lt);
 
 		--code-background: var(--background-primary);
-		--blockquote-background-color: var(--background-primary);
+		--blockquote-background-color: var(--background-primary-alt);
 
 		--checkbox-color: var(--background-primary-alt);
 		--checkbox-border-color: var(--background-secondary-alt);
@@ -253,6 +253,10 @@ body {
 
 		--pdf-background: var(--background-primary);
 		--pdf-sidebar-background: var(--background-primary);
+
+		--canvas-dot-pattern: hsla(var(--background-secondary-alt-hsl), 75%);
+
+		--indentation-guide-color: hsla(var(--background-secondary-alt-hsl), 75%);
 
 		// Style Settings Defaults
 		--graph-line-color-lt: var(--background-secondary-alt);
@@ -436,7 +440,7 @@ body {
 		--inline-title-color: var(--inline-title-color-dt);
 
 		--code-background: var(--background-secondary-alt);
-		--blockquote-background-color: var(--background-secondary-alt);
+		--blockquote-background-color: hsl(var(--background-secondary-hsl));
 
 		--checkbox-color: var(--background-primary);
 		--checkbox-border-color: var(--background-primary-alt);
@@ -450,6 +454,10 @@ body {
 
 		--pdf-background: var(--background-secondary-alt);
 		--pdf-sidebar-background: var(--background-secondary-alt);
+
+		--canvas-dot-pattern: hsla(var(--background-primary-alt-hsl), 80%);
+
+		--indentation-guide-color: hsla(var(--background-primary-alt-hsl), 80%);
 
 		// Style Settings Defaults
 		--graph-line-color-dt: var(--background-primary-alt);
