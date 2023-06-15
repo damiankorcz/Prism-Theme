@@ -495,7 +495,7 @@ body {
   --accent-border-width: 2px;
   --scroll-bar-size: 12px;
   --window-border: 1px solid var(--window-border-color);
-  --fade-away-opacity: 25%;
+  --fade-away-opacity: 0.25;
   --fade-away-delay: 850ms;
   --custom-vault-banner-icon-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='40' height='40'%0AviewBox='0 0 40 40'%0Astyle=' fill:%23000000;'%3E%3Cpath fill='%23dbb065' d='M1.5 35.5L1.5 4.5 11.793 4.5 14.793 7.5 35.5 7.5 35.5 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M11.586,5l2.707,2.707L14.586,8H15h20v27H2V5H11.586 M12,4H1v32h35V7H15L12,4L12,4z'%3E%3C/path%3E%3Cg%3E%3Cpath fill='%23f5ce85' d='M1.599 35.5L5.417 14.5 16.151 14.5 19.151 12.5 39.41 12.5 35.577 35.5z'%3E%3C/path%3E%3Cpath fill='%23967a44' d='M38.82,13l-3.667,22H2.198l3.636-20H16h0.303l0.252-0.168L19.303,13H38.82 M40,12H19l-3,2H5L1,36 h35L40,12L40,12z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   --mark-highlight-base: var(--color-yellow-base);
@@ -973,6 +973,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   background-color: #C42B1C;
 }
 
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+  background-color: unset;
+}
+
 .pt-status-bar-position-hidden .status-bar {
   display: none;
 }
@@ -1237,6 +1241,11 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   backdrop-filter: blur(var(--blur-intensity));
 }
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right).is-mobile .nav-buttons-container, :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right).is-mobile .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  padding: var(--size-4-2);
+}
+:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
   width: fit-content;
 }
@@ -1267,6 +1276,8 @@ body.is-mobile {
   --slider-thumb-y: -7px;
   --input-border-width: 1px;
   --nav-item-color: var(--text-muted);
+  --font-ui-large: calc(var(--font-text-size) * 1.1);
+  --file-margins: var(--size-4-4) var(--size-4-5);
 }
 body.is-mobile.theme-light {
   --background-modifier-form-field: var(--color-base-00);
@@ -1276,18 +1287,19 @@ body.is-mobile.theme-light .workspace-drawer-tab-options {
   background-color: var(--background-primary);
 }
 body.is-mobile.theme-dark {
-  --background-modifier-hover: hsla(var(--interactive-accent-base-hsl), 60%);
   --background-modifier-form-field: var(--background-secondary-alt);
 }
 body.is-mobile.theme-dark .workspace-leaf-content,
-body.is-mobile.theme-dark .workspace-drawer-tab-option {
+body.is-mobile.theme-dark .workspace-drawer-tab-option,
+body.is-mobile.theme-dark .community-modal-info {
   background-color: var(--background-secondary-alt);
 }
 body.is-mobile.theme-dark .modal.mod-settings .vertical-tab-header-group-items,
 body.is-mobile.theme-dark .modal.mod-settings .vertical-tab-content {
   background-color: var(--background-secondary-alt);
 }
-body.is-mobile.theme-dark .menu {
+body.is-mobile.theme-dark .prompt,
+body.is-mobile.theme-dark .prompt input.prompt-input {
   background-color: var(--background-secondary-alt);
 }
 body.is-mobile.is-phone.theme-light .vertical-tab-header {
@@ -1295,13 +1307,19 @@ body.is-mobile.is-phone.theme-light .vertical-tab-header {
 }
 body.is-mobile.is-phone.theme-dark .community-modal-details,
 body.is-mobile.is-phone.theme-dark .modal.mod-settings .vertical-tab-nav-item,
-body.is-mobile.is-phone.theme-dark .vertical-tab-header {
+body.is-mobile.is-phone.theme-dark .modal.mod-settings .vertical-tab-header {
   background-color: var(--background-secondary-alt);
 }
 body.is-mobile.is-phone .modal.mod-settings .vertical-tab-header::before,
 body.is-mobile.is-phone .modal.mod-settings .vertical-tab-header::after,
 body.is-mobile.is-phone .modal.mod-settings .vertical-tab-content-container::before {
   display: none;
+}
+body.is-mobile.is-phone .modal.mod-settings .vertical-tab-content {
+  padding: var(--size-4-3) var(--size-4-3) calc(var(--safe-area-inset-bottom) + var(--size-4-4)) var(--size-4-3);
+}
+body.is-mobile.is-phone .modal.mod-settings .vertical-tab-nav-item {
+  height: 42px;
 }
 body.is-mobile.is-phone .menu.mod-tab-list .menu-item-title {
   max-width: unset;
@@ -1339,6 +1357,27 @@ body.is-mobile.is-phone .community-modal-search-results {
 body.is-mobile.is-phone .community-item {
   border-width: var(--border-width);
   border-radius: var(--radius-m);
+}
+body.is-mobile.is-phone .prompt-input-cta {
+  display: none;
+}
+body.is-mobile.is-phone .prompt-input[type=text] {
+  border: 1px solid var(--window-border-color);
+}
+body.is-mobile.is-phone .setting-item-heading {
+  margin-top: var(--size-4-1);
+}
+body.is-mobile.is-phone .setting-item {
+  padding: var(--size-4-2);
+}
+body.is-mobile.is-phone .setting-item:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
+  margin-top: unset;
+}
+body.is-mobile.is-phone .pickr {
+  width: 100%;
+}
+body.is-mobile.is-phone .modal.mod-sidebar-layout .search-input-container {
+  height: unset;
 }
 body.is-mobile.is-tablet .modal.mod-sidebar-layout .modal-setting-back-button {
   display: none;
@@ -1411,10 +1450,6 @@ body.is-mobile .workspace-drawer-header-info {
 }
 body.is-mobile .suggestion-container,
 body.is-mobile .menu {
-  width: calc(100% - var(--safe-area-inset-left) - var(--size-4-2) - var(--safe-area-inset-right) - var(--size-4-2));
-  margin-right: calc(var(--safe-area-inset-right) + var(--size-4-2));
-  margin-bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
-  margin-left: calc(var(--safe-area-inset-left) + var(--size-4-2));
   background-color: var(--background-secondary-blur);
   border: var(--window-border);
   border-radius: var(--radius-m);
@@ -1434,6 +1469,15 @@ body.is-mobile .modal.mod-settings .vertical-tab-header-group-items {
 body.is-mobile .modal.mod-sidebar-layout .modal-title {
   background-color: var(--background-secondary);
 }
+body.is-mobile .modal.mod-community-modal .setting-item:not(.mod-toggle) {
+  max-width: var(--modal-community-sidebar-width);
+}
+body.is-mobile .modal.mod-community-modal .setting-item:not(.mod-toggle) .setting-item-control {
+  flex-direction: column;
+}
+body.is-mobile .modal.mod-community-modal .setting-item:not(.mod-toggle) .setting-item-control button {
+  width: 100%;
+}
 body.is-mobile .vertical-tab-header-group {
   width: 100%;
 }
@@ -1447,8 +1491,8 @@ body.is-mobile .view-header-nav-buttons,
 body.is-mobile .view-header .view-action {
   --icon-color: var(--text-muted);
 }
-body.is-mobile.theme-dark .prompt {
-  background-color: var(--background-secondary-alt);
+body.is-mobile .view-header-title-container {
+  padding-left: unset;
 }
 
 .mobile-toolbar {
@@ -1545,11 +1589,6 @@ body.is-mobile.theme-dark .prompt {
 
 .vertical-tab-content {
   height: calc(100% - 43px);
-}
-
-.is-tablet.theme-dark .community-item,
-.is-tablet.theme-dark .vertical-tab-content {
-  background-color: var(--background-secondary-alt);
 }
 
 .vertical-tab-content-container::before {
@@ -1695,7 +1734,10 @@ img.community-theme-lightbox {
   background-color: var(--background-secondary-alt);
 }
 .community-item.is-selected, .community-item.is-selected:hover {
-  background-color: var(--background-modifier-hover);
+  background-color: var(--interactive-accent-base);
+}
+.is-tablet.theme-dark .community-item.is-selected, .is-tablet.theme-dark .community-item.is-selected:hover {
+  background-color: var(--interactive-accent-base);
 }
 
 .community-item-name {
@@ -1713,7 +1755,7 @@ img.community-theme-lightbox {
 .community-modal-controls {
   background-color: var(--background-secondary);
 }
-.community-modal-controls .setting-item:first-child {
+body:not(.is-phone) .community-modal-controls .setting-item:first-child {
   padding-left: unset;
   margin-bottom: unset;
   margin-left: var(--size-4-2);
@@ -1804,6 +1846,7 @@ input[type=range]:hover {
 input[type=range]::-webkit-slider-thumb {
   height: 19px;
   background-color: var(--toggle-thumb-color);
+  border: 1px solid var(--window-border-color);
   box-shadow: unset;
 }
 
@@ -2113,6 +2156,16 @@ body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-right-split >
 }
 .menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) .menu-item-icon {
   color: var(--highlight-text-normal);
+}
+
+body.is-mobile.is-tablet .suggestion-container,
+body.is-mobile.is-tablet .menu {
+  width: fit-content;
+}
+
+body.is-mobile.theme-dark .menu,
+.is-tablet.theme-dark .suggestion-container {
+  background-color: var(--background-secondary-alt);
 }
 
 div.notice-container div.notice {
@@ -4560,28 +4613,32 @@ body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspac
 body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split,
 body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split,
 body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed,
-body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed, body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .status-bar,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .mobile-navbar, body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .status-bar,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .view-header,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-root .workspace-tab-header-container,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed,
-body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed, body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .status-bar,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .mobile-navbar, body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .status-bar,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .view-header,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-root .workspace-tab-header-container,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-left-split,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-right-split,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-left.is-collapsed,
-body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-right.is-collapsed, body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .status-bar,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .mobile-navbar, body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .status-bar,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .view-header,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-root .workspace-tab-header-container,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-left-split,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-right-split,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-left.is-collapsed,
-body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-right.is-collapsed {
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-right.is-collapsed,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .mobile-navbar {
   opacity: var(--fade-away-opacity);
   transition: opacity 250ms;
   transition-delay: var(--fade-away-delay);
@@ -4593,28 +4650,32 @@ body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspac
 body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split:hover,
 body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split:hover,
 body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed:hover,
-body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed:hover, body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .status-bar:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.pt-focused-style-main-only:not(.is-popout-window) .mobile-navbar:hover, body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .status-bar:hover,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon:hover,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .view-header:hover,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-root .workspace-tab-header-container:hover,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-left-split:hover,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-split.mod-horizontal.mod-right-split:hover,
 body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-left.is-collapsed:hover,
-body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed:hover, body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .status-bar:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.pt-focused-style-main-and-popout-only:not(.is-popout-window) .mobile-navbar:hover, body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .status-bar:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .view-header:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-root .workspace-tab-header-container:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-left-split:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-split.mod-horizontal.mod-right-split:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-left.is-collapsed:hover,
-body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-right.is-collapsed:hover, body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .status-bar:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-popout-only .mobile-navbar:hover, body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .status-bar:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .view-header:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-root .workspace-tab-header-container:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-left-split:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-split.mod-horizontal.mod-right-split:hover,
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-left.is-collapsed:hover,
-body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-right.is-collapsed:hover {
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .workspace-ribbon.mod-right.is-collapsed:hover,
+body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .mobile-navbar:hover {
   opacity: unset;
   transition: opacity 50ms;
 }
@@ -4623,10 +4684,7 @@ div.workspace-leaf-content[data-type=style-settings] div.view-content {
   padding: var(--file-margins);
   padding-bottom: calc(48px + var(--scroll-bar-size));
 }
-body.is-mobile div.workspace-leaf-content[data-type=style-settings] div.view-content {
-  padding: 32px 16px;
-}
-body:not(.is-mobile) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+body:not(.is-phone) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
   flex-direction: row;
 }
 
@@ -6068,6 +6126,10 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
   padding: unset;
   margin: var(--size-4-1);
 }
+.is-mobile.is-phone .settings-search-container .settings-search-input {
+  padding: unset;
+  margin: var(--size-4-1);
+}
 .settings-search-container .search-input-container::before {
   top: calc((var(--input-height) - var(--search-icon-size)) / 2);
   left: var(--size-4-3);
@@ -7460,14 +7522,13 @@ settings:
     -
         id: fade-away-opacity
         title: Fade Away Opacity
-        description: Set the opacity value (%) you'd like the UI to fade to.
+        description: Set the opacity value you'd like the UI to fade to.
         type: variable-number-slider
         level: 2
         min: 0
-        max: 100
-        step: 1
-        default: 25
-        format: '%'
+        max: 1
+        step: 0.01
+        default: 0.25
     -
         id: fade-away-delay
         title: Fade Away Delay
