@@ -3,14 +3,10 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	div.view-content {
 		padding: var(--file-margins);
 		padding-bottom: calc(48px + var(--scroll-bar-size));
-
-		body.is-mobile & {
-			padding: 32px 16px;
-		}
 	}
 
 	.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-		body:not(.is-mobile) & {
+		body:not(.is-phone) & {
 			flex-direction: row;
 		}
 	}

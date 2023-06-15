@@ -103,6 +103,11 @@
 		backdrop-filter: blur(var(--blur-intensity));
 	}
 
+	&.is-mobile .nav-buttons-container,
+	&.is-mobile .workspace-leaf-content[data-type="dangling-links"] .nav-header {
+		padding: var(--size-4-2);
+	}
+
 	.workspace-leaf-content[data-type="dangling-links"] .nav-header {
 		width: fit-content;
 	}

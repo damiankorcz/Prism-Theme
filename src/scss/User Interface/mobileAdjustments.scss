@@ -19,6 +19,10 @@ body.is-mobile {
 
 	--nav-item-color: var(--text-muted);
 
+	--font-ui-large: calc(var(--font-text-size) * 1.1);
+
+	--file-margins: var(--size-4-4) var(--size-4-5);
+
 	&.theme-light {
 		--background-modifier-form-field: var(--color-base-00);
 
@@ -29,11 +33,11 @@ body.is-mobile {
 	}
 
 	&.theme-dark {
-		--background-modifier-hover: hsla(var(--interactive-accent-base-hsl), 60%);
 		--background-modifier-form-field: var(--background-secondary-alt);
 
 		.workspace-leaf-content,
-		.workspace-drawer-tab-option {
+		.workspace-drawer-tab-option,
+		.community-modal-info {
 			background-color: var(--background-secondary-alt);
 		}
 
@@ -44,9 +48,11 @@ body.is-mobile {
 			}
 		}
 
-		.menu {
+		.prompt,
+		.prompt input.prompt-input {
 			background-color: var(--background-secondary-alt);
 		}
+
 	}
 
 	&.is-phone {
@@ -59,7 +65,7 @@ body.is-mobile {
 		&.theme-dark {
 			.community-modal-details,
 			.modal.mod-settings .vertical-tab-nav-item,
-			.vertical-tab-header {
+			.modal.mod-settings .vertical-tab-header {
 				background-color: var(--background-secondary-alt);
 			}
 		}
@@ -69,6 +75,14 @@ body.is-mobile {
 			.vertical-tab-header::after,
 			.vertical-tab-content-container::before {
 				display: none;
+			}
+
+			.vertical-tab-content {
+				padding: var(--size-4-3) var(--size-4-3) calc(var(--safe-area-inset-bottom) + var(--size-4-4)) var(--size-4-3);
+			}
+
+			.vertical-tab-nav-item {
+				height: 42px;
 			}
 		}
 
@@ -118,6 +132,37 @@ body.is-mobile {
 		.community-item {
 			border-width: var(--border-width);
 			border-radius: var(--radius-m);
+		}
+
+		// hides this div which appears to the right of the search box in the Command Pallete. Don't know what it's for.
+		.prompt-input-cta {
+			display: none;
+		}
+
+		.prompt-input[type=text] {
+			border: 1px solid var(--window-border-color);
+		}
+
+		.setting-item-heading {
+			margin-top: var(--size-4-1);
+		}
+
+		.setting-item {
+			padding: var(--size-4-2);
+
+			&:not(.mod-toggle):not(.setting-item-heading) .setting-item-control {
+				margin-top: unset;
+			}
+		}
+
+		// Style Settings colour picker
+		.pickr {
+			width: 100%;
+		}
+
+		// Fixes the alignment of the Settings search box
+		.modal.mod-sidebar-layout .search-input-container {
+			height: unset;
 		}
 	}
 
@@ -213,10 +258,6 @@ body.is-mobile {
 
 	.suggestion-container,
 	.menu {
-		width: calc(100% - var(--safe-area-inset-left) - var(--size-4-2) - var(--safe-area-inset-right) - var(--size-4-2));
-		margin-right: calc(var(--safe-area-inset-right) + var(--size-4-2));
-		margin-bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
-		margin-left: calc(var(--safe-area-inset-left) + var(--size-4-2));
 		background-color: var(--background-secondary-blur);
 		border: var(--window-border);
 		border-radius: var(--radius-m);
@@ -226,21 +267,35 @@ body.is-mobile {
 
 	.modal {
 		border: var(--window-border);
-	}
 
-	.modal.mod-settings {
-		.vertical-tab-nav-item {
-			border-bottom: var(--accent-border-width) solid transparent;
-			border-radius: var(--radius-m);
+		&.mod-settings {
+			.vertical-tab-nav-item {
+				border-bottom: var(--accent-border-width) solid transparent;
+				border-radius: var(--radius-m);
+			}
+
+			.vertical-tab-header-group-items {
+				border-radius: unset;
+			}
 		}
 
-		.vertical-tab-header-group-items {
-			border-radius: unset;
+		&.mod-sidebar-layout .modal-title {
+			background-color: var(--background-secondary);
 		}
-	}
 
-	.modal.mod-sidebar-layout .modal-title {
-		background-color: var(--background-secondary);
+		&.mod-community-modal {
+			.setting-item:not(.mod-toggle) {
+				max-width: var(--modal-community-sidebar-width);
+
+				.setting-item-control {
+					flex-direction: column;
+
+					button {
+						width: 100%;
+					}
+				}
+			}
+		}
 	}
 
 	.vertical-tab-header-group {
@@ -260,8 +315,8 @@ body.is-mobile {
 		--icon-color: var(--text-muted);
 	}
 
-	&.theme-dark .prompt {
-		background-color: var(--background-secondary-alt);
+	.view-header-title-container {
+		padding-left: unset;
 	}
 }
 
