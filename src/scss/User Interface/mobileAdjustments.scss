@@ -52,7 +52,6 @@ body.is-mobile {
 		.prompt input.prompt-input {
 			background-color: var(--background-secondary-alt);
 		}
-
 	}
 
 	&.is-phone {
@@ -163,6 +162,11 @@ body.is-mobile {
 		// Fixes the alignment of the Settings search box
 		.modal.mod-sidebar-layout .search-input-container {
 			height: unset;
+		}
+
+		// The default offset does not account for the margin
+		.search-input-container:before {
+			top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-1)) / 2);
 		}
 	}
 
