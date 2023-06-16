@@ -1379,6 +1379,9 @@ body.is-mobile.is-phone .pickr {
 body.is-mobile.is-phone .modal.mod-sidebar-layout .search-input-container {
   height: unset;
 }
+body.is-mobile.is-phone .search-input-container:before {
+  top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-1)) / 2);
+}
 body.is-mobile.is-tablet .modal.mod-sidebar-layout .modal-setting-back-button {
   display: none;
 }
@@ -2831,7 +2834,7 @@ del {
   color: var(--text-muted);
 }
 
-:is(.cm-inline-code:not(.cm-formatting-code), .cm-math) {
+.cm-inline-code:not(.cm-formatting-code) {
   padding: 0 var(--size-4-1);
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
