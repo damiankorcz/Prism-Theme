@@ -33,9 +33,9 @@ Prism is designed to work across all platforms and operating systems Obsidian is
 
 ## 📚 3 Colour Scheme Styles
 
-![Colour Scheme Styles]()
+![Colour Scheme Styles](https://raw.githubusercontent.com/damiankorcz/Prism-Theme/main/assets/screenshots/Colour%20Scheme%20Styles.png)
 
-***()***
+***(Left to Right: Minimal, Border and Two Tone and Border)***
 
 ## 🌈 5 Accent Styles and 10 Preset Colours + Option for Custom Colours
 
