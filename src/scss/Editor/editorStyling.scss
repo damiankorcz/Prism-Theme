@@ -38,7 +38,8 @@ del {
 	color: var(--text-muted);
 }
 
-.cm-inline-code:not(.cm-formatting-code) {
+.cm-inline-code:not(.cm-formatting-code),
+.cm-s-obsidian .cm-inline-code.cm-formatting ~ .cm-inline-code:not(.cm-formatting) {
 	padding: 0 var(--size-4-1);
 	border: 1px solid var(--window-border-color);
 	border-radius: var(--radius-s);
@@ -286,6 +287,7 @@ ul > li.task-list-item .task-list-item-checkbox {
 
 	.markdown-embed-content {
 		padding: var(--size-4-4);
+		margin-right: -1px;
 	}
 }
 
