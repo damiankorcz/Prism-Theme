@@ -18,9 +18,16 @@
 // [UI] Menu Popup
 .menu {
 	padding: var(--size-4-1);
-	background: var(--background-secondary);
 	border-color: var(--window-border-color);
 	box-shadow: var(--shadow-l);
+
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) {
