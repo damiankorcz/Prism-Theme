@@ -582,6 +582,7 @@ body {
   --metadata-gap: var(--size-2-1);
   --pill-radius: var(--radius-s);
   --collapse-icon-color-collapsed: var(--text-normal);
+  --embed-max-height: 800px;
   --status-bar-background-color-lt: #EBECEF;
   --status-bar-background-color-dt: #2B2B2B;
 }
@@ -635,9 +636,9 @@ body:is(.theme-light, .theme-dark) {
   --text-accent-hover: var(--interactive-accent-hover);
   --scroll-button-background-color: var(--background-primary);
   --color-red: var(--color-red-text);
-  --color-green: var(--color-green-text);
   --color-orange: var(--color-orange-text);
   --color-yellow: var(--color-yellow-text);
+  --color-green: var(--color-green-text);
   --color-cyan: var(--color-cyan-text);
   --color-blue: var(--color-blue-text);
   --color-purple: var(--color-purple-text);
@@ -1261,7 +1262,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   min-height: unset;
 }
 :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div) {
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content) {
   padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 
@@ -1596,6 +1597,7 @@ body.is-mobile .view-header-title-container {
 
 .vertical-tab-content {
   height: calc(100% - 43px);
+  margin-right: -1px;
 }
 
 .vertical-tab-content-container::before {
@@ -1627,7 +1629,7 @@ body.is-mobile .view-header-title-container {
 
 .vertical-tab-header-group-items {
   gap: var(--size-2-1);
-  padding: var(--size-4-2);
+  padding: var(--size-4-1);
 }
 
 :is(.horizontal-tab-content, .vertical-tab-content) {
@@ -2153,9 +2155,14 @@ body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-right-split >
 
 .menu {
   padding: var(--size-4-1);
-  background: var(--background-secondary);
   border-color: var(--window-border-color);
   box-shadow: var(--shadow-l);
+}
+.theme-light .menu {
+  background-color: var(--background-primary);
+}
+.theme-dark .menu {
+  background-color: var(--background-secondary-alt);
 }
 
 .menu-item.selected:not(.is-disabled):not(.is-label):not(.is-warning) {
@@ -2836,7 +2843,8 @@ del {
   color: var(--text-muted);
 }
 
-.cm-inline-code:not(.cm-formatting-code) {
+.cm-inline-code:not(.cm-formatting-code),
+.cm-s-obsidian .cm-inline-code.cm-formatting ~ .cm-inline-code:not(.cm-formatting) {
   padding: 0 var(--size-4-1);
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
@@ -3032,17 +3040,7 @@ ul > li.task-list-item .task-list-item-checkbox {
   margin: 0;
 }
 
-.markdown-preview-view .markdown-embed,
-.markdown-preview-view .file-embed,
-.internal-embed.is-loaded:not(.image-embed) {
-  display: flex;
-  flex-direction: column;
-  max-height: 800px;
-  overflow: auto;
-}
-
 .embed-title {
-  position: sticky;
   top: 0;
   z-index: var(--layer-cover);
   width: 100%;
@@ -3056,6 +3054,7 @@ ul > li.task-list-item .task-list-item-checkbox {
 }
 .internal-embed .markdown-embed-content {
   padding: var(--size-4-4);
+  margin-right: -1px;
 }
 
 .file-embed.mod-empty {
@@ -3617,13 +3616,14 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
   margin-right: var(--size-4-2);
   content: "";
   background-color: var(--text-muted);
-  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWRhdGFiYXNlIj48ZWxsaXBzZSBjeD0iMTIiIGN5PSI1IiByeD0iOSIgcnk9IjMiLz48cGF0aCBkPSJNMyA1VjE5QTkgMyAwIDAgMCAyMSAxOVY1Ii8+PHBhdGggZD0iTTMgMTJBOSAzIDAgMCAwIDIxIDEyIi8+PC9zdmc+");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-archive'%3E%3Crect width='20' height='5' x='2' y='4' rx='2'/%3E%3Cpath d='M4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9'/%3E%3Cpath d='M10 13h4'/%3E%3C/svg%3E");
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: 18px;
 }
 
-.metadata-content {
+.cm-editor .metadata-content,
+.markdown-preview-view .metadata-content {
   padding: var(--size-4-3) var(--size-4-2);
   border: var(--window-border);
   border-top: unset;
@@ -3662,6 +3662,12 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
 
 .metadata-property[data-property-key=tags] {
   --pill-radius: var(--radius-s);
+}
+
+.workspace-leaf-content[data-type=all-properties] .view-content,
+.workspace-leaf-content[data-type=file-properties] .view-content,
+.workspace-leaf-content[data-type=properties] .view-content {
+  padding: var(--size-4-1);
 }
 
 audio::-webkit-media-controls-panel {
@@ -5352,7 +5358,9 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .nav-buttons-container {
   margin: unset;
-  border: var(--window-border);
+  background: unset;
+  backdrop-filter: unset;
+  border: unset;
   box-shadow: unset;
 }
 :is(.workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-drawer.mod-right) .workspace-leaf-content[data-type=advanced-tables-toolbar] .widget-icon {
