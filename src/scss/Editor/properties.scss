@@ -57,14 +57,14 @@
 		margin-right: var(--size-4-2);
 		content: "";
 		background-color: var(--text-muted);
-		-webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWRhdGFiYXNlIj48ZWxsaXBzZSBjeD0iMTIiIGN5PSI1IiByeD0iOSIgcnk9IjMiLz48cGF0aCBkPSJNMyA1VjE5QTkgMyAwIDAgMCAyMSAxOVY1Ii8+PHBhdGggZD0iTTMgMTJBOSAzIDAgMCAwIDIxIDEyIi8+PC9zdmc+");
+		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-archive'%3E%3Crect width='20' height='5' x='2' y='4' rx='2'/%3E%3Cpath d='M4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9'/%3E%3Cpath d='M10 13h4'/%3E%3C/svg%3E");
 		-webkit-mask-position: center;
 		-webkit-mask-repeat: no-repeat;
 		-webkit-mask-size: 18px;
 	}
 }
 
-.metadata-content {
+.cm-editor .metadata-content {
 	padding: var(--size-4-3) var(--size-4-2);
 	border: var(--window-border);
 	border-top: unset;
@@ -105,4 +105,10 @@
 
 .metadata-property[data-property-key="tags"] {
 	--pill-radius: var(--radius-s);
+}
+
+.workspace-leaf-content[data-type=all-properties] .view-content,
+.workspace-leaf-content[data-type=file-properties] .view-content,
+.workspace-leaf-content[data-type=properties] .view-content {
+	padding: var(--size-4-1);
 }
