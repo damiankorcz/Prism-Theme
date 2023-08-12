@@ -107,9 +107,14 @@
 			color: var(--interactive-accent-hover);
 		}
 	}
+
+	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+	&.is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+		color: var(--interactive-accent-text);
+	}
 }
 
-:is(.theme-dark.pt-accent-style-plain-dt.is-mobile, .theme-light.pt-accent-style-plain-lt.is-mobile) {
+:is(.theme-dark.pt-accent-style-minimal-dt.is-mobile, .theme-light.pt-accent-style-minimal-lt.is-mobile) {
 	.modal.mod-settings .vertical-tab-nav-item {
 		border-color: transparent;
 
