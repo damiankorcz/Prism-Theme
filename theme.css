@@ -525,6 +525,7 @@ body {
   --tag-padding-x: 0.75ch;
   --tag-border-width: 2px;
   --tag-size: var(--font-smallest);
+  --p-spacing: 0.5em;
   --file-folding-offset: 20px;
   --nav-item-padding: var(--size-2-1) var(--size-4-2) var(--size-2-1) var(--size-4-6);
   --text-error: var(--color-red-text);
@@ -578,6 +579,9 @@ body {
   --graph-controls-width: 150px;
   --pdf-shadow: unset;
   --pdf-thumbnail-shadow: unset;
+  --metadata-gap: var(--size-2-1);
+  --pill-radius: var(--radius-s);
+  --collapse-icon-color-collapsed: var(--text-normal);
   --status-bar-background-color-lt: #EBECEF;
   --status-bar-background-color-dt: #2B2B2B;
 }
@@ -2397,11 +2401,14 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active:hover {
   color: var(--interactive-accent-hover);
 }
+:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt).is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-icon, :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt).is-focused .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--interactive-accent-text);
+}
 
-:is(.theme-dark.pt-accent-style-plain-dt.is-mobile, .theme-light.pt-accent-style-plain-lt.is-mobile) .modal.mod-settings .vertical-tab-nav-item {
+:is(.theme-dark.pt-accent-style-minimal-dt.is-mobile, .theme-light.pt-accent-style-minimal-lt.is-mobile) .modal.mod-settings .vertical-tab-nav-item {
   border-color: transparent;
 }
-:is(.theme-dark.pt-accent-style-plain-dt.is-mobile, .theme-light.pt-accent-style-plain-lt.is-mobile) .modal.mod-settings .vertical-tab-nav-item.is-active {
+:is(.theme-dark.pt-accent-style-minimal-dt.is-mobile, .theme-light.pt-accent-style-minimal-lt.is-mobile) .modal.mod-settings .vertical-tab-nav-item.is-active {
   border-color: transparent;
 }
 
@@ -2804,11 +2811,6 @@ button.mod-cta {
   background-color: var(--background-secondary-alt);
 }
 
-p {
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-}
-
 .cm-s-obsidian span.cm-formatting-highlight.cm-em:not(.cm-strong),
 .cm-s-obsidian span.cm-highlight.cm-em:not(.cm-strong),
 .cm-s-obsidian span.cm-quote.cm-em:not(.cm-strong) {
@@ -3030,22 +3032,6 @@ ul > li.task-list-item .task-list-item-checkbox {
   margin: 0;
 }
 
-.cm-s-obsidian .cm-hmd-frontmatter {
-  color: var(--color-blue);
-}
-.cm-s-obsidian .cm-hmd-frontmatter.cm-atom, .cm-s-obsidian .cm-hmd-frontmatter.cm-meta {
-  color: var(--text-faint);
-}
-.cm-s-obsidian .cm-hmd-frontmatter.cm-keyword {
-  color: var(--color-red);
-}
-.cm-s-obsidian .cm-hmd-frontmatter.cm-number {
-  color: var(--color-green);
-}
-.cm-s-obsidian .cm-hmd-frontmatter.cm-def {
-  color: var(--text-faint);
-}
-
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed,
 .internal-embed.is-loaded:not(.image-embed) {
@@ -3081,6 +3067,10 @@ ul > li.task-list-item .task-list-item-checkbox {
   top: var(--size-4-2);
   right: var(--size-4-2);
   z-index: var(--layer-cover);
+}
+
+.view-content .collapse-indicator:not(.is-collapsed) svg.svg-icon {
+  color: var(--interactive-accent-text);
 }
 
 body:not(.pt-disable-callout-styling) {
@@ -3578,6 +3568,100 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
 
 .ͼo:not(.cm-focused) .cm-fat-cursor {
   outline: solid 1px var(--color-red-tint);
+}
+
+.cm-s-obsidian .cm-hmd-frontmatter {
+  color: var(--color-blue);
+}
+.cm-s-obsidian .cm-hmd-frontmatter.cm-atom, .cm-s-obsidian .cm-hmd-frontmatter.cm-meta {
+  color: var(--text-faint);
+}
+.cm-s-obsidian .cm-hmd-frontmatter.cm-keyword {
+  color: var(--color-red);
+}
+.cm-s-obsidian .cm-hmd-frontmatter.cm-number {
+  color: var(--color-green);
+}
+.cm-s-obsidian .cm-hmd-frontmatter.cm-def {
+  color: var(--text-faint);
+}
+
+.metadata-properties-heading {
+  display: inline-flex;
+  width: 100%;
+  padding: var(--size-4-2);
+  background-color: var(--background-secondary);
+  border: var(--window-border);
+}
+.metadata-properties-heading .collapse-indicator {
+  position: relative;
+  left: unset;
+  order: 2;
+  opacity: 1;
+}
+.metadata-properties-heading .collapse-indicator .collapse-icon svg.svg-icon {
+  width: 18px;
+}
+
+.metadata-properties-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: unset;
+  font-weight: var(--bold-weight);
+}
+.metadata-properties-title::before {
+  align-items: center;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-right: var(--size-4-2);
+  content: "";
+  background-color: var(--text-muted);
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWRhdGFiYXNlIj48ZWxsaXBzZSBjeD0iMTIiIGN5PSI1IiByeD0iOSIgcnk9IjMiLz48cGF0aCBkPSJNMyA1VjE5QTkgMyAwIDAgMCAyMSAxOVY1Ii8+PHBhdGggZD0iTTMgMTJBOSAzIDAgMCAwIDIxIDEyIi8+PC9zdmc+");
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 18px;
+}
+
+.metadata-content {
+  padding: var(--size-4-3) var(--size-4-2);
+  border: var(--window-border);
+  border-top: unset;
+}
+
+.metadata-property-key {
+  align-items: center;
+}
+
+.metadata-property-icon {
+  height: fit-content;
+  padding: var(--size-2-1);
+  margin-left: var(--size-4-1);
+}
+.metadata-property-icon:hover {
+  background-color: var(--interactive-accent-base);
+  border-radius: var(--radius-s);
+}
+.metadata-property-icon::before {
+  display: none;
+}
+
+.metadata-container .metadata-add-button {
+  margin-top: var(--size-4-3);
+  margin-left: var(--size-4-1);
+  border: var(--window-border);
+}
+
+.multi-select-container {
+  gap: var(--size-4-2);
+}
+
+.metadata-property:not([data-property-key=tags]) .multi-select-pill {
+  line-height: unset;
+}
+
+.metadata-property[data-property-key=tags] {
+  --pill-radius: var(--radius-s);
 }
 
 audio::-webkit-media-controls-panel {
