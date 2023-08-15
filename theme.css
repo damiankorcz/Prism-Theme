@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.3.0)
+    Prism Theme for Obsidian.md (Version: 3.4.0)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1554,9 +1554,9 @@ body.is-mobile .view-header-title-container {
   margin-bottom: -1px;
   content: "";
   background: var(--background-secondary-blur);
-  border-bottom: var(--window-border);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
+  border-bottom: var(--window-border);
 }
 
 .is-phone .modal.mod-settings .modal-title::after,
@@ -1575,7 +1575,7 @@ body.is-mobile .view-header-title-container {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.3.0";
+  content: "Prism 3.4.0";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -1609,9 +1609,9 @@ body.is-mobile .view-header-title-container {
   height: 42px;
   content: "";
   background: var(--background-secondary-blur);
-  border-bottom: var(--window-border);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
+  border-bottom: var(--window-border);
 }
 
 .vertical-tab-header-group {
@@ -2332,6 +2332,9 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .pdf-outline-view .tree-item-self.mod-active {
   background-color: transparent;
   border-color: transparent;
+}
+:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .vertical-tab-nav-item.is-active:hover {
+  color: var(--interactive-accent-hover);
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .search-result-file-match-destination-file {
   color: var(--text-normal);
@@ -3589,6 +3592,7 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
   display: inline-flex;
   width: 100%;
   padding: var(--size-4-2);
+  margin-bottom: unset;
   background-color: var(--background-secondary);
   border: var(--window-border);
 }
@@ -3647,7 +3651,7 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
 }
 
 .metadata-container .metadata-add-button {
-  margin-top: var(--size-4-3);
+  margin-top: var(--size-4-2);
   margin-left: var(--size-4-1);
   border: var(--window-border);
 }
