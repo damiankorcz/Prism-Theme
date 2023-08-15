@@ -1,5 +1,5 @@
 import fs from "fs";
-import sass from "sass";
+import * as sass from 'sass';
 
 const inputPath = "./src/scss/index.scss";
 const outputPath = "theme.css";
