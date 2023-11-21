@@ -4,12 +4,16 @@
 	padding: var(--size-4-1) 0;
 	margin: unset;
 	background: var(--background-secondary-blur);
-	border-bottom: var(--window-border);
 	-webkit-backdrop-filter: blur(var(--blur-intensity));
 	backdrop-filter: blur(var(--blur-intensity));
+	border-bottom: var(--window-border);
 
 	.document-search-input.mod-no-match {
 		background-color: var(--color-red-base);
 		border: 2px solid var(--color-red-tint);
 	}
+}
+
+.document-search {
+	align-items: center;
 }
