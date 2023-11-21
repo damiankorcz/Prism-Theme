@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.4.1)
+    Prism Theme for Obsidian.md (Version: 3.4.2)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -583,6 +583,8 @@ body {
   --pill-radius: var(--radius-s);
   --collapse-icon-color-collapsed: var(--text-normal);
   --embed-max-height: 800px;
+  --metadata-label-background-active: var(--background-secondary);
+  --metadata-input-background-active: var(--background-secondary);
   --status-bar-background-color-lt: #EBECEF;
   --status-bar-background-color-dt: #2B2B2B;
 }
@@ -1052,6 +1054,12 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 .workspace-tab-header::before, .workspace-tab-header::after {
   display: none;
+}
+
+.mod-root .workspace-tab-header-status-icon,
+.mod-root .workspace-tab-header-inner-icon {
+  --icon-size: var(--icon-s);
+  --icon-stroke: var(--icon-s-stroke-width);
 }
 
 .workspace-tab-header-container {
@@ -1575,7 +1583,7 @@ body.is-mobile .view-header-title-container {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.4.1";
+  content: "Prism 3.4.2";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -1766,7 +1774,6 @@ img.community-theme-lightbox {
 }
 body:not(.is-phone) .community-modal-controls .setting-item:first-child {
   padding-left: unset;
-  margin-bottom: unset;
   margin-left: var(--size-4-2);
 }
 .community-modal-controls input {
@@ -2131,13 +2138,17 @@ body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-right-split >
   padding: var(--size-4-1) 0;
   margin: unset;
   background: var(--background-secondary-blur);
-  border-bottom: var(--window-border);
   -webkit-backdrop-filter: blur(var(--blur-intensity));
   backdrop-filter: blur(var(--blur-intensity));
+  border-bottom: var(--window-border);
 }
 :is(.mod-active .document-search-container, .document-search-container) .document-search-input.mod-no-match {
   background-color: var(--color-red-base);
   border: 2px solid var(--color-red-tint);
+}
+
+.document-search {
+  align-items: center;
 }
 
 .popover {
@@ -2192,7 +2203,7 @@ div.notice-container div.notice {
 }
 
 .prompt-instructions {
-  padding-bottom: unset;
+  padding: var(--size-2-1) var(--size-4-2);
 }
 
 .tooltip {
@@ -2996,6 +3007,10 @@ a.tag:hover {
 .markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
   padding-right: 0.25rem;
 }
+.markdown-source-view.mod-cm6 .cm-table-widget .table-row-drag-handle:hover,
+.markdown-source-view.mod-cm6 .cm-table-widget .table-col-drag-handle:hover {
+  color: var(--interactive-accent-text);
+}
 
 .list-bullet {
   padding-right: 0.6em;
@@ -3654,6 +3669,9 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
   display: none;
 }
 
+.metadata-container {
+  transform: unset;
+}
 .metadata-container .metadata-add-button {
   margin-top: var(--size-4-2);
   margin-left: var(--size-4-1);
@@ -3676,6 +3694,10 @@ div.cm-focused .cm-vimCursorLayer .cm-fat-cursor {
 .workspace-leaf-content[data-type=file-properties] .view-content,
 .workspace-leaf-content[data-type=properties] .view-content {
   padding: var(--size-4-1);
+}
+
+.metadata-property:focus-within {
+  box-shadow: 0 0 0 1px var(--window-border-color);
 }
 
 audio::-webkit-media-controls-panel {
@@ -3728,7 +3750,6 @@ audio::-webkit-media-controls-time-remaining-display {
   background-color: var(--background-secondary-alt);
 }
 .modal-container .prompt .prompt-instructions {
-  padding: var(--size-2-1) var(--size-4-2);
   background-color: var(--background-secondary);
   border-top: var(--window-border);
 }
@@ -4028,11 +4049,12 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   color: var(--graph-highlight-line-color-dt);
 }
 
-.outline {
-  padding: var(--size-4-1);
-}
 .outline .tree-item-children > div:first-child {
   display: none;
+}
+
+.workspace-leaf-content[data-type=outline] .view-content {
+  padding: var(--size-4-1);
 }
 
 .search-result-container {
@@ -4397,7 +4419,7 @@ body.theme-dark {
 }
 
 .workspace-leaf-content[data-type=bookmarks] .tree-item-icon {
-  width: unset;
+  width: 20px;
   padding-right: var(--size-4-1);
 }
 .workspace-leaf-content[data-type=bookmarks] .view-content {
