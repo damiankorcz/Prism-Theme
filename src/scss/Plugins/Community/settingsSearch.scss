@@ -24,3 +24,8 @@
 		border: unset;
 	}
 }
+
+body.is-mobile.is-phone .search-input-container::before {
+	top: calc((var(--input-height) - var(--search-icon-size))/2);
+	left: var(--size-4-3);
+}
