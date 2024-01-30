@@ -631,7 +631,7 @@ body:is(.theme-light, .theme-dark) {
   --input-shadow-hover: unset;
   --tab-stacked-shadow: 0;
   --background-modifier-hover: hsla(var(--interactive-accent-base-hsl), 90%);
-  --text-selection: var(--background-modifier-hover);
+  --text-selection: hsla(var(--interactive-accent-tint-hsl), 55%);
   --text-highlight-bg: var(--interactive-accent-base);
   --interactive-accent: var(--interactive-accent-tint);
   --interactive-hover: var(--background-primary);
@@ -727,6 +727,7 @@ body.theme-light.pt-highlight-text-custom-lt {
 }
 body.theme-light.pt-accent-color-custom-lt {
   --interactive-accent-base-hsl: var(--color-accent-base-lt);
+  --interactive-accent-tint-hsl: var(--color-accent-tint-lt);
   --interactive-accent-text-hsl: var(--color-accent-text-lt);
   --interactive-accent-base: hsl(var(--color-accent-base-lt));
   --interactive-accent-tint: hsl(var(--color-accent-tint-lt));
@@ -735,6 +736,7 @@ body.theme-light.pt-accent-color-custom-lt {
 }
 body.theme-light.pt-accent-color-red-lt {
   --interactive-accent-base-hsl: var(--color-red-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-red-tint-hsl);
   --interactive-accent-text-hsl: var(--color-red-text-hsl);
   --interactive-accent-base: var(--color-red-base);
   --interactive-accent-tint: var(--color-red-tint);
@@ -743,6 +745,7 @@ body.theme-light.pt-accent-color-red-lt {
 }
 body.theme-light.pt-accent-color-orange-lt {
   --interactive-accent-base-hsl: var(--color-orange-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-orange-tint-hsl);
   --interactive-accent-text-hsl: var(--color-orange-text-hsl);
   --interactive-accent-base: var(--color-orange-base);
   --interactive-accent-tint: var(--color-orange-tint);
@@ -751,6 +754,7 @@ body.theme-light.pt-accent-color-orange-lt {
 }
 body.theme-light.pt-accent-color-yellow-lt {
   --interactive-accent-base-hsl: var(--color-yellow-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-yellow-tint-hsl);
   --interactive-accent-text-hsl: var(--color-yellow-text-hsl);
   --interactive-accent-base: var(--color-yellow-base);
   --interactive-accent-tint: var(--color-yellow-tint);
@@ -759,6 +763,7 @@ body.theme-light.pt-accent-color-yellow-lt {
 }
 body.theme-light.pt-accent-color-green-lt {
   --interactive-accent-base-hsl: var(--color-green-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-green-tint-hsl);
   --interactive-accent-text-hsl: var(--color-green-text-hsl);
   --interactive-accent-base: var(--color-green-base);
   --interactive-accent-tint: var(--color-green-tint);
@@ -767,6 +772,7 @@ body.theme-light.pt-accent-color-green-lt {
 }
 body.theme-light.pt-accent-color-mint-lt {
   --interactive-accent-base-hsl: var(--color-mint-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-mint-tint-hsl);
   --interactive-accent-text-hsl: var(--color-mint-text-hsl);
   --interactive-accent-base: var(--color-mint-base);
   --interactive-accent-tint: var(--color-mint-tint);
@@ -775,6 +781,7 @@ body.theme-light.pt-accent-color-mint-lt {
 }
 body.theme-light.pt-accent-color-cyan-lt {
   --interactive-accent-base-hsl: var(--color-cyan-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-cyan-tint-hsl);
   --interactive-accent-text-hsl: var(--color-cyan-text-hsl);
   --interactive-accent-base: var(--color-cyan-base);
   --interactive-accent-tint: var(--color-cyan-tint);
@@ -783,6 +790,7 @@ body.theme-light.pt-accent-color-cyan-lt {
 }
 body.theme-light.pt-accent-color-blue-lt {
   --interactive-accent-base-hsl: var(--color-blue-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-blue-tint-hsl);
   --interactive-accent-text-hsl: var(--color-blue-text-hsl);
   --interactive-accent-base: var(--color-blue-base);
   --interactive-accent-tint: var(--color-blue-tint);
@@ -791,6 +799,7 @@ body.theme-light.pt-accent-color-blue-lt {
 }
 body.theme-light.pt-accent-color-purple-lt {
   --interactive-accent-base-hsl: var(--color-purple-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-purple-tint-hsl);
   --interactive-accent-text-hsl: var(--color-purple-text-hsl);
   --interactive-accent-base: var(--color-purple-base);
   --interactive-accent-tint: var(--color-purple-tint);
@@ -799,6 +808,7 @@ body.theme-light.pt-accent-color-purple-lt {
 }
 body.theme-light.pt-accent-color-pink-lt {
   --interactive-accent-base-hsl: var(--color-pink-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-pink-tint-hsl);
   --interactive-accent-text-hsl: var(--color-pink-text-hsl);
   --interactive-accent-base: var(--color-pink-base);
   --interactive-accent-tint: var(--color-pink-tint);
@@ -807,6 +817,7 @@ body.theme-light.pt-accent-color-pink-lt {
 }
 body.theme-light.pt-accent-color-grey-lt {
   --interactive-accent-base-hsl: var(--color-grey-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-grey-tint-hsl);
   --interactive-accent-text-hsl: var(--color-grey-text-hsl);
   --interactive-accent-base: var(--color-grey-base);
   --interactive-accent-tint: var(--color-grey-tint);
@@ -884,6 +895,7 @@ body.theme-dark.pt-highlight-text-custom-dt {
 }
 body.theme-dark.pt-accent-color-custom-dt {
   --interactive-accent-base-hsl: var(--color-accent-base-dt);
+  --interactive-accent-tint-hsl: var(--color-accent-tint-dt);
   --interactive-accent-text-hsl: var(--color-accent-text-dt);
   --interactive-accent-base: hsl(var(--color-accent-base-dt));
   --interactive-accent-tint: hsl(var(--color-accent-tint-dt));
@@ -892,6 +904,7 @@ body.theme-dark.pt-accent-color-custom-dt {
 }
 body.theme-dark.pt-accent-color-red-dt {
   --interactive-accent-base-hsl: var(--color-red-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-red-tint-hsl);
   --interactive-accent-text-hsl: var(--color-red-text-hsl);
   --interactive-accent-base: var(--color-red-base);
   --interactive-accent-tint: var(--color-red-tint);
@@ -900,6 +913,7 @@ body.theme-dark.pt-accent-color-red-dt {
 }
 body.theme-dark.pt-accent-color-orange-dt {
   --interactive-accent-base-hsl: var(--color-orange-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-orange-tint-hsl);
   --interactive-accent-text-hsl: var(--color-orange-text-hsl);
   --interactive-accent-base: var(--color-orange-base);
   --interactive-accent-tint: var(--color-orange-tint);
@@ -908,6 +922,7 @@ body.theme-dark.pt-accent-color-orange-dt {
 }
 body.theme-dark.pt-accent-color-yellow-dt {
   --interactive-accent-base-hsl: var(--color-yellow-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-yellow-tint-hsl);
   --interactive-accent-text-hsl: var(--color-yellow-text-hsl);
   --interactive-accent-base: var(--color-yellow-base);
   --interactive-accent-tint: var(--color-yellow-tint);
@@ -916,6 +931,7 @@ body.theme-dark.pt-accent-color-yellow-dt {
 }
 body.theme-dark.pt-accent-color-green-dt {
   --interactive-accent-base-hsl: var(--color-green-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-green-tint-hsl);
   --interactive-accent-text-hsl: var(--color-green-text-hsl);
   --interactive-accent-base: var(--color-green-base);
   --interactive-accent-tint: var(--color-green-tint);
@@ -924,6 +940,7 @@ body.theme-dark.pt-accent-color-green-dt {
 }
 body.theme-dark.pt-accent-color-mint-dt {
   --interactive-accent-base-hsl: var(--color-mint-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-mint-tint-hsl);
   --interactive-accent-text-hsl: var(--color-mint-text-hsl);
   --interactive-accent-base: var(--color-mint-base);
   --interactive-accent-tint: var(--color-mint-tint);
@@ -932,6 +949,7 @@ body.theme-dark.pt-accent-color-mint-dt {
 }
 body.theme-dark.pt-accent-color-cyan-dt {
   --interactive-accent-base-hsl: var(--color-cyan-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-cyan-tint-hsl);
   --interactive-accent-text-hsl: var(--color-cyan-text-hsl);
   --interactive-accent-base: var(--color-cyan-base);
   --interactive-accent-tint: var(--color-cyan-tint);
@@ -940,6 +958,7 @@ body.theme-dark.pt-accent-color-cyan-dt {
 }
 body.theme-dark.pt-accent-color-blue-dt {
   --interactive-accent-base-hsl: var(--color-blue-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-blue-tint-hsl);
   --interactive-accent-text-hsl: var(--color-blue-text-hsl);
   --interactive-accent-base: var(--color-blue-base);
   --interactive-accent-tint: var(--color-blue-tint);
@@ -948,6 +967,7 @@ body.theme-dark.pt-accent-color-blue-dt {
 }
 body.theme-dark.pt-accent-color-purple-dt {
   --interactive-accent-base-hsl: var(--color-purple-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-purple-tint-hsl);
   --interactive-accent-text-hsl: var(--color-purple-text-hsl);
   --interactive-accent-base: var(--color-purple-base);
   --interactive-accent-tint: var(--color-purple-tint);
@@ -956,6 +976,7 @@ body.theme-dark.pt-accent-color-purple-dt {
 }
 body.theme-dark.pt-accent-color-pink-dt {
   --interactive-accent-base-hsl: var(--color-pink-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-pink-tint-hsl);
   --interactive-accent-text-hsl: var(--color-pink-text-hsl);
   --interactive-accent-base: var(--color-pink-base);
   --interactive-accent-tint: var(--color-pink-tint);
@@ -964,6 +985,7 @@ body.theme-dark.pt-accent-color-pink-dt {
 }
 body.theme-dark.pt-accent-color-grey-dt {
   --interactive-accent-base-hsl: var(--color-grey-base-hsl);
+  --interactive-accent-tint-hsl: var(--color-grey-tint-hsl);
   --interactive-accent-text-hsl: var(--color-grey-text-hsl);
   --interactive-accent-base: var(--color-grey-base);
   --interactive-accent-tint: var(--color-grey-tint);
@@ -1226,8 +1248,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   order: unset;
 }
 
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-header {
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left .nav-header,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-header {
   position: absolute;
   bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
   z-index: var(--layer-popover);
@@ -1240,38 +1264,50 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   background-color: unset;
   border-bottom: unset;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .nav-buttons-container,
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left .nav-buttons-container,
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .nav-buttons-container,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   padding: var(--size-4-1);
   pointer-events: auto;
   background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-m);
   box-shadow: var(--shadow-l);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right).is-mobile .nav-buttons-container, :is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right).is-mobile .workspace-leaf-content[data-type=dangling-links] .nav-header {
-  padding: var(--size-4-2);
-}
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dangling-links] .nav-header {
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dangling-links] .nav-header {
   width: fit-content;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .workspace-leaf-content[data-type=dictionary-view] .nav-buttons-container {
   position: fixed;
   bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
   z-index: var(--layer-popover);
   min-height: unset;
 }
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split,
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content) {
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content),
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content),
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content),
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content) {
   padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
+}
+
+.pt-nav-header-left-sidebar-position-bottom.is-mobile .workspace-drawer.mod-left .nav-buttons-container,
+.pt-nav-header-right-sidebar-position-bottom.is-mobile .workspace-drawer.mod-right .nav-buttons-container,
+.pt-nav-header-left-sidebar-position-bottom.is-mobile .workspace-drawer.mod-left .workspace-leaf-content[data-type=dangling-links] .nav-header,
+.pt-nav-header-right-sidebar-position-bottom.is-mobile .workspace-drawer.mod-right .workspace-leaf-content[data-type=dangling-links] .nav-header {
+  padding: var(--size-4-2);
 }
 
 body.is-mobile {
@@ -1390,7 +1426,7 @@ body.is-mobile.is-phone .modal.mod-sidebar-layout .search-input-container {
   height: unset;
 }
 body.is-mobile.is-phone .search-input-container:before {
-  top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-1)) / 2);
+  top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
 }
 body.is-mobile.is-tablet .modal.mod-sidebar-layout .modal-setting-back-button {
   display: none;
@@ -3750,7 +3786,9 @@ audio::-webkit-media-controls-time-remaining-display {
   background-color: var(--background-secondary);
   border-top: var(--window-border);
 }
-.modal-container .prompt .suggestion-item.mod-complex .suggestion-hotkey {
+
+.suggestion-item.mod-complex .suggestion-hotkey {
+  margin-left: var(--size-4-2);
   font-weight: 600;
   border-radius: var(--radius-s);
 }
@@ -6257,6 +6295,11 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 }
 .settings-search-container .vertical-tab-nav-item {
   border: unset;
+}
+
+body.is-mobile.is-phone .search-input-container::before {
+  top: calc((var(--input-height) - var(--search-icon-size)) / 2);
+  left: var(--size-4-3);
 }
 
 /* @settings
