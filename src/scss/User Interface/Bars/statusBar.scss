@@ -1,5 +1,7 @@
 // [Status Bar] Base
 .status-bar {
+	// Hides the Status Bar when there is nothing displayed in it or the Style Settings option is set to Hidden.
+	&:empty,
 	.pt-status-bar-position-hidden & {
 		display: none;
 	}
@@ -11,11 +13,11 @@
 		width: fit-content;
 		margin: 0 auto calc(var(--size-2-3) + var(--scroll-bar-size));
 		background: var(--background-secondary-blur);
+		-webkit-backdrop-filter: blur(var(--blur-intensity));
+		backdrop-filter: blur(var(--blur-intensity));
 		border: 1px solid var(--window-border-color);
 		border-radius: var(--radius-s);
 		box-shadow: var(--shadow-l);
-		-webkit-backdrop-filter: blur(var(--blur-intensity));
-		backdrop-filter: blur(var(--blur-intensity));
 	}
 
 	.pt-status-bar-position-fixed & {
