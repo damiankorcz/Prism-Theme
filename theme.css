@@ -1006,7 +1006,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   background-color: unset;
 }
 
-.pt-status-bar-position-hidden .status-bar {
+.status-bar:empty, .pt-status-bar-position-hidden .status-bar {
   display: none;
 }
 .pt-status-bar-position-floating .status-bar {
@@ -1016,11 +1016,11 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   width: fit-content;
   margin: 0 auto calc(var(--size-2-3) + var(--scroll-bar-size));
   background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
   box-shadow: var(--shadow-l);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
 }
 .pt-status-bar-position-fixed .status-bar {
   --status-bar-position: relative;
@@ -1253,13 +1253,13 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right .nav-header,
 .pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split .nav-header {
   position: absolute;
-  bottom: calc(var(--size-2-3) + var(--scroll-bar-size));
+  bottom: calc(var(--size-2-2) + var(--scroll-bar-size));
   z-index: var(--layer-popover);
   order: 10;
   width: -webkit-fill-available;
   width: fill-available;
   height: unset;
-  padding: 0 calc(var(--size-2-3) + var(--scroll-bar-size)) 0 var(--size-2-3);
+  padding: 0 calc(var(--size-2-2) + var(--scroll-bar-size)) 0 var(--size-2-2);
   pointer-events: none;
   background-color: unset;
   border-bottom: unset;
@@ -1825,6 +1825,10 @@ body:not(.is-phone) .community-modal-controls .setting-item:first-child {
 .setting-item.setting-item-heading {
   margin-bottom: var(--size-4-1);
   border-bottom: 1px solid var(--window-border-color);
+}
+.setting-item + div > .setting-item-heading,
+.setting-item + .setting-item-heading {
+  margin-top: var(--size-4-1);
 }
 
 .setting-item-name {
@@ -4036,52 +4040,68 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 
 .theme-light .graph-view.color-line {
   color: var(--graph-line-color-lt);
+  opacity: var(--graph-line-opacity-lt);
 }
 .theme-light .graph-view.color-fill {
   color: var(--graph-fill-color-lt);
+  opacity: var(--graph-fill-opacity-lt);
 }
 .theme-light .graph-view.color-fill-focused {
   color: var(--graph-fill-focused-color-lt);
+  opacity: var(--graph-fill-focused-opacity-lt);
 }
 .theme-light .graph-view.color-fill-tag {
   color: var(--graph-tag-color-lt);
+  opacity: var(--graph-tag-opacity-lt);
 }
 .theme-light .graph-view.color-fill-attachment {
   color: var(--graph-attachment-color-lt);
+  opacity: var(--graph-attachment-opacity-lt);
 }
 .theme-light .graph-view.color-fill-unresolved {
   color: var(--graph-unresolved-color-lt);
+  opacity: var(--graph-unresolved-opacity-lt);
 }
 .theme-light .graph-view.color-fill-highlight {
   color: var(--graph-highlight-color-lt);
+  opacity: var(--graph-highlight-opacity-lt);
 }
 .theme-light .graph-view.color-line-highlight {
   color: var(--graph-highlight-line-color-lt);
+  opacity: var(--graph-highlight-line-opacity-lt);
 }
 
 .theme-dark .graph-view.color-line {
   color: var(--graph-line-color-dt);
+  opacity: var(--graph-line-opacity-dt);
 }
 .theme-dark .graph-view.color-fill {
   color: var(--graph-fill-color-dt);
+  opacity: var(--graph-fill-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-focused {
   color: var(--graph-fill-focused-color-dt);
+  opacity: var(--graph-fill-focused-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-tag {
   color: var(--graph-tag-color-dt);
+  opacity: var(--graph-tag-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-attachment {
   color: var(--graph-attachment-color-dt);
+  opacity: var(--graph-attachment-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-unresolved {
   color: var(--graph-unresolved-color-dt);
+  opacity: var(--graph-unresolved-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-highlight {
   color: var(--graph-highlight-color-dt);
+  opacity: var(--graph-highlight-opacity-dt);
 }
 .theme-dark .graph-view.color-line-highlight {
   color: var(--graph-highlight-line-color-dt);
+  opacity: var(--graph-highlight-line-opacity-dt);
 }
 
 .outline .tree-item-children > div:first-child {
@@ -4202,6 +4222,8 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   margin: var(--size-4-1) var(--size-4-1) var(--size-4-2) var(--size-4-5);
 }
 :is(.backlink-pane, .outgoing-link-pane) > .tree-item-self {
+  padding-top: var(--size-4-1);
+  padding-bottom: var(--size-4-1);
   padding-left: var(--size-4-6);
   margin-bottom: -1px;
   background-color: var(--background-secondary);
@@ -4257,11 +4279,11 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   padding: var(--size-4-1);
   pointer-events: auto;
   background: var(--background-secondary-blur);
+  -webkit-backdrop-filter: blur(var(--blur-intensity));
+  backdrop-filter: blur(var(--blur-intensity));
   border: var(--window-border);
   border-radius: var(--radius-m);
   box-shadow: var(--shadow-l);
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
 }
 
 .outgoing-link-pane .tree-item-self .tree-item-icon {
@@ -6287,7 +6309,7 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 }
 .is-mobile.is-phone .settings-search-container .settings-search-input {
   padding: unset;
-  margin: var(--size-4-1);
+  margin: var(--size-4-1) 0;
 }
 .settings-search-container .search-input-container::before {
   top: calc((var(--input-height) - var(--search-icon-size)) / 2);
@@ -6687,7 +6709,7 @@ settings:
         collapsed: true
     -
         id: graph-line-color-lt
-        title: Graph Line Presets
+        title: Graph Lines Color Presets
         type: variable-select
         allowEmpty: false
         default: var(--background-secondary-alt)
@@ -6740,7 +6762,7 @@ settings:
         id: graph-line-opacity-lt
         title: Graph Lines Opacity
         type: variable-number-slider
-        default: 1
+        default: 0.6
         min: 0
         max: 1
         step: 0.05
@@ -6800,6 +6822,14 @@ settings:
         opacity: false
         default: '#C4C7CA'
     -
+        id: graph-fill-opacity-lt
+        title: Graph Note Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: pt-graph-fill-focused-color-lt
         title: Graph Note Focused Color
         description: The color of a Graph Node representing currently focused note file.
@@ -6858,6 +6888,14 @@ settings:
         opacity: false
         default: '#8670FF'
     -
+        id: graph-fill-focused-opacity-lt
+        title: Graph Note Focused Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: pt-graph-tag-color-lt
         title: Graph Tag Color
         description: The color of a Graph Node representing a tag.
@@ -6912,6 +6950,14 @@ settings:
         format: hsl
         opacity: false
         default: '#619EFF'
+    -
+        id: graph-tag-opacity-lt
+        title: Graph Tag Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: pt-graph-attachment-color-lt
         title: Graph Attachment Color
@@ -6968,6 +7014,14 @@ settings:
         opacity: false
         default: '#FDDB6D'
     -
+        id: graph-attachment-opacity-lt
+        title: Graph Attachment Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: pt-graph-unresolved-color-lt
         title: Graph Unresolved Color
         description: The color of a Graph Node representing an unresolved note.
@@ -7022,6 +7076,14 @@ settings:
         format: hsl
         opacity: false
         default: '#FF7070'
+    -
+        id: graph-unresolved-opacity-lt
+        title: Graph Unresolved Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: pt-graph-highlight-color-lt
         title: Graph Highlight Color
@@ -7081,6 +7143,14 @@ settings:
         opacity: false
         default: '#8670FF'
     -
+        id: graph-highlight-opacity-lt
+        title: Graph Highlight Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: pt-graph-highlight-line-color-lt
         title: Graph Highlight Line Color
         description: The color of the lines connected to a highlighted Graph Node.
@@ -7139,6 +7209,14 @@ settings:
         opacity: false
         default: '#8670FF'
     -
+        id: graph-highlight-line-opacity-lt
+        title: Graph Highlight Line Opacity
+        type: variable-number-slider
+        default: 0.6
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: graph-view-dark-theme
         title: Dark Theme
         type: heading
@@ -7153,7 +7231,7 @@ settings:
         collapsed: true
     -
         id: graph-line-color-dt
-        title: Graph Lines Presets
+        title: Graph Lines Color Presets
         type: variable-select
         allowEmpty: false
         default: var(--background-primary-alt)
@@ -7202,6 +7280,14 @@ settings:
         format: hsl
         opacity: false
         default: '#C4C7CA'
+    -
+        id: graph-line-opacity-dt
+        title: Graph Lines Opacity
+        type: variable-number-slider
+        default: 0.6
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: pt-graph-fill-color-dt
         title: Graph Note Color
@@ -7257,6 +7343,14 @@ settings:
         format: hsl
         opacity: false
         default: '#878787'
+    -
+        id: graph-fill-opacity-dt
+        title: Graph Note Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: pt-graph-fill-focused-color-dt
         title: Graph Note Focused Color
@@ -7316,6 +7410,14 @@ settings:
         opacity: false
         default: '#4C3AB6'
     -
+        id: graph-fill-focused-opacity-dt
+        title: Graph Note Focused Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: pt-graph-tag-color-dt
         title: Graph Tag Color
         description: The color of a Graph Node representing a tag.
@@ -7370,6 +7472,14 @@ settings:
         format: hsl
         opacity: false
         default: '#3663AB'
+    -
+        id: graph-tag-opacity-dt
+        title: Graph Tag Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: pt-graph-attachment-color-dt
         title: Graph Attachment Color
@@ -7426,6 +7536,14 @@ settings:
         opacity: false
         default: '#AF943C'
     -
+        id: graph-attachment-opacity-dt
+        title: Graph Attachment Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
         id: pt-graph-unresolved-color-dt
         title: Graph Unresolved Color
         description: The color of a Graph Node representing an unresolved note.
@@ -7480,6 +7598,14 @@ settings:
         format: hsl
         opacity: false
         default: '#B63A3A'
+    -
+        id: graph-unresolved-opacity-dt
+        title: Graph Unresolved Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: pt-graph-highlight-color-dt
         title: Graph Highlight Color
@@ -7539,7 +7665,15 @@ settings:
         opacity: false
         default: '#4C3AB6'
     -
-        id: pt-graph-highlight-line-color-lt
+        id: graph-highlight-opacity-dt
+        title: Graph Highlight Opacity
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 1
+        step: 0.05
+    -
+        id: pt-graph-highlight-line-color-dt
         title: Graph Highlight Line Color
         description: The color of the lines connected to a highlighted Graph Node.
         type: heading
@@ -7596,6 +7730,14 @@ settings:
         format: hsl
         opacity: false
         default: '#4C3AB6'
+    -
+        id: graph-highlight-line-opacity-dt
+        title: Graph Highlight Line Opacity
+        type: variable-number-slider
+        default: 0.6
+        min: 0
+        max: 1
+        step: 0.05
     -
         id: custom-vault-banner
         title: Custom Vault Banner
