@@ -184,10 +184,12 @@ body {
 		--text-faint: hsl(var(--text-faint-hsl));
 
 		--background-primary: hsl(var(--background-primary-hsl));
+		--background-primary-blur: hsl(var(--background-primary-hsl), 80%);
 		--background-primary-alt: hsl(var(--background-primary-alt-hsl));
 		--background-secondary: hsl(var(--background-secondary-hsl));
 		--background-secondary-blur: hsla(var(--background-secondary-blur-hsl), 80%);
 		--background-secondary-alt: hsl(var(--background-secondary-alt-hsl));
+		--background-secondary-alt-blur: hsla(var(--background-secondary-alt-hsl), 80%);
 
 		--input-shadow: unset;
 		--input-shadow-hover: unset;
@@ -296,14 +298,23 @@ body {
 		// Style Settings Custom Options
 		&.pt-color-scheme-style-border-lt {
 			--background-secondary: var(--background-primary);
-			--background-secondary-blur: var(--background-primary);
+			--background-secondary-blur: var(--background-primary-blur);
+			
+			&.pt-disable-blur {
+				--background-secondary-blur: var(--background-primary);
+			}
 		}
 
 		&.pt-color-scheme-style-minimal-lt {
 			--background-secondary: var(--background-primary);
-			--background-secondary-blur: var(--background-primary);
+			--background-secondary-blur: var(--background-primary-blur);
 			--window-border: 1px solid transparent;
+
+			&.pt-disable-blur {
+				--background-secondary-blur: var(--background-primary);
+			}
 		}
+
 
 		&.pt-highlight-text-light-lt {
 			--highlight-text-normal: var(--background-primary);
@@ -502,13 +513,21 @@ body {
 		// Style Settings Custom Options
 		&.pt-color-scheme-style-border-dt {
 			--background-secondary: var(--background-secondary-alt);
-			--background-secondary-blur: var(--background-secondary-alt);
+			--background-secondary-blur: var(--background-secondary-alt-blur);
+
+			&.pt-disable-blur {
+				--background-secondary-blur: var(--background-secondary-alt);
+			}
 		}
 
 		&.pt-color-scheme-style-minimal-dt {
 			--background-secondary: var(--background-secondary-alt);
-			--background-secondary-blur: var(--background-secondary-alt);
+			--background-secondary-blur: var(--background-secondary-alt-blur);
 			--window-border: 1px solid transparent;
+
+			&.pt-disable-blur {
+				--background-secondary-blur: var(--background-secondary-alt);
+			}
 		}
 
 		&.pt-highlight-text-light-dt {
