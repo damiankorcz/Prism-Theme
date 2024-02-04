@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.4.3)
+    Prism Theme for Obsidian.md (Version: 3.4.4)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -17,7 +17,7 @@
     Theme Code is distributed under the MIT License.
     See https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE for more information.
 
-    Copyright (c) 2021-2023 Damian Korcz <https://github.com/damiankorcz>
+    Copyright (c) 2021-2024 Damian Korcz <https://github.com/damiankorcz>
 */
 .theme-light.pt-color-scheme-swan-lt,
 .theme-light:not(.css-settings-manager) {
@@ -623,10 +623,12 @@ body:is(.theme-light, .theme-dark) {
   --text-muted: hsl(var(--text-muted-hsl));
   --text-faint: hsl(var(--text-faint-hsl));
   --background-primary: hsl(var(--background-primary-hsl));
+  --background-primary-blur: hsl(var(--background-primary-hsl), 80%);
   --background-primary-alt: hsl(var(--background-primary-alt-hsl));
   --background-secondary: hsl(var(--background-secondary-hsl));
   --background-secondary-blur: hsla(var(--background-secondary-blur-hsl), 80%);
   --background-secondary-alt: hsl(var(--background-secondary-alt-hsl));
+  --background-secondary-alt-blur: hsla(var(--background-secondary-alt-hsl), 80%);
   --input-shadow: unset;
   --input-shadow-hover: unset;
   --tab-stacked-shadow: 0;
@@ -706,12 +708,18 @@ body.theme-light {
 }
 body.theme-light.pt-color-scheme-style-border-lt {
   --background-secondary: var(--background-primary);
+  --background-secondary-blur: var(--background-primary-blur);
+}
+body.theme-light.pt-color-scheme-style-border-lt.pt-disable-blur {
   --background-secondary-blur: var(--background-primary);
 }
 body.theme-light.pt-color-scheme-style-minimal-lt {
   --background-secondary: var(--background-primary);
-  --background-secondary-blur: var(--background-primary);
+  --background-secondary-blur: var(--background-primary-blur);
   --window-border: 1px solid transparent;
+}
+body.theme-light.pt-color-scheme-style-minimal-lt.pt-disable-blur {
+  --background-secondary-blur: var(--background-primary);
 }
 body.theme-light.pt-highlight-text-light-lt {
   --highlight-text-normal: var(--background-primary);
@@ -874,12 +882,18 @@ body.theme-dark {
 }
 body.theme-dark.pt-color-scheme-style-border-dt {
   --background-secondary: var(--background-secondary-alt);
+  --background-secondary-blur: var(--background-secondary-alt-blur);
+}
+body.theme-dark.pt-color-scheme-style-border-dt.pt-disable-blur {
   --background-secondary-blur: var(--background-secondary-alt);
 }
 body.theme-dark.pt-color-scheme-style-minimal-dt {
   --background-secondary: var(--background-secondary-alt);
-  --background-secondary-blur: var(--background-secondary-alt);
+  --background-secondary-blur: var(--background-secondary-alt-blur);
   --window-border: 1px solid transparent;
+}
+body.theme-dark.pt-color-scheme-style-minimal-dt.pt-disable-blur {
+  --background-secondary-blur: var(--background-secondary-alt);
 }
 body.theme-dark.pt-highlight-text-light-dt {
   --highlight-text-normal: var(--text-normal);
@@ -1616,7 +1630,7 @@ body.is-mobile .view-header-title-container {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.4.3";
+  content: "Prism 3.4.4";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -8757,60 +8771,6 @@ settings:
         level: 3
         collapsed: true
     -
-        id: text-bold-color-lt
-        title: Bold Text Color Preset
-        type: variable-select
-        allowEmpty: false
-        default: var(--text-normal)
-        options:
-            -
-                label: Default
-                value: var(--text-normal)
-            -
-                label: Accent Color
-                value: var(--interactive-accent-text)
-            -
-                label: Custom
-                value: var(--text-bold-custom-color-lt)
-            -
-                label: Red
-                value: var(--color-red-text)
-            -
-                label: Orange
-                value: var(--color-orange-text)
-            -
-                label: Yellow
-                value: var(--color-yellow-text)
-            -
-                label: Green
-                value: var(--color-green-text)
-            -
-                label: Mint
-                value: var(--color-mint-text)
-            -
-                label: Cyan
-                value: var(--color-cyan-text)
-            -
-                label: Blue
-                value: var(--color-blue-text)
-            -
-                label: Purple
-                value: var(--color-purple-text)
-            -
-                label: Pink
-                value: var(--color-pink-text)
-            -
-                label: Grey
-                value: var(--color-grey-text)
-    -
-        id: text-bold-custom-color-lt
-        title: Bold Text Custom Color
-        description: Make sure you selected 'Custom' in Light Theme Bold Text Color Preset for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#2B2B2B'
-    -
         id: text-italic-color-lt
         title: Italic Text Color Preset
         type: variable-select
@@ -8860,6 +8820,60 @@ settings:
         id: text-italic-custom-color-lt
         title: Italic Text Custom Color
         description: Make sure you selected 'Custom' in Light Theme Italic Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: text-bold-color-lt
+        title: Bold Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--text-bold-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: text-bold-custom-color-lt
+        title: Bold Text Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Bold Text Color Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -9027,60 +9041,6 @@ settings:
         level: 3
         collapsed: true
     -
-        id: text-bold-color-dt
-        title: Bold Text Color Preset
-        type: variable-select
-        allowEmpty: false
-        default: var(--text-normal)
-        options:
-            -
-                label: Default
-                value: var(--text-normal)
-            -
-                label: Accent Color
-                value: var(--interactive-accent-text)
-            -
-                label: Custom
-                value: var(--text-bold-custom-color-dt)
-            -
-                label: Red
-                value: var(--color-red-text)
-            -
-                label: Orange
-                value: var(--color-orange-text)
-            -
-                label: Yellow
-                value: var(--color-yellow-text)
-            -
-                label: Green
-                value: var(--color-green-text)
-            -
-                label: Mint
-                value: var(--color-mint-text)
-            -
-                label: Cyan
-                value: var(--color-cyan-text)
-            -
-                label: Blue
-                value: var(--color-blue-text)
-            -
-                label: Purple
-                value: var(--color-purple-text)
-            -
-                label: Pink
-                value: var(--color-pink-text)
-            -
-                label: Grey
-                value: var(--color-grey-text)
-    -
-        id: text-bold-custom-color-dt
-        title: Bold Text Custom Color
-        description: Make sure you selected 'Custom' in Dark Theme Bold Text Color Preset for this to work.
-        type: variable-color
-        format: hsl
-        opacity: false
-        default: '#2B2B2B'
-    -
         id: text-italic-color-dt
         title: Italic Text Color Preset
         type: variable-select
@@ -9130,6 +9090,60 @@ settings:
         id: text-italic-custom-color-dt
         title: Italic Text Custom Color
         description: Make sure you selected 'Custom' in Dark Theme Italic Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: text-bold-color-dt
+        title: Bold Text Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-normal)
+        options:
+            -
+                label: Default
+                value: var(--text-normal)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--text-bold-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: text-bold-custom-color-dt
+        title: Bold Text Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Bold Text Color Preset for this to work.
         type: variable-color
         format: hsl
         opacity: false
@@ -9557,16 +9571,6 @@ settings:
         type: heading
         level: 3
         collapsed: true
-    -
-        id: file-explorer-left-margin
-        title: File Explorer File/Folder Left Margin (px)
-        description: Increases the Left Margin for Files/Folders in order indent them within another folder.
-        type: variable-number-slider
-        format: 'px'
-        default: 0
-        min: 0
-        max: 25
-        step: 1
     -
         id: pt-file-explorer-folder-icon
         title: Enable Folder Dropdown Icon
