@@ -3255,6 +3255,24 @@ settings:
                 label: Accent Color on Open Folders
                 value: pt-file-explorer-folder-icon-active
     -
+        id: colored-folders
+        title: Colored Folders
+        description: Makes the folders in File Explorer color coded. The colors repeat once you get past 10 folders in the root of your vault. All folders further down the tree match in color with the top most folder.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: pt-colored-folders
+        title: Enable Colored Folders
+        description: This option will overwrite the behaviour of Folder Dropdown Icon Color.
+        type: class-toggle
+        default: false
+    -
+        id: pt-colored-folders-files-match
+        title: Apply color to nested files
+        type: class-toggle
+        default: false
+    -
         id: titlebar
         title: Titlebar
         description: Settings for changing the style of the Titlebar.
