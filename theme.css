@@ -1310,10 +1310,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   z-index: var(--layer-popover);
   min-height: unset;
 }
-.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content),
-.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content),
-.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content),
-.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content) {
+.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content, .workspace-leaf-content[data-type=outline] .view-content),
+.pt-nav-header-left-sidebar-position-bottom .workspace-split.mod-left-split :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content, .workspace-leaf-content[data-type=outline] .view-content),
+.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content, .workspace-leaf-content[data-type=outline] .view-content),
+.pt-nav-header-right-sidebar-position-bottom .workspace-split.mod-right-split :is(.nav-files-container, .workspace-leaf-content[data-type=tag] .tag-container, .workspace-leaf-content[data-type=backlink] .backlink-pane, .workspace-leaf-content[data-type=starred] .item-list, .workspace-leaf-content[data-type=dictionary-view] .contents, .workspace-leaf-content[data-type=dangling-links] .view-content .container, .workspace-leaf-content[data-type=bookmarks] .view-content > div, .workspace-leaf-content[data-type=all-properties] .view-content, .workspace-leaf-content[data-type=properties] .view-content, .workspace-leaf-content[data-type=outline] .view-content) {
   padding-bottom: calc(38px + 2 * var(--scroll-bar-size));
 }
 
@@ -4872,6 +4872,76 @@ body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .wor
 body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .mobile-navbar:hover {
   opacity: unset;
   transition: opacity 50ms;
+}
+
+.pt-colored-folders.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active, :hover) {
+  color: var(--rainbow-text-color);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+  color: var(--rainbow-text-color);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover,
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+  color: var(--rainbow-text-color);
+  background-color: var(--rainbow-background-color);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+2) {
+  --rainbow-text-color: var(--color-red-text);
+  --rainbow-background-color: var(--color-red-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+3) {
+  --rainbow-text-color: var(--color-orange-text);
+  --rainbow-background-color: var(--color-orange-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+4) {
+  --rainbow-text-color: var(--color-yellow-text);
+  --rainbow-background-color: var(--color-yellow-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+5) {
+  --rainbow-text-color: var(--color-green-text);
+  --rainbow-background-color: var(--color-green-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+6) {
+  --rainbow-text-color: var(--color-mint-text);
+  --rainbow-background-color: var(--color-mint-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+7) {
+  --rainbow-text-color: var(--color-cyan-text);
+  --rainbow-background-color: var(--color-cyan-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+8) {
+  --rainbow-text-color: var(--color-blue-text);
+  --rainbow-background-color: var(--color-blue-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+9) {
+  --rainbow-text-color: var(--color-purple-text);
+  --rainbow-background-color: var(--color-purple-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+10) {
+  --rainbow-text-color: var(--color-pink-text);
+  --rainbow-background-color: var(--color-pink-base);
+}
+.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+11) {
+  --rainbow-text-color: var(--color-grey-text);
+  --rainbow-background-color: var(--color-grey-base);
+}
+.pt-colored-folders .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
+  color: var(--rainbow-text-color);
+}
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
+  background-color: var(--rainbow-text-color);
 }
 
 div.workspace-leaf-content[data-type=style-settings] div.view-content {
@@ -9394,10 +9464,10 @@ settings:
         type: heading
         level: 1
         collapsed: true
-    -
-        id: window-adjustments
-        title: Window Adjustments
-        description: Settings for changing the gaps between windows and border radius around all UI elements.
+    -   
+        id: sidebar-and-main-workspace-elements
+        title: Sidebar and Main Workspace Elements
+        description: Settings for positioning, alignment, etc. of different UI elements within the Sidebars and the Main Workspace.
         type: heading
         level: 2
         collapsed: true
@@ -9423,13 +9493,6 @@ settings:
         min: 0
         max: 20
         step: 1
-    -
-        id: sidebar-and-main-workspace-elements
-        title: Sidebar and Main Workspace Elements
-        description: Settings for positioning, alignment, etc. of different UI elements within the Sidebars and the Main Workspace.
-        type: heading
-        level: 2
-        collapsed: true
     -
         id: tab-label
         title: Tab Label
@@ -9594,6 +9657,24 @@ settings:
             -
                 label: Accent Color on Open Folders
                 value: pt-file-explorer-folder-icon-active
+    -
+        id: colored-folders
+        title: Colored Folders
+        description: Makes the folders in File Explorer color coded. The colors repeat once you get past 10 folders in the root of your vault. All folders further down the tree match in color with the top most folder.
+        type: heading
+        level: 4
+        collapsed: true
+    -
+        id: pt-colored-folders
+        title: Enable Colored Folders
+        description: This option will overwrite the behaviour of Folder Dropdown Icon Color.
+        type: class-toggle
+        default: false
+    -
+        id: pt-colored-folders-files-match
+        title: Apply color to nested files
+        type: class-toggle
+        default: false
     -
         id: titlebar
         title: Titlebar
