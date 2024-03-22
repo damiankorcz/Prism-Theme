@@ -45,8 +45,11 @@ jobs:
     - name: Run Theme Build script
       run: pnpm run buildTheme --if-present
 
-    - name: Run Snippet Build script
+    - name: Run Mark Highlight System Snippet Build script
       run: pnpm run buildSnipMHS --if-present
+    
+    - name: Run Callout Snippet Build script
+      run: pnpm run buildSnipC --if-present
 
     - name: Pushing the Built Files
       uses: stefanzweifel/git-auto-commit-action@v4

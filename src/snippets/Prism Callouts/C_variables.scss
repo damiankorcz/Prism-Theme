@@ -1,0 +1,118 @@
+body:not(.prism-theme) {
+	&.theme-light {
+		--color-grey-base-hsl: 0, 0%, 90%;
+		--color-red-base-hsl: 7, 90%, 92%;
+		--color-orange-base-hsl: 26, 85%, 89%;
+		--color-yellow-base-hsl: 42, 88%, 83%;
+		--color-green-base-hsl: 101, 49%, 85%;
+		--color-mint-base-hsl: 152, 62%, 85%;
+		--color-cyan-base-hsl: 184, 60%, 85%;
+		--color-blue-base-hsl: 217, 76%, 92%;
+		--color-purple-base-hsl: 251, 87%, 94%;
+		--color-pink-base-hsl: 328, 79%, 93%;
+
+		--color-grey-tint-hsl: 0, 0%, 73%;
+		--color-red-tint-hsl: 7, 82%, 78%;
+		--color-orange-tint-hsl: 27, 80%, 69%;
+		--color-yellow-tint-hsl: 44, 67%, 58%;
+		--color-green-tint-hsl: 99, 50%, 59%;
+		--color-mint-tint-hsl: 158, 59%, 55%;
+		--color-cyan-tint-hsl: 184, 61%, 56%;
+		--color-blue-tint-hsl: 219, 73%, 78%;
+		--color-purple-tint-hsl: 252, 84%, 83%;
+		--color-pink-tint-hsl: 327, 72%, 79%;
+
+		--color-grey-text-hsl: 0, 0%, 47%;
+		--color-red-text-hsl: 3, 68%, 52%;
+		--color-orange-text-hsl: 31, 100%, 36%;
+		--color-yellow-text-hsl: 38, 62%, 37%;
+		--color-green-text-hsl: 93, 100%, 27%;
+		--color-mint-text-hsl: 161, 100%, 26%;
+		--color-cyan-text-hsl: 184, 100%, 28%;
+		--color-blue-text-hsl: 221, 67%, 56%;
+		--color-purple-text-hsl: 258, 75%, 63%;
+		--color-pink-text-hsl: 320, 60%, 50%;
+	}
+
+	&.theme-dark {
+		--color-grey-base-hsl: 0, 0%, 16%;
+		--color-red-base-hsl: 2, 55%, 19%;
+		--color-orange-base-hsl: 26, 65%, 15%;
+		--color-yellow-base-hsl: 43, 73%, 12%;
+		--color-green-base-hsl: 124, 54%, 12%;
+		--color-mint-base-hsl: 165, 88%, 10%;
+		--color-cyan-base-hsl: 195, 65%, 13%;
+		--color-blue-base-hsl: 225, 50%, 20%;
+		--color-purple-base-hsl: 271, 48%, 21%;
+		--color-pink-base-hsl: 325, 55%, 18%;
+
+		--color-grey-tint-hsl: 0, 0%, 40%;
+		--color-red-tint-hsl: 3, 49%, 46%;
+		--color-orange-tint-hsl: 27, 53%, 37%;
+		--color-yellow-tint-hsl: 44, 59%, 31%;
+		--color-green-tint-hsl: 123, 43%, 32%;
+		--color-mint-tint-hsl: 166, 73%, 26%;
+		--color-cyan-tint-hsl: 195, 52%, 34%;
+		--color-blue-tint-hsl: 224, 44%, 49%;
+		--color-purple-tint-hsl: 271, 43%, 51%;
+		--color-pink-tint-hsl: 325, 47%, 45%;
+
+		--color-grey-text-hsl: 0, 0%, 67%;
+		--color-red-text-hsl: 4, 74%, 74%;
+		--color-orange-text-hsl: 26, 85%, 63%;
+		--color-yellow-text-hsl: 44, 60%, 53%;
+		--color-green-text-hsl: 124, 48%, 54%;
+		--color-mint-text-hsl: 166, 67%, 45%;
+		--color-cyan-text-hsl: 195, 69%, 58%;
+		--color-blue-text-hsl: 225, 61%, 75%;
+		--color-purple-text-hsl: 267, 52%, 75%;
+		--color-pink-text-hsl: 330, 64%, 74%;
+	}
+
+	&.theme-light,
+	&.theme-dark {
+		--color-grey-base: hsl(var(--color-grey-base-hsl));
+		--color-red-base: hsl(var(--color-red-base-hsl));
+		--color-orange-base: hsl(var(--color-orange-base-hsl));
+		--color-yellow-base: hsl(var(--color-yellow-base-hsl));
+		--color-green-base: hsl(var(--color-green-base-hsl));
+		--color-mint-base: hsl(var(--color-mint-base-hsl));
+		--color-cyan-base: hsl(var(--color-cyan-base-hsl));
+		--color-blue-base: hsl(var(--color-blue-base-hsl));
+		--color-purple-base: hsl(var(--color-purple-base-hsl));
+		--color-pink-base: hsl(var(--color-pink-base-hsl));
+
+		--color-grey-tint: hsl(var(--color-grey-tint-hsl));
+		--color-red-tint: hsl(var(--color-red-tint-hsl));
+		--color-orange-tint: hsl(var(--color-orange-tint-hsl));
+		--color-yellow-tint: hsl(var(--color-yellow-tint-hsl));
+		--color-green-tint: hsl(var(--color-green-tint-hsl));
+		--color-mint-tint: hsl(var(--color-mint-tint-hsl));
+		--color-cyan-tint: hsl(var(--color-cyan-tint-hsl));
+		--color-blue-tint: hsl(var(--color-blue-tint-hsl));
+		--color-purple-tint: hsl(var(--color-purple-tint-hsl));
+		--color-pink-tint: hsl(var(--color-pink-tint-hsl));
+
+		--color-grey-text: hsl(var(--color-grey-text-hsl));
+		--color-red-text: hsl(var(--color-red-text-hsl));
+		--color-orange-text: hsl(var(--color-orange-text-hsl));
+		--color-yellow-text: hsl(var(--color-yellow-text-hsl));
+		--color-green-text: hsl(var(--color-green-text-hsl));
+		--color-mint-text: hsl(var(--color-mint-text-hsl));
+		--color-cyan-text: hsl(var(--color-cyan-text-hsl));
+		--color-blue-text: hsl(var(--color-blue-text-hsl));
+		--color-purple-text: hsl(var(--color-purple-text-hsl));
+		--color-pink-text: hsl(var(--color-pink-text-hsl));
+	}
+
+	.callout {
+		--callout-padding: 4px;
+		--callout-radius: 8px;
+		--callout-background-alpha: 20%;
+	}
+}
+
+/* Hides the Style Settings options for this snippet since there currently aren't any beside the dummy class. */
+.setting-item[data-id="obsidian-prism-callouts"] {
+	display: none;
+}
