@@ -1,0 +1,88 @@
+// [Plugins - Community] DataLoom
+.workspace-leaf-content[data-type="dataloom"] {
+	.view-content {
+		padding: unset;
+	}
+
+	.dataloom-option-bar .dataloom-padding {
+		height: var(--header-height);
+		padding: var(--size-4-1) var(--size-4-2) !important;
+	}
+
+	.dataloom-app {
+		border-top: unset;
+	}
+
+	.dataloom-bubble {
+		color: var(--interactive-accent-text);
+		background-color: var(--interactive-accent-base);
+		border: 1px solid var(--interactive-accent-tint);
+	}
+
+	.dataloom-cell.dataloom-cell--freeze {
+		background-color: var(--background-secondary);
+	}
+
+	.dataloom-flex {
+		padding: 0 var(--size-4-2);
+	}
+}
+
+.dataloom-button {
+	&:hover {
+		color: var(--interactive-accent-text);
+	}
+
+	&[aria-label="Delete filter"]:hover {
+		color: var(--color-red-text);
+		background-color: var(--color-red-base) !important;
+	}
+}
+
+.dataloom-select {
+	background-color: var(--background-secondary-alt);
+	border: var(--window-border);
+}
+
+.dataloom-focusable:focus-visible,
+.dataloom-focusable--focused {
+	outline-color: var(--interactive-accent-tint);
+}
+
+.dataloom-menu {
+	padding: var(--size-4-1);
+	border: 1px solid var(--window-border-color) !important;
+	border-radius: var(--radius-m);
+	box-shadow: var(--shadow-l) !important;
+
+	.theme-dark & {
+		background-color: var(--background-secondary-alt);
+	}
+
+	.theme-light & {
+		background-color: var(--background-primary);
+	}
+
+	.dataloom-padding {
+		padding: unset !important;
+	}
+
+	.dataloom-menu-item:hover {
+		color: var(--interactive-accent-text);
+		background-color: var(--interactive-accent-base);
+		border-radius: var(--radius-s);
+	}
+
+	.dataloom-switch {
+		width: var(--toggle-width);
+
+		&::after {
+			width: var(--toggle-thumb-width);
+			height: var(--toggle-thumb-height);
+		}
+	}
+
+	.dataloom-stack {
+		padding: var(--size-2-1) var(--size-4-1);
+	}
+}
