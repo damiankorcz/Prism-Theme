@@ -16,9 +16,12 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	padding: var(--size-4-2);
 
 	&:hover {
-		color: var(--highlight-text-normal);
-		background-color: var(--background-modifier-hover);
+		background-color: var(--interactive-accent-base);
 		border-radius: var(--radius-m);
+
+		.setting-item-name {
+			color: var(--interactive-accent-text) !important;
+		}
 	}
 }
 
