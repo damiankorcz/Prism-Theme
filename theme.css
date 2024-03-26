@@ -3,6 +3,7 @@
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
+    Documentation: https://github.com/damiankorcz/Prism-Theme/wiki
     Support the development: https://www.buymeacoffee.com/DamianKorcz
     Forum Thread: https://forum.obsidian.md/t/theme-prism/36493
 
@@ -4958,9 +4959,11 @@ body:not(.is-phone) div.workspace-leaf-content[data-type=style-settings] .view-c
   padding: var(--size-4-2);
 }
 .setting-item.setting-item-heading.style-settings-heading:hover {
-  color: var(--highlight-text-normal);
-  background-color: var(--background-modifier-hover);
+  background-color: var(--interactive-accent-base);
   border-radius: var(--radius-m);
+}
+.setting-item.setting-item-heading.style-settings-heading:hover .setting-item-name {
+  color: var(--interactive-accent-text) !important;
 }
 
 .style-settings-container {
@@ -5116,16 +5119,6 @@ body:not(.is-phone) div.workspace-leaf-content[data-type=style-settings] .view-c
 }
 .styleSettingsButton.prism-wiki a:hover {
   color: var(--color-blue-tint);
-}
-.styleSettingsButton.prism-roadmap {
-  background-color: var(--color-green-base);
-  border-color: var(--color-green-tint);
-}
-.styleSettingsButton.prism-roadmap a {
-  color: var(--color-green-text);
-}
-.styleSettingsButton.prism-roadmap a:hover {
-  color: var(--color-green-tint);
 }
 .styleSettingsButton.prism-releases {
   background-color: var(--color-orange-base);
@@ -6408,6 +6401,77 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 body.is-mobile.is-phone .search-input-container::before {
   top: calc((var(--input-height) - var(--search-icon-size)) / 2);
   left: var(--size-4-3);
+}
+
+.workspace-leaf-content[data-type=dataloom] .view-content {
+  padding: unset;
+}
+.workspace-leaf-content[data-type=dataloom] .dataloom-option-bar .dataloom-padding {
+  height: var(--header-height);
+  padding: var(--size-4-1) var(--size-4-2) !important;
+}
+.workspace-leaf-content[data-type=dataloom] .dataloom-app {
+  border-top: unset;
+}
+.workspace-leaf-content[data-type=dataloom] .dataloom-bubble {
+  color: var(--interactive-accent-text);
+  background-color: var(--interactive-accent-base);
+  border: 1px solid var(--interactive-accent-tint);
+}
+.workspace-leaf-content[data-type=dataloom] .dataloom-cell.dataloom-cell--freeze {
+  background-color: var(--background-secondary);
+}
+.workspace-leaf-content[data-type=dataloom] .dataloom-flex {
+  padding: 0 var(--size-4-2);
+}
+
+.dataloom-button:hover {
+  color: var(--interactive-accent-text);
+}
+.dataloom-button[aria-label="Delete filter"]:hover {
+  color: var(--color-red-text);
+  background-color: var(--color-red-base) !important;
+}
+
+.dataloom-select {
+  background-color: var(--background-secondary-alt);
+  border: var(--window-border);
+}
+
+.dataloom-focusable:focus-visible,
+.dataloom-focusable--focused {
+  outline-color: var(--interactive-accent-tint);
+}
+
+.dataloom-menu {
+  padding: var(--size-4-1);
+  border: 1px solid var(--window-border-color) !important;
+  border-radius: var(--radius-m);
+  box-shadow: var(--shadow-l) !important;
+}
+.theme-dark .dataloom-menu {
+  background-color: var(--background-secondary-alt);
+}
+.theme-light .dataloom-menu {
+  background-color: var(--background-primary);
+}
+.dataloom-menu .dataloom-padding {
+  padding: unset !important;
+}
+.dataloom-menu .dataloom-menu-item:hover {
+  color: var(--interactive-accent-text);
+  background-color: var(--interactive-accent-base);
+  border-radius: var(--radius-s);
+}
+.dataloom-menu .dataloom-switch {
+  width: var(--toggle-width);
+}
+.dataloom-menu .dataloom-switch::after {
+  width: var(--toggle-thumb-width);
+  height: var(--toggle-thumb-height);
+}
+.dataloom-menu .dataloom-stack {
+  padding: var(--size-2-1) var(--size-4-1);
 }
 
 /* @settings
@@ -9974,7 +10038,7 @@ settings:
         id: theme-info-buttons
         type: info-text
         markdown: true
-        description: '<div class="styleSettingsButton prism-wiki"><a href="https://github.com/damiankorcz/Prism-Theme/wiki"><span class="styleSettingsButtonEmoji">🏛️</span>Prism Wiki</a></div><div class="styleSettingsButton prism-roadmap"><a href="https://github.com/users/damiankorcz/projects/5"><span class="styleSettingsButtonEmoji">🗺️</span>Prism Roadmap</a></div><div class="styleSettingsButton prism-releases"><a href="https://github.com/damiankorcz/Prism-Theme/releases"><span class="styleSettingsButtonEmoji">📦</span>Prism Releases & Changelog</a></div>'
+        description: '<div class="styleSettingsButton prism-wiki"><a href="https://github.com/damiankorcz/Prism-Theme/wiki"><span class="styleSettingsButtonEmoji">🏛️</span>Prism Wiki</a></div><div class="styleSettingsButton prism-releases"><a href="https://github.com/damiankorcz/Prism-Theme/releases"><span class="styleSettingsButtonEmoji">📦</span>Prism Releases & Changelog</a></div>'
     -
         id: support
         title: Support the Development of Prism
