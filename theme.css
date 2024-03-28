@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.4.4)
+    Prism Theme for Obsidian.md (Version: 3.5.0)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1633,7 +1633,7 @@ body.is-mobile .view-header-title-container {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.4.4";
+  content: "Prism 3.5.0";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -1846,6 +1846,10 @@ body:not(.is-phone) .community-modal-controls .setting-item:first-child {
 .setting-item + div > .setting-item-heading,
 .setting-item + .setting-item-heading {
   margin-top: var(--size-4-1);
+}
+.setting-item + div > .setting-item-heading:not(.style-settings-heading),
+.setting-item + .setting-item-heading:not(.style-settings-heading) {
+  margin-top: var(--size-4-4);
 }
 
 .setting-item-name {
@@ -4877,73 +4881,118 @@ body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .mob
   transition: opacity 50ms;
 }
 
-.pt-colored-folders.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active, :hover) {
+.pt-colored-folders.pt-colored-folders-style-accent.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active, :hover) {
+  color: var(--interactive-accent-text);
+}
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder {
+  --nav-indentation-guide-color: var(--interactive-accent-tint);
+}
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+  color: var(--interactive-accent-text);
+}
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover,
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+  color: var(--interactive-accent-text);
+  background-color: var(--interactive-accent-base);
+}
+.pt-colored-folders.pt-colored-folders-style-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
+  color: var(--interactive-accent-text);
+}
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
+  background-color: var(--interactive-accent-text);
+}
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active, :hover) {
   color: var(--rainbow-text-color);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder {
+  --nav-indentation-guide-color: var(--rainbow-indent-color);
+}
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
   color: var(--rainbow-text-color);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover,
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover,
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
   color: var(--rainbow-text-color);
   background-color: var(--rainbow-background-color);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+2) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+2) {
   --rainbow-text-color: var(--color-red-text);
   --rainbow-background-color: var(--color-red-base);
+  --rainbow-indent-color: var(--color-red-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+3) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+3) {
   --rainbow-text-color: var(--color-orange-text);
   --rainbow-background-color: var(--color-orange-base);
+  --rainbow-indent-color: var(--color-orange-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+4) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+4) {
   --rainbow-text-color: var(--color-yellow-text);
   --rainbow-background-color: var(--color-yellow-base);
+  --rainbow-indent-color: var(--color-yellow-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+5) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+5) {
   --rainbow-text-color: var(--color-green-text);
   --rainbow-background-color: var(--color-green-base);
+  --rainbow-indent-color: var(--color-green-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+6) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+6) {
   --rainbow-text-color: var(--color-mint-text);
   --rainbow-background-color: var(--color-mint-base);
+  --rainbow-indent-color: var(--color-mint-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+7) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+7) {
   --rainbow-text-color: var(--color-cyan-text);
   --rainbow-background-color: var(--color-cyan-base);
+  --rainbow-indent-color: var(--color-cyan-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+8) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+8) {
   --rainbow-text-color: var(--color-blue-text);
   --rainbow-background-color: var(--color-blue-base);
+  --rainbow-indent-color: var(--color-blue-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+9) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+9) {
   --rainbow-text-color: var(--color-purple-text);
   --rainbow-background-color: var(--color-purple-base);
+  --rainbow-indent-color: var(--color-purple-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+10) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+10) {
   --rainbow-text-color: var(--color-pink-text);
   --rainbow-background-color: var(--color-pink-base);
+  --rainbow-indent-color: var(--color-pink-tint);
 }
-.pt-colored-folders .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+11) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+11) {
   --rainbow-text-color: var(--color-grey-text);
   --rainbow-background-color: var(--color-grey-base);
+  --rainbow-indent-color: var(--color-grey-tint);
 }
-.pt-colored-folders .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
-.pt-colored-folders .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
-.pt-colored-folders .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
-.pt-colored-folders .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
+.pt-colored-folders.pt-colored-folders-style-rainbow .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
   color: var(--rainbow-text-color);
 }
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
-.pt-colored-folders.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon, .pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder.is-collapsed:hover .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon,
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
   background-color: var(--rainbow-text-color);
 }
 
@@ -9531,8 +9580,8 @@ settings:
         level: 1
         collapsed: true
     -   
-        id: sidebar-and-main-workspace-elements
-        title: Sidebar and Main Workspace Elements
+        id: sidebar-and-main-workspace
+        title: Sidebar and Main Workspace
         description: Settings for positioning, alignment, etc. of different UI elements within the Sidebars and the Main Workspace.
         type: heading
         level: 2
@@ -9726,7 +9775,7 @@ settings:
     -
         id: colored-folders
         title: Colored Folders
-        description: Makes the folders in File Explorer color coded. The colors repeat once you get past 10 folders in the root of your vault. All folders further down the tree match in color with the top most folder.
+        description: Colors the File Explorer folders.
         type: heading
         level: 4
         collapsed: true
@@ -9737,8 +9786,22 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pt-colored-folders-style
+        title: Folder Dropdown Style
+        description: Select the desired style for the Colored Folders.
+        type: class-select
+        allowEmpty: false
+        default: pt-colored-folders-style-rainbow
+        options:
+            -
+                label: Accent Color
+                value: pt-colored-folders-style-accent
+            -
+                label: Rainbow
+                value: pt-colored-folders-style-rainbow
+    -
         id: pt-colored-folders-files-match
-        title: Apply color to nested files
+        title: Apply to Nested Files
         type: class-toggle
         default: false
     -
