@@ -88,7 +88,7 @@
 
 .vertical-tab-header-group-title {
 	font-size: var(--font-ui-medium);
-	color: var(--text-normal);
+	color: var(--interactive-accent-text);
 	text-align: center;
 	background-color: var(--background-secondary);
 	border-top: var(--window-border);
@@ -279,6 +279,10 @@ img.community-theme-lightbox {
 	+ div > .setting-item-heading,
 	+ .setting-item-heading {
 		margin-top: var(--size-4-1);
+
+		&:not(.style-settings-heading) {
+			margin-top: var(--size-4-4);
+		}
 	}
 }
 
