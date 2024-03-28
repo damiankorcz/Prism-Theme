@@ -121,7 +121,8 @@ Special thanks to the following people:
 - [@mgmeyers](https://github.com/mgmeyers) for Style Settings and Kanban Plugins that are the backbone of this theme! Also thank you for addressing some issues I've encountered with Style Settings while developing the theme.
 - [@chrisgrieser](https://github.com/chrisgrieser) for the Hue slider gradient code.
 - [@tingmelvin](https://github.com/tingmelvin) for helping me debug issues.
-- On recommendation from [@valentine195](https://github.com/valentine195) - Esbuild config was originally based on [@jdanielmourao](https://github.com/jdanielmourao)'s [Sanctum theme](https://github.com/jdanielmourao/obsidian-sanctum) setup.
+- On recommendation from [@valentine195](https://github.com/valentine195) - Previously used Esbuild config was originally based on [@jdanielmourao](https://github.com/jdanielmourao)'s [Sanctum theme](https://github.com/jdanielmourao/obsidian-sanctum) setup.
+- [@Sailkite](https://github.com/sailKiteV) for the initial snippet which Coloured Folders feature is based on.
 - The Obsidian Community over at Discord for endless inspiration to improve the theme!
 
 # 📝 License
