@@ -1,101 +1,145 @@
 // [Plugins - Theme] Coloured Folders
 .pt-colored-folders {
-	&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active,:hover) {
-		color: var(--rainbow-text-color);
-	}
-
-	.workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder {
-		--nav-indentation-guide-color: var(--rainbow-indent-color);
-
-		.nav-folder-title {
-			color: var(--rainbow-text-color);
+	&.pt-colored-folders-style-accent {
+		&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active,:hover) {
+			color: var(--interactive-accent-text);
 		}
 
-		.nav-file-title:hover,
-		.nav-folder-title:hover {
-			color: var(--rainbow-text-color);
-			background-color: var(--rainbow-background-color);
+		.workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder {
+			--nav-indentation-guide-color: var(--interactive-accent-tint);
+
+			.nav-folder-title {
+				color: var(--interactive-accent-text);
+			}
+
+			.nav-file-title:hover,
+			.nav-folder-title:hover {
+				color: var(--interactive-accent-text);
+				background-color: var(--interactive-accent-base);
+			}
 		}
 
-		&:nth-child(10n + 2) {
-			--rainbow-text-color: var(--color-red-text);
-			--rainbow-background-color: var(--color-red-base);
-			--rainbow-indent-color: var(--color-red-tint);
-		}
-
-		&:nth-child(10n + 3) {
-			--rainbow-text-color: var(--color-orange-text);
-			--rainbow-background-color: var(--color-orange-base);
-			--rainbow-indent-color: var(--color-orange-tint);
-		}
-
-		&:nth-child(10n + 4) {
-			--rainbow-text-color: var(--color-yellow-text);
-			--rainbow-background-color: var(--color-yellow-base);
-			--rainbow-indent-color: var(--color-yellow-tint);
-		}
-
-		&:nth-child(10n + 5) {
-			--rainbow-text-color: var(--color-green-text);
-			--rainbow-background-color: var(--color-green-base);
-			--rainbow-indent-color: var(--color-green-tint);
-		}
-
-		&:nth-child(10n + 6) {
-			--rainbow-text-color: var(--color-mint-text);
-			--rainbow-background-color: var(--color-mint-base);
-			--rainbow-indent-color: var(--color-mint-tint);
-		}
-
-		&:nth-child(10n + 7) {
-			--rainbow-text-color: var(--color-cyan-text);
-			--rainbow-background-color: var(--color-cyan-base);
-			--rainbow-indent-color: var(--color-cyan-tint);
-		}
-
-		&:nth-child(10n + 8) {
-			--rainbow-text-color: var(--color-blue-text);
-			--rainbow-background-color: var(--color-blue-base);
-			--rainbow-indent-color: var(--color-blue-tint);
-		}
-
-		&:nth-child(10n + 9) {
-			--rainbow-text-color: var(--color-purple-text);
-			--rainbow-background-color: var(--color-purple-base);
-			--rainbow-indent-color: var(--color-purple-tint);
-		}
-
-		&:nth-child(10n + 10) {
-			--rainbow-text-color: var(--color-pink-text);
-			--rainbow-background-color: var(--color-pink-base);
-			--rainbow-indent-color: var(--color-pink-tint);
-		}
-
-		&:nth-child(10n + 11) {
-			--rainbow-text-color: var(--color-grey-text);
-			--rainbow-background-color: var(--color-grey-base);
-			--rainbow-indent-color: var(--color-grey-tint);
-		}
-	}
-
-	.nav-folder.is-collapsed,
-	.nav-folder.is-collapsed:hover,
-	.nav-folder:not(.is-collapsed),
-	.nav-folder:not(.is-collapsed):hover {
-		.collapse-icon svg.svg-icon {
-			color: var(--rainbow-text-color);
-		}
-	}
-
-	&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active,
-	&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default,
-	&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent {
 		.nav-folder.is-collapsed,
 		.nav-folder.is-collapsed:hover,
 		.nav-folder:not(.is-collapsed),
 		.nav-folder:not(.is-collapsed):hover {
 			.collapse-icon svg.svg-icon {
-				background-color: var(--rainbow-text-color);
+				color: var(--interactive-accent-text);
+			}
+		}
+
+		&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active,
+		&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default,
+		&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent {
+			.nav-folder.is-collapsed,
+			.nav-folder.is-collapsed:hover,
+			.nav-folder:not(.is-collapsed),
+			.nav-folder:not(.is-collapsed):hover {
+				.collapse-icon svg.svg-icon {
+					background-color: var(--interactive-accent-text);
+				}
+			}
+		}
+	}
+
+	&.pt-colored-folders-style-rainbow {
+		&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active,:hover) {
+			color: var(--rainbow-text-color);
+		}
+
+		.workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder {
+			--nav-indentation-guide-color: var(--rainbow-indent-color);
+
+			.nav-folder-title {
+				color: var(--rainbow-text-color);
+			}
+
+			.nav-file-title:hover,
+			.nav-folder-title:hover {
+				color: var(--rainbow-text-color);
+				background-color: var(--rainbow-background-color);
+			}
+
+			&:nth-child(10n + 2) {
+				--rainbow-text-color: var(--color-red-text);
+				--rainbow-background-color: var(--color-red-base);
+				--rainbow-indent-color: var(--color-red-tint);
+			}
+
+			&:nth-child(10n + 3) {
+				--rainbow-text-color: var(--color-orange-text);
+				--rainbow-background-color: var(--color-orange-base);
+				--rainbow-indent-color: var(--color-orange-tint);
+			}
+
+			&:nth-child(10n + 4) {
+				--rainbow-text-color: var(--color-yellow-text);
+				--rainbow-background-color: var(--color-yellow-base);
+				--rainbow-indent-color: var(--color-yellow-tint);
+			}
+
+			&:nth-child(10n + 5) {
+				--rainbow-text-color: var(--color-green-text);
+				--rainbow-background-color: var(--color-green-base);
+				--rainbow-indent-color: var(--color-green-tint);
+			}
+
+			&:nth-child(10n + 6) {
+				--rainbow-text-color: var(--color-mint-text);
+				--rainbow-background-color: var(--color-mint-base);
+				--rainbow-indent-color: var(--color-mint-tint);
+			}
+
+			&:nth-child(10n + 7) {
+				--rainbow-text-color: var(--color-cyan-text);
+				--rainbow-background-color: var(--color-cyan-base);
+				--rainbow-indent-color: var(--color-cyan-tint);
+			}
+
+			&:nth-child(10n + 8) {
+				--rainbow-text-color: var(--color-blue-text);
+				--rainbow-background-color: var(--color-blue-base);
+				--rainbow-indent-color: var(--color-blue-tint);
+			}
+
+			&:nth-child(10n + 9) {
+				--rainbow-text-color: var(--color-purple-text);
+				--rainbow-background-color: var(--color-purple-base);
+				--rainbow-indent-color: var(--color-purple-tint);
+			}
+
+			&:nth-child(10n + 10) {
+				--rainbow-text-color: var(--color-pink-text);
+				--rainbow-background-color: var(--color-pink-base);
+				--rainbow-indent-color: var(--color-pink-tint);
+			}
+
+			&:nth-child(10n + 11) {
+				--rainbow-text-color: var(--color-grey-text);
+				--rainbow-background-color: var(--color-grey-base);
+				--rainbow-indent-color: var(--color-grey-tint);
+			}
+		}
+
+		.nav-folder.is-collapsed,
+		.nav-folder.is-collapsed:hover,
+		.nav-folder:not(.is-collapsed),
+		.nav-folder:not(.is-collapsed):hover {
+			.collapse-icon svg.svg-icon {
+				color: var(--rainbow-text-color);
+			}
+		}
+
+		&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active,
+		&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default,
+		&.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent {
+			.nav-folder.is-collapsed,
+			.nav-folder.is-collapsed:hover,
+			.nav-folder:not(.is-collapsed),
+			.nav-folder:not(.is-collapsed):hover {
+				.collapse-icon svg.svg-icon {
+					background-color: var(--rainbow-text-color);
+				}
 			}
 		}
 	}

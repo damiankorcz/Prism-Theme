@@ -3250,7 +3250,7 @@ settings:
     -
         id: colored-folders
         title: Colored Folders
-        description: Makes the folders in File Explorer color coded. The colors repeat once you get past 10 folders in the root of your vault. All folders further down the tree match in color with the top most folder.
+        description: Colors the File Explorer folders.
         type: heading
         level: 4
         collapsed: true
@@ -3261,8 +3261,22 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pt-colored-folders-style
+        title: Folder Dropdown Style
+        description: Select the desired style for the Colored Folders.
+        type: class-select
+        allowEmpty: false
+        default: pt-colored-folders-style-rainbow
+        options:
+            -
+                label: Accent Color
+                value: pt-colored-folders-style-accent
+            -
+                label: Rainbow
+                value: pt-colored-folders-style-rainbow
+    -
         id: pt-colored-folders-files-match
-        title: Apply color to nested files
+        title: Apply to Nested Files
         type: class-toggle
         default: false
     -
