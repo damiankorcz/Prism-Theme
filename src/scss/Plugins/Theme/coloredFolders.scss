@@ -1,11 +1,11 @@
 // [Plugins - Theme] Coloured Folders
 .pt-colored-folders {
 	&.pt-colored-folders-style-accent {
-		&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active,:hover) {
+		&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .nav-folder .nav-file-title:not(.is-active,:hover) {
 			color: var(--interactive-accent-text);
 		}
 
-		.workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder {
+		.workspace-leaf-content[data-type="file-explorer"] .nav-files-container > div > .nav-folder {
 			--nav-indentation-guide-color: var(--interactive-accent-tint);
 
 			.nav-folder-title {
@@ -43,11 +43,11 @@
 	}
 
 	&.pt-colored-folders-style-rainbow {
-		&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active,:hover) {
+		&.pt-colored-folders-files-match .workspace-leaf-content[data-type="file-explorer"] .nav-files-container > div > .nav-folder .nav-file-title:not(.is-active,:hover) {
 			color: var(--rainbow-text-color);
 		}
 
-		.workspace-leaf-content[data-type="file-explorer"] .mod-root > .nav-folder-children > .nav-folder {
+		.workspace-leaf-content[data-type="file-explorer"] .nav-files-container > div > .nav-folder {
 			--nav-indentation-guide-color: var(--rainbow-indent-color);
 
 			.nav-folder-title {
