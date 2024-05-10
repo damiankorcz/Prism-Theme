@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.5.0)
+    Prism Theme for Obsidian.md (Version: 3.5.1)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -561,6 +561,7 @@ body {
   --divider-color-hover: var(--interactive-accent-tint);
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
+  --vault-profile-font-size: var(--font-ui-medium);
   --status-bar-font-size: var(--font-ui-small);
   --tab-stacked-font-size: var(--font-ui-medium);
   --modal-border-color: var(--window-border-color);
@@ -1116,7 +1117,6 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   padding: 0 var(--size-4-1) 0 var(--size-4-2);
 }
 
-.workspace-split .workspace-tab-header-spacer,
 .workspace .mod-root .workspace-tab-header-inner::after,
 .workspace-tab-header-inner-close-button::after {
   display: none;
@@ -1633,7 +1633,7 @@ body.is-mobile .view-header-title-container {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.5.0";
+  content: "Prism 3.5.1";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -2171,6 +2171,10 @@ body:not(.is-frameless, .is-hidden-frameless) .workspace-split.mod-right-split >
 
 .workspace-ribbon {
   border-right: var(--window-border);
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+  padding-left: unset;
 }
 
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
@@ -3892,9 +3896,11 @@ input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-vis
 }
 
 .workspace-leaf-content[data-type=file-explorer] .nav-files-container {
-  padding-top: unset;
-  padding-right: unset;
+  padding-top: var(--size-4-1);
+  padding-right: var(--size-4-1);
+  padding-bottom: unset;
   padding-left: var(--size-4-1);
+  margin-left: var(--size-4-1);
 }
 .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children {
   padding: var(--size-4-1);
@@ -3905,6 +3911,8 @@ input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-vis
 }
 
 .tree-item-self {
+  padding-inline-start: none !important;
+  margin-inline-start: none !important;
   border: 2px solid transparent;
 }
 
@@ -3959,11 +3967,11 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   height: -webkit-fill-available;
   height: fill-available;
   content: " ";
-  stroke-width: unset;
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 17px;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 17px;
+  stroke-width: unset;
 }
 .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder:not(.is-collapsed) .collapse-icon svg.svg-icon {
   background-color: var(--text-muted);
@@ -3977,12 +3985,12 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   height: -webkit-fill-available;
   height: fill-available;
   content: " ";
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'%3E%3C/path%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 17px;
   stroke-width: unset;
   transform: rotate(0);
-  -webkit-mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 17px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z'%3E%3C/path%3E%3C/svg%3E");
 }
 .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-active .nav-folder.is-collapsed .collapse-icon svg.svg-icon, .pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-default .nav-folder.is-collapsed .collapse-icon svg.svg-icon {
   background-color: var(--text-muted);
@@ -4621,54 +4629,20 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
   mix-blend-mode: screen;
 }
 
-.pt-custom-vault-banner .nav-folder-title[data-path="/"] {
+.pt-custom-vault-banner .workspace-drawer-vault-name {
+  display: flex;
   align-items: center;
-  min-width: -webkit-fill-available;
-  min-width: fill-available;
-  height: var(--header-height);
-  padding: 0 var(--size-4-2);
-  margin-bottom: unset;
-  margin-left: -4px;
-  line-height: 16px;
-  overflow-wrap: break-word;
-  white-space: unset;
-  background: var(--background-secondary-blur);
-  border: unset;
-  border-bottom: var(--window-border);
-  border-radius: unset;
-  -webkit-backdrop-filter: blur(var(--blur-intensity));
-  backdrop-filter: blur(var(--blur-intensity));
 }
-.pt-custom-vault-banner .nav-folder-title[data-path="/"]:hover {
-  color: var(--nav-item-color-hover);
-  background-color: var(--nav-item-background-hover);
-}
-.pt-custom-vault-banner .nav-folder-title[data-path="/"]::before {
-  display: block;
-  width: 28px;
-  height: 28px;
-  margin: 6px;
+.pt-custom-vault-banner .workspace-drawer-vault-name::before {
+  display: inline-flex;
+  min-width: 24px;
+  height: 24px;
+  margin-right: var(--size-4-2);
   content: "";
   background-image: var(--custom-vault-banner-icon-url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border-radius: unset;
-}
-.pt-custom-vault-banner .nav-folder-title[data-path="/"] .nav-folder-title-content {
-  margin: 0 4px;
-}
-.pt-custom-vault-banner.is-mobile .mod-left .workspace-drawer-header::before {
-  display: block;
-  width: 32px;
-  height: 48px;
-  margin-right: var(--size-4-5);
-  content: "";
-  background-image: var(--custom-vault-banner-icon-url);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  border-radius: unset;
 }
 .pt-custom-vault-banner.pt-custom-vault-banner-justify-content-left .nav-folder-title[data-path="/"] {
   justify-content: flex-start;
@@ -4689,6 +4663,10 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
 }
 .pt-custom-vault-banner.pt-custom-vault-banner-order-rtl .nav-folder-title[data-path="/"] .nav-folder-collapse-indicator.collapse-icon {
   order: 1;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  padding: var(--size-4-1) var(--size-4-2);
 }
 
 body:not(.pt-disable-mark-highlight-styling) mark[class] {
@@ -4881,17 +4859,17 @@ body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .mob
   transition: opacity 50ms;
 }
 
-.pt-colored-folders.pt-colored-folders-style-accent.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active, :hover) {
+.pt-colored-folders.pt-colored-folders-style-accent.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .nav-folder .nav-file-title:not(.is-active, :hover) {
   color: var(--interactive-accent-text);
 }
-.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder {
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder {
   --nav-indentation-guide-color: var(--interactive-accent-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-folder-title {
   color: var(--interactive-accent-text);
 }
-.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover,
-.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-file-title:hover,
+.pt-colored-folders.pt-colored-folders-style-accent .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-folder-title:hover {
   color: var(--interactive-accent-text);
   background-color: var(--interactive-accent-base);
 }
@@ -4913,66 +4891,66 @@ body.pt-focused-mode.is-popout-window.pt-focused-style-main-and-popout-only .mob
 .pt-colored-folders.pt-colored-folders-style-accent.pt-file-explorer-folder-icon.pt-file-explorer-folder-icon-accent .nav-folder:not(.is-collapsed):hover .collapse-icon svg.svg-icon {
   background-color: var(--interactive-accent-text);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:not(.is-active, :hover) {
+.pt-colored-folders.pt-colored-folders-style-rainbow.pt-colored-folders-files-match .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-file-title:not(.is-active, :hover) {
   color: var(--rainbow-text-color);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder {
   --nav-indentation-guide-color: var(--rainbow-indent-color);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-folder-title {
   color: var(--rainbow-text-color);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-file-title:hover,
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder .nav-folder-title:hover {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-file-title:hover,
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder .nav-folder-title:hover {
   color: var(--rainbow-text-color);
   background-color: var(--rainbow-background-color);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+2) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+2) {
   --rainbow-text-color: var(--color-red-text);
   --rainbow-background-color: var(--color-red-base);
   --rainbow-indent-color: var(--color-red-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+3) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+3) {
   --rainbow-text-color: var(--color-orange-text);
   --rainbow-background-color: var(--color-orange-base);
   --rainbow-indent-color: var(--color-orange-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+4) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+4) {
   --rainbow-text-color: var(--color-yellow-text);
   --rainbow-background-color: var(--color-yellow-base);
   --rainbow-indent-color: var(--color-yellow-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+5) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+5) {
   --rainbow-text-color: var(--color-green-text);
   --rainbow-background-color: var(--color-green-base);
   --rainbow-indent-color: var(--color-green-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+6) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+6) {
   --rainbow-text-color: var(--color-mint-text);
   --rainbow-background-color: var(--color-mint-base);
   --rainbow-indent-color: var(--color-mint-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+7) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+7) {
   --rainbow-text-color: var(--color-cyan-text);
   --rainbow-background-color: var(--color-cyan-base);
   --rainbow-indent-color: var(--color-cyan-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+8) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+8) {
   --rainbow-text-color: var(--color-blue-text);
   --rainbow-background-color: var(--color-blue-base);
   --rainbow-indent-color: var(--color-blue-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+9) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+9) {
   --rainbow-text-color: var(--color-purple-text);
   --rainbow-background-color: var(--color-purple-base);
   --rainbow-indent-color: var(--color-purple-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+10) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+10) {
   --rainbow-text-color: var(--color-pink-text);
   --rainbow-background-color: var(--color-pink-base);
   --rainbow-indent-color: var(--color-pink-tint);
 }
-.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .mod-root > .nav-folder-children > .nav-folder:nth-child(10n+11) {
+.pt-colored-folders.pt-colored-folders-style-rainbow .workspace-leaf-content[data-type=file-explorer] .nav-files-container > div > .nav-folder:nth-child(10n+11) {
   --rainbow-text-color: var(--color-grey-text);
   --rainbow-background-color: var(--color-grey-base);
   --rainbow-indent-color: var(--color-grey-tint);
