@@ -16,6 +16,19 @@
 			background-size: contain;
 		}
 	}
+
+	&.is-mobile .mod-left .workspace-drawer-header::before {
+		display: block;
+		width: 32px;
+		height: 48px;
+		margin-right: var(--size-4-5);
+		content: "";
+		background-image: var(--custom-vault-banner-icon-url);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		border-radius: unset;
+	}
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
