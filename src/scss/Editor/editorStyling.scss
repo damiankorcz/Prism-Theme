@@ -78,24 +78,20 @@ del {
 	.cm-hashtag-begin {
 		background-color: var(--background-secondary);
 		border: 2px solid var(--window-border-color);
-		border-right: unset;
-		border-top-left-radius: var(--radius-s);
-		border-bottom-left-radius: var(--radius-s);
+		border-inline-end: unset;
 	}
 
 	.cm-hashtag-end {
 		background-color: var(--background-secondary);
 		border: 2px solid var(--window-border-color);
-		border-left: unset;
-		border-top-right-radius: var(--radius-s);
-		border-bottom-right-radius: var(--radius-s);
+		border-inline-start: unset;
 	}
 
 	.cm-hashtag.cm-meta:not(.cm-hashtag-begin,.cm-hashtag-end) {
 		background-color: var(--background-secondary);
 		border: 2px solid var(--window-border-color);
-		border-right: unset;
-		border-left: unset;
+		border-inline-start: unset;
+		border-inline-end: unset;
 	}
 }
 
@@ -129,8 +125,8 @@ input[type=checkbox] {
 		border-color: var(--interactive-accent-tint);
 
 		&::after {
+			inset-inline-start: -2px;
 			top: -2px;
-			left: -2px;
 		}
 	}
 }
@@ -191,55 +187,17 @@ a.tag {
 }
 
 .markdown-source-view.mod-cm6 {
-	--list-bullet-transform: translateX(0.15em);
-
-	.cm-embed-block pre {
-		margin: 1em 0;
-	}
-
-	.cm-indent::before {
-		width: 2px;
-	}
-
-	.cm-line:not(.cm-active):not(.HyperMD-header):not(.HyperMD-task-line) .cm-fold-indicator .collapse-indicator {
-		padding-right: 0.7em;
-	}
-
-	.cm-fold-indicator .collapse-indicator {
-		padding-right: 0.25rem;
-	}
-
 	.cm-table-widget .table-row-drag-handle:hover,
 	.cm-table-widget .table-col-drag-handle:hover {
 		color: var(--interactive-accent-text);
 	}
 }
 
-.list-bullet {
-	padding-right: 0.6em;
-}
-
-ul > li.task-list-item .task-list-item-checkbox {
-	margin-inline-start: calc(var(--checkbox-size) * -1.2);
-}
-
 .markdown-rendered {
-	--list-bullet-transform: translateX(0.3em);
-
-	.list-collapse-indicator {
-		padding-right: 1em;
-		margin-left: -2.35em;
-	}
-
-	ul > li.task-list-item > .list-collapse-indicator {
-		padding-right: 1em;
-		margin-left: -2.4em;
-	}
-
 	&.show-indentation-guide li > {
 		ol::before,
 		ul::before {
-			left: -0.75em;
+			inset-inline-start: -0.75em;
 		}
 	}
 
@@ -306,8 +264,8 @@ ul > li.task-list-item .task-list-item-checkbox {
 }
 
 :is(.markdown-embed-link, .file-embed-link) {
+	inset-inline-end: var(--size-4-2);
 	top: var(--size-4-2);
-	right: var(--size-4-2);
 	z-index: var(--layer-cover);
 }
 

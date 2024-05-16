@@ -6,10 +6,12 @@ body:not(.native-scrollbars) {
 		width: var(--scroll-bar-size);
 		height: var(--scroll-bar-size);
 		border-radius: unset;
+		padding: unset;
+		margin: unset;
 
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 		&:vertical {
-			border-left: var(--window-border);
+			border-inline-start: var(--window-border);
 		}
 
 		/* stylelint-disable-next-line selector-pseudo-class-no-unknown */

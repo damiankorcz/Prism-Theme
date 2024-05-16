@@ -33,6 +33,7 @@
 
 	.collapse-indicator {
 		position: relative;
+		inset-inline-start: unset;
 		left: unset;
 		order: 2;
 		opacity: 1;
@@ -55,12 +56,12 @@
 		align-items: center;
 		width: var(--icon-size);
 		height: var(--icon-size);
-		margin-right: var(--size-4-2);
+		margin-inline-end: var(--size-4-2);
 		content: "";
 		background-color: var(--text-muted);
 		-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-archive'%3E%3Crect width='20' height='5' x='2' y='4' rx='2'/%3E%3Cpath d='M4 9v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9'/%3E%3Cpath d='M10 13h4'/%3E%3C/svg%3E");
-		-webkit-mask-position: center;
 		-webkit-mask-repeat: no-repeat;
+		-webkit-mask-position: center;
 		-webkit-mask-size: 18px;
 	}
 }
