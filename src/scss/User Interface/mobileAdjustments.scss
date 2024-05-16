@@ -21,7 +21,8 @@ body.is-mobile {
 
 	--font-ui-large: calc(var(--font-text-size) * 1.1);
 
-	--file-margins: var(--size-4-4) var(--size-4-5);
+	// 50px added to account for the overlaping mobile navbar
+	--file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
 
 	&.theme-light {
 		--background-modifier-form-field: var(--color-base-00);
@@ -228,8 +229,10 @@ body.is-mobile {
 
 	.workspace-drawer-header,
 	.workspace-drawer-active-tab-header {
+		padding: var(--size-4-2) var(--size-4-5);
 		background-color: var(--background-secondary);
 		border-bottom: var(--window-border);
+		align-items: center;
 	}
 
 	.workspace-drawer-active-tab-header {
@@ -253,7 +256,7 @@ body.is-mobile {
 	}
 
 	.workspace-drawer-header-info {
-		margin-bottom: var(--size-4-2);
+		margin: var(--size-4-1) 0;
 	}
 
 	.suggestion-container,
@@ -317,6 +320,10 @@ body.is-mobile {
 
 	.view-header-title-container {
 		padding-left: unset;
+	}
+
+	.metadata-properties-heading {
+		padding: var(--size-4-2);
 	}
 }
 
