@@ -202,9 +202,10 @@ body.is-mobile {
 	.workspace-drawer {
 		background-color: var(--background-secondary);
 		border-radius: var(--radius-m);
+		padding-top: unset;
 
 		&:not(.is-pinned) {
-			margin: var(--size-4-2);
+			margin: calc(var(--safe-area-inset-top) + var(--size-4-2)) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2));
 			border: var(--window-border);
 		}
 
@@ -227,8 +228,7 @@ body.is-mobile {
 		border-right: var(--window-border);
 	}
 
-	.workspace-drawer-header,
-	.workspace-drawer-active-tab-header {
+	.workspace-drawer-header {
 		padding: var(--size-4-2) var(--size-4-5);
 		background-color: var(--background-secondary);
 		border-bottom: var(--window-border);
@@ -237,6 +237,7 @@ body.is-mobile {
 
 	.workspace-drawer-active-tab-header {
 		padding: var(--size-4-3) var(--size-4-5);
+		margin: unset;
 	}
 
 	.workspace-drawer-header-icon,
