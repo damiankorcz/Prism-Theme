@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.5.2)
+    Prism Theme for Obsidian.md (Version: 3.5.3)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -1477,9 +1477,10 @@ body.is-mobile .workspace-drawer-active-tab-header .workspace-drawer-active-tab-
 body.is-mobile .workspace-drawer {
   background-color: var(--background-secondary);
   border-radius: var(--radius-m);
+  padding-top: unset;
 }
 body.is-mobile .workspace-drawer:not(.is-pinned) {
-  margin: var(--size-4-2);
+  margin: calc(var(--safe-area-inset-top) + var(--size-4-2)) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2));
   border: var(--window-border);
 }
 body.is-mobile .workspace-drawer.is-pinned .workspace-drawer-header {
@@ -1496,8 +1497,7 @@ body.is-mobile .workspace-drawer-ribbon {
   background-color: var(--background-secondary);
   border-right: var(--window-border);
 }
-body.is-mobile .workspace-drawer-header,
-body.is-mobile .workspace-drawer-active-tab-header {
+body.is-mobile .workspace-drawer-header {
   padding: var(--size-4-2) var(--size-4-5);
   background-color: var(--background-secondary);
   border-bottom: var(--window-border);
@@ -1505,6 +1505,7 @@ body.is-mobile .workspace-drawer-active-tab-header {
 }
 body.is-mobile .workspace-drawer-active-tab-header {
   padding: var(--size-4-3) var(--size-4-5);
+  margin: unset;
 }
 body.is-mobile .workspace-drawer-header-icon,
 body.is-mobile .workspace-drawer-active-tab-back-icon,
@@ -1642,7 +1643,7 @@ body.is-mobile .metadata-properties-heading {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.5.2";
+  content: "Prism 3.5.3";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
