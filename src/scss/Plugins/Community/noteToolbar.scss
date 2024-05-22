@@ -1,0 +1,17 @@
+// [Plugins - Community] Note Toolbar
+body {
+	--cg-nt-tbar-top-sticky-pos-desktop: calc(calc(var(--header-height) - 8px) * -1);
+
+	&.theme-dark {
+		--cg-nt-tbar-bg-color: var(--background-secondary);
+	}
+}
+
+.callout[data-callout="note-toolbar"] {
+	&[data-callout-metadata*="button"] ul {
+		&a,
+		span.external-link {
+			border: var(--window-border);
+		}
+	}
+}
