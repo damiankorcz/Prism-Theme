@@ -21,6 +21,8 @@ body.is-mobile {
 
 	--font-ui-large: calc(var(--font-text-size) * 1.1);
 
+	--prompt-max-height: 80vh;
+
 	// 50px added to account for the overlaping mobile navbar
 	--file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
 
@@ -234,6 +236,9 @@ body.is-mobile {
 	.workspace-drawer-active-tab-header {
 		padding: var(--size-4-3) var(--size-4-5);
 		margin: unset;
+		border-radius: unset;
+		background-color: unset;
+		border-bottom: var(--window-border);
 	}
 
 	.workspace-drawer-header-icon,
