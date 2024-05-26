@@ -20,7 +20,7 @@
 
     Copyright (c) 2021-2024 Damian Korcz <https://github.com/damiankorcz>
 */
-.theme-light.pt-color-scheme-swan-lt,
+.theme-light,
 .theme-light.pt-color-scheme-custom-lt,
 .theme-light:not(.css-settings-manager) {
   --color-grey-base-hsl: 0, 0%, 90%;
@@ -66,7 +66,7 @@
   --shadow-l: hsla(var(--shadow-color-hsl), 3%) 0 1px 2px, hsla(var(--shadow-color-hsl), 3%) 0 2px 4px, hsla(var(--shadow-color-hsl), 3%) 0 4px 8px, hsla(var(--shadow-color-hsl), 3%) 0 6px 12px;
 }
 
-.theme-dark.pt-color-scheme-raven-dt,
+.theme-dark,
 .theme-dark.pt-color-scheme-custom-dt,
 .theme-dark:not(.css-settings-manager) {
   --color-grey-base-hsl: 0, 0%, 16%;
@@ -691,14 +691,20 @@ body.theme-light {
   --canvas-dot-pattern: hsla(var(--background-secondary-alt-hsl), 75%);
   --indentation-guide-color: hsla(var(--background-secondary-alt-hsl), 75%);
   --interactive-normal: var(--background-primary);
+  --toggle-thumb-color: var(--background-primary);
+  --background-modifier-form-field: var(--background-primary);
+  --graph-line: var(--graph-line-color-lt);
+  --graph-node: var(--graph-fill-color-lt);
+  --graph-node-focused: var(--graph-fill-focused-color-lt);
+  --graph-node-tag: var(--graph-tag-color-lt);
+  --graph-node-attachment: var(--graph-attachment-color-lt);
+  --graph-node-unresolved: var(--graph-unresolved-color-lt);
   --graph-line-color-lt: var(--background-secondary-alt);
   --graph-fill-color-lt: var(--color-grey-tint);
   --graph-fill-focused-color-lt: var(--interactive-accent-tint);
   --graph-tag-color-lt: var(--color-blue-tint);
   --graph-attachment-color-lt: var(--color-yellow-tint);
   --graph-unresolved-color-lt: var(--color-red-tint);
-  --graph-highlight-color-lt: var(--interactive-accent-tint);
-  --graph-highlight-line-color-lt: var(--interactive-accent-tint);
   --h1-text-color-lt: var(--text-normal);
   --h2-text-color-lt: var(--text-normal);
   --h3-text-color-lt: var(--text-normal);
@@ -871,14 +877,18 @@ body.theme-dark {
   --canvas-dot-pattern: hsla(var(--background-primary-alt-hsl), 80%);
   --indentation-guide-color: hsla(var(--background-primary-alt-hsl), 80%);
   --interactive-normal: var(--background-secondary);
+  --graph-line: var(--graph-line-color-dt);
+  --graph-node: var(--graph-fill-color-dt);
+  --graph-node-focused: var(--graph-fill-focused-color-dt);
+  --graph-node-tag: var(--graph-tag-color-dt);
+  --graph-node-attachment: var(--graph-attachment-color-dt);
+  --graph-node-unresolved: var(--graph-unresolved-color-dt);
   --graph-line-color-dt: var(--background-primary-alt);
-  --graph-fill-color-dt: var(--color-grey-tint);
-  --graph-fill-focused-color-dt: var(--interactive-accent-tint);
-  --graph-tag-color-dt: var(--color-blue-tint);
-  --graph-attachment-color-dt: var(--color-yellow-tint);
-  --graph-unresolved-color-dt: var(--color-red-tint);
-  --graph-highlight-color-dt: var(--interactive-accent-tint);
-  --graph-highlight-line-color-dt: var(--interactive-accent-tint);
+  --graph-fill-color-dt: var(--color-grey-text);
+  --graph-fill-focused-color-dt: var(--interactive-accent-text);
+  --graph-tag-color-dt: var(--color-blue-text);
+  --graph-attachment-color-dt: var(--color-yellow-text);
+  --graph-unresolved-color-dt: var(--color-red-text);
   --h1-text-color-dt: var(--text-normal);
   --h2-text-color-dt: var(--text-normal);
   --h3-text-color-dt: var(--text-normal);
@@ -1941,9 +1951,6 @@ select.dropdown {
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
   box-shadow: var(--shadow-s);
-}
-.theme-light select.dropdown {
-  background-color: white;
 }
 .theme-dark select.dropdown {
   background-color: var(--background-secondary-alt);
@@ -4095,27 +4102,21 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 
 .theme-light .graph-view.color-line {
-  color: var(--graph-line-color-lt);
   opacity: var(--graph-line-opacity-lt);
 }
 .theme-light .graph-view.color-fill {
-  color: var(--graph-fill-color-lt);
   opacity: var(--graph-fill-opacity-lt);
 }
 .theme-light .graph-view.color-fill-focused {
-  color: var(--graph-fill-focused-color-lt);
   opacity: var(--graph-fill-focused-opacity-lt);
 }
 .theme-light .graph-view.color-fill-tag {
-  color: var(--graph-tag-color-lt);
   opacity: var(--graph-tag-opacity-lt);
 }
 .theme-light .graph-view.color-fill-attachment {
-  color: var(--graph-attachment-color-lt);
   opacity: var(--graph-attachment-opacity-lt);
 }
 .theme-light .graph-view.color-fill-unresolved {
-  color: var(--graph-unresolved-color-lt);
   opacity: var(--graph-unresolved-opacity-lt);
 }
 .theme-light .graph-view.color-fill-highlight {
@@ -4128,27 +4129,21 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
 }
 
 .theme-dark .graph-view.color-line {
-  color: var(--graph-line-color-dt);
   opacity: var(--graph-line-opacity-dt);
 }
 .theme-dark .graph-view.color-fill {
-  color: var(--graph-fill-color-dt);
   opacity: var(--graph-fill-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-focused {
-  color: var(--graph-fill-focused-color-dt);
   opacity: var(--graph-fill-focused-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-tag {
-  color: var(--graph-tag-color-dt);
   opacity: var(--graph-tag-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-attachment {
-  color: var(--graph-attachment-color-dt);
   opacity: var(--graph-attachment-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-unresolved {
-  color: var(--graph-unresolved-color-dt);
   opacity: var(--graph-unresolved-opacity-dt);
 }
 .theme-dark .graph-view.color-fill-highlight {
@@ -6931,34 +6926,34 @@ settings:
                 value: var(--graph-line-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-line-custom-color-lt
         title: Graph Lines Custom Color
@@ -6971,7 +6966,7 @@ settings:
         id: graph-line-opacity-lt
         title: Graph Lines Opacity
         type: variable-number-slider
-        default: 0.6
+        default: 1
         min: 0
         max: 1
         step: 0.05
@@ -6987,41 +6982,41 @@ settings:
         title: Graph Note Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--color-grey-text)
+        default: var(--color-grey-tint)
         options:
             -
                 label: Custom
                 value: var(--graph-fill-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-fill-custom-color-lt
         title: Graph Note Custom Color
@@ -7050,44 +7045,44 @@ settings:
         title: Graph Note Focused Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-tint)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-tint)
             -
                 label: Custom
                 value: var(--graph-fill-focused-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-fill-focused-custom-color-lt
         title: Graph Note Focused Custom Color
@@ -7116,41 +7111,41 @@ settings:
         title: Graph Tag Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--color-blue-text)
+        default: var(--color-blue-tint)
         options:
             -
                 label: Custom
                 value: var(--graph-tag-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-tag-custom-color-lt
         title: Graph Tag Custom Color
@@ -7179,41 +7174,41 @@ settings:
         title: Graph Attachment Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--color-yellow-text)
+        default: var(--color-yellow-tint)
         options:
             -
                 label: Custom
                 value: var(--graph-attachment-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-attachment-custom-color-lt
         title: Graph Attachment Custom Color
@@ -7242,41 +7237,41 @@ settings:
         title: Graph Unresolved Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--color-red-text)
+        default: var(--color-red-tint)
         options:
             -
                 label: Custom
                 value: var(--graph-unresolved-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-unresolved-custom-color-lt
         title: Graph Unresolved Custom Color
@@ -7305,44 +7300,44 @@ settings:
         title: Graph Highlight Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-tint)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-tint)
             -
                 label: Custom
                 value: var(--graph-highlight-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-highlight-custom-color-lt
         title: Graph Highlight Custom Color
@@ -7371,44 +7366,44 @@ settings:
         title: Graph Highlight Line Color Presets
         type: variable-select
         allowEmpty: false
-        default: var(--interactive-accent-text)
+        default: var(--interactive-accent-tint)
         options:
             -
                 label: Accent Color
-                value: var(--interactive-accent-text)
+                value: var(--interactive-accent-tint)
             -
                 label: Custom
                 value: var(--graph-highlight-line-custom-color-lt)
             -
                 label: Red
-                value: var(--color-red-text)
+                value: var(--color-red-tint)
             -
                 label: Orange
-                value: var(--color-orange-text)
+                value: var(--color-orange-tint)
             -
                 label: Yellow
-                value: var(--color-yellow-text)
+                value: var(--color-yellow-tint)
             -
                 label: Green
-                value: var(--color-green-text)
+                value: var(--color-green-tint)
             -
                 label: Mint
-                value: var(--color-mint-text)
+                value: var(--color-mint-tint)
             -
                 label: Cyan
-                value: var(--color-cyan-text)
+                value: var(--color-cyan-tint)
             -
                 label: Blue
-                value: var(--color-blue-text)
+                value: var(--color-blue-tint)
             -
                 label: Purple
-                value: var(--color-purple-text)
+                value: var(--color-purple-tint)
             -
                 label: Pink
-                value: var(--color-pink-text)
+                value: var(--color-pink-tint)
             -
                 label: Grey
-                value: var(--color-grey-text)
+                value: var(--color-grey-tint)
     -
         id: graph-highlight-line-custom-color-lt
         title: Graph Highlight Line Custom Color
@@ -7493,7 +7488,7 @@ settings:
         id: graph-line-opacity-dt
         title: Graph Lines Opacity
         type: variable-number-slider
-        default: 0.6
+        default: 1
         min: 0
         max: 1
         step: 0.05
