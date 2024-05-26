@@ -1359,17 +1359,12 @@ body.is-mobile {
   --input-border-width: 1px;
   --nav-item-color: var(--text-muted);
   --font-ui-large: calc(var(--font-text-size) * 1.1);
+  --prompt-max-height: 80vh;
   --file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
-}
-body.is-mobile.theme-light {
-  --background-modifier-form-field: var(--color-base-00);
 }
 body.is-mobile.theme-light .workspace-leaf-content,
 body.is-mobile.theme-light .workspace-drawer-tab-options {
   background-color: var(--background-primary);
-}
-body.is-mobile.theme-dark {
-  --background-modifier-form-field: var(--background-secondary-alt);
 }
 body.is-mobile.theme-dark .workspace-leaf-content,
 body.is-mobile.theme-dark .workspace-drawer-tab-option,
@@ -1518,6 +1513,9 @@ body.is-mobile .workspace-drawer-header {
 body.is-mobile .workspace-drawer-active-tab-header {
   padding: var(--size-4-3) var(--size-4-5);
   margin: unset;
+  border-radius: unset;
+  background-color: unset;
+  border-bottom: var(--window-border);
 }
 body.is-mobile .workspace-drawer-header-icon,
 body.is-mobile .workspace-drawer-active-tab-back-icon,
