@@ -31,7 +31,12 @@
 			{
 				"label": "Prism - Dev Theme",
 				"type": "shell",
-				"command": "npm run devTheme",
+				"windows": {
+					"command": "pnpm run devTheme:windows",
+				},
+				"linux": {
+					"command": "pnpm run devTheme:linux",
+				},
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -43,7 +48,7 @@
 			{
 				"label": "Prism - Build Theme",
 				"type": "shell",
-				"command": "npm run buildTheme",
+				"command": "pnpm run buildTheme",
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -52,7 +57,12 @@
 			{
 				"label": "Prism - Dev MHS Snippet",
 				"type": "shell",
-				"command": "npm run devSnipMHS",
+				"windows": {
+					"command": "pnpm run devSnipMHS:windows",
+				},
+				"linux": {
+					"command": "pnpm run devSnipMHS:linux",
+				},
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -61,7 +71,7 @@
 			{
 				"label": "Prism - Build MHS Snippet",
 				"type": "shell",
-				"command": "npm run buildSnipMHS",
+				"command": "pnpm run buildSnipMHS",
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -70,7 +80,12 @@
 			{
 				"label": "Prism - Dev C Snippet",
 				"type": "shell",
-				"command": "npm run devSnipC",
+				"windows": {
+					"command": "pnpm run devSnipC:windows",
+				},
+				"linux": {
+					"command": "pnpm run devSnipC:linux",
+				},
 				"group": {
 					"kind": "build",
 					"isDefault": true
@@ -79,7 +94,7 @@
 			{
 				"label": "Prism - Build C Snippet",
 				"type": "shell",
-				"command": "npm run buildSnipC",
+				"command": "pnpm run buildSnipC",
 				"group": {
 					"kind": "build",
 					"isDefault": true

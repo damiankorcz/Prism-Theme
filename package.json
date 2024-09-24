@@ -6,15 +6,19 @@
   "license": "MIT",
   "homepage": "https://github.com/damiankorcz/Obsidian-Prism",
   "scripts": {
-    "devTheme": "sass --watch --no-charset --no-source-map --color \"src/scss/index.scss\" \"D:/Syncthing/Obsidian/Theme Test/.obsidian/themes/PrismDev.css\"",
-    "devSnipMHS": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Mark Highlight System/MHS_index.scss\" \"D:/Syncthing/Obsidian/Theme Test/.obsidian/snippets/Prism Mark Highlight System.css\"",
-    "devSnipC": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Callouts/C_index.scss\" \"D:/Syncthing/Obsidian/Theme Test/.obsidian/snippets/Prism Callouts.css\"",
+    "devTheme:windows": "sass --watch --no-charset --no-source-map --color \"src/scss/index.scss\" \"D:/Syncthing/Obsidian/Theme Test/.obsidian/themes/PrismDev.css\"",
+    "devSnipMHS:windows": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Mark Highlight System/MHS_index.scss\" \"D:/Syncthing/Obsidian/Theme Test/.obsidian/snippets/Prism Mark Highlight System.css\"",
+    "devSnipC:windows": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Callouts/C_index.scss\" \"D:/Syncthing/Obsidian/Theme Test/.obsidian/snippets/Prism Callouts.css\"",
+    "devTheme:linux": "sass --watch --no-charset --no-source-map --color \"src/scss/index.scss\" \"/home/damian/Syncthing/Obsidian/Theme Test/.obsidian/themes/PrismDev.css\"",
+    "devSnipMHS:linux": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Mark Highlight System/MHS_index.scss\" \"/home/damian/Syncthing/Obsidian/Theme Test/.obsidian/snippets/Prism Mark Highlight System.css\"",
+    "devSnipC:linux": "sass --watch --no-charset --no-source-map --color \"src/snippets/Prism Callouts/C_index.scss\" \"/home/damian/Syncthing/Obsidian/Theme Test/.obsidian/snippets/Prism Callouts.css\"",
     "buildTheme": "node ./build/buildTheme.config.mjs",
     "buildSnipMHS": "node ./build/buildSnipMHS.config.mjs",
     "buildSnipC": "node ./build/buildSnipC.config.mjs"
   },
   "devDependencies": {
-    "sass": "^1.77.2",
+    "cross-env": "^7.0.3",
+    "sass": "^1.79.3",
     "stylelint": "^15.11.0",
     "stylelint-config-recess-order": "^4.6.0",
     "stylelint-config-recommended": "^11.0.0",
