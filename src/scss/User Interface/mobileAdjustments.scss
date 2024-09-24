@@ -202,6 +202,15 @@ body.is-mobile {
 		border-radius: var(--radius-m);
 		padding-top: unset;
 
+		.nav-header {
+			border-top: unset;
+		}
+		.workspace-drawer-actions,
+		.nav-buttons-container {
+			overflow: visible;
+    		flex-wrap: wrap;
+		}
+
 		&:not(.is-pinned) {
 			margin: calc(var(--safe-area-inset-top) + var(--size-4-2)) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2));
 			border: var(--window-border);
