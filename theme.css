@@ -673,6 +673,11 @@ body.theme-light {
   --h4-color: var(--h4-text-color-lt);
   --h5-color: var(--h5-text-color-lt);
   --h6-color: var(--h6-text-color-lt);
+  --text-bold-color-lt: var(--text-normal);
+  --text-italic-color-lt: var(--text-normal);
+  --text-italic-bold-color-lt: var(--text-normal);
+  --link-internal-color-lt: var(--interactive-accent-text-hsl);
+  --link-external-color-lt: var(--interactive-accent-text-hsl);
   --bold-color: var(--text-bold-color-lt);
   --italic-color: var(--text-italic-color-lt);
   --link-color: hsl(var(--link-internal-color-lt));
@@ -711,11 +716,6 @@ body.theme-light {
   --h4-text-color-lt: var(--text-normal);
   --h5-text-color-lt: var(--text-normal);
   --h6-text-color-lt: var(--text-normal);
-  --text-bold-color-lt: var(--text-normal);
-  --text-italic-color-lt: var(--text-normal);
-  --text-italic-bold-color-lt: var(--text-normal);
-  --link-internal-color-lt: var(--interactive-accent-text-hsl);
-  --link-external-color-lt: var(--interactive-accent-text-hsl);
 }
 body.theme-light.pt-color-scheme-style-border-lt {
   --background-secondary: var(--background-primary);
@@ -1036,7 +1036,8 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   background-color: unset;
 }
 
-.mod-windows.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
+.mod-windows.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container,
+.mod-linux.is-hidden-frameless:not(.is-fullscreen) .workspace-tabs.mod-top-left-space .workspace-tab-header-container {
   padding-left: var(--frame-left-space);
 }
 
@@ -1059,6 +1060,7 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 .pt-status-bar-position-fixed .status-bar {
   --status-bar-position: relative;
   padding: 1px var(--size-4-2);
+  border: unset;
   border-top: var(--window-border);
   border-radius: unset;
 }
@@ -1177,6 +1179,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
   padding-top: 10px;
   margin-left: -1px;
   border-left: var(--window-border);
+}
+
+.workspace-tab-header-spacer {
+  display: none;
 }
 
 .mod-root .workspace-tab-header-container-inner {
@@ -1485,6 +1491,14 @@ body.is-mobile .workspace-drawer {
   background-color: var(--background-secondary);
   border-radius: var(--radius-m);
   padding-top: unset;
+}
+body.is-mobile .workspace-drawer .nav-header {
+  border-top: unset;
+}
+body.is-mobile .workspace-drawer .workspace-drawer-actions,
+body.is-mobile .workspace-drawer .nav-buttons-container {
+  overflow: visible;
+  flex-wrap: wrap;
 }
 body.is-mobile .workspace-drawer:not(.is-pinned) {
   margin: calc(var(--safe-area-inset-top) + var(--size-4-2)) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2));
@@ -2526,6 +2540,11 @@ button.mod-cta {
   background-color: var(--background-primary);
   border-color: var(--window-border-color);
 }
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt):not(.is-phone) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt):not(.is-phone) .horizontal-tab-nav-item.is-active {
+  --icon-color: var(--highlight-text-normal);
+  color: var(--highlight-text-normal);
+}
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .search-result-file-match-destination-file {
   color: var(--text-normal);
   background-color: var(--background-secondary);
@@ -2618,6 +2637,11 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-outline-view .tree-item-self.mod-active {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
+}
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt):not(.is-phone) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt):not(.is-phone) .horizontal-tab-nav-item.is-active {
+  --icon-color: var(--highlight-text-normal);
+  color: var(--highlight-text-normal);
 }
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .search-result-file-match-destination-file {
   color: var(--text-normal);
@@ -2719,6 +2743,11 @@ button.mod-cta {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt):not(.is-phone) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt):not(.is-phone) .horizontal-tab-nav-item.is-active {
+  --icon-color: var(--highlight-text-normal);
+  color: var(--highlight-text-normal);
+}
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .search-result-file-match-destination-file {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
@@ -2817,6 +2846,11 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .input-right-decorator.clickable-icon.is-active {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
+}
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt):not(.is-phone) .vertical-tab-nav-item.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt):not(.is-phone) .horizontal-tab-nav-item.is-active {
+  --icon-color: var(--highlight-text-normal);
+  color: var(--highlight-text-normal);
 }
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .search-result-file-match-destination-file {
   color: var(--text-normal);
@@ -9780,7 +9814,7 @@ settings:
     -
         id: pt-titlebar-hide-text
         title: Hide Titlebar Title Text
-        description: Hides the Titlebar Title Text (Useful when the Statusbar is at the top).
+        description: Hides the Titlebar Title Text (Only applies when Window frame style is set to Obsidian frame).
         type: class-toggle
         default: false
     -
