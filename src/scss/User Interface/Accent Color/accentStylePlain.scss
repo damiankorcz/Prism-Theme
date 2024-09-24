@@ -16,6 +16,14 @@
 		border-color: var(--window-border-color);
 	}
 
+	&:not(.is-phone) {
+		.vertical-tab-nav-item.is-active,
+		.horizontal-tab-nav-item.is-active, {
+			--icon-color: var(--highlight-text-normal);
+			color: var(--highlight-text-normal);
+		}
+	}
+
 	.search-result-file-match-destination-file {
 		color: var(--text-normal);
 		background-color: var(--background-secondary);
