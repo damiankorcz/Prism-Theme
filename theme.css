@@ -533,6 +533,7 @@ body {
   --nav-item-padding: var(--size-2-1) var(--size-4-2) var(--size-2-1) var(--size-4-6);
   --text-error: var(--color-red-text);
   --text-accent: var(--interactive-accent-text);
+  --text-on-accent-inverted: var(--text-normal);
   --icon-color-focused: var(--interactive-accent-text);
   --background-modifier-error: var(--color-red-text);
   --background-modifier-border: var(--window-border-color);
@@ -1350,10 +1351,10 @@ body.pt-titlebar-hide-text .titlebar .titlebar-text {
 }
 
 body.is-mobile {
-  --toggle-thumb-height: 18px;
-  --toggle-thumb-width: 18px;
+  --toggle-thumb-height: 20px;
+  --toggle-thumb-width: 20px;
   --toggle-border-width: 1px;
-  --toggle-width: 42px;
+  --toggle-width: 40px;
   --toggle-s-thumb-height: 14px;
   --toggle-s-thumb-width: 14px;
   --toggle-s-border-width: 4px;
@@ -1366,11 +1367,21 @@ body.is-mobile {
   --nav-item-color: var(--text-muted);
   --font-ui-large: calc(var(--font-text-size) * 1.1);
   --prompt-max-height: 80vh;
+  --ribbon-width: 48px;
   --file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
+}
+body.is-mobile :is(.horizontal-tab-content, .vertical-tab-content) {
+  padding: var(--size-4-4);
+}
+body.is-mobile input[type=color] {
+  height: fit-content;
 }
 body.is-mobile.theme-light .workspace-leaf-content,
 body.is-mobile.theme-light .workspace-drawer-tab-options {
   background-color: var(--background-primary);
+}
+body.is-mobile.theme-dark {
+  --background-modifier-form-field: var(--background-secondary-alt);
 }
 body.is-mobile.theme-dark .workspace-leaf-content,
 body.is-mobile.theme-dark .workspace-drawer-tab-option,
@@ -1492,6 +1503,9 @@ body.is-mobile .workspace-drawer {
   border-radius: var(--radius-m);
   padding-top: unset;
 }
+body.is-mobile .workspace-drawer.is-pinned {
+  border-radius: unset;
+}
 body.is-mobile .workspace-drawer .nav-header {
   border-top: unset;
 }
@@ -1519,7 +1533,7 @@ body.is-mobile .workspace-drawer-ribbon {
   border-right: var(--window-border);
 }
 body.is-mobile .workspace-drawer-header {
-  padding: var(--size-4-2) var(--size-4-5);
+  padding: var(--size-4-2) var(--size-4-4);
   background-color: var(--background-secondary);
   border-bottom: var(--window-border);
   align-items: center;
@@ -1587,6 +1601,9 @@ body.is-mobile .vertical-tab-header-group-title:first-of-type {
 body.is-mobile .view-header-nav-buttons,
 body.is-mobile .view-header .view-action {
   --icon-color: var(--text-muted);
+}
+body.is-mobile .view-action.mod-bookmark {
+  --icon-color: var(--interactive-accent);
 }
 body.is-mobile .view-header-title-container {
   padding-left: unset;
@@ -4332,9 +4349,15 @@ body:not(.is-grabbing) .nav-folder-title.is-being-dragged,
   color: var(--nav-item-color-hover);
 }
 
-:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split) .embedded-backlinks .nav-header {
+.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split .embedded-backlinks .nav-header,
+.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split .embedded-backlinks .nav-header,
+.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split .embedded-backlinks .nav-header,
+.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split .embedded-backlinks .nav-header,
+.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split .embedded-backlinks .nav-header,
+.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split .embedded-backlinks .nav-header {
   position: sticky;
   top: 0;
+  padding: 0 var(--size-2-2);
 }
 
 .embedded-backlinks .nav-header {
@@ -4704,7 +4727,7 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
   display: block;
   width: 32px;
   height: 48px;
-  margin-right: var(--size-4-5);
+  margin-right: var(--size-4-4);
   content: "";
   background-image: var(--custom-vault-banner-icon-url);
   background-repeat: no-repeat;
