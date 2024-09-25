@@ -25,6 +25,14 @@ body.is-mobile {
 
 	// 50px added to account for the overlaping mobile navbar
 	--file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
+	
+	:is(.horizontal-tab-content, .vertical-tab-content) {
+		padding: var(--size-4-4);
+	}
+
+	input[type="color"] {
+		height: fit-content;
+	}
 
 	&.theme-light {
 		.workspace-leaf-content,
@@ -32,7 +40,7 @@ body.is-mobile {
 			background-color: var(--background-primary);
 		}
 	}
-
+	
 	&.theme-dark {
 		--background-modifier-form-field: var(--background-secondary-alt);
 
@@ -329,6 +337,10 @@ body.is-mobile {
 	.view-header-nav-buttons,
 	.view-header .view-action {
 		--icon-color: var(--text-muted);
+	}
+
+	.view-action.mod-bookmark {
+		--icon-color: var(--interactive-accent);
 	}
 
 	.view-header-title-container {
