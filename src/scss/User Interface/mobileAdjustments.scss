@@ -23,6 +23,8 @@ body.is-mobile {
 
 	--prompt-max-height: 80vh;
 
+	--ribbon-width: 48px;
+
 	// 50px added to account for the overlaping mobile navbar
 	--file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
 	
@@ -212,6 +214,10 @@ body.is-mobile {
 		border-radius: var(--radius-m);
 		padding-top: unset;
 
+		&.is-pinned {
+			border-radius: unset;
+		}
+
 		.nav-header {
 			border-top: unset;
 		}
@@ -246,7 +252,7 @@ body.is-mobile {
 	}
 
 	.workspace-drawer-header {
-		padding: var(--size-4-2) var(--size-4-5);
+		padding: var(--size-4-2) var(--size-4-4);
 		background-color: var(--background-secondary);
 		border-bottom: var(--window-border);
 		align-items: center;
