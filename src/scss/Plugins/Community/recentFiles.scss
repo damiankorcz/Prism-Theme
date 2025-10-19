@@ -15,4 +15,19 @@
 			background-color: var(--background-secondary-alt);
 		}
 	}
+
+	.nav-file-tag {
+		margin-inline-start: auto;
+		&:empty::before {
+			content: "md";
+		}
+	}
+
+	.tree-item-spacer {
+		display: none;
+	}
+
+	.recent-files-file-delete {
+		margin-left: var(--size-4-1);
+	}
 }
