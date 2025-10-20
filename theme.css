@@ -581,6 +581,7 @@ body {
   --embed-border-end: 1px solid var(--window-border-color);
   --embed-padding: unset;
   --code-comment: var(--color-grey-text);
+  --code-border-width: 1px;
   --graph-controls-width: 150px;
   --pdf-shadow: unset;
   --pdf-thumbnail-shadow: unset;
@@ -677,10 +678,18 @@ body.theme-light {
   --text-bold-color-lt: var(--text-normal);
   --text-italic-color-lt: var(--text-normal);
   --text-italic-bold-color-lt: var(--text-normal);
+  --strikethrough-text-color-lt: var(--text-muted);
+  --strikethrough-line-color-lt: var(--text-muted);
+  --underline-text-color-lt: var(--text-normal);
+  --underline-line-color-lt: var(--text-normal);
   --link-internal-color-lt: var(--interactive-accent-text-hsl);
   --link-external-color-lt: var(--interactive-accent-text-hsl);
   --bold-color: var(--text-bold-color-lt);
   --italic-color: var(--text-italic-color-lt);
+  --strikethrough-text-color: var(--strikethrough-text-color-lt);
+  --strikethrough-line-color: var(--strikethrough-line-color-lt);
+  --underline-text-color: var(--underline-text-color-lt);
+  --underline-line-color: var(--underline-line-color-lt);
   --link-color: hsl(var(--link-internal-color-lt));
   --link-color-hover: hsla(var(--link-internal-color-lt), 60%);
   --link-external-color: hsl(var(--link-external-color-lt));
@@ -855,10 +864,18 @@ body.theme-dark {
   --text-bold-color-dt: var(--text-normal);
   --text-italic-color-dt: var(--text-normal);
   --text-italic-bold-color-dt: var(--text-normal);
+  --strikethrough-text-color-dt: var(--text-muted);
+  --strikethrough-line-color-dt: var(--text-muted);
+  --underline-text-color-dt: var(--text-normal);
+  --underline-line-color-dt: var(--text-normal);
   --link-internal-color-dt: var(--interactive-accent-text-hsl);
   --link-external-color-dt: var(--interactive-accent-text-hsl);
   --bold-color: var(--text-bold-color-dt);
   --italic-color: var(--text-italic-color-dt);
+  --strikethrough-text-color: var(--strikethrough-text-color-dt);
+  --strikethrough-line-color: var(--strikethrough-line-color-dt);
+  --underline-text-color: var(--underline-text-color-dt);
+  --underline-line-color: var(--underline-line-color-dt);
   --link-color: hsl(var(--link-internal-color-dt));
   --link-color-hover: hsla(var(--link-internal-color-dt), 60%);
   --link-external-color: hsl(var(--link-external-color-dt));
@@ -2045,12 +2062,16 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   padding: unset;
   margin: unset;
   /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
-  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar:vertical,
 body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar:vertical,
 body:not(.native-scrollbars) ::-webkit-scrollbar:vertical {
   border-inline-start: var(--window-border);
+}
+body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar,
+body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar,
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 }
 body:not(.native-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar:horizontal,
 body:not(.native-scrollbars) .prompt-results::-webkit-scrollbar:horizontal,
@@ -2985,7 +3006,33 @@ button.mod-cta {
 .cm-s-obsidian span.cm-formatting-highlight.cm-strikethrough,
 .cm-s-obsidian span.cm-highlight.cm-strikethrough,
 del {
-  color: var(--text-muted);
+  text-decoration-thickness: 2px;
+}
+.theme-light .cm-strikethrough,
+.theme-light .cm-s-obsidian span.cm-formatting-highlight.cm-strikethrough,
+.theme-light .cm-s-obsidian span.cm-highlight.cm-strikethrough,
+.theme-light del {
+  color: var(--strikethrough-text-color-lt);
+  text-decoration-color: var(--strikethrough-line-color-lt);
+}
+.theme-dark .cm-strikethrough,
+.theme-dark .cm-s-obsidian span.cm-formatting-highlight.cm-strikethrough,
+.theme-dark .cm-s-obsidian span.cm-highlight.cm-strikethrough,
+.theme-dark del {
+  color: var(--strikethrough-text-color-dt);
+  text-decoration-color: var(--strikethrough-line-color-dt);
+}
+
+u {
+  text-decoration-thickness: 2px;
+}
+.theme-light u {
+  color: var(--underline-text-color-lt);
+  text-decoration-color: var(--underline-line-color-lt);
+}
+.theme-dark u {
+  color: var(--underline-text-color-dt);
+  text-decoration-color: var(--underline-line-color-dt);
 }
 
 hr {
@@ -2999,9 +3046,17 @@ hr {
   border-radius: var(--radius-s);
 }
 
+.cm-s-obsidian .cm-inline-code.cm-formatting {
+  border: unset;
+}
+
 .cm-s-obsidian .cm-formatting-code.cm-inline-code {
   font-family: var(--font-text);
   font-size: var(--font-text-size);
+}
+
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+  padding: 0 var(--size-4-1);
 }
 
 .cm-s-obsidian span.cm-formatting-highlight.cm-inline-code,
@@ -3989,6 +4044,15 @@ input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-vis
 }
 .workspace-leaf-content[data-type=file-explorer] .nav-folder.mod-root > .nav-folder-children {
   padding: var(--size-4-1);
+}
+.workspace-leaf-content[data-type=file-explorer] .tree-item-children.nav-folder-children .tree-item.nav-folder {
+  margin-left: 3px;
+}
+.workspace-leaf-content[data-type=file-explorer] .tree-item-children.nav-folder-children .tree-item.nav-file {
+  margin-left: -17px;
+}
+.workspace-leaf-content[data-type=file-explorer] .tree-item.nav-file {
+  margin-left: -20px;
 }
 
 .tree-item-children:empty {
@@ -5501,6 +5565,18 @@ div#cMenuModalBar.cMenuGlassAesthetic {
 }
 .theme-dark .workspace-leaf-content[data-type=recent-files] .nav-folder.mod-root {
   background-color: var(--background-secondary-alt);
+}
+.workspace-leaf-content[data-type=recent-files] .nav-file-tag {
+  margin-inline-start: auto;
+}
+.workspace-leaf-content[data-type=recent-files] .nav-file-tag:empty::before {
+  content: "md";
+}
+.workspace-leaf-content[data-type=recent-files] .tree-item-spacer {
+  display: none;
+}
+.workspace-leaf-content[data-type=recent-files] .recent-files-file-delete {
+  margin-left: var(--size-4-1);
 }
 
 .workspace-leaf-content[data-type=dangling-links] .view-content {
@@ -8987,6 +9063,7 @@ settings:
     -
         id: text-italic-color-lt
         title: Italic Text Color Preset
+        description: "Used for: *Italic Text* or _Italic Text_."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -9041,6 +9118,7 @@ settings:
     -
         id: text-bold-color-lt
         title: Bold Text Color Preset
+        description: "Used for: **Bold Text** or __Bold Text__."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -9095,6 +9173,7 @@ settings:
     -
         id: text-italic-bold-color-lt
         title: Italic and Bold Text Color Preset
+        description: "Used for: ***Italic and Bold Text*** or ___Italic and Bold Text___."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -9147,8 +9226,227 @@ settings:
         opacity: false
         default: '#2B2B2B'
     -
+        id: strikethrough-text-color-lt
+        title: Strikethrough Text Color Preset
+        description: "Used for: ~~Strikethrough Text~~ or ~~Strikethrough Text~~."
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-text-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-text-custom-color-lt
+        title: Strikethrough Text Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Strikethrough Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: strikethrough-line-color-lt
+        title: Strikethrough Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-line-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-line-custom-color-lt
+        title: Strikethrough Line Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Strikethrough Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-text-color-lt
+        title: Underline Text Color Preset
+        description: "Used for: <u>Underline Text</u>."
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-text-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-text-custom-color-lt
+        title: Underline Text Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Underline Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-line-color-lt
+        title: Underline Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-line-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-line-custom-color-lt
+        title: Underline Line Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Underline Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
         id: link-internal-color-lt
         title: Internal Link Color Preset
+        description: "Used for: [[Internal Link]] or [Internal Link](Internal%20Link.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
@@ -9200,6 +9498,7 @@ settings:
     -
         id: link-external-color-lt
         title: External Link Color Preset
+        description: "Used for: [Obsidian Website](https://obsidian.md) or [Note in another vault](obsidian://open?vault=MainVault&file=Note.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
@@ -9257,6 +9556,7 @@ settings:
     -
         id: text-italic-color-dt
         title: Italic Text Color Preset
+        description: "Used for: *Italic Text* or _Italic Text_."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -9311,6 +9611,7 @@ settings:
     -
         id: text-bold-color-dt
         title: Bold Text Color Preset
+        description: "Used for: **Bold Text** or __Bold Text__."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -9365,6 +9666,7 @@ settings:
     -
         id: text-italic-bold-color-dt
         title: Italic and Bold Text Color Preset
+        description: "Used for: ***Italic and Bold Text*** or ___Italic and Bold Text___."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -9417,8 +9719,227 @@ settings:
         opacity: false
         default: '#2B2B2B'
     -
+        id: strikethrough-text-color-dt
+        title: Strikethrough Text Color Preset
+        description: "Used for: ~~Strikethrough Text~~ or ~~Strikethrough Text~~."
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-text-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-text-custom-color-dt
+        title: Strikethrough Text Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Strikethrough Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: strikethrough-line-color-dt
+        title: Strikethrough Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-line-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-line-custom-color-dt
+        title: Strikethrough Line Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Strikethrough Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-text-color-dt
+        title: Underline Text Color Preset
+        description: "Used for: <u>Underline Text</u>."
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-text-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-text-custom-color-dt
+        title: Underline Text Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Underline Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-line-color-dt
+        title: Underline Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-line-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-line-custom-color-dt
+        title: Underline Line Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Underline Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
         id: link-internal-color-dt
         title: Internal Link Color Preset
+        description: "Used for: [[Internal Link]] or [Internal Link](Internal%20Link.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
@@ -9470,6 +9991,7 @@ settings:
     -
         id: link-external-color-dt
         title: External Link Color Preset
+        description: "Used for: [Obsidian Website](https://obsidian.md) or [Note in another vault](obsidian://open?vault=MainVault&file=Note.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
