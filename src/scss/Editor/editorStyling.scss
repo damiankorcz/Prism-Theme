@@ -35,7 +35,31 @@
 .cm-s-obsidian span.cm-formatting-highlight.cm-strikethrough,
 .cm-s-obsidian span.cm-highlight.cm-strikethrough,
 del {
-	color: var(--text-muted);
+	text-decoration-thickness: 2px;
+
+	.theme-light & {
+		color: var(--strikethrough-text-color-lt);
+		text-decoration-color: var(--strikethrough-line-color-lt);
+	}
+
+	.theme-dark & {
+		color: var(--strikethrough-text-color-dt);
+		text-decoration-color: var(--strikethrough-line-color-dt);
+	}
+}
+
+u {
+	text-decoration-thickness: 2px;
+
+	.theme-light & {
+		color: var(--underline-text-color-lt);
+		text-decoration-color: var(--underline-line-color-lt);
+	}
+
+	.theme-dark & {
+		color: var(--underline-text-color-dt);
+		text-decoration-color: var(--underline-line-color-dt);
+	}
 }
 
 hr {

@@ -2396,6 +2396,7 @@ settings:
     -
         id: text-italic-color-lt
         title: Italic Text Color Preset
+        description: "Used for: *Italic Text* or _Italic Text_."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -2450,6 +2451,7 @@ settings:
     -
         id: text-bold-color-lt
         title: Bold Text Color Preset
+        description: "Used for: **Bold Text** or __Bold Text__."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -2504,6 +2506,7 @@ settings:
     -
         id: text-italic-bold-color-lt
         title: Italic and Bold Text Color Preset
+        description: "Used for: ***Italic and Bold Text*** or ___Italic and Bold Text___."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -2556,8 +2559,227 @@ settings:
         opacity: false
         default: '#2B2B2B'
     -
+        id: strikethrough-text-color-lt
+        title: Strikethrough Text Color Preset
+        description: "Used for: ~~Strikethrough Text~~ or ~~Strikethrough Text~~."
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-text-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-text-custom-color-lt
+        title: Strikethrough Text Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Strikethrough Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: strikethrough-line-color-lt
+        title: Strikethrough Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-line-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-line-custom-color-lt
+        title: Strikethrough Line Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Strikethrough Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-text-color-lt
+        title: Underline Text Color Preset
+        description: "Used for: <u>Underline Text</u>."
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-text-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-text-custom-color-lt
+        title: Underline Text Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Underline Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-line-color-lt
+        title: Underline Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-line-custom-color-lt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-line-custom-color-lt
+        title: Underline Line Custom Color
+        description: Make sure you selected 'Custom' in Light Theme Underline Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
         id: link-internal-color-lt
         title: Internal Link Color Preset
+        description: "Used for: [[Internal Link]] or [Internal Link](Internal%20Link.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
@@ -2609,6 +2831,7 @@ settings:
     -
         id: link-external-color-lt
         title: External Link Color Preset
+        description: "Used for: [Obsidian Website](https://obsidian.md) or [Note in another vault](obsidian://open?vault=MainVault&file=Note.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
@@ -2666,6 +2889,7 @@ settings:
     -
         id: text-italic-color-dt
         title: Italic Text Color Preset
+        description: "Used for: *Italic Text* or _Italic Text_."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -2720,6 +2944,7 @@ settings:
     -
         id: text-bold-color-dt
         title: Bold Text Color Preset
+        description: "Used for: **Bold Text** or __Bold Text__."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -2774,6 +2999,7 @@ settings:
     -
         id: text-italic-bold-color-dt
         title: Italic and Bold Text Color Preset
+        description: "Used for: ***Italic and Bold Text*** or ___Italic and Bold Text___."
         type: variable-select
         allowEmpty: false
         default: var(--text-normal)
@@ -2826,8 +3052,227 @@ settings:
         opacity: false
         default: '#2B2B2B'
     -
+        id: strikethrough-text-color-dt
+        title: Strikethrough Text Color Preset
+        description: "Used for: ~~Strikethrough Text~~ or ~~Strikethrough Text~~."
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-text-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-text-custom-color-dt
+        title: Strikethrough Text Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Strikethrough Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: strikethrough-line-color-dt
+        title: Strikethrough Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--color-grey-text)
+        options:
+            -
+                label: Default
+                value: var(--color-grey-text)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--strikethrough-line-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: strikethrough-line-custom-color-dt
+        title: Strikethrough Line Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Strikethrough Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-text-color-dt
+        title: Underline Text Color Preset
+        description: "Used for: <u>Underline Text</u>."
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-text-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-text-custom-color-dt
+        title: Underline Text Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Underline Text Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
+        id: underline-line-color-dt
+        title: Underline Line Color Preset
+        type: variable-select
+        allowEmpty: false
+        default: var(--text-muted)
+        options:
+            -
+                label: Default
+                value: var(--text-muted)
+            -
+                label: Accent Color
+                value: var(--interactive-accent-text)
+            -
+                label: Custom
+                value: var(--underline-line-custom-color-dt)
+            -
+                label: Red
+                value: var(--color-red-text)
+            -
+                label: Orange
+                value: var(--color-orange-text)
+            -
+                label: Yellow
+                value: var(--color-yellow-text)
+            -
+                label: Green
+                value: var(--color-green-text)
+            -
+                label: Mint
+                value: var(--color-mint-text)
+            -
+                label: Cyan
+                value: var(--color-cyan-text)
+            -
+                label: Blue
+                value: var(--color-blue-text)
+            -
+                label: Purple
+                value: var(--color-purple-text)
+            -
+                label: Pink
+                value: var(--color-pink-text)
+            -
+                label: Grey
+                value: var(--color-grey-text)
+    -
+        id: underline-line-custom-color-dt
+        title: Underline Line Custom Color
+        description: Make sure you selected 'Custom' in Dark Theme Underline Line Color Preset for this to work.
+        type: variable-color
+        format: hsl
+        opacity: false
+        default: '#2B2B2B'
+    -
         id: link-internal-color-dt
         title: Internal Link Color Preset
+        description: "Used for: [[Internal Link]] or [Internal Link](Internal%20Link.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
@@ -2879,6 +3324,7 @@ settings:
     -
         id: link-external-color-dt
         title: External Link Color Preset
+        description: "Used for: [Obsidian Website](https://obsidian.md) or [Note in another vault](obsidian://open?vault=MainVault&file=Note.md)."
         type: variable-select
         allowEmpty: false
         default: var(--interactive-accent-text-hsl)
