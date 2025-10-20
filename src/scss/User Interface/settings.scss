@@ -27,6 +27,16 @@
 	}
 }
 
+.is-phone .modal-title {
+	max-width: unset;
+}
+
+.is-phone .modal.mod-lg .modal-header,
+.is-phone .modal.mod-sidebar-layout .modal-header {
+	padding-bottom: var(--size-4-2);
+	background-color: var(--background-secondary);
+}
+
 .is-phone .modal.mod-settings .modal-title::after,
 .modal.mod-settings .vertical-tab-header::after {
 	position: absolute;
@@ -48,6 +58,11 @@
 	border-radius: var(--radius-s);
 }
 
+.is-phone .modal.mod-settings .modal-title::after {
+	top: calc(var(--safe-area-inset-top) + var(--size-4-2));
+	left: var(--size-4-2);
+}
+
 .theme-light.is-phone .modal.mod-settings .modal-title::after,
 .theme-light .modal.mod-settings .vertical-tab-header::after {
 	background-color: var(--background-primary);
@@ -56,11 +71,6 @@
 .theme-dark.is-phone .modal.mod-settings .modal-title::after,
 .theme-dark .modal.mod-settings .vertical-tab-header::after {
 	background-color: var(--background-secondary-alt);
-}
-
-.is-phone .modal.mod-settings .modal-title::after {
-	top: 9px;
-	left: 50px;
 }
 
 .vertical-tab-content {
