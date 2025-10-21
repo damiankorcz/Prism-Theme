@@ -7,7 +7,7 @@
  <a href="https://github.com/damiankorcz/Obsidian-Prism/blob/main/LICENSE"><img src="https://img.shields.io/github/license/damiankorcz/Obsidian-Prism?color=%23A31F34&style=for-the-badge&labelColor=%23252525&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAAV0lEQVQ4jWNkYGBgqOie85+BDNBRmsLIAuO0lySTpLmyZy4DAwMDAxM5NiMDig1gQReo7JnL0F6SDHciOkD3KoYBMAXEhsmoCwaDCwY+JVIvKeMKNEIAAB9dK8YXTwb/AAAAAElFTkSuQmCC" /></a>
  <br />
  <br />
- <a href="https://www.buymeacoffee.com/DamianKorcz"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee!&emoji=&slug=DamianKorcz&button_colour=D7BB00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff" /></a>
+<a href="https://www.buymeacoffee.com/DamianKorcz"><img width="205" height="58" alt="Buy Me a Coffee" src="https://github.com/user-attachments/assets/c9bd3d66-8c2b-4d8f-beed-d8a6164ff5ec" /></a>
  <br />
 </div>
 
