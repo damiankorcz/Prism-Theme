@@ -1,0 +1,500 @@
+/*
+    Custom version of the Alternative Checkboxes Reference Set for the Prism theme (Based on version: 1.0.0).
+    
+    Initiative Repository: https://github.com/damiankorcz/Alternative-Checkboxes-Reference-Set
+
+    The icon set used for this Reference Set is Lucide (same icon set as used in the Obsidian UI). Lucide icons are
+    distributed under the ISC License: https://lucide.dev/license
+*/
+
+body.enable-alternative-checkboxes {
+    /* - [/] Incomplete */
+    div.HyperMD-task-line[data-task="/"],
+    ul > li[data-task="/"] {
+        /* Icon used: https://lucide.dev/icons/square-dashed */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNxdWFyZS1kYXNoZWQiPjxwYXRoIGQ9Ik01IDNhMiAyIDAgMCAwLTIgMiIvPjxwYXRoIGQ9Ik0xOSAzYTIgMiAwIDAgMSAyIDIiLz48cGF0aCBkPSJNMjEgMTlhMiAyIDAgMCAxLTIgMiIvPjxwYXRoIGQ9Ik01IDIxYTIgMiAwIDAgMS0yLTIiLz48cGF0aCBkPSJNOSAzaDEiLz48cGF0aCBkPSJNOSAyMWgxIi8+PHBhdGggZD0iTTE0IDNoMSIvPjxwYXRoIGQ9Ik0xNCAyMWgxIi8+PHBhdGggZD0iTTMgOXYxIi8+PHBhdGggZD0iTTIxIDl2MSIvPjxwYXRoIGQ9Ik0zIDE0djEiLz48cGF0aCBkPSJNMjEgMTR2MSIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="/"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="/"] {
+        --icon-mask-color: var(--color-grey-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="/"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="/"] {
+        --line-text-color: var(--color-grey-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="/"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="/"] {
+        --line-background: var(--color-grey-base);
+    }
+
+    /* - [-] Cancelled */
+    div.HyperMD-task-line[data-task="-"],
+    ul > li[data-task="-"] {
+        /* Icon used: https://lucide.dev/icons/ban */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1iYW4iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PHBhdGggZD0ibTQuOSA0LjkgMTQuMiAxNC4yIi8+PC9zdmc+");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="-"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="-"] {
+        --icon-mask-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="-"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="-"] {
+        --line-text-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="-"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="-"] {
+        --line-background: var(--color-red-base);
+    }
+
+    /* - [>] Forwarded */
+    div.HyperMD-task-line[data-task=">"],
+    ul > li[data-task=">"] {
+        /* Icon used: https://lucide.dev/icons/send-horizontal */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1zZW5kLWhvcml6b250YWwiPjxwYXRoIGQ9Ik0zLjcxNCAzLjA0OGEuNDk4LjQ5OCAwIDAgMC0uNjgzLjYyN2wyLjg0MyA3LjYyN2EyIDIgMCAwIDEgMCAxLjM5NmwtMi44NDIgNy42MjdhLjQ5OC40OTggMCAwIDAgLjY4Mi42MjdsMTgtOC41YS41LjUgMCAwIDAgMC0uOTA0eiIvPjxwYXRoIGQ9Ik02IDEyaDE2Ii8+PC9zdmc+");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task=">"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task=">"] {
+        --icon-mask-color: var(--color-blue-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task=">"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task=">"] {
+        --line-text-color: var(--color-blue-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task=">"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task=">"] {
+        --line-background: var(--color-blue-base);
+    }
+
+    /* - [<] Scheduling */
+    div.HyperMD-task-line[data-task="<"],
+    ul > li[data-task="<"] {
+        /* Icon used: https://lucide.dev/icons/calendar */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jYWxlbmRhciI+PHBhdGggZD0iTTggMnY0Ii8+PHBhdGggZD0iTTE2IDJ2NCIvPjxyZWN0IHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgeD0iMyIgeT0iNCIgcng9IjIiLz48cGF0aCBkPSJNMyAxMGgxOCIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="<"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="<"] {
+        --icon-mask-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="<"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="<"] {
+        --line-text-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="<"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="<"] {
+        --line-background: var(--color-green-base);
+    }
+
+    /* - [?] Question */
+    div.HyperMD-task-line[data-task="?"],
+    ul > li[data-task="?"] {
+        /* Icon used: https://lucide.dev/icons/circle-help */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1jaXJjbGUtaGVscCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48cGF0aCBkPSJNOS4wOSA5YTMgMyAwIDAgMSA1LjgzIDFjMCAyLTMgMy0zIDMiLz48cGF0aCBkPSJNMTIgMTdoLjAxIi8+PC9zdmc+");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="?"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="?"] {
+        --icon-mask-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="?"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="?"] {
+        --line-text-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="?"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="?"] {
+        --line-background: var(--color-yellow-base);
+    }
+
+    /* - [!] Important */
+    div.HyperMD-task-line[data-task="!"],
+    ul > li[data-task="!"] {
+        /* Icon used: https://lucide.dev/icons/triangle-alert */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10cmlhbmdsZS1hbGVydCI+PHBhdGggZD0ibTIxLjczIDE4LTgtMTRhMiAyIDAgMCAwLTMuNDggMGwtOCAxNEEyIDIgMCAwIDAgNCAyMWgxNmEyIDIgMCAwIDAgMS43My0zIi8+PHBhdGggZD0iTTEyIDl2NCIvPjxwYXRoIGQ9Ik0xMiAxN2guMDEiLz48L3N2Zz4=");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="!"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="!"] {
+        --icon-mask-color: var(--color-orange-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="!"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="!"] {
+        --line-text-color: var(--color-orange-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="!"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="!"] {
+        --line-background: var(--color-orange-base);
+    }
+
+    /* - [*] Star */
+    div.HyperMD-task-line[data-task="*"],
+    ul > li[data-task="*"] {
+        /* Icon used: https://lucide.dev/icons/star */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1zdGFyIj48cG9seWdvbiBwb2ludHM9IjEyIDIgMTUuMDkgOC4yNiAyMiA5LjI3IDE3IDE0LjE0IDE4LjE4IDIxLjAyIDEyIDE3Ljc3IDUuODIgMjEuMDIgNyAxNC4xNCAyIDkuMjcgOC45MSA4LjI2IDEyIDIiLz48L3N2Zz4=");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="*"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="*"] {
+        --icon-mask-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="*"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="*"] {
+        --line-text-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="*"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="*"] {
+        --line-background: var(--color-yellow-base);
+    }
+
+    /* - ["] Quote */
+    div.HyperMD-task-line[data-task="\""],
+    ul > li[data-task="\""] {
+        /* Icon used: https://lucide.dev/icons/quote */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1xdW90ZSI+PHBhdGggZD0iTTE2IDNhMiAyIDAgMCAwLTIgMnY2YTIgMiAwIDAgMCAyIDIgMSAxIDAgMCAxIDEgMXYxYTIgMiAwIDAgMS0yIDIgMSAxIDAgMCAwLTEgMXYyYTEgMSAwIDAgMCAxIDEgNiA2IDAgMCAwIDYtNlY1YTIgMiAwIDAgMC0yLTJ6Ii8+PHBhdGggZD0iTTUgM2EyIDIgMCAwIDAtMiAydjZhMiAyIDAgMCAwIDIgMiAxIDEgMCAwIDEgMSAxdjFhMiAyIDAgMCAxLTIgMiAxIDEgMCAwIDAtMSAxdjJhMSAxIDAgMCAwIDEgMSA2IDYgMCAwIDAgNi02VjVhMiAyIDAgMCAwLTItMnoiLz48L3N2Zz4=");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="\""],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="\""] {
+        --icon-mask-color: var(--color-grey-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="\""],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="\""] {
+        --line-text-color: var(--color-grey-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="\""],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="\""] {
+        --line-background: var(--color-grey-base);
+    }
+
+    /* - [l] Location */
+    div.HyperMD-task-line[data-task="l"],
+    ul > li[data-task="l"] {
+        /* Icon used: https://lucide.dev/icons/map-pin */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1tYXAtcGluIj48cGF0aCBkPSJNMjAgMTBjMCA0Ljk5My01LjUzOSAxMC4xOTMtNy4zOTkgMTEuNzk5YTEgMSAwIDAgMS0xLjIwMiAwQzkuNTM5IDIwLjE5MyA0IDE0Ljk5MyA0IDEwYTggOCAwIDAgMSAxNiAwIi8+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMCIgcj0iMyIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="l"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="l"] {
+        --icon-mask-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="l"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="l"] {
+        --line-text-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="l"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="l"] {
+        --line-background: var(--color-red-base);
+    }
+
+    /* - [b] Bookmark */
+    div.HyperMD-task-line[data-task="b"],
+    ul > li[data-task="b"] {
+        /* Icon used: https://lucide.dev/icons/bookmark */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1ib29rbWFyayI+PHBhdGggZD0ibTE5IDIxLTctNC03IDRWNWEyIDIgMCAwIDEgMi0yaDEwYTIgMiAwIDAgMSAyIDJ2MTZ6Ii8+PC9zdmc+");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="b"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="b"] {
+        --icon-mask-color: var(--color-mint-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="b"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="b"] {
+        --line-text-color: var(--color-mint-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="b"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="b"] {
+        --line-background: var(--color-mint-base);
+    }
+
+    /* - [i] Information */
+    div.HyperMD-task-line[data-task="i"],
+    ul > li[data-task="i"] {
+        /* Icon used: https://lucide.dev/icons/info */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1pbmZvIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIvPjxwYXRoIGQ9Ik0xMiAxNnYtNCIvPjxwYXRoIGQ9Ik0xMiA4aC4wMSIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="i"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="i"] {
+        --icon-mask-color: var(--color-blue-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="i"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="i"] {
+        --line-text-color: var(--color-blue-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="i"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="i"] {
+        --line-background: var(--color-blue-base);
+    }
+
+    /* - [S] Savings */
+    div.HyperMD-task-line[data-task="S"],
+    ul > li[data-task="S"] {
+        /* Icon used: https://lucide.dev/icons/dollar-sign */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWRvbGxhci1zaWduIj48bGluZSB4MT0iMTIiIHgyPSIxMiIgeTE9IjIiIHkyPSIyMiIvPjxwYXRoIGQ9Ik0xNyA1SDkuNWEzLjUgMy41IDAgMCAwIDAgN2g1YTMuNSAzLjUgMCAwIDEgMCA3SDYiLz48L3N2Zz4=");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="S"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="S"] {
+        --icon-mask-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="S"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="S"] {
+        --line-text-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="S"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="S"] {
+        --line-background: var(--color-green-base);
+    }
+
+    /* - [I] Idea */
+    div.HyperMD-task-line[data-task="I"],
+    ul > li[data-task="I"] {
+        /* Icon used: https://lucide.dev/icons/lightbulb */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1saWdodGJ1bGIiPjxwYXRoIGQ9Ik0xNSAxNGMuMi0xIC43LTEuNyAxLjUtMi41IDEtLjkgMS41LTIuMiAxLjUtMy41QTYgNiAwIDAgMCA2IDhjMCAxIC4yIDIuMiAxLjUgMy41LjcuNyAxLjMgMS41IDEuNSAyLjUiLz48cGF0aCBkPSJNOSAxOGg2Ii8+PHBhdGggZD0iTTEwIDIyaDQiLz48L3N2Zz4=");
+    }
+    
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="I"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="I"] {
+        --icon-mask-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="I"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="I"] {
+        --line-text-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="I"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="I"] {
+        --line-background: var(--color-yellow-base);
+    }    
+
+    /* - [p] Pros */
+    div.HyperMD-task-line[data-task="p"],
+    ul > li[data-task="p"] {
+        /* Icon used: https://lucide.dev/icons/thumbs-up */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10aHVtYnMtdXAiPjxwYXRoIGQ9Ik03IDEwdjEyIi8+PHBhdGggZD0iTTE1IDUuODggMTQgMTBoNS44M2EyIDIgMCAwIDEgMS45MiAyLjU2bC0yLjMzIDhBMiAyIDAgMCAxIDE3LjUgMjJINGEyIDIgMCAwIDEtMi0ydi04YTIgMiAwIDAgMSAyLTJoMi43NmEyIDIgMCAwIDAgMS43OS0xLjExTDEyIDJhMy4xMyAzLjEzIDAgMCAxIDMgMy44OFoiLz48L3N2Zz4=");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="p"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="p"] {
+        --icon-mask-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="p"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="p"] {
+        --line-text-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="p"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="p"] {
+        --line-background: var(--color-green-base);
+    }  
+
+    /* - [c] Cons */
+    div.HyperMD-task-line[data-task="c"],
+    ul > li[data-task="c"] {
+        /* Icon used: https://lucide.dev/icons/thumbs-down */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10aHVtYnMtZG93biI+PHBhdGggZD0iTTE3IDE0VjIiLz48cGF0aCBkPSJNOSAxOC4xMiAxMCAxNEg0LjE3YTIgMiAwIDAgMS0xLjkyLTIuNTZsMi4zMy04QTIgMiAwIDAgMSA2LjUgMkgyMGEyIDIgMCAwIDEgMiAydjhhMiAyIDAgMCAxLTIgMmgtMi43NmEyIDIgMCAwIDAtMS43OSAxLjExTDEyIDIyYTMuMTMgMy4xMyAwIDAgMS0zLTMuODhaIi8+PC9zdmc+");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="c"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="c"] {
+        --icon-mask-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="c"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="c"] {
+        --line-text-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="c"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="c"] {
+        --line-background: var(--color-red-base);
+    }  
+
+    /* - [f] Fire */
+    div.HyperMD-task-line[data-task="f"],
+    ul > li[data-task="f"] {
+        /* Icon used: https://lucide.dev/icons/flame */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1mbGFtZSI+PHBhdGggZD0iTTguNSAxNC41QTIuNSAyLjUgMCAwIDAgMTEgMTJjMC0xLjM4LS41LTItMS0zLTEuMDcyLTIuMTQzLS4yMjQtNC4wNTQgMi02IC41IDIuNSAyIDQuOSA0IDYuNSAyIDEuNiAzIDMuNSAzIDUuNWE3IDcgMCAxIDEtMTQgMGMwLTEuMTUzLjQzMy0yLjI5NCAxLTNhMi41IDIuNSAwIDAgMCAyLjUgMi41eiIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="f"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="f"] {
+        --icon-mask-color: var(--color-orange-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="f"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="f"] {
+        --line-text-color: var(--color-orange-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="f"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="f"] {
+        --line-background: var(--color-orange-base);
+    }  
+
+    /* - [k] Key */
+    div.HyperMD-task-line[data-task="k"],
+    ul > li[data-task="k"] {
+        /* Icon used: https://lucide.dev/icons/key-round */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1rZXktcm91bmQiPjxwYXRoIGQ9Ik0yLjU4NiAxNy40MTRBMiAyIDAgMCAwIDIgMTguODI4VjIxYTEgMSAwIDAgMCAxIDFoM2ExIDEgMCAwIDAgMS0xdi0xYTEgMSAwIDAgMSAxLTFoMWExIDEgMCAwIDAgMS0xdi0xYTEgMSAwIDAgMSAxLTFoLjE3MmEyIDIgMCAwIDAgMS40MTQtLjU4NmwuODE0LS44MTRhNi41IDYuNSAwIDEgMC00LTR6Ii8+PGNpcmNsZSBjeD0iMTYuNSIgY3k9IjcuNSIgcj0iLjUiIGZpbGw9ImN1cnJlbnRDb2xvciIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="k"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="k"] {
+        --icon-mask-color: var(--color-cyan-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="k"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="k"] {
+        --line-text-color: var(--color-cyan-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="k"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="k"] {
+        --line-background: var(--color-cyan-base);
+    }  
+
+    /* - [w] Win */
+    div.HyperMD-task-line[data-task="w"],
+    ul > li[data-task="w"] {
+        /* Icon used: https://lucide.dev/icons/trophy */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10cm9waHkiPjxwYXRoIGQ9Ik02IDlINC41YTIuNSAyLjUgMCAwIDEgMC01SDYiLz48cGF0aCBkPSJNMTggOWgxLjVhMi41IDIuNSAwIDAgMCAwLTVIMTgiLz48cGF0aCBkPSJNNCAyMmgxNiIvPjxwYXRoIGQ9Ik0xMCAxNC42NlYxN2MwIC41NS0uNDcuOTgtLjk3IDEuMjFDNy44NSAxOC43NSA3IDIwLjI0IDcgMjIiLz48cGF0aCBkPSJNMTQgMTQuNjZWMTdjMCAuNTUuNDcuOTguOTcgMS4yMUMxNi4xNSAxOC43NSAxNyAyMC4yNCAxNyAyMiIvPjxwYXRoIGQ9Ik0xOCAySDZ2N2E2IDYgMCAwIDAgMTIgMFYyWiIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="w"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="w"] {
+        --icon-mask-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="w"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="w"] {
+        --line-text-color: var(--color-yellow-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="w"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="w"] {
+        --line-background: var(--color-yellow-base);
+    }  
+
+    /* - [u] Up */
+    div.HyperMD-task-line[data-task="u"],
+    ul > li[data-task="u"] {
+        /* Icon used: https://lucide.dev/icons/trending-up */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10cmVuZGluZy11cCI+PHBvbHlsaW5lIHBvaW50cz0iMjIgNyAxMy41IDE1LjUgOC41IDEwLjUgMiAxNyIvPjxwb2x5bGluZSBwb2ludHM9IjE2IDcgMjIgNyAyMiAxMyIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="u"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="u"] {
+        --icon-mask-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="u"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="u"] {
+        --line-text-color: var(--color-green-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="u"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="u"] {
+        --line-background: var(--color-green-base);
+    }  
+
+    /* - [d] Down */
+    div.HyperMD-task-line[data-task="d"],
+    ul > li[data-task="d"] {
+        /* Icon used: https://lucide.dev/icons/trending-down */
+        --icon-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyLjYyNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS10cmVuZGluZy1kb3duIj48cG9seWxpbmUgcG9pbnRzPSIyMiAxNyAxMy41IDguNSA4LjUgMTMuNSAyIDciLz48cG9seWxpbmUgcG9pbnRzPSIxNiAxNyAyMiAxNyAyMiAxMSIvPjwvc3ZnPg==");
+    }
+
+    &.pt-alternative-checkboxes-color-icon div.HyperMD-task-line[data-task="d"],
+    &.pt-alternative-checkboxes-color-icon ul > li[data-task="d"] {
+        --icon-mask-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-text div.HyperMD-task-line[data-task="d"],
+    &.pt-alternative-checkboxes-color-text ul > li[data-task="d"] {
+        --line-text-color: var(--color-red-text);
+    }
+    &.pt-alternative-checkboxes-color-background div.HyperMD-task-line[data-task="d"],
+    &.pt-alternative-checkboxes-color-background ul > li[data-task="d"] {
+        --line-background: var(--color-red-base);
+    }  
+
+    /* ----------------------------------------------------------------------- */
+
+    .HyperMD-task-line:not([data-task="x"], [data-task="X"], [data-task=" "]),
+    li:not([data-task="x"], [data-task="X"], [data-task=" "]) {
+        --icon-mask-image: unset;
+        --icon-mask-color: var(--text-normal);
+
+        --icon-content: "";
+        --icon-content-font: var(--font-monospace);
+        --icon-content-weight: var(--font-bold);
+        --icon-content-color: var(--text-normal);
+        
+        --icon-background: transparent;
+        --icon-background-hover: transparent;
+
+        --icon-border: unset;
+        --icon-border-radius: unset;
+        
+        --line-text-color: inherit;
+        --line-background: unset;
+        --line-border: unset;
+        --line-border-radius: unset;
+    }
+
+    .HyperMD-task-line:not([data-task="x"], [data-task="X"], [data-task=" "]),
+    li:not([data-task="x"], [data-task="X"], [data-task=" "]).is-checked {
+        color: var(--line-text-color);
+        background: var(--line-background);
+        border: var(--line-border);
+        border-radius: var(--line-border-radius);
+    }
+
+    /* Swapping margin for padding to allow background color to apply in Reading view the same
+    as in Live Preview */
+    .task-list-item.is-checked {
+        margin-inline-start: unset;
+        padding-inline-start: 3ch;
+    }
+
+    .markdown-reading-view li {
+        .task-list-item-checkbox {
+            margin-inline-start: calc((var(--checkbox-size) * -1.5) + var(--size-4-2));
+        }
+    }
+
+    div.is-live-preview label > input[type="checkbox"]:not([data-task="x"], [data-task="X"], [data-task=" "]),
+    li:not([data-task="x"], [data-task="X"], [data-task=" "]) > input[type="checkbox"],
+    li:not([data-task="x"], [data-task="X"], [data-task=" "]) > p > input[type="checkbox"] {
+        &:checked {
+            --checkbox-marker-color: transparent;
+            border: var(--icon-border);
+            border-radius: var(--icon-border-radius);
+            background: var(--icon-background);
+
+            &:hover {
+                background: var(--icon-background-hover);
+            }
+        }
+
+        &:checked::after {
+            background-color: var(--icon-mask-color);
+            -webkit-mask-image: var(--icon-mask-image);
+            -webkit-mask-size: contain;
+            -webkit-mask-position: center;
+            color: var(--icon-content-color);
+
+            background-image: var(--icon-image);
+            background-repeat: no-repeat;
+            background-position: center;
+
+            content: var(--icon-content);
+
+            
+            text-align: center;
+            font-weight: var(--icon-content-weight);
+            font-family: var(--icon-content-font);
+            font-size: 1rem;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* Allows icons to remain scaled correctly within the checkbox when using a border */
+            width: -webkit-fill-available;
+            width: fill-available; /* Fallback for Safari */
+            height: -webkit-fill-available;
+            height: fill-available; /* Fallback for Safari */
+        }
+    }
+}

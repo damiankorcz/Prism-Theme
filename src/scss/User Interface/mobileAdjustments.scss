@@ -1,7 +1,7 @@
 // [UI] Mobile Adjustments
 body.is-mobile {
-	--toggle-thumb-height: 20px;
-	--toggle-thumb-width: 20px;
+	--toggle-thumb-height: 18px;
+	--toggle-thumb-width: 18px;
 	--toggle-border-width: 1px;
 	--toggle-width: 40px;
 	--toggle-s-thumb-height: 14px;
@@ -36,6 +36,22 @@ body.is-mobile {
 		height: fit-content;
 	}
 
+	.empty-state-action {
+		color: var(--text-normal);
+    	background-color: var(--color-grey-base);
+		border: var(--accent-border-width) solid;
+    	border-color: var(--color-grey-tint);
+    	border-radius: var(--radius-s);
+	}
+
+	&.theme-light,
+	&.theme-dark,
+	{
+		.workspace-split.mod-root {
+			background-color: var(--background-secondary);
+		}
+	}
+
 	&.theme-light {
 		.workspace-leaf-content,
 		.workspace-drawer-tab-options {
@@ -66,6 +82,35 @@ body.is-mobile {
 	}
 
 	&.is-phone {
+		--menu-padding: var(--size-4-2) var(--size-4-2);
+
+		.menu-scroll {
+			border-top: var(--window-border);
+			background-color: unset;
+			padding-bottom: var(--size-4-2) !important;
+		}
+
+		.menu-grabber {
+    		margin: var(--size-4-2) auto var(--size-4-2);
+		}
+
+		.menu-separator {
+			border-top: var(--window-border);
+		}
+
+		.menu .suggestion-group .suggestion-item:not(.is-label),
+		.menu-item:not(.is-label) {
+			background-color: unset;
+		}
+
+		.menu-group .menu-item:not(:last-child) {
+			border-bottom: unset;
+		}
+
+		.nav-header {
+			flex-wrap: wrap;
+		}
+
 		&.theme-light {
 			.vertical-tab-header {
 				background-color: var(--background-primary);
@@ -112,9 +157,16 @@ body.is-mobile {
 		.prompt {
 			--prompt-bottom: var(--size-4-2);
 
-			margin-right: var(--size-4-2);
-			margin-left: var(--size-4-2);
+			margin-right: var(--size-4-4);
+			margin-left: var(--size-4-4);
+			margin-bottom: calc(var(--safe-area-inset-bottom) + var(--prompt-top) + var(--size-4-2));
 			border-radius: var(--radius-m);
+			width: calc(97% - var(--safe-area-inset-left) - var(--safe-area-inset-right));
+			left: unset;
+			right: unset;
+			padding-bottom: unset;
+			max-height: unset;
+			height: calc(100vh - var(--safe-area-inset-bottom) - var(--prompt-top) - var(--size-4-2));
 		}
 
 		.community-modal-controls {
@@ -126,13 +178,9 @@ body.is-mobile {
 			margin: var(--size-4-1);
 		}
 
-		.modal.mod-sidebar-layout .modal-title {
-			border-bottom: var(--window-border);
-		}
-
 		.community-modal-search-results {
 			gap: var(--size-4-2);
-			padding: var(--size-4-2);
+			padding: var(--size-4-2) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2)) var(--size-4-2);
 		}
 
 		.community-item {
@@ -174,6 +222,10 @@ body.is-mobile {
 		// The default offset does not account for the margin
 		.search-input-container:before {
 			top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
+		}
+
+		.settings-search-container .search-input-container::before {
+ 	   		top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 		}
 	}
 
@@ -266,6 +318,10 @@ body.is-mobile {
 		border-bottom: var(--window-border);
 	}
 
+	.workspace-drawer-active-tab-container {
+		background-color: var(--background-secondary);
+	}
+
 	.workspace-drawer-header-icon,
 	.workspace-drawer-active-tab-back-icon,
 	.workspace-drawer-active-tab-icon:last-child {
@@ -288,17 +344,24 @@ body.is-mobile {
 
 	.suggestion-container,
 	.menu {
-		background-color: var(--background-secondary-blur);
-		-webkit-backdrop-filter: blur(var(--blur-intensity));
-		backdrop-filter: blur(var(--blur-intensity));
+		background-color: var(--background-secondary);
 		border: var(--window-border);
 		border-radius: var(--radius-m);
+		padding: unset;
+		margin: 0 var(--size-4-2);
+		bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
+	}
+
+	div.workspace-leaf-content[data-type="style-settings"] .view-content > .setting-item .setting-item-info,
+	.modal.mod-settings .setting-item-info:has(.search-input-container)  {
+		width: 100%;
 	}
 
 	.modal {
-		border: var(--window-border);
+		// border: var(--window-border);
 
 		&.mod-settings {
+			border: unset;
 			.vertical-tab-nav-item {
 				border-bottom: var(--accent-border-width) solid transparent;
 				border-radius: var(--radius-m);
@@ -307,10 +370,6 @@ body.is-mobile {
 			.vertical-tab-header-group-items {
 				border-radius: unset;
 			}
-		}
-
-		&.mod-sidebar-layout .modal-title {
-			background-color: var(--background-secondary);
 		}
 
 		&.mod-community-modal {
@@ -362,6 +421,7 @@ body.is-mobile {
 	padding: var(--size-4-1);
 	background-color: var(--background-secondary);
 	border-top: var(--window-border);
+	top: calc(100vh - var(--keyboard-height) - var(--mobile-toolbar-height) - var(--size-4-2));
 }
 
 // Padding fix for Commander due to forced height

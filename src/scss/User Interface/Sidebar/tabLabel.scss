@@ -9,11 +9,24 @@
 		// Moves the Tab Label to the center on the left sidebar
 		.pt-tab-label-left-sidebar-center & {
 			justify-content: center;
+
+			.workspace-tab-header-spacer {
+				display: none;
+			}
+
+			.workspace-tab-header-container-inner {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		// Moves the Tab Label to the right on the left sidebar
 		.pt-tab-label-left-sidebar-right & {
 			justify-content: flex-end;
+
+			.workspace-tab-header-spacer {
+				display: none;
+			}
 		}
 	}
 }
@@ -23,16 +36,30 @@
 		// Moves the Tab Label to the left on the right sidebar
 		.pt-tab-label-right-sidebar-left & {
 			justify-content: flex-start;
+			
 		}
 
 		// Moves the Tab Label to the center on the right sidebar
 		.pt-tab-label-right-sidebar-center & {
 			justify-content: center;
+
+			.workspace-tab-header-spacer {
+				display: none;
+			}
+
+			.workspace-tab-header-container-inner {
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		// Moves the Tab Label to the right on the right sidebar
 		.pt-tab-label-right-sidebar-right & {
 			justify-content: flex-end;
+
+			.workspace-tab-header-spacer {
+				display: none;
+			}
 		}
 	}
 }

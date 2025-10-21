@@ -119,9 +119,10 @@ body {
 	--embed-border-top: 1px solid var(--window-border-color);
 	--embed-border-bottom: 1px solid var(--window-border-color);
 	--embed-border-end: 1px solid var(--window-border-color);
-	--embed-padding: unset;
+	--embed-padding: var(--size-4-2) var(--size-4-4);
 
 	--code-comment: var(--color-grey-text);
+	--code-border-width: 1px;
 
 	--graph-controls-width: 150px;
 
@@ -137,6 +138,8 @@ body {
 
 	--metadata-label-background-active: var(--background-secondary);
 	--metadata-input-background-active: var(--background-secondary);
+
+	--background-modifier-border-focus: var(--interactive-accent-tint);
 
 	// Style Settings Defaults
 	--status-bar-background-color-lt: #EBECEF;
@@ -249,11 +252,20 @@ body {
 		--text-bold-color-lt: var(--text-normal);
 		--text-italic-color-lt: var(--text-normal);
 		--text-italic-bold-color-lt: var(--text-normal);
+		--strikethrough-text-color-lt: var(--text-muted);
+		--strikethrough-line-color-lt: var(--text-muted);
+		--underline-text-color-lt: var(--text-normal);
+		--underline-line-color-lt: var(--text-normal);
 		--link-internal-color-lt: var(--interactive-accent-text-hsl);
 		--link-external-color-lt: var(--interactive-accent-text-hsl);
 
 		--bold-color: var(--text-bold-color-lt);
 		--italic-color: var(--text-italic-color-lt);
+
+		--strikethrough-text-color: var(--strikethrough-text-color-lt);
+		--strikethrough-line-color: var(--strikethrough-line-color-lt);
+		--underline-text-color: var(--underline-text-color-lt);
+		--underline-line-color: var(--underline-line-color-lt);
 
 		--link-color: hsl(var(--link-internal-color-lt));
 		--link-color-hover: hsla(var(--link-internal-color-lt), 60%);
@@ -269,7 +281,6 @@ body {
 
 		--checkbox-color: var(--background-primary-alt);
 		--checkbox-border-color: var(--background-secondary-alt);
-
 		
 		--scrollbar-bg: var(--background-secondary);
 		
@@ -291,6 +302,10 @@ body {
 		--graph-node-tag: var(--graph-tag-color-lt);
 		--graph-node-attachment: var(--graph-attachment-color-lt);
 		--graph-node-unresolved: var(--graph-unresolved-color-lt);
+
+		--bases-table-header-background: var(--background-primary);
+		--bases-table-cell-background-disabled: var(--background-primary-alt);
+		--bases-table-cell-background-active: var(--background-primary);
 
 		// Style Settings Defaults
 		--graph-line-color-lt: var(--background-secondary-alt);
@@ -469,11 +484,20 @@ body {
 		--text-bold-color-dt: var(--text-normal);
 		--text-italic-color-dt: var(--text-normal);
 		--text-italic-bold-color-dt: var(--text-normal);
+		--strikethrough-text-color-dt: var(--text-muted);
+		--strikethrough-line-color-dt: var(--text-muted);
+		--underline-text-color-dt: var(--text-normal);
+		--underline-line-color-dt: var(--text-normal);
 		--link-internal-color-dt: var(--interactive-accent-text-hsl);
 		--link-external-color-dt: var(--interactive-accent-text-hsl);
 		
 		--bold-color: var(--text-bold-color-dt);
 		--italic-color: var(--text-italic-color-dt);
+
+		--strikethrough-text-color: var(--strikethrough-text-color-dt);
+		--strikethrough-line-color: var(--strikethrough-line-color-dt);
+		--underline-text-color: var(--underline-text-color-dt);
+		--underline-line-color: var(--underline-line-color-dt);
 
 		--link-color: hsl(var(--link-internal-color-dt));
 		--link-color-hover: hsla(var(--link-internal-color-dt), 60%);
@@ -527,6 +551,10 @@ body {
 		--h4-text-color-dt: var(--text-normal);
 		--h5-text-color-dt: var(--text-normal);
 		--h6-text-color-dt: var(--text-normal);
+
+		--bases-table-header-background: var(--background-secondary-alt);
+		--bases-table-cell-background-disabled: var(--background-secondary);
+		--bases-table-cell-background-active: var(--background-secondary-alt);
 
 		// Style Settings Custom Options
 		&.pt-color-scheme-style-border-dt {

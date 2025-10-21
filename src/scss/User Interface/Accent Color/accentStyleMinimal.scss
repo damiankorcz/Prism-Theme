@@ -11,7 +11,8 @@
 	.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 	.canvas-help .setting-hotkey,
 	.clickable-icon[aria-label="Search settings"].is-active,
-	.pdf-outline-view .tree-item-self.mod-active {
+	.pdf-outline-view .tree-item-self.mod-active,
+	.text-icon-button.is-active {
 		background-color: transparent;
 		border-color: transparent;
 	}
@@ -61,7 +62,7 @@
 		}
 	}
 
-	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
+	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
 		color: var(--color-grey-text);
 		background-color: transparent;
 		border-color: var(--window-border-color);
