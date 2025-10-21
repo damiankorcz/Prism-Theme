@@ -1,5 +1,5 @@
 /*
-    Prism Theme for Obsidian.md (Version: 3.6.0)
+    Prism Theme for Obsidian.md (Version: 3.7.0)
     > A Comprehensive, Highly-Customisable and Elegant Light/Dark Theme for Obsidian.md
 
     Source: https://github.com/damiankorcz/Obsidian-Prism
@@ -591,6 +591,7 @@ body {
   --embed-max-height: 800px;
   --metadata-label-background-active: var(--background-secondary);
   --metadata-input-background-active: var(--background-secondary);
+  --background-modifier-border-focus: var(--interactive-accent-tint);
   --status-bar-background-color-lt: #EBECEF;
   --status-bar-background-color-dt: #2B2B2B;
 }
@@ -714,6 +715,9 @@ body.theme-light {
   --graph-node-tag: var(--graph-tag-color-lt);
   --graph-node-attachment: var(--graph-attachment-color-lt);
   --graph-node-unresolved: var(--graph-unresolved-color-lt);
+  --bases-table-header-background: var(--background-primary);
+  --bases-table-cell-background-disabled: var(--background-primary-alt);
+  --bases-table-cell-background-active: var(--background-primary);
   --graph-line-color-lt: var(--background-secondary-alt);
   --graph-fill-color-lt: var(--color-grey-tint);
   --graph-fill-focused-color-lt: var(--interactive-accent-tint);
@@ -913,6 +917,9 @@ body.theme-dark {
   --h4-text-color-dt: var(--text-normal);
   --h5-text-color-dt: var(--text-normal);
   --h6-text-color-dt: var(--text-normal);
+  --bases-table-header-background: var(--background-secondary-alt);
+  --bases-table-cell-background-disabled: var(--background-secondary);
+  --bases-table-cell-background-active: var(--background-secondary-alt);
 }
 body.theme-dark.pt-color-scheme-style-border-dt {
   --background-secondary: var(--background-secondary-alt);
@@ -1409,6 +1416,13 @@ body.is-mobile :is(.horizontal-tab-content, .vertical-tab-content) {
 body.is-mobile input[type=color] {
   height: fit-content;
 }
+body.is-mobile .empty-state-action {
+  color: var(--text-normal);
+  background-color: var(--color-grey-base);
+  border: var(--accent-border-width) solid;
+  border-color: var(--color-grey-tint);
+  border-radius: var(--radius-s);
+}
 body.is-mobile.theme-light .workspace-split.mod-root, body.is-mobile.theme-dark .workspace-split.mod-root {
   background-color: var(--background-secondary);
 }
@@ -1438,6 +1452,7 @@ body.is-mobile.is-phone {
 body.is-mobile.is-phone .menu-scroll {
   border-top: var(--window-border);
   background-color: unset;
+  padding-bottom: var(--size-4-2) !important;
 }
 body.is-mobile.is-phone .menu-grabber {
   margin: var(--size-4-2) auto var(--size-4-2);
@@ -1488,10 +1503,14 @@ body.is-mobile.is-phone .prompt {
   --prompt-bottom: var(--size-4-2);
   margin-right: var(--size-4-4);
   margin-left: var(--size-4-4);
+  margin-bottom: calc(var(--safe-area-inset-bottom) + var(--prompt-top) + var(--size-4-2));
   border-radius: var(--radius-m);
   width: calc(97% - var(--safe-area-inset-left) - var(--safe-area-inset-right));
   left: unset;
   right: unset;
+  padding-bottom: unset;
+  max-height: unset;
+  height: calc(100vh - var(--safe-area-inset-bottom) - var(--prompt-top) - var(--size-4-2));
 }
 body.is-mobile.is-phone .community-modal-controls {
   background-color: var(--background-secondary);
@@ -1502,7 +1521,7 @@ body.is-mobile.is-phone .setting-item-control input {
 }
 body.is-mobile.is-phone .community-modal-search-results {
   gap: var(--size-4-2);
-  padding: var(--size-4-2);
+  padding: var(--size-4-2) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2)) var(--size-4-2);
 }
 body.is-mobile.is-phone .community-item {
   border-width: var(--border-width);
@@ -1531,6 +1550,9 @@ body.is-mobile.is-phone .modal.mod-sidebar-layout .search-input-container {
 }
 body.is-mobile.is-phone .search-input-container:before {
   top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
+}
+body.is-mobile.is-phone .settings-search-container .search-input-container::before {
+  top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 }
 body.is-mobile.is-tablet .modal.mod-sidebar-layout .modal-setting-back-button {
   display: none;
@@ -1628,6 +1650,7 @@ body.is-mobile .menu {
   border-radius: var(--radius-m);
   padding: unset;
   margin: 0 var(--size-4-2);
+  bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
 }
 body.is-mobile div.workspace-leaf-content[data-type=style-settings] .view-content > .setting-item .setting-item-info,
 body.is-mobile .modal.mod-settings .setting-item-info:has(.search-input-container) {
@@ -1679,6 +1702,7 @@ body.is-mobile .metadata-properties-heading {
   padding: var(--size-4-1);
   background-color: var(--background-secondary);
   border-top: var(--window-border);
+  top: calc(100vh - var(--keyboard-height) - var(--mobile-toolbar-height) - var(--size-4-2));
 }
 
 .AT-multirow .mobile-toolbar {
@@ -1757,7 +1781,7 @@ body.is-mobile .metadata-properties-heading {
   font-size: 14px;
   font-weight: 600;
   color: var(--interactive-accent-text);
-  content: "Prism 3.6.0";
+  content: "Prism 3.7.0";
   border: 1px solid var(--window-border-color);
   border-radius: var(--radius-s);
 }
@@ -2455,7 +2479,8 @@ div.notice-container div.notice {
 .suggestion-hotkey,
 .workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
 .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
-.pdf-outline-view .tree-item-self.mod-active {
+.pdf-outline-view .tree-item-self.mod-active,
+.text-icon-button.is-active {
   color: var(--highlight-text-normal);
   border: var(--accent-border-width) solid;
   box-shadow: unset;
@@ -2479,7 +2504,7 @@ button.mod-cta {
   color: var(--highlight-text-normal);
 }
 
-:is(.pcr-button, button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]),
+:is(.pcr-button, button.mod-cta, button.mod-warning, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .setting-hotkey, .flair.mod-pop, .community-item .flair, button.copy-code-button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"], .empty-state-action),
 .clickable-icon[aria-label="Search settings"],
 .pdf-toolbar-button,
 .input-right-decorator.clickable-icon {
@@ -2526,7 +2551,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .canvas-help .setting-hotkey,
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .clickable-icon[aria-label="Search settings"].is-active,
-:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .pdf-outline-view .tree-item-self.mod-active {
+:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .pdf-outline-view .tree-item-self.mod-active,
+:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .text-icon-button.is-active {
   background-color: transparent;
   border-color: transparent;
 }
@@ -2566,13 +2592,13 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
+:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
   color: var(--color-grey-text);
   background-color: transparent;
   border-color: var(--window-border-color);
   border-width: 1px;
 }
-:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
+:is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-minimal-dt, .theme-light.pt-accent-style-minimal-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2631,7 +2657,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .canvas-help .setting-hotkey,
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .clickable-icon[aria-label="Search settings"].is-active,
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .pdf-outline-view .tree-item-self.mod-active {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .pdf-outline-view .tree-item-self.mod-active,
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .text-icon-button.is-active {
   background-color: var(--background-primary);
   border-color: var(--window-border-color);
 }
@@ -2671,12 +2698,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
   color: var(--color-grey-text);
   background-color: var(--background-primary);
   border-color: var(--window-border-color);
 }
-:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
+:is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-plain-dt, .theme-light.pt-accent-style-plain-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2729,7 +2756,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .canvas-help .setting-hotkey,
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .clickable-icon[aria-label="Search settings"].is-active,
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-outline-view .tree-item-self.mod-active {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .pdf-outline-view .tree-item-self.mod-active,
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .text-icon-button.is-active {
   background-color: var(--background-primary);
   border-color: var(--interactive-accent-tint);
 }
@@ -2770,12 +2798,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
   color: var(--text-normal);
   background-color: var(--background-primary);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
+:is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-border-dt, .theme-light.pt-accent-style-border-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2834,7 +2862,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .canvas-help .setting-hotkey,
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .clickable-icon[aria-label="Search settings"].is-active,
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .pdf-outline-view .tree-item-self.mod-active {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .pdf-outline-view .tree-item-self.mod-active,
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .text-icon-button.is-active {
   background-color: var(--interactive-accent-base);
   border-color: transparent;
 }
@@ -2875,12 +2904,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-base);
 }
-:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
+:is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-filled-dt, .theme-light.pt-accent-style-filled-lt) .setting-command-hotkeys .setting-hotkey {
@@ -2938,7 +2967,8 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .canvas-help .setting-hotkey,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .clickable-icon[aria-label="Search settings"].is-active,
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .pdf-outline-view .tree-item-self.mod-active,
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .input-right-decorator.clickable-icon.is-active {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .input-right-decorator.clickable-icon.is-active,
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .text-icon-button.is-active {
   background-color: var(--interactive-accent-base);
   border-color: var(--interactive-accent-tint);
 }
@@ -2980,12 +3010,12 @@ button.mod-cta {
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(button.mod-warning, .side-dock-ribbon-action.is-active[aria-label="Start/stop recording"]):hover {
   color: var(--color-red-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button) {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
   color: var(--text-normal);
   background-color: var(--color-grey-base);
   border-color: var(--color-grey-tint);
 }
-:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button):hover {
+:is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) :is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action):hover {
   color: var(--color-grey-tint);
 }
 :is(.theme-dark.pt-accent-style-borderandfilled-dt, .theme-light.pt-accent-style-borderandfilled-lt) .setting-command-hotkeys .setting-hotkey {
@@ -4829,6 +4859,17 @@ body:not(.is-grabbing) .workspace-leaf-content[data-type=bookmarks] .tree-item-s
 .pt-pdf-dark-theme.theme-dark .pdf-sidebar-container img.thumbnailImage {
   filter: invert(1) hue-rotate(180deg) saturate(100%);
   mix-blend-mode: screen;
+}
+
+.theme-light .bases-tbody {
+  background-color: var(--background-primary);
+}
+.theme-dark .bases-tbody {
+  background-color: var(--background-secondary-alt);
+}
+
+.bases-header {
+  background-color: var(--background-secondary);
 }
 
 .pt-custom-vault-banner .workspace-drawer-vault-name {
@@ -6938,11 +6979,6 @@ body:not(.is-frameless):not(.qe-hide-breadcrumbs) .status-bar {
 }
 .settings-search-container .vertical-tab-nav-item {
   border: unset;
-}
-
-body.is-mobile.is-phone .search-input-container::before {
-  top: calc((var(--input-height) - var(--search-icon-size)) / 2);
-  left: var(--size-4-3);
 }
 
 .workspace-leaf-content[data-type=dataloom] .view-content {
