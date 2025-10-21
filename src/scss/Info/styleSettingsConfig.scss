@@ -3939,12 +3939,6 @@ settings:
         level: 1
         collapsed: true
     -
-        id: enable-alternative-checkboxes
-        title: Enable Alternative Checkboxes
-        description: Disable this if you are using your own implementation via a CSS Snippet.
-        default: false
-        type: class-toggle
-    -
         id: pt-fade-inactive-tabs
         title: Fade Inactive Tabs
         description: Fades out inactive UI tabs to help distinguish the currently active tab.
@@ -3954,18 +3948,6 @@ settings:
         id: pt-disable-blur
         title: Disable Blurred Background Effect
         description: Disables the blur background in all elements that use it by making them opaque.
-        default: false
-        type: class-toggle
-    -
-        id: pt-disable-callout-styling
-        title: Disable Prism Callout Styling
-        description: This option removes the custom Callout Styling introduced with Prism and reverts to a completely default look. This should be used if you prefer the default callout styling or have CSS Snippets that use it's customisation options.
-        default: false
-        type: class-toggle
-    -
-        id: pt-disable-mark-highlight-styling
-        title: Disable Mark Highlight Styling
-        description: This option removes the Prism Mark Highlight Styling (reverts to default look). This will be handy for those that already use a different <mark> tag based highlighting system. 
         default: false
         type: class-toggle
     -
@@ -3980,6 +3962,47 @@ settings:
         description: This option adds styling to the PDF pages by blending in with the colour scheme in Dark mode; making it more eye friendly. This isn't a perfect solution. Note that some images might look inverted and colours be a different shade compared to the original file.
         default: false
         type: class-toggle
+    -
+        id: pt-disable-callout-styling
+        title: Disable Prism Callout Styling
+        description: This option removes the custom Callout Styling introduced with Prism and reverts to a completely default look. This should be used if you prefer the default callout styling or have CSS Snippets that use it's customisation options.
+        default: false
+        type: class-toggle
+    -
+        id: pt-disable-mark-highlight-styling
+        title: Disable Prism Mark Highlight Styling
+        description: This option removes the Prism Mark Highlight Styling (reverts to default look). This will be handy for those that already use a different <mark> tag based highlighting system. 
+        default: false
+        type: class-toggle
+    -
+    -
+        id: alternative-checkboxes-settings
+        title: Prism Alternative Checkboxes
+        description: Options for enabling and customising the Alternative Checkboxes feature.
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: enable-alternative-checkboxes
+        title: Enable Prism Alternative Checkboxes
+        description: Disable this if you are using your own implementation via a CSS Snippet.
+        default: false
+        type: class-toggle
+    -
+        id: pt-alternative-checkboxes-color-icon
+        title: Enable Color Icons
+        type: class-toggle
+        default: false
+    -
+        id: pt-alternative-checkboxes-color-text
+        title: Enable Color Text
+        type: class-toggle
+        default: false
+    -
+        id: pt-alternative-checkboxes-color-background
+        title: Enable Color Backgrounds
+        type: class-toggle
+        default: false
     -
         id: theme-info
         title: Theme Info
