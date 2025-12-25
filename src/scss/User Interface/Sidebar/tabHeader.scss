@@ -2,14 +2,12 @@
 .workspace-tab-header {
 	padding: 0 var(--size-4-2);
 	border: var(--accent-border-width) solid transparent;
-	border-radius: var(--radius-m);
 
 	.workspace-tab-header-inner-close-button:hover svg {
 		color: var(--interactive-accent-hover);
 	}
 
 	&.is-active {
-		border-radius: var(--radius-m);
 
 		&:hover .workspace-tab-header-inner-icon svg {
 			color: var(--interactive-accent-hover);
@@ -23,6 +21,18 @@
 	&::before,
 	&::after {
 		display: none;
+	}
+}
+
+.mod-left-split .workspace-tab-header-container,
+.mod-right-split .workspace-tab-header-container {
+	.workspace-tab-header {
+		border-radius: var(--radius-m);
+	}
+	
+	.workspace-tab-header-container-inner {
+		padding: unset;
+		margin: 4px;
 	}
 }
 
