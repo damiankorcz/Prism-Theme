@@ -1,9 +1,10 @@
 // [UI] Mobile Adjustments
 body.is-mobile {
-	--toggle-thumb-height: 18px;
-	--toggle-thumb-width: 18px;
+	--toggle-thumb-height: 22px;
+	--toggle-thumb-width: 22px;
 	--toggle-border-width: 1px;
-	--toggle-width: 40px;
+	--toggle-width: 44px;
+	--toggle-height: 24px;
 	--toggle-s-thumb-height: 14px;
 	--toggle-s-thumb-width: 14px;
 	--toggle-s-border-width: 4px;
@@ -18,6 +19,7 @@ body.is-mobile {
 	--input-border-width: 1px;
 
 	--nav-item-color: var(--text-muted);
+	--nav-item-radius: var(--radius-m);
 
 	--font-ui-large: calc(var(--font-text-size) * 1.1);
 
@@ -25,8 +27,14 @@ body.is-mobile {
 
 	--ribbon-width: 48px;
 
+	--input-radius: var(--radius-m);
+
 	// 50px added to account for the overlaping mobile navbar
 	--file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
+
+	--nav-header-padding-bottom: 58px;
+
+	--modal-header-height: 94px;
 	
 	:is(.horizontal-tab-content, .vertical-tab-content) {
 		padding: var(--size-4-4);
@@ -47,12 +55,16 @@ body.is-mobile {
 	&.theme-light,
 	&.theme-dark,
 	{
+		--setting-items-background: unset;
+
 		.workspace-split.mod-root {
 			background-color: var(--background-secondary);
 		}
 	}
 
 	&.theme-light {
+		--settings-background: var(--background-primary);
+
 		.workspace-leaf-content,
 		.workspace-drawer-tab-options {
 			background-color: var(--background-primary);
@@ -133,7 +145,7 @@ body.is-mobile {
 			}
 
 			.vertical-tab-content {
-				padding: var(--size-4-3) var(--size-4-3) calc(var(--safe-area-inset-bottom) + var(--size-4-4)) var(--size-4-3);
+				padding: calc(var(--modal-header-height) + var(--size-4-2)) var(--size-4-3) calc(var(--safe-area-inset-bottom) + var(--size-4-2)) var(--size-4-3);
 			}
 
 			.vertical-tab-nav-item {
@@ -227,9 +239,77 @@ body.is-mobile {
 		.settings-search-container .search-input-container::before {
  	   		top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 		}
+
+		.workspace-drawer-tab-options {
+			border-top: var(--window-border);
+			border-bottom: var(--window-border);
+			background: unset;
+			margin: unset;
+			border-radius: unset;
+
+		}
+
+		.nav-buttons-container:after {
+			display: none;
+		}
+
+		.menu-group .menu-item:not(.is-label):after {
+			display: none;
+		}
+
+		.modal.mod-settings .vertical-tab-header-group {
+			padding: unset;
+		}
+
+		.modal-close-button,
+		.modal-setting-back-button,
+		.mod-settings,
+		.mod-pin {
+			border: unset;
+			background: unset;
+		}
+		
+		.modal .modal-close-button,
+		.modal.mod-settings.mod-sidebar-layout .modal-close-button {
+			top: calc(var(--safe-area-inset-top) - 3px);
+    		inset-inline-end: var(--size-4-3);
+		}
+
+		.modal.mod-sidebar-layout .modal-content .vertical-tab-header {
+			padding-top: var(--modal-header-height);
+		}
+
+		.prompt-input[type=text] {
+			border-radius: var(--radius-m);
+		}
+
+		.view-header .view-actions {
+			border-radius: var(--radius-m);
+		}
 	}
 
-	&.is-tablet {
+
+	.workspace-drawer-tab-options {
+		// TEMP FIX
+		&.is-collapsed .workspace-drawer-tab-options-list .workspace-tab-header:not(.is-active) {
+			border: 0;
+		}
+
+		.workspace-tab-header.tappable {
+			border-radius: var(--radius-m);
+		}
+
+		.workspace-tab-header-inner {
+			border-radius: unset;
+		}
+
+		&:not(.has-swipe) .workspace-tab-header.is-active .workspace-tab-header-inner {
+			background-color: unset;
+		}
+	}
+
+	&.is-tablet
+	 {
 		.modal.mod-sidebar-layout .modal-setting-back-button {
 			display: none;
 		}
@@ -263,8 +343,24 @@ body.is-mobile {
 	// Workspace Adjustments
 	.workspace-drawer {
 		background-color: var(--background-secondary);
-		border-radius: var(--radius-m);
+		border-radius: unset;
 		padding-top: unset;
+		margin-top: var(--safe-area-inset-top);
+		border-top: var(--window-border);
+		border-bottom: var(--window-border);
+		margin-bottom: var(--safe-area-inset-bottom);
+
+		&.mod-left {
+			border-right: var(--window-border);
+			border-bottom-right-radius: var(--radius-m);
+			border-top-right-radius: var(--radius-m);
+		}
+
+		&.mod-right {
+			border-left: var(--window-border);
+			border-bottom-left-radius: var(--radius-m);
+			border-top-left-radius: var(--radius-m);
+		}
 
 		&.is-pinned {
 			border-radius: unset;
@@ -279,11 +375,6 @@ body.is-mobile {
     		flex-wrap: wrap;
 		}
 
-		&:not(.is-pinned) {
-			margin: calc(var(--safe-area-inset-top) + var(--size-4-2)) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2));
-			border: var(--window-border);
-		}
-
 		&.is-pinned .workspace-drawer-header {
 			padding-top: var(--size-4-2);
 		}
@@ -295,7 +386,21 @@ body.is-mobile {
 
 	.nav-buttons-container {
 		--icon-color: var(--text-muted);
-		gap: var(--size-4-4);
+		gap: var(--size-4-2);
+	}
+
+	.workspace-drawer .nav-buttons-container {
+		left: unset;
+		right: unset;
+	}
+
+	.workspace-drawer .nav-buttons-container .nav-action-button {
+		height: var(--touch-size-s);
+    	width: var(--touch-size-s);
+
+		&:not(.is-active) {
+			background-color: unset;
+		}
 	}
 
 	.workspace-drawer-ribbon {
@@ -306,8 +411,8 @@ body.is-mobile {
 	.workspace-drawer-header {
 		padding: var(--size-4-2) var(--size-4-4);
 		background-color: var(--background-secondary);
-		border-bottom: var(--window-border);
 		align-items: center;
+		margin-bottom: unset;
 	}
 
 	.workspace-drawer-active-tab-header {
@@ -328,14 +433,8 @@ body.is-mobile {
 		color: var(--text-muted);
 	}
 
-	.mod-right {
-		.workspace-drawer-header-name {
-			margin-top: var(--size-4-2);
-		}
-
-		.workspace-drawer-header {
-			padding: var(--size-4-1) var(--size-4-5);
-		}
+	.mod-right .workspace-drawer-header-name {
+		margin-top: var(--size-4-2);
 	}
 
 	.workspace-drawer-header-info {
@@ -358,8 +457,6 @@ body.is-mobile {
 	}
 
 	.modal {
-		// border: var(--window-border);
-
 		&.mod-settings {
 			border: unset;
 			.vertical-tab-nav-item {
@@ -415,13 +512,48 @@ body.is-mobile {
 	.metadata-properties-heading {
 		padding: var(--size-4-2);
 	}
+
+	.metadata-content {
+		transform: unset;
+		width: unset;
+		background-color: unset;
+		border-radius: unset;
+	}
+
+	.tree-item-self {
+		align-items: center;
+	}
+	
+	.mod-raised,
+	.view-header-left {
+		padding: unset;
+		background: var(--background-secondary);
+		border-bottom: var(--window-border);
+		box-shadow: unset;
+		backdrop-filter: unset;
+		border-radius: var(--radius-m);
+		border: 1px solid var(--window-border-color);
+	}
+
+	.suggestion-item {
+		border-radius: var(--radius-m);
+	}
+
+	.prompt-input-container .search-input-clear-button {
+		inset-inline-end: var(--size-4-2);
+	}
 }
 
 .mobile-toolbar {
-	padding: var(--size-4-1);
-	background-color: var(--background-secondary);
-	border-top: var(--window-border);
-	top: calc(100vh - var(--keyboard-height) - var(--mobile-toolbar-height) - var(--size-4-2));
+	box-shadow: unset;
+}
+
+.mobile-toolbar-spacer {
+	display: none;
+}
+
+.mobile-toolbar-options-container {
+	width: calc(100% - var(--size-4-8));
 }
 
 // Padding fix for Commander due to forced height
@@ -446,4 +578,8 @@ body.is-mobile {
 
 .mobile-navbar-actions {
 	--icon-color: var(--text-muted);
+}
+
+.workspace-drawer-inner {
+	padding-top: unset;
 }

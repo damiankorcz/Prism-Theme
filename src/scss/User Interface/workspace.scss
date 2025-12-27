@@ -62,15 +62,22 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 // [UI] View Header
-:is(.is-focused .workspace-leaf.mod-active .view-header, .view-header) {
+.is-focused .workspace-leaf.mod-active .view-header,
+.view-header {
 	width: 100%;
-	padding: 0 var(--size-4-2);
+	padding: 0 var(--size-4-4) 0 var(--size-4-2);
 	background: var(--background-secondary);
 }
 
 .workspace-tabs .view-header {
-	margin: unset;
 	border-bottom: var(--window-border);
+	margin: unset;
+
+	.is-phone & {
+		margin: var(--safe-area-inset-top) auto 0;
+		background: unset;
+		border-bottom: unset;
+	}
 }
 
 .view-header-title-container {

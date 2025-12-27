@@ -26,16 +26,20 @@
 	}
 }
 
-.suggestion-item.mod-complex {
-	align-items: center;
-
-	.suggestion-content {
-		overflow: visible;
+.suggestion-item {
+	&.mod-complex {
+		align-items: center;
+	
+		.suggestion-content {
+			overflow: visible;
+		}
 	}
-}
-
-.suggestion-item.is-selected {
-	color: var(--highlight-text-normal);
+	
+	&.is-selected,
+	&.mobile-tap {
+		color: var(--highlight-text-normal);
+		background-color: var(--interactive-accent-base);
+	}
 }
 
 .suggestion-prefix {
