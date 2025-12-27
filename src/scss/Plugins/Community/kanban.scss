@@ -52,7 +52,11 @@ button.kanban-plugin__new-item-button {
 	}
 }
 
-:is(.kanban-plugin__lane-grip, div.kanban-plugin__lane-title-count, .kanban-plugin__lane button.kanban-plugin__lane-settings-button) {
+:is(
+		.kanban-plugin__lane-grip,
+		div.kanban-plugin__lane-title-count,
+		.kanban-plugin__lane button.kanban-plugin__lane-settings-button
+	) {
 	margin: unset;
 }
 
@@ -140,7 +144,11 @@ div.kanban-plugin__lane-title-count {
 // [Plugins - Community] Kanban Background Styles
 .theme-light.pt-kanban-background-dots-lt {
 	.kanban-plugin__board {
-		background-image: radial-gradient(circle, hsla(var(--background-secondary-hsl), 90%) 1px, rgba(0, 0, 0, 0%) 1px);
+		background-image: radial-gradient(
+			circle,
+			hsla(var(--background-secondary-hsl), 90%) 1px,
+			rgba(0, 0, 0, 0%) 1px
+		);
 		background-attachment: local;
 		background-size: 8px 8px;
 	}
@@ -148,7 +156,11 @@ div.kanban-plugin__lane-title-count {
 
 .theme-dark.pt-kanban-background-dots-dt {
 	.kanban-plugin__board {
-		background-image: radial-gradient(circle, hsla(var(--background-secondary-hsl), 90%) 1px, rgba(0, 0, 0, 0%) 1px);
+		background-image: radial-gradient(
+			circle,
+			hsla(var(--background-secondary-hsl), 90%) 1px,
+			rgba(0, 0, 0, 0%) 1px
+		);
 		background-attachment: local;
 		background-size: 8px 8px;
 	}
@@ -156,7 +168,8 @@ div.kanban-plugin__lane-title-count {
 
 .theme-light.pt-kanban-background-grid-lt {
 	.kanban-plugin__board {
-		background-image: linear-gradient(to right, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px), linear-gradient(to bottom, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px);
+		background-image: linear-gradient(to right, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px),
+			linear-gradient(to bottom, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px);
 		background-attachment: local;
 		background-size: 8px 8px;
 	}
@@ -164,7 +177,8 @@ div.kanban-plugin__lane-title-count {
 
 .theme-dark.pt-kanban-background-grid-dt {
 	.kanban-plugin__board {
-		background-image: linear-gradient(to right, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px), linear-gradient(to bottom, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px);
+		background-image: linear-gradient(to right, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px),
+			linear-gradient(to bottom, hsla(var(--background-secondary-hsl), 90%) 1px, transparent 1px);
 		background-attachment: local;
 		background-size: 8px 8px;
 	}

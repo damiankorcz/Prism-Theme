@@ -95,7 +95,14 @@ body {
 }
 
 .canvas-node {
-	&:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+	&:is(
+			.mod-canvas-color-1,
+			.mod-canvas-color-2,
+			.mod-canvas-color-3,
+			.mod-canvas-color-4,
+			.mod-canvas-color-5,
+			.mod-canvas-color-6
+		),
 	&:not(.is-themed) {
 		--shadow-border-themed-inset: inset 0 0 0 1px hsl(var(--canvas-color));
 		--shadow-border-themed: 0 0 0 2px hsl(var(--canvas-color));
@@ -123,7 +130,14 @@ body {
 		}
 	}
 
-	&:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6) {
+	&:is(
+			.mod-canvas-color-1,
+			.mod-canvas-color-2,
+			.mod-canvas-color-3,
+			.mod-canvas-color-4,
+			.mod-canvas-color-5,
+			.mod-canvas-color-6
+		) {
 		&.canvas-node-group.is-themed .canvas-group-label:not([contenteditable="true"]) {
 			background-color: hsl(var(--canvas-highlight-color));
 
@@ -153,7 +167,14 @@ body {
 }
 
 .canvas-color-picker-item {
-	&:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+	&:is(
+			.mod-canvas-color-1,
+			.mod-canvas-color-2,
+			.mod-canvas-color-3,
+			.mod-canvas-color-4,
+			.mod-canvas-color-5,
+			.mod-canvas-color-6
+		),
 	&:first-child {
 		background-color: hsl(var(--canvas-color));
 
@@ -165,7 +186,14 @@ body {
 }
 
 .canvas-minimap rect {
-	&:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+	&:is(
+			.mod-canvas-color-1,
+			.mod-canvas-color-2,
+			.mod-canvas-color-3,
+			.mod-canvas-color-4,
+			.mod-canvas-color-5,
+			.mod-canvas-color-6
+		),
 	&:not(.is-themed) {
 		fill: hsl(var(--canvas-color));
 		stroke: hsl(var(--canvas-color));
@@ -184,7 +212,14 @@ body {
 
 // Arrow Colour overwrite
 .canvas-edges g {
-	&:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+	&:is(
+			.mod-canvas-color-1,
+			.mod-canvas-color-2,
+			.mod-canvas-color-3,
+			.mod-canvas-color-4,
+			.mod-canvas-color-5,
+			.mod-canvas-color-6
+		),
 	&:not(.is-themed) {
 		path.canvas-display-path {
 			stroke: hsl(var(--canvas-highlight-color));
@@ -203,7 +238,14 @@ body {
 }
 
 .canvas-minimap path {
-	&:is(.mod-canvas-color-1, .mod-canvas-color-2, .mod-canvas-color-3, .mod-canvas-color-4, .mod-canvas-color-5, .mod-canvas-color-6),
+	&:is(
+			.mod-canvas-color-1,
+			.mod-canvas-color-2,
+			.mod-canvas-color-3,
+			.mod-canvas-color-4,
+			.mod-canvas-color-5,
+			.mod-canvas-color-6
+		),
 	&:not(.is-themed) {
 		stroke: hsl(var(--canvas-highlight-color));
 	}

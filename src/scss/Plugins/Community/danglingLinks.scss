@@ -18,7 +18,7 @@
 			}
 
 			// Rotates the image to match
-			&[open]	summary::before {
+			&[open] summary::before {
 				-webkit-transform: rotate(90deg);
 				transform: rotate(90deg);
 			}
@@ -49,7 +49,7 @@
 
 				// Replaces the dropdown icon with one that matches others in Obsidian
 				&::before {
-					content: '';
+					content: "";
 					display: inline-block;
 					width: 15px;
 					height: 15px;
@@ -99,7 +99,10 @@
 		gap: var(--size-4-1);
 		color: var(--icon-color);
 
-		:is(.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split &, .pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split &) {
+		:is(
+				.pt-nav-header-left-sidebar-position-top .workspace-split.mod-left-split &,
+				.pt-nav-header-right-sidebar-position-top .workspace-split.mod-right-split &
+			) {
 			position: sticky;
 			top: 0;
 			z-index: var(--layer-popover);

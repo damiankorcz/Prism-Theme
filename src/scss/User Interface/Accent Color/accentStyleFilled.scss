@@ -7,7 +7,7 @@
 	.nav-file-title.is-active,
 	.tree-item-self.is-active,
 	.suggestion-hotkey,
-	.workspace-leaf div.workspace-leaf-content[data-type=file-tree-view] div.oz-nav-file.is-active,
+	.workspace-leaf div.workspace-leaf-content[data-type="file-tree-view"] div.oz-nav-file.is-active,
 	.workspace-drawer.is-pinned .workspace-drawer-header-icon.mod-pin,
 	.canvas-help .setting-hotkey,
 	.clickable-icon[aria-label="Search settings"].is-active,
@@ -19,7 +19,7 @@
 
 	&:not(.is-phone) {
 		.vertical-tab-nav-item.is-active,
-		.horizontal-tab-nav-item.is-active, {
+		.horizontal-tab-nav-item.is-active {
 			--icon-color: var(--highlight-text-normal);
 			color: var(--highlight-text-normal);
 		}
@@ -65,7 +65,15 @@
 		}
 	}
 
-	:is(.pcr-button, .modal button:not(.mod-cta):not(.mod-warning), .graph-control-content button, .modal-setting-nav-bar .clickable-icon, .document-search-button, .pdf-toolbar-button, .empty-state-action) {
+	:is(
+			.pcr-button,
+			.modal button:not(.mod-cta):not(.mod-warning),
+			.graph-control-content button,
+			.modal-setting-nav-bar .clickable-icon,
+			.document-search-button,
+			.pdf-toolbar-button,
+			.empty-state-action
+		) {
 		color: var(--text-normal);
 		background-color: var(--color-grey-base);
 		border-color: var(--color-grey-base);
@@ -91,7 +99,7 @@
 		}
 	}
 
-	:is(.flair.mod-pop,	.community-item .flair) {
+	:is(.flair.mod-pop, .community-item .flair) {
 		color: var(--highlight-text-normal);
 		background-color: var(--color-green-base);
 		border-color: transparent;
@@ -107,7 +115,12 @@
 		}
 	}
 
-	:is(.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right, .workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left, .popover-action.is-active, .mod-pin-popover.is-active),
+	:is(
+			.workspace.is-right-sidedock-open .sidebar-toggle-button.mod-right,
+			.workspace.is-left-sidedock-open .sidebar-toggle-button.mod-left,
+			.popover-action.is-active,
+			.mod-pin-popover.is-active
+		),
 	.pdf-toolbar-left .clickable-icon[aria-label="Toggle sidebar"].is-active {
 		background-color: var(--interactive-accent-base);
 		border-color: transparent;

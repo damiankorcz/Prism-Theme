@@ -35,7 +35,7 @@ body.is-mobile {
 	--nav-header-padding-bottom: 58px;
 
 	--modal-header-height: 94px;
-	
+
 	:is(.horizontal-tab-content, .vertical-tab-content) {
 		padding: var(--size-4-4);
 	}
@@ -46,15 +46,14 @@ body.is-mobile {
 
 	.empty-state-action {
 		color: var(--text-normal);
-    	background-color: var(--color-grey-base);
+		background-color: var(--color-grey-base);
 		border: var(--accent-border-width) solid;
-    	border-color: var(--color-grey-tint);
-    	border-radius: var(--radius-s);
+		border-color: var(--color-grey-tint);
+		border-radius: var(--radius-s);
 	}
 
 	&.theme-light,
-	&.theme-dark,
-	{
+	&.theme-dark {
 		--setting-items-background: unset;
 
 		.workspace-split.mod-root {
@@ -70,7 +69,7 @@ body.is-mobile {
 			background-color: var(--background-primary);
 		}
 	}
-	
+
 	&.theme-dark {
 		--background-modifier-form-field: var(--background-secondary-alt);
 
@@ -103,7 +102,7 @@ body.is-mobile {
 		}
 
 		.menu-grabber {
-    		margin: var(--size-4-2) auto var(--size-4-2);
+			margin: var(--size-4-2) auto var(--size-4-2);
 		}
 
 		.menu-separator {
@@ -145,7 +144,8 @@ body.is-mobile {
 			}
 
 			.vertical-tab-content {
-				padding: calc(var(--modal-header-height) + var(--size-4-2)) var(--size-4-3) calc(var(--safe-area-inset-bottom) + var(--size-4-2)) var(--size-4-3);
+				padding: calc(var(--modal-header-height) + var(--size-4-2)) var(--size-4-3)
+					calc(var(--safe-area-inset-bottom) + var(--size-4-2)) var(--size-4-3);
 			}
 
 			.vertical-tab-nav-item {
@@ -192,7 +192,8 @@ body.is-mobile {
 
 		.community-modal-search-results {
 			gap: var(--size-4-2);
-			padding: var(--size-4-2) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2)) var(--size-4-2);
+			padding: var(--size-4-2) var(--size-4-2) calc(var(--safe-area-inset-bottom) + var(--size-4-2))
+				var(--size-4-2);
 		}
 
 		.community-item {
@@ -205,7 +206,7 @@ body.is-mobile {
 			display: none;
 		}
 
-		.prompt-input[type=text] {
+		.prompt-input[type="text"] {
 			border: 1px solid var(--window-border-color);
 		}
 
@@ -237,7 +238,7 @@ body.is-mobile {
 		}
 
 		.settings-search-container .search-input-container::before {
- 	   		top: calc((var(--input-height) - var(--search-icon-size)) / 2);
+			top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 		}
 
 		.workspace-drawer-tab-options {
@@ -246,7 +247,6 @@ body.is-mobile {
 			background: unset;
 			margin: unset;
 			border-radius: unset;
-
 		}
 
 		.nav-buttons-container:after {
@@ -268,18 +268,18 @@ body.is-mobile {
 			border: unset;
 			background: unset;
 		}
-		
+
 		.modal .modal-close-button,
 		.modal.mod-settings.mod-sidebar-layout .modal-close-button {
 			top: calc(var(--safe-area-inset-top) - 3px);
-    		inset-inline-end: var(--size-4-3);
+			inset-inline-end: var(--size-4-3);
 		}
 
 		.modal.mod-sidebar-layout .modal-content .vertical-tab-header {
 			padding-top: var(--modal-header-height);
 		}
 
-		.prompt-input[type=text] {
+		.prompt-input[type="text"] {
 			border-radius: var(--radius-m);
 		}
 
@@ -287,7 +287,6 @@ body.is-mobile {
 			border-radius: var(--radius-m);
 		}
 	}
-
 
 	.workspace-drawer-tab-options {
 		// TEMP FIX
@@ -308,8 +307,7 @@ body.is-mobile {
 		}
 	}
 
-	&.is-tablet
-	 {
+	&.is-tablet {
 		.modal.mod-sidebar-layout .modal-setting-back-button {
 			display: none;
 		}
@@ -372,7 +370,7 @@ body.is-mobile {
 		.workspace-drawer-actions,
 		.nav-buttons-container {
 			overflow: visible;
-    		flex-wrap: wrap;
+			flex-wrap: wrap;
 		}
 
 		&.is-pinned .workspace-drawer-header {
@@ -396,7 +394,7 @@ body.is-mobile {
 
 	.workspace-drawer .nav-buttons-container .nav-action-button {
 		height: var(--touch-size-s);
-    	width: var(--touch-size-s);
+		width: var(--touch-size-s);
 
 		&:not(.is-active) {
 			background-color: unset;
@@ -452,7 +450,7 @@ body.is-mobile {
 	}
 
 	div.workspace-leaf-content[data-type="style-settings"] .view-content > .setting-item .setting-item-info,
-	.modal.mod-settings .setting-item-info:has(.search-input-container)  {
+	.modal.mod-settings .setting-item-info:has(.search-input-container) {
 		width: 100%;
 	}
 
@@ -523,7 +521,7 @@ body.is-mobile {
 	.tree-item-self {
 		align-items: center;
 	}
-	
+
 	.mod-raised,
 	.view-header-left {
 		padding: unset;

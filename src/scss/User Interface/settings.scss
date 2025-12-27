@@ -37,7 +37,7 @@
 	background-color: var(--background-secondary);
 	border-bottom: var(--window-border);
 	align-items: center;
-	
+
 	&::after {
 		display: none;
 	}
@@ -408,7 +408,11 @@ img.community-theme-lightbox {
 
 		&.is-enabled {
 			&::after {
-				transform: translate3d(calc(var(--toggle-s-width) - var(--toggle-s-thumb-width) - var(--toggle-s-border-width) - 1px), 0, 0);
+				transform: translate3d(
+					calc(var(--toggle-s-width) - var(--toggle-s-thumb-width) - var(--toggle-s-border-width) - 1px),
+					0,
+					0
+				);
 			}
 		}
 	}

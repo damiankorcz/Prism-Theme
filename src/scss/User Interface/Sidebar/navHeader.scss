@@ -27,7 +27,12 @@
 }
 
 // Align Left
-:is(.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-align-left .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-align-left .workspace-drawer.mod-right) {
+:is(
+		.pt-nav-header-left-sidebar-align-left .workspace-split.mod-left-split,
+		.pt-nav-header-right-sidebar-align-left .workspace-split.mod-right-split,
+		.pt-nav-header-left-sidebar-align-left .workspace-drawer.mod-left,
+		.pt-nav-header-right-sidebar-align-left .workspace-drawer.mod-right
+	) {
 	.workspace-leaf-content .nav-header {
 		justify-content: flex-start;
 	}
@@ -41,7 +46,12 @@
 }
 
 // Align Center
-:is(.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split , .pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-align-center .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-align-center .workspace-drawer.mod-right) {
+:is(
+		.pt-nav-header-left-sidebar-align-center .workspace-split.mod-left-split,
+		.pt-nav-header-right-sidebar-align-center .workspace-split.mod-right-split,
+		.pt-nav-header-left-sidebar-align-center .workspace-drawer.mod-left,
+		.pt-nav-header-right-sidebar-align-center .workspace-drawer.mod-right
+	) {
 	.workspace-leaf-content .nav-header {
 		justify-content: center;
 	}
@@ -56,7 +66,12 @@
 }
 
 // Align Right
-:is(.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split, .pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split, .pt-nav-header-left-sidebar-align-right .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-align-right .workspace-drawer.mod-right) {
+:is(
+		.pt-nav-header-left-sidebar-align-right .workspace-split.mod-left-split,
+		.pt-nav-header-right-sidebar-align-right .workspace-split.mod-right-split,
+		.pt-nav-header-left-sidebar-align-right .workspace-drawer.mod-left,
+		.pt-nav-header-right-sidebar-align-right .workspace-drawer.mod-right
+	) {
 	.workspace-leaf-content .nav-header {
 		justify-content: flex-end;
 	}
@@ -70,7 +85,10 @@
 }
 
 // Position Top
-:is(.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left, .pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right) {
+:is(
+		.pt-nav-header-left-sidebar-position-bottom .workspace-drawer.mod-left,
+		.pt-nav-header-right-sidebar-position-bottom .workspace-drawer.mod-right
+	) {
 	order: unset;
 }
 
@@ -116,14 +134,31 @@
 		min-height: unset;
 	}
 
-	:is(.nav-files-container, .workspace-leaf-content[data-type="tag"] .tag-container, .workspace-leaf-content[data-type="backlink"] .backlink-pane, .workspace-leaf-content[data-type="starred"] .item-list, .workspace-leaf-content[data-type="dictionary-view"] .contents, .workspace-leaf-content[data-type="dangling-links"] .view-content .container, .workspace-leaf-content[data-type="bookmarks"] .view-content > div, .workspace-leaf-content[data-type="all-properties"] .view-content, .workspace-leaf-content[data-type="properties"] .view-content, .workspace-leaf-content[data-type="outline"] .view-content) {
+	:is(
+			.nav-files-container,
+			.workspace-leaf-content[data-type="tag"] .tag-container,
+			.workspace-leaf-content[data-type="backlink"] .backlink-pane,
+			.workspace-leaf-content[data-type="starred"] .item-list,
+			.workspace-leaf-content[data-type="dictionary-view"] .contents,
+			.workspace-leaf-content[data-type="dangling-links"] .view-content .container,
+			.workspace-leaf-content[data-type="bookmarks"] .view-content > div,
+			.workspace-leaf-content[data-type="all-properties"] .view-content,
+			.workspace-leaf-content[data-type="properties"] .view-content,
+			.workspace-leaf-content[data-type="outline"] .view-content
+		) {
 		padding-bottom: calc(var(--nav-header-padding-bottom) + 2 * var(--scroll-bar-size));
 	}
 }
 
 .pt-nav-header-left-sidebar-position-bottom.is-mobile .workspace-drawer.mod-left .nav-buttons-container,
 .pt-nav-header-right-sidebar-position-bottom.is-mobile .workspace-drawer.mod-right .nav-buttons-container,
-.pt-nav-header-left-sidebar-position-bottom.is-mobile .workspace-drawer.mod-left .workspace-leaf-content[data-type="dangling-links"] .nav-header,
-.pt-nav-header-right-sidebar-position-bottom.is-mobile .workspace-drawer.mod-right .workspace-leaf-content[data-type="dangling-links"] .nav-header {
+.pt-nav-header-left-sidebar-position-bottom.is-mobile
+	.workspace-drawer.mod-left
+	.workspace-leaf-content[data-type="dangling-links"]
+	.nav-header,
+.pt-nav-header-right-sidebar-position-bottom.is-mobile
+	.workspace-drawer.mod-right
+	.workspace-leaf-content[data-type="dangling-links"]
+	.nav-header {
 	padding: var(--size-4-1);
 }

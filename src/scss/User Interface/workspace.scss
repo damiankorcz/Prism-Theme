@@ -102,7 +102,12 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 }
 
 // [UI] Workspace Ribbon
-:is(.workspace-ribbon.mod-left, .workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-split.mod-vertical.mod-root) {
+:is(
+		.workspace-ribbon.mod-left,
+		.workspace-split.mod-left-split,
+		.workspace-split.mod-right-split,
+		.workspace-split.mod-vertical.mod-root
+	) {
 	.sidebar-toggle-button {
 		width: fit-content;
 		height: calc(var(--header-height) - 9px);
