@@ -130,6 +130,16 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	border-right: var(--window-border);
 }
 
+.workspace-drawer .workspace-leaf-content {
+	&::after {
+		display: none;
+	}
+
+	.nav-header ~ div:last-child {
+		padding-top: unset;
+	}
+}
+
 // [UI] macOS Sidebar Toggle Button fix
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
 	padding-right: 2px;

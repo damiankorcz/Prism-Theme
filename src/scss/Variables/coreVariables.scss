@@ -57,6 +57,21 @@ body {
 
 	--text-on-accent-inverted: var(--text-normal);
 
+	--list-indent: 2em;
+
+	/* Source mode */
+	--list-indent-source: 0.75em;
+	--indentation-guide-source-indent: 0.85em;
+	--checkbox-margin-inline-start: var(--indentation-guide-editing-indent);
+
+	/* Live Preview */
+	--list-indent-editing: 0.75em;
+	--indentation-guide-editing-indent: 0.85em;
+	--list-bullet-end-padding: 3rem;
+
+	/* Reading mode */
+	--indentation-guide-reading-indent: -0.55em;
+
 	--icon-color-focused: var(--interactive-accent-text);
 	--background-modifier-error: var(--color-red-text);
 	--background-modifier-border: var(--window-border-color);
@@ -144,6 +159,8 @@ body {
 
 	--setting-items-radius: unset;
 	--setting-items-padding: var(--size-4-2);
+
+	--tab-radius-active: var(--radius-m);
 
 	// Style Settings Defaults
 	--status-bar-background-color-lt: #ebecef;

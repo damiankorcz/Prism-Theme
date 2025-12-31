@@ -36,6 +36,8 @@ body.is-mobile {
 
 	--modal-header-height: 94px;
 
+	--setting-items-radius: unset;
+
 	:is(.horizontal-tab-content, .vertical-tab-content) {
 		padding: var(--size-4-4);
 	}
@@ -289,22 +291,42 @@ body.is-mobile {
 	}
 
 	.workspace-drawer-tab-options {
-		// TEMP FIX
-		&.is-collapsed .workspace-drawer-tab-options-list .workspace-tab-header:not(.is-active) {
-			border: 0;
-		}
-
 		.workspace-tab-header.tappable {
 			border-radius: var(--radius-m);
 		}
 
 		.workspace-tab-header-inner {
-			border-radius: unset;
+			border-radius: var(--radius-m);
 		}
 
 		&:not(.has-swipe) .workspace-tab-header.is-active .workspace-tab-header-inner {
 			background-color: unset;
 		}
+
+		.workspace-tab-header.mobile-tap .workspace-tab-header-inner {
+			--icon-color: var(--highlight-text-normal);
+			background-color: var(--interactive-accent-base);
+			color: var(--highlight-text-normal);
+		}
+	}
+
+	.workspace-drawer-tab-options-list {
+		box-shadow: unset;
+		border-radius: unset;
+		border-top: var(--window-border);
+		overflow-y: unset;
+
+		.theme-light & {
+			background-color: var(--background-primary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
+	}
+
+	.workspace-drawer-tab-select .workspace-tab-header-inner {
+		background-color: unset;
 	}
 
 	&.is-tablet {
@@ -441,12 +463,19 @@ body.is-mobile {
 
 	.suggestion-container,
 	.menu {
-		background-color: var(--background-secondary);
 		border: var(--window-border);
 		border-radius: var(--radius-m);
 		padding: unset;
 		margin: 0 var(--size-4-2);
 		bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
+
+		.theme-light & {
+			background-color: var(--background-primary);
+		}
+
+		.theme-dark & {
+			background-color: var(--background-secondary-alt);
+		}
 	}
 
 	div.workspace-leaf-content[data-type="style-settings"] .view-content > .setting-item .setting-item-info,
@@ -539,6 +568,14 @@ body.is-mobile {
 
 	.prompt-input-container .search-input-clear-button {
 		inset-inline-end: var(--size-4-2);
+	}
+
+	.pull-down-action {
+		background: linear-gradient(
+			to bottom,
+			color-mix(in srgb, var(--background-secondary-alt) 90%, transparent) 40%,
+			transparent 100%
+		);
 	}
 }
 
