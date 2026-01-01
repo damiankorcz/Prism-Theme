@@ -43,7 +43,23 @@
 	}
 }
 
-.is-phone .modal-container.mod-confirmation .modal,
+.is-phone .modal-container.mod-confirmation .modal {
+	border: var(--window-border);
+	border-radius: var(--radius-m);
+	padding: unset;
+	margin: 0 var(--size-4-2);
+	bottom: calc(var(--safe-area-inset-bottom) + var(--size-4-2));
+
+	.modal-header {
+		padding-top: var(--size-4-2);
+		height: unset;
+	}
+
+	.modal-button-container {
+		margin-bottom: unset;
+	}
+}
+
 .is-phone .modal.mod-lg,
 .is-phone .modal.mod-sidebar-layout {
 	--modal-radius: unset;

@@ -140,6 +140,21 @@ body:not(.css-settings-manager) .workspace-split.mod-left-split::before {
 	}
 }
 
+.empty-state-title,
+.empty-state-action-list {
+	margin: unset;
+}
+
+.empty-state-action {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.empty-state-container .empty-state-action-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2);
+}
+
 // [UI] macOS Sidebar Toggle Button fix
 .mod-macos.is-hidden-frameless:not(.is-popout-window) .sidebar-toggle-button.mod-right {
 	padding-right: 2px;
