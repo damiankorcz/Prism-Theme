@@ -5,8 +5,14 @@ div.workspace-leaf-content[data-type="style-settings"] {
 	}
 
 	.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-		body:not(.is-phone) & {
+		.setting-item-control {
+			width: -webkit-fill-available;
+			width: fill-available;
+		}
+
+		&:has(.setting-item-control .checkbox-container, .setting-item-control .pickr) {
 			flex-direction: row;
+			width: inherit;
 		}
 	}
 }
@@ -137,7 +143,7 @@ div.workspace-leaf-content[data-type="style-settings"] {
 }
 
 .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-	align-items: center;
+	// align-items: center;
 
 	.setting-item-control {
 		padding-top: unset;

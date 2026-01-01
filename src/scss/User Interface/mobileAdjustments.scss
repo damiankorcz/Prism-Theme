@@ -5,9 +5,11 @@ body.is-mobile {
 	--toggle-border-width: 1px;
 	--toggle-width: 44px;
 	--toggle-height: 24px;
-	--toggle-s-thumb-height: 14px;
-	--toggle-s-thumb-width: 14px;
-	--toggle-s-border-width: 4px;
+
+	--toggle-s-thumb-height: 18px;
+	--toggle-s-thumb-width: 18px;
+	--toggle-s-width: 44px;
+	--toggle-s-border-width: 1px;
 
 	--toggle-radius: var(--size-4-1);
 	--toggle-thumb-radius: 3px;
@@ -34,7 +36,7 @@ body.is-mobile {
 
 	--nav-header-padding-bottom: 58px;
 
-	--modal-header-height: 94px;
+	--modal-header-height: 102px;
 
 	--setting-items-radius: unset;
 
@@ -235,13 +237,14 @@ body.is-mobile {
 			height: unset;
 		}
 
-		// The default offset does not account for the margin
-		.search-input-container:before {
-			top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
-		}
-
 		.settings-search-container .search-input-container::before {
 			top: calc((var(--input-height) - var(--search-icon-size)) / 2);
+		}
+
+		.workspace-leaf-content[data-type="style-settings"] {
+			.search-input-container:before {
+				top: calc((var(--input-height) - var(--search-icon-size)) / 2);
+			}
 		}
 
 		.workspace-drawer-tab-options {
@@ -272,8 +275,8 @@ body.is-mobile {
 			background: unset;
 		}
 
-		.modal .modal-close-button,
-		.modal.mod-settings.mod-sidebar-layout .modal-close-button {
+		.modal.mod-settings .modal-close-button,
+		.modal .modal-close-button {
 			top: calc(var(--safe-area-inset-top) - 3px);
 			inset-inline-end: var(--size-4-3);
 		}
@@ -316,14 +319,14 @@ body.is-mobile {
 		border-radius: unset;
 		border-top: var(--window-border);
 		overflow-y: unset;
+	}
 
-		.theme-light & {
-			background-color: var(--background-primary);
-		}
+	&.theme-light .workspace-drawer-tab-options-list {
+		background-color: var(--background-primary);
+	}
 
-		.theme-dark & {
-			background-color: var(--background-secondary-alt);
-		}
+	&.theme-dark .workspace-drawer-tab-options-list {
+		background-color: var(--background-secondary-alt);
 	}
 
 	.workspace-drawer-tab-select .workspace-tab-header-inner {
@@ -485,6 +488,8 @@ body.is-mobile {
 	}
 
 	.modal {
+		border-radius: unset;
+
 		&.mod-settings {
 			border: unset;
 			.vertical-tab-nav-item {
@@ -618,4 +623,12 @@ body.is-mobile {
 
 .workspace-drawer-inner {
 	padding-top: unset;
+}
+
+.checkbox-container.is-enabled:after {
+	transform: translate3d(
+		calc(var(--toggle-s-width) - var(--toggle-s-thumb-width) - var(--toggle-s-border-width) - var(--size-4-1)),
+		0,
+		0
+	);
 }
