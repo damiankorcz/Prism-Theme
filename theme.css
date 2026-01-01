@@ -577,9 +577,10 @@ body {
   --toggle-thumb-height: 20px;
   --toggle-thumb-width: 20px;
   --toggle-width: 42px;
-  --toggle-s-thumb-height: 14px;
-  --toggle-s-thumb-width: 14px;
-  --toggle-s-border-width: 4px;
+  --toggle-s-thumb-height: 18px;
+  --toggle-s-thumb-width: 18px;
+  --toggle-s-width: 44px;
+  --toggle-s-border-width: 1px;
   --divider-color-hover: var(--interactive-accent-tint);
   --file-header-font-size: var(--font-ui-medium);
   --vault-name-font-size: var(--font-ui-medium);
@@ -1493,9 +1494,10 @@ body.is-mobile {
   --toggle-border-width: 1px;
   --toggle-width: 44px;
   --toggle-height: 24px;
-  --toggle-s-thumb-height: 14px;
-  --toggle-s-thumb-width: 14px;
-  --toggle-s-border-width: 4px;
+  --toggle-s-thumb-height: 18px;
+  --toggle-s-thumb-width: 18px;
+  --toggle-s-width: 44px;
+  --toggle-s-border-width: 1px;
   --toggle-radius: var(--size-4-1);
   --toggle-thumb-radius: 3px;
   --slider-thumb-radius: var(--size-4-1);
@@ -1510,7 +1512,7 @@ body.is-mobile {
   --input-radius: var(--radius-m);
   --file-margins: var(--size-4-4) var(--size-4-5) calc(var(--size-4-4) + 50px) var(--size-4-5);
   --nav-header-padding-bottom: 58px;
-  --modal-header-height: 94px;
+  --modal-header-height: 102px;
   --setting-items-radius: unset;
 }
 body.is-mobile :is(.horizontal-tab-content, .vertical-tab-content) {
@@ -1658,10 +1660,10 @@ body.is-mobile.is-phone .pickr {
 body.is-mobile.is-phone .modal.mod-sidebar-layout .search-input-container {
   height: unset;
 }
-body.is-mobile.is-phone .search-input-container:before {
-  top: calc((var(--input-height) - var(--search-icon-size) + var(--size-4-2)) / 2);
-}
 body.is-mobile.is-phone .settings-search-container .search-input-container::before {
+  top: calc((var(--input-height) - var(--search-icon-size)) / 2);
+}
+body.is-mobile.is-phone .workspace-leaf-content[data-type=style-settings] .search-input-container:before {
   top: calc((var(--input-height) - var(--search-icon-size)) / 2);
 }
 body.is-mobile.is-phone .workspace-drawer-tab-options {
@@ -1687,8 +1689,8 @@ body.is-mobile.is-phone .mod-pin {
   border: unset;
   background: unset;
 }
-body.is-mobile.is-phone .modal .modal-close-button,
-body.is-mobile.is-phone .modal.mod-settings.mod-sidebar-layout .modal-close-button {
+body.is-mobile.is-phone .modal.mod-settings .modal-close-button,
+body.is-mobile.is-phone .modal .modal-close-button {
   top: calc(var(--safe-area-inset-top) - 3px);
   inset-inline-end: var(--size-4-3);
 }
@@ -1721,10 +1723,10 @@ body.is-mobile .workspace-drawer-tab-options-list {
   border-top: var(--window-border);
   overflow-y: unset;
 }
-.theme-light body.is-mobile .workspace-drawer-tab-options-list {
+body.is-mobile.theme-light .workspace-drawer-tab-options-list {
   background-color: var(--background-primary);
 }
-.theme-dark body.is-mobile .workspace-drawer-tab-options-list {
+body.is-mobile.theme-dark .workspace-drawer-tab-options-list {
   background-color: var(--background-secondary-alt);
 }
 body.is-mobile .workspace-drawer-tab-select .workspace-tab-header-inner {
@@ -1857,6 +1859,9 @@ body.is-mobile div.workspace-leaf-content[data-type=style-settings] .view-conten
 body.is-mobile .modal.mod-settings .setting-item-info:has(.search-input-container) {
   width: 100%;
 }
+body.is-mobile .modal {
+  border-radius: unset;
+}
 body.is-mobile .modal.mod-settings {
   border: unset;
 }
@@ -1964,6 +1969,10 @@ body.is-mobile .pull-down-action {
 
 .workspace-drawer-inner {
   padding-top: unset;
+}
+
+.checkbox-container.is-enabled:after {
+  transform: translate3d(calc(var(--toggle-s-width) - var(--toggle-s-thumb-width) - var(--toggle-s-border-width) - var(--size-4-1)), 0, 0);
 }
 
 .modal.mod-settings .vertical-tab-header {
@@ -6197,8 +6206,13 @@ body.enable-alternative-checkboxes li:not([data-task=x], [data-task=X], [data-ta
 div.workspace-leaf-content[data-type=style-settings] div.view-content {
   padding: var(--size-4-2) var(--size-4-2) var(--size-4-6) var(--size-4-2);
 }
-body:not(.is-phone) div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) {
+div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading) .setting-item-control {
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+div.workspace-leaf-content[data-type=style-settings] .view-content .style-settings-container .setting-item:not(.setting-item-heading):has(.setting-item-control .checkbox-container, .setting-item-control .pickr) {
   flex-direction: row;
+  width: inherit;
 }
 
 .setting-item.setting-item-heading.style-settings-heading {
@@ -6317,9 +6331,6 @@ body:not(.is-phone) div.workspace-leaf-content[data-type=style-settings] .view-c
   content: "❤️";
 }
 
-.view-content .style-settings-container .setting-item:not(.setting-item-heading) {
-  align-items: center;
-}
 .view-content .style-settings-container .setting-item:not(.setting-item-heading) .setting-item-control {
   padding-top: unset;
 }
